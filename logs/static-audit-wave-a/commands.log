@@ -1,0 +1,171 @@
+=== 2026-07-19T09:53:56+02:00 START WAVE_A static audit ===
+pwd: /home/edmundo/text2sparql-reproducibility-lab
+branch: main
+lab_commit_start: 7e8cad3dc7dfc9485431de03585ac2b7cb4a3934
+## main...origin/main
+?? logs/static-audit-wave-a/
+--- upstream trees ---
+upstream/mkgqagent:
+total 76
+drwxr-xr-x 10 root root  4096 Jul 19 09:28 .
+drwxr-xr-x  9 root root  4096 Jul 18 20:58 ..
+drwxr-xr-x  8 root root  4096 Jul 18 21:00 .git_local
+drwxr-xr-x  3 root root  4096 Jul 18 20:58 .github
+-rw-r--r--  1 root root  3448 Jul 18 20:58 .gitignore
+-rw-r--r--  1 root root  1967 Jul 18 20:58 CITATION.cff
+-rw-r--r--  1 root root   496 Jul 18 20:58 Dockerfile
+-rw-r--r--  1 root root 12380 Jul 18 20:58 README.adoc
+drwxr-xr-x  6 root root  4096 Jul 18 20:58 data
+drwxr-xr-x  2 root root  4096 Jul 18 20:58 experiments
+drwxr-xr-x  2 root root  4096 Jul 18 20:58 images
+-rw-r--r--  1 root root  1705 Jul 18 20:58 main.py
+drwxr-xr-x  2 root root  4096 Jul 18 20:58 model
+drwxr-xr-x  2 root root  4096 Jul 18 20:58 prompts
+-rw-r--r--  1 root root   208 Jul 18 20:58 requirements.txt
+drwxr-xr-x  2 root root  4096 Jul 18 20:58 services
+
+upstream/rdfconfig_llm:
+total 1264
+drwxr-xr-x 7 root root   4096 Jul 19 09:28 .
+drwxr-xr-x 9 root root   4096 Jul 18 20:58 ..
+-rw-r--r-- 1 root root    397 Jul 18 20:58 .env_sample
+drwxr-xr-x 8 root root   4096 Jul 18 21:00 .git_local
+-rw-r--r-- 1 root root     90 Jul 18 20:58 .gitignore
+-rw-r--r-- 1 root root   3891 Jul 18 20:58 README.md
+-rw-r--r-- 1 root root   1335 Jul 18 20:58 SETUP.md
+drwxr-xr-x 3 root root   4096 Jul 18 20:58 data
+-rw-r--r-- 1 root root  65138 Jul 18 20:58 demo_baseline_prompt_tuning.ipynb
+-rw-r--r-- 1 root root 240134 Jul 18 20:58 demo_propose.ipynb
+-rw-r--r-- 1 root root 649182 Jul 18 20:58 demo_propose_model.ipynb
+-rw-r--r-- 1 root root 251982 Jul 18 20:58 demo_propose_no_explain.ipynb
+drwxr-xr-x 2 root root   4096 Jul 18 20:58 functions
+-rw-r--r-- 1 root root  31152 Jul 18 20:58 leave-one-set-out.py
+drwxr-xr-x 4 root root   4096 Jul 18 20:58 questions
+drwxr-xr-x 9 root root   4096 Jul 18 20:58 rdf-config
+-rw-r--r-- 1 root root     67 Jul 18 20:58 requirements.txt
+
+upstream/rdfconfig_llm_rdf-config:
+--- pins from lock ---
+<class 'dict'> ['schema_version', 'updated_at', 'policy', 'repositories']
+=== pin verification via .git_local ===
+sparql_llm 3748730e3bd2df2595280b918269fdaadb9fc0c3
+mkgqagent ba0f2f78611a7ccacc8c985a97f6008ef7ee6a6a
+rdfconfig_llm fe63171d3c8b9679779749ee11f731b2a8318053
+rdfconfig_llm_rdf-config cccc581c16f0b24865030bc5459475a9d0fcbd5f
+=== license files ===
+ls: cannot access 'upstream/mkgqagent/LICENSE*': No such file or directory
+upstream/sparql_llm/LICENSE.txt
+mkgq_NO_license
+rdfgen_NO_license
+companion_has_license
+=== trees ===
+21
+upstream/mkgqagent/model/agent.py
+upstream/mkgqagent/README.adoc
+upstream/mkgqagent/main.py
+upstream/mkgqagent/prompts/dbpedia.py
+upstream/mkgqagent/prompts/corporate.py
+upstream/mkgqagent/services/__init__.py
+upstream/mkgqagent/services/llm_agent_corporate.py
+upstream/mkgqagent/services/llm_agent_dbpedia.py
+upstream/mkgqagent/services/ld_utils.py
+upstream/mkgqagent/services/llm_utils.py
+corporate_en
+qald_9_plus_train_dbpedia_en
+bgee.json
+rhea.json
+uniprot.json
+uniprot_and_bgee.json
+rdf-config
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
+
+gemspec
+=== more inspection ===
+corporate_en
+qald_9_plus_train_dbpedia_en
+  247 upstream/mkgqagent/README.adoc
+  340 upstream/sparql_llm/src/sparql_llm/mcp_server.py
+  587 total
+upstream/mkgqagent/services/llm_agent_dbpedia.py:63:        icl_faiss_vdb_path = os.path.join(".", "data", "experience-pool", icl_faiss_vdb)
+upstream/mkgqagent/services/llm_agent_corporate.py:63:        icl_faiss_vdb_path = os.path.join(".", "data", "experience-pool", icl_faiss_vdb)
+upstream/mkgqagent/README.adoc:21:By leveraging a coordinated LLM agent workflow for planning, entity linking, and query refinement -- guided by an experience pool for in-context learning -- mKGQAgent efficiently handles multilingual knowledge graph question answering (KGQA).
+upstream/mkgqagent/README.adoc:46:The mKGQAgent framework operates in two main phases: the _offline phase_ (preparing the experience pool) and the _evaluation (online) phase_ (answering questions).
+upstream/mkgqagent/README.adoc:50:In the evaluation (online) phase, the mKGQAgent uses the experience pool examples to improve planning, the in-context learning training examples to improve SPARQL query generation awareness, and the feedback from a triplestore to correct possible errors.
+upstream/mkgqagent/README.adoc:57:During the offline phase, a simple agent (𝒮𝒜gent) -- consisting only of the plan and action steps -- is employed to gather intermediate processing steps over the training data.
+upstream/mkgqagent/README.adoc:58:Successful (F1 = 1) and unsuccessful (F1 < 1) answers are stored in the experience pool that is later used for in-context learning.
+upstream/mkgqagent/README.adoc:60:.𝒮𝒜gent workflow demonstration (offline phase), cf. Figure 2 of the https://ceur-ws.org/Vol-4094/paper6.pdf[paper]
+upstream/mkgqagent/README.adoc:61:image::images/sagent-offline-phase.png[SAgent workflow (offline phase): plan step and action step storing results in the experience pool]
+upstream/mkgqagent/README.adoc:74:The service uses the OpenAI API (default model: `gpt-4o-2024-05-13`) and a local text embedding model (`intfloat/multilingual-e5-large`) for the experience pool retrieval.
+upstream/mkgqagent/README.adoc:171:* link:data/experience-pool/[`data/experience-pool/`] -- prebuilt https://github.com/facebookresearch/faiss[FAISS] indexes of the experience pool
+81:uvx sparql-llm
+115:      "command": "uvx",
+144:pip install sparql-llm
+277:> To deploy the complete chat system right now you will need to fork/clone this repository, change the configuration in `src/sparql-llm/config.py` and `compose.yml`, then deploy with docker/podman compose. It can easily be adapted to use any LLM served through an OpenAI-compatible API.
+312:   docker compose up
+322:   docker compose -f compose.prod.yml up
+328:   docker compose -f compose.prod.yml exec api uv run src/sparql_llm/indexing/index_resources.py
+346:> docker compose up vectordb -d
+369:  docker compose up -d
+has_dockerfile
+upstream/sparql_llm/Dockerfile
+22:  spec.bindir        = "bin"
+23:  spec.executables   = spec.files.grep(%r{\Abin/}) { |f| File.basename(f) }
+bgee
+biosample
+chebi
+chembl
+chip-atlas
+civic
+clinvar
+dbcatalog
+dbnsfp
+dbpedia
+amrportal
+bacdive
+bgee
+biosample
+bmrb
+brenda
+chebi
+chembl
+chip-atlas
+civic
+upstream/rdfconfig_llm/functions/results_evaluater.py:2:import pandas as pd
+upstream/rdfconfig_llm/functions/results_evaluater.py:3:from munkres import Munkres
+upstream/rdfconfig_llm/functions/results_evaluater.py:5:from scipy.optimize import linear_sum_assignment
+upstream/rdfconfig_llm/functions/results_evaluater.py:6:from tqdm import tqdm
+upstream/rdfconfig_llm/functions/results_evaluater.py:225:    for q, a in tqdm(zip(questions, answers), total=len(questions), desc="Evaluating"):
+=== 2026-07-19T09:57:37+02:00 pre-commit checks ===
+upstream_diff_lines: 0
+45:    reproduction_status: audit_only
+47:    native_audit_complete: false
+50:    common_adapter_allowed: false
+95:    reproduction_status: audit_only
+97:    native_audit_complete: false
+100:    common_adapter_allowed: false
+146:    reproduction_status: audit_only
+148:    native_audit_complete: false
+151:    common_adapter_allowed: false
+191:    reproduction_status: audit_only
+193:    native_audit_complete: false
+196:    common_adapter_allowed: false
+245:    reproduction_status: audit_only
+247:    native_audit_complete: false
+250:    common_adapter_allowed: false
+302:    reproduction_status: audit_only
+304:    native_audit_complete: false
+307:    common_adapter_allowed: false
+342:    reproduction_status: audit_only
+344:    native_audit_complete: false
+347:    common_adapter_allowed: false
+=== artifacts exist ===
+-rw-r--r-- 1 root root  3817 Jul 19 09:56 audit/WAVE_A_EXECUTION_READINESS.md
+-rw-r--r-- 1 root root  3264 Jul 19 09:56 audit/WAVE_A_STATIC_AUDIT_MATRIX.csv
+-rw-r--r-- 1 root root  8277 Jul 19 09:56 audit/mkgqagent/STATIC_AUDIT.md
+-rw-r--r-- 1 root root  3281 Jul 19 09:56 audit/rdfconfig_llm/COMPANION_RDF_CONFIG_AUDIT.md
+-rw-r--r-- 1 root root  7809 Jul 19 09:56 audit/rdfconfig_llm/STATIC_AUDIT.md
+-rw-r--r-- 1 root root 10183 Jul 19 09:55 audit/sparql_llm/STATIC_AUDIT.md
+-rw-r--r-- 1 root root  7903 Jul 19 09:57 logs/static-audit-wave-a/commands.log
+=== 2026-07-19T09:57:37+02:00 END WAVE_A static audit (pre-push) ===

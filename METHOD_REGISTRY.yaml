@@ -4,12 +4,13 @@
 # inclusion_decision: audit/INCLUSION_DECISIONS.md
 # Evidencia pendiente cerrada: audit/EVIDENCE_CLOSURE.md
 
-schema_version: "0.4"
-updated_at: "2026-07-18T21:00:15+02:00"
+schema_version: "0.5"
+updated_at: "2026-07-19T09:53:00+02:00"
 phase: "1_native_audit"
-audit_prompt: "CLONE_UPSTREAM_STATIC"
+audit_prompt: "WAVE_A_STATIC_AUDIT"
 clones_performed: true
 evidence_closure_complete: true
+wave_a_static_audit_complete: true
 
 methods:
   - method_id: sparql_llm
@@ -52,7 +53,17 @@ methods:
     upstream_path: upstream/sparql_llm
     pinned_commit: 3748730e3bd2df2595280b918269fdaadb9fc0c3
     needs_api: true
-    notes: "OpenAlex+arXiv: preprint under review; no publisher DOI. Compose requerido."
+    static_audit_complete: true
+    static_audit_artifact: audit/sparql_llm/STATIC_AUDIT.md
+    environment_definition_status: partial
+    offline_smoke_ready: conditional
+    api_smoke_ready: conditional
+    native_reproduction_ready: conditional
+    execution_blockers:
+      - compose_plugin_absent_on_host
+      - uv_uvx_absent_on_host
+      - ram_risk_e5_large_indexing
+    notes: "OpenAlex+arXiv: preprint under review; no publisher DOI. Compose requerido para chat stack; MCP/paquete viables sin compose."
 
   - method_id: mkgqagent
     display_name: mKGQAgent
@@ -92,7 +103,18 @@ methods:
     upstream_path: upstream/mkgqagent
     pinned_commit: ba0f2f78611a7ccacc8c985a97f6008ef7ee6a6a
     needs_api: true
-    notes: "LICENSE_NOT_CONFIRMED. Public code ≠ confirmed reusable rights."
+    static_audit_complete: true
+    static_audit_artifact: audit/mkgqagent/STATIC_AUDIT.md
+    environment_definition_status: partial
+    offline_smoke_ready: no
+    api_smoke_ready: conditional
+    native_reproduction_ready: conditional
+    execution_blockers:
+      - LICENSE_NOT_CONFIRMED
+      - hardcoded_external_hosts
+      - offline_experience_pool_build_script_absent
+      - ram_risk_e5_large
+    notes: "LICENSE_NOT_CONFIRMED. Public code ≠ confirmed reusable rights. Online plan/action/feedback CODE_VERIFIED; offline phase mostly README."
 
   - method_id: cot_sparql
     display_name: COT-SPARQL
@@ -229,9 +251,24 @@ methods:
     clone_wave: WAVE_A_API_OR_LIGHTWEIGHT
     cloned: true
     upstream_path: upstream/rdfconfig_llm
+    companion_upstream_path: upstream/rdfconfig_llm_rdf-config
+    companion_pinned_commit: cccc581c16f0b24865030bc5459475a9d0fcbd5f
     pinned_commit: fe63171d3c8b9679779749ee11f731b2a8318053
     needs_api: true
-    notes: "GitHub HEAD LICENSE_NOT_CONFIRMED; Zenodo v1.0.0 CC-BY-4.0. README MIT ignored."
+    static_audit_complete: true
+    static_audit_artifact: audit/rdfconfig_llm/STATIC_AUDIT.md
+    companion_static_audit_artifact: audit/rdfconfig_llm/COMPANION_RDF_CONFIG_AUDIT.md
+    environment_definition_status: partial
+    offline_smoke_ready: no
+    api_smoke_ready: conditional
+    native_reproduction_ready: conditional
+    execution_blockers:
+      - LICENSE_NOT_CONFIRMED_generator_HEAD
+      - requirements_txt_incomplete_vs_evaluator
+      - ruby_bundler_required
+      - sparql_yaml_mutation_on_run
+      - possible_divergence_vendored_vs_companion_pin
+    notes: "GitHub HEAD LICENSE_NOT_CONFIRMED; Zenodo v1.0.0 CC-BY-4.0. Python selects vars; Ruby rdf-config builds SPARQL. Do not transfer MIT companion license to generator."
 
   - method_id: sgpt
     display_name: SGPT

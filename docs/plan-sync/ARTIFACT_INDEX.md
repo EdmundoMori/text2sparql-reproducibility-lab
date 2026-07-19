@@ -26,6 +26,14 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | CLN-CFG | Manifest clon | `configs/clone_manifest.yaml` | Lista oficial clones |
 | NEXT | Guía siguiente prompt | `docs/plan-sync/NEXT_PROMPT_GUIDANCE.md` | Qué proponer ahora |
 | SYNC | Estado general | `PLAN_SYNC.md` | Punto de entrada |
+| DEC002 | Vendor upstream en GitHub | `docs/decisions/002_vendor_upstream_on_github.md` | Por qué el código está en el repo |
+| WA-S | Static audit sparql_llm | `audit/sparql_llm/STATIC_AUDIT.md` | Entrypoints/MCP/Compose/eval |
+| WA-M | Static audit mkgqagent | `audit/mkgqagent/STATIC_AUDIT.md` | FastAPI/plan/feedback/legal |
+| WA-R | Static audit rdfconfig_llm | `audit/rdfconfig_llm/STATIC_AUDIT.md` | Frontera Python↔Ruby |
+| WA-RC | Companion rdf-config | `audit/rdfconfig_llm/COMPANION_RDF_CONFIG_AUDIT.md` | MIT companion separado |
+| WA-MX | Matriz WAVE_A | `audit/WAVE_A_STATIC_AUDIT_MATRIX.csv` | Comparativa tabular |
+| WA-RD | Execution readiness | `audit/WAVE_A_EXECUTION_READINESS.md` | next_safe_action por método |
+| WA-LOG | Log inspección | `logs/static-audit-wave-a/commands.log` | Comandos solo lectura |
 
 ## Qué está / no está en GitHub
 

@@ -1,46 +1,39 @@
 # NEXT_PROMPT_GUIDANCE — Qué debe proponer ChatGPT a continuación
 
 **Fecha:** 2026-07-19  
-**Estado lab:** clones WAVE_A/B/C listos; sin installs ni experimentos.
+**Estado lab:** WAVE_A static audit **complete**; sin installs ni experimentos.
 
 ## Prompt recomendado (prioridad 1)
 
-**Título sugerido:** Auditoría estática WAVE_A en árboles clonados
+**Título sugerido:** Prompt 4B — Environment definition WAVE_A (sin install)
 
-**Objetivo:** Para `sparql_llm`, `mkgqagent` y `rdfconfig_llm` (+ dependencia `rdfconfig_llm_rdf-config` si aplica), inspeccionar `upstream/` **sin instalar ni ejecutar**, y producir fichas reutilizables.
+**Objetivo:** Materializar specs de entorno y comandos *futuros* verificables por método WAVE_A, cerrando gaps detectados en la auditoría estática:
 
-**Salidas esperadas (Cursor debe crear/actualizar):**
+- `sparql_llm`: pip/Poetry vs ausencia de `uv`; alternativa a Compose (`docker run` Qdrant); lista deps core vs `agent`.
+- `mkgqagent`: pins sugeridos; advertencia LICENSE; checklist endpoints hardcodeados; estimación RAM e5-large.
+- `rdfconfig_llm`: completar deps (pandas/munkres/scipy/tqdm); Ruby/Bundler; política de **copia de trabajo** (no mutar `upstream/**/sparql.yaml`); elegir árbol rdf-config (vendored vs pin companion).
 
-- `audit/<method_id>/STATIC_AUDIT.md` — entrypoints, deps, env vars, Docker/Compose, GPU/CPU, riesgos.
-- Actualizar `METHOD_REGISTRY.yaml` solo con hechos estáticos (no marcar `reproduced`).
-- Actualizar `PLAN_SYNC.md` §3–§6 + esta guía + `ARTIFACT_INDEX.md`.
-- Push a GitHub.
+**Salidas esperadas:**
 
-**Restricciones obligatorias en el prompt:**
+- `environments/sparql_llm/README.md` (+ opcional `requirements.lock` *documental*, no instalado)
+- `environments/mkgqagent/README.md`
+- `environments/rdfconfig_llm/README.md`
+- Actualizar `WAVE_A_EXECUTION_READINESS.md` columna environment_definition
+- Actualizar `PLAN_SYNC.md` + este archivo + `ARTIFACT_INDEX.md` + push
 
-- No `pip install` / Poetry install / Docker build / pull HF.
-- No modificar `upstream/`.
-- `LICENSE_NOT_CONFIRMED` (mkgqagent): inspección OK; no diseñar adapters.
-- Distinguir “documentado en README” vs “verificado en código”.
-- Máquina: 7.4 GiB RAM WSL, 6 GiB VRAM, sin Compose plugin.
+**Restricciones:** sin `pip/poetry/bundle/npm install`, sin Docker build/run, sin API calls, sin modificar `upstream/`.
 
-## Alternativa (prioridad 2, solo si el investigador tiene API keys)
+## Alternativa (prioridad 2)
 
-Smoke mínimo WAVE_A etiquetado `smoke_only`, un método a la vez, presupuesto acotado, sin train. No declarar reproducción del paper.
+**Offline micro-smoke solo `sparql_llm`:** instalar deps core en venv del lab (fuera de upstream) y ejecutar tests de componentes/validación VoID local; etiquetar `smoke_only` si aplica; **no** reproducción. Solo si el investigador acepta install.
 
 ## No proponer aún
 
-- Train FIRESPARQL / CoT-34B / SGPT full train.
-- Adaptadores common / evaluación QALD unificada.
-- Clonar o ejecutar TeBaQA.
-- Declarar `reproduced` / `partially_reproduced`.
+- Smoke API multi-método en un solo prompt.  
+- Train / fine-tune / WAVE_B–C ejecución.  
+- Adapters (`common_adapter_allowed` sigue false).  
+- Integrar código `LICENSE_NOT_CONFIRMED`.
 
-## Formato deseado del prompt que ChatGPT entregue al investigador
+## Formato del prompt a Cursor
 
-1. Contexto (1 párrafo).  
-2. Objetivo medible.  
-3. Pasos numerados para Cursor.  
-4. Artefactos de salida (rutas).  
-5. Restricciones (lista).  
-6. Criterio de “hecho”.  
-7. Instrucción final: actualizar `PLAN_SYNC.md` + push.
+Incluir siempre: actualizar `PLAN_SYNC.md` + índice + push GitHub al cerrar.

@@ -2,8 +2,8 @@
 
 **Audiencia principal:** ChatGPT (planificador de prompts) y el investigador.  
 **Repo GitHub:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-**Última actualización:** 2026-07-19 (push completo con `upstream/` vendorizado)  
-**Fase lab:** 1 — auditoría / reproducibilidad nativa (clon estático hecho; sin ejecución experimental)
+**Última actualización:** 2026-07-19 (Prompt 4A — auditoría estática WAVE_A)  
+**Fase lab:** 1 — auditoría / reproducibilidad nativa (WAVE_A static audit complete; sin installs ni ejecución)
 
 > Instrucción para el planificador: lee este archivo primero. Usa los documentos específicos enlazados para detalle. **No asumas reproducción experimental**: clonar ≠ ejecutar ≠ reproducir un paper. Propón el siguiente prompt adaptado a evidencias, limitaciones de máquina y gates científicos.
 
@@ -56,6 +56,7 @@ Reglas del bucle:
 | 3 | Clonado estático | 7 clones; tebaqa excluido; ondas A–D | [`audit/CLONING_REPORT.md`](audit/CLONING_REPORT.md), [`scripts/clone_repositories.sh`](scripts/clone_repositories.sh) |
 | Sync | Este mecanismo | `PLAN_SYNC.md` + índice para el planificador | [`docs/plan-sync/ARTIFACT_INDEX.md`](docs/plan-sync/ARTIFACT_INDEX.md), [`docs/plan-sync/NEXT_PROMPT_GUIDANCE.md`](docs/plan-sync/NEXT_PROMPT_GUIDANCE.md) |
 | Sync-full | Vendor `upstream/` en GitHub | Árboles de código clonados versionados (~1.2 GiB); `.git` anidados → `.git_local/` local | [`docs/decisions/002_vendor_upstream_on_github.md`](docs/decisions/002_vendor_upstream_on_github.md), `upstream/<method_id>/` |
+| 4A | Auditoría estática WAVE_A | Fichas + matriz + readiness; pins verificados; sin install/ejecución | [`audit/sparql_llm/STATIC_AUDIT.md`](audit/sparql_llm/STATIC_AUDIT.md), [`audit/mkgqagent/STATIC_AUDIT.md`](audit/mkgqagent/STATIC_AUDIT.md), [`audit/rdfconfig_llm/STATIC_AUDIT.md`](audit/rdfconfig_llm/STATIC_AUDIT.md), [`audit/rdfconfig_llm/COMPANION_RDF_CONFIG_AUDIT.md`](audit/rdfconfig_llm/COMPANION_RDF_CONFIG_AUDIT.md), [`audit/WAVE_A_STATIC_AUDIT_MATRIX.csv`](audit/WAVE_A_STATIC_AUDIT_MATRIX.csv), [`audit/WAVE_A_EXECUTION_READINESS.md`](audit/WAVE_A_EXECUTION_READINESS.md) |
 
 ---
 
@@ -68,7 +69,7 @@ Reglas del bucle:
 - Sin Conda/uv; Poetry sí; solo `python3`.  
 - Clases útiles: `feasible_using_api`, `feasible_local_gpu` (ligero), `requires_external_gpu`.
 
-→ Preferir prompts de **auditoría estática** y **smoke API (WAVE_A)** antes de train/GPU pesada.
+→ WAVE_A **static audit hecha**. Siguiente: **environment definition** (sin install) o micro-smoke offline `sparql_llm`; API smokes uno a uno después.
 
 ### 4.2 Inclusión de métodos
 
@@ -82,10 +83,17 @@ Reglas del bucle:
 
 | Wave | Métodos | Implicación para el plan |
 |---|---|---|
-| WAVE_A | sparql_llm, mkgqagent, rdfconfig_llm | Candidatos a smoke/API siguiente |
+| WAVE_A | sparql_llm, mkgqagent, rdfconfig_llm | **Static audit complete**; env definition / smokes siguientes |
 | WAVE_B | sgpt | Local condicional (train/eval); no aún |
 | WAVE_C | cot_sparql, firesparql | Solo auditoría estática por ahora |
 | WAVE_D | tebaqa | Excluido del clon actual |
+
+### 4.3b Hallazgos estáticos WAVE_A (Prompt 4A)
+
+- **sparql_llm (MIT):** paquete + MCP + agent + benchmarks; Compose documentado pero **ausente en host**; sin `uv`/`uvx`; smoke offline validate/loaders viable tras install.
+- **mkgqagent (LICENSE_NOT_CONFIRMED):** FastAPI + LangGraph plan→EL→feedback **CODE_VERIFIED**; experience pool **prebuilt**; script offline **NOT_FOUND**; hosts IP hardcodeados; e5-large CPU riesgo RAM.
+- **rdfconfig_llm (LICENSE_NOT_CONFIRMED HEAD):** LLM elige variables → **Ruby rdf-config** construye SPARQL (**frontera clara**); `requirements.txt` incompleto vs Jaccard; muta `sparql.yaml` al correr; companion MIT **no** licencia el generator.
+- Todos siguen `reproduction_status: audit_only`; `native_audit_complete: false`; `common_adapter_allowed: false`.
 
 ### 4.4 Bloqueos legales / publicación
 
@@ -103,31 +111,29 @@ Reglas del bucle:
 ### 4.6 Lo que NO se ha hecho
 
 - Instalación de dependencias / entornos por método.  
-- Ejecución de pipelines, entrenamientos, evaluación.  
+- Ejecución de pipelines, entrenamientos, evaluación, smokes.  
 - Adaptadores comunes.  
 - Descarga HF/Docker images.  
-- Declarar ningún método como `reproduced`.
+- Declarar ningún método como `reproduced` / `smoke_only`.  
+- Auditoría estática WAVE_B/C.
 
 ---
 
 ## 5. Estado de reproducción (protocolo)
 
-Todos los métodos clonados: como máximo `audit_only` / clon estático.  
-**Ninguno** en `reproduced` / `partially_reproduced` / `smoke_only` documentado como experimento formal aún.
+WAVE_A: `audit_only` + **static_audit_complete**.  
+**Ninguno** en `reproduced` / `partially_reproduced` / `smoke_only`.
 
 ---
 
 ## 6. Recomendación al planificador (siguiente prompt)
 
-Prioridad sugerida (ajustable):
+1. **Prompt 4B — Environment definition WAVE_A** (sin install): specs en `environments/`, cerrar gaps Compose/uv/Ruby/requirements/legal.  
+2. Alternativa: micro-smoke offline `sparql_llm` (validate/loaders) si se acepta install.  
+3. API smokes: **un método por prompt**; priorizar `sparql_llm` (MIT) antes que mkgqagent/rdfconfig.  
+4. No train WAVE_B/C; no adapters; `LICENSE_NOT_CONFIRMED` sin integración.
 
-1. **Auditoría estática WAVE_A** en `upstream/` (README, entrypoints, deps, secrets requeridos, riesgo Compose) → ficha por método en `audit/<method_id>/`.  
-2. Opcional: **smoke controlado WAVE_A** solo si hay `.env` y presupuesto API; etiquetar explícitamente `smoke_only`, no reproducción.  
-3. **No** lanzar train FIRESPARQL/CoT-34B/TeBaQA.  
-4. Mantener gate: sin auditoría nativa completa → `common_adapter_allowed: false`.  
-5. Para repos `LICENSE_NOT_CONFIRMED`: inspección sí; adapters no.
-
-Detalle operativo: [`docs/plan-sync/NEXT_PROMPT_GUIDANCE.md`](docs/plan-sync/NEXT_PROMPT_GUIDANCE.md).
+Detalle: [`docs/plan-sync/NEXT_PROMPT_GUIDANCE.md`](docs/plan-sync/NEXT_PROMPT_GUIDANCE.md).
 
 ---
 
@@ -145,3 +151,4 @@ Ver lista completa y estable en:
 |---|---|
 | 2026-07-19 | Creación del mecanismo PLAN_SYNC + primer volcado de estado post-clon |
 | 2026-07-19 | Push completo: `upstream/` vendorizado en GitHub (decisión 002); el planificador puede leer código clonado |
+| 2026-07-19 | Prompt 4A: auditoría estática WAVE_A completa; readiness + matriz; siguiente=env definition |
