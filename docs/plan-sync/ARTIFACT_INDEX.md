@@ -25,6 +25,7 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | CLN-SCR | Script clon | `scripts/clone_repositories.sh` | Cómo se pinneó |
 | CLN-CFG | Manifest clon | `configs/clone_manifest.yaml` | Lista oficial clones |
 | NEXT | Guía siguiente prompt | `docs/plan-sync/NEXT_PROMPT_GUIDANCE.md` | Qué proponer ahora |
+| LOOP | Ciclo Cursor↔ChatGPT | `docs/plan-sync/PLANNER_LOOP.md` | Cómo replanificar tras cada push |
 | SYNC | Estado general | `PLAN_SYNC.md` | Punto de entrada |
 | DEC002 | Vendor upstream en GitHub | `docs/decisions/002_vendor_upstream_on_github.md` | Por qué el código está en el repo |
 | WA-S | Static audit sparql_llm | `audit/sparql_llm/STATIC_AUDIT.md` | Entrypoints/MCP/Compose/eval |

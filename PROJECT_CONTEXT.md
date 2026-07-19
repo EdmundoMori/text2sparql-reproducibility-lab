@@ -214,10 +214,13 @@ Antes de cada tarea:
 
 ### 8.1 Bucle Cursor ↔ ChatGPT (optimización del plan)
 
-1. ChatGPT propone un prompt.  
+1. ChatGPT propone **un** prompt.  
 2. Cursor lo ejecuta y documenta hallazgos en `PLAN_SYNC.md` + docs específicos.  
-3. Se publica en https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-4. ChatGPT relee el repo y adapta el siguiente prompt.
+3. Commit + push a https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
+4. El investigador pega en ChatGPT el meta-prompt de replanificación.  
+5. ChatGPT relee el repo, valida el plan y entrega el siguiente prompt.  
+
+Detalle: `docs/plan-sync/PLANNER_LOOP.md`.
 
 ---
 

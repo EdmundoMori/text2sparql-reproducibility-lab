@@ -28,20 +28,25 @@ Documentos rectores del lab (no sustituyen este sync):
 
 ## 2. Bucle Cursor ↔ ChatGPT
 
+Ciclo operativo (repetir hasta cerrar la fase):
+
 ```text
-ChatGPT (plan prompts)
-    → investigador ejecuta prompt en Cursor
-        → Cursor actualiza PLAN_SYNC + docs específicos + push GitHub
-            → ChatGPT relee repo y adapta el siguiente prompt
+ChatGPT entrega UN prompt
+  → Cursor lo ejecuta
+    → Cursor actualiza docs (PLAN_SYNC + específicos) + commit + push
+      → ChatGPT relee GitHub, valida el plan y entrega el siguiente prompt
 ```
+
+Detalle: [`docs/plan-sync/PLANNER_LOOP.md`](docs/plan-sync/PLANNER_LOOP.md).
 
 Reglas del bucle:
 
 1. Tras cada prompt ejecutado, Cursor actualiza **este** archivo (§3–§7) y, si hace falta, docs específicos.  
-2. Cursor registra rutas de docs específicos en [`docs/plan-sync/ARTIFACT_INDEX.md`](docs/plan-sync/ARTIFACT_INDEX.md).  
-3. Se hace **commit + push** al repo GitHub (sin `upstream/`, sin secretos, sin datasets/modelos pesados).  
-4. ChatGPT debe proponer el **siguiente prompt concreto**, no reescribir todo el plan desde cero salvo bloqueo metodológico.  
-5. Respetar `PROJECT_CONTEXT.md` §7: advertencia → solución → continuar ante límites de máquina.
+2. Cursor registra rutas en [`docs/plan-sync/ARTIFACT_INDEX.md`](docs/plan-sync/ARTIFACT_INDEX.md).  
+3. **Commit + push** a GitHub (sin secretos; `upstream/` ya vendorizado; sin caches/modelos nuevos pesados innecesarios).  
+4. ChatGPT propone el **siguiente prompt concreto** (prioridad 1), no reescribe todo el plan salvo bloqueo grave.  
+5. Respetar `PROJECT_CONTEXT.md` §7: advertencia → solución → continuar.  
+6. El investigador usa un **meta-prompt de replanificación** fijo tras cada push (ver `PLANNER_LOOP.md` / respuesta del agente).
 
 ---
 
@@ -164,6 +169,7 @@ Ver lista completa y estable en:
 | 2026-07-19 | Prompt 4A: auditoría estática WAVE_A completa; readiness + matriz; siguiente=env definition |
 | 2026-07-19 | Addenda estáticas sparql_llm/mkgqagent (Virtuoso no viable; pool≠trazas paper; doble e5) |
 | 2026-07-19 | Prompt 4B: environments/* + matriz/gaps; Ruby ABSENT; next=5A CORE_OFFLINE |
+| 2026-07-19 | Documentado ciclo operativo Cursor↔ChatGPT (`PLANNER_LOOP.md`); meta-prompt de replanificación |
 
 ---
 
