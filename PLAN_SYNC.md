@@ -162,6 +162,6 @@ Ver lista completa y estable en:
 | rama | `main` |
 | commit SHA | `97e86ceef3bf1d7a4756d62c0f4459efbefd43c3` |
 | mensaje | Complete WAVE_A static audits for sparql_llm, mkgqagent, and rdfconfig_llm. |
-| push | pendiente → se confirma tras `git push` |
+| push | confirmado en origin/main (`e28a04d9e0aa8c26f980ffc7e656a5942006c5c5`) |
 | artefactos | ver §3 fila 4A |
 
