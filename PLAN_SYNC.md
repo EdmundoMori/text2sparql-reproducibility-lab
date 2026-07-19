@@ -183,6 +183,6 @@ Ver lista completa y estable en:
 | commit final | `88d27b5a12a1dbc98edce559dd2c26c3d7d1e1a9` |
 | rama | `main` |
 | mensaje | Document WAVE_A environment specs without installing or running methods. |
-| push | confirmado (siguiente push) |
+| push | confirmado en origin/main (`b84e87e04e9b7d8dbe8a61ba1fe8133f3a405967`) |
 | artefactos | §3 fila 4B |
 
