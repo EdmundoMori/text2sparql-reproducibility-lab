@@ -1,0 +1,84 @@
+# --- Secrets & local env ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+secrets/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.envrc
+
+# --- Node ---
+node_modules/
+
+# --- Java / JVM ---
+*.class
+*.jar
+!**/gradle/wrapper/*.jar
+.gradle/
+target/
+
+# --- Notebooks ---
+.ipynb_checkpoints/
+
+# --- IDE / OS ---
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# --- Experiment caches & large local artifacts (keep structure via .gitkeep) ---
+logs/**
+!logs/.gitkeep
+results/native/**
+!results/native/.gitkeep
+results/common/**
+!results/common/.gitkeep
+datasets/native/**
+!datasets/native/.gitkeep
+datasets/common/**
+!datasets/common/.gitkeep
+graph_snapshots/**
+!graph_snapshots/.gitkeep
+papers/**
+!papers/.gitkeep
+# Optionally track small paper metadata later under papers/meta/
+
+# --- Upstream clones: track only via REPOSITORIES.lock.yaml; do not vendor by default ---
+upstream/**
+!upstream/.gitkeep
+
+# --- Local environment installs ---
+environments/**/venv/
+environments/**/.venv/
+environments/**/node_modules/
+
+# --- Model / HF caches ---
+.cache/
+**/huggingface/
+**/transformers_cache/
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.gguf
+
+# --- Coverage / test ---
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

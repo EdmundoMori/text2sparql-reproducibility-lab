@@ -1,0 +1,317 @@
+# METHOD_REGISTRY.yaml
+# Estados de reproducción: RESEARCH_PROTOCOL.md §5.
+# feasibility_class: MACHINE_PROFILE.md §4.
+# inclusion_decision: audit/INCLUSION_DECISIONS.md
+# Evidencia pendiente cerrada: audit/EVIDENCE_CLOSURE.md
+
+schema_version: "0.4"
+updated_at: "2026-07-18T21:00:15+02:00"
+phase: "1_native_audit"
+audit_prompt: "CLONE_UPSTREAM_STATIC"
+clones_performed: true
+evidence_closure_complete: true
+
+methods:
+  - method_id: sparql_llm
+    display_name: SPARQL-LLM
+    repositories:
+      - url: https://github.com/sib-swiss/sparql-llm
+        role: primary
+        relation_to_paper: official_authors_repo
+        default_branch: main
+        license_status: CONFIRMED_LICENSE_FILE
+        license_spdx: MIT
+        license_file: LICENSE.txt
+        last_push_utc: "2026-05-19T16:43:59Z"
+        fork: false
+    paper:
+      title: "SPARQL-LLM: Real-Time SPARQL Query Generation from Natural Language Questions"
+      year: 2025
+      publication_status: preprint_under_review
+      venue: "arXiv cs.IR; ACM TWEB claim in HTML UNVERIFIED"
+      doi_or_id: "10.48550/arXiv.2512.14277"
+      publisher_doi: UNKNOWN
+      arxiv_comment: "Under Review"
+      authors: ["Panayiotis Smeros", "Vincent Emonet", "Ruijie Wang", "Ana-Claudia Sima", "Tarcisio Mendes de Farias"]
+    artifacts:
+      checkpoints: absent_in_repo
+      processed_datasets: absent_in_repo
+      prompts: present
+      eval_scripts: present
+      reproduction_instructions: present
+    inclusion_status: included
+    inclusion_decision: INCLUDE_PRIMARY
+    reproduction_status: audit_only
+    feasibility_class: feasible_using_api
+    native_audit_complete: false
+    paper_code_audit_complete: true
+    evidence_closure_complete: true
+    common_adapter_allowed: false
+    clone_wave: WAVE_A_API_OR_LIGHTWEIGHT
+    cloned: true
+    upstream_path: upstream/sparql_llm
+    pinned_commit: 3748730e3bd2df2595280b918269fdaadb9fc0c3
+    needs_api: true
+    notes: "OpenAlex+arXiv: preprint under review; no publisher DOI. Compose requerido."
+
+  - method_id: mkgqagent
+    display_name: mKGQAgent
+    repositories:
+      - url: https://github.com/WSE-research/text2sparql-agent
+        role: primary
+        relation_to_paper: official_authors_repo
+        default_branch: main
+        license_status: LICENSE_NOT_CONFIRMED
+        license_spdx: UNKNOWN
+        license_file: ABSENT
+        last_push_utc: "2026-07-07T08:59:37Z"
+        fork: false
+    paper:
+      title: "Text-to-SPARQL Goes Beyond English: Multilingual Question Answering Over Knowledge Graphs through Human-Inspired Reasoning"
+      year: 2025
+      publication_status: workshop_proceedings_published
+      venue: "TEXT2SPARQL Challenge @ ESWC 2025; CEUR-WS Vol. 4094"
+      doi_or_id: "10.48550/arXiv.2507.16971"
+      authors: ["Aleksandr Perevalov", "Andreas Both"]
+    artifacts:
+      checkpoints: absent_in_repo_uses_api
+      processed_datasets: present
+      prompts: present
+      eval_scripts: present
+      reproduction_instructions: present
+    inclusion_status: included
+    inclusion_decision: INCLUDE_PRIMARY
+    reproduction_status: audit_only
+    feasibility_class: feasible_using_api
+    native_audit_complete: false
+    paper_code_audit_complete: true
+    evidence_closure_complete: true
+    common_adapter_allowed: false
+    clone_wave: WAVE_A_API_OR_LIGHTWEIGHT
+    cloned: true
+    upstream_path: upstream/mkgqagent
+    pinned_commit: ba0f2f78611a7ccacc8c985a97f6008ef7ee6a6a
+    needs_api: true
+    notes: "LICENSE_NOT_CONFIRMED. Public code ≠ confirmed reusable rights."
+
+  - method_id: cot_sparql
+    display_name: COT-SPARQL
+    repositories:
+      - url: https://github.com/dice-group/CoT-Sparql
+        role: primary
+        relation_to_paper: official_authors_repo
+        default_branch: main
+        license_status: LICENSE_NOT_CONFIRMED
+        license_spdx: UNKNOWN
+        license_file: ABSENT
+        last_push_utc: "2024-06-03T13:26:40Z"
+        fork: false
+    paper:
+      title: "Generating SPARQL from Natural Language Using Chain-of-Thoughts Prompting"
+      year: 2024
+      publication_status: published_article
+      venue: "SEMANTiCS 2024 / IOS Press SSW"
+      doi_or_id: "10.3233/SSW240028"
+      authors: ["Hamada M. Zahera", "Manzoor Ali", "Mohamed Ahmed Sherif", "Diego Moussallem", "Axel-Cyrille Ngonga Ngomo"]
+    artifacts:
+      checkpoints: absent_in_repo_external_hf
+      processed_datasets: partial
+      prompts: in_code_not_separate_files
+      eval_scripts: absent_dedicated
+      reproduction_instructions: present
+    inclusion_status: included_conditional
+    inclusion_decision: INCLUDE_CONDITIONAL
+    reproduction_status: audit_only
+    feasibility_class: requires_external_gpu
+    native_audit_complete: false
+    paper_code_audit_complete: true
+    evidence_closure_complete: true
+    common_adapter_allowed: false
+    clone_wave: WAVE_C_STATIC_AUDIT_ONLY
+    cloned: true
+    upstream_path: upstream/cot_sparql
+    pinned_commit: 063edd9868425e54010a0cb49ce585ed2186be4d
+    needs_api: false
+    notes: "LICENSE_NOT_CONFIRMED. Código parcial (embeddings externos)."
+
+  - method_id: firesparql
+    display_name: FIRESPARQL
+    repositories:
+      - url: https://github.com/sherry-pan/FIRESPARQL
+        role: primary
+        relation_to_paper: official_authors_repo
+        default_branch: main
+        license_status: LICENSE_NOT_CONFIRMED
+        license_spdx: UNKNOWN
+        license_file: ABSENT
+        last_push_utc: "2025-05-28T10:00:52Z"
+        fork: false
+      - url: https://huggingface.co/Sherry791/Meta-Llama-3-8B-Instruct-ft4sciqa
+        role: model_checkpoint
+        relation_to_paper: official_authors_release
+        license_status: CONFIRMED_MODEL_CARD
+        license_spdx: MIT
+    paper:
+      title: "FIRESPARQL: A LLM-Based Framework for SPARQL Query Generation over Scholarly Knowledge Graphs"
+      year: 2025
+      publication_status: published_article
+      venue: "IC3K 2025 KDIR (SCITEPRESS)"
+      doi_or_id: "10.5220/0013774000004000"
+      authors: ["Xueli Pan", "Victor de Boer", "Jacco van Ossenbruggen"]
+    artifacts:
+      checkpoints: present_on_hf_absent_in_git
+      processed_datasets: present
+      prompts: present
+      eval_scripts: present
+      reproduction_instructions: partial
+    inclusion_status: included_conditional
+    inclusion_decision: INCLUDE_CONDITIONAL
+    reproduction_status: audit_only
+    feasibility_class: currently_unknown
+    native_audit_complete: false
+    paper_code_audit_complete: true
+    evidence_closure_complete: true
+    common_adapter_allowed: false
+    clone_wave: WAVE_C_STATIC_AUDIT_ONLY
+    cloned: true
+    upstream_path: upstream/firesparql
+    pinned_commit: 48d6f168e4c1dd3dc467553aef370299911d4e76
+    needs_api: false
+    notes: "GitHub LICENSE_NOT_CONFIRMED; HF model card MIT. Requirements Coming soon."
+
+  - method_id: rdfconfig_llm
+    display_name: LLM + RDF-config
+    repositories:
+      - url: https://github.com/scott2121/sparql_query_generator
+        role: primary
+        relation_to_paper: official_experimental_environment
+        default_branch: main
+        license_status: LICENSE_NOT_CONFIRMED
+        license_spdx: UNKNOWN
+        license_file: ABSENT
+        last_push_utc: "2026-02-09T09:20:34Z"
+        fork: false
+      - url: https://doi.org/10.5281/zenodo.18539214
+        role: zenodo_archive
+        relation_to_paper: official_software_archive_v1.0.0
+        license_status: CONFIRMED_ZENODO_METADATA
+        license_spdx: CC-BY-4.0
+      - url: https://github.com/dbcls/rdf-config
+        role: dependency_or_companion
+        relation_to_paper: official_companion_tool
+        default_branch: master
+        license_status: CONFIRMED_LICENSE_FILE
+        license_spdx: MIT
+        license_file: LICENSE
+        last_push_utc: "2026-07-16T04:54:33Z"
+        fork: false
+    paper:
+      title: "Accurate SPARQL generation via in-context learning and schema-based query construction"
+      year: 2026
+      publication_status: published_article
+      venue: "Bioinformatics (OUP)"
+      doi_or_id: "10.1093/bioinformatics/btag174"
+      authors: ["Hikaru Nagazumi", "Yuki Moriya", "Shuichi Kawashima", "Toshiaki Katayama", "Kana Shimizu"]
+    artifacts:
+      checkpoints: n_a_api_llm
+      processed_datasets: present
+      prompts: present
+      eval_scripts: present
+      reproduction_instructions: present
+    inclusion_status: included_conditional
+    inclusion_decision: INCLUDE_CONDITIONAL
+    reproduction_status: audit_only
+    feasibility_class: feasible_using_api
+    native_audit_complete: false
+    paper_code_audit_complete: true
+    evidence_closure_complete: true
+    common_adapter_allowed: false
+    clone_wave: WAVE_A_API_OR_LIGHTWEIGHT
+    cloned: true
+    upstream_path: upstream/rdfconfig_llm
+    pinned_commit: fe63171d3c8b9679779749ee11f731b2a8318053
+    needs_api: true
+    notes: "GitHub HEAD LICENSE_NOT_CONFIRMED; Zenodo v1.0.0 CC-BY-4.0. README MIT ignored."
+
+  - method_id: sgpt
+    display_name: SGPT
+    repositories:
+      - url: https://github.com/rashad101/SGPT-SPARQL-query-generation
+        role: primary
+        relation_to_paper: official_authors_repo
+        default_branch: main
+        license_status: CONFIRMED_LICENSE_FILE
+        license_spdx: MIT
+        license_file: LICENSE.md
+        last_push_utc: "2024-09-15T09:21:37Z"
+        fork: false
+    paper:
+      title: "SGPT: A Generative Approach for SPARQL Query Generation From Natural Language Questions"
+      year: 2022
+      publication_status: published_article
+      venue: "IEEE Access"
+      doi_or_id: "10.1109/ACCESS.2022.3188714"
+      authors: ["Md Rashad Al Hasan Rony", "Uttam Kumar", "Roman Teucher", "Liubov Kovriguina", "Jens Lehmann"]
+    table4_evidence: closed
+    table4_source: "https://doi.org/10.1109/ACCESS.2022.3188714"
+    artifacts:
+      checkpoints: absent_in_repo_despite_paper_claim
+      processed_datasets: present
+      prompts: n_a_trained_model
+      eval_scripts: present
+      reproduction_instructions: present
+    inclusion_status: included
+    inclusion_decision: INCLUDE_PRIMARY
+    reproduction_status: audit_only
+    feasibility_class: feasible_local_gpu
+    native_audit_complete: false
+    paper_code_audit_complete: true
+    evidence_closure_complete: true
+    common_adapter_allowed: false
+    clone_wave: WAVE_B_LOCAL_CONDITIONAL
+    cloned: true
+    upstream_path: upstream/sgpt
+    pinned_commit: 1f6964d1c3bfee50c7dec2c25546f32b4ab94b2b
+    needs_api: false
+    notes: "Table 4 cerrada en RESULT_EVIDENCE_MATRIX.csv (reportada, no reproducida). Pesos ausentes en Git."
+
+  - method_id: tebaqa
+    display_name: TeBaQA
+    repositories:
+      - url: https://github.com/dice-group/TeBaQA
+        role: primary
+        relation_to_paper: official_authors_repo
+        default_branch: master
+        license_status: CONFIRMED_LICENSE_FILE
+        license_spdx: AGPL-3.0
+        license_file: LICENSE
+        last_push_utc: "2023-10-30T15:28:03Z"
+        fork: false
+    paper:
+      title: "Knowledge Graph Question Answering Using Graph-Pattern Isomorphism"
+      year: 2021
+      publication_status: published_article
+      venue: "Studies on the Semantic Web (IOS Press)"
+      doi_or_id: "10.3233/SSW210038"
+      authors: ["Daniel Vollmers", "Rricha Jalota", "Diego Moussallem", "Hardik Topiwala", "Axel-Cyrille Ngonga Ngomo", "Ricardo Usbeck"]
+    artifacts:
+      checkpoints: n_a_ml_classifiers
+      processed_datasets: external_indices
+      prompts: n_a
+      eval_scripts: gerbil_links_in_readme
+      reproduction_instructions: present
+    inclusion_status: historical_only
+    inclusion_decision: HISTORICAL_ONLY
+    reproduction_status: audit_only
+    feasibility_class: currently_unknown
+    native_audit_complete: false
+    paper_code_audit_complete: true
+    evidence_closure_complete: true
+    common_adapter_allowed: false
+    clone_wave: WAVE_D_EXCLUDED
+    cloned: false
+    upstream_path: null
+    pinned_commit: null
+    notes_clone: "Not cloned: HISTORICAL_ONLY / WAVE_D_EXCLUDED for this cloning phase."
+    needs_api: false
+    notes: "Fuera del foco de cierre de licencias UNKNOWN; AGPL confirmado."

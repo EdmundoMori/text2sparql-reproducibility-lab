@@ -1,0 +1,129 @@
+# REPOSITORIES.lock.yaml — generado por scripts/clone_repositories.sh
+# No modificar upstream/. Pins exactos de clones.
+schema_version: "0.2"
+updated_at: "2026-07-18T21:00:15+02:00"
+policy:
+  clone_root: upstream
+  modify_upstream: false
+  git_lfs_skip_smudge: true
+  no_auto_checkout_without_evidence: true
+repositories:
+  - method_id: cot_sparql
+    role: primary
+    repo_url: https://github.com/dice-group/CoT-Sparql.git
+    local_path: upstream/cot_sparql
+    branch: main
+    commit_sha: 063edd9868425e54010a0cb49ce585ed2186be4d
+    commit_date: 2024-06-03T15:26:39+02:00
+    tags_at_head: []
+    inclusion_decision: INCLUDE_CONDITIONAL
+    license_status: LICENSE_NOT_CONFIRMED
+    license_spdx: UNKNOWN
+    wave: WAVE_C_STATIC_AUDIT_ONLY
+    submodule_status: see logs/cloning/cot_sparql_primary.log
+    cloned_at: 2026-07-18T21:00:12+02:00
+    clone_command: "GIT_LFS_SKIP_SMUDGE=1 git clone --recurse-submodules -b main https://github.com/dice-group/CoT-Sparql.git upstream/cot_sparql"
+    git_lfs_skip_smudge: true
+    size_on_disk: 64M
+  - method_id: firesparql
+    role: primary
+    repo_url: https://github.com/sherry-pan/FIRESPARQL.git
+    local_path: upstream/firesparql
+    branch: main
+    commit_sha: 48d6f168e4c1dd3dc467553aef370299911d4e76
+    commit_date: 2025-05-28T12:00:49+02:00
+    tags_at_head: []
+    inclusion_decision: INCLUDE_CONDITIONAL
+    license_status: LICENSE_NOT_CONFIRMED
+    license_spdx: UNKNOWN
+    wave: WAVE_C_STATIC_AUDIT_ONLY
+    submodule_status: see logs/cloning/firesparql_primary.log
+    cloned_at: 2026-07-18T21:00:15+02:00
+    clone_command: "GIT_LFS_SKIP_SMUDGE=1 git clone --recurse-submodules -b main https://github.com/sherry-pan/FIRESPARQL.git upstream/firesparql"
+    git_lfs_skip_smudge: true
+    size_on_disk: 598M
+  - method_id: mkgqagent
+    role: primary
+    repo_url: https://github.com/WSE-research/text2sparql-agent.git
+    local_path: upstream/mkgqagent
+    branch: main
+    commit_sha: ba0f2f78611a7ccacc8c985a97f6008ef7ee6a6a
+    commit_date: 2026-07-07T10:23:01+02:00
+    tags_at_head: v1.0.0-TEXT2SPAQL-ESWC2025
+    inclusion_decision: INCLUDE_PRIMARY
+    license_status: LICENSE_NOT_CONFIRMED
+    license_spdx: UNKNOWN
+    wave: WAVE_A_API_OR_LIGHTWEIGHT
+    submodule_status: see logs/cloning/mkgqagent_primary.log
+    cloned_at: 2026-07-18T21:00:10+02:00
+    clone_command: "GIT_LFS_SKIP_SMUDGE=1 git clone --recurse-submodules -b main https://github.com/WSE-research/text2sparql-agent.git upstream/mkgqagent"
+    git_lfs_skip_smudge: true
+    size_on_disk: 6.0M
+  - method_id: rdfconfig_llm
+    role: dependency_or_companion
+    repo_url: https://github.com/dbcls/rdf-config.git
+    local_path: upstream/rdfconfig_llm_rdf-config
+    branch: master
+    commit_sha: cccc581c16f0b24865030bc5459475a9d0fcbd5f
+    commit_date: 2026-07-15T10:59:50+09:00
+    tags_at_head: []
+    inclusion_decision: INCLUDE_CONDITIONAL
+    license_status: CONFIRMED_LICENSE_FILE
+    license_spdx: MIT
+    wave: WAVE_A_API_OR_LIGHTWEIGHT
+    submodule_status: see logs/cloning/rdfconfig_llm_dependency_or_companion.log
+    cloned_at: 2026-07-18T21:00:11+02:00
+    clone_command: "GIT_LFS_SKIP_SMUDGE=1 git clone --recurse-submodules -b master https://github.com/dbcls/rdf-config.git upstream/rdfconfig_llm_rdf-config"
+    git_lfs_skip_smudge: true
+    size_on_disk: 126M
+  - method_id: rdfconfig_llm
+    role: primary
+    repo_url: https://github.com/scott2121/sparql_query_generator.git
+    local_path: upstream/rdfconfig_llm
+    branch: main
+    commit_sha: fe63171d3c8b9679779749ee11f731b2a8318053
+    commit_date: 2025-12-22T21:37:45+09:00
+    tags_at_head: v1.0.0
+    inclusion_decision: INCLUDE_CONDITIONAL
+    license_status: LICENSE_NOT_CONFIRMED
+    license_spdx: UNKNOWN
+    wave: WAVE_A_API_OR_LIGHTWEIGHT
+    submodule_status: see logs/cloning/rdfconfig_llm_primary.log
+    cloned_at: 2026-07-18T21:00:10+02:00
+    clone_command: "GIT_LFS_SKIP_SMUDGE=1 git clone --recurse-submodules -b main https://github.com/scott2121/sparql_query_generator.git upstream/rdfconfig_llm"
+    git_lfs_skip_smudge: true
+    size_on_disk: 62M
+  - method_id: sgpt
+    role: primary
+    repo_url: https://github.com/rashad101/SGPT-SPARQL-query-generation.git
+    local_path: upstream/sgpt
+    branch: main
+    commit_sha: 1f6964d1c3bfee50c7dec2c25546f32b4ab94b2b
+    commit_date: 2024-09-15T11:21:37+02:00
+    tags_at_head: []
+    inclusion_decision: INCLUDE_PRIMARY
+    license_status: CONFIRMED_LICENSE_FILE
+    license_spdx: MIT
+    wave: WAVE_B_LOCAL_CONDITIONAL
+    submodule_status: see logs/cloning/sgpt_primary.log
+    cloned_at: 2026-07-18T21:00:12+02:00
+    clone_command: "GIT_LFS_SKIP_SMUDGE=1 git clone --recurse-submodules -b main https://github.com/rashad101/SGPT-SPARQL-query-generation.git upstream/sgpt"
+    git_lfs_skip_smudge: true
+    size_on_disk: 218M
+  - method_id: sparql_llm
+    role: primary
+    repo_url: https://github.com/sib-swiss/sparql-llm.git
+    local_path: upstream/sparql_llm
+    branch: main
+    commit_sha: 3748730e3bd2df2595280b918269fdaadb9fc0c3
+    commit_date: 2026-05-19T19:43:52+03:00
+    tags_at_head: []
+    inclusion_decision: INCLUDE_PRIMARY
+    license_status: CONFIRMED_LICENSE_FILE
+    license_spdx: MIT
+    wave: WAVE_A_API_OR_LIGHTWEIGHT
+    submodule_status: see logs/cloning/sparql_llm_primary.log
+    cloned_at: 2026-07-18T21:00:09+02:00
+    clone_command: "GIT_LFS_SKIP_SMUDGE=1 git clone --recurse-submodules -b main https://github.com/sib-swiss/sparql-llm.git upstream/sparql_llm"
+    git_lfs_skip_smudge: true
+    size_on_disk: 139M

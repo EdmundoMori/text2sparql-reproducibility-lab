@@ -1,0 +1,85 @@
+# Manifest de clonado — solo INCLUDE_PRIMARY / INCLUDE_CONDITIONAL.
+# tebaqa (HISTORICAL_ONLY) excluido deliberadamente.
+# expected_commit fijado tras primer clon exitoso (pins en REPOSITORIES.lock.yaml).
+
+schema_version: "0.1"
+git_lfs_skip_smudge: true
+clone_root: upstream
+
+repositories:
+  - method_id: sparql_llm
+    role: primary
+    url: https://github.com/sib-swiss/sparql-llm.git
+    local_path: upstream/sparql_llm
+    default_branch: main
+    inclusion_decision: INCLUDE_PRIMARY
+    license_status: CONFIRMED_LICENSE_FILE
+    license_spdx: MIT
+    wave: WAVE_A_API_OR_LIGHTWEIGHT
+    expected_commit: "3748730e3bd2df2595280b918269fdaadb9fc0c3"
+
+  - method_id: mkgqagent
+    role: primary
+    url: https://github.com/WSE-research/text2sparql-agent.git
+    local_path: upstream/mkgqagent
+    default_branch: main
+    inclusion_decision: INCLUDE_PRIMARY
+    license_status: LICENSE_NOT_CONFIRMED
+    license_spdx: UNKNOWN
+    wave: WAVE_A_API_OR_LIGHTWEIGHT
+    expected_commit: "ba0f2f78611a7ccacc8c985a97f6008ef7ee6a6a"
+
+  - method_id: rdfconfig_llm
+    role: primary
+    url: https://github.com/scott2121/sparql_query_generator.git
+    local_path: upstream/rdfconfig_llm
+    default_branch: main
+    inclusion_decision: INCLUDE_CONDITIONAL
+    license_status: LICENSE_NOT_CONFIRMED
+    license_spdx: UNKNOWN
+    wave: WAVE_A_API_OR_LIGHTWEIGHT
+    expected_commit: "fe63171d3c8b9679779749ee11f731b2a8318053"
+
+  - method_id: rdfconfig_llm
+    role: dependency_or_companion
+    url: https://github.com/dbcls/rdf-config.git
+    local_path: upstream/rdfconfig_llm_rdf-config
+    default_branch: master
+    inclusion_decision: INCLUDE_CONDITIONAL
+    license_status: CONFIRMED_LICENSE_FILE
+    license_spdx: MIT
+    wave: WAVE_A_API_OR_LIGHTWEIGHT
+    expected_commit: "cccc581c16f0b24865030bc5459475a9d0fcbd5f"
+
+  - method_id: sgpt
+    role: primary
+    url: https://github.com/rashad101/SGPT-SPARQL-query-generation.git
+    local_path: upstream/sgpt
+    default_branch: main
+    inclusion_decision: INCLUDE_PRIMARY
+    license_status: CONFIRMED_LICENSE_FILE
+    license_spdx: MIT
+    wave: WAVE_B_LOCAL_CONDITIONAL
+    expected_commit: "1f6964d1c3bfee50c7dec2c25546f32b4ab94b2b"
+
+  - method_id: cot_sparql
+    role: primary
+    url: https://github.com/dice-group/CoT-Sparql.git
+    local_path: upstream/cot_sparql
+    default_branch: main
+    inclusion_decision: INCLUDE_CONDITIONAL
+    license_status: LICENSE_NOT_CONFIRMED
+    license_spdx: UNKNOWN
+    wave: WAVE_C_STATIC_AUDIT_ONLY
+    expected_commit: "063edd9868425e54010a0cb49ce585ed2186be4d"
+
+  - method_id: firesparql
+    role: primary
+    url: https://github.com/sherry-pan/FIRESPARQL.git
+    local_path: upstream/firesparql
+    default_branch: main
+    inclusion_decision: INCLUDE_CONDITIONAL
+    license_status: LICENSE_NOT_CONFIRMED
+    license_spdx: UNKNOWN
+    wave: WAVE_C_STATIC_AUDIT_ONLY
+    expected_commit: "48d6f168e4c1dd3dc467553aef370299911d4e76"

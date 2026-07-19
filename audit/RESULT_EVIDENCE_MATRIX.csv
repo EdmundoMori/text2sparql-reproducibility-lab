@@ -1,0 +1,55 @@
+method_id,result_id,dataset,partition,configuration,metric,value,model,gold_or_provided_entities_K,source,notes
+sgpt,T4_SGPTQ_LCQUAD2,LC-QuAD 2.0,test (6046; paper Table 2 original split),SGPT_Q (no additional knowledge K),BLEU,60.50,GPT-2 117M decoder + Transformer encoders (8 heads 6 layers),no,"DOI HTML table extract https://doi.org/10.1109/ACCESS.2022.3188714 Table 4",Reported only; not reproduced
+sgpt,T4_SGPTQ_LCQUAD2,LC-QuAD 2.0,test,SGPT_Q,F1,83.45,GPT-2 117M,no,same,Reported only
+sgpt,T4_SGPTQ_LCQUAD2,LC-QuAD 2.0,test,SGPT_Q,SP-BLEU,63.59,GPT-2 117M,no,same,Reported only
+sgpt,T4_SGPTQ_LCQUAD2,LC-QuAD 2.0,test,SGPT_Q,SP-F1,86.22,GPT-2 117M,no,same,Reported only
+sgpt,T4_SGPTQ_VQUANDA,VQuAnDa,test (1000),SGPT_Q,BLEU,63.82,GPT-2 117M,no,same,Reported only
+sgpt,T4_SGPTQ_VQUANDA,VQuAnDa,test,SGPT_Q,F1,87.08,GPT-2 117M,no,same,Reported only
+sgpt,T4_SGPTQ_VQUANDA,VQuAnDa,test,SGPT_Q,SP-BLEU,63.82,GPT-2 117M,no,same,Reported only
+sgpt,T4_SGPTQ_VQUANDA,VQuAnDa,test,SGPT_Q,SP-F1,87.08,GPT-2 117M,no,same,Reported only
+sgpt,T4_SGPTQ_QALD9,QALD-9 English,test (150),SGPT_Q,BLEU,29.95,GPT-2 117M,no,same,Reported only
+sgpt,T4_SGPTQ_QALD9,QALD-9 English,test,SGPT_Q,F1,60.22,GPT-2 117M,no,same,Reported only
+sgpt,T4_SGPTQ_QALD9,QALD-9 English,test,SGPT_Q,SP-BLEU,32.12,GPT-2 117M,no,same,Reported only
+sgpt,T4_SGPTQ_QALD9,QALD-9 English,test,SGPT_Q,SP-F1,64.57,GPT-2 117M,no,same,Reported only
+sgpt,T4_SGPTQK_LCQUAD2,LC-QuAD 2.0,test,SGPT_Q_K (entities provided as K),BLEU,73.78,GPT-2 117M,provided_entities_as_K,same,"Paper §IV-A: entities mentioned in the question are provided as K. Paper does not use the phrase 'gold entity linking'; provenance of IDs in runs: UNKNOWN without code audit."
+sgpt,T4_SGPTQK_LCQUAD2,LC-QuAD 2.0,test,SGPT_Q_K,F1,89.04,GPT-2 117M,provided_entities_as_K,same,Reported only
+sgpt,T4_SGPTQK_LCQUAD2,LC-QuAD 2.0,test,SGPT_Q_K,SP-BLEU,77.85,GPT-2 117M,provided_entities_as_K,same,Reported only
+sgpt,T4_SGPTQK_LCQUAD2,LC-QuAD 2.0,test,SGPT_Q_K,SP-F1,92.27,GPT-2 117M,provided_entities_as_K,same,Reported only
+sgpt,T4_SGPTQK_VQUANDA,VQuAnDa,test,SGPT_Q_K,BLEU,72.58,GPT-2 117M,provided_entities_as_K,same,Reported only
+sgpt,T4_SGPTQK_VQUANDA,VQuAnDa,test,SGPT_Q_K,F1,88.87,GPT-2 117M,provided_entities_as_K,same,Reported only
+sgpt,T4_SGPTQK_VQUANDA,VQuAnDa,test,SGPT_Q_K,SP-BLEU,72.58,GPT-2 117M,provided_entities_as_K,same,Reported only
+sgpt,T4_SGPTQK_VQUANDA,VQuAnDa,test,SGPT_Q_K,SP-F1,88.87,GPT-2 117M,provided_entities_as_K,same,Reported only
+sgpt,T4_SGPTQK_QALD9,QALD-9 English,test,SGPT_Q_K,BLEU,35.68,GPT-2 117M,provided_entities_as_K,same,Reported only
+sgpt,T4_SGPTQK_QALD9,QALD-9 English,test,SGPT_Q_K,F1,67.82,GPT-2 117M,provided_entities_as_K,same,Reported only
+sgpt,T4_SGPTQK_QALD9,QALD-9 English,test,SGPT_Q_K,SP-BLEU,41.88,GPT-2 117M,provided_entities_as_K,same,Reported only
+sgpt,T4_SGPTQK_QALD9,QALD-9 English,test,SGPT_Q_K,SP-F1,72.98,GPT-2 117M,provided_entities_as_K,same,Reported only
+sgpt,T4_NSPM_LCQUAD2,LC-QuAD 2.0,test,NSpM baseline (no K block),BLEU,34.74,Bi-LSTM template gen (baseline),no,same,Baseline row in Table 4
+sgpt,T4_NSPM_LCQUAD2,LC-QuAD 2.0,test,NSpM,F1,66.47,baseline,no,same,
+sgpt,T4_NSPM_LCQUAD2,LC-QuAD 2.0,test,NSpM,SP-BLEU,38.39,baseline,no,same,
+sgpt,T4_NSPM_LCQUAD2,LC-QuAD 2.0,test,NSpM,SP-F1,70.78,baseline,no,same,
+sgpt,T4_NSPM_VQUANDA,VQuAnDa,test,NSpM,BLEU,37.75,baseline,no,same,
+sgpt,T4_NSPM_VQUANDA,VQuAnDa,test,NSpM,F1,59.96,baseline,no,same,
+sgpt,T4_NSPM_VQUANDA,VQuAnDa,test,NSpM,SP-BLEU,37.75,baseline,no,same,
+sgpt,T4_NSPM_VQUANDA,VQuAnDa,test,NSpM,SP-F1,59.96,baseline,no,same,
+sgpt,T4_NSPM_QALD9,QALD-9 English,test,NSpM,BLEU,18.23,baseline,no,same,
+sgpt,T4_NSPM_QALD9,QALD-9 English,test,NSpM,F1,45.34,baseline,no,same,
+sgpt,T4_NSPM_QALD9,QALD-9 English,test,NSpM,SP-BLEU,24.18,baseline,no,same,
+sgpt,T4_NSPM_QALD9,QALD-9 English,test,NSpM,SP-F1,50.53,baseline,no,same,
+sgpt,T4_SQG_LCQUAD2,LC-QuAD 2.0,test,SQG (with-K comparison block),BLEU,-,baseline,with_K_block,same,Dash in Table 4 (no score)
+sgpt,T4_SQG_VQUANDA,VQuAnDa,test,SQG,BLEU,5.09,baseline,with_K_block,same,
+sgpt,T4_SQG_VQUANDA,VQuAnDa,test,SQG,F1,37.70,baseline,with_K_block,same,
+sgpt,T4_SQG_VQUANDA,VQuAnDa,test,SQG,SP-BLEU,33.86,baseline,with_K_block,same,
+sgpt,T4_SQG_VQUANDA,VQuAnDa,test,SQG,SP-F1,44.67,baseline,with_K_block,same,
+sgpt,T4_SQG_QALD9,QALD-9 English,test,SQG,BLEU,4.44,baseline,with_K_block,same,
+sgpt,T4_SQG_QALD9,QALD-9 English,test,SQG,F1,27.85,baseline,with_K_block,same,
+sgpt,T4_SQG_QALD9,QALD-9 English,test,SQG,SP-BLEU,22.14,baseline,with_K_block,same,
+sgpt,T4_SQG_QALD9,QALD-9 English,test,SQG,SP-F1,39.39,baseline,with_K_block,same,
+sgpt,T4_TEBAQA_LCQUAD2,LC-QuAD 2.0,test,TeBaQA,BLEU,-,baseline,with_K_block,same,Dash in Table 4
+sgpt,T4_TEBAQA_VQUANDA,VQuAnDa,test,TeBaQA,BLEU,13.30,baseline,with_K_block,same,
+sgpt,T4_TEBAQA_VQUANDA,VQuAnDa,test,TeBaQA,F1,22.41,baseline,with_K_block,same,
+sgpt,T4_TEBAQA_VQUANDA,VQuAnDa,test,TeBaQA,SP-BLEU,13.30,baseline,with_K_block,same,
+sgpt,T4_TEBAQA_VQUANDA,VQuAnDa,test,TeBaQA,SP-F1,22.41,baseline,with_K_block,same,
+sgpt,T4_TEBAQA_QALD9,QALD-9 English,test,TeBaQA,BLEU,12.82,baseline,with_K_block,same,
+sgpt,T4_TEBAQA_QALD9,QALD-9 English,test,TeBaQA,F1,28.81,baseline,with_K_block,same,
+sgpt,T4_TEBAQA_QALD9,QALD-9 English,test,TeBaQA,SP-BLEU,17.48,baseline,with_K_block,same,
+sgpt,T4_TEBAQA_QALD9,QALD-9 English,test,TeBaQA,SP-F1,32.24,baseline,with_K_block,same,

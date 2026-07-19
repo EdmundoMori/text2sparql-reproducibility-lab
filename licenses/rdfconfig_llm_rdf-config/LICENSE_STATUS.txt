@@ -1,0 +1,6 @@
+method_id: rdfconfig_llm
+local_path: upstream/rdfconfig_llm_rdf-config
+license_status: CONFIRMED_LICENSE_FILE
+license_spdx: MIT
+recorded_at: 2026-07-18T21:00:11+02:00
+source_inspection: static copy of LICENSE* if present; else LICENSE_NOT_CONFIRMED note

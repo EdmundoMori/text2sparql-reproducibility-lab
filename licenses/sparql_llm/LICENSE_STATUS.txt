@@ -1,0 +1,6 @@
+method_id: sparql_llm
+local_path: upstream/sparql_llm
+license_status: CONFIRMED_LICENSE_FILE
+license_spdx: MIT
+recorded_at: 2026-07-18T21:00:09+02:00
+source_inspection: static copy of LICENSE* if present; else LICENSE_NOT_CONFIRMED note
