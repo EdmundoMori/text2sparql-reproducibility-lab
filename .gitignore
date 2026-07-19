@@ -7,6 +7,9 @@
 credentials*.json
 secrets/
 
+# --- Disposable execution workspaces (see environments/EXECUTION_WORKSPACE_POLICY.md) ---
+workdir/
+
 # --- Python ---
 __pycache__/
 *.py[cod]

@@ -1,0 +1,63 @@
+# Documental — no resuelto por package manager (Prompt 4B)
+method_id: sparql_llm
+source_commit: 3748730e3bd2df2595280b918269fdaadb9fc0c3
+dependency_source: upstream/sparql_llm/pyproject.toml
+package_name: sparql-llm
+code_version: "0.1.4"
+metadata_version_divergence: "CITATION.cff/server.json report 0.1.2"
+python_requires: ">=3.10"
+host_python: "3.10.12"
+host_package_managers:
+  pip: present
+  poetry: present
+  uv: ABSENT
+  conda: ABSENT
+
+scopes:
+  CORE_OFFLINE:
+    description: Base deps without optional agent; no LLM/Qdrant required for import/validate
+    install_extra: none
+    dependencies:
+      - { name: httpx, pin_quality: LOWER_BOUND, declared: ">=0.27.2" }
+      - { name: rdflib, pin_quality: LOWER_BOUND, declared: ">=7.0.0" }
+      - { name: SPARQLWrapper, pin_quality: LOWER_BOUND, declared: ">=2.0.0" }
+      - { name: beautifulsoup4, pin_quality: LOWER_BOUND, declared: ">=4.13.0" }
+      - { name: curies, pin_quality: LOWER_BOUND, declared: ">=0.11.0" }
+      - { name: mcp, pin_quality: LOWER_BOUND, declared: ">=1.25.0,<2" }
+      - { name: qdrant-client, pin_quality: LOWER_BOUND, declared: ">=1.16.2" }
+      - { name: fastembed, pin_quality: LOWER_BOUND, declared: ">=0.7.4" }
+      - { name: langchain-core, pin_quality: LOWER_BOUND, declared: ">=1.2.6" }
+      - { name: markdownify, pin_quality: LOWER_BOUND, declared: ">=1.1.0" }
+      - { name: pandas, pin_quality: LOWER_BOUND, declared: ">=2.2.3" }
+      - { name: typing-extensions, pin_quality: LOWER_BOUND, declared: ">=4.15.0" }
+    notes:
+      - "qdrant-client/fastembed listed as base deps even for CORE_OFFLINE import path; future install may still pull them — document actual resolved set after install prompt."
+      - "Do not invent exact resolved versions."
+
+  MCP_OR_AGENT_API:
+    install_extra: agent
+    dependencies_additional:
+      - { name: langgraph, pin_quality: LOWER_BOUND, declared: ">=1.0.5" }
+      - { name: langchain, pin_quality: LOWER_BOUND, declared: ">=1.2.0" }
+      - { name: langchain-openai, pin_quality: LOWER_BOUND, declared: ">=1.1.6" }
+      - { name: langchain-mcp-adapters, pin_quality: LOWER_BOUND, declared: ">=0.2.1" }
+      - { name: langfuse, pin_quality: LOWER_BOUND, declared: ">=3.8.1" }
+      - { name: fastapi, pin_quality: LOWER_BOUND, declared: ">=0.123.0" }
+      - { name: "uvicorn[standard]", pin_quality: LOWER_BOUND, declared: ">=0.34.0" }
+      - { name: pydantic, pin_quality: LOWER_BOUND, declared: ">=2.10.0" }
+      - { name: pydantic-settings, pin_quality: LOWER_BOUND, declared: ">=2.7.0" }
+      - { name: jinja2, pin_quality: LOWER_BOUND, declared: ">=3.1.5" }
+      - { name: "sentry-sdk[fastapi]", pin_quality: LOWER_BOUND, declared: ">=2.27.0" }
+
+  FULL_CHAT_STACK:
+    notes:
+      - "Requires Docker/Qdrant per compose.yml; compose plugin ABSENT on host."
+      - "Dockerfile uses uv sync — uv ABSENT on host; image build is alternate path."
+
+  TEXT2SPARQL_VIRTUOSO:
+    status: BLOCKED_ON_LOCAL_HOST
+    reason: "Virtuoso buffer settings and dumps exceed WSL RAM; not a local smoke target."
+
+explicitly_not_assumed:
+  - { name: fastembed-gpu, reason: "gpu extra commented out in pyproject.toml" }
+  - { name: uv, reason: "ABSENT on host" }

@@ -1,0 +1,48 @@
+=== 2026-07-19T10:46:31+02:00 START Prompt 4B ===
+pwd: /home/edmundo/text2sparql-reproducibility-lab
+branch: main
+lab_commit_start: aa141143e0a4dde5ac1de5dd645b70ecc953704a
+## main...origin/main
+?? logs/environment-definition-wave-a/
+--- expected HEAD aa141143 ---
+HEAD_OK
+--- pins WAVE_A ---
+sparql_llm 3748730e3bd2df2595280b918269fdaadb9fc0c3
+mkgqagent ba0f2f78611a7ccacc8c985a97f6008ef7ee6a6a
+rdfconfig_llm fe63171d3c8b9679779749ee11f731b2a8318053
+rdfconfig_llm_rdf-config cccc581c16f0b24865030bc5459475a9d0fcbd5f
+--- host tools (no network installs) ---
+Python 3.10.12
+pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)
+Poetry (version 2.3.1)
+Command 'ruby' not found, but can be installed with:
+snap install ruby  # version 4.0.6, or
+apt  install ruby  # version 1:3.0~exp1
+See 'snap info ruby' for additional versions.
+ruby: ABSENT
+Command 'bundle' not found, but can be installed with:
+snap install ruby          # version 4.0.6, or
+apt  install ruby-bundler  # version 2.3.5-2ubuntu1.2
+See 'snap info ruby' for additional versions.
+bundle: ABSENT
+Docker version 29.1.3, build 29.1.3-0ubuntu3~22.04.2
+docker: unknown command: docker compose
+
+Run 'docker --help' for more information
+docker_compose: ABSENT
+Failed to initialize NVML: GPU access blocked by the operating system
+Failed to properly shut down NVML: GPU access blocked by the operating system
+
+               total        used        free      shared  buff/cache   available
+Mem:           7.4Gi       1.8Gi       3.0Gi       3.0Mi       2.6Gi       5.4Gi
+Swap:          2.0Gi          0B       2.0Gi
+Linux LAPTOP-311333V7 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+=== NO installs, NO API, NO upstream execution ===
+=== 2026-07-19T10:50:17+02:00 pre-commit 4B ===
+0
+sparql_llm OK ready_documented conditional
+mkgqagent OK ready_documented not_ready_or_weak
+rdfconfig_llm OK ready_documented conditional
+registry_gates_ok
+NO installs NO API NO upstream execution in Prompt 4B
+=== 2026-07-19T10:50:17+02:00 END Prompt 4B pre-push ===

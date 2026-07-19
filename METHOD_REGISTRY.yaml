@@ -4,13 +4,14 @@
 # inclusion_decision: audit/INCLUSION_DECISIONS.md
 # Evidencia pendiente cerrada: audit/EVIDENCE_CLOSURE.md
 
-schema_version: "0.5"
-updated_at: "2026-07-19T09:53:00+02:00"
+schema_version: "0.6"
+updated_at: "2026-07-19T10:46:00+02:00"
 phase: "1_native_audit"
-audit_prompt: "WAVE_A_STATIC_AUDIT"
+audit_prompt: "WAVE_A_ENVIRONMENT_DEFINITION"
 clones_performed: true
 evidence_closure_complete: true
 wave_a_static_audit_complete: true
+wave_a_environment_definition_complete: true
 
 methods:
   - method_id: sparql_llm
@@ -55,15 +56,20 @@ methods:
     needs_api: true
     static_audit_complete: true
     static_audit_artifact: audit/sparql_llm/STATIC_AUDIT.md
-    environment_definition_status: partial
+    environment_definition_status: ready_documented
+    environment_artifacts: environments/sparql_llm/
     offline_smoke_ready: conditional
     api_smoke_ready: conditional
     native_reproduction_ready: conditional
+    blocked_local_protocols:
+      - TEXT2SPARQL_VIRTUOSO
+    next_execution_prompt: Prompt_5A_CORE_OFFLINE_install_import_smoke
     execution_blockers:
       - compose_plugin_absent_on_host
       - uv_uvx_absent_on_host
       - ram_risk_e5_large_indexing
-    notes: "OpenAlex+arXiv: preprint under review; no publisher DOI. Compose requerido para chat stack; MCP/paquete viables sin compose."
+      - virtuoso_text2sparql_blocked_on_host
+    notes: "OpenAlex+arXiv: preprint under review; no publisher DOI. Env specs in environments/sparql_llm/. First micro-smoke: CORE_OFFLINE."
 
   - method_id: mkgqagent
     display_name: mKGQAgent
@@ -105,16 +111,20 @@ methods:
     needs_api: true
     static_audit_complete: true
     static_audit_artifact: audit/mkgqagent/STATIC_AUDIT.md
-    environment_definition_status: partial
+    environment_definition_status: ready_documented
+    environment_artifacts: environments/mkgqagent/
     offline_smoke_ready: no
     api_smoke_ready: conditional
-    native_reproduction_ready: conditional
+    native_reproduction_ready: not_ready_or_weak
+    next_execution_prompt: defer_until_after_sparql_CORE_and_single_agent_decision
     execution_blockers:
       - LICENSE_NOT_CONFIRMED
       - hardcoded_external_hosts
       - offline_experience_pool_build_script_absent
       - ram_risk_e5_large
-    notes: "LICENSE_NOT_CONFIRMED. Public code ≠ confirmed reusable rights. Online plan/action/feedback CODE_VERIFIED; offline phase mostly README."
+      - double_agent_import_in_main
+      - requests_missing_from_requirements
+    notes: "LICENSE_NOT_CONFIRMED. native_reproduction_ready=not_ready_or_weak (reconciled with WAVE_A_EXECUTION_READINESS)."
 
   - method_id: cot_sparql
     display_name: COT-SPARQL
@@ -258,17 +268,19 @@ methods:
     static_audit_complete: true
     static_audit_artifact: audit/rdfconfig_llm/STATIC_AUDIT.md
     companion_static_audit_artifact: audit/rdfconfig_llm/COMPANION_RDF_CONFIG_AUDIT.md
-    environment_definition_status: partial
+    environment_definition_status: ready_documented
+    environment_artifacts: environments/rdfconfig_llm/
     offline_smoke_ready: no
     api_smoke_ready: conditional
     native_reproduction_ready: conditional
+    next_execution_prompt: defer_ruby_runtime_then_workdir_smoke
     execution_blockers:
       - LICENSE_NOT_CONFIRMED_generator_HEAD
       - requirements_txt_incomplete_vs_evaluator
-      - ruby_bundler_required
+      - ruby_bundler_ABSENT_on_host
       - sparql_yaml_mutation_on_run
       - possible_divergence_vendored_vs_companion_pin
-    notes: "GitHub HEAD LICENSE_NOT_CONFIRMED; Zenodo v1.0.0 CC-BY-4.0. Python selects vars; Ruby rdf-config builds SPARQL. Do not transfer MIT companion license to generator."
+    notes: "Env specs ready_documented. Host Ruby/Bundler ABSENT. Prefer Zenodo for fidelity; never run in-place on upstream."
 
   - method_id: sgpt
     display_name: SGPT

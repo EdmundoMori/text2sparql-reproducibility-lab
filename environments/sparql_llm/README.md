@@ -1,0 +1,60 @@
+# Environment spec — sparql_llm
+
+**Source commit:** `3748730e3bd2df2595280b918269fdaadb9fc0c3`  
+**Legal:** MIT (`CONFIRMED_LICENSE_FILE`)  
+**Package version in code:** `0.1.4` (`src/sparql_llm/__init__.py`) — diverge de `CITATION.cff`/`server.json` `0.1.2`  
+**Python requerido:** `>=3.10` (`pyproject.toml`) — host: `3.10.12` OK  
+**Gestores futuros:** `venv`+`pip` o Poetry; **no** `uv`/`uvx` (ABSENT en host)  
+**Extra GPU:** comentado en `pyproject.toml` — **no asumir**
+
+Estado: **documentado**, no instalado.
+
+---
+
+## A. CORE_OFFLINE (primer micro-smoke recomendado)
+
+| Incluye | Excluye |
+|---|---|
+| Loaders ejemplos/VoID/info | LLM / OpenRouter |
+| `validate_sparql*` con VoID local (`tests/void_*.ttl`) | Qdrant |
+| Import paquete / tests de componentes **sin red** | Docker / Compose |
+| deps **base** de `pyproject.toml` (sin extra `agent`) | Indexación completa multi-endpoint |
+
+**Objetivo smoke:** import + validación/loaders locales → etiquetar `smoke_only` solo tras ejecución.  
+**No es** reproducción del paper.
+
+## B. MCP_OR_AGENT_API
+
+| Incluye | Notas |
+|---|---|
+| Extra `agent` (langgraph, fastapi, langchain-openai, …) | LOWER_BOUND en pyproject |
+| API OpenRouter / OpenAI-compatible | `OPENROUTER_API_KEY` / afines |
+| Embeddings (`intfloat/multilingual-e5-large` default) | Riesgo RAM |
+| Qdrant opcional (path local o contenedor) | Compose ausente → `docker run` futuro |
+| Una pregunta; **un worker** | No 6 workers del Dockerfile prod |
+| Preferir import/MCP stdio vs CLI `--http` | posible bug orden puerto |
+
+**No ejecutar en 4B.**
+
+## C. FULL_CHAT_STACK
+
+API + Qdrant + UI/frontend según `compose.yml` autores.  
+**No** es smoke mínimo. Requiere alternativa a Compose o instalar plugin (fuera de 4B).
+
+## D. TEXT2SPARQL_VIRTUOSO — `BLOCKED_ON_LOCAL_HOST`
+
+| Motivo | Evidencia |
+|---|---|
+| Virtuoso `NumberOfBuffers` ~2.72M (~21 GiB teórico) | `compose.text2sparql.yml` (static audit) |
+| RAM WSL ≈7.4 GiB | `MACHINE_PROFILE.md` |
+| Dumps DBpedia/Corporate ausentes en worktree | NOT_FOUND en audit |
+
+**No** incluir en futuros comandos locales de este host.
+
+---
+
+## Artefactos
+
+- [`dependency_manifest.yaml`](dependency_manifest.yaml)  
+- [`environment_variables.md`](environment_variables.md)  
+- [`future_commands.md`](future_commands.md)

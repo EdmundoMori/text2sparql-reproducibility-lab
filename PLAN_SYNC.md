@@ -2,8 +2,9 @@
 
 **Audiencia principal:** ChatGPT (planificador de prompts) y el investigador.  
 **Repo GitHub:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-**Última actualización:** 2026-07-19 (Prompt 4A — auditoría estática WAVE_A)  
-**Fase lab:** 1 — auditoría / reproducibilidad nativa (WAVE_A static audit complete; sin installs ni ejecución)
+**Última actualización:** 2026-07-19 (Prompt 4B — environment definition WAVE_A)  
+**Fase lab:** 1 — auditoría / reproducibilidad nativa (WAVE_A static+env docs complete; **sin** installs ni ejecución)  
+**Commit inicial 4B:** `aa141143e0a4dde5ac1de5dd645b70ecc953704a`
 
 > Instrucción para el planificador: lee este archivo primero. Usa los documentos específicos enlazados para detalle. **No asumas reproducción experimental**: clonar ≠ ejecutar ≠ reproducir un paper. Propón el siguiente prompt adaptado a evidencias, limitaciones de máquina y gates científicos.
 
@@ -57,6 +58,7 @@ Reglas del bucle:
 | Sync | Este mecanismo | `PLAN_SYNC.md` + índice para el planificador | [`docs/plan-sync/ARTIFACT_INDEX.md`](docs/plan-sync/ARTIFACT_INDEX.md), [`docs/plan-sync/NEXT_PROMPT_GUIDANCE.md`](docs/plan-sync/NEXT_PROMPT_GUIDANCE.md) |
 | Sync-full | Vendor `upstream/` en GitHub | Árboles de código clonados versionados (~1.2 GiB); `.git` anidados → `.git_local/` local | [`docs/decisions/002_vendor_upstream_on_github.md`](docs/decisions/002_vendor_upstream_on_github.md), `upstream/<method_id>/` |
 | 4A | Auditoría estática WAVE_A | Fichas + matriz + readiness; pins verificados; sin install/ejecución | [`audit/sparql_llm/STATIC_AUDIT.md`](audit/sparql_llm/STATIC_AUDIT.md), [`audit/mkgqagent/STATIC_AUDIT.md`](audit/mkgqagent/STATIC_AUDIT.md), [`audit/rdfconfig_llm/STATIC_AUDIT.md`](audit/rdfconfig_llm/STATIC_AUDIT.md), [`audit/rdfconfig_llm/COMPANION_RDF_CONFIG_AUDIT.md`](audit/rdfconfig_llm/COMPANION_RDF_CONFIG_AUDIT.md), [`audit/WAVE_A_STATIC_AUDIT_MATRIX.csv`](audit/WAVE_A_STATIC_AUDIT_MATRIX.csv), [`audit/WAVE_A_EXECUTION_READINESS.md`](audit/WAVE_A_EXECUTION_READINESS.md) |
+| 4B | Definición documental entornos WAVE_A | Specs `environments/*`; matriz+gaps; Ruby/Bundler ABSENT; primer micro-smoke = sparql CORE_OFFLINE | [`environments/README.md`](environments/README.md), [`environments/EXECUTION_WORKSPACE_POLICY.md`](environments/EXECUTION_WORKSPACE_POLICY.md), [`environments/sparql_llm/`](environments/sparql_llm/), [`environments/mkgqagent/`](environments/mkgqagent/), [`environments/rdfconfig_llm/`](environments/rdfconfig_llm/), [`audit/WAVE_A_ENVIRONMENT_DEFINITION_MATRIX.csv`](audit/WAVE_A_ENVIRONMENT_DEFINITION_MATRIX.csv), [`audit/WAVE_A_ENVIRONMENT_GAPS.md`](audit/WAVE_A_ENVIRONMENT_GAPS.md) |
 
 ---
 
@@ -67,9 +69,10 @@ Reglas del bucle:
 - Windows + **WSL2** Ubuntu 22.04; RAM WSL ≈ **7.4 GiB**; host ≈ 16 GiB.  
 - GPU: RTX 4050 ≈ **6 GiB** VRAM; `nvcc` ausente; Docker OK; **Compose plugin ausente**.  
 - Sin Conda/uv; Poetry sí; solo `python3`.  
+- **Ruby/Bundler ABSENT** (re-check 4B). Compose plugin ABSENT.  
 - Clases útiles: `feasible_using_api`, `feasible_local_gpu` (ligero), `requires_external_gpu`.
 
-→ WAVE_A **static audit hecha**. Siguiente: **environment definition** (sin install) o micro-smoke offline `sparql_llm`; API smokes uno a uno después.
+→ WAVE_A **static + env definition** hechas. Siguiente: **Prompt 5A sparql_llm CORE_OFFLINE** (install+import smoke).
 
 ### 4.2 Inclusión de métodos
 
@@ -108,30 +111,37 @@ Reglas del bucle:
 - Tag mkgqagent tipográfico: `TEXT2SPAQL`.  
 - Submódulos: ninguno.
 
-### 4.6 Lo que NO se ha hecho
+### 4.6 Hallazgos Prompt 4B (entornos)
 
-- Instalación de dependencias / entornos por método.  
-- Ejecución de pipelines, entrenamientos, evaluación, smokes.  
+- Specs documentales listas; **nada instalado**.  
+- Primer micro-smoke: **sparql_llm CORE_OFFLINE**.  
+- Text2SPARQL+Virtuoso: **BLOCKED_ON_LOCAL_HOST**.  
+- mkgq: `native_reproduction_ready: not_ready_or_weak`; offline smoke NOT_READY.  
+- rdfconfig: Ruby ABSENT; never in-place `sparql.yaml`; Zenodo preferido para fidelidad.
+
+### 4.7 Lo que NO se ha hecho
+
+- Instalación de dependencias / venvs.  
+- Smokes, pipelines, train, eval.  
 - Adaptadores comunes.  
-- Descarga HF/Docker images.  
-- Declarar ningún método como `reproduced` / `smoke_only`.  
+- Descarga Zenodo/HF/Docker images.  
+- Declarar `reproduced` / `smoke_only`.  
 - Auditoría estática WAVE_B/C.
 
 ---
 
 ## 5. Estado de reproducción (protocolo)
 
-WAVE_A: `audit_only` + **static_audit_complete**.  
+WAVE_A: `audit_only` + static_audit_complete + **environment_definition ready_documented**.  
 **Ninguno** en `reproduced` / `partially_reproduced` / `smoke_only`.
 
 ---
 
 ## 6. Recomendación al planificador (siguiente prompt)
 
-1. **Prompt 4B — Environment definition WAVE_A** (sin install): specs en `environments/`, cerrar gaps Compose/uv/Ruby/requirements/legal.  
-2. Alternativa: micro-smoke offline `sparql_llm` (validate/loaders) si se acepta install.  
-3. API smokes: **un método por prompt**; priorizar `sparql_llm` (MIT) antes que mkgqagent/rdfconfig.  
-4. No train WAVE_B/C; no adapters; `LICENSE_NOT_CONFIRMED` sin integración.
+1. **Prompt 5A — sparql_llm CORE_OFFLINE** install + import/validate → `smoke_only` si OK.  
+2. No Virtuoso; no mkgq/rdfconfig aún; no adapters.  
+3. GO/NO-GO en [`audit/WAVE_A_ENVIRONMENT_GAPS.md`](audit/WAVE_A_ENVIRONMENT_GAPS.md).
 
 Detalle: [`docs/plan-sync/NEXT_PROMPT_GUIDANCE.md`](docs/plan-sync/NEXT_PROMPT_GUIDANCE.md).
 
@@ -153,16 +163,26 @@ Ver lista completa y estable en:
 | 2026-07-19 | Push completo: `upstream/` vendorizado en GitHub (decisión 002); el planificador puede leer código clonado |
 | 2026-07-19 | Prompt 4A: auditoría estática WAVE_A completa; readiness + matriz; siguiente=env definition |
 | 2026-07-19 | Addenda estáticas sparql_llm/mkgqagent (Virtuoso no viable; pool≠trazas paper; doble e5) |
+| 2026-07-19 | Prompt 4B: environments/* + matriz/gaps; Ruby ABSENT; next=5A CORE_OFFLINE |
 
 ---
 
-## 9. Registro de publicación (Prompt 4A)
+## 9. Registro de publicación
 
+### 4A (histórico)
 | Campo | Valor |
 |---|---|
+| commit artefactos | `97e86cee` |
+| HEAD con addenda | `aa141143` |
+| artefactos | §3 fila 4A |
+
+### 4B (este prompt)
+| Campo | Valor |
+|---|---|
+| commit inicial | `aa141143e0a4dde5ac1de5dd645b70ecc953704a` |
+| commit final | *(tras push)* |
 | rama | `main` |
-| commit SHA | `97e86ceef3bf1d7a4756d62c0f4459efbefd43c3` |
-| mensaje | Complete WAVE_A static audits for sparql_llm, mkgqagent, and rdfconfig_llm. |
-| push | confirmado en origin/main (`e28a04d9e0aa8c26f980ffc7e656a5942006c5c5`) |
-| artefactos | ver §3 fila 4A |
+| mensaje | Document WAVE_A environment specs without installing or running methods. |
+| push | pendiente |
+| artefactos | §3 fila 4B |
 

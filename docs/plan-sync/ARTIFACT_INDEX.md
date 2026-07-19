@@ -34,6 +34,14 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | WA-MX | Matriz WAVE_A | `audit/WAVE_A_STATIC_AUDIT_MATRIX.csv` | Comparativa tabular |
 | WA-RD | Execution readiness | `audit/WAVE_A_EXECUTION_READINESS.md` | next_safe_action por método |
 | WA-LOG | Log inspección | `logs/static-audit-wave-a/commands.log` | Comandos solo lectura |
+| ENV-R | Convención entornos | `environments/README.md` | native vs smoke; pins |
+| ENV-W | Política workspace | `environments/EXECUTION_WORKSPACE_POLICY.md` | no writes en upstream |
+| ENV-S | Env sparql_llm | `environments/sparql_llm/` | CORE_OFFLINE primero |
+| ENV-M | Env mkgqagent | `environments/mkgqagent/` | legal + double e5 |
+| ENV-Rcfg | Env rdfconfig | `environments/rdfconfig_llm/` | Ruby ABSENT; Zenodo |
+| WA-EMX | Matriz entornos | `audit/WAVE_A_ENVIRONMENT_DEFINITION_MATRIX.csv` | scopes por método |
+| WA-GAP | Gaps entornos | `audit/WAVE_A_ENVIRONMENT_GAPS.md` | GO/NO-GO + primer smoke |
+| ENV-LOG | Log Prompt 4B | `logs/environment-definition-wave-a/commands.log` | host tools |
 
 ## Qué está / no está en GitHub
 

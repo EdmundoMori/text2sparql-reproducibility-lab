@@ -1,0 +1,44 @@
+method_id: rdfconfig_llm
+generator_commit: fe63171d3c8b9679779749ee11f731b2a8318053
+companion_commit: cccc581c16f0b24865030bc5459475a9d0fcbd5f
+license_generator_head: LICENSE_NOT_CONFIRMED
+license_companion: MIT
+host_python: "3.10.12"
+host_ruby: ABSENT
+host_bundler: ABSENT
+
+generator_python:
+  dependency_source: upstream/rdfconfig_llm/requirements.txt
+  declared:
+    - { name: python-dotenv, pin_quality: EXACT_PIN, declared: "==1.0.1" }
+    - { name: openai, pin_quality: EXACT_PIN, declared: "==1.40.3" }
+    - { name: rdflib, pin_quality: EXACT_PIN, declared: "==7.1.1" }
+    - { name: requests, pin_quality: EXACT_PIN, declared: "==2.32.3" }
+  missing_upstream_requirements:
+    - { name: pandas, pin_quality: MISSING_UPSTREAM, evidence: "functions/results_evaluater.py" }
+    - { name: munkres, pin_quality: MISSING_UPSTREAM, evidence: "functions/results_evaluater.py" }
+    - { name: scipy, pin_quality: MISSING_UPSTREAM, evidence: "functions/results_evaluater.py" }
+    - { name: tqdm, pin_quality: MISSING_UPSTREAM, evidence: "functions/results_evaluater.py" }
+  llm_default:
+    name: gpt-4-1106-preview
+    provider: OpenAI
+    pin_quality: CODE_VERIFIED_DEFAULT
+
+rdf_config_ruby:
+  vendored_inside_generator:
+    path: upstream/rdfconfig_llm/rdf-config/
+    gemfile: present
+    gemfile_lock: present
+    gemfile_lock_notes: "Minimal lock (rdf-config path + rexml 3.3.1); BUNDLED WITH 1.17.2"
+  companion_lab_pin:
+    path: upstream/rdfconfig_llm_rdf-config/
+    gemfile: present
+    gemfile_lock: ABSENT_IN_TREE
+    gemfile_declared_gems: [parslet, rdf, rdf-turtle, rdf-xsd, rexml]
+  host_runtime:
+    ruby: ABSENT
+    bundle: ABSENT
+
+notes:
+  - "Do not invent pip/gem resolved versions."
+  - "Ruby ABSENT blocks generator smoke and companion CLI until runtime installed in a future explicit prompt."

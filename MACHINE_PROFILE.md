@@ -52,6 +52,8 @@
 | Conda | **Ausente** | — |
 | uv | **Ausente** | — |
 | Poetry | Presente | 2.3.1 |
+| Ruby | **Ausente** | re-check 2026-07-19 (Prompt 4B): `ruby` not found |
+| Bundler | **Ausente** | re-check 2026-07-19: `bundle` not found |
 | Docker (CLI) | Presente | 29.1.3 |
 | Docker (daemon) | Presente | Server 29.1.3, overlay2, cgroup v2 |
 | Docker Compose | **Plugin ausente** | `docker compose` y `docker-compose` no disponibles |
@@ -100,7 +102,10 @@ Hasta completar la auditoría nativa, **todos** los `method_id` se marcan `curre
 5. **Docker Compose no instalado:** `docker compose` / `docker-compose` no disponibles; los stacks Compose requerirán instalar el plugin o invocar `docker` a bajo nivel.  
 6. **Sin Conda ni uv:** entornos habrá que gestionarlos con venv/Poetry/Docker según el método.  
 7. **Comando `python` ausente:** solo `python3` (relevante para scripts upstream que asuman `python`).  
-8. **Sandbox de agentes:** detecciones GPU pueden fallar en entornos restringidos; usar perfil de esta fecha como referencia del host real.
+8. **Ruby/Bundler ausentes:** bloquean smokes de `rdfconfig_llm` / companion hasta install explícito de runtime.  
+9. **Sandbox de agentes:** detecciones GPU pueden fallar en entornos restringidos; usar perfil de esta fecha como referencia del host real.
+
+**Re-detección Prompt 4B (2026-07-19):** RAM WSL 7.4 GiB / ~5.4 GiB available; `nvidia-smi` falló en entorno restringido (GPU access blocked); Poetry 2.3.1; Ruby/Bundler ABSENT; Compose ABSENT.
 
 **Estas limitaciones no impiden el proyecto.** El comportamiento esperado del agente ante pedidos inconvenientes está definido en `PROJECT_CONTEXT.md` §7 (advertencia → solución → continuar).
 

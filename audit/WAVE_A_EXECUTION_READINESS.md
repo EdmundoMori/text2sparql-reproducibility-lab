@@ -1,8 +1,10 @@
 # WAVE_A_EXECUTION_READINESS
 
 **Fecha:** 2026-07-19  
-**Alcance:** solo WAVE_A (`sparql_llm`, `mkgqagent`, `rdfconfig_llm` + companion).  
-**Ninguna instalación ni ejecución realizada en este prompt.**
+**Actualizado por:** Prompt 4B (environment definition documental)  
+**Install/ejecución:** ninguna.
+
+Specs: `environments/` · Matriz: `audit/WAVE_A_ENVIRONMENT_DEFINITION_MATRIX.csv` · Gaps: `audit/WAVE_A_ENVIRONMENT_GAPS.md`
 
 ---
 
@@ -11,13 +13,13 @@
 | Dimensión | Valor |
 |---|---|
 | static_understanding | **complete** |
-| environment_definition | **partial** (pyproject claro; host sin uv; Compose ausente) |
-| offline_smoke_ready | **conditional** (tras install deps core + VoID local) |
-| api_smoke_ready | **conditional** (API key OpenRouter/OpenAI-compatible + install) |
-| native_reproduction_ready | **conditional** para benches SIB ligeros; **no** para Text2SPARQL+Virtuoso (~21 GiB buffers + dumps) en este host |
-| legal_adapter_gate | **allowed** (MIT) — protocolo: aún `common_adapter_allowed: false` hasta native audit |
-| next_safe_action | Prompt 4B: environment definition (env names, 1 worker, sin Virtuoso) + opcional offline import `validate_sparql`/loaders |
-| evidence_required_before_execution | Confirmar gestor (pip/Poetry vs uv); política Compose→`docker run` Qdrant; **no** planear Virtuoso local; presupuesto API; no tocar upstream |
+| environment_definition | **ready** (documentado; no instalado) |
+| offline_smoke_ready | **conditional** → listo para prompt de *install+import* CORE_OFFLINE |
+| api_smoke_ready | **conditional** (tras CORE_OFFLINE + key) |
+| native_reproduction_ready | **conditional** benches SIB; **blocked** Text2SPARQL+Virtuoso local |
+| legal_adapter_gate | **allowed** (MIT) — `common_adapter_allowed` sigue false |
+| next_safe_action | **Prompt 5A:** install CORE_OFFLINE + import/validate smoke (`smoke_only`) |
+| evidence_required_before_execution | Elegir venv+pip vs Poetry; no Virtuoso; no modificar upstream |
 
 ---
 
@@ -25,14 +27,14 @@
 
 | Dimensión | Valor |
 |---|---|
-| static_understanding | **complete** (online); offline pool build **partial** |
-| environment_definition | **partial** (requirements sin pins; endpoints hardcode) |
-| offline_smoke_ready | **no** (carga FAISS+e5 implica download/modelo; no es offline puro) |
-| api_smoke_ready | **conditional** (`OPENAI_API_KEY`; endpoint WSE; RAM e5; **evitar doble agente** en 7.4 GiB) |
-| native_reproduction_ready | **no** / débil (script offline ausente; pool ≠ trazas paper; hosts externos; solo EN) |
+| static_understanding | **complete** (online); offline **partial** |
+| environment_definition | **ready** (documentado; gaps requests/single-agent) |
+| offline_smoke_ready | **no** (NOT_READY) |
+| api_smoke_ready | **conditional** |
+| native_reproduction_ready | **not_ready_or_weak** |
 | legal_adapter_gate | **blocked** |
-| next_safe_action | En 4B: checklist RAM (un agente), `requests` faltante, LICENSE; smoke API solo tras env spec |
-| evidence_required_before_execution | Key OpenAI; prueba DNS/HTTP a `141.57.8.18`; espacio RAM WSL; aceptación legal smoke-only |
+| next_safe_action | Diferir hasta después de sparql CORE_OFFLINE; resolver single-agent sin patch |
+| evidence_required_before_execution | Key; legal; RAM; no adapters |
 
 ---
 
@@ -41,13 +43,13 @@
 | Dimensión | Valor |
 |---|---|
 | static_understanding | **complete** |
-| environment_definition | **partial** (requirements incompletos vs evaluador; Ruby) |
-| offline_smoke_ready | **no** (OpenAI obligatorio para generación) |
-| api_smoke_ready | **conditional** (OpenAI + bundle rdf-config + deps extra) |
-| native_reproduction_ready | **conditional** (notebooks/CV script; mutación sparql.yaml) |
-| legal_adapter_gate | **blocked** (HEAD); Zenodo CC-BY separado |
-| next_safe_action | Spec de entorno en copia de trabajo fuera de upstream; completar lista deps; smoke 1 pregunta |
-| evidence_required_before_execution | Ruby/Bundler disponibles; key OpenAI; path rdf-config fijado; no escribir en upstream vendorizado |
+| environment_definition | **ready** (documentado; Ruby ABSENT) |
+| offline_smoke_ready | **no** |
+| api_smoke_ready | **conditional** (API + Ruby + workdir + missing deps) |
+| native_reproduction_ready | **conditional** (prefer Zenodo; workdir) |
+| legal_adapter_gate | **blocked** (HEAD) |
+| next_safe_action | No antes de sparql CORE; primero runtime Ruby (prompt host) si se prioriza |
+| evidence_required_before_execution | Ruby/Bundler; workdir; no in-place sparql.yaml |
 
 ---
 
@@ -56,19 +58,18 @@
 | Dimensión | Valor |
 |---|---|
 | static_understanding | **complete** |
-| environment_definition | **ready** (Gemfile) a nivel docs |
-| offline_smoke_ready | **yes** (tras `bundle install` futuro) |
+| environment_definition | **ready** (docs); runtime host **blocked** (Ruby ABSENT) |
+| offline_smoke_ready | **conditional** (tras instalar Ruby/Bundler) |
 | api_smoke_ready | **n/a** |
-| native_reproduction_ready | **no** solo — insuficiente para paper |
+| native_reproduction_ready | **no** solo |
 | legal_adapter_gate | **allowed** (MIT) |
-| next_safe_action | Opcional: smoke CLI listando queries de un config; no sustituye generator |
-| evidence_required_before_execution | Ruby version; elegir pin companion vs copia vendored y documentar |
+| next_safe_action | Opcional tras Ruby; no sustituye paper |
+| evidence_required_before_execution | Ruby version; documentar árbol usado |
 
 ---
 
-## Orden recomendado (siguiente prompt del plan)
+## Orden recomendado
 
-1. **No** lanzar smoke API multi-método todavía.  
-2. Preferir **Prompt 4B — Environment definition WAVE_A** (archivos `environments/`, deps exactas, comandos futuros, degradaciones Compose/uv/Ruby) **sin install**, o un **smoke offline mínimo solo `sparql_llm` validate/loaders** si se prioriza señal CODE_VERIFIED ejecutable.  
-3. Smokes API: un método por prompt; empezar por `sparql_llm` (MIT) antes que mkgqagent/rdfconfig (legal blocked).  
-4. Mantener WAVE_B/C fuera de alcance.
+1. **Prompt 5A — sparql_llm CORE_OFFLINE** install + import/validate (`smoke_only`).  
+2. No Virtuoso. No multi-método.  
+3. API smokes / mkgq / rdfconfig solo después y uno a uno.

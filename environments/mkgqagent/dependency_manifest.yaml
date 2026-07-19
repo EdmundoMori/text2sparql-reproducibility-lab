@@ -1,0 +1,34 @@
+method_id: mkgqagent
+source_commit: ba0f2f78611a7ccacc8c985a97f6008ef7ee6a6a
+dependency_source: upstream/mkgqagent/requirements.txt
+license_status: LICENSE_NOT_CONFIRMED
+python_requires_documented: "3.10 (Dockerfile)"
+host_python: "3.10.12"
+
+declared_dependencies:
+  - { name: fastapi, pin_quality: LOWER_BOUND, declared: ">=0.95.0" }
+  - { name: uvicorn, pin_quality: LOWER_BOUND, declared: ">=0.22.0" }
+  - { name: pydantic, pin_quality: LOWER_BOUND, declared: ">=2.0.0" }
+  - { name: typing-extensions, pin_quality: LOWER_BOUND, declared: ">=4.5.0" }
+  - { name: langgraph, pin_quality: UNPINNED, declared: null }
+  - { name: langchain-core, pin_quality: UNPINNED, declared: null }
+  - { name: langchain-openai, pin_quality: UNPINNED, declared: null }
+  - { name: langchain, pin_quality: UNPINNED, declared: null }
+  - { name: langchain-community, pin_quality: UNPINNED, declared: null }
+  - { name: fuzzywuzzy, pin_quality: UNPINNED, declared: null }
+  - { name: SPARQLWrapper, pin_quality: UNPINNED, declared: null }
+  - { name: rdflib, pin_quality: UNPINNED, declared: null }
+  - { name: sentence-transformers, pin_quality: UNPINNED, declared: null }
+  - { name: faiss-cpu, pin_quality: UNPINNED, declared: null }
+
+missing_upstream_requirements:
+  - { name: requests, pin_quality: MISSING_UPSTREAM, evidence: "used in services/llm_utils.py" }
+  - { name: text2sparql-client, pin_quality: MISSING_UPSTREAM, evidence: "README eval via pipx; not in requirements.txt" }
+
+models:
+  llm: { name: gpt-4o-2024-05-13, provider: OpenAI, pin_quality: CODE_VERIFIED_DEFAULT }
+  embedding: { name: intfloat/multilingual-e5-large, device: cpu, pin_quality: CODE_VERIFIED_DEFAULT }
+
+notes:
+  - "Do not invent resolved versions."
+  - "Double agent import in main.py is a RAM risk; smoke strategy must address without patching upstream in 4B."
