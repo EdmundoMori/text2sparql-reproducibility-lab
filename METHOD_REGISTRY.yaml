@@ -43,7 +43,7 @@ methods:
       reproduction_instructions: present
     inclusion_status: included
     inclusion_decision: INCLUDE_PRIMARY
-    reproduction_status: audit_only
+    reproduction_status: setup_failed
     feasibility_class: feasible_using_api
     native_audit_complete: false
     paper_code_audit_complete: true
@@ -58,18 +58,22 @@ methods:
     static_audit_artifact: audit/sparql_llm/STATIC_AUDIT.md
     environment_definition_status: ready_documented
     environment_artifacts: environments/sparql_llm/
-    offline_smoke_ready: conditional
-    api_smoke_ready: conditional
+    offline_smoke_ready: blocked_on_host_python
+    api_smoke_ready: blocked_until_core_import
     native_reproduction_ready: conditional
+    last_smoke_run_id: "20260719T112306Z"
+    last_smoke_report: audit/sparql_llm/CORE_OFFLINE_SMOKE_REPORT.md
     blocked_local_protocols:
       - TEXT2SPARQL_VIRTUOSO
-    next_execution_prompt: Prompt_5A_CORE_OFFLINE_install_import_smoke
+    next_execution_prompt: Prompt_5B_host_python_3_11_or_retry_CORE_OFFLINE
     execution_blockers:
       - compose_plugin_absent_on_host
       - uv_uvx_absent_on_host
       - ram_risk_e5_large_indexing
       - virtuoso_text2sparql_blocked_on_host
-    notes: "OpenAlex+arXiv: preprint under review; no publisher DOI. Env specs in environments/sparql_llm/. First micro-smoke: CORE_OFFLINE."
+      - python_3_10_typing_Required_incompatibility
+      - python_3_11_absent_on_host
+    notes: "Prompt 5A setup_failed: pin imports typing.Required (needs Py>=3.11) while host is 3.10.12; pyproject claims >=3.10. Install of 0.1.4 succeeded; import failed. No upstream patch applied."
 
   - method_id: mkgqagent
     display_name: mKGQAgent

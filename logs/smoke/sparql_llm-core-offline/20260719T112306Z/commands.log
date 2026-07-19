@@ -1,0 +1,43 @@
+=== 2026-07-19T13:23:21+02:00 START Prompt 5A ===
+RUN_ID=20260719T112306Z
+lab_commit_initial=46d3713128f0f70907ed5086179f0eee204fac62
+upstream_pin=3748730e3bd2df2595280b918269fdaadb9fc0c3
+## main...origin/main
+?? logs/smoke/
+upstream_porcelain_count=0
+=== post-install env from /tmp venv (workdir .venv RO under sandbox) ===
+2026-07-19T11:28:25Z
+Python 3.10.12
+pip 22.0.2 from /tmp/sparql_llm_5a_venv/lib/python3.10/site-packages/pip (python 3.10)
+pip_check_exit:0
+smoke_import_exit:1
+  255 logs/smoke/sparql_llm-core-offline/20260719T112306Z/install.stdout.log
+    3 logs/smoke/sparql_llm-core-offline/20260719T112306Z/install.stderr.log
+   90 logs/smoke/sparql_llm-core-offline/20260719T112306Z/pip-freeze.txt
+  348 total
+Name: sparql-llm
+Version: 0.1.4
+Summary: Reusable components and complete chat system to improve Large Language Models (LLMs) capabilities when generating SPARQL queries for a given set of endpoints, using Retrieval-Augmented Generation (RAG) and SPARQL query validation from the endpoint schema.
+Home-page: 
+Author: 
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/tmp/sparql_llm_5a_venv/lib/python3.10/site-packages/sparql_llm/__init__.py", line 5, in <module>
+    from .config import SparqlEndpointLinks
+  File "/tmp/sparql_llm_5a_venv/lib/python3.10/site-packages/sparql_llm/config.py", line 9, in <module>
+    from typing import Annotated, Any, Required, TypeVar
+ImportError: cannot import name 'Required' from 'typing' (/usr/lib/python3.10/typing.py)
+will_append_tmp_install_note
+=== integrity ===
+0
+0
+118:    commit_sha: 3748730e3bd2df2595280b918269fdaadb9fc0c3
+=== model download check ===
+/tmp/sparql_llm_5a_venv/lib/python3.10/site-packages/onnxruntime/datasets/sigmoid.onnx
+/tmp/sparql_llm_5a_venv/lib/python3.10/site-packages/onnxruntime/datasets/mul_1.onnx
+/tmp/sparql_llm_5a_venv/lib/python3.10/site-packages/onnxruntime/datasets/logreg_iris.onnx
+/tmp/sparql_llm_5a_venv/lib/python3.10/site-packages/sparql_llm/config.py
+9:from typing import Annotated, Any, Required, TypeVar
+9:from typing import Annotated, Any, Required, TypeVar
+no_python311=yes_absent
+=== 2026-07-19T13:30:24+02:00 END Prompt 5A ===

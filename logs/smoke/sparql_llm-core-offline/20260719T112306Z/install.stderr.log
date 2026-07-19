@@ -1,0 +1,3 @@
+WARNING: The directory '/tmp/cursor-sandbox-cache/3223dd3d224db751703dbe8823f499cf/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+ERROR: Could not install packages due to an OSError: [Errno 30] Read-only file system: '/home/edmundo/text2sparql-reproducibility-lab/workdir/runs/sparql_llm/20260719T112306Z/.venv/lib/python3.10/site-packages/pytz'
+

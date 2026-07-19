@@ -1,0 +1,13 @@
+method_id: sparql_llm
+scope: CORE_OFFLINE
+lab_commit_initial: "46d3713128f0f70907ed5086179f0eee204fac62"
+upstream_source_path: upstream/sparql_llm
+upstream_pinned_commit: "3748730e3bd2df2595280b918269fdaadb9fc0c3"
+disposable_source_path: workdir/runs/sparql_llm/20260719T112306Z/source
+package_code_version_expected: "0.1.4"
+timestamp_utc: "20260719T112306Z"
+copy_reason: "Disposable install+smoke source for Prompt 5A; never modify upstream/"
+license: MIT
+is_adapter: false
+adapter_declaration: "This copy is for isolated install/smoke only; not a lab adapter."
+checksum_manifest: logs/smoke/sparql_llm-core-offline/20260719T112306Z/source_checksums.sha256

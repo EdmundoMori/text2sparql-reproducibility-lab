@@ -1,0 +1,28 @@
+{
+  "run_id": "20260719T112306Z",
+  "experiment_status": "setup_failed",
+  "checks": {
+    "disposable_copy_created": true,
+    "install_non_editable_from_local_source": true,
+    "pip_check": true,
+    "package_metadata_version_0_1_4": true,
+    "import_sparql_llm": false,
+    "void_local_load": "not_reached",
+    "valid_query_schema_validate": "not_reached",
+    "invalid_predicate_detected": "not_reached",
+    "zero_network_during_functional_smoke": "n/a_harness_not_run",
+    "upstream_intact": true,
+    "no_hf_model_weights_downloaded": true
+  },
+  "exit_codes": {
+    "pip_install_tmp_venv": 0,
+    "pip_check": 0,
+    "import_probe": 1,
+    "harness": "not_executed"
+  },
+  "failure_point": "import_after_install",
+  "failure_detail": "ImportError: cannot import name 'Required' from 'typing' (Python 3.10.12). File sparql_llm/config.py line 9. Requires Python >=3.11 for typing.Required, despite pyproject.toml requires-python >=3.10.",
+  "install_seconds_approx": 66,
+  "smoke_seconds": 0,
+  "final": "setup_failed"
+}

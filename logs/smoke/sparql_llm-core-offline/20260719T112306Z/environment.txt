@@ -1,0 +1,10 @@
+python: Python 3.10.12
+pip: pip 22.0.2 from /tmp/sparql_llm_5a_venv/lib/python3.10/site-packages/pip (python 3.10)
+venv_path: /tmp/sparql_llm_5a_venv
+intended_venv_path: workdir/runs/sparql_llm/20260719T112306Z/.venv
+venv_location_note: workdir .venv became read-only in Cursor sandbox; install completed in /tmp/sparql_llm_5a_venv
+uname: Linux LAPTOP-311333V7 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+               total        used        free      shared  buff/cache   available
+Mem:           7.4Gi       1.8Gi       1.3Gi       3.0Mi       4.3Gi       5.4Gi
+Swap:          2.0Gi          0B       2.0Gi
+date_utc: 2026-07-19T11:28:30Z

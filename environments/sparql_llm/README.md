@@ -58,3 +58,11 @@ API + Qdrant + UI/frontend según `compose.yml` autores.
 - [`dependency_manifest.yaml`](dependency_manifest.yaml)  
 - [`environment_variables.md`](environment_variables.md)  
 - [`future_commands.md`](future_commands.md)
+
+## Runs ejecutados (no reemplazan el manifiesto 4B)
+
+| RUN_ID | Resultado | Notas |
+|---|---|---|
+| `20260719T112306Z` | **setup_failed** | Install 0.1.4 OK; import falla en Python 3.10.12 (`typing.Required`). Informe: `audit/sparql_llm/CORE_OFFLINE_SMOKE_REPORT.md`. Entorno resuelto: `logs/smoke/sparql_llm-core-offline/20260719T112306Z/pip-freeze.txt`. |
+
+**Requisito actualizado:** CORE_OFFLINE necesita **Python ≥3.11** en la práctica (código pin), pese a `requires-python >=3.10` en pyproject.

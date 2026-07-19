@@ -1,25 +1,19 @@
-# NEXT_PROMPT_GUIDANCE — Qué debe proponer ChatGPT a continuación
+# NEXT_PROMPT_GUIDANCE
 
 **Fecha:** 2026-07-19  
-**Estado lab:** WAVE_A static audit + **environment definition (4B)** complete; sin installs.
+**Tras:** Prompt 5A → `setup_failed` (Python 3.10 / `typing.Required`)
 
 ## Prompt recomendado (prioridad 1)
 
-**Título:** Prompt 5A — sparql_llm CORE_OFFLINE: install + import/validate smoke
+**Título:** Prompt 5B — Host Python ≥3.11 + reintento sparql_llm CORE_OFFLINE
 
-**Objetivo:** En venv aislado, instalar deps base del pin `3748730e…` e importar/validar con VoID local. Etiquetar `smoke_only` si OK. **No** reproducción paper. **No** Virtuoso/Compose/API.
+**Objetivo:** Disponer `python3.11` (o superior) en WSL de forma documentada (sin tocar upstream), recrear venv, reinstalar desde copia pin, ejecutar `scripts/smoke/sparql_llm_core_offline.py`. Si OK → `smoke_only`.
 
-**Salidas:** log de comandos, resultado import, actualización METHOD_REGISTRY (`smoke_only` solo si ejecutó), PLAN_SYNC + push.
-
-**Restricciones:** un método; no modificar upstream; no adapters; no WAVE_B/C.
+**Alternativa:** si no se puede instalar 3.11, documentar bloqueo permanente CORE_OFFLINE en este host y replanificar (no fingir smoke).
 
 ## No proponer aún
 
-- mkgqagent / rdfconfig smokes (legal, Ruby ABSENT, double-agent).  
-- Text2SPARQL+Virtuoso.  
-- Multi-método.  
-- Host Ruby install salvo prompt dedicado de tooling.
-
-## Formato del prompt a Cursor
-
-Incluir: actualizar PLAN_SYNC + ARTIFACT_INDEX + push al cerrar.
+- Agent/API/MCP smokes.  
+- mkgqagent / rdfconfig.  
+- Virtuoso.  
+- Patches silenciosos a `upstream/sparql_llm`.

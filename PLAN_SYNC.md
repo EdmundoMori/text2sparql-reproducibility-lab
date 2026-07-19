@@ -2,9 +2,10 @@
 
 **Audiencia principal:** ChatGPT (planificador de prompts) y el investigador.  
 **Repo GitHub:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-**Última actualización:** 2026-07-19 (Prompt 4B — environment definition WAVE_A)  
-**Fase lab:** 1 — auditoría / reproducibilidad nativa (WAVE_A static+env docs complete; **sin** installs ni ejecución)  
-**Commit inicial 4B:** `aa141143e0a4dde5ac1de5dd645b70ecc953704a`
+**Última actualización:** 2026-07-19 (Prompt 5A — sparql_llm CORE_OFFLINE → **setup_failed**)  
+**Fase lab:** 1 — native audit; install intentado; **smoke_only no alcanzado**  
+**Commit inicial 5A:** `46d3713128f0f70907ed5086179f0eee204fac62`  
+**RUN_ID:** `20260719T112306Z`
 
 > Instrucción para el planificador: lee este archivo primero. Usa los documentos específicos enlazados para detalle. **No asumas reproducción experimental**: clonar ≠ ejecutar ≠ reproducir un paper. Propón el siguiente prompt adaptado a evidencias, limitaciones de máquina y gates científicos.
 
@@ -64,6 +65,7 @@ Reglas del bucle:
 | Sync-full | Vendor `upstream/` en GitHub | Árboles de código clonados versionados (~1.2 GiB); `.git` anidados → `.git_local/` local | [`docs/decisions/002_vendor_upstream_on_github.md`](docs/decisions/002_vendor_upstream_on_github.md), `upstream/<method_id>/` |
 | 4A | Auditoría estática WAVE_A | Fichas + matriz + readiness; pins verificados; sin install/ejecución | [`audit/sparql_llm/STATIC_AUDIT.md`](audit/sparql_llm/STATIC_AUDIT.md), [`audit/mkgqagent/STATIC_AUDIT.md`](audit/mkgqagent/STATIC_AUDIT.md), [`audit/rdfconfig_llm/STATIC_AUDIT.md`](audit/rdfconfig_llm/STATIC_AUDIT.md), [`audit/rdfconfig_llm/COMPANION_RDF_CONFIG_AUDIT.md`](audit/rdfconfig_llm/COMPANION_RDF_CONFIG_AUDIT.md), [`audit/WAVE_A_STATIC_AUDIT_MATRIX.csv`](audit/WAVE_A_STATIC_AUDIT_MATRIX.csv), [`audit/WAVE_A_EXECUTION_READINESS.md`](audit/WAVE_A_EXECUTION_READINESS.md) |
 | 4B | Definición documental entornos WAVE_A | Specs `environments/*`; matriz+gaps; Ruby/Bundler ABSENT; primer micro-smoke = sparql CORE_OFFLINE | [`environments/README.md`](environments/README.md), [`environments/EXECUTION_WORKSPACE_POLICY.md`](environments/EXECUTION_WORKSPACE_POLICY.md), [`environments/sparql_llm/`](environments/sparql_llm/), [`environments/mkgqagent/`](environments/mkgqagent/), [`environments/rdfconfig_llm/`](environments/rdfconfig_llm/), [`audit/WAVE_A_ENVIRONMENT_DEFINITION_MATRIX.csv`](audit/WAVE_A_ENVIRONMENT_DEFINITION_MATRIX.csv), [`audit/WAVE_A_ENVIRONMENT_GAPS.md`](audit/WAVE_A_ENVIRONMENT_GAPS.md) |
+| 5A | sparql_llm CORE_OFFLINE install+smoke | **setup_failed**: pip install 0.1.4 OK; import falla en Py3.10 (`typing.Required`); sin patch upstream | [`audit/sparql_llm/CORE_OFFLINE_SMOKE_REPORT.md`](audit/sparql_llm/CORE_OFFLINE_SMOKE_REPORT.md), [`experiments/native/sparql_llm/20260719T112306Z/`](experiments/native/sparql_llm/20260719T112306Z/), [`logs/smoke/sparql_llm-core-offline/20260719T112306Z/`](logs/smoke/sparql_llm-core-offline/20260719T112306Z/), [`scripts/smoke/sparql_llm_core_offline.py`](scripts/smoke/sparql_llm_core_offline.py) |
 
 ---
 
@@ -77,7 +79,7 @@ Reglas del bucle:
 - **Ruby/Bundler ABSENT** (re-check 4B). Compose plugin ABSENT.  
 - Clases útiles: `feasible_using_api`, `feasible_local_gpu` (ligero), `requires_external_gpu`.
 
-→ WAVE_A **static + env definition** hechas. Siguiente: **Prompt 5A sparql_llm CORE_OFFLINE** (install+import smoke).
+→ Prompt 5A **setup_failed** (Py3.10 vs `typing.Required`). Siguiente: **Prompt 5B** Python ≥3.11 + reintento CORE_OFFLINE.
 
 ### 4.2 Inclusión de métodos
 
@@ -137,16 +139,17 @@ Reglas del bucle:
 
 ## 5. Estado de reproducción (protocolo)
 
-WAVE_A: `audit_only` + static_audit_complete + **environment_definition ready_documented**.  
-**Ninguno** en `reproduced` / `partially_reproduced` / `smoke_only`.
+- `sparql_llm`: **setup_failed** (Prompt 5A); `native_audit_complete: false`; `common_adapter_allowed: false`.  
+- Resto WAVE_A: `audit_only`.  
+- **Ninguno** en `smoke_only` / `reproduced` / `partially_reproduced`.
 
 ---
 
 ## 6. Recomendación al planificador (siguiente prompt)
 
-1. **Prompt 5A — sparql_llm CORE_OFFLINE** install + import/validate → `smoke_only` si OK.  
-2. No Virtuoso; no mkgq/rdfconfig aún; no adapters.  
-3. GO/NO-GO en [`audit/WAVE_A_ENVIRONMENT_GAPS.md`](audit/WAVE_A_ENVIRONMENT_GAPS.md).
+1. **Prompt 5B — Python ≥3.11 + reintento CORE_OFFLINE** (mismo harness).  
+2. No agent/API hasta import OK.  
+3. No patch silencioso de upstream; no Virtuoso; diferir mkgq/rdfconfig.
 
 Detalle: [`docs/plan-sync/NEXT_PROMPT_GUIDANCE.md`](docs/plan-sync/NEXT_PROMPT_GUIDANCE.md).
 
@@ -170,6 +173,7 @@ Ver lista completa y estable en:
 | 2026-07-19 | Addenda estáticas sparql_llm/mkgqagent (Virtuoso no viable; pool≠trazas paper; doble e5) |
 | 2026-07-19 | Prompt 4B: environments/* + matriz/gaps; Ruby ABSENT; next=5A CORE_OFFLINE |
 | 2026-07-19 | Documentado ciclo operativo Cursor↔ChatGPT (`PLANNER_LOOP.md`); meta-prompt de replanificación |
+| 2026-07-19 | Prompt 5A: sparql CORE_OFFLINE setup_failed (Py3.10/typing.Required); next=5B python3.11 |
 
 ---
 
@@ -182,13 +186,19 @@ Ver lista completa y estable en:
 | HEAD con addenda | `aa141143` |
 | artefactos | §3 fila 4A |
 
-### 4B (este prompt)
+### 4B (histórico)
 | Campo | Valor |
 |---|---|
-| commit inicial | `aa141143e0a4dde5ac1de5dd645b70ecc953704a` |
-| commit final | `88d27b5a12a1dbc98edce559dd2c26c3d7d1e1a9` |
-| rama | `main` |
-| mensaje | Document WAVE_A environment specs without installing or running methods. |
-| push | confirmado en origin/main (`b84e87e04e9b7d8dbe8a61ba1fe8133f3a405967`) |
+| commit final | `88d27b5a` / loop doc `46d37131` |
 | artefactos | §3 fila 4B |
+
+### 5A (este prompt)
+| Campo | Valor |
+|---|---|
+| RUN_ID | `20260719T112306Z` |
+| commit inicial | `46d3713128f0f70907ed5086179f0eee204fac62` |
+| resultado | **setup_failed** |
+| commit final | *(tras push)* |
+| rama | `main` |
+| artefactos | §3 fila 5A |
 

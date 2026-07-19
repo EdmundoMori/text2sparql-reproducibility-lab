@@ -1,0 +1,31 @@
+{
+  "method_id": "sparql_llm",
+  "scope": "CORE_OFFLINE",
+  "package_version": "0.1.4",
+  "import_success": false,
+  "version_ok": null,
+  "valid_sparql_parse_success": false,
+  "void_file": "workdir/runs/sparql_llm/20260719T112306Z/source/tests/void_uniprot.ttl",
+  "void_classes_count": 0,
+  "selected_class": null,
+  "selected_predicate": null,
+  "schema_valid_query_issue_count": null,
+  "invalid_predicate_issue_count": null,
+  "network_attempt_detected": false,
+  "mandatory_checks_passed": false,
+  "experiment_status": "setup_failed",
+  "failure_point": "import_after_install",
+  "failure_detail": "ImportError: cannot import name 'Required' from 'typing' on Python 3.10.12; sparql_llm/config.py imports Required from typing (needs 3.11+). pyproject requires-python>=3.10 is inconsistent.",
+  "install_success": true,
+  "pip_check_ok": true,
+  "venv_path_used": "/tmp/sparql_llm_5a_venv",
+  "venv_path_intended": "workdir/runs/sparql_llm/20260719T112306Z/.venv",
+  "venv_deviation": "Cursor sandbox made workdir .venv site-packages read-only; install completed in /tmp venv. Same Python 3.10.12.",
+  "harness_executed": false,
+  "harness_reason_skipped": "import_failed_before_functional_checks",
+  "timestamp": "2026-07-19T11:28:25Z",
+  "python_version": "3.10.12",
+  "errors": [
+    "import_failed:Required_from_typing_on_py310"
+  ]
+}
