@@ -152,3 +152,16 @@ Ver lista completa y estable en:
 | 2026-07-19 | Creación del mecanismo PLAN_SYNC + primer volcado de estado post-clon |
 | 2026-07-19 | Push completo: `upstream/` vendorizado en GitHub (decisión 002); el planificador puede leer código clonado |
 | 2026-07-19 | Prompt 4A: auditoría estática WAVE_A completa; readiness + matriz; siguiente=env definition |
+
+---
+
+## 9. Registro de publicación (Prompt 4A)
+
+| Campo | Valor |
+|---|---|
+| rama | `main` |
+| commit SHA | `97e86ceef3bf1d7a4756d62c0f4459efbefd43c3` |
+| mensaje | Complete WAVE_A static audits for sparql_llm, mkgqagent, and rdfconfig_llm. |
+| push | pendiente → se confirma tras `git push` |
+| artefactos | ver §3 fila 4A |
+
