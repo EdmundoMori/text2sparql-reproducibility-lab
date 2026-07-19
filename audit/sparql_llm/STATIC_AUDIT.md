@@ -224,3 +224,21 @@ settings JSON mínimo + `OPENROUTER_API_KEY` → CLI MCP o agent con 1 pregunta 
 ## 25. Conclusión conservadora
 
 `sparql_llm` es el candidato WAVE_A más maduro como **paquete + MCP + eval scripts**, con licencia clara. El stack chat completo depende de Compose/Qdrant/API. **static_understanding: complete**; **api_smoke_ready: conditional** (keys + install); **native_reproduction_ready: conditional** (compose/RAM/coste). `reproduction_status` permanece `audit_only`.
+
+---
+
+## Addendum — pasada profunda (subagente estático)
+
+Hallazgos adicionales `CODE_VERIFIED` (sin cambiar el veredicto §25):
+
+| Hallazgo | Evidencia / impacto |
+|---|---|
+| Versión desalineada: código `0.1.4` vs `CITATION.cff`/`server.json` `0.1.2` | Registrar en futuros smokes qué versión se usa |
+| Extra pip `gpu` documentado en README pero **comentado** en `pyproject.toml` | No asumir `fastembed-gpu` |
+| `FORCE_REINDEX` en compose override vs campo Settings `force_index` (`FORCE_INDEX`) | Riesgo de config inerte |
+| Prompt intent `general_informations` vs schema `general_information` | Posible mismatch extracción |
+| Eval Text2SPARQL con Virtuoso: `NumberOfBuffers: 2720000` (~21 GiB teórico) + dumps ausentes en worktree | **native paper/challenge eval no viable** en WSL 7.4 GiB |
+| Sin `.env.example` en repo | Documentar env names en `environments/` (Prompt 4B) |
+| Typo README path `src/sparql-llm/` vs real `src/sparql_llm/` | Usar path real |
+| Dockerfile prod: uvicorn **6 workers** | En host: forzar 1 worker / override |
+| CLI `--http` posible bug de orden `mcp.run()` antes de setear puerto | Preferir smoke stdio o montaje FastAPI `/mcp` |

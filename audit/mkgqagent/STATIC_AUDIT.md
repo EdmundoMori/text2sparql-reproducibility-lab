@@ -208,3 +208,20 @@ Challenge evaluation YAMLs + mismos modelos + endpoints paper + métricas F1 cha
 ## 25. Conclusión conservadora
 
 Arquitectura online **CODE_VERIFIED** (plan→action→feedback→SPARQL). Offline phase principalmente **README_REPORTED**. Smoke API **conditional** (key, RAM embeddings, endpoints). Legal **blocked** para adapters. `reproduction_status: audit_only`.
+
+---
+
+## Addendum — pasada profunda (subagente estático)
+
+Hallazgos adicionales `CODE_VERIFIED` (sin cambiar el veredicto §25 ni el gate legal):
+
+| Hallazgo | Evidencia / impacto |
+|---|---|
+| Experience pool online = ICL `question`/`sparql` vía FAISS; **no** trazas F1/plan/tool del paper | `generate_sparql` L206–228; helpers `construct_shot` etc. en `llm_utils.py` sin callers (dead code) |
+| Multilingual README vs repo solo `en` | datasets/prompts `*_en` |
+| `main.py` instancia **ambos** agentes al import → doble carga e5-large en CPU | Riesgo OOM fuerte en 7.4 GiB; smoke: un proceso/un agente o lazy-init futuro |
+| Inconsistencia `last_task` (dict) añadido entero al plan vs `last_task[lang]` | `llm_agent_dbpedia.py` ~L94 vs `prompts/dbpedia.py` |
+| Planner prompt JSON `{"plan":...}` vs schema Pydantic campo `steps` | `prompts/dbpedia.py` vs `llm_utils.Plan` |
+| `requirements.txt` omite `requests` pese a uso en `llm_utils` | Fallo latent post-install |
+| Cliente `text2sparql-client` **no** en requirements (externo pipx) | Eval challenge documentada pero no empaquetada |
+| Corporate sin nodo EAT (DBpedia sí) | Diferencia de grafo entre agentes |

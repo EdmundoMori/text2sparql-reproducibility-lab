@@ -152,6 +152,7 @@ Ver lista completa y estable en:
 | 2026-07-19 | Creación del mecanismo PLAN_SYNC + primer volcado de estado post-clon |
 | 2026-07-19 | Push completo: `upstream/` vendorizado en GitHub (decisión 002); el planificador puede leer código clonado |
 | 2026-07-19 | Prompt 4A: auditoría estática WAVE_A completa; readiness + matriz; siguiente=env definition |
+| 2026-07-19 | Addenda estáticas sparql_llm/mkgqagent (Virtuoso no viable; pool≠trazas paper; doble e5) |
 
 ---
 

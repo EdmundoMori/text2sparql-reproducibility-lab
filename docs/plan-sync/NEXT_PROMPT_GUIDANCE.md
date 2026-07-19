@@ -9,8 +9,8 @@
 
 **Objetivo:** Materializar specs de entorno y comandos *futuros* verificables por método WAVE_A, cerrando gaps detectados en la auditoría estática:
 
-- `sparql_llm`: pip/Poetry vs ausencia de `uv`; alternativa a Compose (`docker run` Qdrant); lista deps core vs `agent`.
-- `mkgqagent`: pins sugeridos; advertencia LICENSE; checklist endpoints hardcodeados; estimación RAM e5-large.
+- `sparql_llm`: pip/Poetry vs ausencia de `uv`; alternativa a Compose (`docker run` Qdrant); 1 worker (no 6); env names (sin `.env.example`); **excluir** Virtuoso/Text2SPARQL full del plan local.
+- `mkgqagent`: LICENSE; endpoints hardcodeados; `requests` faltante; RAM e5-large con **un solo agente** (evitar doble carga al import); aclarar que pool shipped ≠ trazas offline del paper.
 - `rdfconfig_llm`: completar deps (pandas/munkres/scipy/tqdm); Ruby/Bundler; política de **copia de trabajo** (no mutar `upstream/**/sparql.yaml`); elegir árbol rdf-config (vendored vs pin companion).
 
 **Salidas esperadas:**

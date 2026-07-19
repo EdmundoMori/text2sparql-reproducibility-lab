@@ -14,10 +14,10 @@
 | environment_definition | **partial** (pyproject claro; host sin uv; Compose ausente) |
 | offline_smoke_ready | **conditional** (tras install deps core + VoID local) |
 | api_smoke_ready | **conditional** (API key OpenRouter/OpenAI-compatible + install) |
-| native_reproduction_ready | **conditional** (benchmarks presentes; coste/API; stack compose) |
+| native_reproduction_ready | **conditional** para benches SIB ligeros; **no** para Text2SPARQL+Virtuoso (~21 GiB buffers + dumps) en este host |
 | legal_adapter_gate | **allowed** (MIT) — protocolo: aún `common_adapter_allowed: false` hasta native audit |
-| next_safe_action | Definir entorno de instalación **solo lectura de specs** o Prompt 4B: environment definition + offline import smoke de `validate_sparql`/loaders **sin** declarar reproducción |
-| evidence_required_before_execution | Confirmar gestor (pip/Poetry vs uv); política Compose→`docker run` Qdrant; presupuesto API; no tocar upstream |
+| next_safe_action | Prompt 4B: environment definition (env names, 1 worker, sin Virtuoso) + opcional offline import `validate_sparql`/loaders |
+| evidence_required_before_execution | Confirmar gestor (pip/Poetry vs uv); política Compose→`docker run` Qdrant; **no** planear Virtuoso local; presupuesto API; no tocar upstream |
 
 ---
 
@@ -28,10 +28,10 @@
 | static_understanding | **complete** (online); offline pool build **partial** |
 | environment_definition | **partial** (requirements sin pins; endpoints hardcode) |
 | offline_smoke_ready | **no** (carga FAISS+e5 implica download/modelo; no es offline puro) |
-| api_smoke_ready | **conditional** (`OPENAI_API_KEY`; endpoint WSE; RAM e5) |
-| native_reproduction_ready | **conditional** / débil (script offline ausente; hosts externos) |
+| api_smoke_ready | **conditional** (`OPENAI_API_KEY`; endpoint WSE; RAM e5; **evitar doble agente** en 7.4 GiB) |
+| native_reproduction_ready | **no** / débil (script offline ausente; pool ≠ trazas paper; hosts externos; solo EN) |
 | legal_adapter_gate | **blocked** |
-| next_safe_action | Documentar plan de smoke API aislado **sin** adapters; verificar alcanzabilidad endpoints; advertir LICENSE |
+| next_safe_action | En 4B: checklist RAM (un agente), `requests` faltante, LICENSE; smoke API solo tras env spec |
 | evidence_required_before_execution | Key OpenAI; prueba DNS/HTTP a `141.57.8.18`; espacio RAM WSL; aceptación legal smoke-only |
 
 ---
