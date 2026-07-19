@@ -240,7 +240,7 @@ Antes de cada tarea:
 | SPARQL-LLM publicación | preprint **Under Review** (no DOI editorial TWEB verificado) |
 | Licencias no confirmadas | mkgqagent, cot_sparql, firesparql (GitHub), scott2121 HEAD |
 | `Makefile` | Creado (`just` no disponible en el host) |
-| Clones en `upstream/` | 7 paths (6 métodos); tebaqa no clonado; **no** se versionan en Git |
+| Clones en `upstream/` | 7 paths (6 métodos); tebaqa no clonado; **versionados en GitHub** (árboles; `.git_local/` solo local) — ver decisión 002 |
 | Ondas | A: sparql_llm, mkgqagent, rdfconfig_llm; B: sgpt; C: cot_sparql, firesparql; D: tebaqa |
 | Auditorías nativas con ejecución | Pendiente (clon ≠ ejecución) |
 | Adaptadores comunes | Bloqueados hasta auditoría nativa |
