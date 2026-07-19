@@ -1,0 +1,27 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:wg9aw2 a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID29-3-1" ;
+    rdfs:comment "Could you tell me which gene encodes a protein whose sequence mass is 1265 Daltons?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: Could you tell me which gene encodes a protein whose sequence mass is 1265 Daltons?
+# Parameter: seq_mass: (example: 1265)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?uniprot_gene_name
+WHERE {
+    VALUES ?seq_mass { 1265 }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:encodedBy / skos:prefLabel ?uniprot_gene_name ;
+        core:sequence / core:mass ?seq_mass .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

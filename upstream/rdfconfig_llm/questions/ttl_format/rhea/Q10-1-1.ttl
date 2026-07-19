@@ -1,0 +1,23 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:LdmKD6 a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q10-1-1" ;
+    rdfs:comment "What is the net charge of this obo:CHEBI_15377 molecule?"@en ;
+    sh:select """# Endpoint: https://sparql.rhea-db.org/sparql
+# Description: What is the net charge of this obo:CHEBI_15377 molecule?
+# Parameter: compound_chebi: (example: obo:CHEBI_15377)
+
+PREFIX rhea: <http://rdf.rhea-db.org/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+SELECT DISTINCT ?compound_charge 
+WHERE {
+    VALUES ?compound_chebi { obo:CHEBI_15377 }
+    ?Compound rhea:charge ?compound_charge ;
+        rhea:chebi ?compound_chebi .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.rhea-db.org/sparql".

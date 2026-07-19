@@ -1,0 +1,89 @@
+method_id=cot_sparql
+role=primary
+url=https://github.com/dice-group/CoT-Sparql.git
+local_path=upstream/cot_sparql
+branch=main
+expected_commit=INCLUDE_CONDITIONAL
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:58:54+02:00
+Cloning into 'upstream/cot_sparql'...
+method_id=cot_sparql
+role=primary
+url=https://github.com/dice-group/CoT-Sparql.git
+local_path=upstream/cot_sparql
+branch=main
+expected_commit=NONE
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:59:43+02:00
+existing_HEAD=063edd9868425e54010a0cb49ce585ed2186be4d
+=== remote ===
+origin	https://github.com/dice-group/CoT-Sparql.git (fetch)
+origin	https://github.com/dice-group/CoT-Sparql.git (push)
+=== branch ===
+main
+=== commit ===
+063edd9868425e54010a0cb49ce585ed2186be4d
+=== commit date ===
+2024-06-03T15:26:39+02:00
+=== subject ===
+Add files via upload
+=== tags pointing at HEAD ===
+=== all tags (names) ===
+=== submodule status ===
+=== lfs (if any) ===
+git-lfs unavailable or no LFS files listed
+=== du -sh . ===
+64M	.
+=== du -sh .git ===
+13M	.git
+n_files_no_git=22
+source_code_est_mib=0.1
+models_est_mib=0.0
+datasets_results_est_mib=49.85
+docker_metadata_est_mib=0.0
+other_est_mib=0.46
+source_code_est_bytes=104370
+models_est_bytes=0
+datasets_results_est_bytes=52268618
+docker_metadata_est_bytes=0
+other_est_bytes=480979
+method_id=cot_sparql
+role=primary
+url=https://github.com/dice-group/CoT-Sparql.git
+local_path=upstream/cot_sparql
+branch=main
+expected_commit=NONE
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T21:00:12+02:00
+existing_HEAD=063edd9868425e54010a0cb49ce585ed2186be4d
+=== remote ===
+origin	https://github.com/dice-group/CoT-Sparql.git (fetch)
+origin	https://github.com/dice-group/CoT-Sparql.git (push)
+=== branch ===
+main
+=== commit ===
+063edd9868425e54010a0cb49ce585ed2186be4d
+=== commit date ===
+2024-06-03T15:26:39+02:00
+=== subject ===
+Add files via upload
+=== tags pointing at HEAD ===
+=== all tags (names) ===
+=== submodule status ===
+=== lfs (if any) ===
+git-lfs unavailable or no LFS files listed
+=== du -sh . ===
+64M	.
+=== du -sh .git ===
+13M	.git
+n_files_no_git=22
+source_code_est_mib=0.1
+models_est_mib=0.0
+datasets_results_est_mib=49.85
+docker_metadata_est_mib=0.0
+other_est_mib=0.46
+source_code_est_bytes=104370
+models_est_bytes=0
+datasets_results_est_bytes=52268618
+docker_metadata_est_bytes=0
+other_est_bytes=480979

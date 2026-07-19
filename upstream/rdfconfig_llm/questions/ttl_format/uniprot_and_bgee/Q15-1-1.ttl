@@ -1,0 +1,30 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:maMPi9 a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q15-1-1" ;
+    rdfs:comment "What is the FDR p-value of the gene encoding the protein associated with PDB ID pdb:7A97?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+# Description: What is the FDR p-value of the gene encoding the protein associated with PDB ID pdb:7A97?
+# Parameter: uniprot_pdb: (example: pdb:7A97)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX lscr: <http://purl.org/lscr#>
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX rdfspdb: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX pdb: <http://rdf.wwpdb.org/pdb/>
+
+SELECT DISTINCT ?expression_fdr_pvalue 
+WHERE {
+    VALUES ?uniprot_pdb { pdb:7A97 }
+    ?Expression a genex:Expression ;
+        genex:hasFDRpvalue ?expression_fdr_pvalue ;
+        genex:hasSequenceUnit / lscr:xrefUniprot / rdfspdb:seeAlso ?uniprot_pdb .
+    ?uniprot_pdb a core:Structure_Resource .
+}
+LIMIT 100
+""" ;
+    schema:target "https://rdfportal.org/sib/sparql".

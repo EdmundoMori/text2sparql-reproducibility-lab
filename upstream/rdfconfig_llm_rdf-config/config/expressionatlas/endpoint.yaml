@@ -1,0 +1,2 @@
+endpoint: https://rdfportal.org/ebi/sparql
+graphs: http://rdf.ebi.ac.uk/dataset/expressionatlas

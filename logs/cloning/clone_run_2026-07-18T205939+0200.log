@@ -1,0 +1,319 @@
+[2026-07-18T20:59:39+02:00] ROOT=/home/edmundo/text2sparql-reproducibility-lab
+[2026-07-18T20:59:39+02:00] MANIFEST=/home/edmundo/text2sparql-reproducibility-lab/configs/clone_manifest.yaml
+[2026-07-18T20:59:39+02:00] GIT_LFS_SKIP_SMUDGE=1
+[2026-07-18T20:59:39+02:00] ---- BEGIN sparql_llm (primary) -> upstream/sparql_llm ----
+method_id=sparql_llm
+role=primary
+url=https://github.com/sib-swiss/sparql-llm.git
+local_path=upstream/sparql_llm
+branch=main
+expected_commit=NONE
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:59:39+02:00
+[2026-07-18T20:59:39+02:00] Repository already exists: upstream/sparql_llm
+[2026-07-18T20:59:39+02:00] No expected_commit pin (NONE); keeping existing clone at 3748730e3bd2df2595280b918269fdaadb9fc0c3
+=== remote ===
+origin	https://github.com/sib-swiss/sparql-llm.git (fetch)
+origin	https://github.com/sib-swiss/sparql-llm.git (push)
+=== branch ===
+main
+=== commit ===
+3748730e3bd2df2595280b918269fdaadb9fc0c3
+=== commit date ===
+2026-05-19T19:43:52+03:00
+=== subject ===
+test: Added plots for 2026
+=== tags pointing at HEAD ===
+=== all tags (names) ===
+v0.1.0
+v0.1.1
+v0.1.2
+v0.1.3
+v0.1.4
+=== submodule status ===
+=== lfs (if any) ===
+git-lfs unavailable or no LFS files listed
+=== du -sh . ===
+139M	.
+=== du -sh .git ===
+46M	.git
+n_files_no_git=132
+source_code_est_mib=3.79
+models_est_mib=0.0
+datasets_results_est_mib=87.75
+docker_metadata_est_mib=0.01
+other_est_mib=1.02
+source_code_est_bytes=3977788
+models_est_bytes=0
+datasets_results_est_bytes=92016625
+docker_metadata_est_bytes=5671
+other_est_bytes=1073455
+[2026-07-18T20:59:40+02:00] License file copied: upstream/sparql_llm/LICENSE.txt -> /home/edmundo/text2sparql-reproducibility-lab/licenses/sparql_llm/LICENSE.txt
+[2026-07-18T20:59:40+02:00] ---- END sparql_llm (primary) OK sha=3748730e3bd2df2595280b918269fdaadb9fc0c3 size=139M ----
+[2026-07-18T20:59:40+02:00] ---- BEGIN mkgqagent (primary) -> upstream/mkgqagent ----
+method_id=mkgqagent
+role=primary
+url=https://github.com/WSE-research/text2sparql-agent.git
+local_path=upstream/mkgqagent
+branch=main
+expected_commit=NONE
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:59:40+02:00
+[2026-07-18T20:59:40+02:00] Repository already exists: upstream/mkgqagent
+[2026-07-18T20:59:40+02:00] No expected_commit pin (NONE); keeping existing clone at ba0f2f78611a7ccacc8c985a97f6008ef7ee6a6a
+=== remote ===
+origin	https://github.com/WSE-research/text2sparql-agent.git (fetch)
+origin	https://github.com/WSE-research/text2sparql-agent.git (push)
+=== branch ===
+main
+=== commit ===
+ba0f2f78611a7ccacc8c985a97f6008ef7ee6a6a
+=== commit date ===
+2026-07-07T10:23:01+02:00
+=== subject ===
+Replace README.md with extended README.adoc following WSE conventions
+=== tags pointing at HEAD ===
+v1.0.0-TEXT2SPAQL-ESWC2025
+=== all tags (names) ===
+v1.0.0-TEXT2SPAQL-ESWC2025
+=== submodule status ===
+=== lfs (if any) ===
+git-lfs unavailable or no LFS files listed
+=== du -sh . ===
+6.0M	.
+=== du -sh .git ===
+2.5M	.git
+n_files_no_git=32
+source_code_est_mib=0.06
+models_est_mib=0.06
+datasets_results_est_mib=2.73
+docker_metadata_est_mib=0.0
+other_est_mib=0.56
+source_code_est_bytes=63639
+models_est_bytes=62724
+datasets_results_est_bytes=2859193
+docker_metadata_est_bytes=496
+other_est_bytes=582283
+[2026-07-18T20:59:40+02:00] ---- END mkgqagent (primary) OK sha=ba0f2f78611a7ccacc8c985a97f6008ef7ee6a6a size=6.0M ----
+[2026-07-18T20:59:40+02:00] ---- BEGIN rdfconfig_llm (primary) -> upstream/rdfconfig_llm ----
+method_id=rdfconfig_llm
+role=primary
+url=https://github.com/scott2121/sparql_query_generator.git
+local_path=upstream/rdfconfig_llm
+branch=main
+expected_commit=NONE
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:59:40+02:00
+[2026-07-18T20:59:40+02:00] Repository already exists: upstream/rdfconfig_llm
+[2026-07-18T20:59:40+02:00] No expected_commit pin (NONE); keeping existing clone at fe63171d3c8b9679779749ee11f731b2a8318053
+=== remote ===
+origin	https://github.com/scott2121/sparql_query_generator.git (fetch)
+origin	https://github.com/scott2121/sparql_query_generator.git (push)
+=== branch ===
+main
+=== commit ===
+fe63171d3c8b9679779749ee11f731b2a8318053
+=== commit date ===
+2025-12-22T21:37:45+09:00
+=== subject ===
+edit output folder name
+=== tags pointing at HEAD ===
+v1.0.0
+=== all tags (names) ===
+v1.0.0
+=== submodule status ===
+=== lfs (if any) ===
+git-lfs unavailable or no LFS files listed
+=== du -sh . ===
+62M	.
+=== du -sh .git ===
+23M	.git
+n_files_no_git=1287
+source_code_est_mib=2.16
+models_est_mib=0.0
+datasets_results_est_mib=1.65
+docker_metadata_est_mib=0.0
+other_est_mib=30.55
+source_code_est_bytes=2268421
+models_est_bytes=0
+datasets_results_est_bytes=1733385
+docker_metadata_est_bytes=115
+other_est_bytes=32037414
+[2026-07-18T20:59:41+02:00] ---- END rdfconfig_llm (primary) OK sha=fe63171d3c8b9679779749ee11f731b2a8318053 size=62M ----
+[2026-07-18T20:59:41+02:00] ---- BEGIN rdfconfig_llm (dependency_or_companion) -> upstream/rdfconfig_llm_rdf-config ----
+method_id=rdfconfig_llm
+role=dependency_or_companion
+url=https://github.com/dbcls/rdf-config.git
+local_path=upstream/rdfconfig_llm_rdf-config
+branch=master
+expected_commit=NONE
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:59:41+02:00
+[2026-07-18T20:59:41+02:00] Repository already exists: upstream/rdfconfig_llm_rdf-config
+[2026-07-18T20:59:41+02:00] No expected_commit pin (NONE); keeping existing clone at cccc581c16f0b24865030bc5459475a9d0fcbd5f
+=== remote ===
+origin	https://github.com/dbcls/rdf-config.git (fetch)
+origin	https://github.com/dbcls/rdf-config.git (push)
+=== branch ===
+master
+=== commit ===
+cccc581c16f0b24865030bc5459475a9d0fcbd5f
+=== commit date ===
+2026-07-15T10:59:50+09:00
+=== subject ===
+update model for mogplus
+=== tags pointing at HEAD ===
+=== all tags (names) ===
+=== submodule status ===
+=== lfs (if any) ===
+git-lfs unavailable or no LFS files listed
+=== du -sh . ===
+126M	.
+=== du -sh .git ===
+66M	.git
+n_files_no_git=906
+source_code_est_mib=10.06
+models_est_mib=0.0
+datasets_results_est_mib=14.5
+docker_metadata_est_mib=0.0
+other_est_mib=32.07
+source_code_est_bytes=10552291
+models_est_bytes=0
+datasets_results_est_bytes=15200915
+docker_metadata_est_bytes=115
+other_est_bytes=33631299
+[2026-07-18T20:59:42+02:00] License file copied: upstream/rdfconfig_llm_rdf-config/LICENSE -> /home/edmundo/text2sparql-reproducibility-lab/licenses/rdfconfig_llm/LICENSE
+[2026-07-18T20:59:42+02:00] ---- END rdfconfig_llm (dependency_or_companion) OK sha=cccc581c16f0b24865030bc5459475a9d0fcbd5f size=126M ----
+[2026-07-18T20:59:42+02:00] ---- BEGIN sgpt (primary) -> upstream/sgpt ----
+method_id=sgpt
+role=primary
+url=https://github.com/rashad101/SGPT-SPARQL-query-generation.git
+local_path=upstream/sgpt
+branch=main
+expected_commit=NONE
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:59:42+02:00
+[2026-07-18T20:59:42+02:00] Repository already exists: upstream/sgpt
+[2026-07-18T20:59:42+02:00] No expected_commit pin (NONE); keeping existing clone at 1f6964d1c3bfee50c7dec2c25546f32b4ab94b2b
+=== remote ===
+origin	https://github.com/rashad101/SGPT-SPARQL-query-generation.git (fetch)
+origin	https://github.com/rashad101/SGPT-SPARQL-query-generation.git (push)
+=== branch ===
+main
+=== commit ===
+1f6964d1c3bfee50c7dec2c25546f32b4ab94b2b
+=== commit date ===
+2024-09-15T11:21:37+02:00
+=== subject ===
+Update README.md
+=== tags pointing at HEAD ===
+=== all tags (names) ===
+=== submodule status ===
+=== lfs (if any) ===
+git-lfs unavailable or no LFS files listed
+=== du -sh . ===
+218M	.
+=== du -sh .git ===
+49M	.git
+n_files_no_git=46
+source_code_est_mib=0.11
+models_est_mib=0.0
+datasets_results_est_mib=168.88
+docker_metadata_est_mib=0.0
+other_est_mib=0.03
+source_code_est_bytes=119947
+models_est_bytes=0
+datasets_results_est_bytes=177087942
+docker_metadata_est_bytes=0
+other_est_bytes=32735
+[2026-07-18T20:59:43+02:00] License file copied: upstream/sgpt/LICENSE.md -> /home/edmundo/text2sparql-reproducibility-lab/licenses/sgpt/LICENSE.md
+[2026-07-18T20:59:43+02:00] ---- END sgpt (primary) OK sha=1f6964d1c3bfee50c7dec2c25546f32b4ab94b2b size=218M ----
+[2026-07-18T20:59:43+02:00] ---- BEGIN cot_sparql (primary) -> upstream/cot_sparql ----
+method_id=cot_sparql
+role=primary
+url=https://github.com/dice-group/CoT-Sparql.git
+local_path=upstream/cot_sparql
+branch=main
+expected_commit=NONE
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:59:43+02:00
+[2026-07-18T20:59:43+02:00] Repository already exists: upstream/cot_sparql
+[2026-07-18T20:59:43+02:00] No expected_commit pin (NONE); keeping existing clone at 063edd9868425e54010a0cb49ce585ed2186be4d
+=== remote ===
+origin	https://github.com/dice-group/CoT-Sparql.git (fetch)
+origin	https://github.com/dice-group/CoT-Sparql.git (push)
+=== branch ===
+main
+=== commit ===
+063edd9868425e54010a0cb49ce585ed2186be4d
+=== commit date ===
+2024-06-03T15:26:39+02:00
+=== subject ===
+Add files via upload
+=== tags pointing at HEAD ===
+=== all tags (names) ===
+=== submodule status ===
+=== lfs (if any) ===
+git-lfs unavailable or no LFS files listed
+=== du -sh . ===
+64M	.
+=== du -sh .git ===
+13M	.git
+n_files_no_git=22
+source_code_est_mib=0.1
+models_est_mib=0.0
+datasets_results_est_mib=49.85
+docker_metadata_est_mib=0.0
+other_est_mib=0.46
+source_code_est_bytes=104370
+models_est_bytes=0
+datasets_results_est_bytes=52268618
+docker_metadata_est_bytes=0
+other_est_bytes=480979
+[2026-07-18T20:59:44+02:00] ---- END cot_sparql (primary) OK sha=063edd9868425e54010a0cb49ce585ed2186be4d size=64M ----
+[2026-07-18T20:59:44+02:00] ---- BEGIN firesparql (primary) -> upstream/firesparql ----
+method_id=firesparql
+role=primary
+url=https://github.com/sherry-pan/FIRESPARQL.git
+local_path=upstream/firesparql
+branch=main
+expected_commit=NONE
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:59:44+02:00
+[2026-07-18T20:59:44+02:00] Repository already exists: upstream/firesparql
+[2026-07-18T20:59:44+02:00] No expected_commit pin (NONE); keeping existing clone at 48d6f168e4c1dd3dc467553aef370299911d4e76
+=== remote ===
+origin	https://github.com/sherry-pan/FIRESPARQL.git (fetch)
+origin	https://github.com/sherry-pan/FIRESPARQL.git (push)
+=== branch ===
+main
+=== commit ===
+48d6f168e4c1dd3dc467553aef370299911d4e76
+=== commit date ===
+2025-05-28T12:00:49+02:00
+=== subject ===
+Update README.md
+=== tags pointing at HEAD ===
+=== all tags (names) ===
+=== submodule status ===
+=== lfs (if any) ===
+git-lfs unavailable or no LFS files listed
+=== du -sh . ===
+598M	.
+=== du -sh .git ===
+43M	.git
+n_files_no_git=71954
+source_code_est_mib=0.55
+models_est_mib=0.0
+datasets_results_est_mib=309.48
+docker_metadata_est_mib=0.0
+other_est_mib=2.35
+source_code_est_bytes=576622
+models_est_bytes=0
+datasets_results_est_bytes=324513358
+docker_metadata_est_bytes=0
+other_est_bytes=2466487
+[2026-07-18T20:59:47+02:00] ---- END firesparql (primary) OK sha=48d6f168e4c1dd3dc467553aef370299911d4e76 size=598M ----
+[2026-07-18T20:59:47+02:00] Lock written: /home/edmundo/text2sparql-reproducibility-lab/REPOSITORIES.lock.yaml
+[2026-07-18T20:59:47+02:00] Summary TSV: /home/edmundo/text2sparql-reproducibility-lab/logs/cloning/clone_summary_2026-07-18T205939+0200.tsv
+[2026-07-18T20:59:47+02:00] Failures: 0

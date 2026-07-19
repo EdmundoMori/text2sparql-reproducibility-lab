@@ -1,0 +1,33 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:ASokBB a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q3-2-1" ;
+    rdfs:comment "What is the UniProt ID and the expression pattern of the ACE2 gene across various developmental stages?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+# Description: What is the UniProt ID and the expression pattern of the ACE2 gene across various developmental stages?
+# Parameter: gene_name: (example: ACE2)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX efo: <http://www.ebi.ac.uk/efo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX lscr: <http://purl.org/lscr#>
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+
+SELECT DISTINCT ?expression_condition_developmental_stage ?expression_level ?UniProt 
+WHERE {
+    VALUES ?gene_name { "ACE2" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?Expression a genex:Expression ;
+        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;
+        genex:hasExpressionLevel ?expression_level ;
+        genex:hasSequenceUnit / lscr:xrefUniprot ?UniProt ;
+        genex:hasSequenceUnit / rdfs:label ?gene_name .
+    ?UniProt a ?UniProt__class .
+}
+LIMIT 100
+""" ;
+    schema:target "https://rdfportal.org/sib/sparql".

@@ -49,7 +49,7 @@ text2sparql-reproducibility-lab/
     └── reports/           # Informes de fase
 ```
 
-**GitHub:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab — ChatGPT debe empezar por `PLAN_SYNC.md`. `upstream/` no se sube (solo pins en `REPOSITORIES.lock.yaml`).
+**GitHub:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab — ChatGPT debe empezar por `PLAN_SYNC.md`. Los árboles `upstream/` están versionados (vendorizados); los metadatos git de cada clone viven localmente en `.git_local/` (ignorados). Pins: `REPOSITORIES.lock.yaml`.
 
 
 ## Reglas rápidas

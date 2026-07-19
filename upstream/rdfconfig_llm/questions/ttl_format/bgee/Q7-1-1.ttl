@@ -1,0 +1,26 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:AzdidW a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q7-1-1" ;
+    rdfs:comment "What is the UniProt ID of the APOC1 gene?"@en ;
+    sh:select """# Endpoint: https://www.bgee.org/sparql
+# Description: What is the UniProt ID of the APOC1 gene?
+# Parameter: gene_name: (example: APOC1)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX lscr: <http://purl.org/lscr#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?gene_uniprot_id 
+WHERE {
+    VALUES ?gene_name { "APOC1" }
+    ?Gene a orth:Gene ;
+        lscr:xrefUniprot ?gene_uniprot_id ;
+        rdfs:label ?gene_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://bgee.org/sparql".

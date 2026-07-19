@@ -1,0 +1,32 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:6016EW a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID44-1-1" ;
+    rdfs:comment "Can you explain the tissue-specific expression pattern of the ATR gene?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: Can you explain the tissue-specific expression pattern of the ATR gene?
+# Parameter: uniprot_gene_name: (example: ATR)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?tissue_spec_desc
+WHERE {
+    VALUES ?uniprot_gene_name { "ATR" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:encodedBy / skos:prefLabel ?uniprot_gene_name .
+    OPTIONAL {
+        ?UniProt core:annotation ?TissueSpecificityAnnotation .
+        ?TissueSpecificityAnnotation a core:Tissue_Specificity_Annotation ;
+            rdfs:comment ?tissue_spec_desc .
+    }
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

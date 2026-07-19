@@ -1,0 +1,21 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:C80ABS a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q8-2-1" ;
+    rdfs:comment "What is the RHEA identifier for the reverse reaction of rhea:10024?"@en ;
+    sh:select """# Endpoint: https://sparql.rhea-db.org/sparql
+# Description: What is the RHEA identifier for the reverse reaction of rhea:10024?
+# Parameter: Reaction: (example: rhea:10024)
+
+PREFIX rhea: <http://rdf.rhea-db.org/>
+
+SELECT DISTINCT ?reaction_bidirectional_reaction 
+WHERE {
+    VALUES ?Reaction { rhea:10024 }
+    ?Reaction rhea:bidirectionalReaction ?reaction_bidirectional_reaction .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.rhea-db.org/sparql".

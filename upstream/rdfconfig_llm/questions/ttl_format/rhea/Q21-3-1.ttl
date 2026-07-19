@@ -1,0 +1,22 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:HA5AF7 a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q21-3-1" ;
+    rdfs:comment "Please provide the RHEA ID and references of the chemical reactions in which the L-lysyl-[histone] molecule participates."@en ;
+    sh:select """# Endpoint: https://sparql.rhea-db.org/sparql
+# Description: Please provide the RHEA ID and references of the chemical reactions in which the L-lysyl-[histone] molecule participates.
+# Parameter: compound_name: (example: L-lysyl-[histone])
+
+PREFIX rhea: <http://rdf.rhea-db.org/>
+
+SELECT DISTINCT ?Reaction ?reaction_citation 
+WHERE {
+    VALUES ?compound_name { "L-lysyl-[histone]" }
+    ?Reaction rhea:citation ?reaction_citation ;
+        rhea:side / rhea:contains / rhea:compound / rhea:name ?compound_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.rhea-db.org/sparql".

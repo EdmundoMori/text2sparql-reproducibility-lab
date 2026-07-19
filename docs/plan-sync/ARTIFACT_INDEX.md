@@ -27,14 +27,14 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | NEXT | Guía siguiente prompt | `docs/plan-sync/NEXT_PROMPT_GUIDANCE.md` | Qué proponer ahora |
 | SYNC | Estado general | `PLAN_SYNC.md` | Punto de entrada |
 
-## Qué no está en GitHub (por diseño)
+## Qué está / no está en GitHub
 
-| Path | Motivo |
-|---|---|
-| `upstream/` | Clones pesados / terceros; ver pins en `REPOSITORIES.lock.yaml` |
-| `datasets/` | Datos nativos/comunes (futuro) |
-| `results/` | Salidas experimentales |
-| `logs/` | Logs locales de clon/ejecución |
-| `.env` | Secretos |
+| Path | En GitHub? | Notas |
+|---|---|---|
+| `upstream/<method_id>/` | **Sí** (árboles de trabajo) | Vendorizado 2026-07-19; pins en `REPOSITORIES.lock.yaml` |
+| `upstream/*/.git_local/` | No | Metadatos git del clone original (solo local) |
+| `logs/` | Sí (p. ej. clonado) | Útiles para el planificador |
+| `datasets/`, `results/`, `papers/`, `graph_snapshots/` | Solo placeholders | Contenido pesado futuro ignorado |
+| `.env` | No | Secretos |
 
-El planificador debe asumir que el investigador tiene `upstream/` local tras clonar con el script.
+El planificador **puede** leer el código en `upstream/` directamente en el repo.

@@ -1,0 +1,21 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:PQIWvk a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q2-1-1" ;
+    rdfs:comment "Please tell me the ChEBI IDs of the compounds involved in the rhea:10024 reaction"@en ;
+    sh:select """# Endpoint: https://sparql.rhea-db.org/sparql
+# Description: Please tell me the ChEBI IDs of the compounds involved in the rhea:10024 reaction
+# Parameter: Reaction: (example: rhea:10024)
+
+PREFIX rhea: <http://rdf.rhea-db.org/>
+
+SELECT DISTINCT ?compound_chebi 
+WHERE {
+    VALUES ?Reaction { rhea:10024 }
+    ?Reaction rhea:side / rhea:contains / rhea:compound / rhea:chebi ?compound_chebi .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.rhea-db.org/sparql".

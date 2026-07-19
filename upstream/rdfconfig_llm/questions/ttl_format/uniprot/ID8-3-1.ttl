@@ -1,0 +1,29 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:qQLFdJ a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID8-3-1" ;
+    rdfs:comment "What is the official name of the protein translated from the NCBI Gene ID ncbigene:59272?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: What is the official name of the protein translated from the NCBI Gene ID ncbigene:59272?
+# Parameter: uniprot_ncbigene: (example: ncbigene:59272)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ncbigene: <http://identifiers.org/ncbigene/>
+
+SELECT DISTINCT ?uniprot_recommended_name
+WHERE {
+    VALUES ?uniprot_ncbigene { ncbigene:59272 }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:recommendedName / core:fullName ?uniprot_recommended_name ;
+        rdfs:seeAlso ?uniprot_ncbigene .
+    ?uniprot_ncbigene a core:Resource .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

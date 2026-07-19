@@ -1,0 +1,90 @@
+method_id=firesparql
+role=primary
+url=https://github.com/sherry-pan/FIRESPARQL.git
+local_path=upstream/firesparql
+branch=main
+expected_commit=INCLUDE_CONDITIONAL
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:58:57+02:00
+Cloning into 'upstream/firesparql'...
+Updating files:   3% (2688/71954)Updating files:   4% (2879/71954)Updating files:   5% (3598/71954)Updating files:   6% (4318/71954)Updating files:   7% (5037/71954)Updating files:   8% (5757/71954)Updating files:   9% (6476/71954)Updating files:  10% (7196/71954)Updating files:  11% (7915/71954)Updating files:  12% (8635/71954)Updating files:  13% (9355/71954)Updating files:  14% (10074/71954)Updating files:  15% (10794/71954)Updating files:  16% (11513/71954)Updating files:  16% (12076/71954)Updating files:  17% (12233/71954)Updating files:  18% (12952/71954)Updating files:  19% (13672/71954)Updating files:  20% (14391/71954)Updating files:  21% (15111/71954)Updating files:  22% (15830/71954)Updating files:  23% (16550/71954)Updating files:  24% (17269/71954)Updating files:  25% (17989/71954)Updating files:  26% (18709/71954)Updating files:  27% (19428/71954)Updating files:  28% (20148/71954)Updating files:  29% (20867/71954)Updating files:  30% (21587/71954)Updating files:  30% (21620/71954)Updating files:  31% (22306/71954)Updating files:  32% (23026/71954)Updating files:  33% (23745/71954)Updating files:  34% (24465/71954)Updating files:  35% (25184/71954)Updating files:  36% (25904/71954)Updating files:  37% (26623/71954)Updating files:  38% (27343/71954)Updating files:  39% (28063/71954)Updating files:  40% (28782/71954)Updating files:  41% (29502/71954)Updating files:  42% (30221/71954)Updating files:  43% (30941/71954)Updating files:  43% (31651/71954)Updating files:  44% (31660/71954)Updating files:  45% (32380/71954)Updating files:  46% (33099/71954)Updating files:  47% (33819/71954)Updating files:  48% (34538/71954)Updating files:  49% (35258/71954)Updating files:  50% (35977/71954)Updating files:  51% (36697/71954)Updating files:  52% (37417/71954)Updating files:  53% (38136/71954)Updating files:  54% (38856/71954)Updating files:  55% (39575/71954)Updating files:  56% (40295/71954)Updating files:  57% (41014/71954)Updating files:  57% (41338/71954)Updating files:  58% (41734/71954)Updating files:  59% (42453/71954)Updating files:  60% (43173/71954)Updating files:  61% (43892/71954)Updating files:  62% (44612/71954)Updating files:  63% (45332/71954)Updating files:  64% (46051/71954)Updating files:  65% (46771/71954)Updating files:  66% (47490/71954)Updating files:  67% (48210/71954)Updating files:  68% (48929/71954)Updating files:  69% (49649/71954)Updating files:  70% (50368/71954)Updating files:  71% (51088/71954)Updating files:  71% (51207/71954)Updating files:  72% (51807/71954)Updating files:  73% (52527/71954)Updating files:  74% (53246/71954)Updating files:  75% (53966/71954)Updating files:  76% (54686/71954)Updating files:  77% (55405/71954)Updating files:  78% (56125/71954)Updating files:  79% (56844/71954)Updating files:  80% (57564/71954)Updating files:  81% (58283/71954)Updating files:  82% (59003/71954)Updating files:  83% (59722/71954)Updating files:  84% (60442/71954)Updating files:  85% (61161/71954)Updating files:  85% (61566/71954)Updating files:  86% (61881/71954)Updating files:  87% (62600/71954)Updating files:  88% (63320/71954)Updating files:  89% (64040/71954)Updating files:  90% (64759/71954)Updating files:  91% (65479/71954)Updating files:  92% (66198/71954)Updating files:  93% (66918/71954)Updating files:  94% (67637/71954)Updating files:  95% (68357/71954)Updating files:  96% (69076/71954)Updating files:  97% (69796/71954)Updating files:  98% (70515/71954)Updating files:  99% (71235/71954)Updating files:  99% (71242/71954)Updating files:  99% (71864/71954)Updating files: 100% (71954/71954)Updating files: 100% (71954/71954), done.
+method_id=firesparql
+role=primary
+url=https://github.com/sherry-pan/FIRESPARQL.git
+local_path=upstream/firesparql
+branch=main
+expected_commit=NONE
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:59:44+02:00
+existing_HEAD=48d6f168e4c1dd3dc467553aef370299911d4e76
+=== remote ===
+origin	https://github.com/sherry-pan/FIRESPARQL.git (fetch)
+origin	https://github.com/sherry-pan/FIRESPARQL.git (push)
+=== branch ===
+main
+=== commit ===
+48d6f168e4c1dd3dc467553aef370299911d4e76
+=== commit date ===
+2025-05-28T12:00:49+02:00
+=== subject ===
+Update README.md
+=== tags pointing at HEAD ===
+=== all tags (names) ===
+=== submodule status ===
+=== lfs (if any) ===
+git-lfs unavailable or no LFS files listed
+=== du -sh . ===
+598M	.
+=== du -sh .git ===
+43M	.git
+n_files_no_git=71954
+source_code_est_mib=0.55
+models_est_mib=0.0
+datasets_results_est_mib=309.48
+docker_metadata_est_mib=0.0
+other_est_mib=2.35
+source_code_est_bytes=576622
+models_est_bytes=0
+datasets_results_est_bytes=324513358
+docker_metadata_est_bytes=0
+other_est_bytes=2466487
+method_id=firesparql
+role=primary
+url=https://github.com/sherry-pan/FIRESPARQL.git
+local_path=upstream/firesparql
+branch=main
+expected_commit=NONE
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T21:00:12+02:00
+existing_HEAD=48d6f168e4c1dd3dc467553aef370299911d4e76
+=== remote ===
+origin	https://github.com/sherry-pan/FIRESPARQL.git (fetch)
+origin	https://github.com/sherry-pan/FIRESPARQL.git (push)
+=== branch ===
+main
+=== commit ===
+48d6f168e4c1dd3dc467553aef370299911d4e76
+=== commit date ===
+2025-05-28T12:00:49+02:00
+=== subject ===
+Update README.md
+=== tags pointing at HEAD ===
+=== all tags (names) ===
+=== submodule status ===
+=== lfs (if any) ===
+git-lfs unavailable or no LFS files listed
+=== du -sh . ===
+598M	.
+=== du -sh .git ===
+43M	.git
+n_files_no_git=71954
+source_code_est_mib=0.55
+models_est_mib=0.0
+datasets_results_est_mib=309.48
+docker_metadata_est_mib=0.0
+other_est_mib=2.35
+source_code_est_bytes=576622
+models_est_bytes=0
+datasets_results_est_bytes=324513358
+docker_metadata_est_bytes=0
+other_est_bytes=2466487

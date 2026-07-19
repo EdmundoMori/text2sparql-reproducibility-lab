@@ -1,0 +1,8 @@
+method_id	role	url	local_path	branch	commit_sha	commit_date	tags	license_status	license_spdx	wave	size	status
+sparql_llm	primary	https://github.com/sib-swiss/sparql-llm.git	upstream/sparql_llm	main	UNKNOWN	UNKNOWN	none	MIT	WAVE_A_API_OR_LIGHTWEIGHT		UNKNOWN	failed
+mkgqagent	primary	https://github.com/WSE-research/text2sparql-agent.git	upstream/mkgqagent	main	UNKNOWN	UNKNOWN	none	UNKNOWN	WAVE_A_API_OR_LIGHTWEIGHT		UNKNOWN	failed
+rdfconfig_llm	primary	https://github.com/scott2121/sparql_query_generator.git	upstream/rdfconfig_llm	main	UNKNOWN	UNKNOWN	none	UNKNOWN	WAVE_A_API_OR_LIGHTWEIGHT		UNKNOWN	failed
+rdfconfig_llm	dependency_or_companion	https://github.com/dbcls/rdf-config.git	upstream/rdfconfig_llm_rdf-config	master	UNKNOWN	UNKNOWN	none	MIT	WAVE_A_API_OR_LIGHTWEIGHT		UNKNOWN	failed
+sgpt	primary	https://github.com/rashad101/SGPT-SPARQL-query-generation.git	upstream/sgpt	main	UNKNOWN	UNKNOWN	none	MIT	WAVE_B_LOCAL_CONDITIONAL		UNKNOWN	failed
+cot_sparql	primary	https://github.com/dice-group/CoT-Sparql.git	upstream/cot_sparql	main	UNKNOWN	UNKNOWN	none	UNKNOWN	WAVE_C_STATIC_AUDIT_ONLY		UNKNOWN	failed
+firesparql	primary	https://github.com/sherry-pan/FIRESPARQL.git	upstream/firesparql	main	UNKNOWN	UNKNOWN	none	UNKNOWN	WAVE_C_STATIC_AUDIT_ONLY		UNKNOWN	failed

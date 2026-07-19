@@ -1,0 +1,31 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:iLLnBA a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q19-3-1" ;
+    rdfs:comment "To what extent is the APOC1 gene expressed in various tissues within Homo sapiens?"@en ;
+    sh:select """# Endpoint: https://www.bgee.org/sparql
+# Description: To what extent is the APOC1 gene expressed in various tissues within Homo sapiens?
+# Parameter: gene_name: (example: APOC1)
+#            taxonomy_scientific_name: (example: Homo sapiens)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX core: <http://purl.uniprot.org/core/>
+
+SELECT DISTINCT ?expression_level ?anatomical_entity_name  
+WHERE {
+    VALUES ?gene_name { "APOC1" }
+    VALUES ?taxonomy_scientific_name { "Homo sapiens" }
+    ?Expression a genex:Expression ;
+        genex:hasExpressionLevel ?expression_level ;
+        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;
+        genex:hasSequenceUnit / rdfs:label ?gene_name ;
+        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://bgee.org/sparql".

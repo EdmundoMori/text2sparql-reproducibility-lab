@@ -1,0 +1,25 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:6b1hyl a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q4-1-1" ;
+    rdfs:comment "In which sex is the APOC1 gene expressed?"@en ;
+    sh:select """# Endpoint: https://www.bgee.org/sparql
+# Description: In which sex is the APOC1 gene expressed?
+# Parameter: gene_name: (example: APOC1)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?expression_condition_sex 
+WHERE {
+    VALUES ?gene_name { "APOC1" }
+    ?Expression a genex:Expression ;
+        genex:hasExpressionCondition / genex:hasSex ?expression_condition_sex ;
+        genex:hasSequenceUnit / rdfs:label ?gene_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://bgee.org/sparql".

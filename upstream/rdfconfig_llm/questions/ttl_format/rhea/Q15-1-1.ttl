@@ -1,0 +1,21 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:RMPbmD a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q15-1-1" ;
+    rdfs:comment "Please tell me the ID of the directional reaction for rhea:10024"@en ;
+    sh:select """# Endpoint: https://sparql.rhea-db.org/sparql
+# Description: Please tell me the ID of the directional reaction for rhea:10024
+# Parameter: Reaction: (example: rhea:10024)
+
+PREFIX rhea: <http://rdf.rhea-db.org/>
+
+SELECT DISTINCT ?reaction_directional_reaction 
+WHERE {
+    VALUES ?Reaction { rhea:10024 }
+    ?Reaction rhea:directionalReaction ?reaction_directional_reaction .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.rhea-db.org/sparql".

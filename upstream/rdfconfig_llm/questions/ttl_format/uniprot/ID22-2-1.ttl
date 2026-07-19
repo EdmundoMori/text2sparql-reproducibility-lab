@@ -1,0 +1,42 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:AmQZev a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID22-2-1" ;
+    rdfs:comment "Please describe the transmembrane regions of 01D20_F."@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: Please describe the transmembrane regions of 01D20_F.
+# Parameter: uniprot_gene_name: (example: 01D20_F)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX faldo: <http://biohackathon.org/resource/faldo#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?transmembrane_begin ?transmembrane_end
+WHERE {
+    VALUES ?uniprot_gene_name { "01D20_F" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:encodedBy / skos:prefLabel ?uniprot_gene_name .
+    OPTIONAL {
+        ?UniProt core:annotation ?TransmembraneAnnotation .
+        ?TransmembraneAnnotation a core:Transmembrane_Annotation ;
+            core:range [
+                a faldo:Region ;
+                faldo:begin [
+                    a faldo:Position ;
+                    faldo:position ?transmembrane_begin ;
+                ] ;
+                faldo:end [
+                    a faldo:Position ;
+                    faldo:position ?transmembrane_end ;
+                ] ;
+            ] .
+    }
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

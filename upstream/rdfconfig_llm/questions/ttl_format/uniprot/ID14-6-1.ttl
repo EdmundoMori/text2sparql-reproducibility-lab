@@ -1,0 +1,28 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:CpG6C2 a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID14-6-1" ;
+    rdfs:comment "ACE2遺伝子産物に関する代表的な科学論文を特定するためのDOIはどれですか?"@ja ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: ACE2遺伝子産物に関する代表的な科学論文を特定するためのDOIはどれですか?
+# Parameter: uniprot_gene_name: (example: ACE2)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?citation_doi
+WHERE {
+    VALUES ?uniprot_gene_name { "ACE2" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:citation / dct:identifier ?citation_doi ;
+        core:encodedBy / skos:prefLabel ?uniprot_gene_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

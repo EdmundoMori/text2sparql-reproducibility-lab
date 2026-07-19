@@ -1,0 +1,21 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:5fhBQs a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q13-1-1" ;
+    rdfs:comment "What is the EC number of rhea:20105 reaction corresponding to RHEA ID rhea:20105?"@en ;
+    sh:select """# Endpoint: https://sparql.rhea-db.org/sparql
+# Description: What is the EC number of rhea:20105 reaction corresponding to RHEA ID rhea:20105?
+# Parameter: Reaction: (example: rhea:20105)
+
+PREFIX rhea: <http://rdf.rhea-db.org/>
+
+SELECT DISTINCT ?reaction_ec_number 
+WHERE {
+    VALUES ?Reaction { rhea:20105 }
+    ?Reaction rhea:ec ?reaction_ec_number .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.rhea-db.org/sparql".

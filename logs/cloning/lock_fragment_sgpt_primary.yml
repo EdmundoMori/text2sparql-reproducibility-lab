@@ -1,0 +1,17 @@
+  - method_id: sgpt
+    role: primary
+    repo_url: https://github.com/rashad101/SGPT-SPARQL-query-generation.git
+    local_path: upstream/sgpt
+    branch: main
+    commit_sha: 1f6964d1c3bfee50c7dec2c25546f32b4ab94b2b
+    commit_date: 2024-09-15T11:21:37+02:00
+    tags_at_head: []
+    inclusion_decision: INCLUDE_PRIMARY
+    license_status: CONFIRMED_LICENSE_FILE
+    license_spdx: MIT
+    wave: WAVE_B_LOCAL_CONDITIONAL
+    submodule_status: see logs/cloning/sgpt_primary.log
+    cloned_at: 2026-07-18T21:00:12+02:00
+    clone_command: "GIT_LFS_SKIP_SMUDGE=1 git clone --recurse-submodules -b main https://github.com/rashad101/SGPT-SPARQL-query-generation.git upstream/sgpt"
+    git_lfs_skip_smudge: true
+    size_on_disk: 218M

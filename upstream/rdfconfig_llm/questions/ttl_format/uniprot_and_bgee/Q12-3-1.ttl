@@ -1,0 +1,30 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:RoqQHG a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q12-3-1" ;
+    rdfs:comment "How is the gene expression distributed in various tissues for the protein that catalyzes the reaction angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+# Description: How is the gene expression distributed in various tissues for the protein that catalyzes the reaction angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine?
+# Parameter: rhea_label: (example: angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX lscr: <http://purl.org/lscr#>
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX corecatalyticactivity: <http://purl.uniprot.org/core/>
+
+SELECT DISTINCT ?expression_level ?anatomical_entity_name 
+WHERE {
+    VALUES ?rhea_label { "angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine" }
+    ?Expression a genex:Expression ;
+        genex:hasExpressionLevel ?expression_level ;
+        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;
+        genex:hasSequenceUnit / lscr:xrefUniprot / corecatalyticactivity:annotation / core:catalyticActivity / core:catalyzedReaction / rdfs:label ?rhea_label .
+}
+LIMIT 100
+""" ;
+    schema:target "https://rdfportal.org/sib/sparql".

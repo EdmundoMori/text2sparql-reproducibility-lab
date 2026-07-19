@@ -1,0 +1,33 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:lKQJGS a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q11-1-1" ;
+    rdfs:comment "What are the molecular IDs that bind to the binding sites of the ACE2 gene, and what is the expression level of this gene across different species?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+# Description: What are the molecular IDs that bind to the binding sites of the ACE2 gene, and what is the expression level of this gene across different species?
+# Parameter: uniprot_gene_name: (example: ACE2)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX lscr: <http://purl.org/lscr#>
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX corebindingsite: <http://purl.uniprot.org/core/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?binding_site_annotation_ligand ?expression_level ?taxonomy_scientific_name 
+WHERE {
+    VALUES ?uniprot_gene_name { "ACE2" }
+    ?Expression a genex:Expression ;
+        genex:hasSequenceUnit / lscr:xrefUniprot / corebindingsite:annotation / core:ligand / rdfs:subClassOf ?binding_site_annotation_ligand ;
+        genex:hasExpressionLevel ?expression_level ;
+        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name ;
+        genex:hasSequenceUnit / lscr:xrefUniprot / core:encodedBy / skos:prefLabel ?uniprot_gene_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://rdfportal.org/sib/sparql".

@@ -1,0 +1,22 @@
+sparql:
+  description: Obrain short genetic variations from dbSNP
+  subject: dbSNPVariation
+  variables:
+    - identifier
+    - build
+    - reference
+    - position
+    - reference_allele
+    - allele
+
+stanza:
+  description: Obrain short genetic variations from dbSNP
+  subject: dbSNPVariation
+  parameters:
+    identifier: rs1000017372
+  variables:
+    - build
+    - reference
+    - position
+    - reference_allele
+    - allele

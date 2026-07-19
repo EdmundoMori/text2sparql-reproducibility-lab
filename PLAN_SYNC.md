@@ -2,7 +2,7 @@
 
 **Audiencia principal:** ChatGPT (planificador de prompts) y el investigador.  
 **Repo GitHub:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-**Última actualización:** 2026-07-19  
+**Última actualización:** 2026-07-19 (push completo con `upstream/` vendorizado)  
 **Fase lab:** 1 — auditoría / reproducibilidad nativa (clon estático hecho; sin ejecución experimental)
 
 > Instrucción para el planificador: lee este archivo primero. Usa los documentos específicos enlazados para detalle. **No asumas reproducción experimental**: clonar ≠ ejecutar ≠ reproducir un paper. Propón el siguiente prompt adaptado a evidencias, limitaciones de máquina y gates científicos.
@@ -55,6 +55,7 @@ Reglas del bucle:
 | 2b | Cierre evidencias | Licencias, venue SPARQL-LLM, Table 4 SGPT | [`audit/EVIDENCE_CLOSURE.md`](audit/EVIDENCE_CLOSURE.md), [`audit/LICENSE_MATRIX.csv`](audit/LICENSE_MATRIX.csv), [`audit/RESULT_EVIDENCE_MATRIX.csv`](audit/RESULT_EVIDENCE_MATRIX.csv), [`audit/PUBLICATION_STATUS.csv`](audit/PUBLICATION_STATUS.csv) |
 | 3 | Clonado estático | 7 clones; tebaqa excluido; ondas A–D | [`audit/CLONING_REPORT.md`](audit/CLONING_REPORT.md), [`scripts/clone_repositories.sh`](scripts/clone_repositories.sh) |
 | Sync | Este mecanismo | `PLAN_SYNC.md` + índice para el planificador | [`docs/plan-sync/ARTIFACT_INDEX.md`](docs/plan-sync/ARTIFACT_INDEX.md), [`docs/plan-sync/NEXT_PROMPT_GUIDANCE.md`](docs/plan-sync/NEXT_PROMPT_GUIDANCE.md) |
+| Sync-full | Vendor `upstream/` en GitHub | Árboles de código clonados versionados (~1.2 GiB); `.git` anidados → `.git_local/` local | [`docs/decisions/002_vendor_upstream_on_github.md`](docs/decisions/002_vendor_upstream_on_github.md), `upstream/<method_id>/` |
 
 ---
 
@@ -143,3 +144,4 @@ Ver lista completa y estable en:
 | Fecha | Cambio |
 |---|---|
 | 2026-07-19 | Creación del mecanismo PLAN_SYNC + primer volcado de estado post-clon |
+| 2026-07-19 | Push completo: `upstream/` vendorizado en GitHub (decisión 002); el planificador puede leer código clonado |

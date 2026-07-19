@@ -1,0 +1,31 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:T9l8mC a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID40-5-1" ;
+    rdfs:comment "SREBF1 遺伝子に関連するタンパク質アイソフォームのうち、この機能アノテーション配列に対応しているものはどれですか。"@ja ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: SREBF1 遺伝子に関連するタンパク質アイソフォームのうち、この機能アノテーション配列に対応しているものはどれですか。
+# Parameter: uniprot_gene_name: (example: SREBF1)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?function_annotation_sequence
+WHERE {
+    VALUES ?uniprot_gene_name { "SREBF1" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:encodedBy / skos:prefLabel ?uniprot_gene_name .
+    OPTIONAL {
+        ?UniProt core:annotation ?FunctionAnnotation .
+        ?FunctionAnnotation a core:Function_Annotation ;
+            core:sequence ?function_annotation_sequence .
+    }
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

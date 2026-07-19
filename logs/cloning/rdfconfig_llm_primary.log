@@ -1,0 +1,93 @@
+method_id=rdfconfig_llm
+role=primary
+url=https://github.com/scott2121/sparql_query_generator.git
+local_path=upstream/rdfconfig_llm
+branch=main
+expected_commit=INCLUDE_CONDITIONAL
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:58:28+02:00
+Cloning into 'upstream/rdfconfig_llm'...
+method_id=rdfconfig_llm
+role=primary
+url=https://github.com/scott2121/sparql_query_generator.git
+local_path=upstream/rdfconfig_llm
+branch=main
+expected_commit=NONE
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:59:40+02:00
+existing_HEAD=fe63171d3c8b9679779749ee11f731b2a8318053
+=== remote ===
+origin	https://github.com/scott2121/sparql_query_generator.git (fetch)
+origin	https://github.com/scott2121/sparql_query_generator.git (push)
+=== branch ===
+main
+=== commit ===
+fe63171d3c8b9679779749ee11f731b2a8318053
+=== commit date ===
+2025-12-22T21:37:45+09:00
+=== subject ===
+edit output folder name
+=== tags pointing at HEAD ===
+v1.0.0
+=== all tags (names) ===
+v1.0.0
+=== submodule status ===
+=== lfs (if any) ===
+git-lfs unavailable or no LFS files listed
+=== du -sh . ===
+62M	.
+=== du -sh .git ===
+23M	.git
+n_files_no_git=1287
+source_code_est_mib=2.16
+models_est_mib=0.0
+datasets_results_est_mib=1.65
+docker_metadata_est_mib=0.0
+other_est_mib=30.55
+source_code_est_bytes=2268421
+models_est_bytes=0
+datasets_results_est_bytes=1733385
+docker_metadata_est_bytes=115
+other_est_bytes=32037414
+method_id=rdfconfig_llm
+role=primary
+url=https://github.com/scott2121/sparql_query_generator.git
+local_path=upstream/rdfconfig_llm
+branch=main
+expected_commit=NONE
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T21:00:10+02:00
+existing_HEAD=fe63171d3c8b9679779749ee11f731b2a8318053
+=== remote ===
+origin	https://github.com/scott2121/sparql_query_generator.git (fetch)
+origin	https://github.com/scott2121/sparql_query_generator.git (push)
+=== branch ===
+main
+=== commit ===
+fe63171d3c8b9679779749ee11f731b2a8318053
+=== commit date ===
+2025-12-22T21:37:45+09:00
+=== subject ===
+edit output folder name
+=== tags pointing at HEAD ===
+v1.0.0
+=== all tags (names) ===
+v1.0.0
+=== submodule status ===
+=== lfs (if any) ===
+git-lfs unavailable or no LFS files listed
+=== du -sh . ===
+62M	.
+=== du -sh .git ===
+23M	.git
+n_files_no_git=1287
+source_code_est_mib=2.16
+models_est_mib=0.0
+datasets_results_est_mib=1.65
+docker_metadata_est_mib=0.0
+other_est_mib=30.55
+source_code_est_bytes=2268421
+models_est_bytes=0
+datasets_results_est_bytes=1733385
+docker_metadata_est_bytes=115
+other_est_bytes=32037414

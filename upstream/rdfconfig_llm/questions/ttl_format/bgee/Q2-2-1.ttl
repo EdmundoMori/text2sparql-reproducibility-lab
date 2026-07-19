@@ -1,0 +1,26 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:WSv2zt a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q2-2-1" ;
+    rdfs:comment "When is the APOC1 gene expressed during developmental stages?"@en ;
+    sh:select """# Endpoint: https://www.bgee.org/sparql
+# Description: When is the APOC1 gene expressed during developmental stages?
+# Parameter: gene_name: (example: APOC1)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX efo: <http://www.ebi.ac.uk/efo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX orth: <http://purl.org/net/orth#>
+
+SELECT DISTINCT ?expression_condition_developmental_stage 
+WHERE {
+    VALUES ?gene_name { "APOC1" }
+    ?Expression a genex:Expression ;
+        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;
+        genex:hasSequenceUnit / rdfs:label ?gene_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://bgee.org/sparql".

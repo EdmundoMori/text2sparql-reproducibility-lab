@@ -1,0 +1,42 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:4RrOWy a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID25-2-1" ;
+    rdfs:comment "At which positions along the sequence are the domains of a GPCR protein found?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: At which positions along the sequence are the domains of a GPCR protein found?
+# Parameter: uniprot_gene_name: (example: GPCR)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX faldo: <http://biohackathon.org/resource/faldo#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?domain_begin ?domain_end
+WHERE {
+    VALUES ?uniprot_gene_name { "GPCR" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:encodedBy / skos:prefLabel ?uniprot_gene_name .
+    OPTIONAL {
+        ?UniProt core:annotation ?DomainExtentAnnotation .
+        ?DomainExtentAnnotation a core:Domain_Extent_Annotation ;
+            core:range [
+                a faldo:Region ;
+                faldo:begin [
+                    a faldo:Position ;
+                    faldo:position ?domain_begin ;
+                ] ;
+                faldo:end [
+                    a faldo:Position ;
+                    faldo:position ?domain_end ;
+                ] ;
+            ] .
+    }
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

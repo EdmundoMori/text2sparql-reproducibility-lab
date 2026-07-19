@@ -1,0 +1,32 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:SufyhT a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID32-5-1" ;
+    rdfs:comment "遺伝子 GPCR に関連する組成バイアスの説明を教えてください。"@ja ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: 遺伝子 GPCR に関連する組成バイアスの説明を教えてください。
+# Parameter: uniprot_gene_name: (example: GPCR)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?comp_bias_desc
+WHERE {
+    VALUES ?uniprot_gene_name { "GPCR" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:encodedBy / skos:prefLabel ?uniprot_gene_name .
+    OPTIONAL {
+        ?UniProt core:annotation ?CompositionalBiasAnnotation .
+        ?CompositionalBiasAnnotation a core:Compositional_Bias_Annotation ;
+            rdfs:comment ?comp_bias_desc .
+    }
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

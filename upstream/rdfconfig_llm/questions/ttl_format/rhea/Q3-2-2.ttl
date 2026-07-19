@@ -1,0 +1,21 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:p3VErs a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q3-2-2" ;
+    rdfs:comment "What are the RHEA identifiers of reactions containing the D-tryptophan molecule?"@en ;
+    sh:select """# Endpoint: https://sparql.rhea-db.org/sparql
+# Description: What are the RHEA identifiers of reactions containing the D-tryptophan molecule?
+# Parameter: compound_name: (example: D-tryptophan)
+
+PREFIX rhea: <http://rdf.rhea-db.org/>
+
+SELECT DISTINCT ?Reaction 
+WHERE {
+    VALUES ?compound_name { "D-tryptophan" }
+    ?Reaction rhea:side / rhea:contains / rhea:compound / rhea:name ?compound_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.rhea-db.org/sparql".

@@ -1,0 +1,32 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:EoVsBi a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID47-3-1" ;
+    rdfs:comment "Please describe the cofactor-binding annotation (e.g., ion number or stoichiometry) for proteins that bind obo:CHEBI_58416."@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: Please describe the cofactor-binding annotation (e.g., ion number or stoichiometry) for proteins that bind obo:CHEBI_58416.
+# Parameter: cofactor: (example: obo:CHEBI_58416)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+SELECT DISTINCT ?cofactor_desc
+WHERE {
+    VALUES ?cofactor { obo:CHEBI_58416 }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?CofactorAnnotation a core:Cofactor_Annotation ;
+        core:cofactor ?cofactor .
+    OPTIONAL {
+        ?UniProt a ?UniProt__class ;
+            core:annotation ?CofactorAnnotation .
+        ?CofactorAnnotation rdfs:comment ?cofactor_desc .
+    }
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

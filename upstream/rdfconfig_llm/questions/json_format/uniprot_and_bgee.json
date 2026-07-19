@@ -1,0 +1,1346 @@
+[
+    {
+        "user_question": "What is the expression level of the ACE2 gene, and what is its UniProt ID?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_level",
+            "UniProt"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q1-1-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the expression level of the ACE2 gene, and what is its UniProt ID?\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level ?UniProt \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / lscr:xrefUniprot ?UniProt ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n    ?UniProt a ?UniProt__class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the expression level of the ACE2 gene, and could you provide its UniProt ID?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_level",
+            "UniProt"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q1-2-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the expression level of the ACE2 gene, and could you provide its UniProt ID?\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level ?UniProt \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / lscr:xrefUniprot ?UniProt ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n    ?UniProt a ?UniProt__class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Could you tell me the expression level of the ACE2 gene and its corresponding UniProt ID?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_level",
+            "UniProt"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q1-3-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: Could you tell me the expression level of the ACE2 gene and its corresponding UniProt ID?\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level ?UniProt \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / lscr:xrefUniprot ?UniProt ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n    ?UniProt a ?UniProt__class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "ACE2 \u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u306e\u304f\u3089\u3044\u3067\u3059\u304b\uff1f\u307e\u305f\u3001\u305d\u306eUniProt ID\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_level",
+            "UniProt"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q1-4-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: ACE2 \u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u306e\u304f\u3089\u3044\u3067\u3059\u304b\uff1f\u307e\u305f\u3001\u305d\u306eUniProt ID\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level ?UniProt \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / lscr:xrefUniprot ?UniProt ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n    ?UniProt a ?UniProt__class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "ACE2 \u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u306e\u304f\u3089\u3044\u3067\u3059\u304b\uff1f\u307e\u305f\u3001\u305d\u306eUniProt ID\u3092\u6559\u3048\u3066\u3044\u305f\u3060\u3051\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_level",
+            "UniProt"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q1-5-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: ACE2 \u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u306e\u304f\u3089\u3044\u3067\u3059\u304b\uff1f\u307e\u305f\u3001\u305d\u306eUniProt ID\u3092\u6559\u3048\u3066\u3044\u305f\u3060\u3051\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level ?UniProt \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / lscr:xrefUniprot ?UniProt ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n    ?UniProt a ?UniProt__class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "ACE2 \u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u3068\u3001\u305d\u308c\u306b\u5bfe\u5fdc\u3059\u308bUniProt ID\u3092\u6559\u3048\u3066\u3044\u305f\u3060\u3051\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_level",
+            "UniProt"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q1-6-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: ACE2 \u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u3068\u3001\u305d\u308c\u306b\u5bfe\u5fdc\u3059\u308bUniProt ID\u3092\u6559\u3048\u3066\u3044\u305f\u3060\u3051\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level ?UniProt \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / lscr:xrefUniprot ?UniProt ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n    ?UniProt a ?UniProt__class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "At which developmental stage is the RGMA gene expressed, and what are its aliases?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_condition_developmental_stage",
+            "uniprot_gene_alt_name"
+        ],
+        "param": [
+            "gene_name: \"RGMA\""
+        ],
+        "id": "Q2-1-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: At which developmental stage is the RGMA gene expressed, and what are its aliases?\n# Parameter: gene_name: (example: RGMA)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage ?uniprot_gene_alt_name \nWHERE {\n    VALUES ?gene_name { \"RGMA\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:encodedBy / skos:altLabel ?uniprot_gene_alt_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "During which developmental stage is the RGMA gene active, and what alternative names does it go by?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_condition_developmental_stage",
+            "uniprot_gene_alt_name"
+        ],
+        "param": [
+            "gene_name: \"RGMA\""
+        ],
+        "id": "Q2-2-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: During which developmental stage is the RGMA gene active, and what alternative names does it go by?\n# Parameter: gene_name: (example: RGMA)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage ?uniprot_gene_alt_name \nWHERE {\n    VALUES ?gene_name { \"RGMA\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:encodedBy / skos:altLabel ?uniprot_gene_alt_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What developmental stages show expression of the RGMA gene, and what are its known aliases?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_condition_developmental_stage",
+            "uniprot_gene_alt_name"
+        ],
+        "param": [
+            "gene_name: \"RGMA\""
+        ],
+        "id": "Q2-3-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What developmental stages show expression of the RGMA gene, and what are its known aliases?\n# Parameter: gene_name: (example: RGMA)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage ?uniprot_gene_alt_name \nWHERE {\n    VALUES ?gene_name { \"RGMA\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:encodedBy / skos:altLabel ?uniprot_gene_alt_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "RGMA \u907a\u4f1d\u5b50\u306f\u3069\u306e\u767a\u9054\u6bb5\u968e\u3067\u767a\u73fe\u3057\u3066\u304a\u308a\u3001\u5225\u540d\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_condition_developmental_stage",
+            "uniprot_gene_alt_name"
+        ],
+        "param": [
+            "gene_name: \"RGMA\""
+        ],
+        "id": "Q2-4-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: RGMA \u907a\u4f1d\u5b50\u306f\u3069\u306e\u767a\u9054\u6bb5\u968e\u3067\u767a\u73fe\u3057\u3066\u304a\u308a\u3001\u5225\u540d\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: RGMA)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage ?uniprot_gene_alt_name \nWHERE {\n    VALUES ?gene_name { \"RGMA\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:encodedBy / skos:altLabel ?uniprot_gene_alt_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "RGMA \u907a\u4f1d\u5b50\u306f\u3069\u306e\u767a\u9054\u6bb5\u968e\u3067\u6d3b\u6027\u5316\u3055\u308c\u3001\u4ed6\u306b\u3069\u306e\u3088\u3046\u306a\u5225\u540d\u304c\u77e5\u3089\u308c\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_condition_developmental_stage",
+            "uniprot_gene_alt_name"
+        ],
+        "param": [
+            "gene_name: \"RGMA\""
+        ],
+        "id": "Q2-5-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: RGMA \u907a\u4f1d\u5b50\u306f\u3069\u306e\u767a\u9054\u6bb5\u968e\u3067\u6d3b\u6027\u5316\u3055\u308c\u3001\u4ed6\u306b\u3069\u306e\u3088\u3046\u306a\u5225\u540d\u304c\u77e5\u3089\u308c\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: RGMA)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage ?uniprot_gene_alt_name \nWHERE {\n    VALUES ?gene_name { \"RGMA\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:encodedBy / skos:altLabel ?uniprot_gene_alt_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "RGMA \u907a\u4f1d\u5b50\u306f\u3069\u306e\u767a\u9054\u6bb5\u968e\u3067\u767a\u73fe\u3057\u3066\u304a\u308a\u3001\u65e2\u77e5\u306e\u5225\u540d\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_condition_developmental_stage",
+            "uniprot_gene_alt_name"
+        ],
+        "param": [
+            "gene_name: \"RGMA\""
+        ],
+        "id": "Q2-6-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: RGMA \u907a\u4f1d\u5b50\u306f\u3069\u306e\u767a\u9054\u6bb5\u968e\u3067\u767a\u73fe\u3057\u3066\u304a\u308a\u3001\u65e2\u77e5\u306e\u5225\u540d\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: RGMA)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage ?uniprot_gene_alt_name \nWHERE {\n    VALUES ?gene_name { \"RGMA\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:encodedBy / skos:altLabel ?uniprot_gene_alt_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the UniProt ID and the expression level of the ACE2 gene at different developmental stages?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_condition_developmental_stage",
+            "expression_level",
+            "UniProt"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q3-1-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the UniProt ID and the expression level of the ACE2 gene at different developmental stages?\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage ?expression_level ?UniProt \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / lscr:xrefUniprot ?UniProt ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n    ?UniProt a ?UniProt__class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the UniProt ID and the expression pattern of the ACE2 gene across various developmental stages?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_condition_developmental_stage",
+            "expression_level",
+            "UniProt"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q3-2-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the UniProt ID and the expression pattern of the ACE2 gene across various developmental stages?\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage ?expression_level ?UniProt \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / lscr:xrefUniprot ?UniProt ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n    ?UniProt a ?UniProt__class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Could you provide the UniProt ID and the expression levels of the ACE2 gene during different stages of development?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_condition_developmental_stage",
+            "expression_level",
+            "UniProt"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q3-3-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: Could you provide the UniProt ID and the expression levels of the ACE2 gene during different stages of development?\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage ?expression_level ?UniProt \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / lscr:xrefUniprot ?UniProt ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n    ?UniProt a ?UniProt__class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "ACE2\u907a\u4f1d\u5b50\u306eUniProt ID\u3068\u3001\u3055\u307e\u3056\u307e\u306a\u767a\u751f\u6bb5\u968e\u306b\u304a\u3051\u308b\u767a\u73fe\u30d1\u30bf\u30fc\u30f3\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_condition_developmental_stage",
+            "expression_level",
+            "UniProt"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q3-4-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: ACE2\u907a\u4f1d\u5b50\u306eUniProt ID\u3068\u3001\u3055\u307e\u3056\u307e\u306a\u767a\u751f\u6bb5\u968e\u306b\u304a\u3051\u308b\u767a\u73fe\u30d1\u30bf\u30fc\u30f3\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage ?expression_level ?UniProt \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / lscr:xrefUniprot ?UniProt ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n    ?UniProt a ?UniProt__class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "ACE2\u907a\u4f1d\u5b50\u306eUniProt ID\u3068\u3001\u7570\u306a\u308b\u767a\u751f\u6bb5\u968e\u3067\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u3092\u6559\u3048\u3066\u3044\u305f\u3060\u3051\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_condition_developmental_stage",
+            "expression_level",
+            "UniProt"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q3-5-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: ACE2\u907a\u4f1d\u5b50\u306eUniProt ID\u3068\u3001\u7570\u306a\u308b\u767a\u751f\u6bb5\u968e\u3067\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u3092\u6559\u3048\u3066\u3044\u305f\u3060\u3051\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage ?expression_level ?UniProt \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / lscr:xrefUniprot ?UniProt ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n    ?UniProt a ?UniProt__class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "ACE2\u907a\u4f1d\u5b50\u306eUniProt ID\u3068\u3001\u3055\u307e\u3056\u307e\u306a\u767a\u751f\u6bb5\u968e\u306b\u304a\u3051\u308b\u767a\u73fe\u30ec\u30d9\u30eb\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_condition_developmental_stage",
+            "expression_level",
+            "UniProt"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q3-6-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: ACE2\u907a\u4f1d\u5b50\u306eUniProt ID\u3068\u3001\u3055\u307e\u3056\u307e\u306a\u767a\u751f\u6bb5\u968e\u306b\u304a\u3051\u308b\u767a\u73fe\u30ec\u30d9\u30eb\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage ?expression_level ?UniProt \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / lscr:xrefUniprot ?UniProt ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n    ?UniProt a ?UniProt__class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the Ensembl Gene ID of the ACE2 gene, and what is its EC number?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_ec",
+            "gene_ensembl_id"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q4-1-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the Ensembl Gene ID of the ACE2 gene, and what is its EC number?\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?uniprot_recommended_ec ?gene_ensembl_id \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefUniprot / core:recommendedName / core:ecName ?uniprot_recommended_ec ;\n        lscr:xrefEnsemblGene ?gene_ensembl_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the Ensembl Gene ID for the gene named ACE2, and what is its EC number?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_ec",
+            "gene_ensembl_id"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q4-2-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the Ensembl Gene ID for the gene named ACE2, and what is its EC number?\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?uniprot_recommended_ec ?gene_ensembl_id \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefUniprot / core:recommendedName / core:ecName ?uniprot_recommended_ec ;\n        lscr:xrefEnsemblGene ?gene_ensembl_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Could you provide the Ensembl Gene ID and the EC number for the ACE2 gene?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_ec",
+            "gene_ensembl_id"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q4-3-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: Could you provide the Ensembl Gene ID and the EC number for the ACE2 gene?\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?uniprot_recommended_ec ?gene_ensembl_id \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefUniprot / core:recommendedName / core:ecName ?uniprot_recommended_ec ;\n        lscr:xrefEnsemblGene ?gene_ensembl_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "ACE2 \u3068\u3044\u3046\u540d\u524d\u306e\u907a\u4f1d\u5b50\u306e Ensembl Gene ID \u306f\u4f55\u3067\u3059\u304b\uff1f\u307e\u305f\u3001\u305d\u306e EC \u756a\u53f7\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_ec",
+            "gene_ensembl_id"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q4-4-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: ACE2 \u3068\u3044\u3046\u540d\u524d\u306e\u907a\u4f1d\u5b50\u306e Ensembl Gene ID \u306f\u4f55\u3067\u3059\u304b\uff1f\u307e\u305f\u3001\u305d\u306e EC \u756a\u53f7\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?uniprot_recommended_ec ?gene_ensembl_id \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefUniprot / core:recommendedName / core:ecName ?uniprot_recommended_ec ;\n        lscr:xrefEnsemblGene ?gene_ensembl_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "ACE2 \u3068\u3044\u3046\u907a\u4f1d\u5b50\u306e Ensembl Gene ID \u3068 EC \u756a\u53f7\u3092\u6559\u3048\u3066\u3044\u305f\u3060\u3051\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_ec",
+            "gene_ensembl_id"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q4-5-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: ACE2 \u3068\u3044\u3046\u907a\u4f1d\u5b50\u306e Ensembl Gene ID \u3068 EC \u756a\u53f7\u3092\u6559\u3048\u3066\u3044\u305f\u3060\u3051\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?uniprot_recommended_ec ?gene_ensembl_id \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefUniprot / core:recommendedName / core:ecName ?uniprot_recommended_ec ;\n        lscr:xrefEnsemblGene ?gene_ensembl_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "ACE2 \u907a\u4f1d\u5b50\u306e Ensembl Gene ID \u306f\u4f55\u3067\u3059\u304b\uff1f\u305d\u306e EC \u756a\u53f7\u3082\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_ec",
+            "gene_ensembl_id"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q4-6-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: ACE2 \u907a\u4f1d\u5b50\u306e Ensembl Gene ID \u306f\u4f55\u3067\u3059\u304b\uff1f\u305d\u306e EC \u756a\u53f7\u3082\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?uniprot_recommended_ec ?gene_ensembl_id \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefUniprot / core:recommendedName / core:ecName ?uniprot_recommended_ec ;\n        lscr:xrefEnsemblGene ?gene_ensembl_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "In which tissues or cells is the ACE2 gene expressed, and what is its EC number?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "anatomical_entity_name",
+            "uniprot_recommended_ec"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q5-1-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: In which tissues or cells is the ACE2 gene expressed, and what is its EC number?\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\n\nSELECT DISTINCT ?anatomical_entity_name ?uniprot_recommended_ec \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:ecName ?uniprot_recommended_ec ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Which tissues or cell types express the ACE2 gene, and what is its corresponding EC number?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "anatomical_entity_name",
+            "uniprot_recommended_ec"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q5-2-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: Which tissues or cell types express the ACE2 gene, and what is its corresponding EC number?\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\n\nSELECT DISTINCT ?anatomical_entity_name ?uniprot_recommended_ec \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:ecName ?uniprot_recommended_ec ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "In which specific tissues or cells is the ACE2 gene active, and what is its enzyme classification (EC) number?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "anatomical_entity_name",
+            "uniprot_recommended_ec"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q5-3-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: In which specific tissues or cells is the ACE2 gene active, and what is its enzyme classification (EC) number?\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\n\nSELECT DISTINCT ?anatomical_entity_name ?uniprot_recommended_ec \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:ecName ?uniprot_recommended_ec ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "ACE2\u907a\u4f1d\u5b50\u306f\u3069\u306e\u7d44\u7e54\u307e\u305f\u306f\u7d30\u80de\u30bf\u30a4\u30d7\u3067\u767a\u73fe\u3057\u3066\u304a\u308a\u3001\u305d\u306e\u5bfe\u5fdc\u3059\u308bEC\u756a\u53f7\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "anatomical_entity_name",
+            "uniprot_recommended_ec"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q5-4-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: ACE2\u907a\u4f1d\u5b50\u306f\u3069\u306e\u7d44\u7e54\u307e\u305f\u306f\u7d30\u80de\u30bf\u30a4\u30d7\u3067\u767a\u73fe\u3057\u3066\u304a\u308a\u3001\u305d\u306e\u5bfe\u5fdc\u3059\u308bEC\u756a\u53f7\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\n\nSELECT DISTINCT ?anatomical_entity_name ?uniprot_recommended_ec \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:ecName ?uniprot_recommended_ec ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "ACE2\u907a\u4f1d\u5b50\u306f\u3069\u306e\u7279\u5b9a\u306e\u7d44\u7e54\u307e\u305f\u306f\u7d30\u80de\u3067\u6d3b\u6027\u5316\u3055\u308c\u3066\u304a\u308a\u3001\u305d\u306e\u9175\u7d20\u5206\u985e (EC) \u756a\u53f7\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "anatomical_entity_name",
+            "uniprot_recommended_ec"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q5-5-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: ACE2\u907a\u4f1d\u5b50\u306f\u3069\u306e\u7279\u5b9a\u306e\u7d44\u7e54\u307e\u305f\u306f\u7d30\u80de\u3067\u6d3b\u6027\u5316\u3055\u308c\u3066\u304a\u308a\u3001\u305d\u306e\u9175\u7d20\u5206\u985e (EC) \u756a\u53f7\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\n\nSELECT DISTINCT ?anatomical_entity_name ?uniprot_recommended_ec \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:ecName ?uniprot_recommended_ec ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "ACE2\u907a\u4f1d\u5b50\u306f\u3069\u306e\u7d44\u7e54\u307e\u305f\u306f\u7d30\u80de\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\u3001\u305d\u3057\u3066\u305d\u306eEC\u756a\u53f7\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "anatomical_entity_name",
+            "uniprot_recommended_ec"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q5-6-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: ACE2\u907a\u4f1d\u5b50\u306f\u3069\u306e\u7d44\u7e54\u307e\u305f\u306f\u7d30\u80de\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\u3001\u305d\u3057\u3066\u305d\u306eEC\u756a\u53f7\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\n\nSELECT DISTINCT ?anatomical_entity_name ?uniprot_recommended_ec \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:ecName ?uniprot_recommended_ec ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the description of the anatomical entity primary oocyte, and what is the EC number related to it?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "anatomical_entity_description",
+            "uniprot_recommended_ec"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"primary oocyte\""
+        ],
+        "id": "Q6-1-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the description of the anatomical entity primary oocyte, and what is the EC number related to it?\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?anatomical_entity_description ?uniprot_recommended_ec \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / dcterms:description ?anatomical_entity_description ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:ecName ?uniprot_recommended_ec ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the definition of the anatomical entity primary oocyte, and what is the corresponding EC number associated with it?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "anatomical_entity_description",
+            "uniprot_recommended_ec"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"primary oocyte\""
+        ],
+        "id": "Q6-2-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the definition of the anatomical entity primary oocyte, and what is the corresponding EC number associated with it?\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?anatomical_entity_description ?uniprot_recommended_ec \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / dcterms:description ?anatomical_entity_description ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:ecName ?uniprot_recommended_ec ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Could you provide a description of the anatomical entity primary oocyte and specify its related EC number?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "anatomical_entity_description",
+            "uniprot_recommended_ec"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"primary oocyte\""
+        ],
+        "id": "Q6-3-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: Could you provide a description of the anatomical entity primary oocyte and specify its related EC number?\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?anatomical_entity_description ?uniprot_recommended_ec \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / dcterms:description ?anatomical_entity_description ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:ecName ?uniprot_recommended_ec ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "\u89e3\u5256\u5b66\u7684\u5b9f\u4f53 primary oocyte \u306e\u5b9a\u7fa9\u306f\u4f55\u3067\u3059\u304b\uff1f\u307e\u305f\u3001\u305d\u308c\u306b\u95a2\u9023\u3059\u308b EC \u756a\u53f7\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "anatomical_entity_description",
+            "uniprot_recommended_ec"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"primary oocyte\""
+        ],
+        "id": "Q6-4-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: \u89e3\u5256\u5b66\u7684\u5b9f\u4f53 primary oocyte \u306e\u5b9a\u7fa9\u306f\u4f55\u3067\u3059\u304b\uff1f\u307e\u305f\u3001\u305d\u308c\u306b\u95a2\u9023\u3059\u308b EC \u756a\u53f7\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?anatomical_entity_description ?uniprot_recommended_ec \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / dcterms:description ?anatomical_entity_description ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:ecName ?uniprot_recommended_ec ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "\u89e3\u5256\u5b66\u7684\u5b9f\u4f53 primary oocyte \u306e\u8aac\u660e\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002\u305d\u308c\u306b\u5bfe\u5fdc\u3059\u308b EC \u756a\u53f7\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "anatomical_entity_description",
+            "uniprot_recommended_ec"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"primary oocyte\""
+        ],
+        "id": "Q6-5-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: \u89e3\u5256\u5b66\u7684\u5b9f\u4f53 primary oocyte \u306e\u8aac\u660e\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002\u305d\u308c\u306b\u5bfe\u5fdc\u3059\u308b EC \u756a\u53f7\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?anatomical_entity_description ?uniprot_recommended_ec \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / dcterms:description ?anatomical_entity_description ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:ecName ?uniprot_recommended_ec ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "\u89e3\u5256\u5b66\u7684\u5b9f\u4f53 primary oocyte \u306e\u8a18\u8ff0\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002\u307e\u305f\u3001\u305d\u308c\u306b\u95a2\u9023\u3059\u308b EC \u756a\u53f7\u3092\u6307\u5b9a\u3057\u3066\u304f\u3060\u3055\u3044\u3002",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "anatomical_entity_description",
+            "uniprot_recommended_ec"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"primary oocyte\""
+        ],
+        "id": "Q6-6-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: \u89e3\u5256\u5b66\u7684\u5b9f\u4f53 primary oocyte \u306e\u8a18\u8ff0\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002\u307e\u305f\u3001\u305d\u308c\u306b\u95a2\u9023\u3059\u308b EC \u756a\u53f7\u3092\u6307\u5b9a\u3057\u3066\u304f\u3060\u3055\u3044\u3002\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?anatomical_entity_description ?uniprot_recommended_ec \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / dcterms:description ?anatomical_entity_description ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:ecName ?uniprot_recommended_ec ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Please tell me about the annotations regarding the protein function related to the primary oocyte, and provide a description of this anatomical entity.",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "function_annotation_desc",
+            "anatomical_entity_description"
+        ],
+        "param": [
+            "anatomical_entity_name: \"primary oocyte\""
+        ],
+        "id": "Q7-1-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: Please tell me about the annotations regarding the protein function related to the primary oocyte, and provide a description of this anatomical entity.\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corefunction: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\n\nSELECT DISTINCT ?function_annotation_desc ?anatomical_entity_description \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corefunction:annotation / rdfs:comment ?function_annotation_desc ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / dcterms:description ?anatomical_entity_description ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Could you provide information on the protein function annotations associated with the primary oocyte, along with a description of this anatomical entity?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "function_annotation_desc",
+            "anatomical_entity_description"
+        ],
+        "param": [
+            "anatomical_entity_name: \"primary oocyte\""
+        ],
+        "id": "Q7-2-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: Could you provide information on the protein function annotations associated with the primary oocyte, along with a description of this anatomical entity?\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corefunction: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\n\nSELECT DISTINCT ?function_annotation_desc ?anatomical_entity_description \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corefunction:annotation / rdfs:comment ?function_annotation_desc ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / dcterms:description ?anatomical_entity_description ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Can you describe the protein function annotations for the primary oocyte and also give an explanation of what this anatomical entity is?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "function_annotation_desc",
+            "anatomical_entity_description"
+        ],
+        "param": [
+            "anatomical_entity_name: \"primary oocyte\""
+        ],
+        "id": "Q7-3-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: Can you describe the protein function annotations for the primary oocyte and also give an explanation of what this anatomical entity is?\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corefunction: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\n\nSELECT DISTINCT ?function_annotation_desc ?anatomical_entity_description \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corefunction:annotation / rdfs:comment ?function_annotation_desc ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / dcterms:description ?anatomical_entity_description ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "primary oocyte\u306b\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u6a5f\u80fd\u306e\u30a2\u30ce\u30c6\u30fc\u30b7\u30e7\u30f3\u306b\u3064\u3044\u3066\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002\u307e\u305f\u3001\u3053\u306e\u89e3\u5256\u5b66\u7684\u69cb\u9020\u306b\u3064\u3044\u3066\u306e\u8aac\u660e\u3082\u304a\u9858\u3044\u3057\u307e\u3059\u3002",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "function_annotation_desc",
+            "anatomical_entity_description"
+        ],
+        "param": [
+            "anatomical_entity_name: \"primary oocyte\""
+        ],
+        "id": "Q7-4-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: primary oocyte\u306b\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u6a5f\u80fd\u306e\u30a2\u30ce\u30c6\u30fc\u30b7\u30e7\u30f3\u306b\u3064\u3044\u3066\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002\u307e\u305f\u3001\u3053\u306e\u89e3\u5256\u5b66\u7684\u69cb\u9020\u306b\u3064\u3044\u3066\u306e\u8aac\u660e\u3082\u304a\u9858\u3044\u3057\u307e\u3059\u3002\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corefunction: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\n\nSELECT DISTINCT ?function_annotation_desc ?anatomical_entity_description \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corefunction:annotation / rdfs:comment ?function_annotation_desc ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / dcterms:description ?anatomical_entity_description ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "primary oocyte\u306b\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u6a5f\u80fd\u306e\u30a2\u30ce\u30c6\u30fc\u30b7\u30e7\u30f3\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002\u3055\u3089\u306b\u3001\u3053\u306e\u89e3\u5256\u5b66\u7684\u69cb\u9020\u304c\u4f55\u304b\u306b\u3064\u3044\u3066\u306e\u8aac\u660e\u3082\u304a\u9858\u3044\u3057\u307e\u3059\u3002",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "function_annotation_desc",
+            "anatomical_entity_description"
+        ],
+        "param": [
+            "anatomical_entity_name: \"primary oocyte\""
+        ],
+        "id": "Q7-5-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: primary oocyte\u306b\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u6a5f\u80fd\u306e\u30a2\u30ce\u30c6\u30fc\u30b7\u30e7\u30f3\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002\u3055\u3089\u306b\u3001\u3053\u306e\u89e3\u5256\u5b66\u7684\u69cb\u9020\u304c\u4f55\u304b\u306b\u3064\u3044\u3066\u306e\u8aac\u660e\u3082\u304a\u9858\u3044\u3057\u307e\u3059\u3002\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corefunction: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\n\nSELECT DISTINCT ?function_annotation_desc ?anatomical_entity_description \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corefunction:annotation / rdfs:comment ?function_annotation_desc ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / dcterms:description ?anatomical_entity_description ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "primary oocyte\u306b\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u6a5f\u80fd\u306e\u30a2\u30ce\u30c6\u30fc\u30b7\u30e7\u30f3\u3068\u3001\u3053\u306e\u89e3\u5256\u5b66\u7684\u69cb\u9020\u306e\u8aac\u660e\u3092\u63d0\u4f9b\u3057\u3066\u304f\u3060\u3055\u3044\u3002",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "function_annotation_desc",
+            "anatomical_entity_description"
+        ],
+        "param": [
+            "anatomical_entity_name: \"primary oocyte\""
+        ],
+        "id": "Q7-6-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: primary oocyte\u306b\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u6a5f\u80fd\u306e\u30a2\u30ce\u30c6\u30fc\u30b7\u30e7\u30f3\u3068\u3001\u3053\u306e\u89e3\u5256\u5b66\u7684\u69cb\u9020\u306e\u8aac\u660e\u3092\u63d0\u4f9b\u3057\u3066\u304f\u3060\u3055\u3044\u3002\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corefunction: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\n\nSELECT DISTINCT ?function_annotation_desc ?anatomical_entity_description \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corefunction:annotation / rdfs:comment ?function_annotation_desc ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / dcterms:description ?anatomical_entity_description ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the expression level of the ACE2 gene in each tissue, and which Gene Ontology (GO) terms is its associated protein classified under?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name",
+            "uniprot_go"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q8-1-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the expression level of the ACE2 gene in each tissue, and which Gene Ontology (GO) terms is its associated protein classified under?\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name ?uniprot_go \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:classifiedWith ?uniprot_go ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n    ?uniprot_go a owl:Class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the expression level of the ACE2 gene across different tissues, and which Gene Ontology (GO) categories is its corresponding protein associated with?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name",
+            "uniprot_go"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q8-2-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the expression level of the ACE2 gene across different tissues, and which Gene Ontology (GO) categories is its corresponding protein associated with?\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name ?uniprot_go \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:classifiedWith ?uniprot_go ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n    ?uniprot_go a owl:Class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "How is the ACE2 gene expressed in various tissues, and what are the Gene Ontology (GO) terms linked to its associated protein?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name",
+            "uniprot_go"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q8-3-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: How is the ACE2 gene expressed in various tissues, and what are the Gene Ontology (GO) terms linked to its associated protein?\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name ?uniprot_go \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:classifiedWith ?uniprot_go ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n    ?uniprot_go a owl:Class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "ACE2\u907a\u4f1d\u5b50\u306e\u5404\u7d44\u7e54\u306b\u304a\u3051\u308b\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u306e\u3088\u3046\u306b\u306a\u3063\u3066\u3044\u307e\u3059\u304b\uff1f\u307e\u305f\u3001\u305d\u306e\u907a\u4f1d\u5b50\u306b\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306f\u3069\u306eGene Ontology (GO) \u30ab\u30c6\u30b4\u30ea\u30fc\u306b\u5206\u985e\u3055\u308c\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name",
+            "uniprot_go"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q8-4-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: ACE2\u907a\u4f1d\u5b50\u306e\u5404\u7d44\u7e54\u306b\u304a\u3051\u308b\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u306e\u3088\u3046\u306b\u306a\u3063\u3066\u3044\u307e\u3059\u304b\uff1f\u307e\u305f\u3001\u305d\u306e\u907a\u4f1d\u5b50\u306b\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306f\u3069\u306eGene Ontology (GO) \u30ab\u30c6\u30b4\u30ea\u30fc\u306b\u5206\u985e\u3055\u308c\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name ?uniprot_go \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:classifiedWith ?uniprot_go ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n    ?uniprot_go a owl:Class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "ACE2\u907a\u4f1d\u5b50\u306f\u3055\u307e\u3056\u307e\u306a\u7d44\u7e54\u3067\u3069\u306e\u3088\u3046\u306b\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\u307e\u305f\u3001\u305d\u306e\u95a2\u9023\u30bf\u30f3\u30d1\u30af\u8cea\u306b\u30ea\u30f3\u30af\u3055\u308c\u3066\u3044\u308bGene Ontology (GO)\u7528\u8a9e\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name",
+            "uniprot_go"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q8-5-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: ACE2\u907a\u4f1d\u5b50\u306f\u3055\u307e\u3056\u307e\u306a\u7d44\u7e54\u3067\u3069\u306e\u3088\u3046\u306b\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\u307e\u305f\u3001\u305d\u306e\u95a2\u9023\u30bf\u30f3\u30d1\u30af\u8cea\u306b\u30ea\u30f3\u30af\u3055\u308c\u3066\u3044\u308bGene Ontology (GO)\u7528\u8a9e\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name ?uniprot_go \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:classifiedWith ?uniprot_go ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n    ?uniprot_go a owl:Class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "ACE2\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u5404\u7d44\u7e54\u3067\u3069\u306e\u3088\u3046\u306b\u5206\u5e03\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\u307e\u305f\u3001\u305d\u306e\u30bf\u30f3\u30d1\u30af\u8cea\u304c\u95a2\u9023\u4ed8\u3051\u3089\u308c\u3066\u3044\u308bGO\u7528\u8a9e\u306b\u306f\u3069\u306e\u3088\u3046\u306a\u3082\u306e\u304c\u3042\u308a\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name",
+            "uniprot_go"
+        ],
+        "param": [
+            "gene_name: \"ACE2\""
+        ],
+        "id": "Q8-6-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: ACE2\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u5404\u7d44\u7e54\u3067\u3069\u306e\u3088\u3046\u306b\u5206\u5e03\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\u307e\u305f\u3001\u305d\u306e\u30bf\u30f3\u30d1\u30af\u8cea\u304c\u95a2\u9023\u4ed8\u3051\u3089\u308c\u3066\u3044\u308bGO\u7528\u8a9e\u306b\u306f\u3069\u306e\u3088\u3046\u306a\u3082\u306e\u304c\u3042\u308a\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name ?uniprot_go \nWHERE {\n    VALUES ?gene_name { \"ACE2\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:classifiedWith ?uniprot_go ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n    ?uniprot_go a owl:Class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What are the names of proteins classified under obo:GO_0001618, and what is the expression level of their corresponding genes in each tissue?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "uniprot_go: obo:GO_0001618"
+        ],
+        "id": "Q9-1-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What are the names of proteins classified under obo:GO_0001618, and what is the expression level of their corresponding genes in each tissue?\n# Parameter: uniprot_go: (example: obo:GO_0001618)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_level ?anatomical_entity_name \nWHERE {\n    VALUES ?uniprot_go { obo:GO_0001618 }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:classifiedWith ?uniprot_go .\n    ?uniprot_go a owl:Class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What are the names of the proteins classified under obo:GO_0001618, and what are the expression levels of their corresponding genes in various tissues?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "uniprot_go: obo:GO_0001618"
+        ],
+        "id": "Q9-2-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What are the names of the proteins classified under obo:GO_0001618, and what are the expression levels of their corresponding genes in various tissues?\n# Parameter: uniprot_go: (example: obo:GO_0001618)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_level ?anatomical_entity_name \nWHERE {\n    VALUES ?uniprot_go { obo:GO_0001618 }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:classifiedWith ?uniprot_go .\n    ?uniprot_go a owl:Class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Could you provide the names of the proteins categorized under obo:GO_0001618 and the expression levels of their respective genes across different tissues?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "uniprot_go: obo:GO_0001618"
+        ],
+        "id": "Q9-3-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: Could you provide the names of the proteins categorized under obo:GO_0001618 and the expression levels of their respective genes across different tissues?\n# Parameter: uniprot_go: (example: obo:GO_0001618)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_level ?anatomical_entity_name \nWHERE {\n    VALUES ?uniprot_go { obo:GO_0001618 }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:classifiedWith ?uniprot_go .\n    ?uniprot_go a owl:Class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "obo:GO_0001618 \u306b\u5206\u985e\u3055\u308c\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306e\u540d\u524d\u306f\u4f55\u3067\u3059\u304b\uff1f\u307e\u305f\u3001\u305d\u308c\u3089\u306e\u907a\u4f1d\u5b50\u306e\u5404\u7d44\u7e54\u306b\u304a\u3051\u308b\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u306e\u3088\u3046\u306b\u306a\u3063\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "uniprot_go: obo:GO_0001618"
+        ],
+        "id": "Q9-4-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: obo:GO_0001618 \u306b\u5206\u985e\u3055\u308c\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306e\u540d\u524d\u306f\u4f55\u3067\u3059\u304b\uff1f\u307e\u305f\u3001\u305d\u308c\u3089\u306e\u907a\u4f1d\u5b50\u306e\u5404\u7d44\u7e54\u306b\u304a\u3051\u308b\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u306e\u3088\u3046\u306b\u306a\u3063\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: uniprot_go: (example: obo:GO_0001618)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_level ?anatomical_entity_name \nWHERE {\n    VALUES ?uniprot_go { obo:GO_0001618 }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:classifiedWith ?uniprot_go .\n    ?uniprot_go a owl:Class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "obo:GO_0001618 \u306b\u5c5e\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306e\u540d\u524d\u3068\u3001\u305d\u308c\u3089\u306e\u907a\u4f1d\u5b50\u306e\u5404\u7d44\u7e54\u306b\u304a\u3051\u308b\u767a\u73fe\u30ec\u30d9\u30eb\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "uniprot_go: obo:GO_0001618"
+        ],
+        "id": "Q9-5-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: obo:GO_0001618 \u306b\u5c5e\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306e\u540d\u524d\u3068\u3001\u305d\u308c\u3089\u306e\u907a\u4f1d\u5b50\u306e\u5404\u7d44\u7e54\u306b\u304a\u3051\u308b\u767a\u73fe\u30ec\u30d9\u30eb\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002\n# Parameter: uniprot_go: (example: obo:GO_0001618)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_level ?anatomical_entity_name \nWHERE {\n    VALUES ?uniprot_go { obo:GO_0001618 }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:classifiedWith ?uniprot_go .\n    ?uniprot_go a owl:Class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "obo:GO_0001618 \u306b\u5206\u985e\u3055\u308c\u3066\u3044\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306e\u540d\u524d\u306f\u4f55\u3067\u3059\u304b\uff1f\u3055\u3089\u306b\u3001\u305d\u308c\u3089\u306e\u907a\u4f1d\u5b50\u304c\u69d8\u3005\u306a\u7d44\u7e54\u3067\u3069\u306e\u3088\u3046\u306b\u767a\u73fe\u3057\u3066\u3044\u308b\u304b\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "uniprot_go: obo:GO_0001618"
+        ],
+        "id": "Q9-6-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: obo:GO_0001618 \u306b\u5206\u985e\u3055\u308c\u3066\u3044\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306e\u540d\u524d\u306f\u4f55\u3067\u3059\u304b\uff1f\u3055\u3089\u306b\u3001\u305d\u308c\u3089\u306e\u907a\u4f1d\u5b50\u304c\u69d8\u3005\u306a\u7d44\u7e54\u3067\u3069\u306e\u3088\u3046\u306b\u767a\u73fe\u3057\u3066\u3044\u308b\u304b\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002\n# Parameter: uniprot_go: (example: obo:GO_0001618)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_level ?anatomical_entity_name \nWHERE {\n    VALUES ?uniprot_go { obo:GO_0001618 }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:classifiedWith ?uniprot_go .\n    ?uniprot_go a owl:Class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the expression level at each developmental stage of genes corresponding to proteins classified under obo:GO_0001618?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_level",
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "uniprot_go: obo:GO_0001618"
+        ],
+        "id": "Q10-1-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the expression level at each developmental stage of genes corresponding to proteins classified under obo:GO_0001618?\n# Parameter: uniprot_go: (example: obo:GO_0001618)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_level ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?uniprot_go { obo:GO_0001618 }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:classifiedWith ?uniprot_go .\n    ?uniprot_go a owl:Class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What are the expression levels at each developmental stage for genes encoding proteins associated with obo:GO_0001618?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_level",
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "uniprot_go: obo:GO_0001618"
+        ],
+        "id": "Q10-2-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What are the expression levels at each developmental stage for genes encoding proteins associated with obo:GO_0001618?\n# Parameter: uniprot_go: (example: obo:GO_0001618)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_level ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?uniprot_go { obo:GO_0001618 }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:classifiedWith ?uniprot_go .\n    ?uniprot_go a owl:Class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "How do the expression levels of genes corresponding to proteins under obo:GO_0001618 vary across different developmental stages?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_level",
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "uniprot_go: obo:GO_0001618"
+        ],
+        "id": "Q10-3-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: How do the expression levels of genes corresponding to proteins under obo:GO_0001618 vary across different developmental stages?\n# Parameter: uniprot_go: (example: obo:GO_0001618)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_level ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?uniprot_go { obo:GO_0001618 }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:classifiedWith ?uniprot_go .\n    ?uniprot_go a owl:Class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "obo:GO_0001618 \u306b\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u3092\u30b3\u30fc\u30c9\u3059\u308b\u907a\u4f1d\u5b50\u306e\u5404\u767a\u751f\u6bb5\u968e\u3067\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u306e\u3088\u3046\u306b\u306a\u3063\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_level",
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "uniprot_go: obo:GO_0001618"
+        ],
+        "id": "Q10-4-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: obo:GO_0001618 \u306b\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u3092\u30b3\u30fc\u30c9\u3059\u308b\u907a\u4f1d\u5b50\u306e\u5404\u767a\u751f\u6bb5\u968e\u3067\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u306e\u3088\u3046\u306b\u306a\u3063\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: uniprot_go: (example: obo:GO_0001618)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_level ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?uniprot_go { obo:GO_0001618 }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:classifiedWith ?uniprot_go .\n    ?uniprot_go a owl:Class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "\u5404\u767a\u751f\u6bb5\u968e\u306b\u304a\u3051\u308b obo:GO_0001618 \u306b\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u3092\u6301\u3064\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u306e\u3088\u3046\u306b\u5909\u5316\u3057\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_level",
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "uniprot_go: obo:GO_0001618"
+        ],
+        "id": "Q10-5-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: \u5404\u767a\u751f\u6bb5\u968e\u306b\u304a\u3051\u308b obo:GO_0001618 \u306b\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u3092\u6301\u3064\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u306e\u3088\u3046\u306b\u5909\u5316\u3057\u307e\u3059\u304b\uff1f\n# Parameter: uniprot_go: (example: obo:GO_0001618)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_level ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?uniprot_go { obo:GO_0001618 }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:classifiedWith ?uniprot_go .\n    ?uniprot_go a owl:Class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "obo:GO_0001618 \u306b\u5206\u985e\u3055\u308c\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306b\u5bfe\u5fdc\u3059\u308b\u907a\u4f1d\u5b50\u306e\u5404\u767a\u751f\u6bb5\u968e\u3067\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u306e\u3088\u3046\u3067\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_level",
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "uniprot_go: obo:GO_0001618"
+        ],
+        "id": "Q10-6-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: obo:GO_0001618 \u306b\u5206\u985e\u3055\u308c\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306b\u5bfe\u5fdc\u3059\u308b\u907a\u4f1d\u5b50\u306e\u5404\u767a\u751f\u6bb5\u968e\u3067\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u306e\u3088\u3046\u3067\u3059\u304b\uff1f\n# Parameter: uniprot_go: (example: obo:GO_0001618)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_level ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?uniprot_go { obo:GO_0001618 }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:classifiedWith ?uniprot_go .\n    ?uniprot_go a owl:Class .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What are the molecular IDs that bind to the binding sites of the ACE2 gene, and what is the expression level of this gene across different species?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "binding_site_annotation_ligand",
+            "expression_level",
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "uniprot_gene_name: \"ACE2\""
+        ],
+        "id": "Q11-1-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What are the molecular IDs that bind to the binding sites of the ACE2 gene, and what is the expression level of this gene across different species?\n# Parameter: uniprot_gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corebindingsite: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\n\nSELECT DISTINCT ?binding_site_annotation_ligand ?expression_level ?taxonomy_scientific_name \nWHERE {\n    VALUES ?uniprot_gene_name { \"ACE2\" }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corebindingsite:annotation / core:ligand / rdfs:subClassOf ?binding_site_annotation_ligand ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:encodedBy / skos:prefLabel ?uniprot_gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What are the molecular identifiers that interact with the binding sites of the ACE2 gene, and how is this gene expressed across various species?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "binding_site_annotation_ligand",
+            "expression_level",
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "uniprot_gene_name: \"ACE2\""
+        ],
+        "id": "Q11-2-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What are the molecular identifiers that interact with the binding sites of the ACE2 gene, and how is this gene expressed across various species?\n# Parameter: uniprot_gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corebindingsite: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\n\nSELECT DISTINCT ?binding_site_annotation_ligand ?expression_level ?taxonomy_scientific_name \nWHERE {\n    VALUES ?uniprot_gene_name { \"ACE2\" }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corebindingsite:annotation / core:ligand / rdfs:subClassOf ?binding_site_annotation_ligand ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:encodedBy / skos:prefLabel ?uniprot_gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Which molecular compounds bind to the binding sites of the ACE2 gene, and what are the expression levels of this gene in different species?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "binding_site_annotation_ligand",
+            "expression_level",
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "uniprot_gene_name: \"ACE2\""
+        ],
+        "id": "Q11-3-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: Which molecular compounds bind to the binding sites of the ACE2 gene, and what are the expression levels of this gene in different species?\n# Parameter: uniprot_gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corebindingsite: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\n\nSELECT DISTINCT ?binding_site_annotation_ligand ?expression_level ?taxonomy_scientific_name \nWHERE {\n    VALUES ?uniprot_gene_name { \"ACE2\" }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corebindingsite:annotation / core:ligand / rdfs:subClassOf ?binding_site_annotation_ligand ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:encodedBy / skos:prefLabel ?uniprot_gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "ACE2\u907a\u4f1d\u5b50\u306e\u7d50\u5408\u90e8\u4f4d\u3068\u76f8\u4e92\u4f5c\u7528\u3059\u308b\u5206\u5b50\u8b58\u5225\u5b50\u306f\u4f55\u3067\u3059\u304b\uff1f\u307e\u305f\u3001\u3053\u306e\u907a\u4f1d\u5b50\u306f\u3055\u307e\u3056\u307e\u306a\u7a2e\u3067\u3069\u306e\u3088\u3046\u306b\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "binding_site_annotation_ligand",
+            "expression_level",
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "uniprot_gene_name: \"ACE2\""
+        ],
+        "id": "Q11-4-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: ACE2\u907a\u4f1d\u5b50\u306e\u7d50\u5408\u90e8\u4f4d\u3068\u76f8\u4e92\u4f5c\u7528\u3059\u308b\u5206\u5b50\u8b58\u5225\u5b50\u306f\u4f55\u3067\u3059\u304b\uff1f\u307e\u305f\u3001\u3053\u306e\u907a\u4f1d\u5b50\u306f\u3055\u307e\u3056\u307e\u306a\u7a2e\u3067\u3069\u306e\u3088\u3046\u306b\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: uniprot_gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corebindingsite: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\n\nSELECT DISTINCT ?binding_site_annotation_ligand ?expression_level ?taxonomy_scientific_name \nWHERE {\n    VALUES ?uniprot_gene_name { \"ACE2\" }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corebindingsite:annotation / core:ligand / rdfs:subClassOf ?binding_site_annotation_ligand ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:encodedBy / skos:prefLabel ?uniprot_gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "ACE2\u907a\u4f1d\u5b50\u306e\u7d50\u5408\u90e8\u4f4d\u306b\u7d50\u5408\u3059\u308b\u5206\u5b50\u5316\u5408\u7269\u306f\u4f55\u3067\u3059\u304b\uff1f\u3055\u3089\u306b\u3001\u3053\u306e\u907a\u4f1d\u5b50\u306e\u7570\u306a\u308b\u7a2e\u306b\u304a\u3051\u308b\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u3046\u306a\u3063\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "binding_site_annotation_ligand",
+            "expression_level",
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "uniprot_gene_name: \"ACE2\""
+        ],
+        "id": "Q11-5-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: ACE2\u907a\u4f1d\u5b50\u306e\u7d50\u5408\u90e8\u4f4d\u306b\u7d50\u5408\u3059\u308b\u5206\u5b50\u5316\u5408\u7269\u306f\u4f55\u3067\u3059\u304b\uff1f\u3055\u3089\u306b\u3001\u3053\u306e\u907a\u4f1d\u5b50\u306e\u7570\u306a\u308b\u7a2e\u306b\u304a\u3051\u308b\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u3046\u306a\u3063\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: uniprot_gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corebindingsite: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\n\nSELECT DISTINCT ?binding_site_annotation_ligand ?expression_level ?taxonomy_scientific_name \nWHERE {\n    VALUES ?uniprot_gene_name { \"ACE2\" }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corebindingsite:annotation / core:ligand / rdfs:subClassOf ?binding_site_annotation_ligand ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:encodedBy / skos:prefLabel ?uniprot_gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "ACE2\u907a\u4f1d\u5b50\u306e\u7d50\u5408\u9818\u57df\u3092\u6a19\u7684\u3068\u3059\u308b\u3053\u3068\u304c\u77e5\u3089\u308c\u3066\u3044\u308b\u5206\u5b50\u306f\u3069\u308c\u3067\u3059\u304b\uff1f\u307e\u305f\u3001\u3055\u307e\u3056\u307e\u306a\u751f\u7269\u306b\u304a\u3051\u308b\u767a\u73fe\u306e\u9055\u3044\u306f\u3069\u306e\u3088\u3046\u306b\u306a\u3063\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "binding_site_annotation_ligand",
+            "expression_level",
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "uniprot_gene_name: \"ACE2\""
+        ],
+        "id": "Q11-6-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: ACE2\u907a\u4f1d\u5b50\u306e\u7d50\u5408\u9818\u57df\u3092\u6a19\u7684\u3068\u3059\u308b\u3053\u3068\u304c\u77e5\u3089\u308c\u3066\u3044\u308b\u5206\u5b50\u306f\u3069\u308c\u3067\u3059\u304b\uff1f\u307e\u305f\u3001\u3055\u307e\u3056\u307e\u306a\u751f\u7269\u306b\u304a\u3051\u308b\u767a\u73fe\u306e\u9055\u3044\u306f\u3069\u306e\u3088\u3046\u306b\u306a\u3063\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: uniprot_gene_name: (example: ACE2)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corebindingsite: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\n\nSELECT DISTINCT ?binding_site_annotation_ligand ?expression_level ?taxonomy_scientific_name \nWHERE {\n    VALUES ?uniprot_gene_name { \"ACE2\" }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corebindingsite:annotation / core:ligand / rdfs:subClassOf ?binding_site_annotation_ligand ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:encodedBy / skos:prefLabel ?uniprot_gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the expression level in each tissue of the gene that encodes the protein catalyzing the reaction angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "rhea_label: \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\""
+        ],
+        "id": "Q12-1-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the expression level in each tissue of the gene that encodes the protein catalyzing the reaction angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine?\n# Parameter: rhea_label: (example: angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corecatalyticactivity: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name \nWHERE {\n    VALUES ?rhea_label { \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corecatalyticactivity:annotation / core:catalyticActivity / core:catalyzedReaction / rdfs:label ?rhea_label .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the expression pattern of the gene encoding the protein that catalyzes the reaction angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine across different tissues?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "rhea_label: \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\""
+        ],
+        "id": "Q12-2-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the expression pattern of the gene encoding the protein that catalyzes the reaction angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine across different tissues?\n# Parameter: rhea_label: (example: angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corecatalyticactivity: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name \nWHERE {\n    VALUES ?rhea_label { \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corecatalyticactivity:annotation / core:catalyticActivity / core:catalyzedReaction / rdfs:label ?rhea_label .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "How is the gene expression distributed in various tissues for the protein that catalyzes the reaction angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "rhea_label: \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\""
+        ],
+        "id": "Q12-3-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: How is the gene expression distributed in various tissues for the protein that catalyzes the reaction angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine?\n# Parameter: rhea_label: (example: angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corecatalyticactivity: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name \nWHERE {\n    VALUES ?rhea_label { \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corecatalyticactivity:annotation / core:catalyticActivity / core:catalyzedReaction / rdfs:label ?rhea_label .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "\u53cd\u5fdc angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine \u3092\u89e6\u5a92\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u3092\u30b3\u30fc\u30c9\u3059\u308b\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30d1\u30bf\u30fc\u30f3\u306f\u5404\u7d44\u7e54\u3067\u3069\u306e\u3088\u3046\u306b\u306a\u3063\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "rhea_label: \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\""
+        ],
+        "id": "Q12-4-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: \u53cd\u5fdc angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine \u3092\u89e6\u5a92\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u3092\u30b3\u30fc\u30c9\u3059\u308b\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30d1\u30bf\u30fc\u30f3\u306f\u5404\u7d44\u7e54\u3067\u3069\u306e\u3088\u3046\u306b\u306a\u3063\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: rhea_label: (example: angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corecatalyticactivity: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name \nWHERE {\n    VALUES ?rhea_label { \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corecatalyticactivity:annotation / core:catalyticActivity / core:catalyzedReaction / rdfs:label ?rhea_label .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "\u53cd\u5fdc angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine \u3092\u89e6\u5a92\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u3092\u30b3\u30fc\u30c9\u3059\u308b\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u306f\u3001\u3055\u307e\u3056\u307e\u306a\u7d44\u7e54\u3067\u3069\u306e\u3088\u3046\u306b\u5206\u5e03\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "rhea_label: \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\""
+        ],
+        "id": "Q12-5-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: \u53cd\u5fdc angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine \u3092\u89e6\u5a92\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u3092\u30b3\u30fc\u30c9\u3059\u308b\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u306f\u3001\u3055\u307e\u3056\u307e\u306a\u7d44\u7e54\u3067\u3069\u306e\u3088\u3046\u306b\u5206\u5e03\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: rhea_label: (example: angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corecatalyticactivity: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name \nWHERE {\n    VALUES ?rhea_label { \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corecatalyticactivity:annotation / core:catalyticActivity / core:catalyzedReaction / rdfs:label ?rhea_label .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "\u53cd\u5fdc angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine \u3092\u89e6\u5a92\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u3092\u30b3\u30fc\u30c9\u3059\u308b\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u5404\u7d44\u7e54\u3067\u3069\u306e\u3088\u3046\u3067\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "rhea_label: \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\""
+        ],
+        "id": "Q12-6-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: \u53cd\u5fdc angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine \u3092\u89e6\u5a92\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u3092\u30b3\u30fc\u30c9\u3059\u308b\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u5404\u7d44\u7e54\u3067\u3069\u306e\u3088\u3046\u3067\u3059\u304b\uff1f\n# Parameter: rhea_label: (example: angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corecatalyticactivity: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name \nWHERE {\n    VALUES ?rhea_label { \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corecatalyticactivity:annotation / core:catalyticActivity / core:catalyzedReaction / rdfs:label ?rhea_label .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the name of the protein associated with PDB ID pdb:7A97, and in which species is its corresponding gene expressed?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "taxonomy_common_name"
+        ],
+        "param": [
+            "uniprot_pdb: pdb:7A97"
+        ],
+        "id": "Q13-1-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the name of the protein associated with PDB ID pdb:7A97, and in which species is its corresponding gene expressed?\n# Parameter: uniprot_pdb: (example: pdb:7A97)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX rdfspdb: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX pdb: <http://rdf.wwpdb.org/pdb/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?taxonomy_common_name \nWHERE {\n    VALUES ?uniprot_pdb { pdb:7A97 }\n    ?Gene a orth:Gene ;\n        lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        orth:organism / obo:RO_0002162 / core:commonName ?taxonomy_common_name ;\n        lscr:xrefUniprot / rdfspdb:seeAlso ?uniprot_pdb .\n    ?uniprot_pdb a core:Structure_Resource .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the name of the protein associated with the PDB ID pdb:7A97, and in which species is its corresponding gene expressed?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "taxonomy_common_name"
+        ],
+        "param": [
+            "uniprot_pdb: pdb:7A97"
+        ],
+        "id": "Q13-2-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the name of the protein associated with the PDB ID pdb:7A97, and in which species is its corresponding gene expressed?\n# Parameter: uniprot_pdb: (example: pdb:7A97)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX rdfspdb: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX pdb: <http://rdf.wwpdb.org/pdb/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?taxonomy_common_name \nWHERE {\n    VALUES ?uniprot_pdb { pdb:7A97 }\n    ?Gene a orth:Gene ;\n        lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        orth:organism / obo:RO_0002162 / core:commonName ?taxonomy_common_name ;\n        lscr:xrefUniprot / rdfspdb:seeAlso ?uniprot_pdb .\n    ?uniprot_pdb a core:Structure_Resource .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Which protein is linked to the PDB ID pdb:7A97, and in which species is its corresponding gene found?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "taxonomy_common_name"
+        ],
+        "param": [
+            "uniprot_pdb: pdb:7A97"
+        ],
+        "id": "Q13-3-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: Which protein is linked to the PDB ID pdb:7A97, and in which species is its corresponding gene found?\n# Parameter: uniprot_pdb: (example: pdb:7A97)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX rdfspdb: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX pdb: <http://rdf.wwpdb.org/pdb/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?taxonomy_common_name \nWHERE {\n    VALUES ?uniprot_pdb { pdb:7A97 }\n    ?Gene a orth:Gene ;\n        lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        orth:organism / obo:RO_0002162 / core:commonName ?taxonomy_common_name ;\n        lscr:xrefUniprot / rdfspdb:seeAlso ?uniprot_pdb .\n    ?uniprot_pdb a core:Structure_Resource .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "PDB ID pdb:7A97 \u306b\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306e\u540d\u524d\u306f\u4f55\u3067\u3059\u304b\uff1f\u307e\u305f\u3001\u305d\u306e\u5bfe\u5fdc\u3059\u308b\u907a\u4f1d\u5b50\u306f\u3069\u306e\u7a2e\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "taxonomy_common_name"
+        ],
+        "param": [
+            "uniprot_pdb: pdb:7A97"
+        ],
+        "id": "Q13-4-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: PDB ID pdb:7A97 \u306b\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306e\u540d\u524d\u306f\u4f55\u3067\u3059\u304b\uff1f\u307e\u305f\u3001\u305d\u306e\u5bfe\u5fdc\u3059\u308b\u907a\u4f1d\u5b50\u306f\u3069\u306e\u7a2e\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: uniprot_pdb: (example: pdb:7A97)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX rdfspdb: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX pdb: <http://rdf.wwpdb.org/pdb/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?taxonomy_common_name \nWHERE {\n    VALUES ?uniprot_pdb { pdb:7A97 }\n    ?Gene a orth:Gene ;\n        lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        orth:organism / obo:RO_0002162 / core:commonName ?taxonomy_common_name ;\n        lscr:xrefUniprot / rdfspdb:seeAlso ?uniprot_pdb .\n    ?uniprot_pdb a core:Structure_Resource .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "PDB ID pdb:7A97 \u3068\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306f\u4f55\u3067\u3059\u304b\uff1f\u305d\u3057\u3066\u3001\u305d\u306e\u5bfe\u5fdc\u3059\u308b\u907a\u4f1d\u5b50\u306f\u3069\u306e\u7a2e\u306b\u5b58\u5728\u3057\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "taxonomy_common_name"
+        ],
+        "param": [
+            "uniprot_pdb: pdb:7A97"
+        ],
+        "id": "Q13-5-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: PDB ID pdb:7A97 \u3068\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306f\u4f55\u3067\u3059\u304b\uff1f\u305d\u3057\u3066\u3001\u305d\u306e\u5bfe\u5fdc\u3059\u308b\u907a\u4f1d\u5b50\u306f\u3069\u306e\u7a2e\u306b\u5b58\u5728\u3057\u307e\u3059\u304b\uff1f\n# Parameter: uniprot_pdb: (example: pdb:7A97)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX rdfspdb: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX pdb: <http://rdf.wwpdb.org/pdb/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?taxonomy_common_name \nWHERE {\n    VALUES ?uniprot_pdb { pdb:7A97 }\n    ?Gene a orth:Gene ;\n        lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        orth:organism / obo:RO_0002162 / core:commonName ?taxonomy_common_name ;\n        lscr:xrefUniprot / rdfspdb:seeAlso ?uniprot_pdb .\n    ?uniprot_pdb a core:Structure_Resource .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "PDB ID pdb:7A97 \u306b\u30ea\u30f3\u30af\u3055\u308c\u3066\u3044\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306f\u3069\u308c\u3067\u3059\u304b\uff1f\u305d\u306e\u907a\u4f1d\u5b50\u306f\u3069\u306e\u7a2e\u3067\u898b\u3089\u308c\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "taxonomy_common_name"
+        ],
+        "param": [
+            "uniprot_pdb: pdb:7A97"
+        ],
+        "id": "Q13-6-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: PDB ID pdb:7A97 \u306b\u30ea\u30f3\u30af\u3055\u308c\u3066\u3044\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306f\u3069\u308c\u3067\u3059\u304b\uff1f\u305d\u306e\u907a\u4f1d\u5b50\u306f\u3069\u306e\u7a2e\u3067\u898b\u3089\u308c\u307e\u3059\u304b\uff1f\n# Parameter: uniprot_pdb: (example: pdb:7A97)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX rdfspdb: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX pdb: <http://rdf.wwpdb.org/pdb/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?taxonomy_common_name \nWHERE {\n    VALUES ?uniprot_pdb { pdb:7A97 }\n    ?Gene a orth:Gene ;\n        lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        orth:organism / obo:RO_0002162 / core:commonName ?taxonomy_common_name ;\n        lscr:xrefUniprot / rdfspdb:seeAlso ?uniprot_pdb .\n    ?uniprot_pdb a core:Structure_Resource .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "At which developmental stages is the gene with the ORF name UNQ868/PRO1885 expressed?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "uniprot_orf_name: \"UNQ868/PRO1885\""
+        ],
+        "id": "Q14-1-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: At which developmental stages is the gene with the ORF name UNQ868/PRO1885 expressed?\n# Parameter: uniprot_orf_name: (example: UNQ868/PRO1885)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?uniprot_orf_name { \"UNQ868/PRO1885\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:encodedBy / core:orfName ?uniprot_orf_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "During which developmental stages is the gene with the ORF name UNQ868/PRO1885 actively expressed?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "uniprot_orf_name: \"UNQ868/PRO1885\""
+        ],
+        "id": "Q14-2-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: During which developmental stages is the gene with the ORF name UNQ868/PRO1885 actively expressed?\n# Parameter: uniprot_orf_name: (example: UNQ868/PRO1885)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?uniprot_orf_name { \"UNQ868/PRO1885\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:encodedBy / core:orfName ?uniprot_orf_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "At what points in development is the gene corresponding to the ORF name UNQ868/PRO1885 expressed?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "uniprot_orf_name: \"UNQ868/PRO1885\""
+        ],
+        "id": "Q14-3-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: At what points in development is the gene corresponding to the ORF name UNQ868/PRO1885 expressed?\n# Parameter: uniprot_orf_name: (example: UNQ868/PRO1885)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?uniprot_orf_name { \"UNQ868/PRO1885\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:encodedBy / core:orfName ?uniprot_orf_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "ORF\u540dUNQ868/PRO1885\u3092\u6301\u3064\u907a\u4f1d\u5b50\u306f\u3001\u3069\u306e\u767a\u9054\u6bb5\u968e\u3067\u6d3b\u6027\u5316\u3055\u308c\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "uniprot_orf_name: \"UNQ868/PRO1885\""
+        ],
+        "id": "Q14-4-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: ORF\u540dUNQ868/PRO1885\u3092\u6301\u3064\u907a\u4f1d\u5b50\u306f\u3001\u3069\u306e\u767a\u9054\u6bb5\u968e\u3067\u6d3b\u6027\u5316\u3055\u308c\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: uniprot_orf_name: (example: UNQ868/PRO1885)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?uniprot_orf_name { \"UNQ868/PRO1885\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:encodedBy / core:orfName ?uniprot_orf_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "ORF\u540dUNQ868/PRO1885\u306b\u5bfe\u5fdc\u3059\u308b\u907a\u4f1d\u5b50\u306f\u3001\u767a\u9054\u306e\u3069\u306e\u6642\u70b9\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "uniprot_orf_name: \"UNQ868/PRO1885\""
+        ],
+        "id": "Q14-5-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: ORF\u540dUNQ868/PRO1885\u306b\u5bfe\u5fdc\u3059\u308b\u907a\u4f1d\u5b50\u306f\u3001\u767a\u9054\u306e\u3069\u306e\u6642\u70b9\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: uniprot_orf_name: (example: UNQ868/PRO1885)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?uniprot_orf_name { \"UNQ868/PRO1885\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:encodedBy / core:orfName ?uniprot_orf_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "ORF\u540dUNQ868/PRO1885\u3092\u6301\u3064\u907a\u4f1d\u5b50\u306f\u3001\u3069\u306e\u767a\u9054\u6bb5\u968e\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "uniprot_orf_name: \"UNQ868/PRO1885\""
+        ],
+        "id": "Q14-6-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: ORF\u540dUNQ868/PRO1885\u3092\u6301\u3064\u907a\u4f1d\u5b50\u306f\u3001\u3069\u306e\u767a\u9054\u6bb5\u968e\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: uniprot_orf_name: (example: UNQ868/PRO1885)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?uniprot_orf_name { \"UNQ868/PRO1885\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:encodedBy / core:orfName ?uniprot_orf_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the FDR p-value of the gene encoding the protein associated with PDB ID pdb:7A97?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_fdr_pvalue"
+        ],
+        "param": [
+            "uniprot_pdb: pdb:7A97"
+        ],
+        "id": "Q15-1-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the FDR p-value of the gene encoding the protein associated with PDB ID pdb:7A97?\n# Parameter: uniprot_pdb: (example: pdb:7A97)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfspdb: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX pdb: <http://rdf.wwpdb.org/pdb/>\n\nSELECT DISTINCT ?expression_fdr_pvalue \nWHERE {\n    VALUES ?uniprot_pdb { pdb:7A97 }\n    ?Expression a genex:Expression ;\n        genex:hasFDRpvalue ?expression_fdr_pvalue ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / rdfspdb:seeAlso ?uniprot_pdb .\n    ?uniprot_pdb a core:Structure_Resource .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the FDR-adjusted p-value for the gene encoding the protein linked to the PDB ID pdb:7A97?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_fdr_pvalue"
+        ],
+        "param": [
+            "uniprot_pdb: pdb:7A97"
+        ],
+        "id": "Q15-2-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the FDR-adjusted p-value for the gene encoding the protein linked to the PDB ID pdb:7A97?\n# Parameter: uniprot_pdb: (example: pdb:7A97)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfspdb: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX pdb: <http://rdf.wwpdb.org/pdb/>\n\nSELECT DISTINCT ?expression_fdr_pvalue \nWHERE {\n    VALUES ?uniprot_pdb { pdb:7A97 }\n    ?Expression a genex:Expression ;\n        genex:hasFDRpvalue ?expression_fdr_pvalue ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / rdfspdb:seeAlso ?uniprot_pdb .\n    ?uniprot_pdb a core:Structure_Resource .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the false discovery rate p-value for the gene associated with the protein corresponding to PDB ID pdb:7A97?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_fdr_pvalue"
+        ],
+        "param": [
+            "uniprot_pdb: pdb:7A97"
+        ],
+        "id": "Q15-3-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the false discovery rate p-value for the gene associated with the protein corresponding to PDB ID pdb:7A97?\n# Parameter: uniprot_pdb: (example: pdb:7A97)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfspdb: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX pdb: <http://rdf.wwpdb.org/pdb/>\n\nSELECT DISTINCT ?expression_fdr_pvalue \nWHERE {\n    VALUES ?uniprot_pdb { pdb:7A97 }\n    ?Expression a genex:Expression ;\n        genex:hasFDRpvalue ?expression_fdr_pvalue ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / rdfspdb:seeAlso ?uniprot_pdb .\n    ?uniprot_pdb a core:Structure_Resource .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "PDB ID pdb:7A97\u306b\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u3092\u30b3\u30fc\u30c9\u3059\u308b\u907a\u4f1d\u5b50\u306eFDR\u8abf\u6574\u6e08\u307fp\u5024\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_fdr_pvalue"
+        ],
+        "param": [
+            "uniprot_pdb: pdb:7A97"
+        ],
+        "id": "Q15-4-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: PDB ID pdb:7A97\u306b\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u3092\u30b3\u30fc\u30c9\u3059\u308b\u907a\u4f1d\u5b50\u306eFDR\u8abf\u6574\u6e08\u307fp\u5024\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: uniprot_pdb: (example: pdb:7A97)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfspdb: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX pdb: <http://rdf.wwpdb.org/pdb/>\n\nSELECT DISTINCT ?expression_fdr_pvalue \nWHERE {\n    VALUES ?uniprot_pdb { pdb:7A97 }\n    ?Expression a genex:Expression ;\n        genex:hasFDRpvalue ?expression_fdr_pvalue ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / rdfspdb:seeAlso ?uniprot_pdb .\n    ?uniprot_pdb a core:Structure_Resource .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "PDB ID pdb:7A97\u306b\u5bfe\u5fdc\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u3068\u95a2\u9023\u3059\u308b\u907a\u4f1d\u5b50\u306eFDR p\u5024\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_fdr_pvalue"
+        ],
+        "param": [
+            "uniprot_pdb: pdb:7A97"
+        ],
+        "id": "Q15-5-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: PDB ID pdb:7A97\u306b\u5bfe\u5fdc\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u3068\u95a2\u9023\u3059\u308b\u907a\u4f1d\u5b50\u306eFDR p\u5024\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: uniprot_pdb: (example: pdb:7A97)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfspdb: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX pdb: <http://rdf.wwpdb.org/pdb/>\n\nSELECT DISTINCT ?expression_fdr_pvalue \nWHERE {\n    VALUES ?uniprot_pdb { pdb:7A97 }\n    ?Expression a genex:Expression ;\n        genex:hasFDRpvalue ?expression_fdr_pvalue ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / rdfspdb:seeAlso ?uniprot_pdb .\n    ?uniprot_pdb a core:Structure_Resource .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "PDB ID pdb:7A97\u306b\u30ea\u30f3\u30af\u3055\u308c\u305f\u30bf\u30f3\u30d1\u30af\u8cea\u3092\u30b3\u30fc\u30c9\u3059\u308b\u907a\u4f1d\u5b50\u306e\u507d\u767a\u898b\u7387p\u5024\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "expression_fdr_pvalue"
+        ],
+        "param": [
+            "uniprot_pdb: pdb:7A97"
+        ],
+        "id": "Q15-6-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: PDB ID pdb:7A97\u306b\u30ea\u30f3\u30af\u3055\u308c\u305f\u30bf\u30f3\u30d1\u30af\u8cea\u3092\u30b3\u30fc\u30c9\u3059\u308b\u907a\u4f1d\u5b50\u306e\u507d\u767a\u898b\u7387p\u5024\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: uniprot_pdb: (example: pdb:7A97)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfspdb: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX pdb: <http://rdf.wwpdb.org/pdb/>\n\nSELECT DISTINCT ?expression_fdr_pvalue \nWHERE {\n    VALUES ?uniprot_pdb { pdb:7A97 }\n    ?Expression a genex:Expression ;\n        genex:hasFDRpvalue ?expression_fdr_pvalue ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / rdfspdb:seeAlso ?uniprot_pdb .\n    ?uniprot_pdb a core:Structure_Resource .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the name of the protein that catalyzes the reaction angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine, and in which sex is its corresponding gene expressed?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_condition_sex"
+        ],
+        "param": [
+            "rhea_label: \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\""
+        ],
+        "id": "Q16-1-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the name of the protein that catalyzes the reaction angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine, and in which sex is its corresponding gene expressed?\n# Parameter: rhea_label: (example: angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corecatalyticactivity: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_condition_sex \nWHERE {\n    VALUES ?rhea_label { \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\" }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionCondition / genex:hasSex ?expression_condition_sex ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corecatalyticactivity:annotation / core:catalyticActivity / core:catalyzedReaction / rdfs:label ?rhea_label .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the name of the protein that catalyzes the reaction angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine, and in which sex is the corresponding gene expressed?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_condition_sex"
+        ],
+        "param": [
+            "rhea_label: \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\""
+        ],
+        "id": "Q16-2-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the name of the protein that catalyzes the reaction angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine, and in which sex is the corresponding gene expressed?\n# Parameter: rhea_label: (example: angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corecatalyticactivity: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_condition_sex \nWHERE {\n    VALUES ?rhea_label { \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\" }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionCondition / genex:hasSex ?expression_condition_sex ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corecatalyticactivity:annotation / core:catalyticActivity / core:catalyzedReaction / rdfs:label ?rhea_label .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Which protein catalyzes the reaction angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine, and what is the sex-specific expression pattern of its gene?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_condition_sex"
+        ],
+        "param": [
+            "rhea_label: \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\""
+        ],
+        "id": "Q16-3-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: Which protein catalyzes the reaction angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine, and what is the sex-specific expression pattern of its gene?\n# Parameter: rhea_label: (example: angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corecatalyticactivity: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_condition_sex \nWHERE {\n    VALUES ?rhea_label { \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\" }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionCondition / genex:hasSex ?expression_condition_sex ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corecatalyticactivity:annotation / core:catalyticActivity / core:catalyzedReaction / rdfs:label ?rhea_label .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine \u3068\u3044\u3046\u53cd\u5fdc\u3092\u89e6\u5a92\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306e\u540d\u79f0\u306f\u4f55\u3067\u3059\u304b\uff1f\u305d\u306e\u5bfe\u5fdc\u3059\u308b\u907a\u4f1d\u5b50\u306f\u3069\u306e\u6027\u5225\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_condition_sex"
+        ],
+        "param": [
+            "rhea_label: \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\""
+        ],
+        "id": "Q16-4-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine \u3068\u3044\u3046\u53cd\u5fdc\u3092\u89e6\u5a92\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306e\u540d\u79f0\u306f\u4f55\u3067\u3059\u304b\uff1f\u305d\u306e\u5bfe\u5fdc\u3059\u308b\u907a\u4f1d\u5b50\u306f\u3069\u306e\u6027\u5225\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: rhea_label: (example: angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corecatalyticactivity: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_condition_sex \nWHERE {\n    VALUES ?rhea_label { \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\" }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionCondition / genex:hasSex ?expression_condition_sex ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corecatalyticactivity:annotation / core:catalyticActivity / core:catalyzedReaction / rdfs:label ?rhea_label .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine \u306e\u53cd\u5fdc\u3092\u89e6\u5a92\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306f\u3069\u308c\u3067\u3059\u304b\uff1f\u305d\u306e\u907a\u4f1d\u5b50\u306e\u6027\u5225\u7279\u7570\u7684\u306a\u767a\u73fe\u30d1\u30bf\u30fc\u30f3\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_condition_sex"
+        ],
+        "param": [
+            "rhea_label: \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\""
+        ],
+        "id": "Q16-5-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine \u306e\u53cd\u5fdc\u3092\u89e6\u5a92\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306f\u3069\u308c\u3067\u3059\u304b\uff1f\u305d\u306e\u907a\u4f1d\u5b50\u306e\u6027\u5225\u7279\u7570\u7684\u306a\u767a\u73fe\u30d1\u30bf\u30fc\u30f3\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: rhea_label: (example: angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corecatalyticactivity: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_condition_sex \nWHERE {\n    VALUES ?rhea_label { \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\" }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionCondition / genex:hasSex ?expression_condition_sex ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corecatalyticactivity:annotation / core:catalyticActivity / core:catalyzedReaction / rdfs:label ?rhea_label .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine \u306e\u53cd\u5fdc\u3092\u89e6\u5a92\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306e\u540d\u79f0\u306f\u4f55\u3067\u3059\u304b\uff1f\u305d\u306e\u907a\u4f1d\u5b50\u306f\u3069\u3061\u3089\u306e\u6027\u5225\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_condition_sex"
+        ],
+        "param": [
+            "rhea_label: \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\""
+        ],
+        "id": "Q16-6-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine \u306e\u53cd\u5fdc\u3092\u89e6\u5a92\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306e\u540d\u79f0\u306f\u4f55\u3067\u3059\u304b\uff1f\u305d\u306e\u907a\u4f1d\u5b50\u306f\u3069\u3061\u3089\u306e\u6027\u5225\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: rhea_label: (example: angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX corecatalyticactivity: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_condition_sex \nWHERE {\n    VALUES ?rhea_label { \"angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine\" }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionCondition / genex:hasSex ?expression_condition_sex ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / corecatalyticactivity:annotation / core:catalyticActivity / core:catalyzedReaction / rdfs:label ?rhea_label .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the name of the protein associated with PDB ID pdb:7A97 and in which sex is its corresponding gene expressed?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_condition_sex"
+        ],
+        "param": [
+            "uniprot_pdb: pdb:7A97"
+        ],
+        "id": "Q17-1-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the name of the protein associated with PDB ID pdb:7A97 and in which sex is its corresponding gene expressed?\n# Parameter: uniprot_pdb: (example: pdb:7A97)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfspdb: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX pdb: <http://rdf.wwpdb.org/pdb/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_condition_sex \nWHERE {\n    VALUES ?uniprot_pdb { pdb:7A97 }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionCondition / genex:hasSex ?expression_condition_sex ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / rdfspdb:seeAlso ?uniprot_pdb .\n    ?uniprot_pdb a core:Structure_Resource .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the name of the protein linked to the PDB ID pdb:7A97, and in which sex is the corresponding gene expressed?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_condition_sex"
+        ],
+        "param": [
+            "uniprot_pdb: pdb:7A97"
+        ],
+        "id": "Q17-2-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: What is the name of the protein linked to the PDB ID pdb:7A97, and in which sex is the corresponding gene expressed?\n# Parameter: uniprot_pdb: (example: pdb:7A97)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfspdb: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX pdb: <http://rdf.wwpdb.org/pdb/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_condition_sex \nWHERE {\n    VALUES ?uniprot_pdb { pdb:7A97 }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionCondition / genex:hasSex ?expression_condition_sex ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / rdfspdb:seeAlso ?uniprot_pdb .\n    ?uniprot_pdb a core:Structure_Resource .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Could you provide the name of the protein related to PDB ID pdb:7A97 and specify the sex in which its gene is expressed?",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_condition_sex"
+        ],
+        "param": [
+            "uniprot_pdb: pdb:7A97"
+        ],
+        "id": "Q17-3-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: Could you provide the name of the protein related to PDB ID pdb:7A97 and specify the sex in which its gene is expressed?\n# Parameter: uniprot_pdb: (example: pdb:7A97)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfspdb: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX pdb: <http://rdf.wwpdb.org/pdb/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_condition_sex \nWHERE {\n    VALUES ?uniprot_pdb { pdb:7A97 }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionCondition / genex:hasSex ?expression_condition_sex ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / rdfspdb:seeAlso ?uniprot_pdb .\n    ?uniprot_pdb a core:Structure_Resource .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "PDB ID pdb:7A97 \u306b\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306e\u540d\u524d\u306f\u4f55\u3067\u3059\u304b\uff1f\u307e\u305f\u3001\u5bfe\u5fdc\u3059\u308b\u907a\u4f1d\u5b50\u306f\u3069\u3061\u3089\u306e\u6027\u5225\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_condition_sex"
+        ],
+        "param": [
+            "uniprot_pdb: pdb:7A97"
+        ],
+        "id": "Q17-4-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: PDB ID pdb:7A97 \u306b\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306e\u540d\u524d\u306f\u4f55\u3067\u3059\u304b\uff1f\u307e\u305f\u3001\u5bfe\u5fdc\u3059\u308b\u907a\u4f1d\u5b50\u306f\u3069\u3061\u3089\u306e\u6027\u5225\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: uniprot_pdb: (example: pdb:7A97)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfspdb: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX pdb: <http://rdf.wwpdb.org/pdb/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_condition_sex \nWHERE {\n    VALUES ?uniprot_pdb { pdb:7A97 }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionCondition / genex:hasSex ?expression_condition_sex ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / rdfspdb:seeAlso ?uniprot_pdb .\n    ?uniprot_pdb a core:Structure_Resource .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "PDB ID pdb:7A97 \u306b\u30ea\u30f3\u30af\u3055\u308c\u3066\u3044\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306e\u540d\u524d\u306f\u4f55\u3067\u3059\u304b\uff1f\u305d\u3057\u3066\u3001\u305d\u306e\u907a\u4f1d\u5b50\u306f\u3069\u3061\u3089\u306e\u6027\u5225\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_condition_sex"
+        ],
+        "param": [
+            "uniprot_pdb: pdb:7A97"
+        ],
+        "id": "Q17-5-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: PDB ID pdb:7A97 \u306b\u30ea\u30f3\u30af\u3055\u308c\u3066\u3044\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306e\u540d\u524d\u306f\u4f55\u3067\u3059\u304b\uff1f\u305d\u3057\u3066\u3001\u305d\u306e\u907a\u4f1d\u5b50\u306f\u3069\u3061\u3089\u306e\u6027\u5225\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: uniprot_pdb: (example: pdb:7A97)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfspdb: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX pdb: <http://rdf.wwpdb.org/pdb/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_condition_sex \nWHERE {\n    VALUES ?uniprot_pdb { pdb:7A97 }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionCondition / genex:hasSex ?expression_condition_sex ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / rdfspdb:seeAlso ?uniprot_pdb .\n    ?uniprot_pdb a core:Structure_Resource .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "PDB ID pdb:7A97 \u306b\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306e\u540d\u524d\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002\u307e\u305f\u3001\u305d\u306e\u907a\u4f1d\u5b50\u304c\u767a\u73fe\u3057\u3066\u3044\u308b\u6027\u5225\u3092\u6307\u5b9a\u3057\u3066\u304f\u3060\u3055\u3044\u3002",
+        "database": "uniprot_and_bgee",
+        "variables": [
+            "uniprot_recommended_name",
+            "expression_condition_sex"
+        ],
+        "param": [
+            "uniprot_pdb: pdb:7A97"
+        ],
+        "id": "Q17-6-1",
+        "sparql": "# Endpoint: https://rdfportal.org/sib/sparql\n# Description: PDB ID pdb:7A97 \u306b\u95a2\u9023\u3059\u308b\u30bf\u30f3\u30d1\u30af\u8cea\u306e\u540d\u524d\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002\u307e\u305f\u3001\u305d\u306e\u907a\u4f1d\u5b50\u304c\u767a\u73fe\u3057\u3066\u3044\u308b\u6027\u5225\u3092\u6307\u5b9a\u3057\u3066\u304f\u3060\u3055\u3044\u3002\n# Parameter: uniprot_pdb: (example: pdb:7A97)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>\nPREFIX rdfspdb: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX pdb: <http://rdf.wwpdb.org/pdb/>\n\nSELECT DISTINCT ?uniprot_recommended_name ?expression_condition_sex \nWHERE {\n    VALUES ?uniprot_pdb { pdb:7A97 }\n    ?Expression a genex:Expression ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;\n        genex:hasExpressionCondition / genex:hasSex ?expression_condition_sex ;\n        genex:hasSequenceUnit / lscr:xrefUniprot / rdfspdb:seeAlso ?uniprot_pdb .\n    ?uniprot_pdb a core:Structure_Resource .\n}\nLIMIT 100\n"
+    }
+]

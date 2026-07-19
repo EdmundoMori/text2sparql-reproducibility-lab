@@ -1,0 +1,22 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:GT1DiT a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q20-3-2" ;
+    rdfs:comment "Please provide the RHEA ID of the chemical reaction in which the D-tryptophan molecule participates, and indicate whether it is a transport reaction."@en ;
+    sh:select """# Endpoint: https://sparql.rhea-db.org/sparql
+# Description: Please provide the RHEA ID of the chemical reaction in which the D-tryptophan molecule participates, and indicate whether it is a transport reaction.
+# Parameter: compound_name: (example: D-tryptophan)
+
+PREFIX rhea: <http://rdf.rhea-db.org/>
+
+SELECT DISTINCT ?Reaction ?reaction_is_transport 
+WHERE {
+    VALUES ?compound_name { "D-tryptophan" }
+    ?Reaction rhea:isTransport ?reaction_is_transport ;
+        rhea:side / rhea:contains / rhea:compound / rhea:name ?compound_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.rhea-db.org/sparql".

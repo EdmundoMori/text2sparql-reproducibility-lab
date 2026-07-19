@@ -1,0 +1,29 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:cuoygD a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q5-1-1" ;
+    rdfs:comment "In which tissues or cells is the ACE2 gene expressed, and what is its EC number?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+# Description: In which tissues or cells is the ACE2 gene expressed, and what is its EC number?
+# Parameter: gene_name: (example: ACE2)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX lscr: <http://purl.org/lscr#>
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+
+SELECT DISTINCT ?anatomical_entity_name ?uniprot_recommended_ec 
+WHERE {
+    VALUES ?gene_name { "ACE2" }
+    ?Expression a genex:Expression ;
+        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;
+        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:ecName ?uniprot_recommended_ec ;
+        genex:hasSequenceUnit / rdfs:label ?gene_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://rdfportal.org/sib/sparql".

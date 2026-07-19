@@ -1,0 +1,22 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:bGvDEy a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q21-1-2" ;
+    rdfs:comment "Please tell me the RHEA ID and references for the reactions involving the D-tryptophan molecule."@en ;
+    sh:select """# Endpoint: https://sparql.rhea-db.org/sparql
+# Description: Please tell me the RHEA ID and references for the reactions involving the D-tryptophan molecule.
+# Parameter: compound_name: (example: D-tryptophan)
+
+PREFIX rhea: <http://rdf.rhea-db.org/>
+
+SELECT DISTINCT ?Reaction ?reaction_citation 
+WHERE {
+    VALUES ?compound_name { "D-tryptophan" }
+    ?Reaction rhea:citation ?reaction_citation ;
+        rhea:side / rhea:contains / rhea:compound / rhea:name ?compound_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.rhea-db.org/sparql".

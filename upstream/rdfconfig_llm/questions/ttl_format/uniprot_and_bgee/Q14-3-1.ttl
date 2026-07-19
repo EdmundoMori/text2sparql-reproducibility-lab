@@ -1,0 +1,29 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:hpF88e a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q14-3-1" ;
+    rdfs:comment "At what points in development is the gene corresponding to the ORF name UNQ868/PRO1885 expressed?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+# Description: At what points in development is the gene corresponding to the ORF name UNQ868/PRO1885 expressed?
+# Parameter: uniprot_orf_name: (example: UNQ868/PRO1885)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX efo: <http://www.ebi.ac.uk/efo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX lscr: <http://purl.org/lscr#>
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+
+SELECT DISTINCT ?expression_condition_developmental_stage 
+WHERE {
+    VALUES ?uniprot_orf_name { "UNQ868/PRO1885" }
+    ?Expression a genex:Expression ;
+        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;
+        genex:hasSequenceUnit / lscr:xrefUniprot / core:encodedBy / core:orfName ?uniprot_orf_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://rdfportal.org/sib/sparql".

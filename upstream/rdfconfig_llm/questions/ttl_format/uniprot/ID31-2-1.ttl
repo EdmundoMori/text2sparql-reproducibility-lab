@@ -1,0 +1,32 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:oC7Kyo a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID31-2-1" ;
+    rdfs:comment "What similarity description is assigned to the protein encoded by gene GPCR?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: What similarity description is assigned to the protein encoded by gene GPCR?
+# Parameter: uniprot_gene_name: (example: GPCR)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?sim_desc
+WHERE {
+    VALUES ?uniprot_gene_name { "GPCR" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:encodedBy / skos:prefLabel ?uniprot_gene_name .
+    OPTIONAL {
+        ?UniProt core:annotation ?SimilarityAnnotation .
+        ?SimilarityAnnotation a core:Similarity_Annotation ;
+            rdfs:comment ?sim_desc .
+    }
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

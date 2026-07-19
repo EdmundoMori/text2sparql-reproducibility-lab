@@ -1,0 +1,31 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:Qa7AJF a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID39-6-1" ;
+    rdfs:comment "これらの細胞内局在アノテーションは、ZPLD1 のどのアイソフォームに適用されているか教えていただけますか。"@ja ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: これらの細胞内局在アノテーションは、ZPLD1 のどのアイソフォームに適用されているか教えていただけますか。
+# Parameter: uniprot_gene_name: (example: ZPLD1)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?location_spec_seq
+WHERE {
+    VALUES ?uniprot_gene_name { "ZPLD1" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:encodedBy / skos:prefLabel ?uniprot_gene_name .
+    OPTIONAL {
+        ?UniProt core:annotation ?SubcellularLocationAnnotation .
+        ?SubcellularLocationAnnotation a core:Subcellular_Location_Annotation ;
+            core:sequence ?location_spec_seq .
+    }
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

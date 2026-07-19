@@ -1,0 +1,21 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:2UM7oh a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q12-3-1" ;
+    rdfs:comment "Could you please provide names of all the molecules involved in rhea:10024 reaction?"@en ;
+    sh:select """# Endpoint: https://sparql.rhea-db.org/sparql
+# Description: Could you please provide names of all the molecules involved in rhea:10024 reaction?
+# Parameter: Reaction: (example: rhea:10024)
+
+PREFIX rhea: <http://rdf.rhea-db.org/>
+
+SELECT DISTINCT ?compound_name 
+WHERE {
+    VALUES ?Reaction { rhea:10024 }
+    ?Reaction rhea:side / rhea:contains / rhea:compound / rhea:name ?compound_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.rhea-db.org/sparql".

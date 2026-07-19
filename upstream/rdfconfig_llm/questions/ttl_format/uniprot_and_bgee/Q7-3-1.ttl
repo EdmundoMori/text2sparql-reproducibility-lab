@@ -1,0 +1,31 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:kD3Wf4 a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q7-3-1" ;
+    rdfs:comment "Can you describe the protein function annotations for the primary oocyte and also give an explanation of what this anatomical entity is?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+# Description: Can you describe the protein function annotations for the primary oocyte and also give an explanation of what this anatomical entity is?
+# Parameter: anatomical_entity_name: (example: primary oocyte)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX lscr: <http://purl.org/lscr#>
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX corefunction: <http://purl.uniprot.org/core/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+SELECT DISTINCT ?function_annotation_desc ?anatomical_entity_description 
+WHERE {
+    VALUES ?anatomical_entity_name { "primary oocyte" }
+    ?Expression a genex:Expression ;
+        genex:hasSequenceUnit / lscr:xrefUniprot / corefunction:annotation / rdfs:comment ?function_annotation_desc ;
+        genex:hasExpressionCondition / genex:hasAnatomicalEntity / dcterms:description ?anatomical_entity_description ;
+        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://rdfportal.org/sib/sparql".

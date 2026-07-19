@@ -1,0 +1,31 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:oAhweV a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID45-2-1" ;
+    rdfs:comment "What is the isoform identifier (sequence) that is annotated with tissue-specific expression for the ATR gene?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: What is the isoform identifier (sequence) that is annotated with tissue-specific expression for the ATR gene?
+# Parameter: uniprot_gene_name: (example: ATR)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?tissue_spec_seq
+WHERE {
+    VALUES ?uniprot_gene_name { "ATR" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:encodedBy / skos:prefLabel ?uniprot_gene_name .
+    OPTIONAL {
+        ?UniProt core:annotation ?TissueSpecificityAnnotation .
+        ?TissueSpecificityAnnotation a core:Tissue_Specificity_Annotation ;
+            core:sequence ?tissue_spec_seq .
+    }
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

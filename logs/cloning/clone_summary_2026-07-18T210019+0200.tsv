@@ -1,0 +1,8 @@
+method_id	role	url	local_path	branch	commit_sha	commit_date	tags	license_status	license_spdx	wave	size	status
+sparql_llm	primary	https://github.com/sib-swiss/sparql-llm.git	upstream/sparql_llm	main	3748730e3bd2df2595280b918269fdaadb9fc0c3	2026-05-19T19:43:52+03:00	none	CONFIRMED_LICENSE_FILE	MIT	WAVE_A_API_OR_LIGHTWEIGHT	139M	ok
+mkgqagent	primary	https://github.com/WSE-research/text2sparql-agent.git	upstream/mkgqagent	main	ba0f2f78611a7ccacc8c985a97f6008ef7ee6a6a	2026-07-07T10:23:01+02:00	v1.0.0-TEXT2SPAQL-ESWC2025	LICENSE_NOT_CONFIRMED	UNKNOWN	WAVE_A_API_OR_LIGHTWEIGHT	6.0M	ok
+rdfconfig_llm	primary	https://github.com/scott2121/sparql_query_generator.git	upstream/rdfconfig_llm	main	fe63171d3c8b9679779749ee11f731b2a8318053	2025-12-22T21:37:45+09:00	v1.0.0	LICENSE_NOT_CONFIRMED	UNKNOWN	WAVE_A_API_OR_LIGHTWEIGHT	62M	ok
+rdfconfig_llm	dependency_or_companion	https://github.com/dbcls/rdf-config.git	upstream/rdfconfig_llm_rdf-config	master	cccc581c16f0b24865030bc5459475a9d0fcbd5f	2026-07-15T10:59:50+09:00	none	CONFIRMED_LICENSE_FILE	MIT	WAVE_A_API_OR_LIGHTWEIGHT	126M	ok
+sgpt	primary	https://github.com/rashad101/SGPT-SPARQL-query-generation.git	upstream/sgpt	main	1f6964d1c3bfee50c7dec2c25546f32b4ab94b2b	2024-09-15T11:21:37+02:00	none	CONFIRMED_LICENSE_FILE	MIT	WAVE_B_LOCAL_CONDITIONAL	218M	ok
+cot_sparql	primary	https://github.com/dice-group/CoT-Sparql.git	upstream/cot_sparql	main	063edd9868425e54010a0cb49ce585ed2186be4d	2024-06-03T15:26:39+02:00	none	LICENSE_NOT_CONFIRMED	UNKNOWN	WAVE_C_STATIC_AUDIT_ONLY	64M	ok
+firesparql	primary	https://github.com/sherry-pan/FIRESPARQL.git	upstream/firesparql	main	48d6f168e4c1dd3dc467553aef370299911d4e76	2025-05-28T12:00:49+02:00	none	LICENSE_NOT_CONFIRMED	UNKNOWN	WAVE_C_STATIC_AUDIT_ONLY	598M	ok

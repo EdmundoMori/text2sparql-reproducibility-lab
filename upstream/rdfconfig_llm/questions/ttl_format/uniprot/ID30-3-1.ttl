@@ -1,0 +1,29 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:Ck94ER a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID30-3-1" ;
+    rdfs:comment "What is the gene name of the protein annotated with a binding site for the ligand obo:CHEBI_28272."@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: What is the gene name of the protein annotated with a binding site for the ligand obo:CHEBI_28272.
+# Parameter: binding_site_annotation_ligand: (example: obo:CHEBI_28272)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+SELECT DISTINCT ?uniprot_gene_name
+WHERE {
+    VALUES ?binding_site_annotation_ligand { obo:CHEBI_28272 }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:encodedBy / skos:prefLabel ?uniprot_gene_name ;
+        core:annotation / core:ligand / rdfs:subClassOf ?binding_site_annotation_ligand .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

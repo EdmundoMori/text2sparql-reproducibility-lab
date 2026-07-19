@@ -1,0 +1,89 @@
+method_id=rdfconfig_llm
+role=dependency_or_companion
+url=https://github.com/dbcls/rdf-config.git
+local_path=upstream/rdfconfig_llm_rdf-config
+branch=master
+expected_commit=INCLUDE_CONDITIONAL
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:58:34+02:00
+Cloning into 'upstream/rdfconfig_llm_rdf-config'...
+method_id=rdfconfig_llm
+role=dependency_or_companion
+url=https://github.com/dbcls/rdf-config.git
+local_path=upstream/rdfconfig_llm_rdf-config
+branch=master
+expected_commit=NONE
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:59:41+02:00
+existing_HEAD=cccc581c16f0b24865030bc5459475a9d0fcbd5f
+=== remote ===
+origin	https://github.com/dbcls/rdf-config.git (fetch)
+origin	https://github.com/dbcls/rdf-config.git (push)
+=== branch ===
+master
+=== commit ===
+cccc581c16f0b24865030bc5459475a9d0fcbd5f
+=== commit date ===
+2026-07-15T10:59:50+09:00
+=== subject ===
+update model for mogplus
+=== tags pointing at HEAD ===
+=== all tags (names) ===
+=== submodule status ===
+=== lfs (if any) ===
+git-lfs unavailable or no LFS files listed
+=== du -sh . ===
+126M	.
+=== du -sh .git ===
+66M	.git
+n_files_no_git=906
+source_code_est_mib=10.06
+models_est_mib=0.0
+datasets_results_est_mib=14.5
+docker_metadata_est_mib=0.0
+other_est_mib=32.07
+source_code_est_bytes=10552291
+models_est_bytes=0
+datasets_results_est_bytes=15200915
+docker_metadata_est_bytes=115
+other_est_bytes=33631299
+method_id=rdfconfig_llm
+role=dependency_or_companion
+url=https://github.com/dbcls/rdf-config.git
+local_path=upstream/rdfconfig_llm_rdf-config
+branch=master
+expected_commit=NONE
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T21:00:10+02:00
+existing_HEAD=cccc581c16f0b24865030bc5459475a9d0fcbd5f
+=== remote ===
+origin	https://github.com/dbcls/rdf-config.git (fetch)
+origin	https://github.com/dbcls/rdf-config.git (push)
+=== branch ===
+master
+=== commit ===
+cccc581c16f0b24865030bc5459475a9d0fcbd5f
+=== commit date ===
+2026-07-15T10:59:50+09:00
+=== subject ===
+update model for mogplus
+=== tags pointing at HEAD ===
+=== all tags (names) ===
+=== submodule status ===
+=== lfs (if any) ===
+git-lfs unavailable or no LFS files listed
+=== du -sh . ===
+126M	.
+=== du -sh .git ===
+66M	.git
+n_files_no_git=906
+source_code_est_mib=10.06
+models_est_mib=0.0
+datasets_results_est_mib=14.5
+docker_metadata_est_mib=0.0
+other_est_mib=32.07
+source_code_est_bytes=10552291
+models_est_bytes=0
+datasets_results_est_bytes=15200915
+docker_metadata_est_bytes=115
+other_est_bytes=33631299

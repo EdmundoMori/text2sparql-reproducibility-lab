@@ -1,0 +1,29 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:ECsj2Z a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q4-2-1" ;
+    rdfs:comment "What is the Ensembl Gene ID for the gene named ACE2, and what is its EC number?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+# Description: What is the Ensembl Gene ID for the gene named ACE2, and what is its EC number?
+# Parameter: gene_name: (example: ACE2)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX lscr: <http://purl.org/lscr#>
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?uniprot_recommended_ec ?gene_ensembl_id 
+WHERE {
+    VALUES ?gene_name { "ACE2" }
+    ?Gene a orth:Gene ;
+        lscr:xrefUniprot / core:recommendedName / core:ecName ?uniprot_recommended_ec ;
+        lscr:xrefEnsemblGene ?gene_ensembl_id ;
+        rdfs:label ?gene_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://rdfportal.org/sib/sparql".

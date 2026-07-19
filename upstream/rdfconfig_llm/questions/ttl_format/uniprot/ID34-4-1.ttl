@@ -1,0 +1,44 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:JaJ1xq a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID34-4-1" ;
+    rdfs:comment "GPCR 遺伝子には どのような組成バイアスがアノテーションされており, その偏り領域は配列上の どの開始位置からどの終了位置まで ですか。"@ja ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: GPCR 遺伝子には どのような組成バイアスがアノテーションされており, その偏り領域は配列上の どの開始位置からどの終了位置まで ですか。
+# Parameter: uniprot_gene_name: (example: GPCR)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX faldo: <http://biohackathon.org/resource/faldo#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?comp_bias_desc ?comp_bias_begin ?comp_bias_end
+WHERE {
+    VALUES ?uniprot_gene_name { "GPCR" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:encodedBy / skos:prefLabel ?uniprot_gene_name .
+    OPTIONAL {
+        ?UniProt core:annotation ?CompositionalBiasAnnotation .
+        ?CompositionalBiasAnnotation a core:Compositional_Bias_Annotation ;
+            rdfs:comment ?comp_bias_desc ;
+            core:range [
+                a faldo:Region ;
+                faldo:begin [
+                    a faldo:Position ;
+                    faldo:position ?comp_bias_begin ;
+                ] ;
+                faldo:end [
+                    a faldo:Position ;
+                    faldo:position ?comp_bias_end ;
+                ] ;
+            ] .
+    }
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

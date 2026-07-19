@@ -1,0 +1,27 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:zSzDlV a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q9-3-1" ;
+    rdfs:comment "What species contains the APOC1 gene?"@en ;
+    sh:select """# Endpoint: https://www.bgee.org/sparql
+# Description: What species contains the APOC1 gene?
+# Parameter: gene_name: (example: APOC1)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?taxonomy_scientific_name 
+WHERE {
+    VALUES ?gene_name { "APOC1" }
+    ?Gene a orth:Gene ;
+        orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name ;
+        rdfs:label ?gene_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://bgee.org/sparql".

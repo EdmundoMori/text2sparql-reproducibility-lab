@@ -1,0 +1,1574 @@
+[
+    {
+        "user_question": "What is the expression level of the APOC1 gene?",
+        "database": "bgee",
+        "variables": [
+            "expression_level"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q1-1-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the expression level of the APOC1 gene?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the expression amount of the APOC1 gene?",
+        "database": "bgee",
+        "variables": [
+            "expression_level"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q1-2-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the expression amount of the APOC1 gene?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "To what extent is the APOC1 gene expressed?",
+        "database": "bgee",
+        "variables": [
+            "expression_level"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q1-3-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: To what extent is the APOC1 gene expressed?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3044\u304f\u3089\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q1-4-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3044\u304f\u3089\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u91cf\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002",
+        "database": "bgee",
+        "variables": [
+            "expression_level"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q1-5-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u91cf\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306f\u3069\u306e\u7a0b\u5ea6\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q1-6-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306f\u3069\u306e\u7a0b\u5ea6\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "At which developmental stage is the APOC1 gene expressed?",
+        "database": "bgee",
+        "variables": [
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q2-1-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: At which developmental stage is the APOC1 gene expressed?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "When is the APOC1 gene expressed during developmental stages?",
+        "database": "bgee",
+        "variables": [
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q2-2-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: When is the APOC1 gene expressed during developmental stages?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "At which developmental phase is the APOC1 gene activated?",
+        "database": "bgee",
+        "variables": [
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q2-3-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: At which developmental phase is the APOC1 gene activated?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306f\u3069\u306e\u767a\u751f\u6bb5\u968e\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q2-4-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306f\u3069\u306e\u767a\u751f\u6bb5\u968e\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u304c\u767a\u73fe\u3059\u308b\u767a\u751f\u30b9\u30c6\u30fc\u30b8\u306f\u3044\u3064\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q2-5-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u304c\u767a\u73fe\u3059\u308b\u767a\u751f\u30b9\u30c6\u30fc\u30b8\u306f\u3044\u3064\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306f\u3069\u306e\u958b\u767a\u6bb5\u968e\u3067\u6d3b\u6027\u5316\u3055\u308c\u307e\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q2-6-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306f\u3069\u306e\u958b\u767a\u6bb5\u968e\u3067\u6d3b\u6027\u5316\u3055\u308c\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the FDR p-value of the APOC1 gene?",
+        "database": "bgee",
+        "variables": [
+            "expression_fdr_pvalue"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q3-1-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the FDR p-value of the APOC1 gene?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_fdr_pvalue \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasFDRpvalue ?expression_fdr_pvalue ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Please tell me the false discovery rate (FDR) p-value of the APOC1 gene.",
+        "database": "bgee",
+        "variables": [
+            "expression_fdr_pvalue"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q3-2-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: Please tell me the false discovery rate (FDR) p-value of the APOC1 gene.\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_fdr_pvalue \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasFDRpvalue ?expression_fdr_pvalue ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the FDR-adjusted p-value of the APOC1 gene?",
+        "database": "bgee",
+        "variables": [
+            "expression_fdr_pvalue"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q3-3-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the FDR-adjusted p-value of the APOC1 gene?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_fdr_pvalue \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasFDRpvalue ?expression_fdr_pvalue ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306eFDR p\u5024\u306f\u3044\u304f\u3089\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_fdr_pvalue"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q3-4-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306eFDR p\u5024\u306f\u3044\u304f\u3089\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_fdr_pvalue \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasFDRpvalue ?expression_fdr_pvalue ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306e\u507d\u767a\u898b\u7387\uff08FDR\uff09p\u5024\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002",
+        "database": "bgee",
+        "variables": [
+            "expression_fdr_pvalue"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q3-5-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306e\u507d\u767a\u898b\u7387\uff08FDR\uff09p\u5024\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_fdr_pvalue \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasFDRpvalue ?expression_fdr_pvalue ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306eFDR\u8abf\u6574\u6e08\u307fp\u5024\u306f\u3044\u304f\u3064\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_fdr_pvalue"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q3-6-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306eFDR\u8abf\u6574\u6e08\u307fp\u5024\u306f\u3044\u304f\u3064\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_fdr_pvalue \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasFDRpvalue ?expression_fdr_pvalue ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "In which sex is the APOC1 gene expressed?",
+        "database": "bgee",
+        "variables": [
+            "expression_condition_sex"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q4-1-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: In which sex is the APOC1 gene expressed?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_condition_sex \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasSex ?expression_condition_sex ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Is the APOC1 gene expressed in males or females?",
+        "database": "bgee",
+        "variables": [
+            "expression_condition_sex"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q4-2-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: Is the APOC1 gene expressed in males or females?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_condition_sex \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasSex ?expression_condition_sex ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "In which sex is the expression of the APOC1 gene observed?",
+        "database": "bgee",
+        "variables": [
+            "expression_condition_sex"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q4-3-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: In which sex is the expression of the APOC1 gene observed?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_condition_sex \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasSex ?expression_condition_sex ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306f\u3069\u306e\u6027\u5225\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_condition_sex"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q4-4-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306f\u3069\u306e\u6027\u5225\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_condition_sex \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasSex ?expression_condition_sex ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306f\u7537\u6027\u3068\u5973\u6027\u306e\u3069\u3061\u3089\u3067\u767a\u73fe\u3057\u307e\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_condition_sex"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q4-5-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306f\u7537\u6027\u3068\u5973\u6027\u306e\u3069\u3061\u3089\u3067\u767a\u73fe\u3057\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_condition_sex \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasSex ?expression_condition_sex ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u306f\u3069\u306e\u6027\u3067\u898b\u3089\u308c\u307e\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_condition_sex"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q4-6-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u306f\u3069\u306e\u6027\u3067\u898b\u3089\u308c\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_condition_sex \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasSex ?expression_condition_sex ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What strain is the APOC1 gene expressed in?",
+        "database": "bgee",
+        "variables": [
+            "expression_condition_strain"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q5-1-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What strain is the APOC1 gene expressed in?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_condition_strain \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasStrain / rdfs:label ?expression_condition_strain ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "In which strains is the APOC1 gene expressed?",
+        "database": "bgee",
+        "variables": [
+            "expression_condition_strain"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q5-2-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: In which strains is the APOC1 gene expressed?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_condition_strain \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasStrain / rdfs:label ?expression_condition_strain ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Which genetic backgrounds exhibit expression of the APOC1 gene?",
+        "database": "bgee",
+        "variables": [
+            "expression_condition_strain"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q5-3-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: Which genetic backgrounds exhibit expression of the APOC1 gene?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_condition_strain \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasStrain / rdfs:label ?expression_condition_strain ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306f\u3069\u306e\u682a\u7cfb\u7d71\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_condition_strain"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q5-4-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306f\u3069\u306e\u682a\u7cfb\u7d71\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_condition_strain \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasStrain / rdfs:label ?expression_condition_strain ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u304c\u767a\u73fe\u3059\u308b\u682a\u7cfb\u7d71\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_condition_strain"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q5-5-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u304c\u767a\u73fe\u3059\u308b\u682a\u7cfb\u7d71\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_condition_strain \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasStrain / rdfs:label ?expression_condition_strain ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306f\u3069\u306e\u3088\u3046\u306a\u682a\u7cfb\u7d71\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_condition_strain"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q5-6-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306f\u3069\u306e\u3088\u3046\u306a\u682a\u7cfb\u7d71\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_condition_strain \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasStrain / rdfs:label ?expression_condition_strain ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the Ensembl Gene ID of the APOC1 gene?",
+        "database": "bgee",
+        "variables": [
+            "gene_ensembl_id"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q6-1-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the Ensembl Gene ID of the APOC1 gene?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_ensembl_id \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefEnsemblGene ?gene_ensembl_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Could you provide the Ensembl Gene Identifier for the APOC1 gene?",
+        "database": "bgee",
+        "variables": [
+            "gene_ensembl_id"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q6-2-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: Could you provide the Ensembl Gene Identifier for the APOC1 gene?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_ensembl_id \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefEnsemblGene ?gene_ensembl_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the Ensembl ID associated with the APOC1 gene?",
+        "database": "bgee",
+        "variables": [
+            "gene_ensembl_id"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q6-3-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the Ensembl ID associated with the APOC1 gene?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_ensembl_id \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefEnsemblGene ?gene_ensembl_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306eEnsembl Gene ID\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "gene_ensembl_id"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q6-4-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306eEnsembl Gene ID\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_ensembl_id \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefEnsemblGene ?gene_ensembl_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306eEnsembl\u907a\u4f1d\u5b50ID\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002",
+        "database": "bgee",
+        "variables": [
+            "gene_ensembl_id"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q6-5-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306eEnsembl\u907a\u4f1d\u5b50ID\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_ensembl_id \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefEnsemblGene ?gene_ensembl_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306eEnsembl Gene Identifier\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "gene_ensembl_id"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q6-6-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306eEnsembl Gene Identifier\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_ensembl_id \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefEnsemblGene ?gene_ensembl_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the UniProt ID of the APOC1 gene?",
+        "database": "bgee",
+        "variables": [
+            "gene_uniprot_id"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q7-1-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the UniProt ID of the APOC1 gene?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_uniprot_id \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefUniprot ?gene_uniprot_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Could you provide the UniProt Identifier for the APOC1 gene?",
+        "database": "bgee",
+        "variables": [
+            "gene_uniprot_id"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q7-2-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: Could you provide the UniProt Identifier for the APOC1 gene?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_uniprot_id \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefUniprot ?gene_uniprot_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the UniProt accession number for the APOC1 gene?",
+        "database": "bgee",
+        "variables": [
+            "gene_uniprot_id"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q7-3-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the UniProt accession number for the APOC1 gene?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_uniprot_id \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefUniprot ?gene_uniprot_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306eUniProt ID\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "gene_uniprot_id"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q7-4-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306eUniProt ID\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_uniprot_id \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefUniprot ?gene_uniprot_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306eUniProt\u8b58\u5225\u5b50\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002",
+        "database": "bgee",
+        "variables": [
+            "gene_uniprot_id"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q7-5-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306eUniProt\u8b58\u5225\u5b50\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_uniprot_id \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefUniprot ?gene_uniprot_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306eUniProt ID\u3092\u6559\u3048\u3066\u3044\u305f\u3060\u3051\u307e\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "gene_uniprot_id"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q7-6-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306eUniProt ID\u3092\u6559\u3048\u3066\u3044\u305f\u3060\u3051\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_uniprot_id \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefUniprot ?gene_uniprot_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the NCBI Gene ID of the LOC118972170 gene?",
+        "database": "bgee",
+        "variables": [
+            "gene_ncbigene_id"
+        ],
+        "param": [
+            "gene_name: \"LOC118972170\""
+        ],
+        "id": "Q8-1-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the NCBI Gene ID of the LOC118972170 gene?\n# Parameter: gene_name: (example: LOC118972170)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_ncbigene_id \nWHERE {\n    VALUES ?gene_name { \"LOC118972170\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefNCBIGene ?gene_ncbigene_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Could you provide the NCBI Gene Identifier for the LOC118972170 gene?",
+        "database": "bgee",
+        "variables": [
+            "gene_ncbigene_id"
+        ],
+        "param": [
+            "gene_name: \"LOC118972170\""
+        ],
+        "id": "Q8-2-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: Could you provide the NCBI Gene Identifier for the LOC118972170 gene?\n# Parameter: gene_name: (example: LOC118972170)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_ncbigene_id \nWHERE {\n    VALUES ?gene_name { \"LOC118972170\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefNCBIGene ?gene_ncbigene_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the NCBI Gene accession number for the LOC118972170 gene?",
+        "database": "bgee",
+        "variables": [
+            "gene_ncbigene_id"
+        ],
+        "param": [
+            "gene_name: \"LOC118972170\""
+        ],
+        "id": "Q8-3-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the NCBI Gene accession number for the LOC118972170 gene?\n# Parameter: gene_name: (example: LOC118972170)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_ncbigene_id \nWHERE {\n    VALUES ?gene_name { \"LOC118972170\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefNCBIGene ?gene_ncbigene_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "LOC118972170\u907a\u4f1d\u5b50\u306eNCBI Gene ID\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "gene_ncbigene_id"
+        ],
+        "param": [
+            "gene_name: \"LOC118972170\""
+        ],
+        "id": "Q8-4-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: LOC118972170\u907a\u4f1d\u5b50\u306eNCBI Gene ID\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: LOC118972170)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_ncbigene_id \nWHERE {\n    VALUES ?gene_name { \"LOC118972170\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefNCBIGene ?gene_ncbigene_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "LOC118972170\u907a\u4f1d\u5b50\u306eNCBI\u907a\u4f1d\u5b50ID\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002",
+        "database": "bgee",
+        "variables": [
+            "gene_ncbigene_id"
+        ],
+        "param": [
+            "gene_name: \"LOC118972170\""
+        ],
+        "id": "Q8-5-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: LOC118972170\u907a\u4f1d\u5b50\u306eNCBI\u907a\u4f1d\u5b50ID\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002\n# Parameter: gene_name: (example: LOC118972170)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_ncbigene_id \nWHERE {\n    VALUES ?gene_name { \"LOC118972170\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefNCBIGene ?gene_ncbigene_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "LOC118972170\u907a\u4f1d\u5b50\u306eNCBI Gene Identifier\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "gene_ncbigene_id"
+        ],
+        "param": [
+            "gene_name: \"LOC118972170\""
+        ],
+        "id": "Q8-6-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: LOC118972170\u907a\u4f1d\u5b50\u306eNCBI Gene Identifier\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: LOC118972170)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX lscr: <http://purl.org/lscr#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_ncbigene_id \nWHERE {\n    VALUES ?gene_name { \"LOC118972170\" }\n    ?Gene a orth:Gene ;\n        lscr:xrefNCBIGene ?gene_ncbigene_id ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "To which species does the APOC1 gene belong?",
+        "database": "bgee",
+        "variables": [
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q9-1-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: To which species does the APOC1 gene belong?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?taxonomy_scientific_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "In which organism is the APOC1 gene found?",
+        "database": "bgee",
+        "variables": [
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q9-2-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: In which organism is the APOC1 gene found?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?taxonomy_scientific_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What species contains the APOC1 gene?",
+        "database": "bgee",
+        "variables": [
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q9-3-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What species contains the APOC1 gene?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?taxonomy_scientific_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306f\u3069\u306e\u751f\u7269\u7a2e\u306b\u5c5e\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q9-4-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306f\u3069\u306e\u751f\u7269\u7a2e\u306b\u5c5e\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?taxonomy_scientific_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u304c\u5c5e\u3059\u308b\u751f\u7269\u7a2e\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q9-5-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u304c\u5c5e\u3059\u308b\u751f\u7269\u7a2e\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?taxonomy_scientific_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306f\u3069\u306e\u7a2e\u306b\u5b58\u5728\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q9-6-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306f\u3069\u306e\u7a2e\u306b\u5b58\u5728\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?taxonomy_scientific_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Where (in which tissues, cells) is the APOC1 gene expressed?",
+        "database": "bgee",
+        "variables": [
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q10-1-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: Where (in which tissues, cells) is the APOC1 gene expressed?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?anatomical_entity_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "In which tissues and cells is the APOC1 gene expressed?",
+        "database": "bgee",
+        "variables": [
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q10-2-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: In which tissues and cells is the APOC1 gene expressed?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?anatomical_entity_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "In what tissues and cellular contexts does the APOC1 gene show expression?",
+        "database": "bgee",
+        "variables": [
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q10-3-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: In what tissues and cellular contexts does the APOC1 gene show expression?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?anatomical_entity_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306f\u3069\u3053\uff08\u3069\u306e\u7d44\u7e54\u3001\u7d30\u80de\uff09\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q10-4-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306f\u3069\u3053\uff08\u3069\u306e\u7d44\u7e54\u3001\u7d30\u80de\uff09\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?anatomical_entity_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306f\u3069\u306e\u7d44\u7e54\u3084\u7d30\u80de\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q10-5-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306f\u3069\u306e\u7d44\u7e54\u3084\u7d30\u80de\u3067\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?anatomical_entity_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306f\u3069\u306e\u7d44\u7e54\u3084\u7d30\u80de\u306b\u304a\u3044\u3066\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q10-6-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306f\u3069\u306e\u7d44\u7e54\u3084\u7d30\u80de\u306b\u304a\u3044\u3066\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?anatomical_entity_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the description of the anatomical entity primary oocyte?",
+        "database": "bgee",
+        "variables": [
+            "anatomical_entity_description"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"primary oocyte\""
+        ],
+        "id": "Q11-1-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the description of the anatomical entity primary oocyte?\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?anatomical_entity_description \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?AnatomicalEntity a genex:AnatomicalEntity ;\n        dcterms:description ?anatomical_entity_description ;\n        rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Please provide a description of the anatomical entity primary oocyte.",
+        "database": "bgee",
+        "variables": [
+            "anatomical_entity_description"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"primary oocyte\""
+        ],
+        "id": "Q11-2-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: Please provide a description of the anatomical entity primary oocyte.\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?anatomical_entity_description \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?AnatomicalEntity a genex:AnatomicalEntity ;\n        dcterms:description ?anatomical_entity_description ;\n        rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "How is the anatomical entity primary oocyte described?",
+        "database": "bgee",
+        "variables": [
+            "anatomical_entity_description"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"primary oocyte\""
+        ],
+        "id": "Q11-3-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: How is the anatomical entity primary oocyte described?\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?anatomical_entity_description \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?AnatomicalEntity a genex:AnatomicalEntity ;\n        dcterms:description ?anatomical_entity_description ;\n        rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "primary oocyte\u306e\u89e3\u5256\u5b66\u7684\u5b9f\u4f53\u306e\u8aac\u660e\u306f\uff1f",
+        "database": "bgee",
+        "variables": [
+            "anatomical_entity_description"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"primary oocyte\""
+        ],
+        "id": "Q11-4-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: primary oocyte\u306e\u89e3\u5256\u5b66\u7684\u5b9f\u4f53\u306e\u8aac\u660e\u306f\uff1f\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?anatomical_entity_description \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?AnatomicalEntity a genex:AnatomicalEntity ;\n        dcterms:description ?anatomical_entity_description ;\n        rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "primary oocyte\u306e\u89e3\u5256\u5b66\u7684\u5b9f\u4f53\u306b\u3064\u3044\u3066\u8aac\u660e\u3057\u3066\u304f\u3060\u3055\u3044\u3002",
+        "database": "bgee",
+        "variables": [
+            "anatomical_entity_description"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"primary oocyte\""
+        ],
+        "id": "Q11-5-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: primary oocyte\u306e\u89e3\u5256\u5b66\u7684\u5b9f\u4f53\u306b\u3064\u3044\u3066\u8aac\u660e\u3057\u3066\u304f\u3060\u3055\u3044\u3002\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?anatomical_entity_description \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?AnatomicalEntity a genex:AnatomicalEntity ;\n        dcterms:description ?anatomical_entity_description ;\n        rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "primary oocyte\u306e\u89e3\u5256\u5b66\u7684\u306a\u7279\u5fb4\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "anatomical_entity_description"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"primary oocyte\""
+        ],
+        "id": "Q11-6-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: primary oocyte\u306e\u89e3\u5256\u5b66\u7684\u306a\u7279\u5fb4\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?anatomical_entity_description \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?AnatomicalEntity a genex:AnatomicalEntity ;\n        dcterms:description ?anatomical_entity_description ;\n        rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the expression level of the APOC1 gene at each developmental stage?",
+        "database": "bgee",
+        "variables": [
+            "expression_level,expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q12-1-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the expression level of the APOC1 gene at each developmental stage?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_level ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "How does the expression level of the APOC1 gene vary across developmental stages?",
+        "database": "bgee",
+        "variables": [
+            "expression_level,expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q12-2-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: How does the expression level of the APOC1 gene vary across developmental stages?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_level ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What are the expression levels of the APOC1 gene during different stages of development?",
+        "database": "bgee",
+        "variables": [
+            "expression_level,expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q12-3-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What are the expression levels of the APOC1 gene during different stages of development?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_level ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306e\u767a\u9054\u6bb5\u968e\u3054\u3068\u306e\u767a\u73fe\u91cf\u306f\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level,expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q12-4-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306e\u767a\u9054\u6bb5\u968e\u3054\u3068\u306e\u767a\u73fe\u91cf\u306f\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_level ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306f\u767a\u9054\u6bb5\u968e\u3054\u3068\u306b\u3069\u306e\u304f\u3089\u3044\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level,expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q12-5-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306f\u767a\u9054\u6bb5\u968e\u3054\u3068\u306b\u3069\u306e\u304f\u3089\u3044\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_level ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "\u5404\u767a\u9054\u6bb5\u968e\u306b\u304a\u3051\u308bAPOC1\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u91cf\u306f\u3069\u306e\u7a0b\u5ea6\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level,expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q12-6-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: \u5404\u767a\u9054\u6bb5\u968e\u306b\u304a\u3051\u308bAPOC1\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u91cf\u306f\u3069\u306e\u7a0b\u5ea6\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_level ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the identifier of the APOC1 gene?",
+        "database": "bgee",
+        "variables": [
+            "gene_identifier"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q13-1-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the identifier of the APOC1 gene?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_identifier \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        dcterms:identifier ?gene_identifier ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the ID of the APOC1 gene?",
+        "database": "bgee",
+        "variables": [
+            "gene_identifier"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q13-2-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the ID of the APOC1 gene?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_identifier \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        dcterms:identifier ?gene_identifier ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What identifier is used for the APOC1 gene?",
+        "database": "bgee",
+        "variables": [
+            "gene_identifier"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q13-3-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What identifier is used for the APOC1 gene?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_identifier \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        dcterms:identifier ?gene_identifier ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306e\u8b58\u5225\u5b50\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "gene_identifier"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q13-4-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306e\u8b58\u5225\u5b50\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_identifier \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        dcterms:identifier ?gene_identifier ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306e\u8b58\u5225\u756a\u53f7\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "gene_identifier"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q13-5-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306e\u8b58\u5225\u756a\u53f7\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_identifier \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        dcterms:identifier ?gene_identifier ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306eID\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "gene_identifier"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q13-6-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306eID\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?gene_identifier \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Gene a orth:Gene ;\n        dcterms:identifier ?gene_identifier ;\n        rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the scientific name of human?",
+        "database": "bgee",
+        "variables": [
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "taxonomy_common_name: \"human\""
+        ],
+        "id": "Q14-1-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the scientific name of human?\n# Parameter: taxonomy_common_name: (example: human)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?taxonomy_scientific_name \nWHERE {\n    VALUES ?taxonomy_common_name { \"human\" }\n    ?Taxon a core:Taxon ;\n        core:scientificName ?taxonomy_scientific_name ;\n        core:commonName ?taxonomy_common_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the Latin name of human?",
+        "database": "bgee",
+        "variables": [
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "taxonomy_common_name: \"human\""
+        ],
+        "id": "Q14-2-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the Latin name of human?\n# Parameter: taxonomy_common_name: (example: human)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?taxonomy_scientific_name \nWHERE {\n    VALUES ?taxonomy_common_name { \"human\" }\n    ?Taxon a core:Taxon ;\n        core:scientificName ?taxonomy_scientific_name ;\n        core:commonName ?taxonomy_common_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the scientific terminology for human?",
+        "database": "bgee",
+        "variables": [
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "taxonomy_common_name: \"human\""
+        ],
+        "id": "Q14-3-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the scientific terminology for human?\n# Parameter: taxonomy_common_name: (example: human)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?taxonomy_scientific_name \nWHERE {\n    VALUES ?taxonomy_common_name { \"human\" }\n    ?Taxon a core:Taxon ;\n        core:scientificName ?taxonomy_scientific_name ;\n        core:commonName ?taxonomy_common_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "human\u306e\u5b66\u540d\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "taxonomy_common_name: \"human\""
+        ],
+        "id": "Q14-4-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: human\u306e\u5b66\u540d\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: taxonomy_common_name: (example: human)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?taxonomy_scientific_name \nWHERE {\n    VALUES ?taxonomy_common_name { \"human\" }\n    ?Taxon a core:Taxon ;\n        core:scientificName ?taxonomy_scientific_name ;\n        core:commonName ?taxonomy_common_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "human\u306e\u79d1\u5b66\u7684\u540d\u79f0\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "taxonomy_common_name: \"human\""
+        ],
+        "id": "Q14-5-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: human\u306e\u79d1\u5b66\u7684\u540d\u79f0\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: taxonomy_common_name: (example: human)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?taxonomy_scientific_name \nWHERE {\n    VALUES ?taxonomy_common_name { \"human\" }\n    ?Taxon a core:Taxon ;\n        core:scientificName ?taxonomy_scientific_name ;\n        core:commonName ?taxonomy_common_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "human\u306e\u30e9\u30c6\u30f3\u540d\u306f\u4f55\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "taxonomy_common_name: \"human\""
+        ],
+        "id": "Q14-6-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: human\u306e\u30e9\u30c6\u30f3\u540d\u306f\u4f55\u3067\u3059\u304b\uff1f\n# Parameter: taxonomy_common_name: (example: human)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?taxonomy_scientific_name \nWHERE {\n    VALUES ?taxonomy_common_name { \"human\" }\n    ?Taxon a core:Taxon ;\n        core:scientificName ?taxonomy_scientific_name ;\n        core:commonName ?taxonomy_common_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the expression level of the APOC1 gene in each tissue?",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q15-1-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the expression level of the APOC1 gene in each tissue?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "How much is the APOC1 gene expressed in each tissue?",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q15-2-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: How much is the APOC1 gene expressed in each tissue?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the expression level of the APOC1 gene by tissue?",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q15-3-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the expression level of the APOC1 gene by tissue?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306e\u7d44\u7e54\u3054\u3068\u306e\u767a\u73fe\u91cf\u306f\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q15-4-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306e\u7d44\u7e54\u3054\u3068\u306e\u767a\u73fe\u91cf\u306f\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306f\u5404\u7d44\u7e54\u3067\u3069\u306e\u7a0b\u5ea6\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q15-5-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306f\u5404\u7d44\u7e54\u3067\u3069\u306e\u7a0b\u5ea6\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "\u5404\u7d44\u7e54\u306b\u304a\u3051\u308bAPOC1\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u308c\u304f\u3089\u3044\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q15-6-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: \u5404\u7d44\u7e54\u306b\u304a\u3051\u308bAPOC1\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u308c\u304f\u3089\u3044\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the expression level of the APOC1 gene at each developmental stage?",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q16-1-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the expression level of the APOC1 gene at each developmental stage?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_level ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "How is the APOC1 gene expressed across developmental stages?",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q16-2-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: How is the APOC1 gene expressed across developmental stages?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_level ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What are the expression levels of the APOC1 gene during different developmental stages?",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q16-3-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What are the expression levels of the APOC1 gene during different developmental stages?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_level ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306e\u767a\u9054\u6bb5\u968e\u3054\u3068\u306e\u767a\u73fe\u91cf\u306f\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q16-4-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306e\u767a\u9054\u6bb5\u968e\u3054\u3068\u306e\u767a\u73fe\u91cf\u306f\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_level ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306e\u767a\u9054\u6bb5\u968e\u5225\u306e\u767a\u73fe\u91cf\u306f\u3069\u306e\u3088\u3046\u306b\u306a\u3063\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q16-5-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306e\u767a\u9054\u6bb5\u968e\u5225\u306e\u767a\u73fe\u91cf\u306f\u3069\u306e\u3088\u3046\u306b\u306a\u3063\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_level ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "\u767a\u9054\u6bb5\u968e\u3054\u3068\u306b\u304a\u3051\u308bAPOC1\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u306e\u304f\u3089\u3044\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q16-6-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: \u767a\u9054\u6bb5\u968e\u3054\u3068\u306b\u304a\u3051\u308bAPOC1\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u306e\u304f\u3089\u3044\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\n\nSELECT DISTINCT ?expression_level ?expression_condition_developmental_stage \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the expression level of the APOC1 gene across different species?",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q17-1-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the expression level of the APOC1 gene across different species?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level ?taxonomy_scientific_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "How much is the APOC1 gene expressed in each species?",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q17-2-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: How much is the APOC1 gene expressed in each species?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level ?taxonomy_scientific_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the expression level of the APOC1 gene for each biological name?",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q17-3-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the expression level of the APOC1 gene for each biological name?\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level ?taxonomy_scientific_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306e\u751f\u7269\u5b66\u540d\u3054\u3068\u306e\u767a\u73fe\u91cf\u306f\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q17-4-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306e\u751f\u7269\u5b66\u540d\u3054\u3068\u306e\u767a\u73fe\u91cf\u306f\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level ?taxonomy_scientific_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "APOC1\u907a\u4f1d\u5b50\u306e\u751f\u7269\u7a2e\u5225\u306e\u767a\u73fe\u91cf\u306f\u3069\u306e\u7a0b\u5ea6\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q17-5-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: APOC1\u907a\u4f1d\u5b50\u306e\u751f\u7269\u7a2e\u5225\u306e\u767a\u73fe\u91cf\u306f\u3069\u306e\u7a0b\u5ea6\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level ?taxonomy_scientific_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "\u751f\u7269\u5b66\u7684\u540d\u79f0\u3054\u3068\u306b\u898b\u305fAPOC1\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u3046\u306a\u3063\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "taxonomy_scientific_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\""
+        ],
+        "id": "Q17-6-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: \u751f\u7269\u5b66\u7684\u540d\u79f0\u3054\u3068\u306b\u898b\u305fAPOC1\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u3046\u306a\u3063\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level ?taxonomy_scientific_name \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the expression level of each gene in primary oocyte cells?",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "gene_name"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"primary oocyte\""
+        ],
+        "id": "Q18-1-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the expression level of each gene in primary oocyte cells?\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level ?gene_name \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the expression level of each gene within primary oocyte cells?",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "gene_name"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"primary oocyte\""
+        ],
+        "id": "Q18-2-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the expression level of each gene within primary oocyte cells?\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level ?gene_name \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "How much is each gene expressed in primary oocyte cells?",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "gene_name"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"primary oocyte\""
+        ],
+        "id": "Q18-3-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: How much is each gene expressed in primary oocyte cells?\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level ?gene_name \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "primary oocyte\u7d30\u80de\u306b\u304a\u3051\u308b\u907a\u4f1d\u5b50\u3054\u3068\u306e\u767a\u73fe\u91cf\u306f\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "gene_name"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"primary oocyte\""
+        ],
+        "id": "Q18-4-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: primary oocyte\u7d30\u80de\u306b\u304a\u3051\u308b\u907a\u4f1d\u5b50\u3054\u3068\u306e\u767a\u73fe\u91cf\u306f\uff1f\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level ?gene_name \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "primary oocyte\u7d30\u80de\u5185\u3067\u306e\u5404\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u91cf\u306f\u3069\u306e\u304f\u3089\u3044\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "gene_name"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"primary oocyte\""
+        ],
+        "id": "Q18-5-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: primary oocyte\u7d30\u80de\u5185\u3067\u306e\u5404\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u91cf\u306f\u3069\u306e\u304f\u3089\u3044\u3067\u3059\u304b\uff1f\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level ?gene_name \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "primary oocyte\u7d30\u80de\u306b\u304a\u3051\u308b\u305d\u308c\u305e\u308c\u306e\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u3046\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "gene_name"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"primary oocyte\""
+        ],
+        "id": "Q18-6-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: primary oocyte\u7d30\u80de\u306b\u304a\u3051\u308b\u305d\u308c\u305e\u308c\u306e\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u3046\u3067\u3059\u304b\uff1f\n# Parameter: anatomical_entity_name: (example: primary oocyte)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?expression_level ?gene_name \nWHERE {\n    VALUES ?anatomical_entity_name { \"primary oocyte\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the expression level of the APOC1 gene in each tissue of Homo sapiens?",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\"",
+            "taxonomy_scientific_name: \"Homo sapiens\""
+        ],
+        "id": "Q19-1-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the expression level of the APOC1 gene in each tissue of Homo sapiens?\n# Parameter: gene_name: (example: APOC1)\n#            taxonomy_scientific_name: (example: Homo sapiens)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name  \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    VALUES ?taxonomy_scientific_name { \"Homo sapiens\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What are the expression levels of the APOC1 gene across different tissues in Homo sapiens?",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\"",
+            "taxonomy_scientific_name: \"Homo sapiens\""
+        ],
+        "id": "Q19-2-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What are the expression levels of the APOC1 gene across different tissues in Homo sapiens?\n# Parameter: gene_name: (example: APOC1)\n#            taxonomy_scientific_name: (example: Homo sapiens)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name  \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    VALUES ?taxonomy_scientific_name { \"Homo sapiens\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "To what extent is the APOC1 gene expressed in various tissues within Homo sapiens?",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\"",
+            "taxonomy_scientific_name: \"Homo sapiens\""
+        ],
+        "id": "Q19-3-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: To what extent is the APOC1 gene expressed in various tissues within Homo sapiens?\n# Parameter: gene_name: (example: APOC1)\n#            taxonomy_scientific_name: (example: Homo sapiens)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name  \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    VALUES ?taxonomy_scientific_name { \"Homo sapiens\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Homo sapiens\u306eAPOC1\u907a\u4f1d\u5b50\u306e\u7d44\u7e54\u3054\u3068\u306e\u767a\u73fe\u91cf\u306f\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\"",
+            "taxonomy_scientific_name: \"Homo sapiens\""
+        ],
+        "id": "Q19-4-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: Homo sapiens\u306eAPOC1\u907a\u4f1d\u5b50\u306e\u7d44\u7e54\u3054\u3068\u306e\u767a\u73fe\u91cf\u306f\uff1f\n# Parameter: gene_name: (example: APOC1)\n#            taxonomy_scientific_name: (example: Homo sapiens)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name  \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    VALUES ?taxonomy_scientific_name { \"Homo sapiens\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Homo sapiens\u306b\u304a\u3051\u308bAPOC1\u907a\u4f1d\u5b50\u306e\u5404\u7d44\u7e54\u3067\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u308c\u304f\u3089\u3044\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\"",
+            "taxonomy_scientific_name: \"Homo sapiens\""
+        ],
+        "id": "Q19-5-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: Homo sapiens\u306b\u304a\u3051\u308bAPOC1\u907a\u4f1d\u5b50\u306e\u5404\u7d44\u7e54\u3067\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u308c\u304f\u3089\u3044\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n#            taxonomy_scientific_name: (example: Homo sapiens)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name  \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    VALUES ?taxonomy_scientific_name { \"Homo sapiens\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Homo sapiens\u306b\u5b58\u5728\u3059\u308bAPOC1\u907a\u4f1d\u5b50\u306f\u3001\u7d44\u7e54\u3054\u3068\u306b\u3069\u306e\u7a0b\u5ea6\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "anatomical_entity_name"
+        ],
+        "param": [
+            "gene_name: \"APOC1\"",
+            "taxonomy_scientific_name: \"Homo sapiens\""
+        ],
+        "id": "Q19-6-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: Homo sapiens\u306b\u5b58\u5728\u3059\u308bAPOC1\u907a\u4f1d\u5b50\u306f\u3001\u7d44\u7e54\u3054\u3068\u306b\u3069\u306e\u7a0b\u5ea6\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n#            taxonomy_scientific_name: (example: Homo sapiens)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?anatomical_entity_name  \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    VALUES ?taxonomy_scientific_name { \"Homo sapiens\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the expression level of the APOC1 gene at each developmental stage in Homo sapiens?",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\"",
+            "taxonomy_scientific_name: \"Homo sapiens\""
+        ],
+        "id": "Q20-1-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the expression level of the APOC1 gene at each developmental stage in Homo sapiens?\n# Parameter: gene_name: (example: APOC1)\n#            taxonomy_scientific_name: (example: Homo sapiens)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?expression_condition_developmental_stage  \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    VALUES ?taxonomy_scientific_name { \"Homo sapiens\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "How is the expression level of the APOC1 gene distributed across different developmental stages in Homo sapiens?",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\"",
+            "taxonomy_scientific_name: \"Homo sapiens\""
+        ],
+        "id": "Q20-2-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: How is the expression level of the APOC1 gene distributed across different developmental stages in Homo sapiens?\n# Parameter: gene_name: (example: APOC1)\n#            taxonomy_scientific_name: (example: Homo sapiens)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?expression_condition_developmental_stage  \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    VALUES ?taxonomy_scientific_name { \"Homo sapiens\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "To what degree is the APOC1 gene expressed at various developmental stages within Homo sapiens?",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\"",
+            "taxonomy_scientific_name: \"Homo sapiens\""
+        ],
+        "id": "Q20-3-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: To what degree is the APOC1 gene expressed at various developmental stages within Homo sapiens?\n# Parameter: gene_name: (example: APOC1)\n#            taxonomy_scientific_name: (example: Homo sapiens)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?expression_condition_developmental_stage  \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    VALUES ?taxonomy_scientific_name { \"Homo sapiens\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Homo sapiens\u306eAPOC1\u907a\u4f1d\u5b50\u306e\u767a\u9054\u6bb5\u968e\u3054\u3068\u306e\u767a\u73fe\u91cf\u306f\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\"",
+            "taxonomy_scientific_name: \"Homo sapiens\""
+        ],
+        "id": "Q20-4-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: Homo sapiens\u306eAPOC1\u907a\u4f1d\u5b50\u306e\u767a\u9054\u6bb5\u968e\u3054\u3068\u306e\u767a\u73fe\u91cf\u306f\uff1f\n# Parameter: gene_name: (example: APOC1)\n#            taxonomy_scientific_name: (example: Homo sapiens)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?expression_condition_developmental_stage  \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    VALUES ?taxonomy_scientific_name { \"Homo sapiens\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Homo sapiens\u306b\u304a\u3051\u308bAPOC1\u907a\u4f1d\u5b50\u306e\u5404\u767a\u9054\u6bb5\u968e\u3067\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u308c\u304f\u3089\u3044\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\"",
+            "taxonomy_scientific_name: \"Homo sapiens\""
+        ],
+        "id": "Q20-5-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: Homo sapiens\u306b\u304a\u3051\u308bAPOC1\u907a\u4f1d\u5b50\u306e\u5404\u767a\u9054\u6bb5\u968e\u3067\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u308c\u304f\u3089\u3044\u3067\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n#            taxonomy_scientific_name: (example: Homo sapiens)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?expression_condition_developmental_stage  \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    VALUES ?taxonomy_scientific_name { \"Homo sapiens\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Homo sapiens\u306eAPOC1\u907a\u4f1d\u5b50\u306f\u3001\u767a\u9054\u6bb5\u968e\u3054\u3068\u306b\u3069\u306e\u7a0b\u5ea6\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "expression_condition_developmental_stage"
+        ],
+        "param": [
+            "gene_name: \"APOC1\"",
+            "taxonomy_scientific_name: \"Homo sapiens\""
+        ],
+        "id": "Q20-6-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: Homo sapiens\u306eAPOC1\u907a\u4f1d\u5b50\u306f\u3001\u767a\u9054\u6bb5\u968e\u3054\u3068\u306b\u3069\u306e\u7a0b\u5ea6\u767a\u73fe\u3057\u3066\u3044\u307e\u3059\u304b\uff1f\n# Parameter: gene_name: (example: APOC1)\n#            taxonomy_scientific_name: (example: Homo sapiens)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX efo: <http://www.ebi.ac.uk/efo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?expression_condition_developmental_stage  \nWHERE {\n    VALUES ?gene_name { \"APOC1\" }\n    VALUES ?taxonomy_scientific_name { \"Homo sapiens\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What is the expression level of each gene in breast cells of Homo sapiens?",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "gene_name"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"breast\"",
+            "taxonomy_scientific_name: \"Homo sapiens\""
+        ],
+        "id": "Q21-1-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What is the expression level of each gene in breast cells of Homo sapiens?\n# Parameter: anatomical_entity_name: (example: breast)\n#            taxonomy_scientific_name: (example: Homo sapiens)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?gene_name  \nWHERE {\n    VALUES ?anatomical_entity_name { \"breast\" }\n    VALUES ?taxonomy_scientific_name { \"Homo sapiens\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "What are the expression levels of each gene within breast cells in Homo sapiens?",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "gene_name"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"breast\"",
+            "taxonomy_scientific_name: \"Homo sapiens\""
+        ],
+        "id": "Q21-2-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: What are the expression levels of each gene within breast cells in Homo sapiens?\n# Parameter: anatomical_entity_name: (example: breast)\n#            taxonomy_scientific_name: (example: Homo sapiens)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?gene_name  \nWHERE {\n    VALUES ?anatomical_entity_name { \"breast\" }\n    VALUES ?taxonomy_scientific_name { \"Homo sapiens\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "To what extent is each gene expressed in breast cells of Homo sapiens?",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "gene_name"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"breast\"",
+            "taxonomy_scientific_name: \"Homo sapiens\""
+        ],
+        "id": "Q21-3-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: To what extent is each gene expressed in breast cells of Homo sapiens?\n# Parameter: anatomical_entity_name: (example: breast)\n#            taxonomy_scientific_name: (example: Homo sapiens)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?gene_name  \nWHERE {\n    VALUES ?anatomical_entity_name { \"breast\" }\n    VALUES ?taxonomy_scientific_name { \"Homo sapiens\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Homo sapiens\u306ebreast\u7d30\u80de\u306b\u304a\u3051\u308b\u907a\u4f1d\u5b50\u3054\u3068\u306e\u767a\u73fe\u91cf\u306f\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "gene_name"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"breast\"",
+            "taxonomy_scientific_name: \"Homo sapiens\""
+        ],
+        "id": "Q21-4-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: Homo sapiens\u306ebreast\u7d30\u80de\u306b\u304a\u3051\u308b\u907a\u4f1d\u5b50\u3054\u3068\u306e\u767a\u73fe\u91cf\u306f\uff1f\n# Parameter: anatomical_entity_name: (example: breast)\n#            taxonomy_scientific_name: (example: Homo sapiens)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?gene_name  \nWHERE {\n    VALUES ?anatomical_entity_name { \"breast\" }\n    VALUES ?taxonomy_scientific_name { \"Homo sapiens\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Homo sapiens\u306ebreast\u7d30\u80de\u5185\u3067\u5404\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u308c\u304f\u3089\u3044\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "gene_name"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"breast\"",
+            "taxonomy_scientific_name: \"Homo sapiens\""
+        ],
+        "id": "Q21-5-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: Homo sapiens\u306ebreast\u7d30\u80de\u5185\u3067\u5404\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u30ec\u30d9\u30eb\u306f\u3069\u308c\u304f\u3089\u3044\u3067\u3059\u304b\uff1f\n# Parameter: anatomical_entity_name: (example: breast)\n#            taxonomy_scientific_name: (example: Homo sapiens)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?gene_name  \nWHERE {\n    VALUES ?anatomical_entity_name { \"breast\" }\n    VALUES ?taxonomy_scientific_name { \"Homo sapiens\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name .\n}\nLIMIT 100\n"
+    },
+    {
+        "user_question": "Homo sapiens\u306b\u5b58\u5728\u3059\u308bbreast\u7d30\u80de\u306b\u304a\u3051\u308b\u305d\u308c\u305e\u308c\u306e\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u91cf\u306f\u3069\u306e\u7a0b\u5ea6\u3067\u3059\u304b\uff1f",
+        "database": "bgee",
+        "variables": [
+            "expression_level",
+            "gene_name"
+        ],
+        "param": [
+            "anatomical_entity_name:  \"breast\"",
+            "taxonomy_scientific_name: \"Homo sapiens\""
+        ],
+        "id": "Q21-6-1",
+        "sparql": "# Endpoint: https://www.bgee.org/sparql\n# Description: Homo sapiens\u306b\u5b58\u5728\u3059\u308bbreast\u7d30\u80de\u306b\u304a\u3051\u308b\u305d\u308c\u305e\u308c\u306e\u907a\u4f1d\u5b50\u306e\u767a\u73fe\u91cf\u306f\u3069\u306e\u7a0b\u5ea6\u3067\u3059\u304b\uff1f\n# Parameter: anatomical_entity_name: (example: breast)\n#            taxonomy_scientific_name: (example: Homo sapiens)\n\nPREFIX genex: <http://purl.org/genex#>\nPREFIX orth: <http://purl.org/net/orth#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX core: <http://purl.uniprot.org/core/>\n\nSELECT DISTINCT ?expression_level ?gene_name  \nWHERE {\n    VALUES ?anatomical_entity_name { \"breast\" }\n    VALUES ?taxonomy_scientific_name { \"Homo sapiens\" }\n    ?Expression a genex:Expression ;\n        genex:hasExpressionLevel ?expression_level ;\n        genex:hasSequenceUnit / rdfs:label ?gene_name ;\n        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;\n        genex:hasSequenceUnit / orth:organism / obo:RO_0002162 / core:scientificName ?taxonomy_scientific_name .\n}\nLIMIT 100\n"
+    }
+]

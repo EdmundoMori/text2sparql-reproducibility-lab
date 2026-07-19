@@ -1,0 +1,27 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:LDhgUu a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID46-2-1" ;
+    rdfs:comment "Which gene encodes the protein that is the main subject of the research article identified by DOI doi:10.1074/mcp.m400015-mcp200?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: Which gene encodes the protein that is the main subject of the research article identified by DOI doi:10.1074/mcp.m400015-mcp200?
+# Parameter: citation_doi: (example: doi:10.1074/mcp.m400015-mcp200)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+SELECT DISTINCT ?uniprot_recommended_name
+WHERE {
+    VALUES ?citation_doi { "doi:10.1074/mcp.m400015-mcp200" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:recommendedName / core:fullName ?uniprot_recommended_name ;
+        core:citation / dct:identifier ?citation_doi .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

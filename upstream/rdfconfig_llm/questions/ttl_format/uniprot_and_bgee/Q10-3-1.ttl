@@ -1,0 +1,34 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:s9QkNX a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q10-3-1" ;
+    rdfs:comment "How do the expression levels of genes corresponding to proteins under obo:GO_0001618 vary across different developmental stages?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+# Description: How do the expression levels of genes corresponding to proteins under obo:GO_0001618 vary across different developmental stages?
+# Parameter: uniprot_go: (example: obo:GO_0001618)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX lscr: <http://purl.org/lscr#>
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX efo: <http://www.ebi.ac.uk/efo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+SELECT DISTINCT ?uniprot_recommended_name ?expression_level ?expression_condition_developmental_stage 
+WHERE {
+    VALUES ?uniprot_go { obo:GO_0001618 }
+    ?Expression a genex:Expression ;
+        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:fullName ?uniprot_recommended_name ;
+        genex:hasExpressionLevel ?expression_level ;
+        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;
+        genex:hasSequenceUnit / lscr:xrefUniprot / core:classifiedWith ?uniprot_go .
+    ?uniprot_go a owl:Class .
+}
+LIMIT 100
+""" ;
+    schema:target "https://rdfportal.org/sib/sparql".

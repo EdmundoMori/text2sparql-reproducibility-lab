@@ -1,0 +1,99 @@
+method_id=sparql_llm
+role=primary
+url=https://github.com/sib-swiss/sparql-llm.git
+local_path=upstream/sparql_llm
+branch=main
+expected_commit=INCLUDE_PRIMARY
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:58:22+02:00
+Cloning into 'upstream/sparql_llm'...
+method_id=sparql_llm
+role=primary
+url=https://github.com/sib-swiss/sparql-llm.git
+local_path=upstream/sparql_llm
+branch=main
+expected_commit=NONE
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:59:39+02:00
+existing_HEAD=3748730e3bd2df2595280b918269fdaadb9fc0c3
+=== remote ===
+origin	https://github.com/sib-swiss/sparql-llm.git (fetch)
+origin	https://github.com/sib-swiss/sparql-llm.git (push)
+=== branch ===
+main
+=== commit ===
+3748730e3bd2df2595280b918269fdaadb9fc0c3
+=== commit date ===
+2026-05-19T19:43:52+03:00
+=== subject ===
+test: Added plots for 2026
+=== tags pointing at HEAD ===
+=== all tags (names) ===
+v0.1.0
+v0.1.1
+v0.1.2
+v0.1.3
+v0.1.4
+=== submodule status ===
+=== lfs (if any) ===
+git-lfs unavailable or no LFS files listed
+=== du -sh . ===
+139M	.
+=== du -sh .git ===
+46M	.git
+n_files_no_git=132
+source_code_est_mib=3.79
+models_est_mib=0.0
+datasets_results_est_mib=87.75
+docker_metadata_est_mib=0.01
+other_est_mib=1.02
+source_code_est_bytes=3977788
+models_est_bytes=0
+datasets_results_est_bytes=92016625
+docker_metadata_est_bytes=5671
+other_est_bytes=1073455
+method_id=sparql_llm
+role=primary
+url=https://github.com/sib-swiss/sparql-llm.git
+local_path=upstream/sparql_llm
+branch=main
+expected_commit=NONE
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T21:00:09+02:00
+existing_HEAD=3748730e3bd2df2595280b918269fdaadb9fc0c3
+=== remote ===
+origin	https://github.com/sib-swiss/sparql-llm.git (fetch)
+origin	https://github.com/sib-swiss/sparql-llm.git (push)
+=== branch ===
+main
+=== commit ===
+3748730e3bd2df2595280b918269fdaadb9fc0c3
+=== commit date ===
+2026-05-19T19:43:52+03:00
+=== subject ===
+test: Added plots for 2026
+=== tags pointing at HEAD ===
+=== all tags (names) ===
+v0.1.0
+v0.1.1
+v0.1.2
+v0.1.3
+v0.1.4
+=== submodule status ===
+=== lfs (if any) ===
+git-lfs unavailable or no LFS files listed
+=== du -sh . ===
+139M	.
+=== du -sh .git ===
+46M	.git
+n_files_no_git=132
+source_code_est_mib=3.79
+models_est_mib=0.0
+datasets_results_est_mib=87.75
+docker_metadata_est_mib=0.01
+other_est_mib=1.02
+source_code_est_bytes=3977788
+models_est_bytes=0
+datasets_results_est_bytes=92016625
+docker_metadata_est_bytes=5671
+other_est_bytes=1073455

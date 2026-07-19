@@ -1,0 +1,29 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:u2hxml a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID10-4-1" ;
+    rdfs:comment "ACE2遺伝子のタンパク質構造に関するPDBエントリーは何ですか?"@ja ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: ACE2遺伝子のタンパク質構造に関するPDBエントリーは何ですか?
+# Parameter: uniprot_gene_name: (example: ACE2)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?uniprot_pdb
+WHERE {
+    VALUES ?uniprot_gene_name { "ACE2" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        rdfs:seeAlso ?uniprot_pdb ;
+        core:encodedBy / skos:prefLabel ?uniprot_gene_name .
+    ?uniprot_pdb a core:Structure_Resource .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

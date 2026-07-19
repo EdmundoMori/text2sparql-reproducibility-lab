@@ -1,0 +1,22 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:5WJbXO a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q17-1-1" ;
+    rdfs:comment "Is the reaction involving the L-lysyl-[histone] molecule a transport reaction?"@en ;
+    sh:select """# Endpoint: https://sparql.rhea-db.org/sparql
+# Description: Is the reaction involving the L-lysyl-[histone] molecule a transport reaction?
+# Parameter: compound_name: (example: L-lysyl-[histone])
+
+PREFIX rhea: <http://rdf.rhea-db.org/>
+
+SELECT DISTINCT ?reaction_is_transport 
+WHERE {
+    VALUES ?compound_name { "L-lysyl-[histone]" }
+    ?Reaction rhea:isTransport ?reaction_is_transport ;
+        rhea:side / rhea:contains / rhea:compound / rhea:name ?compound_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.rhea-db.org/sparql".

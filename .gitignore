@@ -39,9 +39,9 @@ target/
 .DS_Store
 Thumbs.db
 
-# --- Experiment caches & large local artifacts (keep structure via .gitkeep) ---
-logs/**
-!logs/.gitkeep
+# --- Heavy local experiment outputs (structure kept via .gitkeep) ---
+# Note: upstream/ IS tracked (vendored working trees) so ChatGPT/plan sync can read code.
+# Nested clone metadata is kept locally as .git_local/ and must NOT be committed.
 results/native/**
 !results/native/.gitkeep
 results/common/**
@@ -54,11 +54,9 @@ graph_snapshots/**
 !graph_snapshots/.gitkeep
 papers/**
 !papers/.gitkeep
-# Optionally track small paper metadata later under papers/meta/
 
-# --- Upstream clones: track only via REPOSITORIES.lock.yaml; do not vendor by default ---
-upstream/**
-!upstream/.gitkeep
+# Nested git metadata of vendored upstream clones (local only)
+upstream/**/.git_local/
 
 # --- Local environment installs ---
 environments/**/venv/

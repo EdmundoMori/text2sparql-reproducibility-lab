@@ -1,0 +1,17 @@
+  - method_id: sparql_llm
+    role: primary
+    repo_url: https://github.com/sib-swiss/sparql-llm.git
+    local_path: upstream/sparql_llm
+    branch: main
+    commit_sha: 3748730e3bd2df2595280b918269fdaadb9fc0c3
+    commit_date: 2026-05-19T19:43:52+03:00
+    tags_at_head: []
+    inclusion_decision: INCLUDE_PRIMARY
+    license_status: CONFIRMED_LICENSE_FILE
+    license_spdx: MIT
+    wave: WAVE_A_API_OR_LIGHTWEIGHT
+    submodule_status: see logs/cloning/sparql_llm_primary.log
+    cloned_at: 2026-07-18T21:00:09+02:00
+    clone_command: "GIT_LFS_SKIP_SMUDGE=1 git clone --recurse-submodules -b main https://github.com/sib-swiss/sparql-llm.git upstream/sparql_llm"
+    git_lfs_skip_smudge: true
+    size_on_disk: 139M

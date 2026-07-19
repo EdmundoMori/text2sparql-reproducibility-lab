@@ -1,0 +1,9 @@
+.env
+.DS_Store
+*.pyc
+demo/
+data/questions/
+data/questions_copy/
+dataset/
+json2ttl/
+output/

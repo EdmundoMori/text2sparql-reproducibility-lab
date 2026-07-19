@@ -1,0 +1,30 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:HYylnP a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q6-2-1" ;
+    rdfs:comment "What is the definition of the anatomical entity primary oocyte, and what is the corresponding EC number associated with it?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+# Description: What is the definition of the anatomical entity primary oocyte, and what is the corresponding EC number associated with it?
+# Parameter: anatomical_entity_name: (example: primary oocyte)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX lscr: <http://purl.org/lscr#>
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?anatomical_entity_description ?uniprot_recommended_ec 
+WHERE {
+    VALUES ?anatomical_entity_name { "primary oocyte" }
+    ?Expression a genex:Expression ;
+        genex:hasExpressionCondition / genex:hasAnatomicalEntity / dcterms:description ?anatomical_entity_description ;
+        genex:hasSequenceUnit / lscr:xrefUniprot / core:recommendedName / core:ecName ?uniprot_recommended_ec ;
+        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://rdfportal.org/sib/sparql".

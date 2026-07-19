@@ -1,0 +1,29 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:dhslFu a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID35-5-1" ;
+    rdfs:comment "gp23 遺伝子産物は、どの細胞内コンパートメントに存在しますか。"@ja ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: gp23 遺伝子産物は、どの細胞内コンパートメントに存在しますか。
+# Parameter: uniprot_gene_name: (example: gp23)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?location
+WHERE {
+    VALUES ?uniprot_gene_name { "gp23" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:encodedBy / skos:prefLabel ?uniprot_gene_name .
+    OPTIONAL {
+        ?UniProt core:annotation / core:locatedIn / core:cellularComponent ?location .
+    }
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

@@ -1,0 +1,83 @@
+[2026-07-18T20:58:22+02:00] ROOT=/home/edmundo/text2sparql-reproducibility-lab
+[2026-07-18T20:58:22+02:00] MANIFEST=/home/edmundo/text2sparql-reproducibility-lab/configs/clone_manifest.yaml
+[2026-07-18T20:58:22+02:00] GIT_LFS_SKIP_SMUDGE=1
+[2026-07-18T20:58:22+02:00] ---- BEGIN sparql_llm (primary) -> upstream/sparql_llm ----
+method_id=sparql_llm
+role=primary
+url=https://github.com/sib-swiss/sparql-llm.git
+local_path=upstream/sparql_llm
+branch=main
+expected_commit=INCLUDE_PRIMARY
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:58:22+02:00
+[2026-07-18T20:58:22+02:00] Cloning https://github.com/sib-swiss/sparql-llm.git -> upstream/sparql_llm (branch=main, recurse-submodules, LFS smudge skipped)
+[2026-07-18T20:58:26+02:00] ERROR: Fresh clone HEAD 3748730e3bd2df2595280b918269fdaadb9fc0c3 != expected INCLUDE_PRIMARY — not auto-checking out another commit
+[2026-07-18T20:58:26+02:00] ---- BEGIN mkgqagent (primary) -> upstream/mkgqagent ----
+method_id=mkgqagent
+role=primary
+url=https://github.com/WSE-research/text2sparql-agent.git
+local_path=upstream/mkgqagent
+branch=main
+expected_commit=INCLUDE_PRIMARY
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:58:26+02:00
+[2026-07-18T20:58:26+02:00] Cloning https://github.com/WSE-research/text2sparql-agent.git -> upstream/mkgqagent (branch=main, recurse-submodules, LFS smudge skipped)
+[2026-07-18T20:58:28+02:00] ERROR: Fresh clone HEAD ba0f2f78611a7ccacc8c985a97f6008ef7ee6a6a != expected INCLUDE_PRIMARY — not auto-checking out another commit
+[2026-07-18T20:58:28+02:00] ---- BEGIN rdfconfig_llm (primary) -> upstream/rdfconfig_llm ----
+method_id=rdfconfig_llm
+role=primary
+url=https://github.com/scott2121/sparql_query_generator.git
+local_path=upstream/rdfconfig_llm
+branch=main
+expected_commit=INCLUDE_CONDITIONAL
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:58:28+02:00
+[2026-07-18T20:58:28+02:00] Cloning https://github.com/scott2121/sparql_query_generator.git -> upstream/rdfconfig_llm (branch=main, recurse-submodules, LFS smudge skipped)
+[2026-07-18T20:58:34+02:00] ERROR: Fresh clone HEAD fe63171d3c8b9679779749ee11f731b2a8318053 != expected INCLUDE_CONDITIONAL — not auto-checking out another commit
+[2026-07-18T20:58:34+02:00] ---- BEGIN rdfconfig_llm (dependency_or_companion) -> upstream/rdfconfig_llm_rdf-config ----
+method_id=rdfconfig_llm
+role=dependency_or_companion
+url=https://github.com/dbcls/rdf-config.git
+local_path=upstream/rdfconfig_llm_rdf-config
+branch=master
+expected_commit=INCLUDE_CONDITIONAL
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:58:34+02:00
+[2026-07-18T20:58:34+02:00] Cloning https://github.com/dbcls/rdf-config.git -> upstream/rdfconfig_llm_rdf-config (branch=master, recurse-submodules, LFS smudge skipped)
+[2026-07-18T20:58:48+02:00] ERROR: Fresh clone HEAD cccc581c16f0b24865030bc5459475a9d0fcbd5f != expected INCLUDE_CONDITIONAL — not auto-checking out another commit
+[2026-07-18T20:58:48+02:00] ---- BEGIN sgpt (primary) -> upstream/sgpt ----
+method_id=sgpt
+role=primary
+url=https://github.com/rashad101/SGPT-SPARQL-query-generation.git
+local_path=upstream/sgpt
+branch=main
+expected_commit=INCLUDE_PRIMARY
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:58:48+02:00
+[2026-07-18T20:58:48+02:00] Cloning https://github.com/rashad101/SGPT-SPARQL-query-generation.git -> upstream/sgpt (branch=main, recurse-submodules, LFS smudge skipped)
+[2026-07-18T20:58:54+02:00] ERROR: Fresh clone HEAD 1f6964d1c3bfee50c7dec2c25546f32b4ab94b2b != expected INCLUDE_PRIMARY — not auto-checking out another commit
+[2026-07-18T20:58:54+02:00] ---- BEGIN cot_sparql (primary) -> upstream/cot_sparql ----
+method_id=cot_sparql
+role=primary
+url=https://github.com/dice-group/CoT-Sparql.git
+local_path=upstream/cot_sparql
+branch=main
+expected_commit=INCLUDE_CONDITIONAL
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:58:54+02:00
+[2026-07-18T20:58:54+02:00] Cloning https://github.com/dice-group/CoT-Sparql.git -> upstream/cot_sparql (branch=main, recurse-submodules, LFS smudge skipped)
+[2026-07-18T20:58:57+02:00] ERROR: Fresh clone HEAD 063edd9868425e54010a0cb49ce585ed2186be4d != expected INCLUDE_CONDITIONAL — not auto-checking out another commit
+[2026-07-18T20:58:57+02:00] ---- BEGIN firesparql (primary) -> upstream/firesparql ----
+method_id=firesparql
+role=primary
+url=https://github.com/sherry-pan/FIRESPARQL.git
+local_path=upstream/firesparql
+branch=main
+expected_commit=INCLUDE_CONDITIONAL
+GIT_LFS_SKIP_SMUDGE=1
+started=2026-07-18T20:58:57+02:00
+[2026-07-18T20:58:57+02:00] Cloning https://github.com/sherry-pan/FIRESPARQL.git -> upstream/firesparql (branch=main, recurse-submodules, LFS smudge skipped)
+[2026-07-18T20:59:14+02:00] ERROR: Fresh clone HEAD 48d6f168e4c1dd3dc467553aef370299911d4e76 != expected INCLUDE_CONDITIONAL — not auto-checking out another commit
+[2026-07-18T20:59:14+02:00] Lock written: /home/edmundo/text2sparql-reproducibility-lab/REPOSITORIES.lock.yaml
+[2026-07-18T20:59:14+02:00] Summary TSV: /home/edmundo/text2sparql-reproducibility-lab/logs/cloning/clone_summary_2026-07-18T205822+0200.tsv
+[2026-07-18T20:59:14+02:00] Failures: 7

@@ -1,0 +1,44 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:5RCSgM a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID23-6-1" ;
+    rdfs:comment "01D20_F の膜貫通タンパク質としての特徴を要約し、その膜貫通セグメントが配列中のどこに存在するのかを示していただけますか。"@ja ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: 01D20_F の膜貫通タンパク質としての特徴を要約し、その膜貫通セグメントが配列中のどこに存在するのかを示していただけますか。
+# Parameter: uniprot_gene_name: (example: 01D20_F)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX faldo: <http://biohackathon.org/resource/faldo#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?transmembrane_desc ?transmembrane_begin ?transmembrane_end
+WHERE {
+    VALUES ?uniprot_gene_name { "01D20_F" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:encodedBy / skos:prefLabel ?uniprot_gene_name .
+    OPTIONAL {
+        ?UniProt core:annotation ?TransmembraneAnnotation .
+        ?TransmembraneAnnotation a core:Transmembrane_Annotation ;
+            rdfs:comment ?transmembrane_desc ;
+            core:range [
+                a faldo:Region ;
+                faldo:begin [
+                    a faldo:Position ;
+                    faldo:position ?transmembrane_begin ;
+                ] ;
+                faldo:end [
+                    a faldo:Position ;
+                    faldo:position ?transmembrane_end ;
+                ] ;
+            ] .
+    }
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

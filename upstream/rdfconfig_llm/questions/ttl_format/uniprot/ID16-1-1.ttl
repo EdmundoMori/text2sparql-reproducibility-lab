@@ -1,0 +1,30 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:kub5Es a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID16-1-1" ;
+    rdfs:comment "What are the molecular IDs that bind to the binding sites of the ACE2 gene?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: What are the molecular IDs that bind to the binding sites of the ACE2 gene?
+# Parameter: uniprot_gene_name: (example: ACE2)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?binding_site_annotation_ligand
+WHERE {
+    VALUES ?uniprot_gene_name { "ACE2" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:encodedBy / skos:prefLabel ?uniprot_gene_name .
+    OPTIONAL {
+        ?UniProt core:annotation / core:ligand / rdfs:subClassOf ?binding_site_annotation_ligand .
+    }
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

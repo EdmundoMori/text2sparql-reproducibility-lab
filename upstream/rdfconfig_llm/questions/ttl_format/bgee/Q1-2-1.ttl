@@ -1,0 +1,25 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:WSv2zt a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q1-2-1" ;
+    rdfs:comment "What is the expression amount of the APOC1 gene?"@en ;
+    sh:select """# Endpoint: https://www.bgee.org/sparql
+# Description: What is the expression amount of the APOC1 gene?
+# Parameter: gene_name: (example: APOC1)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?expression_level 
+WHERE {
+    VALUES ?gene_name { "APOC1" }
+    ?Expression a genex:Expression ;
+        genex:hasExpressionLevel ?expression_level ;
+        genex:hasSequenceUnit / rdfs:label ?gene_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://bgee.org/sparql".

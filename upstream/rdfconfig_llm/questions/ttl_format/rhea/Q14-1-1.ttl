@@ -1,0 +1,22 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:szOzUM a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q14-1-1" ;
+    rdfs:comment "What is the Chebi ID of the molecule D-tryptophan?"@en ;
+    sh:select """# Endpoint: https://sparql.rhea-db.org/sparql
+# Description: What is the Chebi ID of the molecule D-tryptophan?
+# Parameter: compound_name: (example: D-tryptophan)
+
+PREFIX rhea: <http://rdf.rhea-db.org/>
+
+SELECT DISTINCT ?compound_chebi 
+WHERE {
+    VALUES ?compound_name { "D-tryptophan" }
+    ?Compound rhea:chebi ?compound_chebi ;
+        rhea:name ?compound_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.rhea-db.org/sparql".

@@ -1,0 +1,32 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:zR3Eld a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q8-3-1" ;
+    rdfs:comment "How is the ACE2 gene expressed in various tissues, and what are the Gene Ontology (GO) terms linked to its associated protein?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+# Description: How is the ACE2 gene expressed in various tissues, and what are the Gene Ontology (GO) terms linked to its associated protein?
+# Parameter: gene_name: (example: ACE2)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX lscr: <http://purl.org/lscr#>
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?expression_level ?anatomical_entity_name ?uniprot_go 
+WHERE {
+    VALUES ?gene_name { "ACE2" }
+    ?Expression a genex:Expression ;
+        genex:hasExpressionLevel ?expression_level ;
+        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;
+        genex:hasSequenceUnit / lscr:xrefUniprot / core:classifiedWith ?uniprot_go ;
+        genex:hasSequenceUnit / rdfs:label ?gene_name .
+    ?uniprot_go a owl:Class .
+}
+LIMIT 100
+""" ;
+    schema:target "https://rdfportal.org/sib/sparql".

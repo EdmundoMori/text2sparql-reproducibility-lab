@@ -1,0 +1,21 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:HyQmE5 a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q1-2-1" ;
+    rdfs:comment "What is the chemical equation for rhea:10024?"@en ;
+    sh:select """# Endpoint: https://sparql.rhea-db.org/sparql
+# Description: What is the chemical equation for rhea:10024?
+# Parameter: Reaction: (example: rhea:10024)
+
+PREFIX rhea: <http://rdf.rhea-db.org/>
+
+SELECT DISTINCT ?reaction_equation 
+WHERE {
+    VALUES ?Reaction { rhea:10024 }
+    ?Reaction rhea:equation ?reaction_equation .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.rhea-db.org/sparql".

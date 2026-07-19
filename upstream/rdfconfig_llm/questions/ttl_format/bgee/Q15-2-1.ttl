@@ -1,0 +1,26 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:TLI3kC a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q15-2-1" ;
+    rdfs:comment "How much is the APOC1 gene expressed in each tissue?"@en ;
+    sh:select """# Endpoint: https://www.bgee.org/sparql
+# Description: How much is the APOC1 gene expressed in each tissue?
+# Parameter: gene_name: (example: APOC1)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX orth: <http://purl.org/net/orth#>
+
+SELECT DISTINCT ?expression_level ?anatomical_entity_name 
+WHERE {
+    VALUES ?gene_name { "APOC1" }
+    ?Expression a genex:Expression ;
+        genex:hasExpressionLevel ?expression_level ;
+        genex:hasExpressionCondition / genex:hasAnatomicalEntity / rdfs:label ?anatomical_entity_name ;
+        genex:hasSequenceUnit / rdfs:label ?gene_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://bgee.org/sparql".

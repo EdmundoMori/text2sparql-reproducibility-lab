@@ -1,0 +1,28 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:GOb5o3 a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID49-1-1" ;
+    rdfs:comment "Which protein URI is associated with the isoform sequence isoforms:Q13535-2 that has a tissue-specific expression annotation?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: Which protein URI is associated with the isoform sequence isoforms:Q13535-2 that has a tissue-specific expression annotation?
+# Parameter: tissue_spec_seq: (example: isoforms:Q13535-2)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX isoforms: <http://purl.uniprot.org/isoforms/>
+
+SELECT DISTINCT ?UniProt
+WHERE {
+    VALUES ?tissue_spec_seq { isoforms:Q13535-2 }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:annotation ?TissueSpecificityAnnotation .
+    ?TissueSpecificityAnnotation a core:Tissue_Specificity_Annotation ;
+        core:sequence ?tissue_spec_seq .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

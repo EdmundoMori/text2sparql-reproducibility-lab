@@ -1,0 +1,26 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:tqt0y5 a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q14-2-1" ;
+    rdfs:comment "What is the Latin name of human?"@en ;
+    sh:select """# Endpoint: https://www.bgee.org/sparql
+# Description: What is the Latin name of human?
+# Parameter: taxonomy_common_name: (example: human)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX core: <http://purl.uniprot.org/core/>
+
+SELECT DISTINCT ?taxonomy_scientific_name 
+WHERE {
+    VALUES ?taxonomy_common_name { "human" }
+    ?Taxon a core:Taxon ;
+        core:scientificName ?taxonomy_scientific_name ;
+        core:commonName ?taxonomy_common_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://bgee.org/sparql".

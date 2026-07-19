@@ -1,0 +1,29 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:F4r9Zs a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID37-1-1" ;
+    rdfs:comment "On which side of the membrane is the protein encoded by the SOK5 gene oriented?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: On which side of the membrane is the protein encoded by the SOK5 gene oriented?
+# Parameter: uniprot_gene_name: (example: SOK5)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?orientation
+WHERE {
+    VALUES ?uniprot_gene_name { "SOK5" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:encodedBy / skos:prefLabel ?uniprot_gene_name .
+    OPTIONAL {
+        ?UniProt core:annotation / core:locatedIn / core:orientation ?orientation .
+    }
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

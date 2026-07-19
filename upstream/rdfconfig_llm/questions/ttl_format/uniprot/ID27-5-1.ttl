@@ -1,0 +1,32 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:iSeRZ6 a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID27-5-1" ;
+    rdfs:comment "この GPCR 遺伝子には Caution アノテーションはありますか。"@ja ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: この GPCR 遺伝子には Caution アノテーションはありますか。
+# Parameter: uniprot_gene_name: (example: GPCR)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?caution_desc
+WHERE {
+    VALUES ?uniprot_gene_name { "GPCR" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:encodedBy / skos:prefLabel ?uniprot_gene_name .
+    OPTIONAL {
+        ?UniProt core:annotation ?CautionAnnotation .
+        ?CautionAnnotation a core:Caution_Annotation ;
+            rdfs:comment ?caution_desc .
+    }
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

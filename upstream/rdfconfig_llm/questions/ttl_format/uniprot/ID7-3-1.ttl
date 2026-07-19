@@ -1,0 +1,32 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:hIApFz a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID7-3-1" ;
+    rdfs:comment "Please share what is known about the known functions and activities of the ACE2 protein."@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: Please share what is known about the known functions and activities of the ACE2 protein.
+# Parameter: uniprot_gene_name: (example: ACE2)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?function_annotation_desc ?uniprot_gene_name
+WHERE {
+    VALUES ?uniprot_gene_name { "ACE2" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:encodedBy / skos:prefLabel ?uniprot_gene_name .
+    OPTIONAL {
+        ?UniProt core:annotation ?FunctionAnnotation .
+        ?FunctionAnnotation a core:Function_Annotation ;
+            rdfs:comment ?function_annotation_desc .
+    }
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

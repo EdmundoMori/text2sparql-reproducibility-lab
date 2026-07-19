@@ -1,0 +1,28 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:CgyDPR a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID48-6-1" ;
+    rdfs:comment "この機能注釈と関連付けられているタンパク質アイソフォーム isoforms:P36956-5 をコードするタンパクURIを教えていただけますか。"@ja ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: この機能注釈と関連付けられているタンパク質アイソフォーム isoforms:P36956-5 をコードするタンパクURIを教えていただけますか。
+# Parameter: function_annotation_sequence: (example: isoforms:P36956-5)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX isoforms: <http://purl.uniprot.org/isoforms/>
+
+SELECT DISTINCT ?UniProt
+WHERE {
+    VALUES ?function_annotation_sequence { isoforms:P36956-5 }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:annotation ?FunctionAnnotation .
+    ?FunctionAnnotation a core:Function_Annotation ;
+        core:sequence ?function_annotation_sequence .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

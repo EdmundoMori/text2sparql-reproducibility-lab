@@ -1,0 +1,26 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:bYInBR a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID4-2-1" ;
+    rdfs:comment "What is the name of the protein classified under Enzyme Commission number 3.4.17.23?"@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: What is the name of the protein classified under Enzyme Commission number 3.4.17.23?
+# Parameter: uniprot_recommended_ec: (example: 3.4.17.23)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+
+SELECT DISTINCT ?uniprot_recommended_name
+WHERE {
+    VALUES ?uniprot_recommended_ec { "3.4.17.23" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:recommendedName / core:fullName ?uniprot_recommended_name ;
+        core:recommendedName / core:ecName ?uniprot_recommended_ec .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

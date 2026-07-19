@@ -1,0 +1,26 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:tqt0y5 a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q13-2-1" ;
+    rdfs:comment "What is the ID of the APOC1 gene?"@en ;
+    sh:select """# Endpoint: https://www.bgee.org/sparql
+# Description: What is the ID of the APOC1 gene?
+# Parameter: gene_name: (example: APOC1)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?gene_identifier 
+WHERE {
+    VALUES ?gene_name { "APOC1" }
+    ?Gene a orth:Gene ;
+        dcterms:identifier ?gene_identifier ;
+        rdfs:label ?gene_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://bgee.org/sparql".

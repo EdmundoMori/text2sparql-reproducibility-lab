@@ -1,0 +1,42 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:WtV3lJ a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID33-6-1" ;
+    rdfs:comment "GPCR 遺伝子の 組成的に偏った領域は、配列中のどの残基番号からどの残基番号まで ですか。"@ja ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: GPCR 遺伝子の 組成的に偏った領域は、配列中のどの残基番号からどの残基番号まで ですか。
+# Parameter: uniprot_gene_name: (example: GPCR)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX faldo: <http://biohackathon.org/resource/faldo#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?comp_bias_begin ?comp_bias_end
+WHERE {
+    VALUES ?uniprot_gene_name { "GPCR" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:encodedBy / skos:prefLabel ?uniprot_gene_name .
+    OPTIONAL {
+        ?UniProt core:annotation ?CompositionalBiasAnnotation .
+        ?CompositionalBiasAnnotation a core:Compositional_Bias_Annotation ;
+            core:range [
+                a faldo:Region ;
+                faldo:begin [
+                    a faldo:Position ;
+                    faldo:position ?comp_bias_begin ;
+                ] ;
+                faldo:end [
+                    a faldo:Position ;
+                    faldo:position ?comp_bias_end ;
+                ] ;
+            ] .
+    }
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

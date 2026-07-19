@@ -1,0 +1,17 @@
+  - method_id: mkgqagent
+    role: primary
+    repo_url: https://github.com/WSE-research/text2sparql-agent.git
+    local_path: upstream/mkgqagent
+    branch: main
+    commit_sha: ba0f2f78611a7ccacc8c985a97f6008ef7ee6a6a
+    commit_date: 2026-07-07T10:23:01+02:00
+    tags_at_head: v1.0.0-TEXT2SPAQL-ESWC2025
+    inclusion_decision: INCLUDE_PRIMARY
+    license_status: LICENSE_NOT_CONFIRMED
+    license_spdx: UNKNOWN
+    wave: WAVE_A_API_OR_LIGHTWEIGHT
+    submodule_status: see logs/cloning/mkgqagent_primary.log
+    cloned_at: 2026-07-18T21:00:10+02:00
+    clone_command: "GIT_LFS_SKIP_SMUDGE=1 git clone --recurse-submodules -b main https://github.com/WSE-research/text2sparql-agent.git upstream/mkgqagent"
+    git_lfs_skip_smudge: true
+    size_on_disk: 6.0M

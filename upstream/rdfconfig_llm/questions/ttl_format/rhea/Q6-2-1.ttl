@@ -1,0 +1,21 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:EjQcPS a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q6-2-1" ;
+    rdfs:comment "Does rhea:10024 involve the movement of substances?"@en ;
+    sh:select """# Endpoint: https://sparql.rhea-db.org/sparql
+# Description: Does rhea:10024 involve the movement of substances?
+# Parameter: Reaction: (example: rhea:10024)
+
+PREFIX rhea: <http://rdf.rhea-db.org/>
+
+SELECT DISTINCT ?reaction_is_transport 
+WHERE {
+    VALUES ?Reaction { rhea:10024 }
+    ?Reaction rhea:isTransport ?reaction_is_transport .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.rhea-db.org/sparql".

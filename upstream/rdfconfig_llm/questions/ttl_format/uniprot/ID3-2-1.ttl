@@ -1,0 +1,27 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:Udb8Jx a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "ID3-2-1" ;
+    rdfs:comment "I want to know the Enzyme Commission number for the enzyme coded by the ACE2 gene."@en ;
+    sh:select """# Endpoint: https://rdfportal.org/sib/sparql
+#           https://sparql.uniprot.org/sparql
+# Description: I want to know the Enzyme Commission number for the enzyme coded by the ACE2 gene.
+# Parameter: uniprot_gene_name: (example: ACE2)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?uniprot_recommended_ec
+WHERE {
+    VALUES ?uniprot_gene_name { "ACE2" }
+    VALUES ?UniProt__class { core:Protein chembl:UniprotRef }
+    ?UniProt a ?UniProt__class ;
+        core:recommendedName / core:ecName ?uniprot_recommended_ec ;
+        core:encodedBy / skos:prefLabel ?uniprot_gene_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://sparql.uniprot.org/sparql".

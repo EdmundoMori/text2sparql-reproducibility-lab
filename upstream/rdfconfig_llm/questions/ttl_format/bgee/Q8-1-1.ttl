@@ -1,0 +1,26 @@
+@prefix ex: <https://is.gd/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+ex:lADXPP a sh:SPARQLSelectExecutable, sh:SPARQLExecutable ;
+    rdfs:label "Q8-1-1" ;
+    rdfs:comment "What is the NCBI Gene ID of the LOC118972170 gene?"@en ;
+    sh:select """# Endpoint: https://www.bgee.org/sparql
+# Description: What is the NCBI Gene ID of the LOC118972170 gene?
+# Parameter: gene_name: (example: LOC118972170)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX lscr: <http://purl.org/lscr#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?gene_ncbigene_id 
+WHERE {
+    VALUES ?gene_name { "LOC118972170" }
+    ?Gene a orth:Gene ;
+        lscr:xrefNCBIGene ?gene_ncbigene_id ;
+        rdfs:label ?gene_name .
+}
+LIMIT 100
+""" ;
+    schema:target "https://bgee.org/sparql".

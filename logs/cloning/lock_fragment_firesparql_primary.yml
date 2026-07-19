@@ -1,0 +1,17 @@
+  - method_id: firesparql
+    role: primary
+    repo_url: https://github.com/sherry-pan/FIRESPARQL.git
+    local_path: upstream/firesparql
+    branch: main
+    commit_sha: 48d6f168e4c1dd3dc467553aef370299911d4e76
+    commit_date: 2025-05-28T12:00:49+02:00
+    tags_at_head: []
+    inclusion_decision: INCLUDE_CONDITIONAL
+    license_status: LICENSE_NOT_CONFIRMED
+    license_spdx: UNKNOWN
+    wave: WAVE_C_STATIC_AUDIT_ONLY
+    submodule_status: see logs/cloning/firesparql_primary.log
+    cloned_at: 2026-07-18T21:00:15+02:00
+    clone_command: "GIT_LFS_SKIP_SMUDGE=1 git clone --recurse-submodules -b main https://github.com/sherry-pan/FIRESPARQL.git upstream/firesparql"
+    git_lfs_skip_smudge: true
+    size_on_disk: 598M
