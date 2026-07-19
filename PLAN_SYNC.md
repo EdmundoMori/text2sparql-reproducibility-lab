@@ -180,9 +180,9 @@ Ver lista completa y estable en:
 | Campo | Valor |
 |---|---|
 | commit inicial | `aa141143e0a4dde5ac1de5dd645b70ecc953704a` |
-| commit final | *(tras push)* |
+| commit final | `88d27b5a12a1dbc98edce559dd2c26c3d7d1e1a9` |
 | rama | `main` |
 | mensaje | Document WAVE_A environment specs without installing or running methods. |
-| push | pendiente |
+| push | confirmado (siguiente push) |
 | artefactos | §3 fila 4B |
 
