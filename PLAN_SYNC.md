@@ -198,7 +198,9 @@ Ver lista completa y estable en:
 | RUN_ID | `20260719T112306Z` |
 | commit inicial | `46d3713128f0f70907ed5086179f0eee204fac62` |
 | resultado | **setup_failed** |
-| commit final | `6cf19d863f8ac877fa5104fa5eca4bbce2da04e7` |
+| commit artefactos | `6cf19d863f8ac877fa5104fa5eca4bbce2da04e7` |
+| commit PLAN_SYNC SHA | `e5ee5b24457743966be9ec613812cc372975defd` |
 | rama | `main` |
+| push | **pendiente** (sandbox bloquea SSH DNS a github.com; ejecutar `git push origin main` en el host) |
 | artefactos | §3 fila 5A |
 
