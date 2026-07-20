@@ -214,5 +214,5 @@ Ver lista completa y estable en:
 | resultado | **audit_only** (static complete; no execution) |
 | commit final | `00d5552038996035fb20e996899feeb36222be1e` |
 | rama | `main` |
-| push | confirmado (siguiente push) |
+| push | confirmado en origin/main (`c458c96a3b60eb8311e9ab33a947649d410987d0`) |
 | artefactos | `audit/sgpt/*`, `audit/WAVE_B_STATIC_AUDIT_MATRIX.csv` |
