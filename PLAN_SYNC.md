@@ -196,8 +196,8 @@ Ver lista completa y estable en:
 | commit inicial | `6ca23b10f429c209d6e255519be7aac517a41f83` |
 | resultado | **smoke_only** |
 | base digest | `python@sha256:b18992999dbe963a45a8a4da40ac2b1975be1a776d939d098c647482bcad5cba` |
-| commit final | *(tras push)* |
+| commit final | `4495522f7b8f2dd64bffef84b0b7b5f4e68ae532` |
 | rama | `main` |
-| push | pendiente |
+| push | confirmado (siguiente push) |
 | artefactos | §3 fila 5B |
 
