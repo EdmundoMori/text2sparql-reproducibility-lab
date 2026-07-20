@@ -119,7 +119,7 @@ Ver commits previos en GitHub `main` (`setup_failed` / `smoke_only` / SGPT stati
 | alcance | CoT-SPARQL WAVE_C static audit |
 | commit inicial | `562b5f1108e3289ae5b93668f2bd9d994d0a5b28` |
 | resultado | **audit_only** (static complete; no execution) |
-| commit final | *(tras push)* |
+| commit final | `e1fe1fa96859779b633cade3dc70259d95e28c57` |
 | rama | `main` |
-| push | pendiente |
+| push | confirmado (siguiente push) |
 | artefactos | `audit/cot_sparql/*`, `audit/WAVE_C_STATIC_AUDIT_MATRIX.csv` |
