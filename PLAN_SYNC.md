@@ -201,6 +201,6 @@ Ver lista completa y estable en:
 | commit artefactos | `6cf19d863f8ac877fa5104fa5eca4bbce2da04e7` |
 | commit PLAN_SYNC SHA | `e5ee5b24457743966be9ec613812cc372975defd` |
 | rama | `main` |
-| push | **pendiente** (sandbox bloquea SSH DNS a github.com; ejecutar `git push origin main` en el host) |
+| push | confirmado en origin/main (`35ea955e986c12c02dc25eebf60920081ee701fd`) |
 | artefactos | §3 fila 5A |
 
