@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-20 (Prompt 7B)  
+**Última actualización:** 2026-07-20 (Prompt 8 — gate comparativo)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -112,6 +112,14 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | WF-AN | Anomalías | `audit/firesparql/CODE_ANOMALIES_AND_RISKS.md` | paths/APIs |
 | WF-RD | Readiness | `audit/firesparql/EXECUTION_READINESS.md` | not_ready |
 | WF-LOG | Log Prompt 7B | `logs/static-audit-firesparql/commands.log` | solo lectura |
+| GATE-RPT | Gate comparativo nativo | `audit/NATIVE_AUDIT_COMPARATIVE_GATE.md` | Prompt 8 — informe 21 §§ |
+| GATE-MX | Matriz gate (6 métodos) | `audit/NATIVE_AUDIT_GATE_MATRIX.csv` | dimensiones A–E |
+| GATE-Q | Cola reproducción nativa | `audit/NATIVE_REPRODUCTION_QUEUE.csv` | exactamente 1× GO_NEXT |
+| GATE-PF | Portafolio baselines | `audit/SCIENTIFIC_BASELINE_PORTFOLIO.csv` | diversidad metodológica |
+| GATE-BR | Barreras transversales | `audit/REPRODUCIBILITY_BARRIER_MATRIX.csv` | taxonomía barreras |
+| GATE-NX | Decisión siguiente acción | `audit/NEXT_EXECUTION_DECISION.md` | GO/NO-GO Prompt 9 |
+| DEC003 | Decisión formal gate | `docs/decisions/003_native_audit_comparative_gate.md` | ADR Prompt 8 |
+| GATE-LOG | Log Prompt 8 | `logs/native-audit-comparative-gate/commands.log` | documental; no install |
 
 ## Qué está / no está en GitHub
 

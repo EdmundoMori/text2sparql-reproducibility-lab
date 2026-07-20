@@ -1,0 +1,65 @@
+# logs/native-audit-comparative-gate/commands.log
+# Prompt 8 — native audit comparative gate (documentary only)
+# Date: 2026-07-20
+# Initial HEAD: dbb21de570e4da2647fcfe774a91590e086d9542
+
+# Explicit non-actions:
+# - no installation
+# - no imports upstream
+# - no execution
+# - no APIs
+# - no endpoints
+# - no downloads
+# - no training
+# - no adaptation
+
+# --- git / pins (read-only verification) ---
+git fetch origin
+git rev-parse HEAD
+git rev-parse origin/main
+git status
+# Expected: main @ dbb21de570e4da2647fcfe774a91590e086d9542; clean before edits
+
+# Pin check vs REPOSITORIES.lock.yaml (six active methods):
+# sparql_llm 3748730e3bd2df2595280b918269fdaadb9fc0c3
+# mkgqagent  ba0f2f78611a7ccacc8c985a97f6008ef7ee6a6a
+# rdfconfig_llm fe63171d3c8b9679779749ee11f731b2a8318053
+# sgpt       1f6964d1c3bfee50c7dec2c25546f32b4ab94b2b
+# cot_sparql 063edd9868425e54010a0cb49ce585ed2186be4d
+# firesparql 48d6f168e4c1dd3dc467553aef370299911d4e76
+
+# upstream/ not modified (git status --short upstream/ empty of content edits)
+
+# --- reading (conceptual; no network) ---
+# PLAN_SYNC.md, docs/plan-sync/{PLANNER_LOOP,NEXT_PROMPT_GUIDANCE,ARTIFACT_INDEX}.md
+# PROJECT_CONTEXT.md, RESEARCH_PROTOCOL.md, MACHINE_PROFILE.md
+# METHOD_REGISTRY.yaml, REPOSITORIES.lock.yaml
+# audit/{INCLUSION_DECISIONS,PAPER_CODE_MAPPING,EVIDENCE_CLOSURE,LICENSE_MATRIX,RESULT_EVIDENCE_MATRIX,RESOURCE_ESTIMATION,INITIAL_AUDIT_MATRIX}
+# WAVE_A / WAVE_B / WAVE_C audits and matrices
+# method static audits under audit/{sparql_llm,mkgqagent,rdfconfig_llm,sgpt,cot_sparql,firesparql}/
+
+# --- validation ---
+python3 - <<'PY'
+import csv
+from collections import Counter
+rows=list(csv.DictReader(open('audit/NATIVE_REPRODUCTION_QUEUE.csv')))
+print('GO_NEXT count', Counter(r['action_class'] for r in rows)['GO_NEXT'])
+assert Counter(r['action_class'] for r in rows)['GO_NEXT']==1
+rows=list(csv.DictReader(open('audit/NATIVE_AUDIT_GATE_MATRIX.csv')))
+assert len(rows)==6
+print('gate matrix methods', [r['method_id'] for r in rows])
+PY
+# Result: NATIVE_AUDIT_GATE_MATRIX 6 rows; exactly one GO_NEXT (sparql_llm_api_sib_protocol)
+# METHOD_REGISTRY.yaml schema 0.11; reproduction_status unchanged; native_audit_complete=false; common_adapter_allowed=false
+# YAML validated with PyYAML safe_load
+
+# Artefacts written:
+# audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
+# audit/NATIVE_AUDIT_GATE_MATRIX.csv
+# audit/NATIVE_REPRODUCTION_QUEUE.csv
+# audit/SCIENTIFIC_BASELINE_PORTFOLIO.csv
+# audit/REPRODUCIBILITY_BARRIER_MATRIX.csv
+# audit/NEXT_EXECUTION_DECISION.md
+# docs/decisions/003_native_audit_comparative_gate.md
+# PLAN_SYNC.md, docs/plan-sync/NEXT_PROMPT_GUIDANCE.md, docs/plan-sync/ARTIFACT_INDEX.md
+# METHOD_REGISTRY.yaml
