@@ -1,0 +1,14 @@
+artifact_id,artifact_type,referenced_by,uri_or_id,local_status,required_for,evidence_tag,notes
+embeddings_dbpedia_pkl,retrieval_embeddings,README.md;contextb.py L20-21,https://anon.to/?https://files.dice-research.org/datasets/COT-SPARQLGEN/embeddings_dbpedia.pkl,NOT_FOUND_in_repo,RETRIEVAL_SMOKE;end_to_end,EXTERNAL_ARTIFACT_REFERENCED;README_REPORTED,wget a temp/; gitignored
+embeddings_wikidata_pkl,retrieval_embeddings,README.md;contextb.py L26-27,https://anon.to/?https://files.dice-research.org/datasets/COT-SPARQLGEN/embeddings_wikidata.pkl,NOT_FOUND_in_repo,RETRIEVAL_SMOKE;end_to_end,EXTERNAL_ARTIFACT_REFERENCED;README_REPORTED,wget a temp/
+dbpedia_examples_parquet,few_shot_table,README.md;contextb.py L22,https://anon.to/?https://files.dice-research.org/datasets/COT-SPARQLGEN/dbpedia_examples.parquet,NOT_FOUND_in_repo,RETRIEVAL_SMOKE;end_to_end,EXTERNAL_ARTIFACT_REFERENCED;README_REPORTED,columnas esperadas question/query/entities/relations
+wikidata_examples_parquet,few_shot_table,README.md;contextb.py L28,https://anon.to/?https://files.dice-research.org/datasets/COT-SPARQLGEN/wikidata_examples.parquet,NOT_FOUND_in_repo,RETRIEVAL_SMOKE;end_to_end,EXTERNAL_ARTIFACT_REFERENCED;README_REPORTED,notebook escribe desde train_lcquad2
+codellama_34b_instruct_gptq,llm_weights,README.md ejemplo main.py,TheBloke/CodeLlama-34B-Instruct-GPTQ,NOT_FOUND_local,model_smoke;end_to_end;native,EXTERNAL_ARTIFACT_REFERENCED;README_REPORTED,AutoGPTQ from_quantized model_basename=model
+all_minilm_l6_v2,sentence_encoder,contextb.py L9,sentence-transformers/all-MiniLM-L6-v2,NOT_FOUND_local_loads_at_import,RETRIEVAL_SMOKE,CODE_VERIFIED,side-effect import SentenceTransformer
+en_core_web_lg,spacy_model,contexta.py L13;environment.yml,en_core_web_lg==3.7.1,NOT_FOUND_local,LINKER_SMOKE,CODE_VERIFIED;EXTERNAL_ARTIFACT_REFERENCED,spaCy pipeline base
+babelscape_rebel_large,relation_model,contexta.py L37;spacy_component.py,Babelscape/rebel-large,NOT_FOUND_local,LINKER_SMOKE_wikidata_RL,CODE_VERIFIED,device=0 REBEL pipe
+falcon_api,external_service_EL_RL,contexta.py L81,https://labs.tib.eu/falcon/api?mode=long,network_runtime,LINKER_SMOKE_dbpedia_RL,CODE_VERIFIED,POST JSON; sin timeout; None→crash
+dbpedia_spotlight,external_service_EL,contexta.py L16,spacy-dbpedia-spotlight pipe,network_runtime,LINKER_SMOKE_dbpedia_EL,CODE_VERIFIED,via nlp.add_pipe dbpedia_spotlight
+entityfishing,external_service_EL,contexta.py L21,spacyfishing entityfishing pipe,network_runtime,LINKER_SMOKE_wikidata_EL,CODE_VERIFIED,ent._.kb_qid → wd:QID
+wikidata_sparql_endpoint,kg_endpoint,contexta.py L49;validation.py L44,https://query.wikidata.org/sparql,network_runtime,validation;RL_label_lookup,CODE_VERIFIED,sin timeout
+dbpedia_sparql_endpoint,kg_endpoint,validation.py L45,https://dbpedia.org/sparql,network_runtime,validation,CODE_VERIFIED,HTTP 200 ⇒ syntactically valid claim

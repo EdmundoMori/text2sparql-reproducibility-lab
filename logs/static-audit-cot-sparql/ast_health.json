@@ -1,0 +1,38 @@
+[
+  {
+    "file": "contexta.py",
+    "ok": true,
+    "asserts": [],
+    "lines": 107
+  },
+  {
+    "file": "contextb.py",
+    "ok": true,
+    "asserts": [],
+    "lines": 50
+  },
+  {
+    "file": "main.py",
+    "ok": true,
+    "asserts": [
+      104,
+      105,
+      106
+    ],
+    "lines": 109
+  },
+  {
+    "file": "spacy_component.py",
+    "ok": true,
+    "asserts": [
+      111
+    ],
+    "lines": 264
+  },
+  {
+    "file": "validation.py",
+    "ok": true,
+    "asserts": [],
+    "lines": 70
+  }
+]

@@ -66,6 +66,25 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | WB-RD | Execution readiness | `audit/sgpt/EXECUTION_READINESS.md` | ready/blocked/not_ready |
 | WB-MX | Matriz WAVE_B | `audit/WAVE_B_STATIC_AUDIT_MATRIX.csv` | fila sgpt |
 | WB-LOG | Log Prompt 6 | `logs/static-audit-sgpt/commands.log` | solo lectura |
+| WC-S | Static audit CoT-SPARQL | `audit/cot_sparql/STATIC_AUDIT.md` | WAVE_C Prompt 7A |
+| WC-INV | Inventario CoT-SPARQL | `audit/cot_sparql/REPOSITORY_INVENTORY.md` | 22 archivos |
+| WC-EXT | Artefactos externos | `audit/cot_sparql/EXTERNAL_ARTIFACT_INVENTORY.csv` | embeddings/GPTQ/APIs |
+| WC-AST | Code health AST | `audit/cot_sparql/STATIC_CODE_HEALTH.md` | asserts / parse |
+| WC-ARCH | Arquitectura CoT | `audit/cot_sparql/ARCHITECTURE_AND_DATA_FLOW.md` | Mermaid |
+| WC-RET | Retrieval + prompt | `audit/cot_sparql/RETRIEVAL_AND_PROMPT_AUDIT.md` | one-shot MiniLM |
+| WC-GR | Grounding/linking | `audit/cot_sparql/GROUNDING_AND_LINKING_AUDIT.md` | EL/RL DBpedia/Wikidata |
+| WC-GRM | Grounding matrix | `audit/cot_sparql/GROUNDING_COMPONENT_MATRIX.csv` | componentes |
+| WC-DS | Datasets CoT | `audit/cot_sparql/DATASET_INVENTORY.csv` | train-only |
+| WC-PROV | Provenance CoT | `audit/cot_sparql/DATASET_PROVENANCE_AND_SPLITS.md` | gold en retrieval |
+| WC-RT | Model/runtime | `audit/cot_sparql/MODEL_AND_RUNTIME_AUDIT.md` | GPTQ 34B |
+| WC-DEP | Dependency matrix | `audit/cot_sparql/DEPENDENCY_MATRIX.csv` | conda vs pip |
+| WC-VAL | Validation | `audit/cot_sparql/VALIDATION_AND_EXECUTION_AUDIT.md` | HTTP 200 |
+| WC-MET | Eval/metrics | `audit/cot_sparql/EVALUATION_AND_METRICS_AUDIT.md` | PAPER_REPORTED |
+| WC-MAP | Paper↔code map | `audit/cot_sparql/PAPER_CODE_EXPERIMENT_MAPPING.csv` | experimentos |
+| WC-AN | Anomalías | `audit/cot_sparql/CODE_ANOMALIES_AND_RISKS.md` | assert/Falcon/RL |
+| WC-RD | Readiness CoT | `audit/cot_sparql/EXECUTION_READINESS.md` | blocked/not_ready |
+| WC-MX | Matriz WAVE_C | `audit/WAVE_C_STATIC_AUDIT_MATRIX.csv` | cot complete; fires pending |
+| WC-LOG | Log Prompt 7A | `logs/static-audit-cot-sparql/commands.log` | solo lectura |
 
 ## Qué está / no está en GitHub
 

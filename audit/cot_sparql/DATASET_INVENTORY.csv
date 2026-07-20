@@ -1,0 +1,10 @@
+path,role,format,n_records,kg_affinity,split_in_repo,sha256,size_bytes,evidence_tag,notes
+dataset/qald_10_train.json,train_questions,QALD-10_dict_questions,412,Wikidata_PAPER_REPORTED,train_only,27c7174960aae9f4d615e255539ab1f0c16c707f9b4ec97af4270ab06806405e,24612153,DATA_VERIFIED,keys id/question/query/answers; no test in tree
+dataset/train_lcquad2.json,train_questions,list_json,21497,Wikidata,train_only,cd8f37d873deb17b3b9c8c06514da1ba05d747d78ae306c16fc4ba40214faab6,25208541,DATA_VERIFIED,incluye new_LabelsEnt/newPredLabels usados en notebook parquet
+dataset/train_qald.json,train_questions,list_json_QALD9_style,350,DBpedia,train_only,31ece7d4e38f3728a235c28b899ad4c86b1ad4c4da6d9673b419650bd2ff9f88,245931,DATA_VERIFIED,en_ques/sparql/entities/relations
+dataset/train_vquanda.json,train_questions,list_json,3500,DBpedia,train_only,58eff45185c6eaef5a85db443252f5ef04561d532bb0179ebce9ba40e9a69bfd,2201992,DATA_VERIFIED,en_ques/sparql/entities/relations
+dataset/*test*,eval_split,n_a,0,n_a,ABSENT,n_a,0,NOT_FOUND,sin test/val en árbol
+temp/wikidata_examples.parquet,retrieval_examples,parquet,UNKNOWN_external,Wikidata,ABSENT_local,n_a,0,EXTERNAL_ARTIFACT_REFERENCED;NOT_FOUND,construible desde train_lcquad2 según notebook
+temp/dbpedia_examples.parquet,retrieval_examples,parquet,UNKNOWN_external,DBpedia,ABSENT_local,n_a,0,EXTERNAL_ARTIFACT_REFERENCED;NOT_FOUND,esperado concat qald+vquanda; notebook no escribe parquet
+temp/embeddings_wikidata.pkl,retrieval_embeddings,pickle,UNKNOWN_external,Wikidata,ABSENT_local,n_a,0,EXTERNAL_ARTIFACT_REFERENCED;NOT_FOUND,
+temp/embeddings_dbpedia.pkl,retrieval_embeddings,pickle,UNKNOWN_external,DBpedia,ABSENT_local,n_a,0,EXTERNAL_ARTIFACT_REFERENCED;NOT_FOUND,

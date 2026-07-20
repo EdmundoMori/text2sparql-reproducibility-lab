@@ -4,15 +4,16 @@
 # inclusion_decision: audit/INCLUSION_DECISIONS.md
 # Evidencia pendiente cerrada: audit/EVIDENCE_CLOSURE.md
 
-schema_version: "0.8"
-updated_at: "2026-07-20T16:15:00+02:00"
+schema_version: "0.9"
+updated_at: "2026-07-20T17:45:00+02:00"
 phase: "1_native_audit"
-audit_prompt: "WAVE_B_SGPT_STATIC_AUDIT"
+audit_prompt: "WAVE_C_COT_SPARQL_STATIC_AUDIT_7A"
 clones_performed: true
 evidence_closure_complete: true
 wave_a_static_audit_complete: true
 wave_a_environment_definition_complete: true
 wave_b_static_audit_complete: true
+wave_c_static_audit_partial: true
 
 methods:
   - method_id: sparql_llm
@@ -173,7 +174,31 @@ methods:
     upstream_path: upstream/cot_sparql
     pinned_commit: 063edd9868425e54010a0cb49ce585ed2186be4d
     needs_api: false
-    notes: "LICENSE_NOT_CONFIRMED. Código parcial (embeddings externos)."
+    static_audit_complete: true
+    static_audit_artifact: audit/cot_sparql/STATIC_AUDIT.md
+    architecture_artifact: audit/cot_sparql/ARCHITECTURE_AND_DATA_FLOW.md
+    dataset_inventory_artifact: audit/cot_sparql/DATASET_INVENTORY.csv
+    grounding_audit_artifact: audit/cot_sparql/GROUNDING_AND_LINKING_AUDIT.md
+    metrics_audit_artifact: audit/cot_sparql/EVALUATION_AND_METRICS_AUDIT.md
+    external_artifacts_status: referenced_absent_embeddings_parquet_pkl_and_hf_gptq
+    environment_definition_status: not_started
+    retrieval_smoke_ready: blocked
+    linker_smoke_ready: conditional
+    model_smoke_ready: blocked
+    native_reproduction_ready: not_ready
+    next_execution_prompt: Prompt_7B_FIRESPARQL_WAVE_C_static_audit
+    execution_blockers:
+      - LICENSE_NOT_CONFIRMED
+      - embeddings_and_example_parquets_absent
+      - CodeLlama_34B_GPTQ_exceeds_local_6GiB
+      - no_dedicated_eval_scripts
+      - requirements_txt_is_conda_export_not_pip
+      - falcon_none_handling_crash_risk
+      - wikidata_relation_propertyLabel_key_mismatch
+      - assert_empty_question_concatenation_bug
+      - import_side_effect_loads_MiniLM
+      - validation_is_HTTP_200_not_local_syntax
+    notes: "WAVE_C Prompt 7A static audit complete. Not end-to-end: external EL/RL + gold-annotated one-shot retrieval + GPTQ LLM. CoT is prompt-induced. reproduction_status remains audit_only; native_audit_complete=false; common_adapter_allowed=false; license LICENSE_NOT_CONFIRMED."
 
   - method_id: firesparql
     display_name: FIRESPARQL

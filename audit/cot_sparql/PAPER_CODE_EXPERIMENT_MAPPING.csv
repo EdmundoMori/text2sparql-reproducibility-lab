@@ -1,0 +1,18 @@
+paper_claim_or_experiment,paper_location,code_or_data_locus,status,evidence_tag,notes
+CoT prompting Lets think step by step,paper method,main.py prompt_building L32-36,mapped,CODE_VERIFIED;PAPER_REPORTED,instruction string embeds CoT phrase
+One-shot retrieved example,paper method,contextb.py example_generation k=1,mapped,CODE_VERIFIED,argmax cosine; not CLI top_k
+Entity and relation injection in prompt,paper method,main.py L45 + contexta.py,mapped,CODE_VERIFIED,runtime EL/RL vs gold in retrieved example
+CodeLlama-34B-Instruct-GPTQ generator,paper/README,README example + AutoGPTQ main.py,mapped_external_weights,README_REPORTED;EXTERNAL_ARTIFACT_REFERENCED,not vendored; VRAM blocked locally
+Datasets LC-QuAD2 VQuAnDa QALD-9 QALD-10,paper §datasets,dataset/*.json train only,partial,DATA_VERIFIED;PAPER_REPORTED,test splits NOT_FOUND
+KG DBpedia and Wikidata,paper,kb flag + endpoints/linkers,mapped,CODE_VERIFIED;README_REPORTED,
+BLEU metric tables,paper §metrics,ABSENT eval code,unmapped,PAPER_REPORTED;NOT_FOUND,
+F1 query metric tables,paper §metrics,ABSENT eval code,unmapped,PAPER_REPORTED;NOT_FOUND,
+F1-QALD / GERBIL,paper §metrics,ABSENT,unmapped,PAPER_REPORTED;NOT_FOUND,
+Valid-query rate,paper §metrics,validation.py HTTP 200 only,partial_proxy,CODE_VERIFIED;PAPER_REPORTED,not batch eval harness
++4.4% F1 QALD-10 vs SOTA,abstract,ABSENT predictions,unmapped,PAPER_REPORTED,cannot verify in repo
++3.0% F1 QALD-9 vs SOTA,abstract,ABSENT predictions,unmapped,PAPER_REPORTED,
+F1-QALD 63.87 QALD-10 pilot,paper tables,ABSENT,unmapped,PAPER_REPORTED,
+F1 89.36 VQuAnDa / 70.45 QALD-9,paper tables,ABSENT,unmapped,PAPER_REPORTED,
+MiniLM embeddings for retrieval,paper/README,contextb.py + external pkl,mapped_external,CODE_VERIFIED;EXTERNAL_ARTIFACT_REFERENCED,pkl NOT_FOUND in git
+Embeddings download URLs,README,wget anon.to/files.dice-research,documented,README_REPORTED;EXTERNAL_ARTIFACT_REFERENCED,required for retrieval
+No LICENSE file,n_a,repo root,legal_gap,LICENSE_NOT_CONFIRMED;UNKNOWN,keep UNKNOWN SPDX

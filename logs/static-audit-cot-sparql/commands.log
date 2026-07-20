@@ -1,0 +1,19 @@
+=== 2026-07-20T17:43:23+02:00 Prompt 7A START/END ===
+HEAD_START=562b5f1108e3289ae5b93668f2bd9d994d0a5b28
+BRANCH=main HEAD_MATCH=yes
+COT_PIN=063edd9868425e54010a0cb49ce585ed2186be4d
+upstream_cot_files=22 size=64M
+git_diff_upstream_cot=0
+ast_parse: all 5 py files OK
+no installation
+no import of project modules
+no model execution
+no endpoints
+no APIs
+no downloads
+no training
+no evaluation
+LICENSE=ABSENT LICENSE_NOT_CONFIRMED
+embeddings_parquet_pkl=NOT_FOUND
+datasets_train_only=qald9:350 qald10:412 lcquad2:21497 vquanda:3500
+next=Prompt_7B_FIRESPARQL

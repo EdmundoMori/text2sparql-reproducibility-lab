@@ -1,0 +1,8 @@
+component,kb,role,implementation,external_dependency,timeout,failure_mode,ontology_aware,evidence_tag
+entity_linking_spotlight,dbpedia,EL,spaCy en_core_web_lg + dbpedia_spotlight pipe,DBpedia Spotlight service,none_in_code,service_or_model_missing,no,CODE_VERIFIED
+entity_linking_entityfishing,wikidata,EL,spaCy + entityfishing → text: wd:QID,Entity-Fishing / spacyfishing,none_in_code,service_or_qid_null,no,CODE_VERIFIED
+relation_falcon,dbpedia,RL,POST Falcon API mode=long + format_output,https://labs.tib.eu/falcon/api,none_in_code,None_then_TypeError_on_relations,no,CODE_VERIFIED
+relation_rebel_wikidata,wikidata,RL,REBEL rebel-large device0 + execute_sparql_query,HF Babelscape/rebel-large + query.wikidata.org,none_in_code,propertyLabel_mismatch_empty_ids,no,CODE_VERIFIED
+example_gold_entities_relations,dbpedia|wikidata,few_shot_annotations,parquet columns from train gold,external parquet NOT_FOUND,n_a,FileNotFoundError,no,CODE_VERIFIED;EXTERNAL_ARTIFACT_REFERENCED
+validation_http,dbpedia|wikidata,post_hoc_check,GET sparql endpoint status 200,dbpedia.org/sparql or query.wikidata.org,none_in_code,network_or_false_valid_empty,no,CODE_VERIFIED
+owl_domain_range,n_a,ontology,ABSENT,n_a,n_a,n_a,no,NOT_FOUND
