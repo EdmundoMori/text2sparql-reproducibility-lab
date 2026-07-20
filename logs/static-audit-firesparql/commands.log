@@ -1,0 +1,16 @@
+=== 2026-07-20T19:15:25+02:00 Prompt 7B ===
+HEAD_START=465755282cd3d44cc9f6918b707328ddf621bfb2
+BRANCH=main HEAD_MATCH=yes
+FIRESPARQL_PIN=48d6f168e4c1dd3dc467553aef370299911d4e76
+upstream_size=598M files~71954 results_files~71904
+git_diff_upstream_firesparql=0
+ast_parse: all codes/*.py + experiment_datasets/codes/*.py OK
+fine_tuning_trainer=NOT_FOUND external_LLaMa_Factory_inferred
+merge_models=ABSENT
+QLever_ORKG_runner=CODE_NOT_FOUND
+sciqa_test=513
+step1_configs~60
+LICENSE_NOT_CONFIRMED
+WAVE_C=complete
+no installation; no import of project modules; no model execution; no API calls; no endpoints; no downloads; no training; no generation; no cleaning; no evaluation
+next=Prompt_8_native_audit_comparative_gate

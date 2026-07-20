@@ -1,0 +1,22 @@
+paper_claim,paper_value,code_or_result_locus,status,evidence_tag,notes
+Venue IC3K 2025 KDIR DOI 10.5220/0013774000004000,published,METHOD_REGISTRY / paper,mapped,PAPER_REPORTED;PIN,README still says Under Review (MISMATCH)
+FT LLaMA-3-8B 15ep BLEU-4,0.77,bleu_rouge.py + results step2 bleu CSVs + README table,reported_not_recomputed_here,PAPER_REPORTED;README_REPORTED,local bleu CSVs exist but not treated as re-verification of paper float
+FT ROUGE-1,0.91,same,reported_not_recomputed_here,PAPER_REPORTED;README_REPORTED,
+FT ROUGE-2,0.86,same,reported_not_recomputed_here,PAPER_REPORTED;README_REPORTED,
+FT ROUGE-L,0.90,same,reported_not_recomputed_here,PAPER_REPORTED;README_REPORTED,
+FT RelaxedEM (All),0.85,accumulate_exact_match.py union / 513 INFERENCE,reported_metric_definition_inferred,PAPER_REPORTED;INFERENCE;CODE_VERIFIED,script prints unique success ID count; division by 513 is INFERENCE
+One-shot BLEU-4,0.58,README table + one_shot pipeline,reported,PAPER_REPORTED;README_REPORTED,
+One-shot ROUGE-1/2/L,0.81/0.73/0.78,README,reported,PAPER_REPORTED;README_REPORTED,
+One-shot RelaxedEM,0.40,README,reported,PAPER_REPORTED;README_REPORTED,
+Zero-shot BLEU-4,0.03,README,reported,PAPER_REPORTED;README_REPORTED,
+Zero-shot ROUGE-1/2/L,0.39/0.18/0.38,README,reported,PAPER_REPORTED;README_REPORTED,
+Zero-shot RelaxedEM,0,README,reported,PAPER_REPORTED;README_REPORTED,
+LoRA fine-tuning 15 epochs best,yes,README Fine-Tuning Details; no trainer in repo,claim_only_in_repo,README_REPORTED;NOT_FOUND,training via EXTERNAL LLaMa-Factory
+HF release best model,Sherry791/Meta-Llama-3-8B-Instruct-ft4sciqa,README Model section,external,EXTERNAL_ARTIFACT_REFERENCED;README_REPORTED,MIT on card ≠ GitHub LICENSE
+RAG does not improve / introduces noise,qualitative,vanilla_rag/ft_rag results + README Overview,reported,README_REPORTED;RESULT_FILE_VERIFIED,
+SPARQL execution using QLever,claimed,README SPARQL execution details vs results/step3_*_against_orkg,MISMATCH,README_REPORTED;RESULT_FILE_VERIFIED;CODE_NOT_FOUND,no QLever runner code; results dir name ORKG
+Requirements Coming soon,empty,no requirements.txt,gap,README_REPORTED;NOT_FOUND,
+SciQA test 513,513,test_questions.csv,verified,DATA_VERIFIED,
+BLEU/ROUGE on cleaned text vs gold query,implementation,bleu_rouge.py paths xueli_data,implemented,CODE_VERIFIED,
+Exact match on execution result sets,implementation,exact_match.py message vs gt_message,implemented,CODE_VERIFIED,
+Execution runner code,absent,—,CODE_NOT_FOUND,CODE_NOT_FOUND,do not invent QLever execution

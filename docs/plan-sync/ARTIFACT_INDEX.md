@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-20  
+**Última actualización:** 2026-07-20 (Prompt 7B)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -83,8 +83,35 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | WC-MAP | Paper↔code map | `audit/cot_sparql/PAPER_CODE_EXPERIMENT_MAPPING.csv` | experimentos |
 | WC-AN | Anomalías | `audit/cot_sparql/CODE_ANOMALIES_AND_RISKS.md` | assert/Falcon/RL |
 | WC-RD | Readiness CoT | `audit/cot_sparql/EXECUTION_READINESS.md` | blocked/not_ready |
-| WC-MX | Matriz WAVE_C | `audit/WAVE_C_STATIC_AUDIT_MATRIX.csv` | cot complete; fires pending |
+| WC-MX | Matriz WAVE_C | `audit/WAVE_C_STATIC_AUDIT_MATRIX.csv` | cot + fires complete |
 | WC-LOG | Log Prompt 7A | `logs/static-audit-cot-sparql/commands.log` | solo lectura |
+| WF-S | Static audit FIRESPARQL | `audit/firesparql/STATIC_AUDIT.md` | WAVE_C Prompt 7B |
+| WF-INV | Inventario FIRESPARQL | `audit/firesparql/REPOSITORY_INVENTORY.md` | ~598M / results |
+| WF-CK | Checkpoints/training | `audit/firesparql/CHECKPOINT_AND_TRAINING_ARTIFACT_INVENTORY.md` | trainer absent |
+| WF-EXT | Artefactos externos | `audit/firesparql/EXTERNAL_ARTIFACT_INVENTORY.csv` | HF/OpenAI/Groq |
+| WF-AST | Code health | `audit/firesparql/STATIC_CODE_HEALTH.md` | AST |
+| WF-ARCH | Arquitectura | `audit/firesparql/ARCHITECTURE_AND_DATA_FLOW.md` | Mermaid |
+| WF-PIPE | Pipeline matrix | `audit/firesparql/PIPELINE_COMPONENT_MATRIX.csv` | etapas A–H |
+| WF-FT | Fine-tuning audit | `audit/firesparql/FINE_TUNING_REPRODUCIBILITY_AUDIT.md` | LLaMa-Factory |
+| WF-MOD | Model configs | `audit/firesparql/MODEL_CONFIGURATION_MATRIX.csv` | 3B/8B epochs |
+| WF-GEN | Generation | `audit/firesparql/GENERATION_AUDIT.md` | cuda/mps |
+| WF-1S | One-shot | `audit/firesparql/ONE_SHOT_RETRIEVAL_AUDIT.md` | MiniLM gold |
+| WF-RAG | RAG | `audit/firesparql/RAG_AUDIT.md` | Groq/Chroma |
+| WF-CLN | Cleaning | `audit/firesparql/CLEANING_AND_REPAIR_AUDIT.md` | gpt-4o |
+| WF-EX | QLever/ORKG | `audit/firesparql/EXECUTION_AND_QLEVER_AUDIT.md` | CODE_NOT_FOUND |
+| WF-DS | Datasets | `audit/firesparql/DATASET_INVENTORY.csv` | SciQA 513 |
+| WF-PROV | Dataset provenance | `audit/firesparql/DATASET_PROVENANCE_AND_SPLITS.md` | splits |
+| WF-RES | Results inventory | `audit/firesparql/RESULTS_INVENTORY.csv` | configs |
+| WF-RP | Result provenance | `audit/firesparql/RESULT_PROVENANCE_AND_COMPLETENESS.md` | versioned≠repro |
+| WF-MET | Metrics | `audit/firesparql/METRICS_AUDIT.md` | BLEU/EM/RelaxedEM |
+| WF-MAP | Paper mapping | `audit/firesparql/PAPER_RESULTS_CODE_MAPPING.csv` | README table |
+| WF-EXP | Experiment matrix | `audit/firesparql/EXPERIMENT_CONFIGURATION_MATRIX.csv` | variants |
+| WF-DEP | Dependencies | `audit/firesparql/DEPENDENCY_AND_RUNTIME_AUDIT.md` | no requirements |
+| WF-DM | Dep matrix | `audit/firesparql/DEPENDENCY_MATRIX.csv` | imports |
+| WF-GENR | Generalidad | `audit/firesparql/GENERALITY_AND_KG_USAGE_AUDIT.md` | ORKG-specific |
+| WF-AN | Anomalías | `audit/firesparql/CODE_ANOMALIES_AND_RISKS.md` | paths/APIs |
+| WF-RD | Readiness | `audit/firesparql/EXECUTION_READINESS.md` | not_ready |
+| WF-LOG | Log Prompt 7B | `logs/static-audit-firesparql/commands.log` | solo lectura |
 
 ## Qué está / no está en GitHub
 

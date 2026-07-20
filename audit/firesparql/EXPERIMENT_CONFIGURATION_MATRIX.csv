@@ -1,0 +1,7 @@
+experiment_id,family,models,epochs_or_na,rounds,dataset,n_test,pipeline_stages,metrics_artifacts,paper_table_row,evidence
+E_zero_shot,vanilla,llama-3-8b-Instruct;llama-3.2-3b-Instruct,n/a,3,SciQA test,513,A→F→G→H,step1-4;bleu_rouge_results_vanilla.csv;exact_match_summary_vanilla.csv,Zero-shot BLEU0.03 ROUGE RelaxedEM0,PAPER_REPORTED;RESULT_FILE_VERIFIED
+E_one_shot,one_shot,llama-3-8b-Instruct;llama-3.2-3b-Instruct,n/a,3,SciQA test + most_similar,513,B→F→G→H,bleu_rouge_results_one_shot.csv;exact_match_summary_oneshot.csv,One-shot BLEU0.58 RelaxedEM0.40,PAPER_REPORTED;RESULT_FILE_VERIFIED
+E_ft_lora,ft,llama3_8b_lora_sft_*;llama3.2_3b_lora_sft_*,3|5|7|10|15|20,3,SciQA test,513,C→F→G→H (train EXTERNAL),bleu_rouge_results_ft.csv;exact_match_summary_ft.csv;step4 success_ids,FT 8B 15ep BLEU0.77 RelaxedEM0.85,PAPER_REPORTED;RESULT_FILE_VERIFIED;NOT_FOUND_trainer
+E_vanilla_rag,vanilla_rag,llama-3-8b;llama-3.2-3b,n/a,3,SciQA + ORKG props RAG,513,D→E→F→G→H,bleu_rouge_results_vanilla_rag.csv;exact_match_summary_vanilla_rag.csv,RAG does not improve (README),README_REPORTED;RESULT_FILE_VERIFIED
+E_ft_rag,ft_rag,3b/8b ft + deepseek/mixtral contexts,mainly 20|15,partial,SciQA + RAG,≤513,D→E→F→G→H,bleu_rouge_results_ft_rag.csv;exact_match_summary_ft_rag.csv;nested prompt2 results,ablation RAG+FT,RESULT_FILE_VERIFIED;PARTIAL
+E_dblp_data_only,dblp_present_unused_main,n/a,n/a,n/a,DBLP train/valid/test + ft json,test 2000,data_prep_only,no main pipeline results for DBLP,not in README table,DATA_VERIFIED;INFERENCE

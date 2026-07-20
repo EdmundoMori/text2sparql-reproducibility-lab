@@ -2,11 +2,11 @@
 
 **Audiencia principal:** ChatGPT (planificador de prompts) y el investigador.  
 **Repo GitHub:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-**Última actualización:** 2026-07-20 (Prompt 7A — CoT-SPARQL WAVE_C static → **audit_only**)  
-**Fase lab:** 1 — native audit; WAVE_C parcial (cot_sparql complete; firesparql pending)  
-**Commit inicial 7A:** `562b5f1108e3289ae5b93668f2bd9d994d0a5b28`
+**Última actualización:** 2026-07-20 (Prompt 7B — FIRESPARQL WAVE_C static → **audit_only**; **WAVE_C complete**)  
+**Fase lab:** 1 — native audit; WAVE_A–C static complete  
+**Commit inicial 7B:** `465755282cd3d44cc9f6918b707328ddf621bfb2`
 
-> Instrucción para el planificador: lee este archivo primero. **No asumas reproducción experimental**: clonar ≠ ejecutar ≠ reproducir un paper.
+> Instrucción para el planificador: lee este archivo primero. **No asumas reproducción experimental**: clonar ≠ ejecutar ≠ reproducir un paper. Resultados versionados en `results/` ≠ reproducidos localmente.
 
 ---
 
@@ -26,7 +26,7 @@ Laboratorio local Text-to-SPARQL: auditar y, cuando sea posible, reproducir mét
 
 ## 2. Bucle Cursor ↔ ChatGPT
 
-Detalle: [`docs/plan-sync/PLANNER_LOOP.md`](docs/plan-sync/PLANNER_LOOP.md). Tras cada prompt: actualizar PLAN_SYNC + índice + **commit/push**.
+Detalle: [`docs/plan-sync/PLANNER_LOOP.md`](docs/plan-sync/PLANNER_LOOP.md).
 
 ---
 
@@ -34,11 +34,11 @@ Detalle: [`docs/plan-sync/PLANNER_LOOP.md`](docs/plan-sync/PLANNER_LOOP.md). Tra
 
 | # | Prompt / acción | Resultado clave | Docs específicos |
 |---|---|---|---|
-| 0–4B | Fundación → entornos WAVE_A | Specs + gates | ver histórico |
 | 5A | sparql CORE_OFFLINE host Py3.10 | **setup_failed** | [`audit/sparql_llm/CORE_OFFLINE_SMOKE_REPORT.md`](audit/sparql_llm/CORE_OFFLINE_SMOKE_REPORT.md) |
 | 5B | sparql CORE_OFFLINE Docker Py3.11 | **smoke_only** | [`audit/sparql_llm/CORE_OFFLINE_PY311_SMOKE_REPORT.md`](audit/sparql_llm/CORE_OFFLINE_PY311_SMOKE_REPORT.md) |
-| 6 | SGPT WAVE_B static | **audit_only** (static complete) | [`audit/sgpt/STATIC_AUDIT.md`](audit/sgpt/STATIC_AUDIT.md) |
-| 7A | CoT-SPARQL WAVE_C static | **audit_only** (static complete; no install) | [`audit/cot_sparql/STATIC_AUDIT.md`](audit/cot_sparql/STATIC_AUDIT.md), [`audit/WAVE_C_STATIC_AUDIT_MATRIX.csv`](audit/WAVE_C_STATIC_AUDIT_MATRIX.csv) |
+| 6 | SGPT WAVE_B static | **audit_only** | [`audit/sgpt/STATIC_AUDIT.md`](audit/sgpt/STATIC_AUDIT.md) |
+| 7A | CoT-SPARQL WAVE_C static | **audit_only** | [`audit/cot_sparql/STATIC_AUDIT.md`](audit/cot_sparql/STATIC_AUDIT.md) |
+| 7B | FIRESPARQL WAVE_C static | **audit_only**; **WAVE_C complete** | [`audit/firesparql/STATIC_AUDIT.md`](audit/firesparql/STATIC_AUDIT.md), [`audit/WAVE_C_STATIC_AUDIT_MATRIX.csv`](audit/WAVE_C_STATIC_AUDIT_MATRIX.csv) |
 
 ---
 
@@ -52,41 +52,39 @@ WSL2 ~7.4 GiB RAM; RTX 4050 **6 GiB**; Compose ABSENT; Ruby ABSENT; Python 3
 |---|---|
 | A | static + env; sparql smoke_only |
 | B | SGPT static complete |
-| C | **7A cot_sparql complete**; **firesparql pending 7B** |
+| C | **complete** (7A cot_sparql + 7B firesparql) |
 | D | tebaqa excluido |
 
-### 4.3 Prompt 7A (CoT-SPARQL) — bloqueos
-- Pin `063edd98…`; **LICENSE_NOT_CONFIRMED**; LICENSE ausente.  
-- **No end-to-end:** EL/RL externos + one-shot retrieval con anotaciones gold de train + LLM GPTQ.  
-- Embeddings/parquet `temp/*` **NOT_FOUND** (URLs externas README).  
-- CodeLlama-34B-Instruct-GPTQ: **blocked** en 6 GiB.  
-- `requirements.txt` = export Conda, no pip.  
-- Validación = HTTP 200 a endpoints (no sintaxis local).  
-- Anomalías: assert pregunta vacía; Falcon `None`; RL Wikidata `propertyLabel` vs `itemLabel`.  
-- Datasets: solo train (QALD-9 350, QALD-10 412, LC-QuAD2 21497, VQuAnDa 3500); sin test/eval scripts.  
+### 4.3 Prompt 7B (FIRESPARQL) — bloqueos
+- Pin `48d6f168…`; **LICENSE_NOT_CONFIRMED** (MIT HF checkpoint **no** licencia el código GitHub).  
+- **Trainer LoRA/SFT ausente** en repo; evidencia externa LLaMa-Factory; `merge_models/` ABSENT; HPs LoRA UNKNOWN.  
+- Pipeline: zero/one-shot/FT/RAG → GPT-4o cleaning → ORKG exec (**runner CODE_NOT_FOUND**) → BLEU/ROUGE/EM.  
+- README dice QLever; árbol real = `step3_*_against_orkg`. Requirements “Coming soon”.  
+- Paths `xueli_data/` / Snellius / macOS absolutos.  
+- SciQA test **513** OK; ~60 configs step1; results versionados ≠ reproducción.  
+- Generalidad: **domain_specific_reimplementation_required** (ORKG/SciQA).  
 - `reproduction_status: audit_only`; `common_adapter_allowed: false`; `native_audit_complete: false`.
 
 ### 4.4 Lo que NO se ha hecho
-- Install/ejecución CoT-SPARQL o FIRESPARQL.  
-- Descarga embeddings/GPTQ.  
-- Train SGPT; smoke API sparql; adapters; WAVE_C 7B.
+- Install/inferencia/train FIRESPARQL o CoT.  
+- Download checkpoint 8B; OpenAI/Groq/QLever calls.  
+- Prompt 8 gate comparativo.  
+- Adapters / evaluación común / caso de estudio.
 
 ---
 
 ## 5. Estado de reproducción
 
 - `sparql_llm`: **smoke_only** (5B); 5A setup_failed.  
-- `sgpt`: **audit_only** (WAVE_B static).  
-- `cot_sparql`: **audit_only** (WAVE_C 7A static).  
-- `firesparql`: **audit_only** (static **pending** 7B).  
+- `sgpt` / `cot_sparql` / `firesparql`: **audit_only** (static complete).  
 - Ninguno `reproduced` / `partially_reproduced`.
 
 ---
 
 ## 6. Siguiente prompt recomendado
 
-1. **Prompt 7B — Auditoría estática FIRESPARQL (WAVE_C)** (prioridad).  
-2. No install CoT; no CodeLlama; no Falcon/Spotlight calls.  
+1. **Prompt 8 — Síntesis comparativa y gate de auditoría nativa** (prioridad).  
+2. No train/infer FIRESPARQL; no cuantizar 8B como “reproducción”.  
 3. Objetivo largo plazo: reproducción nativa → evaluación común → caso de estudio → errores → Text-to-SQL → método nuevo → ablaciones.
 
 → [`docs/plan-sync/NEXT_PROMPT_GUIDANCE.md`](docs/plan-sync/NEXT_PROMPT_GUIDANCE.md)
@@ -103,23 +101,23 @@ WSL2 ~7.4 GiB RAM; RTX 4050 **6 GiB**; Compose ABSENT; Ruby ABSENT; Python 3
 
 | Fecha | Cambio |
 |---|---|
-| 2026-07-20 | Prompt 5B smoke_only; Prompt 6 SGPT WAVE_B |
-| 2026-07-20 | Prompt 7A CoT-SPARQL WAVE_C static; next=7B FIRESPARQL |
+| 2026-07-20 | Prompt 7A CoT-SPARQL WAVE_C static |
+| 2026-07-20 | Prompt 7B FIRESPARQL WAVE_C static; WAVE_C complete; next=Prompt 8 gate |
 
 ---
 
 ## 9. Registro de publicación
 
-### 5A / 5B / 6 (históricos)
-Ver commits previos en GitHub `main` (`setup_failed` / `smoke_only` / SGPT static).
+### 5A / 5B / 6 / 7A (históricos)
+Ver GitHub `main`.
 
-### 7A (este prompt)
+### 7B (este prompt)
 | Campo | Valor |
 |---|---|
-| alcance | CoT-SPARQL WAVE_C static audit |
-| commit inicial | `562b5f1108e3289ae5b93668f2bd9d994d0a5b28` |
-| resultado | **audit_only** (static complete; no execution) |
-| commit final | `e1fe1fa96859779b633cade3dc70259d95e28c57` |
+| alcance | FIRESPARQL WAVE_C static audit |
+| commit inicial | `465755282cd3d44cc9f6918b707328ddf621bfb2` |
+| resultado | **audit_only** (static complete; WAVE_C complete) |
+| commit final | *(tras push)* |
 | rama | `main` |
-| push | confirmado en origin/main (`aa97fff297dcb1bb173acd4ea9a7f86d7fab6d93`) |
-| artefactos | `audit/cot_sparql/*`, `audit/WAVE_C_STATIC_AUDIT_MATRIX.csv` |
+| push | pendiente |
+| artefactos | `audit/firesparql/*`, `audit/WAVE_C_STATIC_AUDIT_MATRIX.csv` |

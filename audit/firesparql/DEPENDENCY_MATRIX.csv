@@ -1,0 +1,21 @@
+dependency,declared_where,pinned,required_by_stages,installable_from_repo,host_note,evidence
+python,NOT_FOUND_formal (notebooks hint 3.10 llama-factory env),UNKNOWN,all,no_env_file,host lab Python present but unused here,NOT_FOUND;INFERENCE
+torch,imports in generate_*,unpinned,A B C E,no,VRAM 6GiB tight for 8B fp16,CODE_VERIFIED
+transformers,imports,unpinned,A B C E,no,HF download,CODE_VERIFIED
+pandas,imports,unpinned,A B E F H,no,needed for metrics smoke,CODE_VERIFIED
+sentence-transformers,one_shot_mapping.py,unpinned,B,no,all-MiniLM-L6-v2,CODE_VERIFIED
+scikit-learn,one_shot_mapping.py,unpinned,B,no,cosine_similarity,CODE_VERIFIED
+numpy,one_shot_mapping.py,unpinned,B,no,,CODE_VERIFIED
+tqdm,one_shot_mapping.py,unpinned,B,no,,CODE_VERIFIED
+chromadb,generate_context_rag.py,unpinned,D,no,EphemeralClient,CODE_VERIFIED
+llama-index (core; embeddings.huggingface; llms.groq; vector_stores.chroma),generate_context_rag.py,unpinned,D,no,Groq path,CODE_VERIFIED
+python-dotenv,cleaning;rag;bleu_rouge,unpinned,D F H,no,.env secrets,CODE_VERIFIED
+openai,sparql-cleaning-llm.py,unpinned,F,no,gpt-4o + OPENAI_API_KEY,CODE_VERIFIED
+nltk,bleu_rouge.py,unpinned,H,no,BLEU-4,CODE_VERIFIED
+rouge (package),bleu_rouge.py,unpinned,H,no,ROUGE scores,CODE_VERIFIED
+peft / trl / LoraConfig / SFTTrainer,NOT_FOUND,n/a,FT_TRAIN,n/a,external LLaMa-Factory,NOT_FOUND
+requirements.txt,ABSENT,n/a,env,no,Coming soon README,NOT_FOUND;README_REPORTED
+environment.yml,ABSENT,n/a,env,no,,NOT_FOUND
+Dockerfile,ABSENT,n/a,env,no,,NOT_FOUND
+GROQ_API_KEY,env,n/a,D,secret,blocked smoke,CODE_VERIFIED
+OPENAI_API_KEY,env,n/a,F,secret,blocked smoke,CODE_VERIFIED

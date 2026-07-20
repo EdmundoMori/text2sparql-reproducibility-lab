@@ -1,0 +1,19 @@
+artifact_id,location_claimed,present_in_repo,role,license_note,evidence,notes
+HF_ft_checkpoint_8b,https://huggingface.co/Sherry791/Meta-Llama-3-8B-Instruct-ft4sciqa,no,best_FT_weights_15ep,MIT_on_model_card_only_do_not_transfer_to_GitHub_code,EXTERNAL_ARTIFACT_REFERENCED;README_REPORTED,README + METHOD_REGISTRY; not vendored in git
+merge_models_dir,merge_models/$MODEL (run_all_generate.sh),no,local_merged_LoRA_weights,N/A_code_LICENSE_NOT_CONFIRMED,CODE_VERIFIED;NOT_FOUND,directory ABSENT at repo root
+LLaMa_Factory_paths,/Users/sherrypan/GitHub/LLaMa-Factory/...,no,external_training_and_data_layout,UNKNOWN_external,CODE_VERIFIED,absolute paths in one_shot_mapping.py and notebooks
+base_llama3_8b,meta-llama/Meta-Llama-3-8B-Instruct (implied),no,base_for_FT_and_zero_shot,Meta_Llama_license_external,README_REPORTED;INFERENCE,HF download required for inference
+base_llama32_3b,meta-llama/Llama-3.2-3B-Instruct (comments/results),no,ablation_smaller_model,Meta_Llama_license_external,CODE_VERIFIED;RESULT_FILE_VERIFIED,used in results naming
+MiniLM_all_MiniLM_L6_v2,sentence-transformers/all-MiniLM-L6-v2,no,one_shot_similarity,Apache-2.0_typical_HF,CODE_VERIFIED,one_shot_mapping.py
+bge_small_en,BAAI/bge-small-en,no,RAG_embeddings,EXTERNAL,CODE_VERIFIED,generate_context_rag.py
+Groq_deepseek_r1_70b,deepseek-r1-distill-llama-70b via Groq,no,RAG_context_LLM,API_TOS,CODE_VERIFIED,GROQ_API_KEY required
+OpenAI_gpt4o,gpt-4o via OpenAI API,no,SPARQL_cleaning,API_TOS,CODE_VERIFIED,OPENAI_API_KEY; sparql-cleaning-llm.py
+ORKG_SPARQL_endpoint,ORKG public/endpoint (implied by results dir),no,execution_backend,N/A,RESULT_FILE_VERIFIED;CODE_NOT_FOUND,results under step3_*_against_orkg; runner script NOT_FOUND
+QLever_endpoint,README claim Qlever,no,claimed_execution,N/A,README_REPORTED;CODE_NOT_FOUND;MISMATCH,README says Qlever; dir is against_orkg; no runner code
+xueli_data_symlink_layout,xueli_data/sciqa/...,partial_via_experiment_datasets,hardcoded_runtime_paths,N/A,CODE_VERIFIED,scripts expect xueli_data/; data lives under experiment_datasets/
+requirements_txt,requirements.txt,no,env_spec,N/A,NOT_FOUND,README Requirements Coming soon
+environment_yml,environment.yml,no,env_spec,N/A,NOT_FOUND,
+Dockerfile,Dockerfile,no,container,N/A,NOT_FOUND,
+LICENSE_file,LICENSE*,no,repo_license,LICENSE_NOT_CONFIRMED,NOT_FOUND,licenses/firesparql/
+CITATION,CITATION / CITATION.cff,no,citation,N/A,NOT_FOUND,
+paper_IC3K,DOI 10.5220/0013774000004000,n/a,publication,SCITEPRESS,PAPER_REPORTED;PIN,README still Under Review

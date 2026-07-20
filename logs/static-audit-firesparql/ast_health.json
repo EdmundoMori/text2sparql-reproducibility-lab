@@ -1,0 +1,156 @@
+[
+  {
+    "file": "codes/accumulate_exact_match.py",
+    "ok": true,
+    "imports": [],
+    "lines": 32
+  },
+  {
+    "file": "codes/bleu_rouge.py",
+    "ok": true,
+    "imports": [
+      "dotenv",
+      "nltk.translate.bleu_score",
+      "os",
+      "pandas",
+      "re",
+      "rouge",
+      "sys"
+    ],
+    "lines": 106
+  },
+  {
+    "file": "codes/generate_sparql_mps.py",
+    "ok": true,
+    "imports": [
+      "os",
+      "pandas",
+      "sys",
+      "time",
+      "torch",
+      "transformers"
+    ],
+    "lines": 84
+  },
+  {
+    "file": "codes/sparql-cleaning-llm.py",
+    "ok": true,
+    "imports": [
+      "dotenv",
+      "openai",
+      "os",
+      "sys"
+    ],
+    "lines": 203
+  },
+  {
+    "file": "codes/generate_sparql_rag_mps.py",
+    "ok": true,
+    "imports": [
+      "os",
+      "pandas",
+      "re",
+      "sys",
+      "time",
+      "torch",
+      "transformers"
+    ],
+    "lines": 163
+  },
+  {
+    "file": "codes/generate_sparql_one_shot_cuda.py",
+    "ok": true,
+    "imports": [
+      "os",
+      "pandas",
+      "sys",
+      "time",
+      "torch",
+      "transformers"
+    ],
+    "lines": 102
+  },
+  {
+    "file": "codes/generate_sparql_rag_cuda.py",
+    "ok": true,
+    "imports": [
+      "os",
+      "pandas",
+      "re",
+      "sys",
+      "time",
+      "torch",
+      "transformers"
+    ],
+    "lines": 160
+  },
+  {
+    "file": "codes/generate_context_rag.py",
+    "ok": true,
+    "imports": [
+      "chromadb",
+      "dotenv",
+      "json",
+      "llama_index.core",
+      "llama_index.embeddings.huggingface",
+      "llama_index.llms.groq",
+      "llama_index.vector_stores.chroma",
+      "os",
+      "pandas",
+      "time",
+      "warnings"
+    ],
+    "lines": 147
+  },
+  {
+    "file": "codes/generate_sparql_cuda.py",
+    "ok": true,
+    "imports": [
+      "os",
+      "pandas",
+      "sys",
+      "time",
+      "torch",
+      "transformers"
+    ],
+    "lines": 77
+  },
+  {
+    "file": "codes/exact_match.py",
+    "ok": true,
+    "imports": [
+      "argparse",
+      "os",
+      "pandas"
+    ],
+    "lines": 64
+  },
+  {
+    "file": "experiment_datasets/codes/dblp-training-transformation.py",
+    "ok": true,
+    "imports": [
+      "json"
+    ],
+    "lines": 30
+  },
+  {
+    "file": "experiment_datasets/codes/SciQA-training-transformation.py",
+    "ok": true,
+    "imports": [
+      "json"
+    ],
+    "lines": 30
+  },
+  {
+    "file": "experiment_datasets/codes/one_shot_mapping.py",
+    "ok": true,
+    "imports": [
+      "numpy",
+      "pandas",
+      "sentence_transformers",
+      "sklearn.metrics.pairwise",
+      "tqdm"
+    ],
+    "lines": 51
+  }
+]

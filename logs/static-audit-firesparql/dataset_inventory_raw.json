@@ -1,0 +1,252 @@
+[
+  {
+    "path": "experiment_datasets/codes/SciQA-training-transformation.py",
+    "size": 1150,
+    "sha256": "e3d47f689483096a05677d94be449ed40aaa3ffc66b60395f57b352ac254bb6c",
+    "n": null,
+    "fields": null
+  },
+  {
+    "path": "experiment_datasets/codes/dblp-training-transformation.py",
+    "size": 1188,
+    "sha256": "20abc2b779956960217efa3815fe9207eb02096c33707478c467d2363b0d80d8",
+    "n": null,
+    "fields": null
+  },
+  {
+    "path": "experiment_datasets/codes/one_shot_mapping.py",
+    "size": 1917,
+    "sha256": "2942daceb1f98dbe1369a2050c78d71a646154d438af737adcb14fb20982ebae",
+    "n": null,
+    "fields": null
+  },
+  {
+    "path": "experiment_datasets/codes/read_all_json.ipynb",
+    "size": 5040,
+    "sha256": "87f550c1bae6ef19d632341ae9b202452552f3cafc0127ca9917d5142ad97c44",
+    "n": null,
+    "fields": null
+  },
+  {
+    "path": "experiment_datasets/codes/read_test_quesionts.ipynb",
+    "size": 28651,
+    "sha256": "086658abe0f23602faae2f18495cb57391a8efc8316e3742c725fb43f6969bbd",
+    "n": null,
+    "fields": null
+  },
+  {
+    "path": "experiment_datasets/dblp/project_data/dblp_training_data4ft.json",
+    "size": 6617178,
+    "sha256": "18547ce8d25711d8928422a7e3ad6551c00cd40266831e767c91ad31c6f41f0f",
+    "n": 7000,
+    "fields": [
+      "instruction",
+      "input",
+      "output"
+    ]
+  },
+  {
+    "path": "experiment_datasets/dblp/project_data/test_questions.csv",
+    "size": 747336,
+    "sha256": "9eacc6fe136af23f9c90eabdc31fb1e67550c306739d3f795257ca9ddea4b2fb",
+    "n": 2000,
+    "fields": [
+      "id",
+      "question",
+      "query"
+    ]
+  },
+  {
+    "path": "experiment_datasets/dblp/test/answers.json",
+    "size": 11752785,
+    "sha256": "6511e48106493a7eec6664f1d3f4148e51c328b5dd56b4c5f7fa882c7794e239",
+    "n": 1,
+    "fields": [
+      "answers"
+    ]
+  },
+  {
+    "path": "experiment_datasets/dblp/test/questions.json",
+    "size": 1922490,
+    "sha256": "7e6b10dfb6e8841f7487e82a38aa10c0ba5fb563549e5879dea91b3aa3c41049",
+    "n": 1,
+    "fields": [
+      "questions"
+    ]
+  },
+  {
+    "path": "experiment_datasets/dblp/train/answers.json",
+    "size": 46628300,
+    "sha256": "21703508f0f21a1e2131339979b3951f6bd8c9cdd1908fe6de85fef909c662ca",
+    "n": 1,
+    "fields": [
+      "answers"
+    ]
+  },
+  {
+    "path": "experiment_datasets/dblp/train/questions.json",
+    "size": 6702203,
+    "sha256": "82db7a67e1fa1493a63b1a1891227df276583b144d2963ebe6c6eb60c2c6296c",
+    "n": 1,
+    "fields": [
+      "questions"
+    ]
+  },
+  {
+    "path": "experiment_datasets/dblp/valid/answers.json",
+    "size": 4368243,
+    "sha256": "492f1f1c3dc2f0d8c369e47b4d6e510278c1d09eeb956d5e2aafaa67f694a158",
+    "n": 1,
+    "fields": [
+      "answers"
+    ]
+  },
+  {
+    "path": "experiment_datasets/dblp/valid/questions.json",
+    "size": 957016,
+    "sha256": "2d02c1109f83735f8d1454aead2e3d73aa93375cbc98d97c501823e45155be1c",
+    "n": 1,
+    "fields": [
+      "questions"
+    ]
+  },
+  {
+    "path": "experiment_datasets/sciqa/all.json",
+    "size": 7184394,
+    "sha256": "9c57e9df35098845be0f9f4762f2b22cd94be864a1493be80a284ffb5844d60e",
+    "n": 1,
+    "fields": [
+      "questions"
+    ]
+  },
+  {
+    "path": "experiment_datasets/sciqa/project_data/handcrafted.csv",
+    "size": 35878,
+    "sha256": "e364ffdd52010987ce2d3e90a523d0cdeedd39e5b8edb9537956561b696bbf6a",
+    "n": 100,
+    "fields": [
+      "question",
+      "query"
+    ]
+  },
+  {
+    "path": "experiment_datasets/sciqa/project_data/most_similar_questions.csv",
+    "size": 670564,
+    "sha256": "9b4150dd3c3eafc760bec6049d18c8fbf6fe8d50c4288ee4715759864d06f4fe",
+    "n": 513,
+    "fields": [
+      "id",
+      "test_question",
+      "test_query",
+      "best_train_question",
+      "train_query"
+    ]
+  },
+  {
+    "path": "experiment_datasets/sciqa/project_data/orkg-property.json",
+    "size": 758553,
+    "sha256": "220f6d3d2409590dbf208b6915f31bb57607902f73bb5c96519367ea28cca2ad",
+    "n": 9062,
+    "fields": [
+      "property",
+      "label"
+    ]
+  },
+  {
+    "path": "experiment_datasets/sciqa/project_data/rag_files/orkg-property.json",
+    "size": 758553,
+    "sha256": "220f6d3d2409590dbf208b6915f31bb57607902f73bb5c96519367ea28cca2ad",
+    "n": 9062,
+    "fields": [
+      "property",
+      "label"
+    ]
+  },
+  {
+    "path": "experiment_datasets/sciqa/project_data/sciqa_training_data4ft.json",
+    "size": 2151124,
+    "sha256": "739c183cb29bff44eaa276fe8284d472f526f26df9d36ff633858540d45aef5e",
+    "n": 1795,
+    "fields": [
+      "instruction",
+      "input",
+      "output"
+    ]
+  },
+  {
+    "path": "experiment_datasets/sciqa/project_data/test_questions.csv",
+    "size": 333882,
+    "sha256": "14c2ad8c4014ca19445e6735d5f08cc0e5cf356ac478d3b80f01727fece8fb06",
+    "n": 513,
+    "fields": [
+      "id",
+      "question",
+      "query"
+    ]
+  },
+  {
+    "path": "experiment_datasets/sciqa/project_data/train_questions.csv",
+    "size": 1148183,
+    "sha256": "ae532eb31c9e752fe00f51be885984d7efb11d439c6688c64bd8c9f5bed374f7",
+    "n": 1795,
+    "fields": [
+      "id",
+      "question",
+      "query"
+    ]
+  },
+  {
+    "path": "experiment_datasets/sciqa/test/answers.json",
+    "size": 906172,
+    "sha256": "d60ac4d6295d3baa2612fb46f28dd07464977a9aa14f0de8c2d04db2b15b4740",
+    "n": 1,
+    "fields": [
+      "answers"
+    ]
+  },
+  {
+    "path": "experiment_datasets/sciqa/test/questions.json",
+    "size": 566108,
+    "sha256": "1f03775b4e5e02ff85be6d28efae48876a6a80702f3f00d87a0d0fe13c35ea86",
+    "n": 1,
+    "fields": [
+      "questions"
+    ]
+  },
+  {
+    "path": "experiment_datasets/sciqa/train/answers.json",
+    "size": 3162307,
+    "sha256": "a2367046b15050dcfb26db5b6d169beaf7854a6e56a2264cab8f90cc085226e2",
+    "n": 1,
+    "fields": [
+      "answers"
+    ]
+  },
+  {
+    "path": "experiment_datasets/sciqa/train/questions.json",
+    "size": 1959149,
+    "sha256": "d5cb58a0c2348e8d5743416818fc590a8d79f41b8cd59c5cfdcb7a23c0a6bcbb",
+    "n": 1,
+    "fields": [
+      "questions"
+    ]
+  },
+  {
+    "path": "experiment_datasets/sciqa/valid/answers.json",
+    "size": 436687,
+    "sha256": "3cab155f29b48dc84d17b4779e70902e092b2c4ec301291dd2fc1d05205335d8",
+    "n": 1,
+    "fields": [
+      "answers"
+    ]
+  },
+  {
+    "path": "experiment_datasets/sciqa/valid/questions.json",
+    "size": 274655,
+    "sha256": "26506e2179b3cf9043d76b9a63194d56ee6031eb66ec52ff2220bc85eb071460",
+    "n": 1,
+    "fields": [
+      "questions"
+    ]
+  }
+]

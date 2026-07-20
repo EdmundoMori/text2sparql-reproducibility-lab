@@ -1,0 +1,302 @@
+[
+  {
+    "family": "ft",
+    "config": "llama3.2_3b_lora_sft_10epochs_round1",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3.2_3b_lora_sft_10epochs_round2",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3.2_3b_lora_sft_10epochs_round3",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3.2_3b_lora_sft_15epochs_round1",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3.2_3b_lora_sft_15epochs_round2",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3.2_3b_lora_sft_15epochs_round3",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3.2_3b_lora_sft_20epochs_round1",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3.2_3b_lora_sft_20epochs_round2",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3.2_3b_lora_sft_20epochs_round3",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3.2_3b_lora_sft_3epochs_round1",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3.2_3b_lora_sft_3epochs_round2",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3.2_3b_lora_sft_3epochs_round3",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3.2_3b_lora_sft_5epochs_round1",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3.2_3b_lora_sft_5epochs_round2",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3.2_3b_lora_sft_5epochs_round3",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3.2_3b_lora_sft_7epochs_round1",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3.2_3b_lora_sft_7epochs_round2",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3.2_3b_lora_sft_7epochs_round3",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3_8b_lora_sft_10epochs_round1",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3_8b_lora_sft_10epochs_round2",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3_8b_lora_sft_10epochs_round3",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3_8b_lora_sft_15epochs_round1",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3_8b_lora_sft_15epochs_round2",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3_8b_lora_sft_15epochs_round3",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3_8b_lora_sft_20epochs_round1",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3_8b_lora_sft_20epochs_round2",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3_8b_lora_sft_20epochs_round3",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3_8b_lora_sft_3epochs_round1",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3_8b_lora_sft_3epochs_round2",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3_8b_lora_sft_3epochs_round3",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3_8b_lora_sft_5epochs_round1",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3_8b_lora_sft_5epochs_round2",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3_8b_lora_sft_5epochs_round3",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3_8b_lora_sft_7epochs_round1",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3_8b_lora_sft_7epochs_round2",
+    "n_txt": 513
+  },
+  {
+    "family": "ft",
+    "config": "llama3_8b_lora_sft_7epochs_round3",
+    "n_txt": 513
+  },
+  {
+    "family": "ft_rag",
+    "config": "Llama-3.2-3B-Instruct-deepseekr1distll4rag",
+    "n_txt": 513
+  },
+  {
+    "family": "ft_rag",
+    "config": "ft_rag",
+    "n_txt": 0
+  },
+  {
+    "family": "ft_rag",
+    "config": "llama3.2-3b_mixtral-8x7b-32768",
+    "n_txt": 440
+  },
+  {
+    "family": "ft_rag",
+    "config": "llama3.2_3b_lora_sft_20epochs_prompt1",
+    "n_txt": 513
+  },
+  {
+    "family": "ft_rag",
+    "config": "llama3.2_3b_lora_sft_20epochs_prompt2",
+    "n_txt": 513
+  },
+  {
+    "family": "ft_rag",
+    "config": "prompt2",
+    "n_txt": 0
+  },
+  {
+    "family": "one_shot",
+    "config": "llama-3-8b-Instruct_round1",
+    "n_txt": 513
+  },
+  {
+    "family": "one_shot",
+    "config": "llama-3-8b-Instruct_round2",
+    "n_txt": 513
+  },
+  {
+    "family": "one_shot",
+    "config": "llama-3-8b-Instruct_round3",
+    "n_txt": 513
+  },
+  {
+    "family": "one_shot",
+    "config": "llama-3.2-3b-Instruct_round1",
+    "n_txt": 513
+  },
+  {
+    "family": "one_shot",
+    "config": "llama-3.2-3b-Instruct_round2",
+    "n_txt": 513
+  },
+  {
+    "family": "one_shot",
+    "config": "llama-3.2-3b-Instruct_round3",
+    "n_txt": 513
+  },
+  {
+    "family": "vanilla",
+    "config": "llama-3-8b-Instruct_round1",
+    "n_txt": 513
+  },
+  {
+    "family": "vanilla",
+    "config": "llama-3-8b-Instruct_round2",
+    "n_txt": 513
+  },
+  {
+    "family": "vanilla",
+    "config": "llama-3-8b-Instruct_round3",
+    "n_txt": 513
+  },
+  {
+    "family": "vanilla",
+    "config": "llama-3.2-3b-Instruct_round1",
+    "n_txt": 513
+  },
+  {
+    "family": "vanilla",
+    "config": "llama-3.2-3b-Instruct_round2",
+    "n_txt": 513
+  },
+  {
+    "family": "vanilla",
+    "config": "llama-3.2-3b-Instruct_round3",
+    "n_txt": 513
+  },
+  {
+    "family": "vanilla_rag",
+    "config": "llama-3-8b-Instruct_round1",
+    "n_txt": 513
+  },
+  {
+    "family": "vanilla_rag",
+    "config": "llama-3-8b-Instruct_round2",
+    "n_txt": 513
+  },
+  {
+    "family": "vanilla_rag",
+    "config": "llama-3-8b-Instruct_round3",
+    "n_txt": 513
+  },
+  {
+    "family": "vanilla_rag",
+    "config": "llama-3.2-3b-Instruct_round1",
+    "n_txt": 513
+  },
+  {
+    "family": "vanilla_rag",
+    "config": "llama-3.2-3b-Instruct_round2",
+    "n_txt": 513
+  },
+  {
+    "family": "vanilla_rag",
+    "config": "llama-3.2-3b-Instruct_round3",
+    "n_txt": 513
+  }
+]
