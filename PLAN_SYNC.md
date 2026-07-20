@@ -212,7 +212,7 @@ Ver lista completa y estable en:
 | alcance | SGPT WAVE_B static audit |
 | commit inicial | `b0e5fdaa0902481d1c782bc28a44e588a035facd` |
 | resultado | **audit_only** (static complete; no execution) |
-| commit final | *(tras push)* |
+| commit final | `00d5552038996035fb20e996899feeb36222be1e` |
 | rama | `main` |
-| push | pendiente |
+| push | confirmado (siguiente push) |
 | artefactos | `audit/sgpt/*`, `audit/WAVE_B_STATIC_AUDIT_MATRIX.csv` |
