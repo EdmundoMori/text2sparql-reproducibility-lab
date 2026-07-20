@@ -134,7 +134,7 @@ Ver GitHub `main`.
 | alcance | Síntesis comparativa + gate auditoría nativa (documental) |
 | commit inicial | `dbb21de570e4da2647fcfe774a91590e086d9542` |
 | resultado | **GO_NEXT** = protocolo API/SIB `sparql_llm`; Fase 1 no cerrada |
-| commit final | *(se rellena tras push)* |
+| commit final | `946b0dbcfde1647043348e4fbf2803281b5edd22` |
 | rama | `main` |
-| push | *(pendiente)* |
+| push | confirmado en origin/main |
 | artefactos | `audit/NATIVE_AUDIT_*`, `NEXT_EXECUTION_DECISION.md`, `docs/decisions/003_*`, `METHOD_REGISTRY.yaml` v0.11 |
