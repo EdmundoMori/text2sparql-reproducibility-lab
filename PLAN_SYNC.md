@@ -198,6 +198,6 @@ Ver lista completa y estable en:
 | base digest | `python@sha256:b18992999dbe963a45a8a4da40ac2b1975be1a776d939d098c647482bcad5cba` |
 | commit final | `4495522f7b8f2dd64bffef84b0b7b5f4e68ae532` |
 | rama | `main` |
-| push | confirmado (siguiente push) |
+| push | confirmado en origin/main (`04a9f2b4803d95a87c03ffde508e7213b1f67d50`) |
 | artefactos | §3 fila 5B |
 
