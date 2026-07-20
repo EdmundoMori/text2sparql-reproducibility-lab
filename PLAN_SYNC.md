@@ -121,5 +121,5 @@ Ver commits previos en GitHub `main` (`setup_failed` / `smoke_only` / SGPT stati
 | resultado | **audit_only** (static complete; no execution) |
 | commit final | `e1fe1fa96859779b633cade3dc70259d95e28c57` |
 | rama | `main` |
-| push | confirmado (siguiente push) |
+| push | confirmado en origin/main (`aa97fff297dcb1bb173acd4ea9a7f86d7fab6d93`) |
 | artefactos | `audit/cot_sparql/*`, `audit/WAVE_C_STATIC_AUDIT_MATRIX.csv` |
