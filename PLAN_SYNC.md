@@ -124,7 +124,7 @@ HEAD previo: `3d89a8d61f3fed8eecec8e49f6b79baccf677a76`
 | commit inicial | `3d89a8d61f3fed8eecec8e49f6b79baccf677a76` |
 | modalidad futura | `LOCAL_CHAT_API_ONE_QUESTION` |
 | gate | `CONDITIONAL_GO` |
-| commit final | *(tras push)* |
+| commit final | `385e829b67df77b56f4f4732a40af0361cb69ab1` |
 | rama | `main` |
-| push | *(pendiente)* |
+| push | confirmado en origin/main |
 | artefactos | `docs/protocols/sparql_llm/*`, `audit/sparql_llm/API_SIB_PROTOCOL_READINESS.md` |
