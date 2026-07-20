@@ -117,7 +117,7 @@ Ver GitHub `main`.
 | alcance | FIRESPARQL WAVE_C static audit |
 | commit inicial | `465755282cd3d44cc9f6918b707328ddf621bfb2` |
 | resultado | **audit_only** (static complete; WAVE_C complete) |
-| commit final | *(tras push)* |
+| commit final | `4b41ed757c2fb189157dcb1386fdb1a769bfd74e` |
 | rama | `main` |
-| push | pendiente |
+| push | confirmado (siguiente push) |
 | artefactos | `audit/firesparql/*`, `audit/WAVE_C_STATIC_AUDIT_MATRIX.csv` |
