@@ -1,0 +1,25 @@
+result_id,dataset,partition,paper_configuration,cli_equivalent,knowledge_flag,masked_flag,metric,paper_value,metric_family,code_metric_notes,evidence_tags
+T4_SGPTQ_LCQUAD2,LC-QuAD 2.0,test (paper 6046; repo 5969 MISMATCH),SGPT_Q,train/eval WITHOUT --knowledge,off,off_default,BLEU,60.50,lexical,eval.py BLEU; double-update anomaly,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQ_LCQUAD2,LC-QuAD 2.0,test,SGPT_Q,WITHOUT --knowledge,off,off_default,F1,83.45,lexical,printed but NOT in result dict; double-update,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQ_LCQUAD2,LC-QuAD 2.0,test,SGPT_Q,WITHOUT --knowledge,off,off_default,SP-BLEU,63.59,lexical_var_norm,SP path raw+normalized updates,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQ_LCQUAD2,LC-QuAD 2.0,test,SGPT_Q,WITHOUT --knowledge,off,off_default,SP-F1,86.22,lexical_var_norm,printed not in result dict,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQ_VQUANDA,VQuAnDa,test (1000),SGPT_Q,WITHOUT --knowledge,off,off_default,BLEU,63.82,lexical,same anomalies,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQ_VQUANDA,VQuAnDa,test,SGPT_Q,WITHOUT --knowledge,off,off_default,F1,87.08,lexical,same,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQ_VQUANDA,VQuAnDa,test,SGPT_Q,WITHOUT --knowledge,off,off_default,SP-BLEU,63.82,lexical_var_norm,same,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQ_VQUANDA,VQuAnDa,test,SGPT_Q,WITHOUT --knowledge,off,off_default,SP-F1,87.08,lexical_var_norm,same,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQ_QALD9,QALD-9 English,test (150),SGPT_Q,WITHOUT --knowledge,off,off_default,BLEU,29.95,lexical,same,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQ_QALD9,QALD-9 English,test,SGPT_Q,WITHOUT --knowledge,off,off_default,F1,60.22,lexical,same,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQ_QALD9,QALD-9 English,test,SGPT_Q,WITHOUT --knowledge,off,off_default,SP-BLEU,32.12,lexical_var_norm,same,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQ_QALD9,QALD-9 English,test,SGPT_Q,WITHOUT --knowledge,off,off_default,SP-F1,64.57,lexical_var_norm,same,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQK_LCQUAD2,LC-QuAD 2.0,test,SGPT_Q_K,WITH --knowledge (entities as K),on,off_default,BLEU,73.78,lexical,K: gold-SPARQL-filtered QIDs from new_LabelsEnt (INFERENCE),PAPER_REPORTED;CODE_VERIFIED;INFERENCE
+T4_SGPTQK_LCQUAD2,LC-QuAD 2.0,test,SGPT_Q_K,WITH --knowledge,on,off_default,F1,89.04,lexical,same,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQK_LCQUAD2,LC-QuAD 2.0,test,SGPT_Q_K,WITH --knowledge,on,off_default,SP-BLEU,77.85,lexical_var_norm,same,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQK_LCQUAD2,LC-QuAD 2.0,test,SGPT_Q_K,WITH --knowledge,on,off_default,SP-F1,92.27,lexical_var_norm,same,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQK_VQUANDA,VQuAnDa,test,SGPT_Q_K,WITH --knowledge,on,off_default,BLEU,72.58,lexical,K: item entities list unfiltered,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQK_VQUANDA,VQuAnDa,test,SGPT_Q_K,WITH --knowledge,on,off_default,F1,88.87,lexical,same,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQK_VQUANDA,VQuAnDa,test,SGPT_Q_K,WITH --knowledge,on,off_default,SP-BLEU,72.58,lexical_var_norm,same,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQK_VQUANDA,VQuAnDa,test,SGPT_Q_K,WITH --knowledge,on,off_default,SP-F1,88.87,lexical_var_norm,same,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQK_QALD9,QALD-9 English,test,SGPT_Q_K,WITH --knowledge,on,off_default,BLEU,35.68,lexical,K: item entities unfiltered,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQK_QALD9,QALD-9 English,test,SGPT_Q_K,WITH --knowledge,on,off_default,F1,67.82,lexical,same,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQK_QALD9,QALD-9 English,test,SGPT_Q_K,WITH --knowledge,on,off_default,SP-BLEU,41.88,lexical_var_norm,same,PAPER_REPORTED;CODE_VERIFIED
+T4_SGPTQK_QALD9,QALD-9 English,test,SGPT_Q_K,WITH --knowledge,on,off_default,SP-F1,72.98,lexical_var_norm,same,PAPER_REPORTED;CODE_VERIFIED

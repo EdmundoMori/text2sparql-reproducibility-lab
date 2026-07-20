@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-19  
+**Última actualización:** 2026-07-20  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -43,14 +43,29 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | WA-EMX | Matriz entornos | `audit/WAVE_A_ENVIRONMENT_DEFINITION_MATRIX.csv` | scopes por método |
 | WA-GAP | Gaps entornos | `audit/WAVE_A_ENVIRONMENT_GAPS.md` | GO/NO-GO + primer smoke |
 | ENV-LOG | Log Prompt 4B | `logs/environment-definition-wave-a/commands.log` | host tools |
-| SM5A | Smoke 5A host | `audit/sparql_llm/CORE_OFFLINE_SMOKE_REPORT.md` | setup_failed Py3.10 |
-| SM5B | Smoke 5B Docker | `audit/sparql_llm/CORE_OFFLINE_PY311_SMOKE_REPORT.md` | smoke_only Py3.11 |
+| SM5A-RPT | Smoke 5A host report | `audit/sparql_llm/CORE_OFFLINE_SMOKE_REPORT.md` | setup_failed Py3.10 |
+| SM5B-RPT | Smoke 5B Docker report | `audit/sparql_llm/CORE_OFFLINE_PY311_SMOKE_REPORT.md` | smoke_only Py3.11 |
 | DF311 | Dockerfile CORE | `environments/sparql_llm/Dockerfile.core-offline-py311` | digest pin |
 | CT311 | Container notes | `environments/sparql_llm/container_py311.md` | runtime Docker |
-| SM5A | Informe smoke CORE_OFFLINE | `audit/sparql_llm/CORE_OFFLINE_SMOKE_REPORT.md` | Resultado 5A |
-| SM5A-R | Run experiment | `experiments/native/sparql_llm/20260719T112306Z/` | manifest/result |
-| SM5A-L | Logs smoke | `logs/smoke/sparql_llm-core-offline/20260719T112306Z/` | pip/freeze/smoke |
-| SM5A-H | Harness lab | `scripts/smoke/sparql_llm_core_offline.py` | Reutilizar en 5B |
+| SM5A-R | Run experiment 5A | `experiments/native/sparql_llm/20260719T112306Z/` | manifest/result setup_failed |
+| SM5A-L | Logs smoke 5A | `logs/smoke/sparql_llm-core-offline/20260719T112306Z/` | pip/freeze/smoke |
+| SM5B-R | Run experiment 5B | `experiments/native/sparql_llm/20260720T134943Z/` | smoke_only Docker |
+| SM5B-L | Logs smoke 5B | `logs/smoke/sparql_llm-core-offline-py311/20260720T134943Z/` | docker/import/smoke |
+| SM-H | Harness lab | `scripts/smoke/sparql_llm_core_offline.py` | CORE_OFFLINE harness |
+| WB-S | Static audit SGPT | `audit/sgpt/STATIC_AUDIT.md` | WAVE_B principal |
+| WB-INV | Inventario repo SGPT | `audit/sgpt/REPOSITORY_INVENTORY.md` | árbol / archivos |
+| WB-CK | Checkpoints SGPT | `audit/sgpt/CHECKPOINT_AND_RESULTS_INVENTORY.md` | ausencias |
+| WB-ARCH | Arquitectura SGPT | `audit/sgpt/ARCHITECTURE_AND_DATA_FLOW.md` | modelo + Mermaid |
+| WB-VAR | Variantes SGPT | `audit/sgpt/CONFIGURATION_AND_VARIANTS_MATRIX.csv` | Q / Q_K / masked |
+| WB-DS | Inventario datasets | `audit/sgpt/DATASET_INVENTORY.csv` | conteos + sha256 |
+| WB-PROV | Provenance splits | `audit/sgpt/DATASET_PROVENANCE_AND_SPLITS.md` | mismatch 6046; qald9 IDs |
+| WB-TR | Training config | `audit/sgpt/TRAINING_CONFIGURATION_AUDIT.md` | epochs/LR/seed |
+| WB-MET | Metrics audit | `audit/sgpt/METRICS_AUDIT.md` | double update; no Answer F1 |
+| WB-T4 | Table 4 mapping | `audit/sgpt/PAPER_TABLE4_CODE_MAPPING.csv` | flags ↔ scores |
+| WB-DEP | Dependencies | `audit/sgpt/DEPENDENCY_AND_RUNTIME_AUDIT.md` | pins / riesgos |
+| WB-RD | Execution readiness | `audit/sgpt/EXECUTION_READINESS.md` | ready/blocked/not_ready |
+| WB-MX | Matriz WAVE_B | `audit/WAVE_B_STATIC_AUDIT_MATRIX.csv` | fila sgpt |
+| WB-LOG | Log Prompt 6 | `logs/static-audit-sgpt/commands.log` | solo lectura |
 
 ## Qué está / no está en GitHub
 
@@ -58,7 +73,7 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 |---|---|---|
 | `upstream/<method_id>/` | **Sí** (árboles de trabajo) | Vendorizado 2026-07-19; pins en `REPOSITORIES.lock.yaml` |
 | `upstream/*/.git_local/` | No | Metadatos git del clone original (solo local) |
-| `logs/` | Sí (p. ej. clonado) | Útiles para el planificador |
+| `logs/` | Sí (p. ej. clonado / smokes / audits) | Útiles para el planificador |
 | `datasets/`, `results/`, `papers/`, `graph_snapshots/` | Solo placeholders | Contenido pesado futuro ignorado |
 | `.env` | No | Secretos |
 

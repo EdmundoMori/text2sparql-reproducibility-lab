@@ -1,0 +1,18 @@
+=== 2026-07-20T16:12:54+02:00 Prompt 6 commands.log ===
+HEAD_START=b0e5fdaa0902481d1c782bc28a44e588a035facd
+BRANCH=main
+SGPT_PIN=1f6964d1c3bfee50c7dec2c25546f32b4ab94b2b
+upstream_sgpt_files_excl_git_local=43
+upstream_sgpt_du=218M
+git_diff_upstream_sgpt_lines=0
+no installation
+no import
+no model execution
+no training
+no evaluation
+no downloads
+no network calls (audit content; git fetch may fail DNS)
+checkpoint_search: no .bin/.pt/.safetensors/checkpoint-*/runs/outputs found in tree
+datasets_inventoried=yes
+qald9_train_test_id_overlap=150
+lcquad2_test_n=5969 paper_often_6046

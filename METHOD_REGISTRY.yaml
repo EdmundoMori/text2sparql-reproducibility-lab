@@ -4,14 +4,15 @@
 # inclusion_decision: audit/INCLUSION_DECISIONS.md
 # Evidencia pendiente cerrada: audit/EVIDENCE_CLOSURE.md
 
-schema_version: "0.7"
-updated_at: "2026-07-20T13:52:00+02:00"
+schema_version: "0.8"
+updated_at: "2026-07-20T16:15:00+02:00"
 phase: "1_native_audit"
-audit_prompt: "WAVE_A_CORE_OFFLINE_PY311_DOCKER_SMOKE"
+audit_prompt: "WAVE_B_SGPT_STATIC_AUDIT"
 clones_performed: true
 evidence_closure_complete: true
 wave_a_static_audit_complete: true
 wave_a_environment_definition_complete: true
+wave_b_static_audit_complete: true
 
 methods:
   - method_id: sparql_llm
@@ -330,7 +331,28 @@ methods:
     upstream_path: upstream/sgpt
     pinned_commit: 1f6964d1c3bfee50c7dec2c25546f32b4ab94b2b
     needs_api: false
-    notes: "Table 4 cerrada en RESULT_EVIDENCE_MATRIX.csv (reportada, no reproducida). Pesos ausentes en Git."
+    static_audit_complete: true
+    static_audit_artifact: audit/sgpt/STATIC_AUDIT.md
+    architecture_artifact: audit/sgpt/ARCHITECTURE_AND_DATA_FLOW.md
+    dataset_inventory_artifact: audit/sgpt/DATASET_INVENTORY.csv
+    metrics_audit_artifact: audit/sgpt/METRICS_AUDIT.md
+    checkpoint_status: absent_in_repo
+    environment_definition_status: not_started
+    import_smoke_ready: conditional
+    inference_smoke_ready: blocked
+    training_smoke_ready: conditional
+    native_reproduction_ready: not_ready
+    next_execution_prompt: Prompt_7_WAVE_C_static_audit_cot_sparql_firesparql
+    execution_blockers:
+      - checkpoint_absent_in_repo
+      - vram_6GiB_vs_paper_2x12GB
+      - lcquad2_test_5969_vs_paper_6046
+      - qald9_id_reuse_train_test_150
+      - metric_double_update_anomaly
+      - transformers_unpinned
+      - gpt2_download_requires_network
+      - epochs_cli_vs_params_json_divergence
+    notes: "WAVE_B static audit 2026-07-20 complete. SGPT_Q≈no --knowledge; SGPT_Q_K≈--knowledge (entities only; LC-QuAD gold-SPARQL-filtered new_LabelsEnt). Metrics lexical only (no Answer F1). Checkpoints NOT_FOUND. reproduction_status remains audit_only; native_audit_complete=false; common_adapter_allowed=false."
 
   - method_id: tebaqa
     display_name: TeBaQA

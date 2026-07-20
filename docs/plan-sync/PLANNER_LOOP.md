@@ -1,6 +1,6 @@
 # Bucle de optimización del plan (operativo)
 
-**Última actualización:** 2026-07-20 (post Prompt 5B)
+**Última actualización:** 2026-07-20 (post Prompt 6 / WAVE_B SGPT)
 
 ## Ciclo fijo
 
@@ -31,9 +31,9 @@
 - Cada prompt a Cursor debe exigir: actualizar PLAN_SYNC + índice + push.  
 - Tras un smoke exitoso de un método, preferir **auditar el siguiente método** antes de encadenar más smokes del mismo.
 
-## Estado al cerrar Prompt 5B
+## Estado al cerrar Prompt 6
 
-- Completado: fundación → 4B; 5A `setup_failed` (Py3.10); 5B `smoke_only` (Docker Py3.11 CORE_OFFLINE).  
-- Siguiente candidato: **auditoría estática SGPT (WAVE_B)**.  
+- Completado: fundación → 5B; SGPT WAVE_B static audit (**audit_only**; sin install/train).  
+- Siguiente candidato: **auditoría estática WAVE_C** (CoT-SPARQL + FIRESPARQL).  
 - HEAD: ver `PLAN_SYNC.md` §9 / GitHub `main`.  
 - Objetivo largo plazo intacto: reproducción nativa → evaluación común → caso de estudio → errores → Text-to-SQL → método nuevo → ablaciones.

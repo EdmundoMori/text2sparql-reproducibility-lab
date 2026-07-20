@@ -2,10 +2,9 @@
 
 **Audiencia principal:** ChatGPT (planificador de prompts) y el investigador.  
 **Repo GitHub:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-**Última actualización:** 2026-07-20 (Prompt 5B — sparql_llm CORE_OFFLINE Docker Py3.11 → **smoke_only**)  
-**Fase lab:** 1 — native audit; `sparql_llm` CORE_OFFLINE = **smoke_only** (contenedor); host Py3.10 sigue incompatible  
-**Commit inicial 5B:** `6ca23b10f429c209d6e255519be7aac517a41f83`  
-**RUN_ID 5B:** `20260720T134943Z` (5A histórico: `20260719T112306Z` = setup_failed)
+**Última actualización:** 2026-07-20 (Prompt 6 — SGPT WAVE_B static audit → **audit_only** sin ejecución)  
+**Fase lab:** 1 — native audit; `sparql_llm` = **smoke_only**; `sgpt` = **audit_only** (static complete)  
+**Commit inicial 6:** `b0e5fdaa0902481d1c782bc28a44e588a035facd`
 
 > Instrucción para el planificador: lee este archivo primero. Usa los documentos específicos enlazados para detalle. **No asumas reproducción experimental**: clonar ≠ ejecutar ≠ reproducir un paper. Propón el siguiente prompt adaptado a evidencias, limitaciones de máquina y gates científicos.
 
@@ -67,6 +66,7 @@ Reglas del bucle:
 | 4B | Definición documental entornos WAVE_A | Specs `environments/*`; matriz+gaps; Ruby/Bundler ABSENT; primer micro-smoke = sparql CORE_OFFLINE | [`environments/README.md`](environments/README.md), [`environments/EXECUTION_WORKSPACE_POLICY.md`](environments/EXECUTION_WORKSPACE_POLICY.md), [`environments/sparql_llm/`](environments/sparql_llm/), [`environments/mkgqagent/`](environments/mkgqagent/), [`environments/rdfconfig_llm/`](environments/rdfconfig_llm/), [`audit/WAVE_A_ENVIRONMENT_DEFINITION_MATRIX.csv`](audit/WAVE_A_ENVIRONMENT_DEFINITION_MATRIX.csv), [`audit/WAVE_A_ENVIRONMENT_GAPS.md`](audit/WAVE_A_ENVIRONMENT_GAPS.md) |
 | 5A | sparql_llm CORE_OFFLINE host Py3.10 | **setup_failed** (conservado): install OK; import FAIL `typing.Required` | [`audit/sparql_llm/CORE_OFFLINE_SMOKE_REPORT.md`](audit/sparql_llm/CORE_OFFLINE_SMOKE_REPORT.md), [`experiments/native/sparql_llm/20260719T112306Z/`](experiments/native/sparql_llm/20260719T112306Z/) |
 | 5B | sparql_llm CORE_OFFLINE Docker Py3.11 | **smoke_only**: digest `python@sha256:b18992999…`; VoID+validate OK; harness lab fix | [`audit/sparql_llm/CORE_OFFLINE_PY311_SMOKE_REPORT.md`](audit/sparql_llm/CORE_OFFLINE_PY311_SMOKE_REPORT.md), [`experiments/native/sparql_llm/20260720T134943Z/`](experiments/native/sparql_llm/20260720T134943Z/), [`environments/sparql_llm/Dockerfile.core-offline-py311`](environments/sparql_llm/Dockerfile.core-offline-py311) |
+| 6 | SGPT WAVE_B static audit | **audit_only** (sin install/train); arquitectura/variants/datasets/métricas/readiness; ckpt ausente | [`audit/sgpt/STATIC_AUDIT.md`](audit/sgpt/STATIC_AUDIT.md), [`audit/WAVE_B_STATIC_AUDIT_MATRIX.csv`](audit/WAVE_B_STATIC_AUDIT_MATRIX.csv), [`audit/sgpt/`](audit/sgpt/) |
 
 ---
 
@@ -76,11 +76,11 @@ Reglas del bucle:
 
 - Windows + **WSL2** Ubuntu 22.04; RAM WSL ≈ **7.4 GiB**; host ≈ 16 GiB.  
 - GPU: RTX 4050 ≈ **6 GiB** VRAM; `nvcc` ausente; Docker OK; **Compose plugin ausente**.  
-- Sin Conda/uv; Poetry sí; solo `python3`.  
-- **Ruby/Bundler ABSENT** (re-check 4B). Compose plugin ABSENT.  
+- Sin Conda/uv; Poetry sí; solo `python3` 3.10.12.  
+- **Ruby/Bundler ABSENT**. Compose plugin ABSENT.  
 - Clases útiles: `feasible_using_api`, `feasible_local_gpu` (ligero), `requires_external_gpu`.
 
-→ Prompt 5B **smoke_only** (Docker Py3.11). Siguiente: **auditoría estática SGPT (WAVE_B)**. No tercer CORE_OFFLINE inmediato.
+→ Tras 5B smoke_only y 6 static SGPT: siguiente = **WAVE_C static** (CoT-SPARQL + FIRESPARQL). No entrenar SGPT aún.
 
 ### 4.2 Inclusión de métodos
 
@@ -94,16 +94,22 @@ Reglas del bucle:
 
 | Wave | Métodos | Implicación para el plan |
 |---|---|---|
-| WAVE_A | sparql_llm, mkgqagent, rdfconfig_llm | **Static audit complete**; env definition / smokes siguientes |
-| WAVE_B | sgpt | Local condicional (train/eval); no aún |
-| WAVE_C | cot_sparql, firesparql | Solo auditoría estática por ahora |
+| WAVE_A | sparql_llm, mkgqagent, rdfconfig_llm | Static + env definition; sparql CORE_OFFLINE smoke_only |
+| WAVE_B | sgpt | **Static audit complete**; train/eval diferidos |
+| WAVE_C | cot_sparql, firesparql | Siguiente: solo auditoría estática |
 | WAVE_D | tebaqa | Excluido del clon actual |
 
-### 4.3b Hallazgos estáticos WAVE_A (Prompt 4A)
+### 4.3b Hallazgos Prompt 6 (SGPT)
 
-- **sparql_llm:** static complete; CORE_OFFLINE **smoke_only** en Docker Py3.11 (5B); 5A setup_failed en host 3.10 conservado; metadata `>=3.10` inconsistente con `typing.Required`.
-- **mkgqagent / rdfconfig_llm:** sin cambio de estado por 5B (legal/Ruby blockers).
-- `native_audit_complete: false`; `common_adapter_allowed: false` en todos.
+- Pin `1f6964d1…` + MIT verificados; upstream intacto.  
+- Checkpoints / `runs/` / pesos: **NOT_FOUND**.  
+- Datasets procesados presentes: lcquad2 21497/2389/**5969** (paper ~6046 mismatch); qald9 350/58/150; vquanda 3500/500/1000.  
+- **qald9:** train∩test = 150 IDs reutilizados (contenido no idéntico).  
+- **SGPT_Q** ≈ sin `--knowledge`; **SGPT_Q_K** ≈ `--knowledge` (solo entidades; LC-QuAD: QIDs de `new_LabelsEnt` filtrados por gold SPARQL). `--masked` ortogonal (solo entidades en código).  
+- Métricas Table 4 = léxicas; **no** Answer F1 / ejecución SPARQL; anomalía double-`update` en `eval.py`.  
+- Epochs README 40 vs `params.json` 70; LR 6.25e-5; seed 42.  
+- Native reproduction: **not_ready** (ckpt + VRAM 6 GiB vs paper 2×12 GB).  
+- `reproduction_status: audit_only`; `native_audit_complete: false`; `common_adapter_allowed: false`.
 
 ### 4.4 Bloqueos legales / publicación
 
@@ -114,7 +120,7 @@ Reglas del bucle:
 ### 4.5 Anomalías de clon
 
 - `firesparql` ~598M (mucho `results/` en Git).  
-- `sgpt` ~169 MiB datasets en árbol.  
+- `sgpt` ~218 MiB datasets en árbol.  
 - Tag mkgqagent tipográfico: `TEXT2SPAQL`.  
 - Submódulos: ninguno.
 
@@ -130,9 +136,10 @@ Reglas del bucle:
 ### 4.7 Lo que NO se ha hecho
 
 - Smoke API/MCP/agent de sparql_llm.  
-- Pipelines paper, train, eval científica.  
+- Install / train / eval de SGPT.  
+- Pipelines paper, train, eval científica (salvo smoke CORE_OFFLINE sparql).  
 - Adaptadores comunes.  
-- Auditoría estática WAVE_B (SGPT) / WAVE_C.  
+- Auditoría estática WAVE_C.  
 - Declarar `reproduced` / `partially_reproduced`.  
 - Instalar Python 3.11 en WSL (evitar; usar contenedor).
 
@@ -141,6 +148,7 @@ Reglas del bucle:
 ## 5. Estado de reproducción (protocolo)
 
 - `sparql_llm`: **smoke_only** (5B Docker Py3.11 CORE_OFFLINE); 5A histórico **setup_failed**; `native_audit_complete: false`; `common_adapter_allowed: false`.  
+- `sgpt`: **audit_only** (WAVE_B static complete); sin ejecución; ckpt ausente; `native_audit_complete: false`; `common_adapter_allowed: false`.  
 - Resto: `audit_only`.  
 - **Ninguno** `reproduced` / `partially_reproduced`.
 
@@ -148,9 +156,9 @@ Reglas del bucle:
 
 ## 6. Recomendación al planificador (siguiente prompt)
 
-1. **Prompt 6 — Auditoría estática SGPT (WAVE_B)** (prioridad).  
-2. No tercer reintento CORE_OFFLINE.  
-3. Diferir API/MCP sparql, mkgq, rdfconfig, Virtuoso.  
+1. **Prompt 7 — Auditoría estática WAVE_C (CoT-SPARQL + FIRESPARQL)** (prioridad).  
+2. No entrenar SGPT ni descargar GPT-2/spaCy ahora.  
+3. Diferir API/MCP sparql, mkgq, rdfconfig, Virtuoso, adapters.  
 4. Objetivo largo plazo: reproducción nativa → evaluación común → caso de estudio → errores → Text-to-SQL → método nuevo → ablaciones.
 
 Detalle: [`docs/plan-sync/NEXT_PROMPT_GUIDANCE.md`](docs/plan-sync/NEXT_PROMPT_GUIDANCE.md).
@@ -177,6 +185,7 @@ Ver lista completa y estable en:
 | 2026-07-19 | Documentado ciclo operativo Cursor↔ChatGPT (`PLANNER_LOOP.md`); meta-prompt de replanificación |
 | 2026-07-19 | Prompt 5A: sparql CORE_OFFLINE setup_failed (Py3.10/typing.Required); next=5B python3.11 |
 | 2026-07-20 | Prompt 5B: Docker Py3.11 CORE_OFFLINE smoke_only; next=SGPT WAVE_B static audit |
+| 2026-07-20 | Prompt 6: SGPT WAVE_B static audit complete (audit_only); next=WAVE_C |
 
 ---
 
@@ -189,15 +198,21 @@ Ver lista completa y estable en:
 | resultado | **setup_failed** |
 | push | confirmado (`35ea955e` / `6ca23b10`) |
 
-### 5B (este prompt)
+### 5B (histórico)
 | Campo | Valor |
 |---|---|
 | RUN_ID | `20260720T134943Z` |
-| commit inicial | `6ca23b10f429c209d6e255519be7aac517a41f83` |
 | resultado | **smoke_only** |
 | base digest | `python@sha256:b18992999dbe963a45a8a4da40ac2b1975be1a776d939d098c647482bcad5cba` |
-| commit final | `4495522f7b8f2dd64bffef84b0b7b5f4e68ae532` |
-| rama | `main` |
-| push | confirmado en origin/main (`04a9f2b4803d95a87c03ffde508e7213b1f67d50`) |
-| artefactos | §3 fila 5B |
+| commit final (push confirm) | `b0e5fdaa0902481d1c782bc28a44e588a035facd` |
 
+### 6 (este prompt)
+| Campo | Valor |
+|---|---|
+| alcance | SGPT WAVE_B static audit |
+| commit inicial | `b0e5fdaa0902481d1c782bc28a44e588a035facd` |
+| resultado | **audit_only** (static complete; no execution) |
+| commit final | *(tras push)* |
+| rama | `main` |
+| push | pendiente |
+| artefactos | `audit/sgpt/*`, `audit/WAVE_B_STATIC_AUDIT_MATRIX.csv` |
