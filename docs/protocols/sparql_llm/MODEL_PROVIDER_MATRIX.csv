@@ -1,0 +1,7 @@
+provider_branch,model_id_example,loader_path,api_base_or_mechanism,env_key_required,passes_max_tokens,passes_temperature,passes_seed,max_retries,timeout,default_in_settings,evidence_tag,notes_es
+openrouter,openrouter/openai/gpt-5.2,load_chat_model → ChatOpenAI,https://openrouter.ai/api/v1,OPENROUTER_API_KEY,no,yes,yes,n/a_in_branch,n/a_in_branch,yes_default_llm_model,CODE_VERIFIED,max_tokens NO pasado en rama openrouter
+openrouter,openrouter/openai/gpt-4o-mini,load_chat_model → ChatOpenAI,https://openrouter.ai/api/v1,OPENROUTER_API_KEY,no,yes,yes,n/a_in_branch,n/a_in_branch,no_biodata_list,CODE_VERIFIED,usado en benchmark_biodata models list
+openrouter,openrouter/openai/gpt-oss-120b,load_chat_model → ChatOpenAI,https://openrouter.ai/api/v1,OPENROUTER_API_KEY,no,yes,yes,n/a_in_branch,n/a_in_branch,no_biodata_list,CODE_VERIFIED,biodata
+openrouter,openrouter/openai/gpt-5,load_chat_model → ChatOpenAI,https://openrouter.ai/api/v1,OPENROUTER_API_KEY,no,yes,yes,n/a_in_branch,n/a_in_branch,no_biodata_list,CODE_VERIFIED,biodata comentario ?
+non_openrouter,provider/model via init_chat_model,load_chat_model → init_chat_model,langchain init_chat_model,provider-specific,yes,yes,yes,2,None,no,CODE_VERIFIED,else branch
+http_body_fields,n/a,ChatCompletionRequest max_tokens/temperature,NOT wired to Configuration,n/a,ignored_by_chat_handler,ignored_by_chat_handler,n/a,n/a,n/a,n/a,CODE_VERIFIED,campos request no van a configurable

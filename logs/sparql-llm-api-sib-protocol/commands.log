@@ -1,0 +1,46 @@
+# logs/sparql-llm-api-sib-protocol/commands.log
+# Prompt 9 — API/SIB protocol definition (documentary only)
+# Date: 2026-07-20
+# Initial HEAD: 3d89a8d61f3fed8eecec8e49f6b79baccf677a76
+# sparql_llm pin: 3748730e3bd2df2595280b918269fdaadb9fc0c3
+
+# Explicit non-actions:
+# - no installation
+# - no import upstream
+# - no Docker
+# - no model download
+# - no embedding initialization
+# - no Qdrant initialization
+# - no API
+# - no MCP call
+# - no SPARQL endpoint
+# - no benchmark
+# - no execution
+
+# --- git ---
+git fetch origin
+git rev-parse HEAD   # 3d89a8d61f3fed8eecec8e49f6b79baccf677a76
+git rev-parse origin/main
+git status           # clean at start
+git diff --stat -- upstream/sparql_llm   # empty
+
+# --- read-only (no network to services) ---
+# PLAN_SYNC, PLANNER_LOOP, NEXT_PROMPT_GUIDANCE, ARTIFACT_INDEX
+# audit/NEXT_EXECUTION_DECISION.md, NATIVE_AUDIT_COMPARATIVE_GATE.md
+# METHOD_REGISTRY.yaml, REPOSITORIES.lock.yaml
+# audit/sparql_llm/*, environments/sparql_llm/*
+# upstream/sparql_llm/{README,pyproject,compose*,Dockerfile}
+# upstream/sparql_llm/src/sparql_llm/{config,mcp_server,utils,validate_sparql}.py
+# upstream/sparql_llm/src/sparql_llm/agent/{main,utils,graph,prompts}.py
+# upstream/sparql_llm/src/sparql_llm/agent/nodes/*
+# upstream/sparql_llm/src/sparql_llm/indexing/*
+# upstream/sparql_llm/tests/{benchmark.py,benchmark_biodata.py,text2sparql/README.md,data/,void_uniprot.ttl}
+
+# --- validation ---
+python3 -c 'csv/yaml checks; 8 surfaces; exactly one selected=D; CONDITIONAL_GO'
+# Result: ALL_CHECKS_PASSED expected
+
+# Decision recorded:
+# selected_future_online_action = LOCAL_CHAT_API_ONE_QUESTION
+# gate = CONDITIONAL_GO
+# next = Prompt 10 minimal index/env prep (no LLM calls)

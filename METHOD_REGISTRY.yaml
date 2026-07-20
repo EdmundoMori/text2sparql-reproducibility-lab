@@ -5,9 +5,9 @@
 # Evidencia pendiente cerrada: audit/EVIDENCE_CLOSURE.md
 
 schema_version: "0.11"
-updated_at: "2026-07-20T19:45:00+02:00"
+updated_at: "2026-07-20T20:15:00+02:00"
 phase: "1_native_audit"
-audit_prompt: "NATIVE_AUDIT_COMPARATIVE_GATE_8"
+audit_prompt: "SPARQL_LLM_API_SIB_PROTOCOL_9"
 clones_performed: true
 evidence_closure_complete: true
 wave_a_static_audit_complete: true
@@ -61,7 +61,6 @@ methods:
     environment_definition_status: ready_documented
     environment_artifacts: environments/sparql_llm/
     offline_smoke_ready: validated_in_python311_container
-    api_smoke_ready: conditional
     native_reproduction_ready: conditional
     last_smoke_run_id: "20260720T134943Z"
     last_smoke_report: audit/sparql_llm/CORE_OFFLINE_PY311_SMOKE_REPORT.md
@@ -72,24 +71,44 @@ methods:
         note: "Host Python 3.10 typing.Required import failure"
     blocked_local_protocols:
       - TEXT2SPARQL_VIRTUOSO
-    native_gate_class: GO_NEXT
+    api_sib_protocol_status: defined_conditional_go
+    api_sib_protocol_artifact: docs/protocols/sparql_llm/API_SIB_PROTOCOL.md
+    execution_surface_matrix_artifact: docs/protocols/sparql_llm/EXECUTION_SURFACES.csv
+    selected_future_online_action: LOCAL_CHAT_API_ONE_QUESTION
+    selected_future_online_action_class: online_functional_smoke
+    selected_future_online_action_gate: CONDITIONAL_GO
+    api_budget_status: proposed_pending_investigator_approval
+    indexing_prerequisite_status: not_ready_requires_qdrant_and_embeddings
+    endpoint_prerequisite_status: optional_if_enable_sparql_execution_false
+    api_smoke_ready: conditional
+    next_execution_prompt: Prompt_10_sparql_llm_minimal_index_env_prep_no_LLM_calls
+    protocol_blockers:
+      - python_311_runtime_or_docker_pattern
+      - qdrant_path_or_url
+      - fastembed_multilingual_e5_large
+      - init_vectordb_or_prebuilt_index
+      - OPENROUTER_API_KEY
+      - minimal_SETTINGS_UniProt_void_local
+      - investigator_budget_approval
+
+    native_gate_class: CONDITIONAL_GO
     scientific_baseline_role: core_baseline_candidate
     experimental_track: end_to_end_with_schema_validation
     internal_execution_legal_gate: allowed
     adapter_legal_gate: conditional_deferred
     generality_class: configurable_general
     gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-    next_native_action: define_API_SIB_protocol_documentation_no_calls
-    next_native_action_class: protocol_definition
+    next_native_action: prepare_minimal_index_env_for_LOCAL_CHAT_API_ONE_QUESTION
+    next_native_action_class: environment_definition
     gate_confidence: high
-    next_execution_prompt: Prompt_9_sparql_llm_API_SIB_protocol_definition_no_calls
     execution_blockers:
       - compose_plugin_absent_on_host
       - uv_uvx_absent_on_host
       - ram_risk_e5_large_indexing
       - virtuoso_text2sparql_blocked_on_host
       - host_python_3_10_incompatible_typing_Required
-    notes: "Prompt 5B smoke_only in Docker Py3.11. Host 3.10 still incompatible (typing.Required). pyproject>=3.10 metadata inconsistency documented. 5A setup_failed preserved. native_audit_complete=false; common_adapter_allowed=false."
+      - online_index_and_OPENROUTER_budget_pending
+    notes: "Prompt 9 API/SIB protocol defined (CONDITIONAL_GO → LOCAL_CHAT_API_ONE_QUESTION). Prompt 5B smoke_only Docker Py3.11 preserved. Host 3.10 incompatible. native_audit_complete=false; common_adapter_allowed=false. Public MCP ≠ native pin."
 
   - method_id: mkgqagent
     display_name: mKGQAgent

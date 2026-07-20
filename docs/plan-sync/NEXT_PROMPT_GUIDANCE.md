@@ -1,27 +1,25 @@
 # NEXT_PROMPT_GUIDANCE
 
 **Fecha:** 2026-07-20  
-**Tras:** Prompt 8 → gate comparativo nativo; **GO_NEXT** = protocolo API/SIB `sparql_llm`
+**Tras:** Prompt 9 → protocolo API/SIB SPARQL-LLM; **CONDITIONAL_GO** = `LOCAL_CHAT_API_ONE_QUESTION`
 
 ## Prompt recomendado (prioridad 1)
 
-**Título:** Prompt 9 — Definición documental del protocolo API/SIB de SPARQL-LLM (sin llamadas de API)
+**Título:** Prompt 10 — Preparación de entorno e índice mínimo para smoke LOCAL_CHAT_API de SPARQL-LLM (sin llamadas LLM)
 
-**Método / prerrequisito:** `sparql_llm` — protocolización del camino online/API tras CORE_OFFLINE `smoke_only` (5B).
+**Método:** `sparql_llm`  
+**Objetivo:** Cerrar prerrequisitos del gate CONDITIONAL_GO **sin** invocar OpenRouter/OpenAI, MCP remoto, ni endpoints SPARQL: runtime Py3.11 (patrón Docker 5B), SETTINGS mínimo (UniProt + `void_file` local), política de índice/Qdrant/FastEmbed, checklist de arranque `/chat`, y confirmación de presupuesto propuesto. **Sin llamadas LLM** en Prompt 10.
 
-**Objetivo:** Documentar endpoints/entrypoints (API/MCP), nombres de claves/variables de entorno, formas request/response observables en código/README, límites offline vs online, y criterios de éxito/fallo + checklist GO/NO-GO para un **futuro** smoke API controlado. Etiquetar evidencia (CODE_VERIFIED / README_REPORTED / INFERENCE).
+**Restricciones:**
+- Sin `OPENROUTER_API_KEY` en uso real; sin POST `/chat` con modelo; sin MCP público; sin SPARQL vivos.  
+- Sin download de embeddings salvo que el investigador autorice explícitamente un paso de cache (preferible documentar/NO-GO hasta aprobación).  
+- No cambiar `reproduction_status` (`smoke_only`); `native_audit_complete=false`; `common_adapter_allowed=false`.  
+- No Virtuoso; no adapters; no otros métodos.
 
-**Restricciones duras:**
-- Sin llamadas de API; sin endpoints SPARQL vivos; sin OpenRouter/OpenAI reales.
-- Sin pip/conda/Docker/apt/Ruby; sin imports ejecutados de upstream; sin downloads.
-- Sin tercer CORE_OFFLINE; sin Virtuoso; sin adapters; sin evaluación común.
-- No cambiar `reproduction_status` (`smoke_only`); `native_audit_complete=false`; `common_adapter_allowed=false`.
-- No declarar PE3 ni `partially_reproduced`.
+**Condición de éxito:** entorno/índice mínimo documentado (o bloqueado con evidencia) + checklist GO técnico hacia el smoke D, sin ejecutar el smoke.
 
-**Condición de éxito:** artefacto(s) de protocolo con los 6 mínimos de `audit/NEXT_EXECUTION_DECISION.md` §10; criterios GO/NO-GO hacia smoke API **sin ejecutarlo**.
+**No proponer ahora:** biodata full; train otros métodos; smoke con clave sin índice.
 
-**No proponer ahora:** smoke API (GO_AFTER_ENVIRONMENT); train SGPT; install CoT; Ruby/RDF-config; run mKGQAgent; recomputar FIRESPARQL; download checkpoints.
+## Objetivo de fase
 
-## Objetivo de fase (recordatorio)
-
-reproducción nativa → evaluación común → caso de estudio → análisis de errores → transferencia Text-to-SQL → método nuevo → ablaciones.
+reproducción nativa → evaluación común → caso de estudio → errores → Text-to-SQL → método nuevo → ablaciones.

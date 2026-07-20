@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-20 (Prompt 8 — gate comparativo)  
+**Última actualización:** 2026-07-20 (Prompt 9 — protocolo API/SIB)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -120,6 +120,20 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | GATE-NX | Decisión siguiente acción | `audit/NEXT_EXECUTION_DECISION.md` | GO/NO-GO Prompt 9 |
 | DEC003 | Decisión formal gate | `docs/decisions/003_native_audit_comparative_gate.md` | ADR Prompt 8 |
 | GATE-LOG | Log Prompt 8 | `logs/native-audit-comparative-gate/commands.log` | documental; no install |
+| P9-PROT | Protocolo API/SIB principal | `docs/protocols/sparql_llm/API_SIB_PROTOCOL.md` | Prompt 9 — 26 §§ |
+| P9-SURF | Superficies de ejecución | `docs/protocols/sparql_llm/EXECUTION_SURFACES.csv` | 8 superficies |
+| P9-MCP | Contrato MCP | `docs/protocols/sparql_llm/MCP_CONTRACT.md` | tools + transportes |
+| P9-CHAT | Contrato /chat | `docs/protocols/sparql_llm/CHAT_API_CONTRACT.md` | mismatch validate_output |
+| P9-MOD | Modelos/proveedores | `docs/protocols/sparql_llm/MODEL_PROVIDER_MATRIX.csv` | OpenRouter vs init |
+| P9-CFG | Configuración | `docs/protocols/sparql_llm/CONFIGURATION_MATRIX.csv` | secrets redactados |
+| P9-NET | Red y side effects | `docs/protocols/sparql_llm/NETWORK_AND_SIDE_EFFECT_MATRIX.csv` | import/startup/request |
+| P9-OFF | Frontera offline/online | `docs/protocols/sparql_llm/OFFLINE_ONLINE_BOUNDARY.md` | CORE_OFFLINE vs online |
+| P9-SIB | Protocolo benchmarks SIB | `docs/protocols/sparql_llm/SIB_BENCHMARK_PROTOCOL.md` | L0/L1/L2 |
+| P9-CAND | Candidatos smoke futuro | `docs/protocols/sparql_llm/FUTURE_SMOKE_CANDIDATES.csv` | A–F; D seleccionado |
+| P9-BUD | Presupuesto y seguridad | `docs/protocols/sparql_llm/API_BUDGET_AND_SAFETY.md` | PROPOSED |
+| P9-GO | GO/NO-GO smoke futuro | `docs/protocols/sparql_llm/FUTURE_API_SMOKE_GONOGO.md` | CONDITIONAL_GO |
+| P9-RDY | Readiness protocolo | `audit/sparql_llm/API_SIB_PROTOCOL_READINESS.md` | estados por superficie |
+| P9-LOG | Log Prompt 9 | `logs/sparql-llm-api-sib-protocol/commands.log` | sin llamadas |
 
 ## Qué está / no está en GitHub
 

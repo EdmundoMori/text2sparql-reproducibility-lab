@@ -1,0 +1,28 @@
+config_key,layer,default_value,runtime_override_path,required_for_LOCAL_CHAT_API_ONE_QUESTION,network_or_side_effect,evidence_tag,notes_es
+vectordb_url,Settings,data/vectordb,env/SETTINGS JSON,yes_path_or_url,local_path_or_http_qdrant,CODE_VERIFIED,path local por defecto; URL si empieza http(s)
+embedding_model,Settings,intfloat/multilingual-e5-large,SETTINGS,yes_or_prebuilt_index,fastembed_download_risk,CODE_VERIFIED,TextEmbedding al import index_resources
+sparse_embedding_model,Settings,Qdrant/bm25,SETTINGS,no_for_docs_only_smoke,entities_resolution,CODE_VERIFIED,entities
+auto_init,Settings,True,SETTINGS/env,control_critical,may_call_init_vectordb,CODE_VERIFIED,False en prod multi-worker recomendado upstream
+force_index,Settings,False,SETTINGS,avoid_true_in_smoke,reindex_trigger,CODE_VERIFIED,
+default_llm_model,Settings,openrouter/openai/gpt-5.2,request.model / Configuration.model,yes,openrouter_network,CODE_VERIFIED,
+default_number_of_retrieved_docs,Settings,10,Configuration.search_kwargs.k,yes_indirect,qdrant_query,CODE_VERIFIED,
+default_max_try_fix_sparql,Settings,3,Configuration.max_try_fix_sparql,yes_bound,extra_llm_calls_on_repair,CODE_VERIFIED,
+default_temperature,Settings,0.0,Configuration.temperature (NOT chat body),yes_via_Configuration,llm,CODE_VERIFIED,body temperature ignored by handler
+default_max_tokens,Settings,16384,Configuration.max_tokens (NOT chat body; NOT openrouter branch),partial,llm,CODE_VERIFIED,openrouter branch omite max_tokens
+default_seed,Settings,42,Configuration.seed,yes_via_Configuration,llm,CODE_VERIFIED,
+app_public_host,Settings,chat.expasy.org,SETTINGS,no_for_local,mcp_transport_security,CODE_VERIFIED,
+chat_api_key,Settings,empty,SETTINGS/env CHAT_API_KEY pattern,optional,auth_bearer,CODE_VERIFIED,si set → Bearer obligatorio
+logs_api_key,Settings,empty,SETTINGS,no,admin_logs,CODE_VERIFIED,
+use_tools,Settings,False,SETTINGS,keep_false,switches_graph_to_mcp_tools,CODE_VERIFIED,default path sequential
+endpoints[*],Settings,many SIB endpoints,SETTINGS_FILEPATH JSON,minimize_to_UniProt,sparql_and_index_network,CODE_VERIFIED,UniProt void_file ./tests/void_uniprot.ttl
+SETTINGS_FILEPATH,env,unset → Settings(),env,recommended_minimal_json,loads_JSON_Settings,CODE_VERIFIED;README_REPORTED,
+enable_output_validation,Configuration,True,configurable key MUST match name,yes_default,validation_gate,CODE_VERIFIED,request validate_output DOES NOT map
+enable_sparql_execution,Configuration,True,configurable / chat request,set_false_for_smoke,skips_query_sparql_when_false,CODE_VERIFIED,
+enable_entities_resolution,Configuration,False,configurable,keep_false,extra_retrieval,CODE_VERIFIED,
+validate_output,ChatCompletionRequest,True,HTTP body only,mismatched_unused,NO_EFFECT_on_Configuration,CODE_VERIFIED,unused/mismatched
+max_tokens_request,ChatCompletionRequest,settings default,HTTP body only,unused_by_handler,NO_EFFECT,CODE_VERIFIED,
+temperature_request,ChatCompletionRequest,settings default,HTTP body only,unused_by_handler,NO_EFFECT,CODE_VERIFIED,
+recursion_limit,RunnableConfig,25,hardcoded main.py,yes,langgraph_depth,CODE_VERIFIED,
+messages_window,main.py,last 10 messages,hardcoded,yes,context_window,CODE_VERIFIED,
+OPENROUTER_API_KEY,env,unset,process env,yes_for_openrouter,llm_network,CODE_VERIFIED,
+docs_collection_name,Settings,expasy,SETTINGS,yes,qdrant_collection,CODE_VERIFIED,

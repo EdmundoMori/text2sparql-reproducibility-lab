@@ -1,0 +1,17 @@
+event_or_call,trigger_point,network_destination_class,happens_at,controllable_flag,default_on,selected_smoke_mitigation,evidence_tag,notes_es
+TextEmbedding_ctor,index_resources import,huggingface_or_fastembed_cache,import_time,pre-download_or_avoid_import,yes_on_import,prepare_cache_before_import,CODE_VERIFIED,riesgo descarga multilingual-e5-large
+QdrantClient_ctor,index_resources import,local_path_or_qdrant_url,import_time,vectordb_url,yes_on_import,path local precreado,CODE_VERIFIED,path vs URL según prefijo http
+EndpointsMetadataManager,index_resources import,sparql_endpoints_lazy,import_or_first_access,auto_init,yes_auto_init_true,SETTINGS mínimo + void local,CODE_VERIFIED,
+homepage_schema_org_scrape,load_schemaorg_description,httpx_homepage_url,index_time,omit_homepage_or_skip_endpoints,when_homepage_set,evitar endpoints con homepage en smoke mínimo,CODE_VERIFIED,
+init_vectordb,get_mcp_app if auto_init and empty,multi_endpoint_index_network,app_start,auto_init/force_index/prebuilt,auto_init True,prebuilt index o auto_init False + índice listo,CODE_VERIFIED,
+agent_main_import_get_mcp_app,import agent.main,same_as_get_mcp_app,import_time,avoid_eager_import_or_preinit,yes,arrancar solo tras índice mínimo,CODE_VERIFIED,
+OpenRouter_ChatOpenAI,call_model via load_chat_model,https://openrouter.ai/api/v1,llm_call,OPENROUTER_API_KEY + MAX_QUESTIONS,default_model_openrouter,MAX_QUESTIONS=1,CODE_VERIFIED,
+init_chat_model_other,non-openrouter provider,provider_network,llm_call,model string,no_default,evitar salvo aprobado,CODE_VERIFIED,
+query_sparql_agent_validation,validation.py after valid query,sparql_endpoint_url,agent_path,enable_sparql_execution,True,set false en smoke,CODE_VERIFIED,false omite ejecución
+query_sparql_mcp_tool,execute_sparql_query tool,sparql_endpoint_url,mcp_tool_call,do_not_call_tool,n/a,no seleccionar MCP smoke,CODE_VERIFIED,timeout=10 post=True
+Langfuse_callback,main.py if LANGFUSE_SECRET_KEY,langfuse_host,chat_request,unset env,off_if_unset,dejar unset,CODE_VERIFIED,
+Sentry_init,main.py if sentry_url,sentry,import_time,sentry_url empty,off,dejar vacío,CODE_VERIFIED,
+Public_MCP_remote,client external,chat.expasy.org,manual,do_not_use_as_native,n/a,solo availability_check,README_REPORTED,NO nativo
+Chat_API_Bearer_check,POST /chat,none_local,request,chat_api_key,off_if_empty,opcional,CODE_VERIFIED,
+SSE_or_JSON_response,POST /chat stream flag,client_local,request,stream,false,JSON no-stream preferido smoke,CODE_VERIFIED,
+biodata_separate_sparql_exec,benchmark_biodata after /chat,sparql_endpoints,benchmark_only,out_of_scope_prompt9,n/a,no ejecutar benchmark,CODE_VERIFIED,enable_sparql_execution False en /chat
