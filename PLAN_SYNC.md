@@ -119,5 +119,5 @@ Ver GitHub `main`.
 | resultado | **audit_only** (static complete; WAVE_C complete) |
 | commit final | `4b41ed757c2fb189157dcb1386fdb1a769bfd74e` |
 | rama | `main` |
-| push | confirmado (siguiente push) |
+| push | confirmado en origin/main (`b9eb05a39aa93237dcf8e98aac6c7a4ccfc88ae2`) |
 | artefactos | `audit/firesparql/*`, `audit/WAVE_C_STATIC_AUDIT_MATRIX.csv` |
