@@ -1,0 +1,20 @@
+3.11-slim-bookworm: Pulling from library/python
+597c6c618d36: Pulling fs layer
+dec88b5dd81f: Pulling fs layer
+50bbb63acf74: Pulling fs layer
+0e1c3fb2fe1c: Pulling fs layer
+0e1c3fb2fe1c: Waiting
+dec88b5dd81f: Verifying Checksum
+dec88b5dd81f: Download complete
+50bbb63acf74: Verifying Checksum
+50bbb63acf74: Download complete
+0e1c3fb2fe1c: Download complete
+597c6c618d36: Verifying Checksum
+597c6c618d36: Download complete
+597c6c618d36: Pull complete
+dec88b5dd81f: Pull complete
+50bbb63acf74: Pull complete
+0e1c3fb2fe1c: Pull complete
+Digest: sha256:b18992999dbe963a45a8a4da40ac2b1975be1a776d939d098c647482bcad5cba
+Status: Downloaded newer image for python:3.11-slim-bookworm
+docker.io/library/python:3.11-slim-bookworm

@@ -1,0 +1,28 @@
+run_id: "20260720T134943Z"
+fecha_utc: "2026-07-20T13:52:00Z"
+method_id: sparql_llm
+scope: CORE_OFFLINE
+lab_commit_initial: "6ca23b10f429c209d6e255519be7aac517a41f83"
+upstream_commit: "3748730e3bd2df2595280b918269fdaadb9fc0c3"
+install_source: "workdir/runs/sparql_llm/20260720T134943Z/build-context/source (non-editable via Dockerfile)"
+python: "3.11.15 (container)"
+pip: "24.0"
+machine: "WSL2 Ubuntu 22.04; Docker 29.1.3; no Compose; no GPU used"
+base_image_digest: "python@sha256:b18992999dbe963a45a8a4da40ac2b1975be1a776d939d098c647482bcad5cba"
+lab_image_tag: "text2sparql-lab/sparql-llm-core-offline:20260720T134943Z"
+commands:
+  - docker pull python:3.11-slim-bookworm
+  - docker build -t text2sparql-lab/sparql-llm-core-offline:20260720T134943Z build-context/
+  - docker run --rm --network none ... pip check/freeze/show
+  - docker run --rm --network none ... import probe
+  - harness with --network none (after lab harness socket guard fix)
+network_during_install_build: true
+network_during_smoke: false
+harness_fix: "LAB only: socket.create_connection module-level; removed socket.socket.connect assignment"
+read_only_fs: "not_viable_import_writes_home_data"
+prior_run_preserved: "20260719T112306Z"
+artifacts:
+  - audit/sparql_llm/CORE_OFFLINE_PY311_SMOKE_REPORT.md
+  - logs/smoke/sparql_llm-core-offline-py311/20260720T134943Z/
+  - environments/sparql_llm/Dockerfile.core-offline-py311
+  - environments/sparql_llm/container_py311.md

@@ -1,7 +1,7 @@
 # WAVE_A_EXECUTION_READINESS
 
-**Fecha:** 2026-07-19  
-**Actualizado por:** Prompt 5A (CORE_OFFLINE attempt → **setup_failed**)
+**Fecha:** 2026-07-20  
+**Actualizado por:** Prompt 5B (CORE_OFFLINE py311 Docker → `smoke_only`)
 
 ---
 
@@ -10,25 +10,31 @@
 | Dimensión | Valor |
 |---|---|
 | static_understanding | **complete** |
-| environment_definition | **ready** (documentado) |
-| offline_smoke_ready | **blocked_on_host_python** (3.10 vs `typing.Required`) |
-| api_smoke_ready | **blocked_until_core_import** |
-| native_reproduction_ready | **conditional** / Virtuoso **blocked** |
-| legal_adapter_gate | **allowed** (MIT) — `common_adapter_allowed` false |
-| last_run | `20260719T112306Z` → `setup_failed` |
-| next_safe_action | Instalar/usar Python **≥3.11** (prompt tooling) y reintentar CORE_OFFLINE; **no** patch upstream en silencio |
-| evidence_required_before_execution | `python3.11` disponible; re-run harness |
+| environment_definition | **ready** (+ container_py311 docs) |
+| offline_smoke_ready | **validated_in_python311_container** |
+| api_smoke_ready | **conditional** |
+| native_reproduction_ready | **conditional** benches SIB; **blocked** Text2SPARQL+Virtuoso |
+| legal_adapter_gate | **allowed** (MIT) — `common_adapter_allowed` sigue false |
+| reproduction_status | **smoke_only** (5B); 5A permanece setup_failed |
+| next_safe_action | **No** tercer CORE_OFFLINE; pasar a **auditoría estática SGPT (WAVE_B)** |
+| evidence_required_before_execution | API smokes futuros: key + Py3.11 container pattern; no Virtuoso |
 
 ---
 
-## mkgqagent / rdfconfig_llm
+## mkgqagent
 
-Sin cambios de ejecución (4B). Seguir diferidos. Ruby ABSENT; LICENSE_NOT_CONFIRMED.
+Sin cambio material por 5B: offline NOT_READY; api CONDITIONAL; native not_ready_or_weak; legal blocked.
+
+---
+
+## rdfconfig_llm / companion
+
+Sin cambio material: Ruby ABSENT; generator LICENSE_NOT_CONFIRMED; workdir obligatorio.
 
 ---
 
 ## Orden recomendado
 
-1. **Prompt 5B:** disponer Python 3.11+ en WSL (o documentar bloqueo) y reintentar sparql CORE_OFFLINE.  
-2. No agent/API hasta import OK.  
-3. Virtuoso sigue bloqueado.
+1. **Prompt 6 — SGPT WAVE_B static audit** (prioridad).  
+2. Diferir API/MCP sparql, mkgq, rdfconfig.  
+3. Mantener TEXT2SPARQL_VIRTUOSO bloqueado.

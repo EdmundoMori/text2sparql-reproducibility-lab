@@ -1,0 +1,20 @@
+{
+  "method_id": "sparql_llm",
+  "scope": "CORE_OFFLINE",
+  "package_version": "0.1.4",
+  "import_success": true,
+  "version_ok": true,
+  "valid_sparql_parse_success": true,
+  "void_file": "/data/void_uniprot.ttl",
+  "void_classes_count": 162,
+  "selected_class": "http://www.w3.org/2002/07/owl#Axiom",
+  "selected_predicate": "http://www.w3.org/2002/07/owl#annotatedTarget",
+  "schema_valid_query_issue_count": 0,
+  "invalid_predicate_issue_count": 1,
+  "network_attempt_detected": false,
+  "mandatory_checks_passed": true,
+  "errors": [],
+  "timestamp": "2026-07-20T13:52:26.481279+00:00",
+  "python_version": "3.11.15 (main, Jul 14 2026, 02:10:36) [GCC 12.2.0]",
+  "network_attempts_detail": []
+}

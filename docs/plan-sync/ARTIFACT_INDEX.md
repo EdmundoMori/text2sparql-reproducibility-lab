@@ -43,6 +43,10 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | WA-EMX | Matriz entornos | `audit/WAVE_A_ENVIRONMENT_DEFINITION_MATRIX.csv` | scopes por método |
 | WA-GAP | Gaps entornos | `audit/WAVE_A_ENVIRONMENT_GAPS.md` | GO/NO-GO + primer smoke |
 | ENV-LOG | Log Prompt 4B | `logs/environment-definition-wave-a/commands.log` | host tools |
+| SM5A | Smoke 5A host | `audit/sparql_llm/CORE_OFFLINE_SMOKE_REPORT.md` | setup_failed Py3.10 |
+| SM5B | Smoke 5B Docker | `audit/sparql_llm/CORE_OFFLINE_PY311_SMOKE_REPORT.md` | smoke_only Py3.11 |
+| DF311 | Dockerfile CORE | `environments/sparql_llm/Dockerfile.core-offline-py311` | digest pin |
+| CT311 | Container notes | `environments/sparql_llm/container_py311.md` | runtime Docker |
 | SM5A | Informe smoke CORE_OFFLINE | `audit/sparql_llm/CORE_OFFLINE_SMOKE_REPORT.md` | Resultado 5A |
 | SM5A-R | Run experiment | `experiments/native/sparql_llm/20260719T112306Z/` | manifest/result |
 | SM5A-L | Logs smoke | `logs/smoke/sparql_llm-core-offline/20260719T112306Z/` | pip/freeze/smoke |

@@ -1,19 +1,16 @@
 # NEXT_PROMPT_GUIDANCE
 
-**Fecha:** 2026-07-19  
-**Tras:** Prompt 5A → `setup_failed` (Python 3.10 / `typing.Required`)
+**Fecha:** 2026-07-20  
+**Tras:** Prompt 5B → `smoke_only` (Docker Py3.11 CORE_OFFLINE)
 
 ## Prompt recomendado (prioridad 1)
 
-**Título:** Prompt 5B — Host Python ≥3.11 + reintento sparql_llm CORE_OFFLINE
+**Título:** Prompt 6 — Auditoría estática SGPT (WAVE_B)
 
-**Objetivo:** Disponer `python3.11` (o superior) en WSL de forma documentada (sin tocar upstream), recrear venv, reinstalar desde copia pin, ejecutar `scripts/smoke/sparql_llm_core_offline.py`. Si OK → `smoke_only`.
+**Objetivo:** Inspeccionar `upstream/sgpt/` (pin en lock) sin install/train: entrypoints, deps, datasets, checkpoints ausentes/presentes, métricas, factibilidad en esta máquina (6 GiB VRAM), gates. Producir `audit/sgpt/STATIC_AUDIT.md` + actualizar PLAN_SYNC + push.
 
-**Alternativa:** si no se puede instalar 3.11, documentar bloqueo permanente CORE_OFFLINE en este host y replanificar (no fingir smoke).
+**No proponer:** tercer reintento CORE_OFFLINE; API/MCP sparql inmediato; mkgq/rdfconfig; Virtuoso; adapters.
 
-## No proponer aún
+## Objetivo de fase (recordatorio)
 
-- Agent/API/MCP smokes.  
-- mkgqagent / rdfconfig.  
-- Virtuoso.  
-- Patches silenciosos a `upstream/sparql_llm`.
+reproducción nativa → evaluación común → caso de estudio → análisis de errores → transferencia Text-to-SQL → método nuevo → ablaciones.

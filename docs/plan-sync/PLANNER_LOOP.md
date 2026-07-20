@@ -1,6 +1,6 @@
 # Bucle de optimización del plan (operativo)
 
-**Última actualización:** 2026-07-19
+**Última actualización:** 2026-07-20 (post Prompt 5B)
 
 ## Ciclo fijo
 
@@ -9,7 +9,7 @@
 2. Investigador → pega el prompt en Cursor y lo ejecuta
 3. Cursor → actualiza PLAN_SYNC.md + docs específicos + ARTIFACT_INDEX
 4. Cursor → commit + push a GitHub
-5. Investigador → pega en ChatGPT el "meta-prompt de replanificación" (abajo / PLAN_SYNC)
+5. Investigador → pega en ChatGPT el meta-prompt de replanificación
 6. ChatGPT → relee el repo, valida/ajusta el plan, entrega el siguiente prompt
 7. Repetir desde 2 hasta el objetivo de fase
 ```
@@ -19,8 +19,8 @@
 1. `PLAN_SYNC.md`  
 2. `docs/plan-sync/NEXT_PROMPT_GUIDANCE.md`  
 3. `docs/plan-sync/ARTIFACT_INDEX.md`  
-4. Artefactos citados en §3 de PLAN_SYNC (p. ej. readiness, gaps, environments/)  
-5. `METHOD_REGISTRY.yaml`, `MACHINE_PROFILE.md` si el siguiente paso implica runtime
+4. Artefactos citados en §3 de PLAN_SYNC  
+5. `METHOD_REGISTRY.yaml`, `MACHINE_PROFILE.md` si implica runtime
 
 ## Reglas del planificador
 
@@ -28,10 +28,12 @@
 - No reescribir todo el plan salvo bloqueo metodológico.  
 - Clonar ≠ install ≠ smoke ≠ reproducir paper.  
 - Respetar LICENSE_NOT_CONFIRMED, RAM/Compose/Ruby, y `common_adapter_allowed: false` hasta native audit.  
-- Cada prompt a Cursor debe exigir: actualizar PLAN_SYNC + índice + push.
+- Cada prompt a Cursor debe exigir: actualizar PLAN_SYNC + índice + push.  
+- Tras un smoke exitoso de un método, preferir **auditar el siguiente método** antes de encadenar más smokes del mismo.
 
-## Estado al cerrar Prompt 4B
+## Estado al cerrar Prompt 5B
 
-- Completado: fundación → 4B (env definition WAVE_A).  
-- Siguiente candidato documentado: **Prompt 5A — sparql_llm CORE_OFFLINE**.  
-- HEAD de referencia: ver `PLAN_SYNC.md` §9 / GitHub `main`.
+- Completado: fundación → 4B; 5A `setup_failed` (Py3.10); 5B `smoke_only` (Docker Py3.11 CORE_OFFLINE).  
+- Siguiente candidato: **auditoría estática SGPT (WAVE_B)**.  
+- HEAD: ver `PLAN_SYNC.md` §9 / GitHub `main`.  
+- Objetivo largo plazo intacto: reproducción nativa → evaluación común → caso de estudio → errores → Text-to-SQL → método nuevo → ablaciones.

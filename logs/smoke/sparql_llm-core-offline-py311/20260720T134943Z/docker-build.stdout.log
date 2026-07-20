@@ -1,0 +1,346 @@
+Sending build context to Docker daemon  98.47MB
+Step 1/8 : FROM python@sha256:b18992999dbe963a45a8a4da40ac2b1975be1a776d939d098c647482bcad5cba
+ ---> 7e666cfcc7bd
+Step 2/8 : ENV PYTHONDONTWRITEBYTECODE=1     PIP_DISABLE_PIP_VERSION_CHECK=1     HF_HUB_OFFLINE=1     TRANSFORMERS_OFFLINE=1
+ ---> Running in 83820cbbef42
+ ---> Removed intermediate container 83820cbbef42
+ ---> d019806c93bd
+Step 3/8 : WORKDIR /src
+ ---> Running in a0c191923bd6
+ ---> Removed intermediate container a0c191923bd6
+ ---> 4f048232e0eb
+Step 4/8 : COPY source/ /src/
+ ---> faa066cdcc3a
+Step 5/8 : RUN python -m pip install --no-cache-dir /src     && python -m pip check
+ ---> Running in f4531a2b097b
+Processing /src
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting beautifulsoup4>=4.13.0 (from sparql-llm==0.1.4)
+  Downloading beautifulsoup4-4.15.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting curies>=0.11.0 (from sparql-llm==0.1.4)
+  Downloading curies-0.14.1-py3-none-any.whl.metadata (14 kB)
+Collecting fastembed>=0.7.4 (from sparql-llm==0.1.4)
+  Downloading fastembed-0.8.0-py3-none-any.whl.metadata (10 kB)
+Collecting httpx>=0.27.2 (from sparql-llm==0.1.4)
+  Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting langchain-core>=1.2.6 (from sparql-llm==0.1.4)
+  Downloading langchain_core-1.4.9-py3-none-any.whl.metadata (4.7 kB)
+Collecting markdownify>=1.1.0 (from sparql-llm==0.1.4)
+  Downloading markdownify-1.2.3-py3-none-any.whl.metadata (9.9 kB)
+Collecting mcp<2,>=1.25.0 (from sparql-llm==0.1.4)
+  Downloading mcp-1.28.1-py3-none-any.whl.metadata (9.4 kB)
+Collecting pandas>=2.2.3 (from sparql-llm==0.1.4)
+  Downloading pandas-3.0.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 kB 9.9 MB/s eta 0:00:00
+Collecting qdrant-client>=1.16.2 (from sparql-llm==0.1.4)
+  Downloading qdrant_client-1.18.0-py3-none-any.whl.metadata (11 kB)
+Collecting rdflib>=7.0.0 (from sparql-llm==0.1.4)
+  Downloading rdflib-7.6.0-py3-none-any.whl.metadata (12 kB)
+Collecting sparqlwrapper>=2.0.0 (from sparql-llm==0.1.4)
+  Downloading SPARQLWrapper-2.0.0-py3-none-any.whl.metadata (2.0 kB)
+Collecting typing-extensions>=4.15.0 (from sparql-llm==0.1.4)
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting soupsieve>=1.6.1 (from beautifulsoup4>=4.13.0->sparql-llm==0.1.4)
+  Downloading soupsieve-2.9-py3-none-any.whl.metadata (4.6 kB)
+Collecting pystow>=0.8.0 (from curies>=0.11.0->sparql-llm==0.1.4)
+  Downloading pystow-0.8.21-py3-none-any.whl.metadata (17 kB)
+Collecting pydantic>=2.0 (from curies>=0.11.0->sparql-llm==0.1.4)
+  Downloading pydantic-2.13.4-py3-none-any.whl.metadata (109 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.4/109.4 kB 18.8 MB/s eta 0:00:00
+Collecting huggingface-hub<2.0,>=0.20 (from fastembed>=0.7.4->sparql-llm==0.1.4)
+  Downloading huggingface_hub-1.24.0-py3-none-any.whl.metadata (16 kB)
+Collecting loguru<0.8.0,>=0.7.2 (from fastembed>=0.7.4->sparql-llm==0.1.4)
+  Downloading loguru-0.7.3-py3-none-any.whl.metadata (22 kB)
+Collecting mmh3<6.0.0,>=4.1.0 (from fastembed>=0.7.4->sparql-llm==0.1.4)
+  Downloading mmh3-5.2.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (14 kB)
+Collecting numpy>=1.21 (from fastembed>=0.7.4->sparql-llm==0.1.4)
+  Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Collecting onnxruntime!=1.20.0,!=1.24.0,!=1.24.1,>=1.17.0 (from fastembed>=0.7.4->sparql-llm==0.1.4)
+  Downloading onnxruntime-1.27.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.4 kB)
+Collecting pillow<13.0,>=10.3.0 (from fastembed>=0.7.4->sparql-llm==0.1.4)
+  Downloading pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+Collecting py-rust-stemmers<0.2.0,>=0.1.0 (from fastembed>=0.7.4->sparql-llm==0.1.4)
+  Downloading py_rust_stemmers-0.1.8-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (3.5 kB)
+Collecting requests<3.0,>=2.31 (from fastembed>=0.7.4->sparql-llm==0.1.4)
+  Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting tokenizers<1.0,>=0.15 (from fastembed>=0.7.4->sparql-llm==0.1.4)
+  Downloading tokenizers-0.23.1-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.8 kB)
+Collecting tqdm<5.0,>=4.66 (from fastembed>=0.7.4->sparql-llm==0.1.4)
+  Downloading tqdm-4.69.0-py3-none-any.whl.metadata (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.4/57.4 kB 8.8 MB/s eta 0:00:00
+Collecting anyio (from httpx>=0.27.2->sparql-llm==0.1.4)
+  Downloading anyio-4.14.2-py3-none-any.whl.metadata (4.6 kB)
+Collecting certifi (from httpx>=0.27.2->sparql-llm==0.1.4)
+  Downloading certifi-2026.6.17-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx>=0.27.2->sparql-llm==0.1.4)
+  Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting idna (from httpx>=0.27.2->sparql-llm==0.1.4)
+  Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx>=0.27.2->sparql-llm==0.1.4)
+  Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting jsonpatch<2.0.0,>=1.33.0 (from langchain-core>=1.2.6->sparql-llm==0.1.4)
+  Downloading jsonpatch-1.33-py2.py3-none-any.whl.metadata (3.0 kB)
+Collecting langchain-protocol>=0.0.17 (from langchain-core>=1.2.6->sparql-llm==0.1.4)
+  Downloading langchain_protocol-0.0.18-py3-none-any.whl.metadata (2.4 kB)
+Collecting langsmith<1.0.0,>=0.3.45 (from langchain-core>=1.2.6->sparql-llm==0.1.4)
+  Downloading langsmith-0.10.7-py3-none-any.whl.metadata (22 kB)
+Requirement already satisfied: packaging>=23.2.0 in /usr/local/lib/python3.11/site-packages (from langchain-core>=1.2.6->sparql-llm==0.1.4) (26.2)
+Collecting pyyaml<7.0.0,>=5.3.0 (from langchain-core>=1.2.6->sparql-llm==0.1.4)
+  Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting tenacity!=8.4.0,<10.0.0,>=8.1.0 (from langchain-core>=1.2.6->sparql-llm==0.1.4)
+  Downloading tenacity-9.1.4-py3-none-any.whl.metadata (1.2 kB)
+Collecting uuid-utils<1.0,>=0.12.0 (from langchain-core>=1.2.6->sparql-llm==0.1.4)
+  Downloading uuid_utils-0.17.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.4 kB)
+Collecting six<2,>=1.15 (from markdownify>=1.1.0->sparql-llm==0.1.4)
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting httpx-sse>=0.4 (from mcp<2,>=1.25.0->sparql-llm==0.1.4)
+  Downloading httpx_sse-0.4.3-py3-none-any.whl.metadata (9.7 kB)
+Collecting jsonschema>=4.20.0 (from mcp<2,>=1.25.0->sparql-llm==0.1.4)
+  Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting pydantic-settings>=2.5.2 (from mcp<2,>=1.25.0->sparql-llm==0.1.4)
+  Downloading pydantic_settings-2.14.2-py3-none-any.whl.metadata (3.4 kB)
+Collecting pyjwt>=2.10.1 (from pyjwt[crypto]>=2.10.1->mcp<2,>=1.25.0->sparql-llm==0.1.4)
+  Downloading pyjwt-2.13.0-py3-none-any.whl.metadata (3.4 kB)
+Collecting python-multipart>=0.0.9 (from mcp<2,>=1.25.0->sparql-llm==0.1.4)
+  Downloading python_multipart-0.0.32-py3-none-any.whl.metadata (2.1 kB)
+Collecting sse-starlette>=1.6.1 (from mcp<2,>=1.25.0->sparql-llm==0.1.4)
+  Downloading sse_starlette-3.4.5-py3-none-any.whl.metadata (15 kB)
+Collecting starlette>=0.27 (from mcp<2,>=1.25.0->sparql-llm==0.1.4)
+  Downloading starlette-1.3.1-py3-none-any.whl.metadata (6.4 kB)
+Collecting typing-inspection>=0.4.1 (from mcp<2,>=1.25.0->sparql-llm==0.1.4)
+  Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting uvicorn>=0.31.1 (from mcp<2,>=1.25.0->sparql-llm==0.1.4)
+  Downloading uvicorn-0.51.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting python-dateutil>=2.8.2 (from pandas>=2.2.3->sparql-llm==0.1.4)
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting grpcio>=1.41.0 (from qdrant-client>=1.16.2->sparql-llm==0.1.4)
+  Downloading grpcio-1.82.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.7 kB)
+Collecting portalocker<4.0,>=2.7.0 (from qdrant-client>=1.16.2->sparql-llm==0.1.4)
+  Downloading portalocker-3.2.0-py3-none-any.whl.metadata (8.7 kB)
+Collecting protobuf>=3.20.0 (from qdrant-client>=1.16.2->sparql-llm==0.1.4)
+  Downloading protobuf-7.35.1-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+Collecting urllib3<3,>=1.26.14 (from qdrant-client>=1.16.2->sparql-llm==0.1.4)
+  Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting pyparsing<4,>=2.1.0 (from rdflib>=7.0.0->sparql-llm==0.1.4)
+  Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+Collecting h2<5,>=3 (from httpx[http2]>=0.20.0->qdrant-client>=1.16.2->sparql-llm==0.1.4)
+  Downloading h2-4.3.0-py3-none-any.whl.metadata (5.1 kB)
+Collecting click<9.0.0,>=8.4.2 (from huggingface-hub<2.0,>=0.20->fastembed>=0.7.4->sparql-llm==0.1.4)
+  Downloading click-8.4.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting filelock>=3.10.0 (from huggingface-hub<2.0,>=0.20->fastembed>=0.7.4->sparql-llm==0.1.4)
+  Downloading filelock-3.31.1-py3-none-any.whl.metadata (2.0 kB)
+Collecting fsspec>=2023.5.0 (from huggingface-hub<2.0,>=0.20->fastembed>=0.7.4->sparql-llm==0.1.4)
+  Downloading fsspec-2026.6.0-py3-none-any.whl.metadata (10 kB)
+Collecting hf-xet<2.0.0,>=1.5.1 (from huggingface-hub<2.0,>=0.20->fastembed>=0.7.4->sparql-llm==0.1.4)
+  Downloading hf_xet-1.5.2-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+Collecting jsonpointer>=1.9 (from jsonpatch<2.0.0,>=1.33.0->langchain-core>=1.2.6->sparql-llm==0.1.4)
+  Downloading jsonpointer-3.1.1-py3-none-any.whl.metadata (2.4 kB)
+Collecting attrs>=22.2.0 (from jsonschema>=4.20.0->mcp<2,>=1.25.0->sparql-llm==0.1.4)
+  Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.20.0->mcp<2,>=1.25.0->sparql-llm==0.1.4)
+  Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=4.20.0->mcp<2,>=1.25.0->sparql-llm==0.1.4)
+  Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.25.0 (from jsonschema>=4.20.0->mcp<2,>=1.25.0->sparql-llm==0.1.4)
+  Downloading rpds_py-2026.6.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Collecting distro>=1.7.0 (from langsmith<1.0.0,>=0.3.45->langchain-core>=1.2.6->sparql-llm==0.1.4)
+  Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+Collecting orjson>=3.9.14 (from langsmith<1.0.0,>=0.3.45->langchain-core>=1.2.6->sparql-llm==0.1.4)
+  Downloading orjson-3.11.9-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (41 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.0/42.0 kB 105.6 MB/s eta 0:00:00
+Collecting requests-toolbelt>=1.0.0 (from langsmith<1.0.0,>=0.3.45->langchain-core>=1.2.6->sparql-llm==0.1.4)
+  Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+Collecting sniffio>=1.1 (from langsmith<1.0.0,>=0.3.45->langchain-core>=1.2.6->sparql-llm==0.1.4)
+  Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting websockets>=15.0 (from langsmith<1.0.0,>=0.3.45->langchain-core>=1.2.6->sparql-llm==0.1.4)
+  Downloading websockets-16.1.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.8 kB)
+Collecting xxhash>=3.0.0 (from langsmith<1.0.0,>=0.3.45->langchain-core>=1.2.6->sparql-llm==0.1.4)
+  Downloading xxhash-3.8.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (15 kB)
+Collecting zstandard>=0.23.0 (from langsmith<1.0.0,>=0.3.45->langchain-core>=1.2.6->sparql-llm==0.1.4)
+  Downloading zstandard-0.25.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.3 kB)
+Collecting flatbuffers (from onnxruntime!=1.20.0,!=1.24.0,!=1.24.1,>=1.17.0->fastembed>=0.7.4->sparql-llm==0.1.4)
+  Downloading flatbuffers-25.12.19-py2.py3-none-any.whl.metadata (1.0 kB)
+Collecting annotated-types>=0.6.0 (from pydantic>=2.0->curies>=0.11.0->sparql-llm==0.1.4)
+  Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.46.4 (from pydantic>=2.0->curies>=0.11.0->sparql-llm==0.1.4)
+  Downloading pydantic_core-2.46.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+Collecting python-dotenv>=0.21.0 (from pydantic-settings>=2.5.2->mcp<2,>=1.25.0->sparql-llm==0.1.4)
+  Downloading python_dotenv-1.2.2-py3-none-any.whl.metadata (27 kB)
+Collecting cryptography>=3.4.0 (from pyjwt[crypto]>=2.10.1->mcp<2,>=1.25.0->sparql-llm==0.1.4)
+  Downloading cryptography-49.0.0-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.3 kB)
+Collecting backports-zstd (from pystow>=0.8.0->curies>=0.11.0->sparql-llm==0.1.4)
+  Downloading backports_zstd-1.6.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (6.8 kB)
+Collecting charset_normalizer<4,>=2 (from requests<3.0,>=2.31->fastembed>=0.7.4->sparql-llm==0.1.4)
+  Downloading charset_normalizer-3.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (41 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.7/41.7 kB 180.2 MB/s eta 0:00:00
+Collecting cffi>=2.0.0 (from cryptography>=3.4.0->pyjwt[crypto]>=2.10.1->mcp<2,>=1.25.0->sparql-llm==0.1.4)
+  Downloading cffi-2.1.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+Collecting hyperframe<7,>=6.1 (from h2<5,>=3->httpx[http2]>=0.20.0->qdrant-client>=1.16.2->sparql-llm==0.1.4)
+  Downloading hyperframe-6.1.0-py3-none-any.whl.metadata (4.3 kB)
+Collecting hpack<5,>=4.1 (from h2<5,>=3->httpx[http2]>=0.20.0->qdrant-client>=1.16.2->sparql-llm==0.1.4)
+  Downloading hpack-4.2.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pycparser (from cffi>=2.0.0->cryptography>=3.4.0->pyjwt[crypto]>=2.10.1->mcp<2,>=1.25.0->sparql-llm==0.1.4)
+  Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+Downloading beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.9/109.9 kB 69.1 MB/s eta 0:00:00
+Downloading curies-0.14.1-py3-none-any.whl (81 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 81.6/81.6 kB 7.3 MB/s eta 0:00:00
+Downloading fastembed-0.8.0-py3-none-any.whl (116 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 116.6/116.6 kB 69.7 MB/s eta 0:00:00
+Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.5/73.5 kB 36.2 MB/s eta 0:00:00
+Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.8/78.8 kB 152.4 MB/s eta 0:00:00
+Downloading langchain_core-1.4.9-py3-none-any.whl (558 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 558.3/558.3 kB 50.5 MB/s eta 0:00:00
+Downloading markdownify-1.2.3-py3-none-any.whl (15 kB)
+Downloading mcp-1.28.1-py3-none-any.whl (222 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 222.6/222.6 kB 97.1 MB/s eta 0:00:00
+Downloading pandas-3.0.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (11.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 73.5 MB/s eta 0:00:00
+Downloading qdrant_client-1.18.0-py3-none-any.whl (398 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 398.1/398.1 kB 43.2 MB/s eta 0:00:00
+Downloading rdflib-7.6.0-py3-none-any.whl (615 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 615.4/615.4 kB 60.7 MB/s eta 0:00:00
+Downloading SPARQLWrapper-2.0.0-py3-none-any.whl (28 kB)
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 kB 13.7 MB/s eta 0:00:00
+Downloading anyio-4.14.2-py3-none-any.whl (125 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.8/125.8 kB 145.3 MB/s eta 0:00:00
+Downloading grpcio-1.82.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (6.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 80.8 MB/s eta 0:00:00
+Downloading httpx_sse-0.4.3-py3-none-any.whl (9.0 kB)
+Downloading huggingface_hub-1.24.0-py3-none-any.whl (771 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 771.9/771.9 kB 76.8 MB/s eta 0:00:00
+Downloading idna-3.18-py3-none-any.whl (65 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.5/65.5 kB 11.5 MB/s eta 0:00:00
+Downloading jsonpatch-1.33-py2.py3-none-any.whl (12 kB)
+Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.6/90.6 kB 108.7 MB/s eta 0:00:00
+Downloading langchain_protocol-0.0.18-py3-none-any.whl (7.2 kB)
+Downloading langsmith-0.10.7-py3-none-any.whl (672 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 672.1/672.1 kB 69.3 MB/s eta 0:00:00
+Downloading loguru-0.7.3-py3-none-any.whl (61 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.6/61.6 kB 135.8 MB/s eta 0:00:00
+Downloading mmh3-5.2.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (103 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.1/103.1 kB 34.6 MB/s eta 0:00:00
+Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 72.4 MB/s eta 0:00:00
+Downloading onnxruntime-1.27.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (18.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.6/18.6 MB 77.3 MB/s eta 0:00:00
+Downloading pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 68.0 MB/s eta 0:00:00
+Downloading portalocker-3.2.0-py3-none-any.whl (22 kB)
+Downloading protobuf-7.35.1-cp310-abi3-manylinux2014_x86_64.whl (327 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 327.1/327.1 kB 75.9 MB/s eta 0:00:00
+Downloading py_rust_stemmers-0.1.8-cp311-cp311-manylinux_2_28_x86_64.whl (320 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 320.3/320.3 kB 60.4 MB/s eta 0:00:00
+Downloading pydantic-2.13.4-py3-none-any.whl (472 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 472.3/472.3 kB 49.0 MB/s eta 0:00:00
+Downloading pydantic_core-2.46.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 63.8 MB/s eta 0:00:00
+Downloading pydantic_settings-2.14.2-py3-none-any.whl (61 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.7/61.7 kB 18.3 MB/s eta 0:00:00
+Downloading pyjwt-2.13.0-py3-none-any.whl (31 kB)
+Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 122.8/122.8 kB 150.4 MB/s eta 0:00:00
+Downloading pystow-0.8.21-py3-none-any.whl (62 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.4/62.4 kB 49.8 MB/s eta 0:00:00
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 134.0 MB/s eta 0:00:00
+Downloading python_multipart-0.0.32-py3-none-any.whl (30 kB)
+Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 61.6 MB/s eta 0:00:00
+Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.1/73.1 kB 15.0 MB/s eta 0:00:00
+Downloading certifi-2026.6.17-py3-none-any.whl (133 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.3/133.3 kB 33.6 MB/s eta 0:00:00
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading soupsieve-2.9-py3-none-any.whl (37 kB)
+Downloading sse_starlette-3.4.5-py3-none-any.whl (16 kB)
+Downloading starlette-1.3.1-py3-none-any.whl (73 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.6/73.6 kB 149.0 MB/s eta 0:00:00
+Downloading tenacity-9.1.4-py3-none-any.whl (28 kB)
+Downloading tokenizers-0.23.1-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 70.8 MB/s eta 0:00:00
+Downloading tqdm-4.69.0-py3-none-any.whl (676 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 676.7/676.7 kB 64.0 MB/s eta 0:00:00
+Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 131.1/131.1 kB 47.5 MB/s eta 0:00:00
+Downloading uuid_utils-0.17.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (324 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 324.3/324.3 kB 29.5 MB/s eta 0:00:00
+Downloading uvicorn-0.51.0-py3-none-any.whl (73 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.2/73.2 kB 38.8 MB/s eta 0:00:00
+Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.5/67.5 kB 15.6 MB/s eta 0:00:00
+Downloading charset_normalizer-3.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (221 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 221.3/221.3 kB 85.6 MB/s eta 0:00:00
+Downloading click-8.4.2-py3-none-any.whl (119 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 119.2/119.2 kB 109.2 MB/s eta 0:00:00
+Downloading cryptography-49.0.0-cp311-abi3-manylinux_2_34_x86_64.whl (4.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 72.6 MB/s eta 0:00:00
+Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+Downloading filelock-3.31.1-py3-none-any.whl (97 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.2/97.2 kB 20.5 MB/s eta 0:00:00
+Downloading fsspec-2026.6.0-py3-none-any.whl (203 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 203.9/203.9 kB 64.6 MB/s eta 0:00:00
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading h2-4.3.0-py3-none-any.whl (61 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.8/61.8 kB 188.6 MB/s eta 0:00:00
+Downloading hf_xet-1.5.2-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 86.5 MB/s eta 0:00:00
+Downloading jsonpointer-3.1.1-py3-none-any.whl (7.7 kB)
+Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Downloading orjson-3.11.9-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (133 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.0/134.0 kB 100.5 MB/s eta 0:00:00
+Downloading python_dotenv-1.2.2-py3-none-any.whl (22 kB)
+Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.5/54.5 kB 133.7 MB/s eta 0:00:00
+Downloading rpds_py-2026.6.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (371 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 371.3/371.3 kB 79.6 MB/s eta 0:00:00
+Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Downloading websockets-16.1.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (186 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 186.9/186.9 kB 145.4 MB/s eta 0:00:00
+Downloading xxhash-3.8.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (220 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 220.1/220.1 kB 114.6 MB/s eta 0:00:00
+Downloading zstandard-0.25.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.6/5.6 MB 84.0 MB/s eta 0:00:00
+Downloading backports_zstd-1.6.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (492 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 492.5/492.5 kB 117.8 MB/s eta 0:00:00
+Downloading flatbuffers-25.12.19-py2.py3-none-any.whl (26 kB)
+Downloading cffi-2.1.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (217 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 217.9/217.9 kB 132.4 MB/s eta 0:00:00
+Downloading hpack-4.2.0-py3-none-any.whl (34 kB)
+Downloading hyperframe-6.1.0-py3-none-any.whl (13 kB)
+Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.2/48.2 kB 120.1 MB/s eta 0:00:00
+Building wheels for collected packages: sparql-llm
+  Building wheel for sparql-llm (pyproject.toml): started
+  Building wheel for sparql-llm (pyproject.toml): finished with status 'done'
+  Created wheel for sparql-llm: filename=sparql_llm-0.1.4-py3-none-any.whl size=123916 sha256=c749769a220799cafc06da5b10b9edb86cb8c92875e3c49912b412141f2f2eda
+  Stored in directory: /tmp/pip-ephem-wheel-cache-034rnl9q/wheels/a0/a1/77/062e875f5b546d9255c4403d3277b732c25c5e17cdbf8d14d3
+Successfully built sparql-llm
+Installing collected packages: flatbuffers, zstandard, xxhash, websockets, uuid-utils, urllib3, typing-extensions, tqdm, tenacity, soupsieve, sniffio, six, rpds-py, pyyaml, python-multipart, python-dotenv, pyparsing, pyjwt, pycparser, py-rust-stemmers, protobuf, portalocker, pillow, orjson, numpy, mmh3, loguru, jsonpointer, idna, hyperframe, httpx-sse, hpack, hf-xet, h11, fsspec, filelock, distro, click, charset_normalizer, certifi, backports-zstd, attrs, annotated-types, uvicorn, typing-inspection, requests, referencing, rdflib, python-dateutil, pystow, pydantic-core, onnxruntime, langchain-protocol, jsonpatch, httpcore, h2, grpcio, cffi, beautifulsoup4, anyio, starlette, sparqlwrapper, requests-toolbelt, pydantic, pandas, markdownify, jsonschema-specifications, httpx, cryptography, sse-starlette, pydantic-settings, langsmith, jsonschema, huggingface-hub, curies, tokenizers, qdrant-client, mcp, langchain-core, fastembed, sparql-llm
+Successfully installed annotated-types-0.7.0 anyio-4.14.2 attrs-26.1.0 backports-zstd-1.6.0 beautifulsoup4-4.15.0 certifi-2026.6.17 cffi-2.1.0 charset_normalizer-3.4.9 click-8.4.2 cryptography-49.0.0 curies-0.14.1 distro-1.9.0 fastembed-0.8.0 filelock-3.31.1 flatbuffers-25.12.19 fsspec-2026.6.0 grpcio-1.82.1 h11-0.16.0 h2-4.3.0 hf-xet-1.5.2 hpack-4.2.0 httpcore-1.0.9 httpx-0.28.1 httpx-sse-0.4.3 huggingface-hub-1.24.0 hyperframe-6.1.0 idna-3.18 jsonpatch-1.33 jsonpointer-3.1.1 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 langchain-core-1.4.9 langchain-protocol-0.0.18 langsmith-0.10.7 loguru-0.7.3 markdownify-1.2.3 mcp-1.28.1 mmh3-5.2.1 numpy-2.4.6 onnxruntime-1.27.0 orjson-3.11.9 pandas-3.0.3 pillow-12.3.0 portalocker-3.2.0 protobuf-7.35.1 py-rust-stemmers-0.1.8 pycparser-3.0 pydantic-2.13.4 pydantic-core-2.46.4 pydantic-settings-2.14.2 pyjwt-2.13.0 pyparsing-3.3.2 pystow-0.8.21 python-dateutil-2.9.0.post0 python-dotenv-1.2.2 python-multipart-0.0.32 pyyaml-6.0.3 qdrant-client-1.18.0 rdflib-7.6.0 referencing-0.37.0 requests-2.34.2 requests-toolbelt-1.0.0 rpds-py-2026.6.3 six-1.17.0 sniffio-1.3.1 soupsieve-2.9 sparql-llm-0.1.4 sparqlwrapper-2.0.0 sse-starlette-3.4.5 starlette-1.3.1 tenacity-9.1.4 tokenizers-0.23.1 tqdm-4.69.0 typing-extensions-4.16.0 typing-inspection-0.4.2 urllib3-2.7.0 uuid-utils-0.17.0 uvicorn-0.51.0 websockets-16.1.1 xxhash-3.8.1 zstandard-0.25.0
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0mNo broken requirements found.
+ ---> Removed intermediate container f4531a2b097b
+ ---> 7adaecd6a77e
+Step 6/8 : COPY harness.py /lab/harness.py
+ ---> 2447495845a4
+Step 7/8 : COPY void_uniprot.ttl /data/void_uniprot.ttl
+ ---> e5681018092f
+Step 8/8 : WORKDIR /lab
+ ---> Running in a79b54266966
+ ---> Removed intermediate container a79b54266966
+ ---> 769e9f300f4a
+Successfully built 769e9f300f4a
+Successfully tagged text2sparql-lab/sparql-llm-core-offline:20260720T134943Z

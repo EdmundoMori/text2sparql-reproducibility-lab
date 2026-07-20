@@ -1,0 +1,206 @@
+=== 2026-07-20T15:50:07+02:00 START Prompt 5B ===
+RUN_ID=20260720T134943Z
+LAB_COMMIT=6ca23b10f429c209d6e255519be7aac517a41f83
+upstream_pin=3748730e3bd2df2595280b918269fdaadb9fc0c3
+prior_run=20260719T112306Z setup_failed
+Docker version 29.1.3, build 29.1.3-0ubuntu3~22.04.2
+Client:
+ Version:    29.1.3
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  trust: Manage trust on Docker images (Docker Inc.)
+    Version:  29.1.3
+    Path:     /usr/libexec/docker/cli-plugins/docker-trust
+
+Server:
+ Containers: 0
+  Running: 0
+  Paused: 0
+  Stopped: 0
+ Images: 0
+ Server Version: 29.1.3
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Using metacopy: false
+  Native Overlay Diff: true
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: systemd
+ Cgroup Version: 2
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          0         0         0B        0B
+Containers      0         0         0B        0B
+Local Volumes   2         0         49.06MB   49.06MB (100%)
+Build Cache     0         0         0B        0B
+source_files=132
+=== docker pull ===
+DIGEST=python@sha256:b18992999dbe963a45a8a4da40ac2b1975be1a776d939d098c647482bcad5cba
+IMAGE_ID=sha256:7e666cfcc7bd4c47b26b7a5ec0116d80e9bc5415ea06c0dc0bd117a50e9fa6c6
+ARCH=amd64 SIZE=129842178 CREATED=2026-07-14T02:13:14.531056736Z
+DIGEST_HASH=sha256:b18992999dbe963a45a8a4da40ac2b1975be1a776d939d098c647482bcad5cba
+=== docker build ===
+BUILD_EXIT=0
+=== env register --network none ===
+Python 3.11.15
+pip 24.0 from /usr/local/lib/python3.11/site-packages/pip (python 3.11)
+No broken requirements found.
+annotated-types==0.7.0
+anyio==4.14.2
+attrs==26.1.0
+backports.zstd==1.6.0
+beautifulsoup4==4.15.0
+certifi==2026.6.17
+cffi==2.1.0
+charset-normalizer==3.4.9
+click==8.4.2
+cryptography==49.0.0
+curies==0.14.1
+distro==1.9.0
+fastembed==0.8.0
+filelock==3.31.1
+flatbuffers==25.12.19
+fsspec==2026.6.0
+grpcio==1.82.1
+h11==0.16.0
+h2==4.3.0
+hf-xet==1.5.2
+hpack==4.2.0
+httpcore==1.0.9
+httpx==0.28.1
+httpx-sse==0.4.3
+huggingface_hub==1.24.0
+hyperframe==6.1.0
+idna==3.18
+jsonpatch==1.33
+jsonpointer==3.1.1
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+langchain-core==1.4.9
+langchain-protocol==0.0.18
+langsmith==0.10.7
+loguru==0.7.3
+markdownify==1.2.3
+mcp==1.28.1
+mmh3==5.2.1
+numpy==2.4.6
+onnxruntime==1.27.0
+orjson==3.11.9
+packaging==26.2
+pandas==3.0.3
+pillow==12.3.0
+portalocker==3.2.0
+protobuf==7.35.1
+py_rust_stemmers==0.1.8
+pycparser==3.0
+pydantic==2.13.4
+pydantic-settings==2.14.2
+pydantic_core==2.46.4
+PyJWT==2.13.0
+pyparsing==3.3.2
+pystow==0.8.21
+python-dateutil==2.9.0.post0
+python-dotenv==1.2.2
+python-multipart==0.0.32
+PyYAML==6.0.3
+qdrant-client==1.18.0
+rdflib==7.6.0
+referencing==0.37.0
+requests==2.34.2
+requests-toolbelt==1.0.0
+rpds-py==2026.6.3
+six==1.17.0
+sniffio==1.3.1
+soupsieve==2.9
+sparql-llm @ file:///src
+SPARQLWrapper==2.0.0
+sse-starlette==3.4.5
+starlette==1.3.1
+tenacity==9.1.4
+tokenizers==0.23.1
+tqdm==4.69.0
+typing-inspection==0.4.2
+typing_extensions==4.16.0
+urllib3==2.7.0
+uuid_utils==0.17.0
+uvicorn==0.51.0
+websockets==16.1.1
+xxhash==3.8.1
+zstandard==0.25.0
+[{"name": "annotated-types", "version": "0.7.0"}, {"name": "anyio", "version": "4.14.2"}, {"name": "attrs", "version": "26.1.0"}, {"name": "backports.zstd", "version": "1.6.0"}, {"name": "beautifulsoup4", "version": "4.15.0"}, {"name": "certifi", "version": "2026.6.17"}, {"name": "cffi", "version": "2.1.0"}, {"name": "charset-normalizer", "version": "3.4.9"}, {"name": "click", "version": "8.4.2"}, {"name": "cryptography", "version": "49.0.0"}, {"name": "curies", "version": "0.14.1"}, {"name": "distro", "version": "1.9.0"}, {"name": "fastembed", "version": "0.8.0"}, {"name": "filelock", "version": "3.31.1"}, {"name": "flatbuffers", "version": "25.12.19"}, {"name": "fsspec", "version": "2026.6.0"}, {"name": "grpcio", "version": "1.82.1"}, {"name": "h11", "version": "0.16.0"}, {"name": "h2", "version": "4.3.0"}, {"name": "hf-xet", "version": "1.5.2"}, {"name": "hpack", "version": "4.2.0"}, {"name": "httpcore", "version": "1.0.9"}, {"name": "httpx", "version": "0.28.1"}, {"name": "httpx-sse", "version": "0.4.3"}, {"name": "huggingface_hub", "version": "1.24.0"}, {"name": "hyperframe", "version": "6.1.0"}, {"name": "idna", "version": "3.18"}, {"name": "jsonpatch", "version": "1.33"}, {"name": "jsonpointer", "version": "3.1.1"}, {"name": "jsonschema", "version": "4.26.0"}, {"name": "jsonschema-specifications", "version": "2025.9.1"}, {"name": "langchain-core", "version": "1.4.9"}, {"name": "langchain-protocol", "version": "0.0.18"}, {"name": "langsmith", "version": "0.10.7"}, {"name": "loguru", "version": "0.7.3"}, {"name": "markdownify", "version": "1.2.3"}, {"name": "mcp", "version": "1.28.1"}, {"name": "mmh3", "version": "5.2.1"}, {"name": "numpy", "version": "2.4.6"}, {"name": "onnxruntime", "version": "1.27.0"}, {"name": "orjson", "version": "3.11.9"}, {"name": "packaging", "version": "26.2"}, {"name": "pandas", "version": "3.0.3"}, {"name": "pillow", "version": "12.3.0"}, {"name": "pip", "version": "24.0"}, {"name": "portalocker", "version": "3.2.0"}, {"name": "protobuf", "version": "7.35.1"}, {"name": "py_rust_stemmers", "version": "0.1.8"}, {"name": "pycparser", "version": "3.0"}, {"name": "pydantic", "version": "2.13.4"}, {"name": "pydantic_core", "version": "2.46.4"}, {"name": "pydantic-settings", "version": "2.14.2"}, {"name": "PyJWT", "version": "2.13.0"}, {"name": "pyparsing", "version": "3.3.2"}, {"name": "pystow", "version": "0.8.21"}, {"name": "python-dateutil", "version": "2.9.0.post0"}, {"name": "python-dotenv", "version": "1.2.2"}, {"name": "python-multipart", "version": "0.0.32"}, {"name": "PyYAML", "version": "6.0.3"}, {"name": "qdrant-client", "version": "1.18.0"}, {"name": "rdflib", "version": "7.6.0"}, {"name": "referencing", "version": "0.37.0"}, {"name": "requests", "version": "2.34.2"}, {"name": "requests-toolbelt", "version": "1.0.0"}, {"name": "rpds-py", "version": "2026.6.3"}, {"name": "setuptools", "version": "79.0.1"}, {"name": "six", "version": "1.17.0"}, {"name": "sniffio", "version": "1.3.1"}, {"name": "soupsieve", "version": "2.9"}, {"name": "sparql-llm", "version": "0.1.4"}, {"name": "SPARQLWrapper", "version": "2.0.0"}, {"name": "sse-starlette", "version": "3.4.5"}, {"name": "starlette", "version": "1.3.1"}, {"name": "tenacity", "version": "9.1.4"}, {"name": "tokenizers", "version": "0.23.1"}, {"name": "tqdm", "version": "4.69.0"}, {"name": "typing_extensions", "version": "4.16.0"}, {"name": "typing-inspection", "version": "0.4.2"}, {"name": "urllib3", "version": "2.7.0"}, {"name": "uuid_utils", "version": "0.17.0"}, {"name": "uvicorn", "version": "0.51.0"}, {"name": "websockets", "version": "16.1.1"}, {"name": "wheel", "version": "0.46.3"}, {"name": "xxhash", "version": "3.8.1"}, {"name": "zstandard", "version": "0.25.0"}]
+Name: sparql-llm
+Version: 0.1.4
+Summary: Reusable components and complete chat system to improve Large Language Models (LLMs) capabilities when generating SPARQL queries for a given set of endpoints, using Retrieval-Augmented Generation (RAG) and SPARQL query validation from the endpoint schema.
+Home-page: 
+Author: 
+Author-email: Vincent Emonet <vincent.emonet@gmail.com>
+License: MIT License
+
+Copyright (c) 2024-present SIB Swiss Institute of Bioinformatics
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+Location: /usr/local/lib/python3.11/site-packages
+Requires: beautifulsoup4, curies, fastembed, httpx, langchain-core, markdownify, mcp, pandas, qdrant-client, rdflib, sparqlwrapper, typing-extensions
+Required-by: 
+0.1.4
+=== import probe ===
+IMPORT_EXIT=0
+=== harness smoke ===
+SMOKE_EXIT=1
+=== LAB_HARNESS_FAILURE fix ===
+Removed socket.socket.connect assignment; use socket.create_connection (module-level).
+=== harness retry 1 (only allowed extra run) ===
+SMOKE_RETRY_EXIT=1
+=== note: --read-only NOT viable (import writes /root/.data via deps) ===
+=== harness viable mode: --network none, writable container FS, no RO ===
+SMOKE_VIABLE_EXIT=0
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          2         0         607.4MB   607.4MB (100%)
+Containers      0         0         0B        0B
+Local Volumes   2         0         49.06MB   49.06MB (100%)
+Build Cache     0         0         0B        0B
+=== 2026-07-20T15:54:28+02:00 END Prompt 5B ===
+result=smoke_only
+upstream_diff_lines=0
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          2         0         607.4MB   607.4MB (100%)
+Containers      0         0         0B        0B
+Local Volumes   2         0         49.06MB   49.06MB (100%)
+Build Cache     0         0         0B        0B
+Removing run image (not base python slim - optional keep base for reuse)
+Untagged: text2sparql-lab/sparql-llm-core-offline:20260720T134943Z
+Deleted: sha256:769e9f300f4aa6de25e05f87f5223e659fa3ed0d507f2a9866032636f1e8b810
+Deleted: sha256:e5681018092f779359d17b121eccededbc2c164fd1e8d2b51cb10ca69e75a711
+Deleted: sha256:75ecb1d671d96ab75c0924c773b8ebd100fc6b6af1e8ed08e2364174991a480c
+Deleted: sha256:2447495845a489ca5cf4cd889181b0b01e2b7f13ac8c8453d1a3b1e0ebd2de58
+Deleted: sha256:4bcc3be022732fe44b7902914a84dca5a2e2af83818769e39dd7b7037f92831e
+Deleted: sha256:7adaecd6a77eb4ae414c6f058fcb604c16aca979d91977e45822f4a58bdb6ac2
+Deleted: sha256:40cd36161ccef011fee9d431e5d45b4f0f8bf7ffb6634943d48033a86df8b85f
+Deleted: sha256:faa066cdcc3acce7a42136be985ab177befbfe2f0a54a5350fcea7c263ddc07d
+Deleted: sha256:df17a4a6da3ac99a5ffef540e93aa10e20f438cdb22de3631a3a65fb7430c432
+Deleted: sha256:4f048232e0eb050dd010dc46ddabac91f2299fd384adfc452397aa7687cbad70
+Deleted: sha256:8838e9e00c0aef3afd3cb25d80b2f87a5b12847028a5384e1691f09eb9c5fdad
+Deleted: sha256:d019806c93bda3bf539592497999d7751d27722b28818b6ab3caa17c7f1337bd
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          1         0         129.8MB   0B (0%)
+Containers      0         0         0B        0B
+Local Volumes   2         0         49.06MB   49.06MB (100%)
+Build Cache     0         0         0B        0B
+NO_SECRETS NO_WORKDIR_IN_GIT

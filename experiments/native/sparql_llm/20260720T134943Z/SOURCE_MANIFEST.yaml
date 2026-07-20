@@ -1,0 +1,17 @@
+method_id: sparql_llm
+scope: CORE_OFFLINE
+run_id: "20260720T134943Z"
+lab_commit_initial: "6ca23b10f429c209d6e255519be7aac517a41f83"
+upstream_source_path: upstream/sparql_llm
+upstream_pinned_commit: "3748730e3bd2df2595280b918269fdaadb9fc0c3"
+disposable_source_path: workdir/runs/sparql_llm/20260720T134943Z/build-context/source
+package_version_expected: "0.1.4"
+runtime: docker_python_3.11
+base_image_tag: python:3.11-slim-bookworm
+base_image_digest: "python@sha256:b18992999dbe963a45a8a4da40ac2b1975be1a776d939d098c647482bcad5cba"
+prior_run_id: "20260719T112306Z"
+prior_run_status: setup_failed
+timestamp_utc: "2026-07-20T13:49:43Z"
+motivo: "Retry CORE_OFFLINE on Python 3.11 in Docker after host 3.10 typing.Required failure"
+license: MIT
+is_adapter: false

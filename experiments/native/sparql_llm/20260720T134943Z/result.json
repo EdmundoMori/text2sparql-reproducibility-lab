@@ -1,0 +1,41 @@
+{
+  "run_id": "20260720T134943Z",
+  "method_id": "sparql_llm",
+  "scope": "CORE_OFFLINE",
+  "experiment_status": "smoke_only",
+  "lab_commit_initial": "6ca23b10f429c209d6e255519be7aac517a41f83",
+  "upstream_commit": "3748730e3bd2df2595280b918269fdaadb9fc0c3",
+  "python_version": "3.11.15",
+  "base_image_digest": "python@sha256:b18992999dbe963a45a8a4da40ac2b1975be1a776d939d098c647482bcad5cba",
+  "package_version": "0.1.4",
+  "checks": {
+    "docker_build": true,
+    "pip_check": true,
+    "python_311": true,
+    "package_version_0_1_4": true,
+    "import": true,
+    "sparql_parse": true,
+    "void_load_nonempty": true,
+    "valid_query_zero_issues": true,
+    "invalid_predicate_detected": true,
+    "network_during_smoke": false,
+    "upstream_intact": true
+  },
+  "void_classes_count": 162,
+  "schema_valid_query_issue_count": 0,
+  "invalid_predicate_issue_count": 1,
+  "harness_lab_fix_applied": true,
+  "harness_fix_reason": "LAB_HARNESS_FAILURE: socket.socket.create_connection AttributeError; fixed to socket.create_connection; removed socket.socket.connect assignment",
+  "read_only_attempt_failed": true,
+  "read_only_failure": "[Errno 30] Read-only file system: '/root/.data' during import",
+  "exit_codes": {
+    "import_probe": 0,
+    "harness_viable": 0
+  },
+  "prior_run_id": "20260719T112306Z",
+  "prior_run_status_unchanged": "setup_failed",
+  "native_audit_complete": false,
+  "common_adapter_allowed": false,
+  "reproduced": false,
+  "partially_reproduced": false
+}

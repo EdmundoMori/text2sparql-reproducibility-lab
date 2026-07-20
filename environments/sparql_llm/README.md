@@ -3,11 +3,21 @@
 **Source commit:** `3748730e3bd2df2595280b918269fdaadb9fc0c3`  
 **Legal:** MIT (`CONFIRMED_LICENSE_FILE`)  
 **Package version in code:** `0.1.4` (`src/sparql_llm/__init__.py`) — diverge de `CITATION.cff`/`server.json` `0.1.2`  
-**Python requerido:** `>=3.10` (`pyproject.toml`) — host: `3.10.12` OK  
-**Gestores futuros:** `venv`+`pip` o Poetry; **no** `uv`/`uvx` (ABSENT en host)  
-**Extra GPU:** comentado en `pyproject.toml` — **no asumir**
+**Python requerido (metadata):** `>=3.10` (`pyproject.toml`) — **inconsistente** con `typing.Required` (necesita ≥3.11).  
+**Host WSL:** Python 3.10.12 → CORE_OFFLINE en host = `setup_failed` (run 5A).  
+**Runtime validado:** Docker `python:3.11-slim-bookworm` digest `sha256:b18992999…` → `smoke_only` (run 5B `20260720T134943Z`).  
+Ver [`container_py311.md`](container_py311.md), [`Dockerfile.core-offline-py311`](Dockerfile.core-offline-py311).
 
-Estado: **documentado**, no instalado.
+Estado: **documentado** + **CORE_OFFLINE smoke_only en contenedor** (no paper).
+
+### Runs CORE_OFFLINE
+
+| RUN_ID | Runtime | Status | Report |
+|---|---|---|---|
+| `20260719T112306Z` | host Py3.10 | setup_failed | `audit/sparql_llm/CORE_OFFLINE_SMOKE_REPORT.md` |
+| `20260720T134943Z` | Docker Py3.11 | smoke_only | `audit/sparql_llm/CORE_OFFLINE_PY311_SMOKE_REPORT.md` |
+
+Entorno resuelto 5B: `logs/smoke/sparql_llm-core-offline-py311/20260720T134943Z/pip-freeze.txt` (no reemplaza el manifiesto documental 4B).
 
 ---
 

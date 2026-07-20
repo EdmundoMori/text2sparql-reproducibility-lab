@@ -80,3 +80,11 @@ No avanzar a agent/API hasta import CORE_OFFLINE OK.
 ## 13. Distinción
 
 Este intento **no** es reproducción científica del artículo SPARQL-LLM.
+
+---
+
+## Segundo intento (Prompt 5B)
+
+Reintento en Docker Python 3.11: ver [`CORE_OFFLINE_PY311_SMOKE_REPORT.md`](CORE_OFFLINE_PY311_SMOKE_REPORT.md) (RUN `20260720T134943Z`).  
+**Este informe 5A permanece `setup_failed` y no se reescribe.**
+

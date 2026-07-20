@@ -1,0 +1,22 @@
+# sparql_llm CORE_OFFLINE smoke image — Python 3.11 (lab template)
+# Base pinned by digest (Prompt 5B). Do not float on mutable tags at build time.
+# Image: python:3.11-slim-bookworm @ sha256:b18992999dbe963a45a8a4da40ac2b1975be1a776d939d098c647482bcad5cba
+
+FROM python@sha256:b18992999dbe963a45a8a4da40ac2b1975be1a776d939d098c647482bcad5cba
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    HF_HUB_OFFLINE=1 \
+    TRANSFORMERS_OFFLINE=1
+
+WORKDIR /src
+
+# Local source copy only (non-editable install, no extras)
+COPY source/ /src/
+RUN python -m pip install --no-cache-dir /src \
+    && python -m pip check
+
+COPY harness.py /lab/harness.py
+COPY void_uniprot.ttl /data/void_uniprot.ttl
+
+WORKDIR /lab

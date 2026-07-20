@@ -1,0 +1,22 @@
+{
+  "method_id": "sparql_llm",
+  "scope": "CORE_OFFLINE",
+  "package_version": null,
+  "import_success": false,
+  "version_ok": false,
+  "valid_sparql_parse_success": false,
+  "void_file": "/data/void_uniprot.ttl",
+  "void_classes_count": 0,
+  "selected_class": null,
+  "selected_predicate": null,
+  "schema_valid_query_issue_count": null,
+  "invalid_predicate_issue_count": null,
+  "network_attempt_detected": false,
+  "mandatory_checks_passed": false,
+  "errors": [
+    "import_failed:[Errno 30] Read-only file system: '/root/.data'"
+  ],
+  "timestamp": "2026-07-20T13:52:04.524107+00:00",
+  "python_version": "3.11.15 (main, Jul 14 2026, 02:10:36) [GCC 12.2.0]",
+  "network_attempts_detail": []
+}

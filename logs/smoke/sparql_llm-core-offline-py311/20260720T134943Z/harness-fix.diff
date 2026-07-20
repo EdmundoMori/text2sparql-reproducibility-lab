@@ -1,0 +1,38 @@
+diff --git a/scripts/smoke/sparql_llm_core_offline.py b/scripts/smoke/sparql_llm_core_offline.py
+index 99772ce7..32775d3d 100644
+--- a/scripts/smoke/sparql_llm_core_offline.py
++++ b/scripts/smoke/sparql_llm_core_offline.py
+@@ -17,9 +17,13 @@ from typing import Any
+ 
+ 
+ def _install_network_guard() -> list[str]:
+-    """Fail closed on unexpected TCP connections during smoke."""
++    """Fail closed on unexpected TCP connections during smoke.
++
++    Primary isolation is Docker ``--network none``. This guard blocks
++    ``socket.create_connection`` only. Do not assign to ``socket.socket.connect``
++    (may be immutable / nonexistent as a type attribute on some runtimes).
++    """
+     attempts: list[str] = []
+-    real_create = socket.socket.create_connection
+ 
+     def guarded_create_connection(address, *args, **kwargs):  # type: ignore[no-untyped-def]
+         host = address[0] if isinstance(address, tuple) else address
+@@ -27,16 +31,7 @@ def _install_network_guard() -> list[str]:
+         attempts.append(msg)
+         raise RuntimeError(f"CORE_OFFLINE smoke blocked unexpected network: {address}")
+ 
+-    socket.socket.create_connection = guarded_create_connection  # type: ignore[method-assign]
+-    # Also block common lower-level connect if used
+-    _orig_connect = socket.socket.connect
+-
+-    def guarded_connect(self, address):  # type: ignore[no-untyped-def]
+-        attempts.append(f"socket_connect:{address}")
+-        raise RuntimeError(f"CORE_OFFLINE smoke blocked socket.connect: {address}")
+-
+-    socket.socket.connect = guarded_connect  # type: ignore[method-assign]
+-    _ = real_create, _orig_connect
++    socket.create_connection = guarded_create_connection  # type: ignore[assignment]
+     return attempts
+ 
+ 
