@@ -104,5 +104,5 @@ No ejecutar 10B sin opt-in. No POST `/chat` todavía.
 | commit inicial | `45605d47983961210679fdd8d6b39577eafee1ec` |
 | RUN_ID | `20260721T084637Z` |
 | clasificación | `ENVIRONMENT_READY_INDEX_BLOCKED_PENDING_EMBEDDING_DOWNLOAD_APPROVAL` |
-| commit final | *(tras push)* |
-| push | *(pendiente)* |
+| commit final | `e646b557dd3a8432989a364c9dff506e7de776c2` |
+| push | confirmado en origin/main |
