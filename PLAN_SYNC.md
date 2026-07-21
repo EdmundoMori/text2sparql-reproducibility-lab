@@ -83,5 +83,5 @@ No gastar clave hasta firma. No biodata. No otros métodos.
 | commit inicial | `96d5bab9556065cd0cd5785327475565ce910cba` |
 | RUN_ID | `20260721T092249Z` |
 | clasificación | `ENVIRONMENT_READY_INDEX_READY_PREFLIGHT_PASS` |
-| commit final |  |
+| commit final | `c3ad6c03daec5226f9ccd808294c0a1165d54975` (artefactos); HEAD `f823615cd69c34989c5933a3340213401c91303a` |
 | push | confirmado en origin/main |
