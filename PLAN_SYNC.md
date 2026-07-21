@@ -60,6 +60,6 @@ Tras firma de training approval:
 | Campo | Valor |
 |---|---|
 | commit inicial | `ba31ecfd82dff9bf57752305005e43a73a88a657` |
-| ARTIFACT_COMMIT | PENDING_ARTIFACT |
-| FINAL_HEAD | PENDING_FINAL |
-| push | pending |
+| ARTIFACT_COMMIT | f63a5dde8d53a6759078a4fe6e8649a371a554ec |
+| FINAL_HEAD | f63a5dde8d53a6759078a4fe6e8649a371a554ec |
+| push | done |
