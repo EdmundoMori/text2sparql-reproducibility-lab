@@ -62,5 +62,5 @@ Informe: [`audit/sgpt/Z2_BUILD_AND_PREFLIGHT_REPORT.md`](audit/sgpt/Z2_BUILD_AND
 | commit inicial | `8fbacdf07b0446dd16ed68cafe0c453fd9479b37` |
 | RUN_ID | `20260721T114919Z` |
 | gate | `Z2_ENV_READY_PREFLIGHT_PASS` |
-| commit final | `fa82586bea8c7932843aee1cf4d0cffea63b7f4a` |
+| commit final | `bca804c3a49127adee8208a17c50ac96b20bbf1e` |
 | push | done |
