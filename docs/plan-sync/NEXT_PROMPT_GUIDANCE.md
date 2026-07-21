@@ -1,22 +1,22 @@
 # NEXT_PROMPT_GUIDANCE
 
 **Fecha:** 2026-07-21  
-**Tras:** Prompt 12 — entorno SGPT documental; gate **`CONDITIONAL_DEPENDENCY_RESOLUTION`**
+**Tras:** Prompt 12B — pins SGPT; gate **`READY_FOR_Z2_DOWNLOAD_AUTHORIZATION`**
 
 ## Prompt recomendado (único)
 
-**Título:** Prompt 12B — Resolución documental de pins SGPT mediante metadata oficial y compatibilidad, ZERO_COST, sin instalación.
+**Título:** Prompt 13A — Autorización y descarga controlada de imagen y paquetes SGPT Z2 + construcción del entorno CPU, ZERO_COST, sin GPT-2, sin modelos spaCy, sin train.
 
 **Método:** `sgpt`  
-**Objetivo:** Proponer pins candidatos (transformers, spaCy, numpy, tqdm, NLTK, etc.) usando **solo metadata pública oficial**, coherentes con Python 3.8 + torch 1.13.1 y con `IMPORT_COMPATIBILITY_REQUIREMENTS.csv`. Sin pip install, sin Docker build, sin descargas de modelos, sin train.
+**Objetivo:** Con autorización humana explícita: pull imagen `python@sha256:314bc2fb…`, instalar **solo** constraints Z2 (`torch==1.13.1+cpu`, `transformers==4.25.1`, numpy/tqdm/nltk/toolchain), freeze, import probe CPU, **sin** GPT-2, **sin** spaCy models, **sin** train/eval.
 
 **Restricciones:**
-- Coste externo $0.00  
-- No inventar compatibilidad no verificada; etiquetar UNKNOWN/PROPOSED  
-- No ejecutar Z2/Z3  
-- Conservar `audit_only` / `native_audit_complete=false` / `common_adapter_allowed=false`
+- Coste externo $0.00 (solo artefactos públicos gratuitos)  
+- No `utils.dptree` / no QALD9 BaseDataset / no Apex  
+- Conservar `audit_only`; no Table 4  
+- Reducir métricas Z2 a core si NLTK data no autorizada  
 
-**Condición de éxito:** constraints documentales + justificación por símbolo + stop conditions; posible transición a READY_FOR_Z2_ENV_BUILD solo si digest+pins quedan verificables sin install (si no, seguir CONDITIONAL).
+**Condición de éxito:** entorno Z2 construido + evidencia import/data/metric o fallo etiquetado; aún no Z3.
 
 ## Objetivo de fase
 

@@ -1,0 +1,16 @@
+prompt=12B
+run_id=20260721T113310Z
+init_sha=392c101ef4f0defde8b19c6c49eac0064dc6954a
+no_pip_install=true
+no_docker_pull=true
+no_docker_build=true
+no_wheel_download=true
+no_gpt2=true
+no_spacy_models=true
+no_nltk_data=true
+no_train=true
+no_inference=true
+external_monetary_cost_usd=0.00
+gate=READY_FOR_Z2_DOWNLOAD_AUTHORIZATION
+transformers=4.25.1
+torch_z2=1.13.1+cpu

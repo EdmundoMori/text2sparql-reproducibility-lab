@@ -538,10 +538,10 @@ methods:
   adapter_legal_gate: conditional_deferred
   generality_class: retraining_required
   gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-  next_native_action: SGPT_ENVIRONMENT_DEFINITION
+  next_native_action: authorize_z2_downloads_then_build_cpu_env
   next_native_action_class: GO_NEXT_ZERO_COST
   gate_confidence: high
-  next_execution_prompt: Prompt_12B_documentary_pin_resolution_SGPT_ZERO_COST
+  next_execution_prompt: Prompt_13A_authorize_download_build_SGPT_Z2_CPU_ZERO_COST
   execution_blockers:
   - checkpoint_absent_in_repo
   - vram_6GiB_vs_paper_2x12GB
@@ -551,31 +551,49 @@ methods:
   - transformers_unpinned
   - gpt2_download_requires_network
   - epochs_cli_vs_params_json_divergence
-  notes: "Prompt 12: environment definition documentary; gate CONDITIONAL_DEPENDENCY_RESOLUTION;
-    AST import inventory done; no install/download/train. reproduction_status=audit_only;
-    native_audit_complete=false; common_adapter_allowed=false."
+  notes: "Prompt 12B: direct pins documented; transformers==4.25.1; torch 1.13.1+cpu;
+    python 3.8.20-slim-bookworm digest verified; gate READY_FOR_Z2_DOWNLOAD_AUTHORIZATION;
+    0 downloads. audit_only; native_audit_complete=false; common_adapter_allowed=false."
 
   zero_cost_gate_class: GO_NEXT_ZERO_COST
-  zero_cost_next_action: Prompt_12B_pin_resolution
+  zero_cost_next_action: Prompt_13A_Z2_download_auth
   zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
   zero_cost_gate_confidence: high
   environment_definition_artifact: audit/sgpt/ENVIRONMENT_DEFINITION_REPORT.md
   environment_spec_artifact: environments/sgpt/ENVIRONMENT_SPEC.yaml
   dependency_manifest_artifact: environments/sgpt/DEPENDENCY_MANIFEST.yaml
   runtime_profiles_artifact: environments/sgpt/RUNTIME_PROFILES.md
-  environment_gate: CONDITIONAL_DEPENDENCY_RESOLUTION
+  environment_gate: READY_FOR_Z2_DOWNLOAD_AUTHORIZATION
   python_declared_version: '3.8'
   torch_declared_version: 1.13.1
-  transformers_pin_status: unpinned_UNKNOWN
+  transformers_pin_status: SELECTED_CANDIDATE_UNTESTED
   gpt2_download_status: not_downloaded
   z2_preflight_status: specified_not_executed
   z3_reduced_training_status: blocked_pending_Z2_and_download_authorization
   remaining_environment_blockers:
-  - transformers_unpinned
-  - python38_image_digest_unresolved
-  - spacy_nltk_gpt2_downloads_unauthorized
-  - host_python_3_10_mismatch
+  - download_authorization_pending
+  - transitive_not_locked
+  - not_runtime_verified
+  - nltk_data_deferred
   environment_artifacts: environments/sgpt/
+  pin_resolution_status: direct_pins_candidate_ready
+  pin_resolution_run_id: 20260721T113310Z
+  pin_resolution_artifact: audit/sgpt/PIN_RESOLUTION_REPORT.md
+  temporal_anchor_status: TEMPORAL_ANCHOR_VERIFIED_2022_12
+  selected_python_patch: 3.8.20
+  selected_python_image: python:3.8.20-slim-bookworm
+  selected_python_image_digest: sha256:314bc2fb0714b7807bf5699c98f0c73817e579799f2d91567ab7e9510f5601a5
+  torch_cpu_artifact_status: identified_not_downloaded
+  torch_cpu_artifact: torch==1.13.1+cpu
+  transformers_candidate_pin: 4.25.1
+  transformers_source_symbol_status: all_required_present
+  direct_pin_set_status: candidate_not_lockfile
+  transitive_resolution_status: TRANSITIVE_METADATA_KNOWN_NOT_LOCKED
+  spacy_model_status: DEFERRED_DOWNLOAD
+  nltk_resource_status: DEFERRED_DOWNLOAD
+  gpt2_metadata_status: snapshot_not_downloaded
+  z2_import_scope_status: defined
+  z2_download_authorization_status: pending_prompt_13A
 - method_id: tebaqa
   display_name: TeBaQA
   repositories:

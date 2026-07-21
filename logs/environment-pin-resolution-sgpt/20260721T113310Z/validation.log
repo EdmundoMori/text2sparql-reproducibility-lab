@@ -1,0 +1,4 @@
+validation_pass
+selected_tf 4.25.1
+gate READY_FOR_Z2_DOWNLOAD_AUTHORIZATION
+next Prompt_13A_authorize_download_build_SGPT_Z2_CPU_ZERO_COST

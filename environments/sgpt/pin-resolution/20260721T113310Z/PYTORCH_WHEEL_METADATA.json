@@ -1,0 +1,25 @@
+{
+  "declared": "torch==1.13.1",
+  "z2_candidate": {
+    "spec": "torch==1.13.1+cpu",
+    "filename": "torch-1.13.1+cpu-cp38-cp38-linux_x86_64.whl",
+    "sha256": "4a8b84834eb12b3428c24e9f264c9bd6a2cf449fffc191374e7dbb2b950fc6d7",
+    "index": "https://download.pytorch.org/whl/cpu",
+    "label": "PROPOSED_Z2_CPU_BUILD_VARIANT",
+    "downloaded": false
+  },
+  "pypi_cp38_manylinux1": {
+    "filename": "torch-1.13.1-cp38-cp38-manylinux1_x86_64.whl",
+    "sha256": "727dbf00e2cf858052364c0e2a496684b9cb5aa01dc8a8bc8bbb7c54502bdcdd",
+    "size": 887409458
+  },
+  "requires_dist": [
+    "typing-extensions",
+    "nvidia-cuda-runtime-cu11 (==11.7.99) ; platform_system == \"Linux\"",
+    "nvidia-cudnn-cu11 (==8.5.0.96) ; platform_system == \"Linux\"",
+    "nvidia-cublas-cu11 (==11.10.3.66) ; platform_system == \"Linux\"",
+    "nvidia-cuda-nvrtc-cu11 (==11.7.99) ; platform_system == \"Linux\"",
+    "opt-einsum (>=3.3) ; extra == 'opt-einsum'"
+  ],
+  "evidence": "OFFICIAL_METADATA_VERIFIED;WHEEL_METADATA_VERIFIED"
+}

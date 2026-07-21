@@ -1,12 +1,13 @@
 # PLAN_SYNC — Estado para optimización del plan de prompts
 
-**Audiencia:** ChatGPT (planificador) e investigador.  
+**Audiencia:** ChatGPT e investigador.  
 **Repo:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-**Última actualización:** 2026-07-21 (Prompt **12** — entorno SGPT documental)  
+**Última actualización:** 2026-07-21 (Prompt **12B** — pins SGPT)  
 **Fase:** 1 — native audit; **abierta**  
-**SHA inicial Prompt 12:** `d7b199c9caf8035e88eedf717ab7926dcc2d7a11`
+**SHA inicial 12B:** `392c101ef4f0defde8b19c6c49eac0064dc6954a`  
+**RUN_ID:** `20260721T113310Z`
 
-> ZERO_COST activo. Sin OpenRouter / train / GPT-2 download en este prompt.
+> ZERO_COST. Sin install/pull/train. Gate: **READY_FOR_Z2_DOWNLOAD_AUTHORIZATION**.
 
 ---
 
@@ -16,45 +17,40 @@ reproducción nativa → evaluación común → caso de estudio → errores → 
 
 ---
 
-## 2. Metadata commits (corrección)
+## 2. Metadata commits
 
 | Prompt | Artifact commit | Final HEAD |
 |---|---|---|
-| 11 | `ee477c9d1d37b86d03593c141cd90577f7f1ba43` | `a2478b721970444401bd7edae313e1e1aa81926e` |
-| **11C** | `32f597c006d95b5603bf2fc4f5c18f423df28ca8` | `d7b199c9caf8035e88eedf717ab7926dcc2d7a11` |
-
-No denominar artifact commit como HEAD final.
+| 12 | `dbdefdf4bffc04d5f7ea231ee068e7b9cdfaeea6` | `392c101ef4f0defde8b19c6c49eac0064dc6954a` |
+| **12B** | _(tras commit)_ | _(tras push)_ |
 
 ---
 
-## 3. Prompt 12 — resumen
+## 3. Prompt 12B — resumen
 
 | Campo | Valor |
 |---|---|
-| Método | `sgpt` |
-| Acción | Z1 SGPT_ENVIRONMENT_DEFINITION |
-| Gate entorno | **`CONDITIONAL_DEPENDENCY_RESOLUTION`** |
-| Python declarado | **3.8** |
-| torch declarado | **1.13.1** |
-| transformers pin | **UNKNOWN** (unpinned) |
-| Perfiles | A NATIVE_DECLARED; B Z2; C Z3 blocked |
-| GPT-2 | not_downloaded |
-| Checkpoints SGPT | NOT_FOUND |
-| Z2 | specified_not_executed |
-| Z3 | blocked_pending_Z2_and_download_authorization |
-| Descargas / train / infer | **0 / 0 / 0** |
-| Coste externo | **0.00** |
+| Ancla temporal | 2022-12 (requirements + TF 4.25.1) |
+| Python | 3.8.20-slim-bookworm |
+| Digest amd64 | `sha256:314bc2fb0714b7807bf5699c98f0c73817e579799f2d91567ab7e9510f5601a5` |
+| torch Z2 | `torch==1.13.1+cpu` (sha256 wheel `4a8b8483…`) |
+| Transformers | **4.25.1** SELECTED_CANDIDATE_UNTESTED |
+| Símbolos | all present (`OFFICIAL_SOURCE_TAG_VERIFIED`) |
+| Pins directos | constraints native + Z2 (candidato ≠ lock) |
+| Transitivas | METADATA_KNOWN_NOT_LOCKED |
+| spaCy / NLTK / GPT-2 | deferred downloads; GPT-2 out of Z2 |
+| Gate | **READY_FOR_Z2_DOWNLOAD_AUTHORIZATION** |
+| Descargas binarias / installs / train / infer | **0 / 0 / 0 / 0** |
+| Coste | **0.00** |
 | `reproduction_status` | `audit_only` |
-| `native_audit_complete` | `false` |
-| `common_adapter_allowed` | `false` |
 
-Informe: [`audit/sgpt/ENVIRONMENT_DEFINITION_REPORT.md`](audit/sgpt/ENVIRONMENT_DEFINITION_REPORT.md)
+Informe: [`audit/sgpt/PIN_RESOLUTION_REPORT.md`](audit/sgpt/PIN_RESOLUTION_REPORT.md)
 
 ---
 
 ## 4. Siguiente prompt (único)
 
-**Prompt 12B — Resolución documental de pins SGPT mediante metadata oficial y compatibilidad, ZERO_COST, sin instalación.**
+**Prompt 13A — Autorización y descarga controlada de imagen y paquetes SGPT Z2 + construcción del entorno CPU, ZERO_COST, sin GPT-2, sin modelos spaCy, sin train.**
 
 → [`docs/plan-sync/NEXT_PROMPT_GUIDANCE.md`](docs/plan-sync/NEXT_PROMPT_GUIDANCE.md)
 
@@ -71,11 +67,12 @@ Informe: [`audit/sgpt/ENVIRONMENT_DEFINITION_REPORT.md`](audit/sgpt/ENVIRONMENT_
 
 ---
 
-## 6. Registro Prompt 12
+## 6. Registro Prompt 12B
 
 | Campo | Valor |
 |---|---|
-| commit inicial | `d7b199c9caf8035e88eedf717ab7926dcc2d7a11` |
-| gate | `CONDITIONAL_DEPENDENCY_RESOLUTION` |
-| commit final | `dbdefdf4bffc04d5f7ea231ee068e7b9cdfaeea6` |
-| push | confirmado en origin/main |
+| commit inicial | `392c101ef4f0defde8b19c6c49eac0064dc6954a` |
+| RUN_ID | `20260721T113310Z` |
+| gate | `READY_FOR_Z2_DOWNLOAD_AUTHORIZATION` |
+| commit final | _(tras push)_ |
+| push | _(pendiente)_ |

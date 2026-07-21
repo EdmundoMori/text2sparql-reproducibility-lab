@@ -23,3 +23,7 @@
 - upstream montado **read-only** o copia descartable — nunca escritura en `upstream/sgpt`.
 
 Ver `Dockerfile.native-py38.template` — **TEMPLATE_ONLY / DO_NOT_BUILD**.
+
+## Prompt 12B
+
+Digest resuelto: `python@sha256:314bc2fb…` (`3.8.20-slim-bookworm`). Dockerfile candidato: `Dockerfile.z2-py38.candidate` — **DO_NOT_BUILD_IN_PROMPT_12B**.

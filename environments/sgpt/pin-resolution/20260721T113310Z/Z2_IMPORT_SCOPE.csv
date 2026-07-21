@@ -1,0 +1,12 @@
+module_or_file,action,reason,requires_torch,requires_transformers,requires_spacy_model,requires_nltk_resource,loads_model,writes_files,network_risk,evidence
+utils.metrics,ALLOW_FUNCTION_UNIT_PROBE,lexical metrics with synthetic fixtures,false,false,false,partial_core_only,false,false,low,CODE_VERIFIED
+utils.data,ALLOW_FUNCTION_UNIT_PROBE,helpers if side-effect free,maybe,false,false,false,false,false,low,CODE_VERIFIED
+scripts.dataset_lcquad2,DATA_READ_VIA_LAB_HARNESS,JSON read via harness; avoid full Dataset if torch heavy,true,false,false,false,false,false,none,CODE_VERIFIED
+scripts.dataset_qald9,DENY_IMPORT_SIDE_EFFECT,BaseDataset loads en_core_web_sm,true,false,true,false,false,false,download_risk,CODE_VERIFIED
+scripts.dataset_vquanda,DATA_READ_VIA_LAB_HARNESS,similar to lcquad2,true,false,false,false,false,false,none,CODE_VERIFIED
+train.py,DENY_MODEL_DEPENDENCY,training entrypoint,true,true,false,false,true,true,high,CODE_VERIFIED
+eval.py,DENY_MODEL_DEPENDENCY,eval loads checkpoint,true,true,false,false,true,true,high,CODE_VERIFIED
+scripts.model,DENY_MODEL_DEPENDENCY,GPT2 model classes; Z2 may import-probe symbols only if needed—default DENY load weights,true,true,false,false,true,false,medium,CODE_VERIFIED
+utils.dptree,DENY_IMPORT_SIDE_EFFECT,import-time en_core_web_lg + AutoTokenizer.from_pretrained(gpt2) + writes,false,true,true,false,true,true,high,CODE_VERIFIED
+torch,ALLOW_IMPORT_PROBE,Z2 import probe,true,false,false,false,false,false,none_after_install,PROPOSED_UNTESTED
+transformers,ALLOW_IMPORT_PROBE,symbol import probe without from_pretrained,true,true,false,false,false,false,none_after_install,PROPOSED_UNTESTED

@@ -1,0 +1,31 @@
+document_type: DIRECT_PIN_SET_CANDIDATE_NOT_A_LOCKFILE
+run_id: "20260721T113310Z"
+upstream_pin: "1f6964d1c3bfee50c7dec2c25546f32b4ab94b2b"
+temporal_anchor: "2022-12 window"
+python:
+  tag: "3.8.20-slim-bookworm"
+  manifest_list_digest: "sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f"
+  linux_amd64_digest: "sha256:314bc2fb0714b7807bf5699c98f0c73817e579799f2d91567ab7e9510f5601a5"
+torch_artifact:
+  z2_spec: "torch==1.13.1+cpu"
+  filename: "torch-1.13.1+cpu-cp38-cp38-linux_x86_64.whl"
+  sha256: "4a8b84834eb12b3428c24e9f264c9bd6a2cf449fffc191374e7dbb2b950fc6d7"
+  label: PROPOSED_Z2_CPU_BUILD_VARIANT
+transformers_pin: "4.25.1"
+transformers_source_symbol_status: all_required_present_OFFICIAL_SOURCE_TAG_VERIFIED
+direct_pins_native_file: constraints.native-declared.direct.candidate.txt
+direct_pins_z2_file: constraints.z2-cpu.direct.candidate.txt
+z2_exclusions: [spacy, en_core_web_sm, en_core_web_lg, gpt2, apex, cuda, nccl, optuna-dashboard, python-Levenshtein, Unidecode, tensorboardX]
+external_models_resources:
+  gpt2: DEFERRED_Z3_not_downloaded
+  spacy_models: DEFERRED_DOWNLOAD
+  nltk_data: DEFERRED_DOWNLOAD
+metadata_artifact_sha256:
+  TRANSFORMERS_CANDIDATE_MATRIX.csv: "d339fc1a9a79eef882427904f191f85c218509e87aa1ee17fba62490e24c40b9"
+  constraints.z2-cpu.direct.candidate.txt: "df0098b40ff63e240a56a1f31e1f3e0ff01d1bd2c8f8d75827a4994e8ef16b04"
+  PYTHON_IMAGE_MANIFEST.json: "e3d9cc22a99ec7e995fb0927f043fa37fc56107454edcd30277cd8d8d58a370c"
+unresolved_transitive_dependencies: TRANSITIVE_METADATA_KNOWN_NOT_LOCKED
+runtime_verification_status: NOT_RUNTIME_VERIFIED
+download_authorization_status: not_authorized_yet
+gate: READY_FOR_Z2_DOWNLOAD_AUTHORIZATION
+caveat: "Not a lockfile; pip may resolve transitively at future install."

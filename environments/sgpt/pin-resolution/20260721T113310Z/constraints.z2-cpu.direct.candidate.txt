@@ -1,0 +1,18 @@
+# CANDIDATE_ONLY
+# NOT_RUNTIME_VERIFIED
+# DO_NOT_INSTALL_IN_PROMPT_12B
+# Profile: Z2_CPU_DATA_METRIC_PREFLIGHT direct pins (NOT a lockfile)
+# Python: 3.8.20-slim-bookworm @ sha256:314bc2fb0714b7807bf5699c98f0c73817e579799f2d91567ab7e9510f5601a5
+#
+# Index extra for torch CPU:
+#   --extra-index-url https://download.pytorch.org/whl/cpu
+torch==1.13.1+cpu
+transformers==4.25.1
+numpy==1.23.5
+tqdm==4.64.1
+nltk==3.8.1
+pip==23.3.2
+setuptools==68.2.2
+wheel==0.41.2
+# EXCLUDED_Z2: spacy, spaCy models, gpt2, apex, CUDA, NCCL, optuna-dashboard,
+#              python-Levenshtein, Unidecode, tensorboardX

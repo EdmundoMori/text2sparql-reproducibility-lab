@@ -1,0 +1,53 @@
+{
+  "run_id": "20260721T113310Z",
+  "selected_tag": "3.8.20-slim-bookworm",
+  "repository": "library/python",
+  "manifest_list_digest": "sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f",
+  "linux_amd64_digest": "sha256:314bc2fb0714b7807bf5699c98f0c73817e579799f2d91567ab7e9510f5601a5",
+  "all_probed_tags": {
+    "3.8": {
+      "list_digest": "sha256:d411270700143fa2683cc8264d9fa5d3279fd3b6afff62ae81ea2f9d070e390c",
+      "amd64_digest": "sha256:7aa279fb41dad2962d3c915aa6f6615134baa412ab5aafa9d4384dcaaa0af15d",
+      "schemaVersion": 2,
+      "mediaType": "application/vnd.oci.image.index.v1+json",
+      "n_manifests": 16
+    },
+    "3.8-slim-bookworm": {
+      "list_digest": "sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f",
+      "amd64_digest": "sha256:314bc2fb0714b7807bf5699c98f0c73817e579799f2d91567ab7e9510f5601a5",
+      "schemaVersion": 2,
+      "mediaType": "application/vnd.oci.image.index.v1+json",
+      "n_manifests": 16
+    },
+    "3.8-slim-bullseye": {
+      "list_digest": "sha256:e191a71397fd61fbddb6712cd43ef9a2c17df0b5e7ba67607128554cd6bff267",
+      "amd64_digest": "sha256:104d2d37ef880b95d0109d9a8b5cfb032c0e541ed8bc0a70028f16b72e5830ba",
+      "schemaVersion": 2,
+      "mediaType": "application/vnd.oci.image.index.v1+json",
+      "n_manifests": 8
+    },
+    "3.8.20-slim-bookworm": {
+      "list_digest": "sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f",
+      "amd64_digest": "sha256:314bc2fb0714b7807bf5699c98f0c73817e579799f2d91567ab7e9510f5601a5",
+      "schemaVersion": 2,
+      "mediaType": "application/vnd.oci.image.index.v1+json",
+      "n_manifests": 16
+    },
+    "3.8.20-bullseye": {
+      "list_digest": "sha256:11da1db2f485e2560be9817f92932a29f68fefc332b0167e8c51ae308ee23337",
+      "amd64_digest": "sha256:d32dd3a3dc2151e7c3887de1c6b13d1bb5e88dce161629b0c11d61195530c25d",
+      "schemaVersion": 2,
+      "mediaType": "application/vnd.oci.image.index.v1+json",
+      "n_manifests": 8
+    },
+    "3.8.19-slim-bookworm": {
+      "list_digest": "sha256:a51755c25dcd620a3dfea51b18668769c80368762d7616ca6a46354837e9a108",
+      "amd64_digest": "sha256:e4222c9d03bcb1b83e197d0b74972f95db85ba2fcb2232a97e93a4cc96cd7c36",
+      "schemaVersion": 2,
+      "mediaType": "application/vnd.oci.image.index.v1+json",
+      "n_manifests": 16
+    }
+  },
+  "evidence": "CONTAINER_MANIFEST_VERIFIED",
+  "pulled": false
+}

@@ -50,7 +50,7 @@ dependencies:
     external_artifact: false
     network_first_use: true
     legal_status: third_party
-    status: unresolved_pin_UNKNOWN
+    status: SELECTED_CANDIDATE_UNTESTED_4.25.1
     evidence: CODE_VERIFIED requirements unpinned; PROPOSED pin forbidden in Prompt 12
 
   - name: numpy
@@ -95,7 +95,7 @@ dependencies:
     external_artifact: false
     network_first_use: true
     legal_status: third_party
-    status: unresolved_pin_UNKNOWN
+    status: SELECTED_CANDIDATE_UNTESTED_4.25.1
     evidence: CODE_VERIFIED
 
   - name: en_core_web_sm
@@ -140,7 +140,7 @@ dependencies:
     external_artifact: false
     network_first_use: true
     legal_status: third_party
-    status: unresolved_pin_UNKNOWN
+    status: SELECTED_CANDIDATE_UNTESTED_4.25.1
     evidence: CODE_VERIFIED
 
   - name: python-Levenshtein

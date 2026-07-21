@@ -1,0 +1,26 @@
+# CANDIDATE_ONLY
+# DO_NOT_BUILD_IN_PROMPT_12B
+# NOT_RUNTIME_VERIFIED
+# Prompt 12B — SGPT Z2 CPU environment candidate
+#
+# Base image digest verified via Docker Hub manifest API (not pulled in 12B).
+
+FROM python@sha256:314bc2fb0714b7807bf5699c98f0c73817e579799f2d91567ab7e9510f5601a5
+# Equivalent tag reference: python:3.8.20-slim-bookworm
+# Manifest list digest: sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f
+
+LABEL lab.method="sgpt" \
+      lab.prompt="12B" \
+      lab.candidate="true" \
+      lab.do_not_build_in_prompt_12b="true"
+
+WORKDIR /opt/sgpt-z2
+
+# Future (NOT in 12B):
+# COPY environments/sgpt/pin-resolution/20260721T113310Z/constraints.z2-cpu.direct.candidate.txt /tmp/constraints.txt
+# RUN pip install --no-cache-dir --extra-index-url https://download.pytorch.org/whl/cpu -r /tmp/constraints.txt
+#
+# Do NOT: apt, conda, compose, train, GPT-2, spaCy models, NLTK data download.
+# Mount upstream/sgpt read-only at runtime.
+
+CMD ["python3", "-c", "print('CANDIDATE_ONLY: do not build in Prompt 12B')"]

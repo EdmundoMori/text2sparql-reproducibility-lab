@@ -13,10 +13,10 @@ upstream:
   license_evidence: LEGAL_VERIFIED
 declared_python: "3.8"
 declared_torch: "1.13.1"
-transformers_pin: UNKNOWN
-transformers_pin_status: unresolved_no_version_in_requirements
+transformers_pin: "4.25.1"
+transformers_pin_status: SELECTED_CANDIDATE_UNTESTED
 status: documented_not_resolved
-gate: CONDITIONAL_DEPENDENCY_RESOLUTION
+gate: READY_FOR_Z2_DOWNLOAD_AUTHORIZATION
 profiles:
   - id: NATIVE_DECLARED
     status: documented_not_resolved
@@ -88,3 +88,13 @@ evidence:
   import_inventory: logs/environment-definition-sgpt/import_inventory.json
   requirements: upstream/sgpt/requirements.txt
   readme: upstream/sgpt/README.md
+
+pin_resolution_12B:
+  run_id: "20260721T113310Z"
+  gate: READY_FOR_Z2_DOWNLOAD_AUTHORIZATION
+  selected_python_image: "python:3.8.20-slim-bookworm"
+  selected_python_image_digest_amd64: "sha256:314bc2fb0714b7807bf5699c98f0c73817e579799f2d91567ab7e9510f5601a5"
+  torch_cpu_artifact: "torch==1.13.1+cpu"
+  transformers_candidate_pin: "4.25.1"
+  transformers_pin_status: SELECTED_CANDIDATE_UNTESTED
+  status: pins_documented_not_installed

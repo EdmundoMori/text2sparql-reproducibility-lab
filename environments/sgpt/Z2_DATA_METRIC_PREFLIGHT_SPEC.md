@@ -37,3 +37,7 @@ Tras resolución de pins/entorno: evidencia de que imports mínimos + contrato d
 | `Z2_RESOURCE_ABORT` | RAM/CPU/timeout |
 
 Ninguna = entrenamiento o reproducción.
+
+## Prompt 12B scope refinement
+
+Ver `pin-resolution/20260721T113310Z/Z2_IMPORT_SCOPE.csv`. Denylist: `utils.dptree`, `train.py`, `eval.py`, QALD9 BaseDataset. NLTK data deferred; prefer Z2_CORE_METRICS primero.

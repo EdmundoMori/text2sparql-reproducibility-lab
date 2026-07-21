@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-21 (Prompt 12 SGPT env)  
+**Última actualización:** 2026-07-21 (Prompt 12B)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -131,7 +131,9 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | P9-SIB | Protocolo benchmarks SIB | `docs/protocols/sparql_llm/SIB_BENCHMARK_PROTOCOL.md` | L0/L1/L2 |
 | P9-CAND | Candidatos smoke futuro | `docs/protocols/sparql_llm/FUTURE_SMOKE_CANDIDATES.csv` | A–F; D seleccionado |
 | P9-BUD | Presupuesto y seguridad | `docs/protocols/sparql_llm/API_BUDGET_AND_SAFETY.md` | PROPOSED |
-| P9-GO | GO/NO-GO smoke futuro | `docs/protocols/sparql_llm/FUTURE_API_SMOKE_GONOGO.md` | CONDITIONAL_GO |
+| P9-GO | GO/NO-GO smoke futuro | `docs/protocols/sparql_llm/FUTURE_API_SMOKE_GONOGO.md` | histórico CONDITIONAL→NO_GO económico |
+| P11-GATE | Gate online Prompt 11 | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/FINAL_ONLINE_SMOKE_GATE.md` | histórico; superseded por 11C ZERO_COST |
+| GATE-RERUN | Re-gate interino rdfconfig | `audit/NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md` | interino; superseded por 11C formal |
 | P9-RDY | Readiness protocolo | `audit/sparql_llm/API_SIB_PROTOCOL_READINESS.md` | estados por superficie |
 | P9-LOG | Log Prompt 9 | `logs/sparql-llm-api-sib-protocol/commands.log` | sin llamadas |
 | P10-RPT | Prep LOCAL_CHAT env/index | `audit/sparql_llm/LOCAL_CHAT_API_ENV_INDEX_PREP_REPORT.md` | Prompt 10 |
@@ -156,11 +158,11 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | P11-REQ | Request spec | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/LOCAL_CHAT_SMOKE_REQUEST_SPEC.json` | no ejecutado |
 | P11-DEC | Decisión modelo | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/MODEL_SELECTION_DECISION.md` | slug fechado |
 | P11-HUM | Aprobación humana | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/HUMAN_LLM_SMOKE_APPROVAL.md` | sin firmar |
-| P11-GATE | Gate online | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/FINAL_ONLINE_SMOKE_GATE.md` | READY_FOR_HUMAN_APPROVAL |
+| P11-GATE | Gate online Prompt 11 | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/FINAL_ONLINE_SMOKE_GATE.md` | histórico; superseded 11C |
 | P11-BUD | Presupuesto actualizado | `docs/protocols/sparql_llm/API_BUDGET_AND_SAFETY.md` | HUMAN_APPROVAL_PENDING |
 | P11-LOG | Logs Prompt 11 | `logs/preparation/sparql-llm-model-budget-gate/20260721T100618Z/` | metadata SHA |
 | P11-NOGO | NO-GO económico smoke online | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/ECONOMIC_NO_GO_DECISION.md` | Mori ZERO_USD |
-| GATE-RERUN | Re-gate comparativo $0 | `audit/NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md` | GO_NEXT rdfconfig |
+| GATE-RERUN | Re-gate interino ZERO_USD | `audit/NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md` | superseded por 11C |
 | DEC004 | ADR ZERO_COST + deferral online | `docs/decisions/004_zero_cost_policy_and_online_smoke_deferral.md` | Prompt 11C |
 | P11C-HUM | Decisión humana coste 0 | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/HUMAN_ZERO_COST_DECISION.md` | elijo coste 0 |
 | P11C-POL | Definición coste cero | `audit/ZERO_COST_POLICY.md` | prohibido/permitido |
@@ -176,6 +178,11 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | P12-AST | Inventario imports AST | `logs/environment-definition-sgpt/import_inventory.json` | sin import runtime |
 | P12-Z2 | Spec Z2 futuro | `environments/sgpt/Z2_DATA_METRIC_PREFLIGHT_SPEC.md` | no ejecutado |
 | P12-LOG | Logs Prompt 12 | `logs/environment-definition-sgpt/` | coste 0 |
+| P12B-RPT | Pin resolution SGPT | `audit/sgpt/PIN_RESOLUTION_REPORT.md` | Prompt 12B |
+| P12B-DIR | Artefactos pin-resolution | `environments/sgpt/pin-resolution/20260721T113310Z/` | constraints+matrices |
+| P12B-DF | Dockerfile Z2 candidato | `environments/sgpt/Dockerfile.z2-py38.candidate` | DO_NOT_BUILD_IN_12B |
+| P12B-SCR | Resolver metadata oficial | `scripts/preparation/sgpt_official_metadata_resolver.py` | allowlist hosts |
+| P12B-LOG | Logs Prompt 12B | `logs/environment-pin-resolution-sgpt/20260721T113310Z/` | network SHA |
 
 ## Qué está / no está en GitHub
 
