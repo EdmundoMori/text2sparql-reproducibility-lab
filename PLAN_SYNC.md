@@ -22,7 +22,7 @@ reproducción nativa → evaluación común → caso de estudio → errores → 
 | Prompt | Artifact commit | Final HEAD |
 |---|---|---|
 | 12 | `dbdefdf4bffc04d5f7ea231ee068e7b9cdfaeea6` | `392c101ef4f0defde8b19c6c49eac0064dc6954a` |
-| **12B** | _(tras commit)_ | _(tras push)_ |
+| **12B** | `89785fddc3b8c75d6a805631fa3f98d009f33efd` | _(tras push)_ |
 
 ---
 
@@ -74,5 +74,5 @@ Informe: [`audit/sgpt/PIN_RESOLUTION_REPORT.md`](audit/sgpt/PIN_RESOLUTION_REPOR
 | commit inicial | `392c101ef4f0defde8b19c6c49eac0064dc6954a` |
 | RUN_ID | `20260721T113310Z` |
 | gate | `READY_FOR_Z2_DOWNLOAD_AUTHORIZATION` |
-| commit final | _(tras push)_ |
-| push | _(pendiente)_ |
+| commit final | `89785fddc3b8c75d6a805631fa3f98d009f33efd` |
+| push | confirmado en origin/main |
