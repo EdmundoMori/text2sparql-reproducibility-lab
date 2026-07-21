@@ -5,10 +5,11 @@
 **Package version in code:** `0.1.4` (`src/sparql_llm/__init__.py`) — diverge de `CITATION.cff`/`server.json` `0.1.2`  
 **Python requerido (metadata):** `>=3.10` (`pyproject.toml`) — **inconsistente** con `typing.Required` (necesita ≥3.11).  
 **Host WSL:** Python 3.10.12 → CORE_OFFLINE en host = `setup_failed` (run 5A).  
-**Runtime validado:** Docker `python:3.11-slim-bookworm` digest `sha256:b18992999…` → `smoke_only` (run 5B `20260720T134943Z`).  
-Ver [`container_py311.md`](container_py311.md), [`Dockerfile.core-offline-py311`](Dockerfile.core-offline-py311).
+**Runtime validado CORE_OFFLINE:** Docker `python:3.11-slim-bookworm` digest `sha256:b18992999…` → `smoke_only` (run 5B `20260720T134943Z`).  
+**Runtime agent (Prompt 10):** imagen `text2sparql-lab/sparql-llm-agent-py311:20260721T084637Z` (`Dockerfile.agent-py311`, extra `[agent]`) — entorno **ready**; índice mínimo **bloqueado** (caché e5-large ausente).  
+Ver [`container_py311.md`](container_py311.md), [`Dockerfile.core-offline-py311`](Dockerfile.core-offline-py311), [`Dockerfile.agent-py311`](Dockerfile.agent-py311), [`MINIMAL_INDEX_POLICY.md`](MINIMAL_INDEX_POLICY.md), [`minimal_local_chat_settings.json`](minimal_local_chat_settings.json).
 
-Estado: **documentado** + **CORE_OFFLINE smoke_only en contenedor** (no paper).
+Estado: **documentado** + CORE_OFFLINE `smoke_only` + prep agent `ENVIRONMENT_READY_INDEX_BLOCKED_PENDING_EMBEDDING_DOWNLOAD_APPROVAL` (no paper).
 
 ### Runs CORE_OFFLINE
 
@@ -17,7 +18,14 @@ Estado: **documentado** + **CORE_OFFLINE smoke_only en contenedor** (no paper).
 | `20260719T112306Z` | host Py3.10 | setup_failed | `audit/sparql_llm/CORE_OFFLINE_SMOKE_REPORT.md` |
 | `20260720T134943Z` | Docker Py3.11 | smoke_only | `audit/sparql_llm/CORE_OFFLINE_PY311_SMOKE_REPORT.md` |
 
-Entorno resuelto 5B: `logs/smoke/sparql_llm-core-offline-py311/20260720T134943Z/pip-freeze.txt` (no reemplaza el manifiesto documental 4B).
+### Runs preparación LOCAL_CHAT_API
+
+| RUN_ID | Status | Report |
+|---|---|---|
+| `20260721T084637Z` | env ready; index blocked (no embedding download) | `audit/sparql_llm/LOCAL_CHAT_API_ENV_INDEX_PREP_REPORT.md` |
+
+Entorno resuelto 5B: `logs/smoke/sparql_llm-core-offline-py311/20260720T134943Z/pip-freeze.txt`.  
+Entorno agent 10: `logs/preparation/sparql-llm-local-chat-api/20260721T084637Z/pip-freeze.txt`.
 
 ---
 

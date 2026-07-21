@@ -1,0 +1,8 @@
+upstream_diff=0
+OPENROUTER_in_env=false
+classification=ENVIRONMENT_READY_INDEX_BLOCKED_PENDING_EMBEDDING_DOWNLOAD_APPROVAL
+index_built=false
+preflight_ran=false
+documents=12
+image=text2sparql-lab/sparql-llm-agent-py311:20260721T084637Z
+image_id=sha256:d51c8d45a460891ec0b63334c185f49546ddd030f0007ef5402b7f8287e8ded0

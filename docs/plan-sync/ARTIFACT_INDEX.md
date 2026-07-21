@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-20 (Prompt 9 — protocolo API/SIB)  
+**Última actualización:** 2026-07-21 (Prompt 10 — prep LOCAL_CHAT)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -134,6 +134,14 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | P9-GO | GO/NO-GO smoke futuro | `docs/protocols/sparql_llm/FUTURE_API_SMOKE_GONOGO.md` | CONDITIONAL_GO |
 | P9-RDY | Readiness protocolo | `audit/sparql_llm/API_SIB_PROTOCOL_READINESS.md` | estados por superficie |
 | P9-LOG | Log Prompt 9 | `logs/sparql-llm-api-sib-protocol/commands.log` | sin llamadas |
+| P10-RPT | Prep LOCAL_CHAT env/index | `audit/sparql_llm/LOCAL_CHAT_API_ENV_INDEX_PREP_REPORT.md` | Prompt 10 |
+| P10-DF | Dockerfile agent Py3.11 | `environments/sparql_llm/Dockerfile.agent-py311` | extra [agent] |
+| P10-SET | Settings mínimo | `environments/sparql_llm/minimal_local_chat_settings.json` | UniProt+void |
+| P10-POL | Política índice mínimo | `environments/sparql_llm/MINIMAL_INDEX_POLICY.md` | LAB_MINIMAL_INDEX |
+| P10-PREP | Manifest prep run | `environments/sparql_llm/preparations/20260721T084637Z/` | result/cache |
+| P10-SCR | Script docs/index | `scripts/preparation/sparql_llm_minimal_index.py` | 3 modos |
+| P10-PF | Script preflight | `scripts/preparation/sparql_llm_local_chat_preflight.py` | no ejecutado |
+| P10-LOG | Logs prep | `logs/preparation/sparql-llm-local-chat-api/20260721T084637Z/` | docker/pip/docs |
 
 ## Qué está / no está en GitHub
 

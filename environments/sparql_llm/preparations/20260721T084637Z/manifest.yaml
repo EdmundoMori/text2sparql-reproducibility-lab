@@ -1,0 +1,14 @@
+run_id: 20260721T084637Z
+run_type: environment_and_index_preparation
+classification: ENVIRONMENT_READY_INDEX_BLOCKED_PENDING_EMBEDDING_DOWNLOAD_APPROVAL
+image_tag: text2sparql-lab/sparql-llm-agent-py311:20260721T084637Z
+image_id: sha256:d51c8d45a460891ec0b63334c185f49546ddd030f0007ef5402b7f8287e8ded0
+logs_path: logs/preparation/sparql-llm-local-chat-api/20260721T084637Z/
+settings: environments/sparql_llm/minimal_local_chat_settings.json
+index_policy: environments/sparql_llm/MINIMAL_INDEX_POLICY.md
+dockerfile: environments/sparql_llm/Dockerfile.agent-py311
+scripts:
+- scripts/preparation/sparql_llm_minimal_index.py
+- scripts/preparation/sparql_llm_local_chat_preflight.py
+label: LAB_MINIMAL_INDEX
+not_paper_index: true

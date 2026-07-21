@@ -1,0 +1,30 @@
+{
+  "model_required": "intfloat/multilingual-e5-large",
+  "classification": "absent",
+  "complete_exact_model_cache": false,
+  "evidence": "NOT_FOUND",
+  "searched_paths": [
+    {
+      "path": "/home/edmundo/.cache/fastembed",
+      "exists": false,
+      "e5_hits": []
+    },
+    {
+      "path": "/home/edmundo/.cache/huggingface",
+      "exists": false,
+      "e5_hits": []
+    },
+    {
+      "path": "/home/edmundo/.cache/huggingface/hub",
+      "exists": false,
+      "e5_hits": []
+    },
+    {
+      "path": "workdir",
+      "exists": true,
+      "e5_hits": [],
+      "size_entries": null
+    }
+  ],
+  "notes": "No FastEmbed/HF cache for exact model on host. Download not authorized in Prompt 10."
+}

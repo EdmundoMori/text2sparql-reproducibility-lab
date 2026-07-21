@@ -1,0 +1,10 @@
+Name: sparql-llm
+Version: 0.1.4
+Name: fastembed
+Version: 0.8.0
+Name: qdrant-client
+Version: 1.18.0
+Name: langgraph
+Version: 1.2.9
+Name: fastapi
+Version: 0.139.2

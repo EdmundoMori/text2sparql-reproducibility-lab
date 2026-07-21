@@ -1,0 +1,24 @@
+# sparql_llm AGENT image — Python 3.11 (Prompt 10)
+# Base pinned by digest (same as Prompt 5B CORE_OFFLINE).
+# Image: python:3.11-slim-bookworm @ sha256:b18992999dbe963a45a8a4da40ac2b1975be1a776d939d098c647482bcad5cba
+# Installs package with optional extra [agent]. Does NOT import sparql_llm at build time.
+# Does NOT download models/embeddings. Does NOT run apt-get. Does NOT upgrade pip.
+
+FROM python@sha256:b18992999dbe963a45a8a4da40ac2b1975be1a776d939d098c647482bcad5cba
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PYTHONUNBUFFERED=1 \
+    HF_HUB_OFFLINE=1 \
+    TRANSFORMERS_OFFLINE=1 \
+    FASTEMBED_CACHE_PATH=/nonexistent_fastembed_cache_at_build
+
+WORKDIR /src
+
+COPY source/ /src/
+
+# Non-editable install with agent extra only (no dev/bench/gpu).
+RUN python -m pip install --no-cache-dir "/src[agent]" \
+    && python -m pip check
+
+WORKDIR /lab

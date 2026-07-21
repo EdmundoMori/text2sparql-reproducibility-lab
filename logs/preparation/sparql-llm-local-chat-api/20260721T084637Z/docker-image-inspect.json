@@ -1,0 +1,59 @@
+[
+    {
+        "Architecture": "amd64",
+        "Config": {
+            "Cmd": [
+                "python3"
+            ],
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D",
+                "PYTHON_VERSION=3.11.15",
+                "PYTHON_SHA256=272179ddd9a2e41a0fc8e42e33dfbdca0b3711aa5abf372d3f2d51543d09b625",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PIP_DISABLE_PIP_VERSION_CHECK=1",
+                "PYTHONUNBUFFERED=1",
+                "HF_HUB_OFFLINE=1",
+                "TRANSFORMERS_OFFLINE=1",
+                "FASTEMBED_CACHE_PATH=/nonexistent_fastembed_cache_at_build"
+            ],
+            "WorkingDir": "/lab"
+        },
+        "Created": "2026-07-20T18:41:26.338675014Z",
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/3f70526e5127256c9a01899b8787a5c383d667a74e60a1d71629b94426a40eca/diff:/var/lib/docker/overlay2/9bb7fc2602e673ee1b513f7b66d017cacad1f05b6be55e4e87134842762879b1/diff:/var/lib/docker/overlay2/56343f710f5ae92ddea50330f4a90b32553a424ad8c1fec7d125a0f493c05635/diff:/var/lib/docker/overlay2/6ea06184ef3b99780461c6d2db76afee86a3c96a73260ec03e94295e7d5a9a6a/diff:/var/lib/docker/overlay2/80b436a62947211f7f18c21fddcf5bd9a08845b727d8e0a3fff0d7d66cb162c8/diff:/var/lib/docker/overlay2/7bbd41ed9a91c183fe74a61363f6dee6dc20dc04f5e9ee64517c78e70130d9ee/diff:/var/lib/docker/overlay2/c3865c92c3d4b763193be61744906619efaf2824969646a96ef62dbaee253e24/diff",
+                "MergedDir": "/var/lib/docker/overlay2/30613d6282102d5def9aa27802de0f297619fd97d944bc8998283f178c1b7fbb/merged",
+                "UpperDir": "/var/lib/docker/overlay2/30613d6282102d5def9aa27802de0f297619fd97d944bc8998283f178c1b7fbb/diff",
+                "WorkDir": "/var/lib/docker/overlay2/30613d6282102d5def9aa27802de0f297619fd97d944bc8998283f178c1b7fbb/work"
+            },
+            "Name": "overlay2"
+        },
+        "Id": "sha256:d51c8d45a460891ec0b63334c185f49546ddd030f0007ef5402b7f8287e8ded0",
+        "Metadata": {
+            "LastTagTime": "2026-07-21T10:47:36.494766801+02:00"
+        },
+        "Os": "linux",
+        "Parent": "sha256:37899955bd6d0b399cea1c232b53f2d220e964d734acb72629665654ce84b6a6",
+        "RepoDigests": [],
+        "RepoTags": [
+            "text2sparql-lab/sparql-llm-agent-py311:20260720T183832Z",
+            "text2sparql-lab/sparql-llm-agent-py311:20260721T084637Z"
+        ],
+        "RootFS": {
+            "Layers": [
+                "sha256:81f823b9617547261c907396f63f770deaa554748ff739bedfa650e3bb74595a",
+                "sha256:4afd601a0b71a78a672236c1cbc5be357ab2e6d89f1281fab21c404c29a20e9f",
+                "sha256:67cf2840064f2c10fa903ff81ccc39ba1bd74cd4fbcf5d03f903d50e6970ee74",
+                "sha256:6ed84982cd237e878bed0365d119ffa2b1b053d3db32716796379392b42496d1",
+                "sha256:2c9825b7111eb85e5a4f5238712462612c19d9471822e651f6049581e29e69e6",
+                "sha256:0aec3fff513a3018ef2cf96f6b7fe91ab89da33eba808a5a6adf1de1c021c759",
+                "sha256:60b2ce38bf40d3862139799805a3f50c6d0a23a9fbccd322b6b90e87d6cf56b5",
+                "sha256:c871524cd9a07a360042514765336443f4cf770c72cc1eb046cbf7a07c0fe501"
+            ],
+            "Type": "layers"
+        },
+        "Size": 668946815
+    }
+]

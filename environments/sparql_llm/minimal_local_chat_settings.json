@@ -1,0 +1,34 @@
+{
+  "endpoints": [
+    {
+      "label": "UniProt",
+      "endpoint_url": "https://sparql.uniprot.org/sparql/",
+      "description": "UniProt local-VoID smoke Settings (LAB_MINIMAL_INDEX). No homepage_url.",
+      "void_file": "/data/void_uniprot.ttl"
+    }
+  ],
+  "vectordb_url": "/data/qdrant",
+  "embedding_model": "intfloat/multilingual-e5-large",
+  "sparse_embedding_model": "Qdrant/bm25",
+  "force_index": false,
+  "auto_init": false,
+  "docs_collection_name": "lab_minimal_uniprot_void",
+  "entities_collection_name": "lab_minimal_entities_unused",
+  "default_llm_model": "openrouter/openai/gpt-5.2",
+  "default_number_of_retrieved_docs": 3,
+  "default_max_try_fix_sparql": 0,
+  "default_temperature": 0.0,
+  "default_max_tokens": 512,
+  "default_seed": 42,
+  "use_tools": false,
+  "chat_api_key": "",
+  "logs_api_key": "",
+  "sentry_url": "",
+  "app_public_host": "localhost",
+  "app_name": "ExpasyGPT-LabMinimal",
+  "logs_folder": "/data/logs",
+  "logs_filepath": "/data/logs/user_questions.log",
+  "example_questions": [
+    "What is the HGNC symbol for the P68871 protein?"
+  ]
+}

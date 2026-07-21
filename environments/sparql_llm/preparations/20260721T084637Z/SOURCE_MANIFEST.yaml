@@ -1,0 +1,12 @@
+lab_commit_initial: 45605d47983961210679fdd8d6b39577eafee1ec
+lab_commit_at_run_start: 45605d47983961210679fdd8d6b39577eafee1ec
+upstream_commit: 3748730e3bd2df2595280b918269fdaadb9fc0c3
+source_path: upstream/sparql_llm
+disposable_source_path: workdir/runs/sparql-llm-local-chat-prep/20260721T084637Z/build-context/source
+package_version: 0.1.4
+license: MIT
+run_type: environment_and_index_preparation
+selected_future_action: LOCAL_CHAT_API_ONE_QUESTION
+declaration: not an adapter, not a reproduction, not a benchmark
+run_id: 20260721T084637Z
+label: LAB_MINIMAL_INDEX

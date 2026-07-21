@@ -1,6 +1,6 @@
 # Bucle de optimización del plan (operativo)
 
-**Última actualización:** 2026-07-20 (post Prompt 9 — protocolo API/SIB SPARQL-LLM)
+**Última actualización:** 2026-07-21 (post Prompt 10 — prep LOCAL_CHAT_API)
 
 ## Ciclo fijo
 
@@ -14,31 +14,26 @@
 7. Repetir desde 2 hasta el objetivo de fase
 ```
 
-## Fuentes de verdad (orden de lectura para ChatGPT)
+## Fuentes de verdad
 
 1. `PLAN_SYNC.md`  
 2. `docs/plan-sync/NEXT_PROMPT_GUIDANCE.md`  
 3. `docs/plan-sync/ARTIFACT_INDEX.md`  
-4. Artefactos citados en §3 de PLAN_SYNC  
-5. `METHOD_REGISTRY.yaml`, `MACHINE_PROFILE.md` si implica runtime  
-6. Protocolo online: `docs/protocols/sparql_llm/API_SIB_PROTOCOL.md` + `FUTURE_API_SMOKE_GONOGO.md`
+4. `audit/sparql_llm/LOCAL_CHAT_API_ENV_INDEX_PREP_REPORT.md`  
+5. `docs/protocols/sparql_llm/FUTURE_API_SMOKE_GONOGO.md` + `API_BUDGET_AND_SAFETY.md`
 
-## Reglas del planificador
+## Reglas
 
-- Un solo prompt de ejecución por turno (prioridad 1).  
-- No reescribir todo el plan salvo bloqueo metodológico.  
-- Clonar ≠ install ≠ smoke ≠ reproducir paper.  
-- MCP público remoto ≠ ejecución del commit pin (`external_service_availability_check`).  
-- Respetar LICENSE_NOT_CONFIRMED, RAM/Compose/Ruby, y `common_adapter_allowed: false` hasta native audit.  
-- Cada prompt a Cursor debe exigir: actualizar PLAN_SYNC + índice + push.  
-- Tras un smoke exitoso de un método, preferir **auditar el siguiente método** antes de encadenar más smokes del mismo.  
-- Tras WAVE_C, el **gate comparativo (Prompt 8)** ya se ejecutó.  
-- Tras protocolo API/SIB (Prompt 9), el siguiente paso es **prerrequisitos de índice/entorno** antes de gastar clave.
+- Un solo prompt por turno.  
+- Clonar ≠ install ≠ smoke ≠ reproducir.  
+- MCP público ≠ ejecución del pin.  
+- **No descargar embeddings** sin autorización explícita documentada.  
+- `common_adapter_allowed: false` hasta native audit.  
+- No promover CONDITIONAL_GO → GO solo por instalar entorno.
 
-## Estado al cerrar Prompt 9
+## Estado al cerrar Prompt 10
 
-- Completado: fundación → Prompt 9 (protocolo API/SIB documental).  
-- `sparql_llm` permanece `smoke_only`; gate online **CONDITIONAL_GO** → `LOCAL_CHAT_API_ONE_QUESTION`.  
-- Siguiente candidato: **Prompt 10 — Preparación de entorno e índice mínimo para smoke LOCAL_CHAT_API (sin llamadas LLM)**.  
-- HEAD: ver `PLAN_SYNC.md` §9 / GitHub `main`.  
-- Objetivo largo plazo intacto: reproducción nativa → evaluación común → caso de estudio → errores → Text-to-SQL → método nuevo → ablaciones.
+- Clasificación: `ENVIRONMENT_READY_INDEX_BLOCKED_PENDING_EMBEDDING_DOWNLOAD_APPROVAL`.  
+- Entorno agent Py3.11 **ready**; 12 docs VoID; caché e5-large **absent**.  
+- Siguiente candidato: **Prompt 10B** (descarga controlada + índice) **solo con autorización**.  
+- Objetivo largo plazo intacto.

@@ -1,0 +1,20 @@
+Sending build context to Docker daemon  97.19MB
+Step 1/6 : FROM python@sha256:b18992999dbe963a45a8a4da40ac2b1975be1a776d939d098c647482bcad5cba
+ ---> 7e666cfcc7bd
+Step 2/6 : ENV PYTHONDONTWRITEBYTECODE=1     PIP_DISABLE_PIP_VERSION_CHECK=1     PYTHONUNBUFFERED=1     HF_HUB_OFFLINE=1     TRANSFORMERS_OFFLINE=1     FASTEMBED_CACHE_PATH=/nonexistent_fastembed_cache_at_build
+ ---> Using cache
+ ---> 3978f6d1fbb8
+Step 3/6 : WORKDIR /src
+ ---> Using cache
+ ---> c4be0b0d39ff
+Step 4/6 : COPY source/ /src/
+ ---> Using cache
+ ---> cbf5dc2c50ab
+Step 5/6 : RUN python -m pip install --no-cache-dir "/src[agent]"     && python -m pip check
+ ---> Using cache
+ ---> 37899955bd6d
+Step 6/6 : WORKDIR /lab
+ ---> Using cache
+ ---> d51c8d45a460
+Successfully built d51c8d45a460
+Successfully tagged text2sparql-lab/sparql-llm-agent-py311:20260721T084637Z

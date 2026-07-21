@@ -1,0 +1,38 @@
+{
+  "run_id": "20260721T084637Z",
+  "classification": "ENVIRONMENT_READY_INDEX_BLOCKED_PENDING_EMBEDDING_DOWNLOAD_APPROVAL",
+  "selected_future_action": "LOCAL_CHAT_API_ONE_QUESTION",
+  "online_smoke_gate": "CONDITIONAL_GO",
+  "lab_commit_initial": "45605d47983961210679fdd8d6b39577eafee1ec",
+  "upstream_commit": "3748730e3bd2df2595280b918269fdaadb9fc0c3",
+  "image_tag": "text2sparql-lab/sparql-llm-agent-py311:20260721T084637Z",
+  "image_id": "sha256:d51c8d45a460891ec0b63334c185f49546ddd030f0007ef5402b7f8287e8ded0",
+  "base_image_digest": "python@sha256:b18992999dbe963a45a8a4da40ac2b1975be1a776d939d098c647482bcad5cba",
+  "package_version": "0.1.4",
+  "agent_environment_status": "ready",
+  "embedding_cache_status": "absent",
+  "minimal_documents_status": "ready",
+  "minimal_documents_count": 12,
+  "minimal_documents_jsonl_sha256": "11f62e8b2a74092fdb0b4b171cac16a651b22629ea3a429a2b26221d5978736f",
+  "minimal_index_status": "blocked_pending_embedding_download_approval",
+  "local_chat_startup_preflight_status": "not_run_index_blocked",
+  "llm_calls": 0,
+  "sparql_endpoint_calls": 0,
+  "embedding_downloads": 0,
+  "post_chat": 0,
+  "evidence_tags": {
+    "environment": "ENVIRONMENT_VERIFIED",
+    "documents": "EXECUTION_VERIFIED",
+    "cache": "NOT_FOUND",
+    "index": "NOT_FOUND",
+    "preflight": "NOT_FOUND"
+  },
+  "remaining_online_blockers": [
+    "embedding_cache_intfloat_multilingual_e5_large_absent",
+    "minimal_qdrant_index_not_built",
+    "local_chat_preflight_not_run",
+    "OPENROUTER_API_KEY_not_used_and_budget_unsigned",
+    "max_tokens_not_enforced_on_openrouter_branch"
+  ],
+  "next_prompt_recommended": "Prompt 10B \u2014 Descarga controlada y fijaci\u00f3n de cach\u00e9 intfloat/multilingual-e5-large + construcci\u00f3n del \u00edndice m\u00ednimo (previa autorizaci\u00f3n expl\u00edcita)"
+}

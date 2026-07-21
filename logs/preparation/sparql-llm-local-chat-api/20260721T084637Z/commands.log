@@ -1,0 +1,9 @@
+# Prompt 10 commands — RUN_ID=20260721T084637Z
+# no LLM; no POST /chat; no embedding download; no SPARQL endpoints
+git fetch/status/pin verified
+rsync upstream → disposable source
+docker build text2sparql-lab/sparql-llm-agent-py311:20260721T084637Z
+docker run --network none pip inventory
+docker run --network none prepare-documents
+# skip build-index (cache absent)
+# skip preflight (index blocked)

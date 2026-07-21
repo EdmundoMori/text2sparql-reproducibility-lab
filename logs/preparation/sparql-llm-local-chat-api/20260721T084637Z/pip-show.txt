@@ -1,0 +1,70 @@
+Name: sparql-llm
+Version: 0.1.4
+Summary: Reusable components and complete chat system to improve Large Language Models (LLMs) capabilities when generating SPARQL queries for a given set of endpoints, using Retrieval-Augmented Generation (RAG) and SPARQL query validation from the endpoint schema.
+Home-page: 
+Author: 
+Author-email: Vincent Emonet <vincent.emonet@gmail.com>
+License: MIT License
+
+Copyright (c) 2024-present SIB Swiss Institute of Bioinformatics
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+Location: /usr/local/lib/python3.11/site-packages
+Requires: beautifulsoup4, curies, fastembed, httpx, langchain-core, markdownify, mcp, pandas, qdrant-client, rdflib, sparqlwrapper, typing-extensions
+Required-by: 
+Name: fastembed
+Version: 0.8.0
+Summary: Fast, light, accurate library built for retrieval embedding generation
+Home-page: 
+Author: Qdrant Team
+Author-email: info@qdrant.tech
+License: Apache License
+Location: /usr/local/lib/python3.11/site-packages
+Requires: huggingface-hub, loguru, mmh3, numpy, onnxruntime, pillow, py-rust-stemmers, requests, tokenizers, tqdm
+Required-by: sparql-llm
+Name: qdrant-client
+Version: 1.18.0
+Summary: Client library for the Qdrant vector search engine
+Home-page: 
+Author: Andrey Vasnetsov
+Author-email: andrey@qdrant.tech
+License: Apache-2.0
+Location: /usr/local/lib/python3.11/site-packages
+Requires: grpcio, httpx, numpy, portalocker, protobuf, pydantic, urllib3
+Required-by: sparql-llm
+Name: langgraph
+Version: 1.2.9
+Summary: Building stateful, multi-actor applications with LLMs
+Home-page: 
+Author: 
+Author-email: 
+License: 
+Location: /usr/local/lib/python3.11/site-packages
+Requires: langchain-core, langgraph-checkpoint, langgraph-prebuilt, langgraph-sdk, pydantic, xxhash
+Required-by: langchain
+Name: fastapi
+Version: 0.139.2
+Summary: FastAPI framework, high performance, easy to learn, fast to code, ready for production
+Home-page: 
+Author: 
+Author-email: =?utf-8?q?Sebasti=C3=A1n_Ram=C3=ADrez?= <tiangolo@gmail.com>
+License: 
+Location: /usr/local/lib/python3.11/site-packages
+Requires: annotated-doc, pydantic, starlette, typing-extensions, typing-inspection
+Required-by: 

@@ -1,24 +1,26 @@
 # NEXT_PROMPT_GUIDANCE
 
-**Fecha:** 2026-07-20  
-**Tras:** Prompt 9 → protocolo API/SIB SPARQL-LLM; **CONDITIONAL_GO** = `LOCAL_CHAT_API_ONE_QUESTION`
+**Fecha:** 2026-07-21  
+**Tras:** Prompt 10 → entorno agent **ready**; documentos mínimos **ready**; índice **bloqueado** (caché e5-large ausente)
 
 ## Prompt recomendado (prioridad 1)
 
-**Título:** Prompt 10 — Preparación de entorno e índice mínimo para smoke LOCAL_CHAT_API de SPARQL-LLM (sin llamadas LLM)
+**Título:** Prompt 10B — Descarga controlada y fijación de caché `intfloat/multilingual-e5-large` + construcción del índice mínimo (previa autorización explícita)
 
 **Método:** `sparql_llm`  
-**Objetivo:** Cerrar prerrequisitos del gate CONDITIONAL_GO **sin** invocar OpenRouter/OpenAI, MCP remoto, ni endpoints SPARQL: runtime Py3.11 (patrón Docker 5B), SETTINGS mínimo (UniProt + `void_file` local), política de índice/Qdrant/FastEmbed, checklist de arranque `/chat`, y confirmación de presupuesto propuesto. **Sin llamadas LLM** en Prompt 10.
+**Prerrequisito duro:** autorización **explícita** del investigador para descargar el embedding exacto. Sin ella → NO-GO / no ejecutar.
+
+**Objetivo:** (solo tras aprobación) descargar/fijar caché exacta offline, `build-index` + `verify-index` de `LAB_MINIMAL_INDEX` (≤12 docs ya preparados), opcional preflight FastAPI **sin** POST `/chat` ni OpenRouter.
 
 **Restricciones:**
-- Sin `OPENROUTER_API_KEY` en uso real; sin POST `/chat` con modelo; sin MCP público; sin SPARQL vivos.  
-- Sin download de embeddings salvo que el investigador autorice explícitamente un paso de cache (preferible documentar/NO-GO hasta aprobación).  
-- No cambiar `reproduction_status` (`smoke_only`); `native_audit_complete=false`; `common_adapter_allowed=false`.  
-- No Virtuoso; no adapters; no otros métodos.
+- No POST `/chat`; no OpenRouter; no MCP público; no SPARQL vivos; no `init_vectordb` completo.  
+- No cambiar embedding ni cuantizar.  
+- No promover `reproduction_status` ni cerrar Fase 1.  
+- Presupuesto LLM sigue sin firmar.
 
-**Condición de éxito:** entorno/índice mínimo documentado (o bloqueado con evidencia) + checklist GO técnico hacia el smoke D, sin ejecutar el smoke.
+**Condición de éxito:** `INDEX_VERIFIED` + (ideal) preflight pass → entonces Prompt 11 (presupuesto/modelo/gate final).
 
-**No proponer ahora:** biodata full; train otros métodos; smoke con clave sin índice.
+**Alternativa si no hay autorización de descarga:** documentar bloqueo; no avanzar a smoke.
 
 ## Objetivo de fase
 
