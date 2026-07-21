@@ -22,7 +22,8 @@ Estado: **documentado** + CORE_OFFLINE `smoke_only` + prep agent `ENVIRONMENT_RE
 
 | RUN_ID | Status | Report |
 |---|---|---|
-| `20260721T084637Z` | env ready; index blocked (no embedding download) | `audit/sparql_llm/LOCAL_CHAT_API_ENV_INDEX_PREP_REPORT.md` |
+| `20260721T084637Z` | env ready; docs 12; index blocked | `audit/sparql_llm/LOCAL_CHAT_API_ENV_INDEX_PREP_REPORT.md` |
+| `20260721T092249Z` | embedding cache + INDEX_VERIFIED + preflight pass | `audit/sparql_llm/LOCAL_CHAT_API_EMBEDDING_INDEX_PREFLIGHT_REPORT.md` |
 
 Entorno resuelto 5B: `logs/smoke/sparql_llm-core-offline-py311/20260720T134943Z/pip-freeze.txt`.  
 Entorno agent 10: `logs/preparation/sparql-llm-local-chat-api/20260721T084637Z/pip-freeze.txt`.

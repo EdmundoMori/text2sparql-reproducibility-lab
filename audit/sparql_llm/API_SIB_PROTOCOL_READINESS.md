@@ -1,8 +1,9 @@
 # API_SIB_PROTOCOL_READINESS — sparql_llm
 
-**Fecha:** 2026-07-21 (actualizado Prompt 10)  
+**Fecha:** 2026-07-21 (Prompt 10B)  
 **Pinned commit:** `3748730e3bd2df2595280b918269fdaadb9fc0c3`  
-**RUN_ID prep:** `20260721T084637Z`
+**RUN_ID env:** `20260721T084637Z`  
+**RUN_ID index/preflight:** `20260721T092249Z`
 
 ---
 
@@ -10,55 +11,52 @@
 
 | Campo | Valor |
 |---|---|
-| Protocolo API/SIB (Prompt 9) | **ready** |
-| Entorno agent Py3.11 (Prompt 10) | **ready** |
+| Protocolo API/SIB | **ready** |
+| Entorno agent Py3.11 | **ready** |
 | Documentos LAB_MINIMAL | **ready** (12) |
-| Caché embeddings exacta | **absent** |
-| Índice mínimo | **blocked** (pendiente aprobación descarga) |
-| Preflight `/chat` import | **not_run** |
-| Gate smoke online | **CONDITIONAL_GO** (sin promoción) |
+| Caché `intfloat/multilingual-e5-large` | **complete_exact_model_cache** |
+| Índice mínimo | **INDEX_VERIFIED** |
+| Preflight FastAPI | **pass** |
+| Gate smoke online | **CONDITIONAL_GO** (presupuesto/modelo) |
+| Clasificación 10B | `ENVIRONMENT_READY_INDEX_READY_PREFLIGHT_PASS` |
 | `reproduction_status` | `smoke_only` |
 | `native_audit_complete` | `false` |
 | `common_adapter_allowed` | `false` |
-| Clasificación Prompt 10 | `ENVIRONMENT_READY_INDEX_BLOCKED_PENDING_EMBEDDING_DOWNLOAD_APPROVAL` |
 
 ---
 
-## 2. Clasificación de readiness
+## 2. Readiness
 
 | Capacidad | Estado |
 |---|---|
 | `protocol_definition` | **ready** |
 | `agent_environment_py311` | **ready** |
 | `minimal_documents` | **ready** |
-| `local_mcp_stdio` | **conditional** |
-| `local_mcp_http` | **conditional** |
-| `local_chat_api` | **conditional** (índice + clave + presupuesto) |
+| `embedding_cache_exact` | **ready** |
+| `lab_minimal_index` | **ready** |
+| `local_chat_api` preflight | **ready** (startup) |
+| `local_chat_api` smoke | **conditional** (clave+presupuesto+modelo) |
 | `public_mcp_check` | **external_service_only** |
-| `manual_benchmark` | **not_ready** |
-| `biodata_benchmark` | **not_ready** |
-| `native_partial_attempt` | **not_ready** |
-| `native_full_attempt` | **not_ready** |
 | TEXT2SPARQL_VIRTUOSO | **blocked** |
 
 ---
 
-## 3. Bloqueadores restantes hacia GO
+## 3. Bloqueadores restantes hacia GO de smoke
 
-1. Autorización + descarga/fijación caché `intfloat/multilingual-e5-large`.  
-2. Construcción/verify `LAB_MINIMAL_INDEX`.  
-3. Preflight import FastAPI (`INDEX_VERIFIED`).  
-4. Firma presupuesto + modelo OpenRouter.  
-5. Límite efectivo `max_tokens` (no enforceado en rama OpenRouter).
+1. Firma presupuesto OpenRouter (`MAX_OPENROUTER_USD`).  
+2. Selección de modelo exacto para 1 pregunta.  
+3. `max_tokens` no enforceado en rama OpenRouter.  
+4. Aprobación explícita para POST `/chat`.
 
 ---
 
 ## 4. Next prompt
 
-`Prompt 10B — Descarga controlada y fijación de caché intfloat/multilingual-e5-large + construcción del índice mínimo (previa autorización explícita)`
+`Prompt 11 — Cierre de presupuesto, selección de modelo y gate final para LOCAL_CHAT_API_ONE_QUESTION`
 
 ---
 
-## 5. Informe
+## 5. Informes
 
-`audit/sparql_llm/LOCAL_CHAT_API_ENV_INDEX_PREP_REPORT.md`
+- `audit/sparql_llm/LOCAL_CHAT_API_ENV_INDEX_PREP_REPORT.md` (Prompt 10)  
+- `audit/sparql_llm/LOCAL_CHAT_API_EMBEDDING_INDEX_PREFLIGHT_REPORT.md` (Prompt 10B)

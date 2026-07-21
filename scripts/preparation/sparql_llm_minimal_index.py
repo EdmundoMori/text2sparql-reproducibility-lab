@@ -265,6 +265,11 @@ def verify_index(qdrant_path: Path, collection: str, documents_jsonl: Path | Non
         and DOC_TYPE in doc_types
         and SOURCE_SCOPE in scopes
     )
+    vectors = getattr(getattr(info.config, "params", None), "vectors", None)
+    vector_size = getattr(vectors, "size", None)
+    distance = getattr(getattr(vectors, "distance", None), "value", None) or str(
+        getattr(vectors, "distance", None)
+    )
     return {
         "status": "INDEX_VERIFIED" if ok else "INDEX_VERIFY_FAILED",
         "points_count": info.points_count,
@@ -272,7 +277,8 @@ def verify_index(qdrant_path: Path, collection: str, documents_jsonl: Path | Non
         "doc_types": sorted(x for x in doc_types if x),
         "source_scopes": sorted(x for x in scopes if x),
         "expected_from_jsonl": expected,
-        "vector_size": getattr(getattr(info.config, "params", None), "vectors", None),
+        "vector_size": vector_size,
+        "distance": distance,
         "ok": ok,
     }
 

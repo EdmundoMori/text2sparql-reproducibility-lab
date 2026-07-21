@@ -1,0 +1,29 @@
+{
+  "class_iris": [
+    "http://biohackathon.org/resource/faldo#ExactPosition",
+    "http://biohackathon.org/resource/faldo#InRangePosition",
+    "http://biohackathon.org/resource/faldo#OneOfPosition",
+    "http://biohackathon.org/resource/faldo#Position",
+    "http://biohackathon.org/resource/faldo#Region",
+    "http://busco.ezlab.org/schema#Score",
+    "http://purl.obolibrary.org/obo/STATO_0000193",
+    "http://purl.org/ontology/bibo/Journal",
+    "http://purl.uniprot.org/core/Absorption_Annotation",
+    "http://purl.uniprot.org/core/Active_Site_Annotation",
+    "http://purl.uniprot.org/core/Activity_Regulation_Annotation",
+    "http://purl.uniprot.org/core/Allergen_Annotation"
+  ],
+  "doc_type": "SPARQL endpoints classes schema",
+  "document_count": 12,
+  "endpoint_url": "https://sparql.uniprot.org/sparql/",
+  "evidence": "CODE_VERIFIED_get_schema_for_endpoint_use_file;INFERENCE_lab_shex_without_remote_labels",
+  "homepage_used": false,
+  "jsonl_sha256": "11f62e8b2a74092fdb0b4b171cac16a651b22629ea3a429a2b26221d5978736f",
+  "label": "LAB_MINIMAL_INDEX",
+  "labels_queried": false,
+  "max_documents": 12,
+  "network": "blocked",
+  "not_paper_index": true,
+  "void_file": "/data/void_uniprot.ttl",
+  "void_sha256": "e5e23228c40622a1ea0640c62c3bc021cab4c9373a665be79ddc65f999a52c95"
+}

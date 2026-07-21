@@ -1,0 +1,15 @@
+{
+  "distance": "Cosine",
+  "doc_types": [
+    "SPARQL endpoints classes schema"
+  ],
+  "expected_from_jsonl": 12,
+  "ok": true,
+  "points_count": 12,
+  "source_scopes": [
+    "LAB_MINIMAL_INDEX"
+  ],
+  "status": "INDEX_VERIFIED",
+  "unique_iris": 12,
+  "vector_size": 1024
+}

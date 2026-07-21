@@ -1,26 +1,21 @@
 # NEXT_PROMPT_GUIDANCE
 
 **Fecha:** 2026-07-21  
-**Tras:** Prompt 10 → entorno agent **ready**; documentos mínimos **ready**; índice **bloqueado** (caché e5-large ausente)
+**Tras:** Prompt 10B → caché e5-large + `LAB_MINIMAL_INDEX` + preflight FastAPI **pass**; gate sigue **CONDITIONAL_GO**
 
 ## Prompt recomendado (prioridad 1)
 
-**Título:** Prompt 10B — Descarga controlada y fijación de caché `intfloat/multilingual-e5-large` + construcción del índice mínimo (previa autorización explícita)
+**Título:** Prompt 11 — Cierre de presupuesto, selección de modelo y gate final para LOCAL_CHAT_API_ONE_QUESTION
 
 **Método:** `sparql_llm`  
-**Prerrequisito duro:** autorización **explícita** del investigador para descargar el embedding exacto. Sin ella → NO-GO / no ejecutar.
-
-**Objetivo:** (solo tras aprobación) descargar/fijar caché exacta offline, `build-index` + `verify-index` de `LAB_MINIMAL_INDEX` (≤12 docs ya preparados), opcional preflight FastAPI **sin** POST `/chat` ni OpenRouter.
+**Objetivo:** Firmar/registrar presupuesto OpenRouter (`MAX_OPENROUTER_USD`), elegir **un** modelo exacto, fijar `MAX_LLM_CALLS=2` con Settings ya preparados (`max_try_fix_sparql=0`, `enable_sparql_execution=false`), documentar límites no enforceados (`max_tokens` OpenRouter), y emitir GO / CONDITIONAL / NO-GO **final** para el smoke de una pregunta. **Sin** ejecutar POST `/chat` en Prompt 11 salvo que el investigador autorice explícitamente la ejecución en el mismo prompt.
 
 **Restricciones:**
-- No POST `/chat`; no OpenRouter; no MCP público; no SPARQL vivos; no `init_vectordb` completo.  
-- No cambiar embedding ni cuantizar.  
-- No promover `reproduction_status` ni cerrar Fase 1.  
-- Presupuesto LLM sigue sin firmar.
+- Preferible: solo documental + checklist GO; no LLM si no hay firma.  
+- No biodata; no MCP público como nativo; no Virtuoso; no adapters.  
+- Conservar `smoke_only` / `native_audit_complete=false` / `common_adapter_allowed=false` hasta evidencia de ejecución.
 
-**Condición de éxito:** `INDEX_VERIFIED` + (ideal) preflight pass → entonces Prompt 11 (presupuesto/modelo/gate final).
-
-**Alternativa si no hay autorización de descarga:** documentar bloqueo; no avanzar a smoke.
+**Condición de éxito:** decisión formal de gate + presupuesto/modelo registrados (o NO-GO documentado).
 
 ## Objetivo de fase
 

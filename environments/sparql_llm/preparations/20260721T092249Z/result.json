@@ -1,0 +1,88 @@
+{
+  "run_id": "20260721T092249Z",
+  "prompt": "10B",
+  "classification": "ENVIRONMENT_READY_INDEX_READY_PREFLIGHT_PASS",
+  "selected_future_action": "LOCAL_CHAT_API_ONE_QUESTION",
+  "online_smoke_gate": "CONDITIONAL_GO",
+  "authorization": {
+    "approver": "EDMUNDO MORI ORRILLO",
+    "date": "2026-07-21",
+    "model": "intfloat/multilingual-e5-large",
+    "artifact": "environments/sparql_llm/preparations/20260721T092249Z/EMBEDDING_DOWNLOAD_AUTHORIZATION.md"
+  },
+  "lab_commit_initial": "96d5bab9556065cd0cd5785327475565ce910cba",
+  "upstream_commit": "3748730e3bd2df2595280b918269fdaadb9fc0c3",
+  "parent_prep_run_id": "20260721T084637Z",
+  "image_tag": "text2sparql-lab/sparql-llm-agent-py311:20260721T084637Z",
+  "agent_environment_status": "ready",
+  "embedding_cache_status": "complete_exact_model_cache",
+  "embedding_download": {
+    "ok": true,
+    "resolved_model": "intfloat/multilingual-e5-large",
+    "hf": "qdrant/multilingual-e5-large-onnx",
+    "url": "https://storage.googleapis.com/qdrant-fastembed/fast-multilingual-e5-large.tar.gz",
+    "total_size_bytes": 2252995903,
+    "files": 13,
+    "fastembed_version": "0.8.0",
+    "cache_path_workdir": "workdir/runs/sparql-llm-embedding-index/20260721T092249Z/embedding_cache",
+    "gitignored": true
+  },
+  "embedding_offline_verify": {
+    "ok": true,
+    "dim": 1024,
+    "elapsed": 5.597264766693115,
+    "model": "intfloat/multilingual-e5-large",
+    "network": "none"
+  },
+  "minimal_documents_status": "ready",
+  "minimal_documents_count": 12,
+  "minimal_index_status": "INDEX_VERIFIED",
+  "index_verify": {
+    "distance": "Cosine",
+    "doc_types": [
+      "SPARQL endpoints classes schema"
+    ],
+    "expected_from_jsonl": 12,
+    "ok": true,
+    "points_count": 12,
+    "source_scopes": [
+      "LAB_MINIMAL_INDEX"
+    ],
+    "status": "INDEX_VERIFIED",
+    "unique_iris": 12,
+    "vector_size": 1024
+  },
+  "local_chat_startup_preflight_status": "pass",
+  "preflight": {
+    "ok": true,
+    "post_chat": false,
+    "routes_required": {
+      "/chat": true,
+      "/mcp": true,
+      "/openapi.json": true
+    },
+    "openapi_get": {
+      "ok": true,
+      "status_code": 200
+    },
+    "import_seconds": 32.89275503158569,
+    "note": "CWD mounted to upstream/sparql_llm for relative webapp StaticFiles paths; package from site-packages"
+  },
+  "llm_calls": 0,
+  "sparql_endpoint_calls": 0,
+  "post_chat": 0,
+  "alternative_models_downloaded": 0,
+  "cache_and_index_committed_to_git": false,
+  "evidence_tags": {
+    "download": "CACHE_VERIFIED",
+    "index": "INDEX_VERIFIED",
+    "preflight": "EXECUTION_VERIFIED",
+    "authorization": "LEGAL_VERIFIED"
+  },
+  "remaining_online_blockers": [
+    "OPENROUTER_API_KEY_and_budget_unsigned",
+    "max_tokens_not_enforced_on_openrouter_branch",
+    "model_selection_for_smoke_pending"
+  ],
+  "next_prompt_recommended": "Prompt 11 \u2014 Cierre de presupuesto, selecci\u00f3n de modelo y gate final para LOCAL_CHAT_API_ONE_QUESTION"
+}

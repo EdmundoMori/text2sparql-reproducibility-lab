@@ -1,0 +1,11 @@
+=== DOWNLOAD START 2026-07-21T09:25:31+00:00 ===
+DOWNLOAD_EC=0
+RUN_ID=20260721T092249Z
+authorized_download=intfloat/multilingual-e5-large
+approver=EDMUNDO MORI ORRILLO
+date=2026-07-21
+llm_calls=0
+sparql_endpoints=0
+post_chat=0
+index=INDEX_VERIFIED
+preflight=pass

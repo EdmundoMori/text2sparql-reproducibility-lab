@@ -1,0 +1,4 @@
+upstream_diff_lines=0
+cache_in_git=false
+qdrant_in_git=false
+classification=ENVIRONMENT_READY_INDEX_READY_PREFLIGHT_PASS

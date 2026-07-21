@@ -5,9 +5,9 @@
 # Evidencia pendiente cerrada: audit/EVIDENCE_CLOSURE.md
 
 schema_version: "0.11"
-updated_at: "2026-07-21T10:50:00+02:00"
+updated_at: "2026-07-21T11:35:00+02:00"
 phase: "1_native_audit"
-audit_prompt: "SPARQL_LLM_LOCAL_CHAT_ENV_INDEX_PREP_10"
+audit_prompt: "SPARQL_LLM_EMBEDDING_INDEX_PREFLIGHT_10B"
 clones_performed: true
 evidence_closure_complete: true
 wave_a_static_audit_complete: true
@@ -78,33 +78,32 @@ methods:
     selected_future_online_action_class: online_functional_smoke
     selected_future_online_action_gate: CONDITIONAL_GO
     api_budget_status: proposed_pending_investigator_approval
-    indexing_prerequisite_status: documents_ready_index_blocked_pending_embedding_cache
+    indexing_prerequisite_status: ready_lab_minimal_index
     endpoint_prerequisite_status: optional_if_enable_sparql_execution_false
     api_smoke_ready: conditional
     protocol_blockers:
-      - embedding_cache_intfloat_multilingual_e5_large_absent
-      - minimal_qdrant_index_not_built
-      - local_chat_preflight_not_run
       - OPENROUTER_API_KEY
       - investigator_budget_approval
       - max_tokens_not_enforced_on_openrouter_branch
+      - model_selection_for_smoke_pending
 
     agent_environment_status: ready
     agent_environment_run_id: "20260721T084637Z"
     agent_environment_image: "text2sparql-lab/sparql-llm-agent-py311:20260721T084637Z"
-    embedding_cache_status: absent
+    embedding_cache_status: complete_exact_model_cache
+    embedding_cache_run_id: "20260721T092249Z"
+    embedding_model_id: intfloat/multilingual-e5-large
     minimal_documents_status: ready
     minimal_documents_count: 12
-    minimal_index_status: blocked_pending_embedding_download_approval
-    local_chat_startup_preflight_status: not_run_index_blocked
+    minimal_index_status: INDEX_VERIFIED
+    minimal_index_run_id: "20260721T092249Z"
+    local_chat_startup_preflight_status: pass
     online_smoke_gate: CONDITIONAL_GO
     remaining_online_blockers:
-      - embedding_cache_intfloat_multilingual_e5_large_absent
-      - minimal_qdrant_index_not_built
-      - local_chat_preflight_not_run
       - OPENROUTER_API_KEY_and_budget_unsigned
       - max_tokens_not_enforced_on_openrouter_branch
-    next_execution_prompt: Prompt_10B_controlled_embedding_download_and_minimal_index_build_after_explicit_approval
+      - model_selection_for_smoke_pending
+    next_execution_prompt: Prompt_11_budget_model_and_final_gate_LOCAL_CHAT_API_ONE_QUESTION
 
     native_gate_class: CONDITIONAL_GO
     scientific_baseline_role: core_baseline_candidate
@@ -113,8 +112,8 @@ methods:
     adapter_legal_gate: conditional_deferred
     generality_class: configurable_general
     gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-    next_native_action: controlled_embedding_cache_then_minimal_index_after_approval
-    next_native_action_class: artifact_download_gate
+    next_native_action: budget_model_approval_then_controlled_chat_smoke
+    next_native_action_class: protocol_definition
     gate_confidence: high
     execution_blockers:
       - compose_plugin_absent_on_host
@@ -123,7 +122,7 @@ methods:
       - virtuoso_text2sparql_blocked_on_host
       - host_python_3_10_incompatible_typing_Required
       - online_index_and_OPENROUTER_budget_pending
-    notes: "Prompt 10: agent env ready (20260721T084637Z); 12 LAB_MINIMAL docs; embedding cache absent → index blocked. Prompt 9 protocol CONDITIONAL_GO LOCAL_CHAT_API_ONE_QUESTION. Prompt 5B smoke_only preserved. native_audit_complete=false; common_adapter_allowed=false."
+    notes: "Prompt 10B: embedding cache complete; LAB_MINIMAL INDEX_VERIFIED (12); FastAPI preflight pass. Gate CONDITIONAL_GO pending budget/model. reproduction_status remains smoke_only (5B). native_audit_complete=false; common_adapter_allowed=false."
 
   - method_id: mkgqagent
     display_name: mKGQAgent

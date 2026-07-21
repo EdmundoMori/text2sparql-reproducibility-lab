@@ -1,0 +1,13 @@
+{
+  "collection": "lab_minimal_uniprot_void",
+  "distance": "Cosine",
+  "documents_jsonl": "/data/docs/minimal-documents.jsonl",
+  "elapsed_seconds": 14.383232831954956,
+  "embedding_model": "intfloat/multilingual-e5-large",
+  "label": "LAB_MINIMAL_INDEX",
+  "network": "blocked",
+  "points_count": 12,
+  "qdrant_path": "/data/qdrant",
+  "status": "INDEX_VERIFIED_PENDING_VERIFY_MODE",
+  "vector_size": 1024
+}

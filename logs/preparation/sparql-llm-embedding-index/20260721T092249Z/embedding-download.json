@@ -1,0 +1,94 @@
+{
+  "ok": true,
+  "requested_model": "intfloat/multilingual-e5-large",
+  "resolved_model": "intfloat/multilingual-e5-large",
+  "fastembed_version": "0.8.0",
+  "provenance": {
+    "sources": {
+      "hf": "qdrant/multilingual-e5-large-onnx",
+      "url": "https://storage.googleapis.com/qdrant-fastembed/fast-multilingual-e5-large.tar.gz",
+      "_deprecated_tar_struct": true
+    },
+    "model_file": "model.onnx",
+    "additional_files": [
+      "model.onnx_data"
+    ],
+    "dim": 1024,
+    "size_in_GB": 2.24,
+    "license": "mit",
+    "description": "Text embeddings, Unimodal (text), Multilingual (~100 languages), 512 input tokens truncation, Prefixes for queries/documents: necessary, 2024 year."
+  },
+  "cache_dir": "/data/embedding_cache",
+  "files_before": [],
+  "download_started_utc": "2026-07-21T09:25:34Z",
+  "elapsed_seconds": 78.20761561393738,
+  "download_finished_utc": "2026-07-21T09:26:52Z",
+  "files_after": [
+    {
+      "path": "fast-multilingual-e5-large/._config.json",
+      "size_bytes": 163,
+      "sha256": "67f6c8a428ea0e5cd34ecc26a48e8197ab61e84088a3f7a95658fc622ce78696"
+    },
+    {
+      "path": "fast-multilingual-e5-large/._model.onnx",
+      "size_bytes": 163,
+      "sha256": "67f6c8a428ea0e5cd34ecc26a48e8197ab61e84088a3f7a95658fc622ce78696"
+    },
+    {
+      "path": "fast-multilingual-e5-large/._model.onnx_data",
+      "size_bytes": 163,
+      "sha256": "67f6c8a428ea0e5cd34ecc26a48e8197ab61e84088a3f7a95658fc622ce78696"
+    },
+    {
+      "path": "fast-multilingual-e5-large/._special_tokens_map.json",
+      "size_bytes": 163,
+      "sha256": "67f6c8a428ea0e5cd34ecc26a48e8197ab61e84088a3f7a95658fc622ce78696"
+    },
+    {
+      "path": "fast-multilingual-e5-large/._tokenizer.json",
+      "size_bytes": 163,
+      "sha256": "67f6c8a428ea0e5cd34ecc26a48e8197ab61e84088a3f7a95658fc622ce78696"
+    },
+    {
+      "path": "fast-multilingual-e5-large/._tokenizer_config.json",
+      "size_bytes": 163,
+      "sha256": "67f6c8a428ea0e5cd34ecc26a48e8197ab61e84088a3f7a95658fc622ce78696"
+    },
+    {
+      "path": "fast-multilingual-e5-large/config.json",
+      "size_bytes": 716,
+      "sha256": "1de8c3be1f344c0eefa4962480a006f8639f416dfafaa95a770e3cf4bceae6a4"
+    },
+    {
+      "path": "fast-multilingual-e5-large/model.onnx",
+      "size_bytes": 545851,
+      "sha256": "1c09780c907c8a91a77a6ab1fd231f79e090d2907ca431223703dfebeed3d36c"
+    },
+    {
+      "path": "fast-multilingual-e5-large/model.onnx_data",
+      "size_bytes": 2235363328,
+      "sha256": "0cf1883fee81c63819a44e2ba0efa51d4043d9759685a4ebebbde97e0623d15c"
+    },
+    {
+      "path": "fast-multilingual-e5-large/special_tokens_map.json",
+      "size_bytes": 964,
+      "sha256": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835"
+    },
+    {
+      "path": "fast-multilingual-e5-large/tokenizer.json",
+      "size_bytes": 17082756,
+      "sha256": "f59925fcb90c92b894cb93e51bb9b4a6105c5c249fe54ce1c704420ac39b81af"
+    },
+    {
+      "path": "fast-multilingual-e5-large/tokenizer_config.json",
+      "size_bytes": 1147,
+      "sha256": "f90024142df07163e5e6c5b9a6ad7c8c68b22a9112af11e3db4559a9ff90f737"
+    },
+    {
+      "path": "tmp/._fast-multilingual-e5-large",
+      "size_bytes": 163,
+      "sha256": "67f6c8a428ea0e5cd34ecc26a48e8197ab61e84088a3f7a95658fc622ce78696"
+    }
+  ],
+  "total_size_bytes": 2252995903
+}

@@ -87,11 +87,12 @@ Prompt 10: **ninguna** clave usada; variables eliminadas del entorno de contened
 
 ---
 
-## 6. Descarga de embeddings (separada del presupuesto LLM)
+## 6. Descarga de embeddings
 
 - Modelo exacto: `intfloat/multilingual-e5-large`.  
-- Prompt 10: **no autorizada**; caché host = **absent**.  
-- Requiere autorización explícita → Prompt 10B.
+- **Prompt 10B autorizado y ejecutado** (aprobador: EDMUNDO MORI ORRILLO, 2026-07-21).  
+- Caché: `complete_exact_model_cache` en workdir (gitignored).  
+- Procedencia registrada en `logs/preparation/sparql-llm-embedding-index/20260721T092249Z/embedding-download.json`.
 
 ---
 
@@ -116,7 +117,7 @@ Abortar inmediatamente si:
 | Fecha aprobación | _pendiente_ |
 | `MAX_OPENROUTER_USD` aprobado | _pendiente_ |
 | Modelo exacto aprobado | _pendiente_ |
-| Descarga embeddings aprobada | **no** (Prompt 10) |
-| Notas | Gate: **CONDITIONAL_GO**; entorno agent ready; índice bloqueado por caché |
+| Descarga embeddings aprobada | **sí** (Prompt 10B; Mori 2026-07-21) |
+| Notas | Gate: **CONDITIONAL_GO**; índice+preflight ready; falta firma LLM |
 
-**Sin esta aprobación, el smoke LLM permanece bloqueado.** Este documento **no** firma el presupuesto en nombre del investigador.
+**Sin aprobación LLM, el smoke permanece bloqueado.** Este documento **no** firma el presupuesto OpenRouter.

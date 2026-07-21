@@ -1,0 +1,7 @@
+lab_commit_initial: 96d5bab9556065cd0cd5785327475565ce910cba
+upstream_commit: 3748730e3bd2df2595280b918269fdaadb9fc0c3
+parent_documents_run: 20260721T084637Z
+run_type: controlled_embedding_download_and_minimal_index
+selected_future_action: LOCAL_CHAT_API_ONE_QUESTION
+declaration: not an adapter, not a reproduction, not a benchmark
+model: intfloat/multilingual-e5-large

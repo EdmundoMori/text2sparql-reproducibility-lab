@@ -1,0 +1,30 @@
+{
+  "elapsed_seconds": 32.92053699493408,
+  "error": null,
+  "import_seconds": 32.89275503158569,
+  "llm_loaded": false,
+  "mcp_invoked": false,
+  "ok": true,
+  "openapi_get": {
+    "ok": true,
+    "status_code": 200
+  },
+  "post_chat": false,
+  "required_routes_present": {
+    "/chat": true,
+    "/mcp": true,
+    "/openapi.json": true
+  },
+  "routes": [
+    "/",
+    "/assets",
+    "/chat",
+    "/docs",
+    "/docs/oauth2-redirect",
+    "/feedback",
+    "/logs",
+    "/mcp",
+    "/openapi.json",
+    "/redoc"
+  ]
+}

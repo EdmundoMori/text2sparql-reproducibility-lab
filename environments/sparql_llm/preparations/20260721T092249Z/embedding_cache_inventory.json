@@ -1,0 +1,25 @@
+{
+  "model_required": "intfloat/multilingual-e5-large",
+  "classification": "complete_exact_model_cache",
+  "complete_exact_model_cache": true,
+  "evidence": "CACHE_VERIFIED",
+  "total_size_bytes": 2252995903,
+  "files": 13,
+  "provenance": {
+    "sources": {
+      "hf": "qdrant/multilingual-e5-large-onnx",
+      "url": "https://storage.googleapis.com/qdrant-fastembed/fast-multilingual-e5-large.tar.gz",
+      "_deprecated_tar_struct": true
+    },
+    "model_file": "model.onnx",
+    "additional_files": [
+      "model.onnx_data"
+    ],
+    "dim": 1024,
+    "size_in_GB": 2.24,
+    "license": "mit",
+    "description": "Text embeddings, Unimodal (text), Multilingual (~100 languages), 512 input tokens truncation, Prefixes for queries/documents: necessary, 2024 year."
+  },
+  "offline_load_ok": true,
+  "location": "workdir/runs/sparql-llm-embedding-index/20260721T092249Z/embedding_cache"
+}

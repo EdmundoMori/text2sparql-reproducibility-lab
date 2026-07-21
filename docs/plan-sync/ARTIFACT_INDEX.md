@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-21 (Prompt 10 — prep LOCAL_CHAT)  
+**Última actualización:** 2026-07-21 (Prompt 10B)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -142,6 +142,11 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | P10-SCR | Script docs/index | `scripts/preparation/sparql_llm_minimal_index.py` | 3 modos |
 | P10-PF | Script preflight | `scripts/preparation/sparql_llm_local_chat_preflight.py` | no ejecutado |
 | P10-LOG | Logs prep | `logs/preparation/sparql-llm-local-chat-api/20260721T084637Z/` | docker/pip/docs |
+| P10B-RPT | Download+index+preflight | `audit/sparql_llm/LOCAL_CHAT_API_EMBEDDING_INDEX_PREFLIGHT_REPORT.md` | Prompt 10B |
+| P10B-AUTH | Autorización embeddings | `environments/sparql_llm/preparations/20260721T092249Z/EMBEDDING_DOWNLOAD_AUTHORIZATION.md` | Mori 2026-07-21 |
+| P10B-PREP | Manifest 10B | `environments/sparql_llm/preparations/20260721T092249Z/` | result/cache inv |
+| P10B-DL | Script descarga | `scripts/preparation/sparql_llm_download_embedding.py` | exact model only |
+| P10B-LOG | Logs 10B | `logs/preparation/sparql-llm-embedding-index/20260721T092249Z/` | sin pesos en git |
 
 ## Qué está / no está en GitHub
 
