@@ -1,0 +1,40 @@
+{
+  "classification": "Z2_ENV_IMPORT_DATA_METRIC_PASS",
+  "python": "3.8.20 (default, Sep 27 2024, 06:05:23) \n[GCC 12.2.0]",
+  "checks": {
+    "import_torch": {
+      "version": "1.13.1+cpu",
+      "cuda_available": false
+    },
+    "import_transformers": {
+      "version": "4.25.1"
+    },
+    "symbols": {
+      "AdamW": true,
+      "AutoConfig": true,
+      "AutoTokenizer": true,
+      "PreTrainedModel": true,
+      "get_linear_schedule_with_warmup": true,
+      "ACT2FN": true,
+      "Conv1D": true,
+      "find_pruneable_heads_and_indices": true,
+      "prune_conv1d_layer": true,
+      "GPT2PreTrainedModel": true
+    },
+    "forbidden_not_imported": true,
+    "data_lcquad2_test": {
+      "n_records": 5969,
+      "expected_n": 5969,
+      "n_match": true,
+      "sample_keys_ok": true,
+      "missing_keys": []
+    },
+    "metric_BLEU": 1.0,
+    "metric_SPBLEU": 1.0,
+    "metric_ROUGE": 1.0,
+    "metric_unigram_p": 1.0,
+    "metric_unigram_r": 1.0,
+    "metric_sp_unigram_p": 1.0
+  },
+  "errors": []
+}

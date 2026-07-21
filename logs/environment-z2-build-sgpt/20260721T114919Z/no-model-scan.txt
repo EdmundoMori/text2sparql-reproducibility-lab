@@ -1,0 +1,16 @@
+/usr/local/lib/python3.8/site-packages/transformers/models/megatron_gpt2
+/usr/local/lib/python3.8/site-packages/transformers/models/megatron_gpt2/convert_megatron_gpt2_checkpoint.py
+/usr/local/lib/python3.8/site-packages/transformers/models/megatron_gpt2/__pycache__/convert_megatron_gpt2_checkpoint.cpython-38.pyc
+/usr/local/lib/python3.8/site-packages/transformers/models/gpt2
+/usr/local/lib/python3.8/site-packages/transformers/models/gpt2/configuration_gpt2.py
+/usr/local/lib/python3.8/site-packages/transformers/models/gpt2/modeling_tf_gpt2.py
+/usr/local/lib/python3.8/site-packages/transformers/models/gpt2/tokenization_gpt2.py
+/usr/local/lib/python3.8/site-packages/transformers/models/gpt2/__pycache__/configuration_gpt2.cpython-38.pyc
+/usr/local/lib/python3.8/site-packages/transformers/models/gpt2/__pycache__/tokenization_gpt2_tf.cpython-38.pyc
+/usr/local/lib/python3.8/site-packages/transformers/models/gpt2/__pycache__/modeling_tf_gpt2.cpython-38.pyc
+/root/.cache/huggingface/hub/version.txt
+16K	/root/.cache
+total 12
+drwxr-xr-x 3 root root 4096 Jul 21 11:51 .
+drwxr-xr-x 3 root root 4096 Jul 21 11:51 ..
+drwxr-xr-x 2 root root 4096 Jul 21 11:51 hub

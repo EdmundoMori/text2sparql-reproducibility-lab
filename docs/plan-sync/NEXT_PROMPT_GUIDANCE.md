@@ -1,22 +1,16 @@
 # NEXT_PROMPT_GUIDANCE
 
 **Fecha:** 2026-07-21  
-**Tras:** Prompt 12B — pins SGPT; gate **`READY_FOR_Z2_DOWNLOAD_AUTHORIZATION`**
+**Tras:** Prompt 13A — SGPT Z2 CPU build + preflight **PASS**
 
 ## Prompt recomendado (único)
 
-**Título:** Prompt 13A — Autorización y descarga controlada de imagen y paquetes SGPT Z2 + construcción del entorno CPU, ZERO_COST, sin GPT-2, sin modelos spaCy, sin train.
+**Título:** Prompt 13B — Cierre documental del entorno SGPT Z2 y decisión de cola ZERO_COST (sin Z3; sin train).
 
 **Método:** `sgpt`  
-**Objetivo:** Con autorización humana explícita: pull imagen `python@sha256:314bc2fb…`, instalar **solo** constraints Z2 (`torch==1.13.1+cpu`, `transformers==4.25.1`, numpy/tqdm/nltk/toolchain), freeze, import probe CPU, **sin** GPT-2, **sin** spaCy models, **sin** train/eval.
+**Objetivo:** Congelar evidencia RUNTIME_VERIFIED del Z2, actualizar cola ZERO_COST, decidir explícitamente si el siguiente paso es (a) NLTK data autorizado, (b) otro método $0, o (c) diferir. **Sin** GPT-2, **sin** train, **sin** Table 4.
 
-**Restricciones:**
-- Coste externo $0.00 (solo artefactos públicos gratuitos)  
-- No `utils.dptree` / no QALD9 BaseDataset / no Apex  
-- Conservar `audit_only`; no Table 4  
-- Reducir métricas Z2 a core si NLTK data no autorizada  
-
-**Condición de éxito:** entorno Z2 construido + evidencia import/data/metric o fallo etiquetado; aún no Z3.
+**Restricciones:** ZERO_COST; no instalar más sin nueva autorización; conservar `audit_only`.
 
 ## Objetivo de fase
 

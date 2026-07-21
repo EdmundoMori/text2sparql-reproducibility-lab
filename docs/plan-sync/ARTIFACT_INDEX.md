@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-21 (Prompt 12B)  
+**Última actualización:** 2026-07-21 (Prompt 13A)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -183,6 +183,11 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | P12B-DF | Dockerfile Z2 candidato | `environments/sgpt/Dockerfile.z2-py38.candidate` | DO_NOT_BUILD_IN_12B |
 | P12B-SCR | Resolver metadata oficial | `scripts/preparation/sgpt_official_metadata_resolver.py` | allowlist hosts |
 | P12B-LOG | Logs Prompt 12B | `logs/environment-pin-resolution-sgpt/20260721T113310Z/` | network SHA |
+| P13A-RPT | Z2 build+preflight | `audit/sgpt/Z2_BUILD_AND_PREFLIGHT_REPORT.md` | PASS |
+| P13A-AUTH | Auth descarga Z2 | `environments/sgpt/builds/20260721T114919Z/Z2_DOWNLOAD_BUILD_AUTHORIZATION.md` | Mori |
+| P13A-DF | Dockerfile Z2 build | `environments/sgpt/builds/20260721T114919Z/Dockerfile.z2-py38` | built |
+| P13A-SMK | Harness offline Z2 | `scripts/smoke/sgpt_z2_offline_preflight.py` | network none |
+| P13A-LOG | Logs Prompt 13A | `logs/environment-z2-build-sgpt/20260721T114919Z/` | freeze+preflight |
 
 ## Qué está / no está en GitHub
 

@@ -2,12 +2,12 @@
 
 **Audiencia:** ChatGPT e investigador.  
 **Repo:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-**Última actualización:** 2026-07-21 (Prompt **12B** — pins SGPT)  
+**Última actualización:** 2026-07-21 (Prompt **13A** — build SGPT Z2)  
 **Fase:** 1 — native audit; **abierta**  
-**SHA inicial 12B:** `392c101ef4f0defde8b19c6c49eac0064dc6954a`  
-**RUN_ID:** `20260721T113310Z`
+**SHA inicial 13A:** `8fbacdf07b0446dd16ed68cafe0c453fd9479b37`  
+**RUN_ID:** `20260721T114919Z`
 
-> ZERO_COST. Sin install/pull/train. Gate: **READY_FOR_Z2_DOWNLOAD_AUTHORIZATION**.
+> ZERO_COST. Z2 CPU **construido** y preflight **PASS**. Sin GPT-2 / spaCy models / NLTK data / train.
 
 ---
 
@@ -17,62 +17,50 @@ reproducción nativa → evaluación común → caso de estudio → errores → 
 
 ---
 
-## 2. Metadata commits
-
-| Prompt | Artifact commit | Final HEAD |
-|---|---|---|
-| 12 | `dbdefdf4bffc04d5f7ea231ee068e7b9cdfaeea6` | `392c101ef4f0defde8b19c6c49eac0064dc6954a` |
-| **12B** | `89785fddc3b8c75d6a805631fa3f98d009f33efd` | `9e55694832c15d8591bbcdcea344be390c148dbc` |
-
----
-
-## 3. Prompt 12B — resumen
+## 2. Prompt 13A — resumen
 
 | Campo | Valor |
 |---|---|
-| Ancla temporal | 2022-12 (requirements + TF 4.25.1) |
-| Python | 3.8.20-slim-bookworm |
-| Digest amd64 | `sha256:314bc2fb0714b7807bf5699c98f0c73817e579799f2d91567ab7e9510f5601a5` |
-| torch Z2 | `torch==1.13.1+cpu` (sha256 wheel `4a8b8483…`) |
-| Transformers | **4.25.1** SELECTED_CANDIDATE_UNTESTED |
-| Símbolos | all present (`OFFICIAL_SOURCE_TAG_VERIFIED`) |
-| Pins directos | constraints native + Z2 (candidato ≠ lock) |
-| Transitivas | METADATA_KNOWN_NOT_LOCKED |
-| spaCy / NLTK / GPT-2 | deferred downloads; GPT-2 out of Z2 |
-| Gate | **READY_FOR_Z2_DOWNLOAD_AUTHORIZATION** |
-| Descargas binarias / installs / train / infer | **0 / 0 / 0 / 0** |
+| Aprobador | EDMUNDO MORI ORRILLO |
+| Imagen base digest | `sha256:314bc2fb…` verificado |
+| Imagen lab | `text2sparql-lab/sgpt-z2-py38:20260721T114919Z` |
+| torch | `1.13.1+cpu` |
+| transformers | `4.25.1` |
+| Clasificación | **`Z2_ENV_IMPORT_DATA_METRIC_PASS`** |
+| Gate | **`Z2_ENV_READY_PREFLIGHT_PASS`** |
+| GPT-2 / spaCy / NLTK data | no descargados |
 | Coste | **0.00** |
 | `reproduction_status` | `audit_only` |
 
-Informe: [`audit/sgpt/PIN_RESOLUTION_REPORT.md`](audit/sgpt/PIN_RESOLUTION_REPORT.md)
+Informe: [`audit/sgpt/Z2_BUILD_AND_PREFLIGHT_REPORT.md`](audit/sgpt/Z2_BUILD_AND_PREFLIGHT_REPORT.md)
 
 ---
 
-## 4. Siguiente prompt (único)
+## 3. Siguiente prompt (único)
 
-**Prompt 13A — Autorización y descarga controlada de imagen y paquetes SGPT Z2 + construcción del entorno CPU, ZERO_COST, sin GPT-2, sin modelos spaCy, sin train.**
+**Prompt 13B — Cierre documental del entorno SGPT Z2 y decisión de cola ZERO_COST (sin Z3; sin train).**
 
 → [`docs/plan-sync/NEXT_PROMPT_GUIDANCE.md`](docs/plan-sync/NEXT_PROMPT_GUIDANCE.md)
 
 ---
 
-## 5. PE1–PE4
+## 4. PE1–PE4
 
 | PE | Estado |
 |---|---|
 | PE1 | substantially_answered |
-| PE2 | partial_evidence |
+| PE2 | partial_evidence (Z2 env+preflight) |
 | PE3 | not_started |
 | PE4 | partial_evidence |
 
 ---
 
-## 6. Registro Prompt 12B
+## 5. Registro Prompt 13A
 
 | Campo | Valor |
 |---|---|
-| commit inicial | `392c101ef4f0defde8b19c6c49eac0064dc6954a` |
-| RUN_ID | `20260721T113310Z` |
-| gate | `READY_FOR_Z2_DOWNLOAD_AUTHORIZATION` |
-| commit final | `89785fddc3b8c75d6a805631fa3f98d009f33efd` |
-| push | confirmado en origin/main |
+| commit inicial | `8fbacdf07b0446dd16ed68cafe0c453fd9479b37` |
+| RUN_ID | `20260721T114919Z` |
+| gate | `Z2_ENV_READY_PREFLIGHT_PASS` |
+| commit final | _(tras push)_ |
+| push | _(pendiente)_ |

@@ -1,0 +1,82 @@
+Python 3.8.20
+No broken requirements found.
+=== FREEZE ===
+certifi==2026.6.17
+charset-normalizer==3.4.9
+click==8.1.8
+filelock==3.16.1
+fsspec==2025.3.0
+hf-xet==1.5.2
+huggingface_hub==0.36.2
+idna==3.15
+joblib==1.4.2
+nltk==3.8.1
+numpy==1.23.5
+packaging==26.2
+PyYAML==6.0.3
+regex==2024.11.6
+requests==2.32.4
+tokenizers==0.13.3
+torch==1.13.1+cpu
+tqdm==4.64.1
+transformers==4.25.1
+typing_extensions==4.13.2
+urllib3==2.2.3
+=== SHOW ===
+Name: torch
+Version: 1.13.1+cpu
+Summary: Tensors and Dynamic neural networks in Python with strong GPU acceleration
+Home-page: https://pytorch.org/
+Author: PyTorch Team
+Author-email: packages@pytorch.org
+License: BSD-3
+Location: /usr/local/lib/python3.8/site-packages
+Requires: typing-extensions
+Required-by: 
+---
+Name: transformers
+Version: 4.25.1
+Summary: State-of-the-art Machine Learning for JAX, PyTorch and TensorFlow
+Home-page: https://github.com/huggingface/transformers
+Author: The Hugging Face team (past and future) with the help of all our contributors (https://github.com/huggingface/transformers/graphs/contributors)
+Author-email: transformers@huggingface.co
+License: Apache
+Location: /usr/local/lib/python3.8/site-packages
+Requires: filelock, huggingface-hub, numpy, packaging, pyyaml, regex, requests, tokenizers, tqdm
+Required-by: 
+---
+Name: numpy
+Version: 1.23.5
+Summary: NumPy is the fundamental package for array computing with Python.
+Home-page: https://www.numpy.org
+Author: Travis E. Oliphant et al.
+Author-email: 
+License: BSD
+Location: /usr/local/lib/python3.8/site-packages
+Requires: 
+Required-by: transformers
+---
+Name: tqdm
+Version: 4.64.1
+Summary: Fast, Extensible Progress Meter
+Home-page: https://tqdm.github.io
+Author: 
+Author-email: 
+License: MPLv2.0, MIT Licences
+Location: /usr/local/lib/python3.8/site-packages
+Requires: 
+Required-by: huggingface_hub, nltk, transformers
+---
+Name: nltk
+Version: 3.8.1
+Summary: Natural Language Toolkit
+Home-page: https://www.nltk.org/
+Author: NLTK Team
+Author-email: nltk.team@gmail.com
+License: Apache License, Version 2.0
+Location: /usr/local/lib/python3.8/site-packages
+Requires: click, joblib, regex, tqdm
+Required-by: 
+torch 1.13.1+cpu cuda False
+transformers 4.25.1
+hf_home_exists True

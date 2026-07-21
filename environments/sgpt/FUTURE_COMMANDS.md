@@ -1,51 +1,25 @@
-# FUTURE_COMMANDS — SGPT (documental)
+# FUTURE_COMMANDS — SGPT
 
-Todos los comandos: **DO_NOT_RUN_IN_PROMPT_12**
+**Prompt 13A ejecutado:** pull digest + build Z2 + preflight offline.  
+Comandos restantes siguen **bloqueados** hasta nueva autorización.
 
-## Digest / imagen
+## Ya ejecutado (13A) — referencia
 
 ```bash
-# DO_NOT_RUN_IN_PROMPT_12
-# docker pull ...@sha256:<RESOLVED>
-# docker image inspect --format '{{.Id}}' ...
+# HECHO en 13A — no re-ejecutar sin necesidad
+# docker pull python@sha256:314bc2fb0714b7807bf5699c98f0c73817e579799f2d91567ab7e9510f5601a5
+# docker build -f environments/sgpt/builds/20260721T114919Z/Dockerfile.z2-py38 ...
+# docker run --network none ... python scripts/smoke/sgpt_z2_offline_preflight.py
 ```
 
-## Build futuro
+## Descargas / Z3 (siguen prohibidos sin nueva autorización)
 
 ```bash
-# DO_NOT_RUN_IN_PROMPT_12
-# docker build -f environments/sgpt/Dockerfile.native-py38.template ...
-```
-
-## pip check / freeze (dentro de env futuro)
-
-```bash
-# DO_NOT_RUN_IN_PROMPT_12
-# pip check
-# pip freeze
-```
-
-## Import probe
-
-```bash
-# DO_NOT_RUN_IN_PROMPT_12
-# python -c "import torch, transformers, nltk, spacy, numpy, tqdm"
-```
-
-## Z2 data/metric preflight
-
-```bash
-# DO_NOT_RUN_IN_PROMPT_12
-# python scripts/smoke/sgpt_z2_data_metric_preflight.py   # (aún no existe)
-```
-
-## Descargas
-
-```bash
-# DO_NOT_RUN_IN_PROMPT_12
 # REQUIRES_EXPLICIT_DOWNLOAD_AUTHORIZATION
 # python -m spacy download en_core_web_sm
 # python -c "from transformers import AutoTokenizer; AutoTokenizer.from_pretrained('gpt2')"
+# python -m nltk.downloader ...
+# train.py / eval.py / utils.dptree
 ```
 
 ## Z3

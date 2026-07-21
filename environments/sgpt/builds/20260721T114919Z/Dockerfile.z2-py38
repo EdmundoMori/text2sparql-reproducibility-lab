@@ -1,0 +1,32 @@
+# Prompt 13A — SGPT Z2 CPU environment (authorized build)
+# ZERO_COST; no GPT-2; no spaCy models; no NLTK data; no train
+FROM python@sha256:314bc2fb0714b7807bf5699c98f0c73817e579799f2d91567ab7e9510f5601a5
+
+LABEL lab.method="sgpt" \
+      lab.prompt="13A" \
+      lab.profile="Z2_CPU" \
+      lab.zero_cost="true"
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    TRANSFORMERS_OFFLINE=1 \
+    HF_HUB_OFFLINE=1 \
+    HF_DATASETS_OFFLINE=1
+
+WORKDIR /opt/sgpt-z2
+
+COPY constraints.z2-cpu.pip.txt /tmp/constraints.z2-cpu.pip.txt
+
+# Install direct pins from official indexes only (CPU torch via pytorch.org)
+RUN pip install --no-cache-dir \
+      --extra-index-url https://download.pytorch.org/whl/cpu \
+      -r /tmp/constraints.z2-cpu.pip.txt \
+ && python -c "import torch,transformers,numpy,tqdm,nltk; \
+v=transformers.__version__; assert v=='4.25.1', v; \
+tv=torch.__version__; assert tv.startswith('1.13.1'), tv; \
+assert '+cpu' in tv or not torch.cuda.is_available(); \
+print('OK', 'torch', tv, 'transformers', v, 'cuda', torch.cuda.is_available())"
+
+# Upstream is mounted read-only at runtime; do not COPY writable upstream here.
+CMD ["python3", "--version"]
