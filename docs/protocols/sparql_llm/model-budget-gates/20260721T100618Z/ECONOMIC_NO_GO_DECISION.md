@@ -1,3 +1,5 @@
+> **Prompt 11C:** formalizado como `HUMAN_ZERO_COST_DECISION.md` + gate `NO_GO_ECONOMIC_ZERO_COST_POLICY`. Este archivo permanece como registro interino.
+
 # ECONOMIC_NO_GO_DECISION — Smoke online LOCAL_CHAT_API_ONE_QUESTION
 
 **RUN_ID_refusal:** `20260721T103536Z`  

@@ -1,0 +1,17 @@
+prompt=11C
+start_sha=60590cc000cc18c76c796ca7a4655c07c658ffda
+action=ZERO_COST_POLICY_AND_NATIVE_REGATE
+no_installation=true
+no_downloads=true
+no_API_calls=true
+no_keys=true
+no_paid_services=true
+no_execution=true
+no_upstream_imports=true
+no_adapters=true
+no_docker_execution=true
+no_training=true
+no_inference=true
+GO_NEXT_ZERO_COST=Z1_SGPT_ENVIRONMENT_DEFINITION
+online_gate=NO_GO_ECONOMIC_ZERO_COST_POLICY
+prompt12_chat=CANCELLED_BY_ZERO_COST_POLICY

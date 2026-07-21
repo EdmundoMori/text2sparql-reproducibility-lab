@@ -1,0 +1,4 @@
+validation_pass
+GO_NEXT_ZERO_COST Z1 sgpt
+Z8 NO_GO_ZERO_COST_POLICY
+online_gate NO_GO_ECONOMIC_ZERO_COST_POLICY

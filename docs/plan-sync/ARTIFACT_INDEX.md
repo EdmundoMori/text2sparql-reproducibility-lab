@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-21 (NO_GO_ECONOMIC + re-gate ZERO_USD)  
+**Última actualización:** 2026-07-21 (Prompt 11C)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -161,7 +161,14 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | P11-LOG | Logs Prompt 11 | `logs/preparation/sparql-llm-model-budget-gate/20260721T100618Z/` | metadata SHA |
 | P11-NOGO | NO-GO económico smoke online | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/ECONOMIC_NO_GO_DECISION.md` | Mori ZERO_USD |
 | GATE-RERUN | Re-gate comparativo $0 | `audit/NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md` | GO_NEXT rdfconfig |
-| DEC004 | ADR NO-GO económico + re-gate | `docs/decisions/004_economic_nogo_online_smoke_and_re_gate.md` | política $0 |
+| DEC004 | ADR ZERO_COST + deferral online | `docs/decisions/004_zero_cost_policy_and_online_smoke_deferral.md` | Prompt 11C |
+| P11C-HUM | Decisión humana coste 0 | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/HUMAN_ZERO_COST_DECISION.md` | elijo coste 0 |
+| P11C-POL | Definición coste cero | `audit/ZERO_COST_POLICY.md` | prohibido/permitido |
+| P11C-MX | Matriz acciones Z1–Z12 | `audit/ZERO_COST_ACTION_MATRIX.csv` | 1× GO_NEXT_ZERO_COST |
+| P11C-Q | Cola ZERO_COST | `audit/ZERO_COST_NATIVE_REPRODUCTION_QUEUE.csv` | operativa |
+| P11C-DEC | Decisión ejecución $0 | `audit/NEXT_ZERO_COST_EXECUTION_DECISION.md` | Z1 SGPT env |
+| P11C-RPT | Informe re-gate 11C | `audit/ZERO_COST_NATIVE_AUDIT_REGATE.md` | 19 §§ |
+| P11C-LOG | Logs Prompt 11C | `logs/zero-cost-native-regate/` | sin red/install |
 
 ## Qué está / no está en GitHub
 

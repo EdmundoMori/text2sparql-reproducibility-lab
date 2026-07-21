@@ -1,3 +1,5 @@
+> **Superseded por Prompt 11C:** ver `audit/ZERO_COST_NATIVE_AUDIT_REGATE.md` y `audit/NEXT_ZERO_COST_EXECUTION_DECISION.md` (GO_NEXT_ZERO_COST = SGPT env). Este archivo permanece como histórico del re-gate interino.
+
 # NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD
 
 **Fecha:** 2026-07-21  

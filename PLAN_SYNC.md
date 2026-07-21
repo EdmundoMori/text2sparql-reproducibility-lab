@@ -2,13 +2,13 @@
 
 **Audiencia principal:** ChatGPT (planificador) e investigador.  
 **Repo:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-**Última actualización:** 2026-07-21 (NO-GO económico + re-gate ZERO_USD)  
+**Última actualización:** 2026-07-21 (Prompt **11C** — política coste cero + re-gate)  
 **Fase:** 1 — native audit; **abierta**  
-**Commit inicial rechazo:** `a2478b721970444401bd7edae313e1e1aa81926e`  
-**RUN_ID:** `20260721T103536Z`
+**SHA inicial 11C:** `60590cc000cc18c76c796ca7a4655c07c658ffda`
 
-> Política vigente: **SOLO $0**. Sin OpenRouter. Sin POST `/chat`. Sin Prompt 12 chat.  
-> Smoke ≠ PE3. Caché/índice en `workdir/` **no** van a Git.
+> Política: **MAX_EXTERNAL_MONETARY_COST_USD = 0.00**. Sin OpenRouter. Sin POST `/chat`.  
+> Prompt 12 chat: **CANCELLED_BY_ZERO_COST_POLICY**.  
+> Smoke ≠ PE3.
 
 ---
 
@@ -18,74 +18,81 @@ reproducción nativa → evaluación común → caso de estudio → errores → 
 
 ---
 
-## 2. Completado reciente
+## 2. Metadata Prompt 11 (corrección)
 
-| # | Prompt / acto | Resultado |
-|---|---|---|
-| 11 | Modelo + cota | `READY_FOR_HUMAN_APPROVAL` (histórico) |
-| **Rechazo** | Mori ZERO_USD | **`NO_GO_ECONOMIC`** — Prompt 12 chat **CANCELLED** |
-| **Re-gate** | Comparativo $0 | **GO_NEXT** = cierre legal `rdfconfig_llm` |
+| Campo | SHA |
+|---|---|
+| Prompt 11 **artifact commit** | `ee477c9d1d37b86d03593c141cd90577f7f1ba43` |
+| Prompt 11 **final HEAD** | `a2478b721970444401bd7edae313e1e1aa81926e` |
+
+No denominar el artifact commit como HEAD final.
 
 ---
 
-## 3. NO-GO económico — resumen
+## 3. Completado reciente
+
+| # | Acto | Resultado |
+|---|---|---|
+| 11 | Modelo + cota | propuesta histórica; form **no firmado** |
+| Interino | NO-GO económico | superseded por 11C |
+| **11C** | Coste cero + re-gate | **`NO_GO_ECONOMIC_ZERO_COST_POLICY`**; **GO_NEXT_ZERO_COST = Z1 SGPT env** |
+
+---
+
+## 4. Prompt 11C — resumen
 
 | Campo | Valor |
 |---|---|
-| Aprobador | EDMUNDO MORI ORRILLO |
-| Fecha | 2026-07-21 |
-| Gate online sparql_llm | **NO_GO_ECONOMIC** |
-| Presupuesto OpenRouter | **$0** (rechazado) |
-| Inferencias / POST /chat | **0 / 0** |
-| `reproduction_status` | `smoke_only` |
-| `native_audit_complete` | `false` |
+| Decisión humana | “elijo coste 0” — EDMUNDO MORI ORRILLO, 2026-07-21 |
+| Gate online sparql_llm | **NO_GO_ECONOMIC_ZERO_COST_POLICY** |
+| Prompt 12 chat | **cancelled/deferred indefinitely** |
+| GO_NEXT_ZERO_COST | **SGPT_ENVIRONMENT_DEFINITION** (`sgpt`) |
+| Coste externo | **$0.00** |
+| PE2 online | `deferred_by_zero_cost_policy` |
+| `reproduction_status` sparql_llm | `smoke_only` |
+| `native_audit_complete` | `false` (todos) |
 | `common_adapter_allowed` | `false` |
 
-Artefactos:  
-[`ECONOMIC_NO_GO_DECISION.md`](docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/ECONOMIC_NO_GO_DECISION.md) ·  
-[`NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md`](audit/NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md) ·  
-ADR [`004`](docs/decisions/004_economic_nogo_online_smoke_and_re_gate.md)
+Artefactos: [`ZERO_COST_NATIVE_AUDIT_REGATE.md`](audit/ZERO_COST_NATIVE_AUDIT_REGATE.md) · [`NEXT_ZERO_COST_EXECUTION_DECISION.md`](audit/NEXT_ZERO_COST_EXECUTION_DECISION.md) · [`HUMAN_ZERO_COST_DECISION.md`](docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/HUMAN_ZERO_COST_DECISION.md)
 
 ---
 
-## 4. Siguiente prompt
+## 5. Siguiente prompt (único)
 
-**Prompt 12 — Cierre documental legal/fuente de rdfconfig_llm (ZERO_USD, sin installs)**
+**Prompt 12 — Definición documental de entorno SGPT (ZERO_COST; sin train; sin Table 4)**
 
-No API de pago. No Ruby install en ese prompt. No resucitar chat smoke sin nueva política.
+No ejecutar en 11C. No chat smoke. No OpenRouter.
 
-→ [`docs/plan-sync/NEXT_PROMPT_GUIDANCE.md`](docs/plan-sync/NEXT_PROMPT_GUIDANCE.md)  
-→ [`audit/NEXT_EXECUTION_DECISION.md`](audit/NEXT_EXECUTION_DECISION.md)
+→ [`docs/plan-sync/NEXT_PROMPT_GUIDANCE.md`](docs/plan-sync/NEXT_PROMPT_GUIDANCE.md)
 
 ---
 
-## 5. PE1–PE4
+## 6. PE1–PE4
 
 | PE | Estado |
 |---|---|
 | PE1 | substantially_answered |
-| PE2 | partial_evidence (offline sí; online diferido por COST) |
+| PE2 | partial_evidence (online deferred_by_zero_cost_policy) |
 | PE3 | not_started |
-| PE4 | partial_evidence (+ barrera COST) |
+| PE4 | partial_evidence |
 
 ---
 
-## 6. Changelog
+## 7. Changelog
 
 | Fecha | Cambio |
 |---|---|
-| 2026-07-21 | Prompt 11 READY_FOR_HUMAN_APPROVAL |
-| 2026-07-21 | NO_GO_ECONOMIC; re-gate GO_NEXT=rdfconfig legal |
+| 2026-07-21 | Prompt 11 artifact `ee477c9d` / HEAD `a2478b72` |
+| 2026-07-21 | Prompt 11C ZERO_COST + GO_NEXT_ZERO_COST=SGPT env |
 
 ---
 
-## 7. Registro rechazo / re-gate
+## 8. Registro Prompt 11C
 
 | Campo | Valor |
 |---|---|
-| commit inicial | `a2478b721970444401bd7edae313e1e1aa81926e` |
-| RUN_ID | `20260721T103536Z` |
-| gate online | `NO_GO_ECONOMIC` |
-| GO_NEXT | `rdfconfig_source_license_closure` |
-| commit final | `e86920148e07b13bb48332244e01e36b3c40b17a` |
-| push | confirmado en origin/main |
+| commit inicial | `60590cc000cc18c76c796ca7a4655c07c658ffda` |
+| gate online | `NO_GO_ECONOMIC_ZERO_COST_POLICY` |
+| GO_NEXT_ZERO_COST | `Z1` / `sgpt` |
+| commit final | _(tras push)_ |
+| push | _(pendiente)_ |

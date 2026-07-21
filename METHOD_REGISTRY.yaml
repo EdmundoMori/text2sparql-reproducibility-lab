@@ -16,536 +16,593 @@ wave_b_static_audit_complete: true
 wave_c_static_audit_complete: true
 
 methods:
-  - method_id: sparql_llm
-    display_name: SPARQL-LLM
-    repositories:
-      - url: https://github.com/sib-swiss/sparql-llm
-        role: primary
-        relation_to_paper: official_authors_repo
-        default_branch: main
-        license_status: CONFIRMED_LICENSE_FILE
-        license_spdx: MIT
-        license_file: LICENSE.txt
-        last_push_utc: "2026-05-19T16:43:59Z"
-        fork: false
-    paper:
-      title: "SPARQL-LLM: Real-Time SPARQL Query Generation from Natural Language Questions"
-      year: 2025
-      publication_status: preprint_under_review
-      venue: "arXiv cs.IR; ACM TWEB claim in HTML UNVERIFIED"
-      doi_or_id: "10.48550/arXiv.2512.14277"
-      publisher_doi: UNKNOWN
-      arxiv_comment: "Under Review"
-      authors: ["Panayiotis Smeros", "Vincent Emonet", "Ruijie Wang", "Ana-Claudia Sima", "Tarcisio Mendes de Farias"]
-    artifacts:
-      checkpoints: absent_in_repo
-      processed_datasets: absent_in_repo
-      prompts: present
-      eval_scripts: present
-      reproduction_instructions: present
-    inclusion_status: included
-    inclusion_decision: INCLUDE_PRIMARY
-    reproduction_status: smoke_only
-    feasibility_class: feasible_using_api
-    native_audit_complete: false
-    paper_code_audit_complete: true
-    evidence_closure_complete: true
-    common_adapter_allowed: false
-    clone_wave: WAVE_A_API_OR_LIGHTWEIGHT
-    cloned: true
-    upstream_path: upstream/sparql_llm
-    pinned_commit: 3748730e3bd2df2595280b918269fdaadb9fc0c3
-    needs_api: true
-    static_audit_complete: true
-    static_audit_artifact: audit/sparql_llm/STATIC_AUDIT.md
-    environment_definition_status: ready_documented
-    environment_artifacts: environments/sparql_llm/
-    offline_smoke_ready: validated_in_python311_container
-    native_reproduction_ready: conditional
-    last_smoke_run_id: "20260720T134943Z"
-    last_smoke_report: audit/sparql_llm/CORE_OFFLINE_PY311_SMOKE_REPORT.md
-    prior_smoke_runs:
-      - run_id: "20260719T112306Z"
-        status: setup_failed
-        report: audit/sparql_llm/CORE_OFFLINE_SMOKE_REPORT.md
-        note: "Host Python 3.10 typing.Required import failure"
-    blocked_local_protocols:
-      - TEXT2SPARQL_VIRTUOSO
-    api_sib_protocol_status: defined_conditional_go
-    api_sib_protocol_artifact: docs/protocols/sparql_llm/API_SIB_PROTOCOL.md
-    execution_surface_matrix_artifact: docs/protocols/sparql_llm/EXECUTION_SURFACES.csv
-    selected_future_online_action: LOCAL_CHAT_API_ONE_QUESTION
-    selected_future_online_action_class: online_functional_smoke
-    selected_future_online_action_gate: NO_GO_ECONOMIC
-    api_budget_status: refused_zero_usd_policy
-    indexing_prerequisite_status: ready_lab_minimal_index
-    endpoint_prerequisite_status: optional_if_enable_sparql_execution_false
-    api_smoke_ready: no_go_economic
-    protocol_blockers:
-      - investigator_zero_usd_policy
-      - OPENROUTER_not_authorized
-      - max_tokens_not_enforced_on_openrouter_branch_mitigated_by_key_limit_if_ever_authorized
+- method_id: sparql_llm
+  display_name: SPARQL-LLM
+  repositories:
+  - url: https://github.com/sib-swiss/sparql-llm
+    role: primary
+    relation_to_paper: official_authors_repo
+    default_branch: main
+    license_status: CONFIRMED_LICENSE_FILE
+    license_spdx: MIT
+    license_file: LICENSE.txt
+    last_push_utc: "2026-05-19T16:43:59Z"
+    fork: false
+  paper:
+    title: "SPARQL-LLM: Real-Time SPARQL Query Generation from Natural Language Questions"
+    year: 2025
+    publication_status: preprint_under_review
+    venue: "arXiv cs.IR; ACM TWEB claim in HTML UNVERIFIED"
+    doi_or_id: "10.48550/arXiv.2512.14277"
+    publisher_doi: UNKNOWN
+    arxiv_comment: "Under Review"
+    authors: ["Panayiotis Smeros", "Vincent Emonet", "Ruijie Wang", "Ana-Claudia Sima",
+      "Tarcisio Mendes de Farias"]
+  artifacts:
+    checkpoints: absent_in_repo
+    processed_datasets: absent_in_repo
+    prompts: present
+    eval_scripts: present
+    reproduction_instructions: present
+  inclusion_status: included
+  inclusion_decision: INCLUDE_PRIMARY
+  reproduction_status: smoke_only
+  feasibility_class: feasible_using_api
+  native_audit_complete: false
+  paper_code_audit_complete: true
+  evidence_closure_complete: true
+  common_adapter_allowed: false
+  clone_wave: WAVE_A_API_OR_LIGHTWEIGHT
+  cloned: true
+  upstream_path: upstream/sparql_llm
+  pinned_commit: 3748730e3bd2df2595280b918269fdaadb9fc0c3
+  needs_api: true
+  static_audit_complete: true
+  static_audit_artifact: audit/sparql_llm/STATIC_AUDIT.md
+  environment_definition_status: ready_documented
+  environment_artifacts: environments/sparql_llm/
+  offline_smoke_ready: validated_in_python311_container
+  native_reproduction_ready: conditional
+  last_smoke_run_id: "20260720T134943Z"
+  last_smoke_report: audit/sparql_llm/CORE_OFFLINE_PY311_SMOKE_REPORT.md
+  prior_smoke_runs:
+  - run_id: "20260719T112306Z"
+    status: setup_failed
+    report: audit/sparql_llm/CORE_OFFLINE_SMOKE_REPORT.md
+    note: "Host Python 3.10 typing.Required import failure"
+  blocked_local_protocols:
+  - TEXT2SPARQL_VIRTUOSO
+  api_sib_protocol_status: defined_conditional_go
+  api_sib_protocol_artifact: docs/protocols/sparql_llm/API_SIB_PROTOCOL.md
+  execution_surface_matrix_artifact: docs/protocols/sparql_llm/EXECUTION_SURFACES.csv
+  selected_future_online_action: LOCAL_CHAT_API_ONE_QUESTION
+  selected_future_online_action_class: online_functional_smoke
+  selected_future_online_action_gate: NO_GO_ECONOMIC_ZERO_COST_POLICY
+  api_budget_status: CLOSED_NO_GO_ECONOMIC_ZERO_COST_POLICY
+  indexing_prerequisite_status: ready_lab_minimal_index
+  endpoint_prerequisite_status: optional_if_enable_sparql_execution_false
+  api_smoke_ready: no_go_economic_zero_cost_policy
+  protocol_blockers:
+  - investigator_zero_usd_policy
+  - OPENROUTER_not_authorized
+  - max_tokens_not_enforced_on_openrouter_branch_mitigated_by_key_limit_if_ever_authorized
 
-    agent_environment_status: ready
-    agent_environment_run_id: "20260721T084637Z"
-    agent_environment_image: "text2sparql-lab/sparql-llm-agent-py311:20260721T084637Z"
-    embedding_cache_status: complete_exact_model_cache
-    embedding_cache_run_id: "20260721T092249Z"
-    embedding_model_id: intfloat/multilingual-e5-large
-    minimal_documents_status: ready
-    minimal_documents_count: 12
-    minimal_index_status: INDEX_VERIFIED
-    minimal_index_run_id: "20260721T092249Z"
-    local_chat_startup_preflight_status: pass
-    selected_online_model: openrouter/openai/gpt-4o-mini-2024-07-18
-    selected_online_model_snapshot: "20260721T100618Z"
-    model_selection_status: SELECTED_BUT_SPEND_REFUSED_ZERO_USD
-    cost_bound_status: COMPUTED_THEN_REFUSED
-    proposed_openrouter_limit_usd: 0.0
-    client_retry_status: INSPECTED_MAX_RETRIES_2_HTTP_ATTEMPTS_LE_6
-    smoke_question_status: FROZEN_UNUSED
-    smoke_request_spec_status: FROZEN_UNUSED
-    human_llm_approval_status: REFUSED_ZERO_USD
-    online_smoke_gate: NO_GO_ECONOMIC
-    remaining_online_blockers:
-      - investigator_zero_usd_policy
-      - OPENROUTER_not_authorized
-    next_execution_prompt: Prompt_12_rdfconfig_legal_source_closure_ZERO_USD
-    model_budget_gate_run_id: "20260721T100618Z"
-    model_budget_gate_artifact: docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/
-    model_budget_final_report: audit/sparql_llm/LOCAL_CHAT_API_MODEL_BUDGET_FINAL_GATE_REPORT.md
-    economic_nogo_run_id: "20260721T103536Z"
-    economic_nogo_artifact: docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/ECONOMIC_NO_GO_DECISION.md
-    comparative_gate_rerun_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md
+  agent_environment_status: ready
+  agent_environment_run_id: "20260721T084637Z"
+  agent_environment_image: "text2sparql-lab/sparql-llm-agent-py311:20260721T084637Z"
+  embedding_cache_status: complete_exact_model_cache
+  embedding_cache_run_id: "20260721T092249Z"
+  embedding_model_id: intfloat/multilingual-e5-large
+  minimal_documents_status: ready
+  minimal_documents_count: 12
+  minimal_index_status: INDEX_VERIFIED
+  minimal_index_run_id: "20260721T092249Z"
+  local_chat_startup_preflight_status: pass
+  selected_online_model: openrouter/openai/gpt-4o-mini-2024-07-18
+  selected_online_model_snapshot: "20260721T100618Z"
+  model_selection_status: HISTORICAL_PROPOSAL_ONLY
+  cost_bound_status: COMPUTED_THEN_REFUSED
+  proposed_openrouter_limit_usd: 0.0
+  client_retry_status: INSPECTED_MAX_RETRIES_2_HTTP_ATTEMPTS_LE_6
+  smoke_question_status: FROZEN_UNUSED
+  smoke_request_spec_status: FROZEN_UNUSED
+  human_llm_approval_status: DECLINED_ZERO_COST_POLICY
+  online_smoke_gate: NO_GO_ECONOMIC_ZERO_COST_POLICY
+  remaining_online_blockers:
+  - zero_cost_policy
+  - max_tokens_not_enforced
+  - new_human_authorization_required_to_reopen
+  next_execution_prompt: Prompt_12_SGPT_environment_definition_ZERO_COST
+  model_budget_gate_run_id: "20260721T100618Z"
+  model_budget_gate_artifact: docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/
+  model_budget_final_report: audit/sparql_llm/LOCAL_CHAT_API_MODEL_BUDGET_FINAL_GATE_REPORT.md
+  economic_nogo_run_id: "20260721T103536Z"
+  economic_nogo_artifact: 
+    docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/ECONOMIC_NO_GO_DECISION.md
+  comparative_gate_rerun_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md
 
-    native_gate_class: NO_GO_ECONOMIC_online_path
-    scientific_baseline_role: core_baseline_candidate
-    experimental_track: end_to_end_with_schema_validation
-    internal_execution_legal_gate: allowed
-    adapter_legal_gate: conditional_deferred
-    generality_class: configurable_general
-    gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md
-    next_native_action: deferred_online_smoke_pursue_rdfconfig_legal_closure
-    next_native_action_class: legal_closure_other_method
-    gate_confidence: high
-    execution_blockers:
-      - compose_plugin_absent_on_host
-      - uv_uvx_absent_on_host
-      - virtuoso_text2sparql_blocked_on_host
-      - host_python_3_10_incompatible_typing_Required
-      - investigator_zero_usd_blocks_openrouter_smoke
-    notes: "Prompt 11 model/cota ready then HUMAN REFUSED ZERO_USD (Mori 2026-07-21): online_smoke_gate=NO_GO_ECONOMIC; Prompt 12 chat CANCELLED. Re-gate GO_NEXT=rdfconfig legal closure. reproduction_status remains smoke_only. native_audit_complete=false; common_adapter_allowed=false."
+  native_gate_class: NO_GO_ECONOMIC_online_path
+  scientific_baseline_role: core_baseline_candidate
+  experimental_track: end_to_end_with_schema_validation
+  internal_execution_legal_gate: allowed
+  adapter_legal_gate: conditional_deferred
+  generality_class: configurable_general
+  gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
+  next_native_action: defer_online_smoke_sgpt_env_is_lab_go_next
+  next_native_action_class: zero_cost_other_method
+  gate_confidence: high
+  execution_blockers:
+  - compose_plugin_absent_on_host
+  - uv_uvx_absent_on_host
+  - virtuoso_text2sparql_blocked_on_host
+  - host_python_3_10_incompatible_typing_Required
+  - investigator_zero_usd_blocks_openrouter_smoke
+  notes: "Prompt 11C: ZERO_COST policy; online_smoke_gate=NO_GO_ECONOMIC_ZERO_COST_POLICY;
+    Prompt 12 chat CANCELLED. Lab GO_NEXT_ZERO_COST=SGPT_ENVIRONMENT_DEFINITION. reproduction_status
+    remains smoke_only. native_audit_complete=false; common_adapter_allowed=false."
 
-  - method_id: mkgqagent
-    display_name: mKGQAgent
-    repositories:
-      - url: https://github.com/WSE-research/text2sparql-agent
-        role: primary
-        relation_to_paper: official_authors_repo
-        default_branch: main
-        license_status: LICENSE_NOT_CONFIRMED
-        license_spdx: UNKNOWN
-        license_file: ABSENT
-        last_push_utc: "2026-07-07T08:59:37Z"
-        fork: false
-    paper:
-      title: "Text-to-SPARQL Goes Beyond English: Multilingual Question Answering Over Knowledge Graphs through Human-Inspired Reasoning"
-      year: 2025
-      publication_status: workshop_proceedings_published
-      venue: "TEXT2SPARQL Challenge @ ESWC 2025; CEUR-WS Vol. 4094"
-      doi_or_id: "10.48550/arXiv.2507.16971"
-      authors: ["Aleksandr Perevalov", "Andreas Both"]
-    artifacts:
-      checkpoints: absent_in_repo_uses_api
-      processed_datasets: present
-      prompts: present
-      eval_scripts: present
-      reproduction_instructions: present
-    inclusion_status: included
-    inclusion_decision: INCLUDE_PRIMARY
-    reproduction_status: audit_only
-    feasibility_class: feasible_using_api
-    native_audit_complete: false
-    paper_code_audit_complete: true
-    evidence_closure_complete: true
-    common_adapter_allowed: false
-    clone_wave: WAVE_A_API_OR_LIGHTWEIGHT
-    cloned: true
-    upstream_path: upstream/mkgqagent
-    pinned_commit: ba0f2f78611a7ccacc8c985a97f6008ef7ee6a6a
-    needs_api: true
-    static_audit_complete: true
-    static_audit_artifact: audit/mkgqagent/STATIC_AUDIT.md
-    environment_definition_status: ready_documented
-    environment_artifacts: environments/mkgqagent/
-    offline_smoke_ready: no
-    api_smoke_ready: conditional
-    native_reproduction_ready: not_ready_or_weak
-    native_gate_class: HOLD_LEGAL
-    scientific_baseline_role: conditional_baseline_candidate
-    experimental_track: agentic_end_to_end
-    internal_execution_legal_gate: blocked
-    adapter_legal_gate: blocked
-    generality_class: generalizable_with_domain_package
-    gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-    next_native_action: hold_until_license_clarified_then_single_agent_env
-    next_native_action_class: HOLD_LEGAL
-    gate_confidence: high
-    next_execution_prompt: deferred_HOLD_LEGAL_mkgqagent
-    execution_blockers:
-      - LICENSE_NOT_CONFIRMED
-      - hardcoded_external_hosts
-      - offline_experience_pool_build_script_absent
-      - ram_risk_e5_large
-      - double_agent_import_in_main
-      - requests_missing_from_requirements
-    notes: "LICENSE_NOT_CONFIRMED. native_reproduction_ready=not_ready_or_weak (reconciled with WAVE_A_EXECUTION_READINESS)."
+  paid_api_execution_allowed: false
+  max_external_monetary_cost_usd: 0.0
+  prompt_12_status: CANCELLED_BY_ZERO_COST_POLICY
+  selected_online_model_role: historical_proposed_model
+  pe2_online_status: deferred_by_zero_cost_policy
+  zero_cost_gate_class: NO_GO_ZERO_COST_POLICY
+  zero_cost_next_action: none_online_smoke_closed
+  zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
+  zero_cost_gate_confidence: high
+- method_id: mkgqagent
+  display_name: mKGQAgent
+  repositories:
+  - url: https://github.com/WSE-research/text2sparql-agent
+    role: primary
+    relation_to_paper: official_authors_repo
+    default_branch: main
+    license_status: LICENSE_NOT_CONFIRMED
+    license_spdx: UNKNOWN
+    license_file: ABSENT
+    last_push_utc: "2026-07-07T08:59:37Z"
+    fork: false
+  paper:
+    title: "Text-to-SPARQL Goes Beyond English: Multilingual Question Answering Over
+      Knowledge Graphs through Human-Inspired Reasoning"
+    year: 2025
+    publication_status: workshop_proceedings_published
+    venue: "TEXT2SPARQL Challenge @ ESWC 2025; CEUR-WS Vol. 4094"
+    doi_or_id: "10.48550/arXiv.2507.16971"
+    authors: ["Aleksandr Perevalov", "Andreas Both"]
+  artifacts:
+    checkpoints: absent_in_repo_uses_api
+    processed_datasets: present
+    prompts: present
+    eval_scripts: present
+    reproduction_instructions: present
+  inclusion_status: included
+  inclusion_decision: INCLUDE_PRIMARY
+  reproduction_status: audit_only
+  feasibility_class: feasible_using_api
+  native_audit_complete: false
+  paper_code_audit_complete: true
+  evidence_closure_complete: true
+  common_adapter_allowed: false
+  clone_wave: WAVE_A_API_OR_LIGHTWEIGHT
+  cloned: true
+  upstream_path: upstream/mkgqagent
+  pinned_commit: ba0f2f78611a7ccacc8c985a97f6008ef7ee6a6a
+  needs_api: true
+  static_audit_complete: true
+  static_audit_artifact: audit/mkgqagent/STATIC_AUDIT.md
+  environment_definition_status: ready_documented
+  environment_artifacts: environments/mkgqagent/
+  offline_smoke_ready: no
+  api_smoke_ready: conditional
+  native_reproduction_ready: not_ready_or_weak
+  native_gate_class: HOLD_LEGAL
+  scientific_baseline_role: conditional_baseline_candidate
+  experimental_track: agentic_end_to_end
+  internal_execution_legal_gate: blocked
+  adapter_legal_gate: blocked
+  generality_class: generalizable_with_domain_package
+  gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
+  next_native_action: hold_until_license_clarified_then_single_agent_env
+  next_native_action_class: HOLD_LEGAL
+  gate_confidence: high
+  next_execution_prompt: deferred_HOLD_LEGAL_mkgqagent
+  execution_blockers:
+  - LICENSE_NOT_CONFIRMED
+  - hardcoded_external_hosts
+  - offline_experience_pool_build_script_absent
+  - ram_risk_e5_large
+  - double_agent_import_in_main
+  - requests_missing_from_requirements
+  notes: "LICENSE_NOT_CONFIRMED. native_reproduction_ready=not_ready_or_weak (reconciled
+    with WAVE_A_EXECUTION_READINESS)."
 
-  - method_id: cot_sparql
-    display_name: COT-SPARQL
-    repositories:
-      - url: https://github.com/dice-group/CoT-Sparql
-        role: primary
-        relation_to_paper: official_authors_repo
-        default_branch: main
-        license_status: LICENSE_NOT_CONFIRMED
-        license_spdx: UNKNOWN
-        license_file: ABSENT
-        last_push_utc: "2024-06-03T13:26:40Z"
-        fork: false
-    paper:
-      title: "Generating SPARQL from Natural Language Using Chain-of-Thoughts Prompting"
-      year: 2024
-      publication_status: published_article
-      venue: "SEMANTiCS 2024 / IOS Press SSW"
-      doi_or_id: "10.3233/SSW240028"
-      authors: ["Hamada M. Zahera", "Manzoor Ali", "Mohamed Ahmed Sherif", "Diego Moussallem", "Axel-Cyrille Ngonga Ngomo"]
-    artifacts:
-      checkpoints: absent_in_repo_external_hf
-      processed_datasets: partial
-      prompts: in_code_not_separate_files
-      eval_scripts: absent_dedicated
-      reproduction_instructions: present
-    inclusion_status: included_conditional
-    inclusion_decision: INCLUDE_CONDITIONAL
-    reproduction_status: audit_only
-    feasibility_class: requires_external_gpu
-    native_audit_complete: false
-    paper_code_audit_complete: true
-    evidence_closure_complete: true
-    common_adapter_allowed: false
-    clone_wave: WAVE_C_STATIC_AUDIT_ONLY
-    cloned: true
-    upstream_path: upstream/cot_sparql
-    pinned_commit: 063edd9868425e54010a0cb49ce585ed2186be4d
-    needs_api: false
-    static_audit_complete: true
-    static_audit_artifact: audit/cot_sparql/STATIC_AUDIT.md
-    architecture_artifact: audit/cot_sparql/ARCHITECTURE_AND_DATA_FLOW.md
-    dataset_inventory_artifact: audit/cot_sparql/DATASET_INVENTORY.csv
-    grounding_audit_artifact: audit/cot_sparql/GROUNDING_AND_LINKING_AUDIT.md
-    metrics_audit_artifact: audit/cot_sparql/EVALUATION_AND_METRICS_AUDIT.md
-    external_artifacts_status: referenced_absent_embeddings_parquet_pkl_and_hf_gptq
-    environment_definition_status: not_started
-    retrieval_smoke_ready: blocked
-    linker_smoke_ready: conditional
-    model_smoke_ready: blocked
-    native_reproduction_ready: not_ready
-    native_gate_class: HOLD_HARDWARE
-    scientific_baseline_role: documentary_baseline
-    experimental_track: generator_with_external_grounding
-    internal_execution_legal_gate: blocked
-    adapter_legal_gate: blocked
-    generality_class: generalizable_with_domain_package
-    gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-    next_native_action: hold_hardware_and_legal_no_env_now
-    next_native_action_class: HOLD_HARDWARE
-    gate_confidence: high
-    next_execution_prompt: deferred_HOLD_HARDWARE_cot_sparql
-    execution_blockers:
-      - LICENSE_NOT_CONFIRMED
-      - embeddings_and_example_parquets_absent
-      - CodeLlama_34B_GPTQ_exceeds_local_6GiB
-      - no_dedicated_eval_scripts
-      - requirements_txt_is_conda_export_not_pip
-      - falcon_none_handling_crash_risk
-      - wikidata_relation_propertyLabel_key_mismatch
-      - assert_empty_question_concatenation_bug
-      - import_side_effect_loads_MiniLM
-      - validation_is_HTTP_200_not_local_syntax
-    notes: "WAVE_C Prompt 7A static audit complete. Not end-to-end: external EL/RL + gold-annotated one-shot retrieval + GPTQ LLM. CoT is prompt-induced. reproduction_status remains audit_only; native_audit_complete=false; common_adapter_allowed=false; license LICENSE_NOT_CONFIRMED."
+  zero_cost_gate_class: HOLD_LEGAL
+  zero_cost_next_action: hold_until_license
+  zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
+  zero_cost_gate_confidence: high
+- method_id: cot_sparql
+  display_name: COT-SPARQL
+  repositories:
+  - url: https://github.com/dice-group/CoT-Sparql
+    role: primary
+    relation_to_paper: official_authors_repo
+    default_branch: main
+    license_status: LICENSE_NOT_CONFIRMED
+    license_spdx: UNKNOWN
+    license_file: ABSENT
+    last_push_utc: "2024-06-03T13:26:40Z"
+    fork: false
+  paper:
+    title: "Generating SPARQL from Natural Language Using Chain-of-Thoughts Prompting"
+    year: 2024
+    publication_status: published_article
+    venue: "SEMANTiCS 2024 / IOS Press SSW"
+    doi_or_id: "10.3233/SSW240028"
+    authors: ["Hamada M. Zahera", "Manzoor Ali", "Mohamed Ahmed Sherif", "Diego Moussallem",
+      "Axel-Cyrille Ngonga Ngomo"]
+  artifacts:
+    checkpoints: absent_in_repo_external_hf
+    processed_datasets: partial
+    prompts: in_code_not_separate_files
+    eval_scripts: absent_dedicated
+    reproduction_instructions: present
+  inclusion_status: included_conditional
+  inclusion_decision: INCLUDE_CONDITIONAL
+  reproduction_status: audit_only
+  feasibility_class: requires_external_gpu
+  native_audit_complete: false
+  paper_code_audit_complete: true
+  evidence_closure_complete: true
+  common_adapter_allowed: false
+  clone_wave: WAVE_C_STATIC_AUDIT_ONLY
+  cloned: true
+  upstream_path: upstream/cot_sparql
+  pinned_commit: 063edd9868425e54010a0cb49ce585ed2186be4d
+  needs_api: false
+  static_audit_complete: true
+  static_audit_artifact: audit/cot_sparql/STATIC_AUDIT.md
+  architecture_artifact: audit/cot_sparql/ARCHITECTURE_AND_DATA_FLOW.md
+  dataset_inventory_artifact: audit/cot_sparql/DATASET_INVENTORY.csv
+  grounding_audit_artifact: audit/cot_sparql/GROUNDING_AND_LINKING_AUDIT.md
+  metrics_audit_artifact: audit/cot_sparql/EVALUATION_AND_METRICS_AUDIT.md
+  external_artifacts_status: referenced_absent_embeddings_parquet_pkl_and_hf_gptq
+  environment_definition_status: not_started
+  retrieval_smoke_ready: blocked
+  linker_smoke_ready: conditional
+  model_smoke_ready: blocked
+  native_reproduction_ready: not_ready
+  native_gate_class: HOLD_HARDWARE
+  scientific_baseline_role: documentary_baseline
+  experimental_track: generator_with_external_grounding
+  internal_execution_legal_gate: blocked
+  adapter_legal_gate: blocked
+  generality_class: generalizable_with_domain_package
+  gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
+  next_native_action: hold_hardware_and_legal_no_env_now
+  next_native_action_class: HOLD_HARDWARE
+  gate_confidence: high
+  next_execution_prompt: deferred_HOLD_HARDWARE_cot_sparql
+  execution_blockers:
+  - LICENSE_NOT_CONFIRMED
+  - embeddings_and_example_parquets_absent
+  - CodeLlama_34B_GPTQ_exceeds_local_6GiB
+  - no_dedicated_eval_scripts
+  - requirements_txt_is_conda_export_not_pip
+  - falcon_none_handling_crash_risk
+  - wikidata_relation_propertyLabel_key_mismatch
+  - assert_empty_question_concatenation_bug
+  - import_side_effect_loads_MiniLM
+  - validation_is_HTTP_200_not_local_syntax
+  notes: "WAVE_C Prompt 7A static audit complete. Not end-to-end: external EL/RL +
+    gold-annotated one-shot retrieval + GPTQ LLM. CoT is prompt-induced. reproduction_status
+    remains audit_only; native_audit_complete=false; common_adapter_allowed=false;
+    license LICENSE_NOT_CONFIRMED."
 
-  - method_id: firesparql
-    display_name: FIRESPARQL
-    repositories:
-      - url: https://github.com/sherry-pan/FIRESPARQL
-        role: primary
-        relation_to_paper: official_authors_repo
-        default_branch: main
-        license_status: LICENSE_NOT_CONFIRMED
-        license_spdx: UNKNOWN
-        license_file: ABSENT
-        last_push_utc: "2025-05-28T10:00:52Z"
-        fork: false
-      - url: https://huggingface.co/Sherry791/Meta-Llama-3-8B-Instruct-ft4sciqa
-        role: model_checkpoint
-        relation_to_paper: official_authors_release
-        license_status: CONFIRMED_MODEL_CARD
-        license_spdx: MIT
-    paper:
-      title: "FIRESPARQL: A LLM-Based Framework for SPARQL Query Generation over Scholarly Knowledge Graphs"
-      year: 2025
-      publication_status: published_article
-      venue: "IC3K 2025 KDIR (SCITEPRESS)"
-      doi_or_id: "10.5220/0013774000004000"
-      authors: ["Xueli Pan", "Victor de Boer", "Jacco van Ossenbruggen"]
-    artifacts:
-      checkpoints: present_on_hf_absent_in_git
-      processed_datasets: present
-      prompts: present
-      eval_scripts: present
-      reproduction_instructions: partial
-    inclusion_status: included_conditional
-    inclusion_decision: INCLUDE_CONDITIONAL
-    reproduction_status: audit_only
-    feasibility_class: requires_external_gpu
-    native_audit_complete: false
-    paper_code_audit_complete: true
-    evidence_closure_complete: true
-    common_adapter_allowed: false
-    clone_wave: WAVE_C_STATIC_AUDIT_ONLY
-    cloned: true
-    upstream_path: upstream/firesparql
-    pinned_commit: 48d6f168e4c1dd3dc467553aef370299911d4e76
-    needs_api: true
-    static_audit_complete: true
-    static_audit_artifact: audit/firesparql/STATIC_AUDIT.md
-    architecture_artifact: audit/firesparql/ARCHITECTURE_AND_DATA_FLOW.md
-    dataset_inventory_artifact: audit/firesparql/DATASET_INVENTORY.csv
-    result_inventory_artifact: audit/firesparql/RESULTS_INVENTORY.csv
-    metrics_audit_artifact: audit/firesparql/METRICS_AUDIT.md
-    fine_tuning_code_status: absent_in_repo_external_LLaMa_Factory_inferred
-    checkpoint_status: absent_in_git_present_on_hf_ft4sciqa
-    environment_definition_status: not_started
-    metrics_smoke_ready: conditional
-    inference_smoke_ready: blocked
-    rag_smoke_ready: blocked
-    native_reproduction_ready: not_ready
-    native_gate_class: HOLD_MISSING_CODE
-    scientific_baseline_role: documentary_baseline
-    experimental_track: domain_specific_pipeline
-    internal_execution_legal_gate: blocked
-    adapter_legal_gate: blocked
-    generality_class: domain_specific_reimplementation_required
-    gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-    next_native_action: document_only_metrics_HOLD_MISSING_CODE_QLever_runner
-    next_native_action_class: HOLD_MISSING_CODE
-    gate_confidence: high
-    next_execution_prompt: deferred_HOLD_MISSING_CODE_firesparql
-    execution_blockers:
-      - LICENSE_NOT_CONFIRMED
-      - requirements_coming_soon_absent
-      - LoRA_SFT_trainer_NOT_FOUND_in_repo
-      - merge_models_directory_ABSENT
-      - QLever_ORKG_execution_runner_CODE_NOT_FOUND
-      - OpenAI_gpt4o_cleaning_required
-      - Groq_RAG_context_required
-      - xueli_data_and_Snellius_hardcoded_paths
-      - Llama3_8B_fp16_exceeds_local_6GiB
-      - sparql_results_csv_partial_coverage
-    notes: "WAVE_C Prompt 7B static complete. MIT on HF checkpoint does NOT license GitHub code. Results versioned (~458MiB) are RESULT_FILE_VERIFIED not local reproduction. Native reproduction not_ready. common_adapter_allowed=false."
+  zero_cost_gate_class: HOLD_HARDWARE
+  zero_cost_next_action: hold_legal_and_hardware
+  zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
+  zero_cost_gate_confidence: high
+- method_id: firesparql
+  display_name: FIRESPARQL
+  repositories:
+  - url: https://github.com/sherry-pan/FIRESPARQL
+    role: primary
+    relation_to_paper: official_authors_repo
+    default_branch: main
+    license_status: LICENSE_NOT_CONFIRMED
+    license_spdx: UNKNOWN
+    license_file: ABSENT
+    last_push_utc: "2025-05-28T10:00:52Z"
+    fork: false
+  - url: https://huggingface.co/Sherry791/Meta-Llama-3-8B-Instruct-ft4sciqa
+    role: model_checkpoint
+    relation_to_paper: official_authors_release
+    license_status: CONFIRMED_MODEL_CARD
+    license_spdx: MIT
+  paper:
+    title: "FIRESPARQL: A LLM-Based Framework for SPARQL Query Generation over Scholarly
+      Knowledge Graphs"
+    year: 2025
+    publication_status: published_article
+    venue: "IC3K 2025 KDIR (SCITEPRESS)"
+    doi_or_id: "10.5220/0013774000004000"
+    authors: ["Xueli Pan", "Victor de Boer", "Jacco van Ossenbruggen"]
+  artifacts:
+    checkpoints: present_on_hf_absent_in_git
+    processed_datasets: present
+    prompts: present
+    eval_scripts: present
+    reproduction_instructions: partial
+  inclusion_status: included_conditional
+  inclusion_decision: INCLUDE_CONDITIONAL
+  reproduction_status: audit_only
+  feasibility_class: requires_external_gpu
+  native_audit_complete: false
+  paper_code_audit_complete: true
+  evidence_closure_complete: true
+  common_adapter_allowed: false
+  clone_wave: WAVE_C_STATIC_AUDIT_ONLY
+  cloned: true
+  upstream_path: upstream/firesparql
+  pinned_commit: 48d6f168e4c1dd3dc467553aef370299911d4e76
+  needs_api: true
+  static_audit_complete: true
+  static_audit_artifact: audit/firesparql/STATIC_AUDIT.md
+  architecture_artifact: audit/firesparql/ARCHITECTURE_AND_DATA_FLOW.md
+  dataset_inventory_artifact: audit/firesparql/DATASET_INVENTORY.csv
+  result_inventory_artifact: audit/firesparql/RESULTS_INVENTORY.csv
+  metrics_audit_artifact: audit/firesparql/METRICS_AUDIT.md
+  fine_tuning_code_status: absent_in_repo_external_LLaMa_Factory_inferred
+  checkpoint_status: absent_in_git_present_on_hf_ft4sciqa
+  environment_definition_status: not_started
+  metrics_smoke_ready: conditional
+  inference_smoke_ready: blocked
+  rag_smoke_ready: blocked
+  native_reproduction_ready: not_ready
+  native_gate_class: HOLD_MISSING_CODE
+  scientific_baseline_role: documentary_baseline
+  experimental_track: domain_specific_pipeline
+  internal_execution_legal_gate: blocked
+  adapter_legal_gate: blocked
+  generality_class: domain_specific_reimplementation_required
+  gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
+  next_native_action: document_only_metrics_HOLD_MISSING_CODE_QLever_runner
+  next_native_action_class: HOLD_MISSING_CODE
+  gate_confidence: high
+  next_execution_prompt: deferred_HOLD_MISSING_CODE_firesparql
+  execution_blockers:
+  - LICENSE_NOT_CONFIRMED
+  - requirements_coming_soon_absent
+  - LoRA_SFT_trainer_NOT_FOUND_in_repo
+  - merge_models_directory_ABSENT
+  - QLever_ORKG_execution_runner_CODE_NOT_FOUND
+  - OpenAI_gpt4o_cleaning_required
+  - Groq_RAG_context_required
+  - xueli_data_and_Snellius_hardcoded_paths
+  - Llama3_8B_fp16_exceeds_local_6GiB
+  - sparql_results_csv_partial_coverage
+  notes: "WAVE_C Prompt 7B static complete. MIT on HF checkpoint does NOT license
+    GitHub code. Results versioned (~458MiB) are RESULT_FILE_VERIFIED not local reproduction.
+    Native reproduction not_ready. common_adapter_allowed=false."
 
-  - method_id: rdfconfig_llm
-    display_name: LLM + RDF-config
-    repositories:
-      - url: https://github.com/scott2121/sparql_query_generator
-        role: primary
-        relation_to_paper: official_experimental_environment
-        default_branch: main
-        license_status: LICENSE_NOT_CONFIRMED
-        license_spdx: UNKNOWN
-        license_file: ABSENT
-        last_push_utc: "2026-02-09T09:20:34Z"
-        fork: false
-      - url: https://doi.org/10.5281/zenodo.18539214
-        role: zenodo_archive
-        relation_to_paper: official_software_archive_v1.0.0
-        license_status: CONFIRMED_ZENODO_METADATA
-        license_spdx: CC-BY-4.0
-      - url: https://github.com/dbcls/rdf-config
-        role: dependency_or_companion
-        relation_to_paper: official_companion_tool
-        default_branch: master
-        license_status: CONFIRMED_LICENSE_FILE
-        license_spdx: MIT
-        license_file: LICENSE
-        last_push_utc: "2026-07-16T04:54:33Z"
-        fork: false
-    paper:
-      title: "Accurate SPARQL generation via in-context learning and schema-based query construction"
-      year: 2026
-      publication_status: published_article
-      venue: "Bioinformatics (OUP)"
-      doi_or_id: "10.1093/bioinformatics/btag174"
-      authors: ["Hikaru Nagazumi", "Yuki Moriya", "Shuichi Kawashima", "Toshiaki Katayama", "Kana Shimizu"]
-    artifacts:
-      checkpoints: n_a_api_llm
-      processed_datasets: present
-      prompts: present
-      eval_scripts: present
-      reproduction_instructions: present
-    inclusion_status: included_conditional
-    inclusion_decision: INCLUDE_CONDITIONAL
-    reproduction_status: audit_only
-    feasibility_class: feasible_using_api
-    native_audit_complete: false
-    paper_code_audit_complete: true
-    evidence_closure_complete: true
-    common_adapter_allowed: false
-    clone_wave: WAVE_A_API_OR_LIGHTWEIGHT
-    cloned: true
-    upstream_path: upstream/rdfconfig_llm
-    companion_upstream_path: upstream/rdfconfig_llm_rdf-config
-    companion_pinned_commit: cccc581c16f0b24865030bc5459475a9d0fcbd5f
-    pinned_commit: fe63171d3c8b9679779749ee11f731b2a8318053
-    needs_api: true
-    static_audit_complete: true
-    static_audit_artifact: audit/rdfconfig_llm/STATIC_AUDIT.md
-    companion_static_audit_artifact: audit/rdfconfig_llm/COMPANION_RDF_CONFIG_AUDIT.md
-    environment_definition_status: ready_documented
-    environment_artifacts: environments/rdfconfig_llm/
-    offline_smoke_ready: no
-    api_smoke_ready: conditional
-    native_reproduction_ready: conditional
-    native_gate_class: HOLD_LEGAL
-    scientific_baseline_role: conditional_baseline_candidate
-    experimental_track: schema_guided_domain_specific
-    internal_execution_legal_gate: conditional
-    adapter_legal_gate: blocked
-    generality_class: domain_specific_reimplementation_required
-    gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md
-    next_native_action: clarify_generator_source_license_then_Ruby_env
-    next_native_action_class: GO_NEXT_legal_closure
-    gate_confidence: medium
-    next_execution_prompt: Prompt_12_rdfconfig_legal_source_closure_ZERO_USD
-    execution_blockers:
-      - LICENSE_NOT_CONFIRMED_generator_HEAD
-      - requirements_txt_incomplete_vs_evaluator
-      - ruby_bundler_ABSENT_on_host
-      - sparql_yaml_mutation_on_run
-      - possible_divergence_vendored_vs_companion_pin
-    notes: "Re-gate ZERO_USD 2026-07-21: GO_NEXT legal/source closure (no Ruby install). Env specs ready_documented. Prefer Zenodo for fidelity; never run in-place on upstream."
+  zero_cost_gate_class: DOCUMENT_ONLY
+  zero_cost_next_action: FIRESPARQL_RESULT_CONSISTENCY_AUDIT_deferred
+  zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
+  zero_cost_gate_confidence: high
+- method_id: rdfconfig_llm
+  display_name: LLM + RDF-config
+  repositories:
+  - url: https://github.com/scott2121/sparql_query_generator
+    role: primary
+    relation_to_paper: official_experimental_environment
+    default_branch: main
+    license_status: LICENSE_NOT_CONFIRMED
+    license_spdx: UNKNOWN
+    license_file: ABSENT
+    last_push_utc: "2026-02-09T09:20:34Z"
+    fork: false
+  - url: https://doi.org/10.5281/zenodo.18539214
+    role: zenodo_archive
+    relation_to_paper: official_software_archive_v1.0.0
+    license_status: CONFIRMED_ZENODO_METADATA
+    license_spdx: CC-BY-4.0
+  - url: https://github.com/dbcls/rdf-config
+    role: dependency_or_companion
+    relation_to_paper: official_companion_tool
+    default_branch: master
+    license_status: CONFIRMED_LICENSE_FILE
+    license_spdx: MIT
+    license_file: LICENSE
+    last_push_utc: "2026-07-16T04:54:33Z"
+    fork: false
+  paper:
+    title: "Accurate SPARQL generation via in-context learning and schema-based query
+      construction"
+    year: 2026
+    publication_status: published_article
+    venue: "Bioinformatics (OUP)"
+    doi_or_id: "10.1093/bioinformatics/btag174"
+    authors: ["Hikaru Nagazumi", "Yuki Moriya", "Shuichi Kawashima", "Toshiaki Katayama",
+      "Kana Shimizu"]
+  artifacts:
+    checkpoints: n_a_api_llm
+    processed_datasets: present
+    prompts: present
+    eval_scripts: present
+    reproduction_instructions: present
+  inclusion_status: included_conditional
+  inclusion_decision: INCLUDE_CONDITIONAL
+  reproduction_status: audit_only
+  feasibility_class: feasible_using_api
+  native_audit_complete: false
+  paper_code_audit_complete: true
+  evidence_closure_complete: true
+  common_adapter_allowed: false
+  clone_wave: WAVE_A_API_OR_LIGHTWEIGHT
+  cloned: true
+  upstream_path: upstream/rdfconfig_llm
+  companion_upstream_path: upstream/rdfconfig_llm_rdf-config
+  companion_pinned_commit: cccc581c16f0b24865030bc5459475a9d0fcbd5f
+  pinned_commit: fe63171d3c8b9679779749ee11f731b2a8318053
+  needs_api: true
+  static_audit_complete: true
+  static_audit_artifact: audit/rdfconfig_llm/STATIC_AUDIT.md
+  companion_static_audit_artifact: audit/rdfconfig_llm/COMPANION_RDF_CONFIG_AUDIT.md
+  environment_definition_status: ready_documented
+  environment_artifacts: environments/rdfconfig_llm/
+  offline_smoke_ready: no
+  api_smoke_ready: conditional
+  native_reproduction_ready: conditional
+  native_gate_class: HOLD_LEGAL
+  scientific_baseline_role: conditional_baseline_candidate
+  experimental_track: schema_guided_domain_specific
+  internal_execution_legal_gate: conditional
+  adapter_legal_gate: blocked
+  generality_class: domain_specific_reimplementation_required
+  gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md
+  next_native_action: clarify_generator_source_license_then_Ruby_env
+  next_native_action_class: DOCUMENT_ONLY
+  gate_confidence: medium
+  next_execution_prompt: deferred_DOCUMENT_ONLY_rdfconfig_legal_after_sgpt_env
+  execution_blockers:
+  - LICENSE_NOT_CONFIRMED_generator_HEAD
+  - requirements_txt_incomplete_vs_evaluator
+  - ruby_bundler_ABSENT_on_host
+  - sparql_yaml_mutation_on_run
+  - possible_divergence_vendored_vs_companion_pin
+  notes: "Prompt 11C: rdfconfig legal closure DOCUMENT_ONLY (not GO_NEXT). Interim
+    re-gate rdfconfig GO_NEXT superseded. Prefer Zenodo; never run in-place on upstream."
 
-  - method_id: sgpt
-    display_name: SGPT
-    repositories:
-      - url: https://github.com/rashad101/SGPT-SPARQL-query-generation
-        role: primary
-        relation_to_paper: official_authors_repo
-        default_branch: main
-        license_status: CONFIRMED_LICENSE_FILE
-        license_spdx: MIT
-        license_file: LICENSE.md
-        last_push_utc: "2024-09-15T09:21:37Z"
-        fork: false
-    paper:
-      title: "SGPT: A Generative Approach for SPARQL Query Generation From Natural Language Questions"
-      year: 2022
-      publication_status: published_article
-      venue: "IEEE Access"
-      doi_or_id: "10.1109/ACCESS.2022.3188714"
-      authors: ["Md Rashad Al Hasan Rony", "Uttam Kumar", "Roman Teucher", "Liubov Kovriguina", "Jens Lehmann"]
-    table4_evidence: closed
-    table4_source: "https://doi.org/10.1109/ACCESS.2022.3188714"
-    artifacts:
-      checkpoints: absent_in_repo_despite_paper_claim
-      processed_datasets: present
-      prompts: n_a_trained_model
-      eval_scripts: present
-      reproduction_instructions: present
-    inclusion_status: included
-    inclusion_decision: INCLUDE_PRIMARY
-    reproduction_status: audit_only
-    feasibility_class: feasible_local_gpu
-    native_audit_complete: false
-    paper_code_audit_complete: true
-    evidence_closure_complete: true
-    common_adapter_allowed: false
-    clone_wave: WAVE_B_LOCAL_CONDITIONAL
-    cloned: true
-    upstream_path: upstream/sgpt
-    pinned_commit: 1f6964d1c3bfee50c7dec2c25546f32b4ab94b2b
-    needs_api: false
-    static_audit_complete: true
-    static_audit_artifact: audit/sgpt/STATIC_AUDIT.md
-    architecture_artifact: audit/sgpt/ARCHITECTURE_AND_DATA_FLOW.md
-    dataset_inventory_artifact: audit/sgpt/DATASET_INVENTORY.csv
-    metrics_audit_artifact: audit/sgpt/METRICS_AUDIT.md
-    checkpoint_status: absent_in_repo
-    environment_definition_status: not_started
-    import_smoke_ready: conditional
-    inference_smoke_ready: blocked
-    training_smoke_ready: conditional
-    native_reproduction_ready: not_ready
-    native_gate_class: HOLD_MISSING_MODEL
-    scientific_baseline_role: core_baseline_candidate
-    experimental_track: oracle_grounding_generator
-    internal_execution_legal_gate: allowed
-    adapter_legal_gate: conditional_deferred
-    generality_class: retraining_required
-    gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-    next_native_action: document_only_or_env_after_checkpoint_policy
-    next_native_action_class: HOLD_MISSING_MODEL
-    gate_confidence: high
-    next_execution_prompt: deferred_HOLD_MISSING_MODEL_sgpt
-    execution_blockers:
-      - checkpoint_absent_in_repo
-      - vram_6GiB_vs_paper_2x12GB
-      - lcquad2_test_5969_vs_paper_6046
-      - qald9_id_reuse_train_test_150
-      - metric_double_update_anomaly
-      - transformers_unpinned
-      - gpt2_download_requires_network
-      - epochs_cli_vs_params_json_divergence
-    notes: "WAVE_B static audit 2026-07-20 complete. SGPT_Q≈no --knowledge; SGPT_Q_K≈--knowledge (entities only; LC-QuAD gold-SPARQL-filtered new_LabelsEnt). Metrics lexical only (no Answer F1). Checkpoints NOT_FOUND. reproduction_status remains audit_only; native_audit_complete=false; common_adapter_allowed=false."
+  zero_cost_gate_class: DOCUMENT_ONLY
+  zero_cost_next_action: RDFCONFIG_SOURCE_LICENSE_CLOSURE_deferred
+  zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
+  zero_cost_gate_confidence: high
+- method_id: sgpt
+  display_name: SGPT
+  repositories:
+  - url: https://github.com/rashad101/SGPT-SPARQL-query-generation
+    role: primary
+    relation_to_paper: official_authors_repo
+    default_branch: main
+    license_status: CONFIRMED_LICENSE_FILE
+    license_spdx: MIT
+    license_file: LICENSE.md
+    last_push_utc: "2024-09-15T09:21:37Z"
+    fork: false
+  paper:
+    title: "SGPT: A Generative Approach for SPARQL Query Generation From Natural Language
+      Questions"
+    year: 2022
+    publication_status: published_article
+    venue: "IEEE Access"
+    doi_or_id: "10.1109/ACCESS.2022.3188714"
+    authors: ["Md Rashad Al Hasan Rony", "Uttam Kumar", "Roman Teucher", "Liubov Kovriguina",
+      "Jens Lehmann"]
+  table4_evidence: closed
+  table4_source: "https://doi.org/10.1109/ACCESS.2022.3188714"
+  artifacts:
+    checkpoints: absent_in_repo_despite_paper_claim
+    processed_datasets: present
+    prompts: n_a_trained_model
+    eval_scripts: present
+    reproduction_instructions: present
+  inclusion_status: included
+  inclusion_decision: INCLUDE_PRIMARY
+  reproduction_status: audit_only
+  feasibility_class: feasible_local_gpu
+  native_audit_complete: false
+  paper_code_audit_complete: true
+  evidence_closure_complete: true
+  common_adapter_allowed: false
+  clone_wave: WAVE_B_LOCAL_CONDITIONAL
+  cloned: true
+  upstream_path: upstream/sgpt
+  pinned_commit: 1f6964d1c3bfee50c7dec2c25546f32b4ab94b2b
+  needs_api: false
+  static_audit_complete: true
+  static_audit_artifact: audit/sgpt/STATIC_AUDIT.md
+  architecture_artifact: audit/sgpt/ARCHITECTURE_AND_DATA_FLOW.md
+  dataset_inventory_artifact: audit/sgpt/DATASET_INVENTORY.csv
+  metrics_audit_artifact: audit/sgpt/METRICS_AUDIT.md
+  checkpoint_status: absent_in_repo
+  environment_definition_status: not_started
+  import_smoke_ready: conditional
+  inference_smoke_ready: blocked
+  training_smoke_ready: conditional
+  native_reproduction_ready: not_ready
+  native_gate_class: HOLD_MISSING_MODEL
+  scientific_baseline_role: core_baseline_candidate
+  experimental_track: oracle_grounding_generator
+  internal_execution_legal_gate: allowed
+  adapter_legal_gate: conditional_deferred
+  generality_class: retraining_required
+  gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
+  next_native_action: SGPT_ENVIRONMENT_DEFINITION
+  next_native_action_class: GO_NEXT_ZERO_COST
+  gate_confidence: high
+  next_execution_prompt: Prompt_12_SGPT_environment_definition_ZERO_COST
+  execution_blockers:
+  - checkpoint_absent_in_repo
+  - vram_6GiB_vs_paper_2x12GB
+  - lcquad2_test_5969_vs_paper_6046
+  - qald9_id_reuse_train_test_150
+  - metric_double_update_anomaly
+  - transformers_unpinned
+  - gpt2_download_requires_network
+  - epochs_cli_vs_params_json_divergence
+  notes: "WAVE_B static audit 2026-07-20 complete. SGPT_Q≈no --knowledge; SGPT_Q_K≈--knowledge
+    (entities only; LC-QuAD gold-SPARQL-filtered new_LabelsEnt). Metrics lexical only
+    (no Answer F1). Checkpoints NOT_FOUND. reproduction_status remains audit_only;
+    native_audit_complete=false; common_adapter_allowed=false. Prompt 11C: selected
+    GO_NEXT_ZERO_COST for SGPT env definition."
 
-  - method_id: tebaqa
-    display_name: TeBaQA
-    repositories:
-      - url: https://github.com/dice-group/TeBaQA
-        role: primary
-        relation_to_paper: official_authors_repo
-        default_branch: master
-        license_status: CONFIRMED_LICENSE_FILE
-        license_spdx: AGPL-3.0
-        license_file: LICENSE
-        last_push_utc: "2023-10-30T15:28:03Z"
-        fork: false
-    paper:
-      title: "Knowledge Graph Question Answering Using Graph-Pattern Isomorphism"
-      year: 2021
-      publication_status: published_article
-      venue: "Studies on the Semantic Web (IOS Press)"
-      doi_or_id: "10.3233/SSW210038"
-      authors: ["Daniel Vollmers", "Rricha Jalota", "Diego Moussallem", "Hardik Topiwala", "Axel-Cyrille Ngonga Ngomo", "Ricardo Usbeck"]
-    artifacts:
-      checkpoints: n_a_ml_classifiers
-      processed_datasets: external_indices
-      prompts: n_a
-      eval_scripts: gerbil_links_in_readme
-      reproduction_instructions: present
-    inclusion_status: historical_only
-    inclusion_decision: HISTORICAL_ONLY
-    reproduction_status: audit_only
-    feasibility_class: currently_unknown
-    native_audit_complete: false
-    paper_code_audit_complete: true
-    evidence_closure_complete: true
-    common_adapter_allowed: false
-    clone_wave: WAVE_D_EXCLUDED
-    cloned: false
-    upstream_path: null
-    pinned_commit: null
-    notes_clone: "Not cloned: HISTORICAL_ONLY / WAVE_D_EXCLUDED for this cloning phase."
-    needs_api: false
-    notes: "Fuera del foco de cierre de licencias UNKNOWN; AGPL confirmado."
+  zero_cost_gate_class: GO_NEXT_ZERO_COST
+  zero_cost_next_action: SGPT_ENVIRONMENT_DEFINITION
+  zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
+  zero_cost_gate_confidence: high
+- method_id: tebaqa
+  display_name: TeBaQA
+  repositories:
+  - url: https://github.com/dice-group/TeBaQA
+    role: primary
+    relation_to_paper: official_authors_repo
+    default_branch: master
+    license_status: CONFIRMED_LICENSE_FILE
+    license_spdx: AGPL-3.0
+    license_file: LICENSE
+    last_push_utc: "2023-10-30T15:28:03Z"
+    fork: false
+  paper:
+    title: "Knowledge Graph Question Answering Using Graph-Pattern Isomorphism"
+    year: 2021
+    publication_status: published_article
+    venue: "Studies on the Semantic Web (IOS Press)"
+    doi_or_id: "10.3233/SSW210038"
+    authors: ["Daniel Vollmers", "Rricha Jalota", "Diego Moussallem", "Hardik Topiwala",
+      "Axel-Cyrille Ngonga Ngomo", "Ricardo Usbeck"]
+  artifacts:
+    checkpoints: n_a_ml_classifiers
+    processed_datasets: external_indices
+    prompts: n_a
+    eval_scripts: gerbil_links_in_readme
+    reproduction_instructions: present
+  inclusion_status: historical_only
+  inclusion_decision: HISTORICAL_ONLY
+  reproduction_status: audit_only
+  feasibility_class: currently_unknown
+  native_audit_complete: false
+  paper_code_audit_complete: true
+  evidence_closure_complete: true
+  common_adapter_allowed: false
+  clone_wave: WAVE_D_EXCLUDED
+  cloned: false
+  upstream_path:
+  pinned_commit:
+  notes_clone: "Not cloned: HISTORICAL_ONLY / WAVE_D_EXCLUDED for this cloning phase."
+  needs_api: false
+  notes: "Fuera del foco de cierre de licencias UNKNOWN; AGPL confirmado."
+  zero_cost_gate_class: NOT_CURRENTLY_ACTIONABLE
+  zero_cost_next_action: historical_only
+  zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
+  zero_cost_gate_confidence: high

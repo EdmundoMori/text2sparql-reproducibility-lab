@@ -1,28 +1,28 @@
 # HUMAN_LLM_SMOKE_APPROVAL — Prompt 11
 
 **RUN_ID:** `20260721T100618Z`  
-**Estado:** **REFUSED_ZERO_USD** (2026-07-21) — no se autoriza gasto.  
-**Etiqueta:** resolución humana = rechazo económico (no firma de smoke).
+**Estado:** **DECLINED_ZERO_COST_POLICY** — **no firmado**; no se autoriza Prompt 12 chat.  
+**Referencia política:** [`HUMAN_ZERO_COST_DECISION.md`](HUMAN_ZERO_COST_DECISION.md) (`HUMAN_DECISION_VERIFIED`)  
+**Gate online resultante:** `NO_GO_ECONOMIC_ZERO_COST_POLICY`
 
 ---
 
-## Resolución humana registrada
+## Sección final — resolución Prompt 11C
 
 | Campo | Valor |
 |---|---|
-| Aprobador | EDMUNDO MORI ORRILLO |
+| status | `DECLINED_ZERO_COST_POLICY` |
+| firmado | **no** |
+| Prompt 12 (POST `/chat`) | **no autorizado** |
+| MAX_EXTERNAL_MONETARY_COST_USD | **0.00** |
+| Aprobador de la política | EDMUNDO MORI ORRILLO |
 | Fecha | 2026-07-21 |
-| Política | SOLO $0; SIN Prompt 12 chat |
-| Clave OpenRouter | no autorizada (crear ni usar) |
-| POST `/chat` / modelos de pago | no autorizados |
-| Gate resultante | `NO_GO_ECONOMIC` |
-| Artefacto | `ECONOMIC_NO_GO_DECISION.md` |
 
-El bloque de aprobación de gasto **no** se completa. Queda como registro histórico de lo que se habría requerido.
+El bloque propuesto original se conserva **intacto** abajo para trazabilidad histórica. **No** se rellena retroactivamente.
 
 ---
 
-## Bloque de aprobación (NO USADO — rechazo vigente)
+## Bloque de aprobación propuesto original (histórico — NO USADO)
 
 ```text
 APPROVAL_FOR: LOCAL_CHAT_API_ONE_QUESTION
@@ -70,14 +70,10 @@ SIGNATURE_OR_TYPED_NAME: _______________________________
 
 ---
 
-## Lo que Prompt 11 ya fijó (no reescribir)
+## Notas Prompt 11 (histórico)
 
 - Modelo y precios snapshot  
 - Pregunta y request spec  
 - Settings: `max_try_fix_sparql=0`, UniProt+void, índice lab  
 
-## Lo que Prompt 11 NO hizo
-
-- Crear/verificar la clave  
-- Firmar por el investigador  
-- Ejecutar `/chat`
+Prompt 11 **no** creó clave ni ejecutó `/chat`. Prompt 11C **declina** la autorización de gasto.

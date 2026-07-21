@@ -1,10 +1,23 @@
 # Presupuesto y seguridad API — SPARQL-LLM (futuro smoke)
 
-**Estado:** presupuesto OpenRouter **REFUSED_ZERO_USD** (Mori 2026-07-21). Smoke online **`NO_GO_ECONOMIC`**.  
+**Estado:** **`CLOSED_NO_GO_ECONOMIC_ZERO_COST_POLICY`** (Prompt 11C).  
 **Commit pin:** `3748730e3bd2df2595280b918269fdaadb9fc0c3`  
-**Acción cubierta:** `LOCAL_CHAT_API_ONE_QUESTION` — **no autorizada** bajo política actual.  
-**Actualizado:** rechazo económico RUN_ID `20260721T103536Z` (tras Prompt 11 `20260721T100618Z`).  
+**Acción cubierta:** `LOCAL_CHAT_API_ONE_QUESTION` — **cerrada** bajo política coste cero.  
+**Política:** [`HUMAN_ZERO_COST_DECISION.md`](model-budget-gates/20260721T100618Z/HUMAN_ZERO_COST_DECISION.md)  
 **Inferencias:** 0.
+
+| Campo aprobado | Valor |
+|---|---|
+| `MAX_EXTERNAL_MONETARY_COST_USD_APPROVED` | **0.00** |
+| `MAX_OPENROUTER_USD_APPROVED` | **0.00** |
+| Propuesta Prompt 11 ($0.10) | **rejected / not approved** |
+| Selected model | **historical proposal only** (`openrouter/openai/gpt-4o-mini-2024-07-18`) |
+| Dedicated key | **none** (not authorized) |
+| Key expiry | **n/a** |
+| POST `/chat` | **not authorized** |
+| zero-cost policy | **active** |
+
+Los precios y cálculos históricos de Prompt 11 se conservan en §3 como registro.
 
 ---
 
@@ -55,11 +68,13 @@ Con `use_tools=false` (grafo default):
 | context_length | 128000 | |
 | max_completion_tokens | 16384 | |
 | TWO_CALL_BOUND | ≈ **$0.0581** | COST_BOUND_DERIVED |
-| MAX_OPENROUTER_USD | **0.00** (política ZERO_USD) | REFUSED |
-| Estado | **REFUSED_ZERO_USD** / gate **NO_GO_ECONOMIC** | HUMAN |
+| MAX_OPENROUTER_USD propuesto ($0.10) | **rejected** | HUMAN_DECISION_VERIFIED |
+| MAX_OPENROUTER_USD_APPROVED | **0.00** | HUMAN |
+| Estado | **CLOSED_NO_GO_ECONOMIC_ZERO_COST_POLICY** | Prompt 11C |
 
 Artefactos: `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/`  
-Decisión: `ECONOMIC_NO_GO_DECISION.md`.
+Decisión formal: `HUMAN_ZERO_COST_DECISION.md` + ADR `004_zero_cost_policy_and_online_smoke_deferral.md`.  
+Modelo = **historical proposal only** (no gastar).
 
 ---
 
@@ -149,10 +164,12 @@ Autorizada y ejecutada en Prompt 10B (Mori, 2026-07-21). Caché en workdir.
 |---|---|
 | Aprobador | EDMUNDO MORI ORRILLO |
 | Fecha | 2026-07-21 |
-| Decisión | **REFUSED_ZERO_USD** — no clave; no POST `/chat`; no Prompt 12 chat |
-| `MAX_OPENROUTER_USD` aprobado | **0** (rechazo de gasto) |
-| Modelo exacto aprobado para gastar | **ninguno** |
-| Descarga embeddings | **sí** (10B) |
-| Gate documental | **NO_GO_ECONOMIC** |
+| Decisión | **DECLINED_ZERO_COST_POLICY** / “elijo coste 0” |
+| `MAX_EXTERNAL_MONETARY_COST_USD_APPROVED` | **0.00** |
+| `MAX_OPENROUTER_USD_APPROVED` | **0.00** |
+| Modelo aprobado para gastar | **ninguno** (propuesta histórica conservada) |
+| Descarga embeddings | **sí** (10B; ya ejecutada) |
+| Gate documental | **NO_GO_ECONOMIC_ZERO_COST_POLICY** |
+| Status presupuesto | **CLOSED_NO_GO_ECONOMIC_ZERO_COST_POLICY** |
 
-**El smoke online permanece bloqueado por política de coste.** No se firmará presupuesto OpenRouter mientras rija ZERO_USD.
+**El smoke online permanece cerrado por política de coste.** Reapertura solo con nueva autorización explícita.

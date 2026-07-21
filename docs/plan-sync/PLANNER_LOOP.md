@@ -1,6 +1,6 @@
 # Bucle de optimización del plan (operativo)
 
-**Última actualización:** 2026-07-21 (post NO_GO_ECONOMIC + re-gate ZERO_USD)
+**Última actualización:** 2026-07-21 (post Prompt 11C)
 
 ## Ciclo fijo
 
@@ -17,21 +17,21 @@
 
 1. `PLAN_SYNC.md`  
 2. `docs/plan-sync/NEXT_PROMPT_GUIDANCE.md`  
-3. `audit/NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md`  
-4. `audit/NEXT_EXECUTION_DECISION.md`  
-5. `docs/decisions/004_economic_nogo_online_smoke_and_re_gate.md`  
-6. `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/ECONOMIC_NO_GO_DECISION.md`
+3. `audit/ZERO_COST_NATIVE_AUDIT_REGATE.md`  
+4. `audit/NEXT_ZERO_COST_EXECUTION_DECISION.md`  
+5. `audit/ZERO_COST_POLICY.md`  
+6. `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/HUMAN_ZERO_COST_DECISION.md`  
+7. `docs/decisions/004_zero_cost_policy_and_online_smoke_deferral.md`
 
 ## Reglas
 
 - Un prompt por turno.  
-- **ZERO_USD:** no OpenRouter / no POST `/chat` / no modelos de pago.  
-- Caché e índice en `workdir/` no se versionan.  
-- `common_adapter_allowed: false` hasta native audit.  
-- No firmar gasto por el investigador.
+- **ZERO_USD** activo: no OpenRouter / no POST `/chat` / no paid cloud.  
+- `NATIVE_REPRODUCTION_QUEUE.csv` (Prompt 8) es histórico; cola operativa = `ZERO_COST_NATIVE_REPRODUCTION_QUEUE.csv`.  
+- No ejecutar la acción GO_NEXT dentro del prompt de gate.
 
-## Estado actual
+## Estado
 
-- sparql_llm online: **NO_GO_ECONOMIC**  
-- GO_NEXT: **rdfconfig legal/source closure**  
+- sparql_llm online: **NO_GO_ECONOMIC_ZERO_COST_POLICY**  
+- GO_NEXT_ZERO_COST: **SGPT environment definition**  
 - Fase 1 abierta; objetivo largo plazo intacto.
