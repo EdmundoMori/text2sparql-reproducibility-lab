@@ -1,0 +1,27 @@
+{
+  "revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+  "files": {
+    "config.json": {
+      "size_bytes": 665,
+      "sha256": "0daed7749b4f02b8f76240d5444551d7b08712dab4d0adb8239c56ba823bb7b4"
+    },
+    "pytorch_model.bin": {
+      "size_bytes": 548118077,
+      "sha256": "7c5d3f4b8b76583b422fcb9189ad6c89d5d97a094541ce8932dce3ecabde1421",
+      "lfs_sha256_match": true
+    },
+    "vocab.json": {
+      "size_bytes": 1042301,
+      "sha256": "196139668be63f3b5d6574427317ae82f612a97c5d1cdaf36ed2256dbf636783"
+    },
+    "merges.txt": {
+      "size_bytes": 456318,
+      "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5"
+    },
+    "tokenizer_config.json": {
+      "size_bytes": 26,
+      "sha256": "5e04eb606e3a1583530a42e36c2a6b6615c86f34fe77e44d9ddeb43ff940931f"
+    }
+  },
+  "status": "VERIFIED"
+}

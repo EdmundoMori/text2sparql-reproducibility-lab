@@ -1,0 +1,5 @@
+GET config.json
+GET pytorch_model.bin
+GET vocab.json
+GET merges.txt
+GET tokenizer_config.json

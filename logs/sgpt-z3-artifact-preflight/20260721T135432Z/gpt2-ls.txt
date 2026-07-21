@@ -1,0 +1,8 @@
+total 536756
+drwxr-xr-x 2 edmundo edmundo      4096 Jul 21 15:55 .
+drwxr-xr-x 3 edmundo edmundo      4096 Jul 21 15:54 ..
+-rw-r--r-- 1 edmundo edmundo       665 Jul 21 15:54 config.json
+-rw-r--r-- 1 edmundo edmundo    456318 Jul 21 15:55 merges.txt
+-rw-r--r-- 1 edmundo edmundo 548118077 Jul 21 15:55 pytorch_model.bin
+-rw-r--r-- 1 edmundo edmundo        26 Jul 21 15:55 tokenizer_config.json
+-rw-r--r-- 1 edmundo edmundo   1042301 Jul 21 15:55 vocab.json

@@ -1,0 +1,13 @@
+initial_head=ba31ecfd82dff9bf57752305005e43a73a88a657
+z2_image_id=sha256:75ab83f202a5c7d5cdfa60c1d2ff596fab3ec0e529252572d051e66c7c5f3c57
+z2_image_verified=ok
+auth=SIGNED_14B_P1_P2A
+p2b=NOT_AUTHORIZED
+cost_usd=0.00
+downloaded config.json size=665
+downloaded pytorch_model.bin size=548118077
+downloaded vocab.json size=1042301
+downloaded merges.txt size=456318
+downloaded tokenizer_config.json size=26
+Building Z3 image...
+P2A_START 2026-07-21T13:56:31Z

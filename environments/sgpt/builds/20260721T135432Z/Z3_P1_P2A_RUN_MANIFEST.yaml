@@ -1,0 +1,26 @@
+run_id: "20260721T135432Z"
+protocol_run_id: "20260721T134213Z"
+status: CLOSED_Z3_P2A_MODEL_LOAD_PREFLIGHT
+classification: Z3_P2A_MODEL_LOAD_PREFLIGHT_PASS
+authorization_status: AUTHORIZED_AND_CONSUMED_14B_P1_P2A
+initial_lab_head: "ba31ecfd82dff9bf57752305005e43a73a88a657"
+z2_base_image_tag: "text2sparql-lab/sgpt-z2-py38:20260721T114919Z"
+z2_base_image_id: "sha256:75ab83f202a5c7d5cdfa60c1d2ff596fab3ec0e529252572d051e66c7c5f3c57"
+z3_image_tag: "text2sparql-lab/sgpt-z3-py38:20260721T135432Z"
+z3_image_id: "sha256:3363d73b8a36059698eff046f4a18bd5eaebc689c56f3f825ab1e5f39c273c35"
+gpt2_repository: openai-community/gpt2
+gpt2_revision: "607a30d783dfa663caf39e06633721c8d4cfcd7e"
+gpt2_files_verified: true
+tensorboardX: "2.5.1"
+protobuf: "3.20.1"
+z2_pins_preserved: true
+p2b_forward: NOT_EXECUTED
+training: NOT_EXECUTED
+forward: NOT_EXECUTED
+canary_uids: {train: 8714, val: 3988, test: 6077}
+expected_optimizer_steps: 1
+n_params: 223797504
+rss_mb_after_load: 1774.03515625
+load_seconds: 7.405
+monetary_cost_usd: 0.00
+published_in_git: false

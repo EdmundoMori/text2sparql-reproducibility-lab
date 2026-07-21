@@ -1,0 +1,76 @@
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+fatal error: out of memory allocating heap arena map
+
+runtime stack:
+runtime.throw({0x7ff663ed9549?, 0x0?})
+	runtime/panic.go:1094 +0x4d fp=0x39f93ff318 sp=0x39f93ff2e8 pc=0x7ff663767ccd
+runtime.(*mheap).sysAlloc(0x7ff6644b60e0, 0x4?, 0x7ff6644c64e0, 0x7ff6644c6508)
+	runtime/malloc.go:776 +0x3b6 fp=0x39f93ff3d0 sp=0x39f93ff318 pc=0x7ff6637091d6
+runtime.(*mheap).grow(0x7ff6644b60e0, 0x10000?)
+	runtime/mheap.go:1566 +0x78 fp=0x39f93ff450 sp=0x39f93ff3d0 pc=0x7ff663723478
+runtime.(*mheap).allocSpan(0x7ff6644b60e0, 0x1, 0x0, 0x20)
+	runtime/mheap.go:1299 +0x1ad fp=0x39f93ff4f8 sp=0x39f93ff450 pc=0x7ff663722c8d
+runtime.(*mheap).alloc.func1()
+	runtime/mheap.go:1017 +0x5c fp=0x39f93ff540 sp=0x39f93ff4f8 pc=0x7ff66372273c
+runtime.(*mheap).alloc(0x7ff66376f881?, 0x39f93ff5a8?, 0x0?)
+	runtime/mheap.go:1011 +0x5b fp=0x39f93ff588 sp=0x39f93ff540 pc=0x7ff66372269b
+runtime.(*mcentral).grow(0x7ff6637713e0?)
+	runtime/mcentral.go:253 +0x36 fp=0x39f93ff5b8 sp=0x39f93ff588 pc=0x7ff66370dd76
+runtime.(*mcentral).cacheSpan(0x7ff6644c7d78)
+	runtime/mcentral.go:171 +0x42e fp=0x39f93ff630 sp=0x39f93ff5b8 pc=0x7ff66370dc0e
+runtime.(*mcache).refill(0x1bf07330108, 0xf8?)
+	runtime/mcache.go:184 +0x153 fp=0x39f93ff670 sp=0x39f93ff630 pc=0x7ff66370d233
+runtime.(*mcache).nextFree(0x1bf07330108, 0x20)
+	runtime/malloc.go:968 +0x7e fp=0x39f93ff6a8 sp=0x39f93ff670 pc=0x7ff66370983e
+runtime.mallocgcSmallScanNoHeader(0xe0, 0x7ff663da0e20)
+	runtime/malloc.go:1378 +0x145 fp=0x39f93ff708 sp=0x39f93ff6a8 pc=0x7ff66370a105
+runtime.mallocgc(0xe0, 0x7ff663da0e20, 0x1)
+	runtime/malloc.go:1066 +0xa5 fp=0x39f93ff738 sp=0x39f93ff708 pc=0x7ff6637658c5
+runtime.newobject(0x39f93ff798?)
+	runtime/malloc.go:1747 +0x25 fp=0x39f93ff760 sp=0x39f93ff738 pc=0x7ff66370ac05
+internal/cpu.doinit()
+	internal/cpu/cpu_x86.go:52 +0x1e fp=0x39f93ff7c0 sp=0x39f93ff760 pc=0x7ff6636f4f1e
+internal/cpu.Initialize({0x0, 0x0})
+	internal/cpu/cpu.go:168 +0x1d fp=0x39f93ff7e0 sp=0x39f93ff7c0 pc=0x7ff6636f497d
+runtime.cpuinit(...)
+	runtime/proc.go:763
+runtime.schedinit()
+	runtime/proc.go:876 +0xe5 fp=0x39f93ff830 sp=0x39f93ff7e0 pc=0x7ff6637375a5
+runtime.rt0_go()
+	runtime/asm_amd64.s:349 +0x13c fp=0x39f93ff838 sp=0x39f93ff830 pc=0x7ff66376da5c
+Sending build context to Docker daemon   5.12kB
+Step 1/5 : FROM text2sparql-lab/sgpt-z2-py38:20260721T114919Z
+ ---> 75ab83f202a5
+Step 2/5 : ENV PIP_DISABLE_PIP_VERSION_CHECK=1     PYTHONDONTWRITEBYTECODE=1     TRANSFORMERS_OFFLINE=1     HF_HUB_OFFLINE=1     HF_DATASETS_OFFLINE=1
+ ---> Running in a4552f83d63e
+ ---> Removed intermediate container a4552f83d63e
+ ---> f3e484ee005b
+Step 3/5 : RUN pip install --no-cache-dir       'protobuf==3.20.1'       'tensorboardX==2.5.1'  && python - <<'PY'
+ ---> Running in 07ffa70f982c
+Collecting protobuf==3.20.1
+  Downloading protobuf-3.20.1-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl.metadata (698 bytes)
+Collecting tensorboardX==2.5.1
+  Downloading tensorboardX-2.5.1-py2.py3-none-any.whl.metadata (5.2 kB)
+Requirement already satisfied: numpy in /usr/local/lib/python3.8/site-packages (from tensorboardX==2.5.1) (1.23.5)
+Downloading protobuf-3.20.1-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 16.0 MB/s eta 0:00:00
+Downloading tensorboardX-2.5.1-py2.py3-none-any.whl (125 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.4/125.4 kB 10.5 MB/s eta 0:00:00
+Installing collected packages: protobuf, tensorboardX
+Successfully installed protobuf-3.20.1 tensorboardX-2.5.1
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m ---> Removed intermediate container 07ffa70f982c
+ ---> e55a4a9bdf1e
+Step 4/5 : WORKDIR /work
+ ---> Running in e014991d94e2
+ ---> Removed intermediate container e014991d94e2
+ ---> 6779f2fe6242
+Step 5/5 : CMD ["python3", "--version"]
+ ---> Running in c294d361436c
+ ---> Removed intermediate container c294d361436c
+ ---> 3363d73b8a36
+Successfully built 3363d73b8a36
+Successfully tagged text2sparql-lab/sgpt-z3-py38:20260721T135432Z

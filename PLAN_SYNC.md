@@ -2,11 +2,11 @@
 
 **Audiencia:** ChatGPT e investigador.  
 **Repo:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-**Última actualización:** 2026-07-21 (Prompt **14A** — protocolo Z3 documental)  
+**Última actualización:** 2026-07-21 (Prompt **14B** — GPT-2 + P2A)  
 **Fase:** 1 — native audit; **abierta**  
-**SHA inicial 14A:** `9d7f9412c663544251c73582f7b6c7db79446555`
+**SHA inicial 14B:** `ba31ecfd82dff9bf57752305005e43a73a88a657`
 
-> ZERO_COST. Z1/Z2 cerrados. Z3 **protocolo definido**. Sin GPT-2 download, sin train, sin model load.
+> ZERO_COST. P1+P2A **PASS**. Sin forward P2B. Sin train. Auth 14B consumida.
 
 ---
 
@@ -16,49 +16,35 @@ reproducción nativa → evaluación común → caso de estudio → errores → 
 
 ---
 
-## 2. Metadata Prompt 13B (reconciliada)
+## 2. Prompt 14B — resumen
 
 | Campo | Valor |
 |---|---|
-| ARTIFACT_COMMIT | `15e918540b7de616751ce06b96ef8de4f25f0f75` |
-| CONTENT_HEAD | `15e918540b7de616751ce06b96ef8de4f25f0f75` |
-| publication metadata commits | `f753cbf6…`, `979d7275…`, `94ef66a2…` |
-| remote tip after 13B publication | `9d7f9412c663544251c73582f7b6c7db79446555` |
-
----
-
-## 3. Prompt 14A — resumen
-
-| Campo | Valor |
-|---|---|
-| Acción | PZ1 protocolo Z3 |
-| RUN_ID | `20260721T134213Z` |
-| Gate | **`READY_FOR_Z3_ARTIFACT_PREFLIGHT_AUTHORIZATION`** |
-| Variante | lcquad2 QUESTION_ONLY CPU |
-| Subset | 1/1/1 uids 8714 / 3988 / 6077 |
-| Expected optimizer steps | **1** (validar pre-run) |
-| GPT-2 | `openai-community/gpt2` @ `607a30d783dfa663caf39e06633721c8d4cfcd7e` |
-| tensorboardX | `2.5.1` |
-| Descargas / install / load / forward / train | **0** |
+| Execution RUN_ID | `20260721T135432Z` |
+| Protocol RUN_ID | `20260721T134213Z` |
+| Clasificación | **`Z3_P2A_MODEL_LOAD_PREFLIGHT_PASS`** |
+| Gate | **`READY_FOR_Z3_ONE_STEP_TRAINING_AUTHORIZATION`** |
+| GPT-2 | revision `607a30d7…` verificada |
+| TBX / protobuf | 2.5.1 / 3.20.1 |
+| Z3 image | `text2sparql-lab/sgpt-z3-py38:20260721T135432Z` |
+| Expected steps | 1 |
+| Forward / train | 0 |
 | Coste | **0.00** |
-| Auths | 2 formularios UNSIGNED |
 | `reproduction_status` | `audit_only` |
 
-Informe: [`audit/sgpt/Z3_REDUCED_TRAINING_PROTOCOL_REPORT.md`](audit/sgpt/Z3_REDUCED_TRAINING_PROTOCOL_REPORT.md)
+Informe: `audit/sgpt/Z3_P2A_ARTIFACT_AND_MODEL_LOAD_REPORT.md`
 
 ---
 
-## 4. Siguiente prompt (único)
+## 3. Siguiente prompt (único)
 
-Tras firma de `HUMAN_Z3_ARTIFACT_AND_MODEL_PREFLIGHT_APPROVAL.md`:
+Tras firma de training approval:
 
-**Prompt 14B — Descarga controlada de artefactos GPT-2 y preflight offline de carga SGPT Z3, ZERO_COST, sin train.**
-
-→ [`docs/plan-sync/NEXT_PROMPT_GUIDANCE.md`](docs/plan-sync/NEXT_PROMPT_GUIDANCE.md)
+**Prompt 14C — Ejecución SGPT Z3 one-step reduced training smoke, ZERO_COST, sin Table 4.**
 
 ---
 
-## 5. PE1–PE4
+## 4. PE1–PE4
 
 | PE | Estado |
 |---|---|
@@ -69,11 +55,11 @@ Tras firma de `HUMAN_Z3_ARTIFACT_AND_MODEL_PREFLIGHT_APPROVAL.md`:
 
 ---
 
-## 6. Registro Prompt 14A
+## 5. Registro Prompt 14B
 
 | Campo | Valor |
 |---|---|
-| commit inicial | `9d7f9412c663544251c73582f7b6c7db79446555` |
-| ARTIFACT_COMMIT | b560eae6c407d9f797c1ef4db702c36bde06ebb3 |
-| FINAL_HEAD / CONTENT tip | b560eae6c407d9f797c1ef4db702c36bde06ebb3 |
-| push | done |
+| commit inicial | `ba31ecfd82dff9bf57752305005e43a73a88a657` |
+| ARTIFACT_COMMIT | PENDING_ARTIFACT |
+| FINAL_HEAD | PENDING_FINAL |
+| push | pending |

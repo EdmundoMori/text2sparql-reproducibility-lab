@@ -1,29 +1,25 @@
 # ENVIRONMENT_GATE — SGPT
 
-**Actualizado:** Prompt **14A** (protocolo Z3 documental)
+**Actualizado:** Prompt **14B** (P1+P2A)
 
-## Gate Z2 (cerrado — evidencia runtime)
+## Gate Z2 (cerrado)
 
 | Campo | Valor |
 |---|---|
 | **Gate Z2** | **`Z2_ENV_READY_PREFLIGHT_PASS`** |
-| Z1 | `COMPLETE_DOCUMENTED` |
-| Z2 | `COMPLETE_Z2_CORE_PREFLIGHT` |
-| Auth 13A | `AUTHORIZED_AND_CONSUMED_13A` |
-| Freeze SHA-256 | `916d4b76a980ed1b558eb3bb26122f5e6dca9e02ffaeb5ee8e553f7cd66e71a5` |
+| Auth 13A | `AUTHORIZED_AND_CONSUMED_13A` (no reutilizada) |
 
-## Gate Z3 (documental — Prompt 14A)
+## Gate Z3
 
 | Campo | Valor |
 |---|---|
-| **Gate Z3** | **`READY_FOR_Z3_ARTIFACT_PREFLIGHT_AUTHORIZATION`** |
-| RUN_ID | `20260721T134213Z` |
-| Variante | lcquad2 QUESTION_ONLY CPU |
-| Canary | 1/1/1 (no representativo) |
-| Expected steps | 1 (validar pre-run) |
-| GPT-2 / TBX / train | **NOT_DOWNLOADED / NOT_EXECUTED** |
+| Protocolo 14A | `READY_FOR_Z3_ARTIFACT_PREFLIGHT_AUTHORIZATION` → **consumido** |
+| **Gate Z3 actual** | **`READY_FOR_Z3_ONE_STEP_TRAINING_AUTHORIZATION`** |
+| P2A | `Z3_P2A_MODEL_LOAD_PREFLIGHT_PASS` |
+| Auth 14B | `AUTHORIZED_AND_CONSUMED_14B_P1_P2A` |
+| P2B / train | **no** autorizados / **no** ejecutados |
 | Coste | **0.00** |
 
 ## Siguiente
 
-Firma humana de `HUMAN_Z3_ARTIFACT_AND_MODEL_PREFLIGHT_APPROVAL.md`, luego **Prompt 14B** (sin train).
+Firmar `HUMAN_Z3_ONE_STEP_TRAINING_APPROVAL.md` → **Prompt 14C** (one-step; sin Table 4).

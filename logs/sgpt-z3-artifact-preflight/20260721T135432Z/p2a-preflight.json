@@ -1,0 +1,84 @@
+/opt/probe.py:52: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  import pkg_resources
+Some weights of GPT2LMHeadModel were not initialized from the model checkpoint at /models/gpt2 and are newly initialized: ['decoder.0.enc_attn.w_qs.bias', 'encoder.4.slf_attn.w_qs.bias', 'decoder.4.enc_attn.w_ks.bias', 'encoder.4.slf_attn.w_qs.weight', 'decoder.4.enc_attn.layer_norm.weight', 'decoder.1.slf_attn.w_ks.bias', 'encoder.4.pos_ffn.w_2.weight', 'decoder.1.enc_attn.layer_norm.weight', 'encoder.5.pos_ffn.w_2.bias', 'encoder.3.slf_attn.layer_norm.weight', 'encoder.0.pos_ffn.layer_norm.bias', 'decoder.4.pos_ffn.w_2.bias', 'h.7.attn.masked_bias', 'decoder.4.enc_attn.w_ks.weight', 'encoder.1.pos_ffn.layer_norm.bias', 'encoder.5.slf_attn.w_vs.bias', 'decoder.0.enc_attn.w_ks.bias', 'decoder.1.enc_attn.w_ks.weight', 'encoder.5.slf_attn.w_qs.bias', 'decoder.3.enc_attn.layer_norm.bias', 'decoder.3.enc_attn.fc.weight', 'encoder.3.slf_attn.fc.weight', 'encoder.5.slf_attn.w_ks.weight', 'decoder.4.enc_attn.fc.weight', 'decoder.2.slf_attn.w_qs.bias', 'encoder.4.slf_attn.w_vs.weight', 'decoder.4.slf_attn.w_ks.bias', 'decoder.2.pos_ffn.w_2.weight', 'decoder.2.enc_attn.w_qs.weight', 'encoder.2.slf_attn.fc.bias', 'h.11.attn.masked_bias', 'encoder.1.slf_attn.fc.bias', 'decoder.2.slf_attn.fc.weight', 'decoder.3.enc_attn.layer_norm.weight', 'decoder.1.pos_ffn.layer_norm.weight', 'encoder.1.pos_ffn.w_2.bias', 'decoder.4.pos_ffn.w_2.weight', 'h.1.attn.masked_bias', 'decoder.1.enc_attn.fc.bias', 'decoder.0.pos_ffn.layer_norm.weight', 'h.3.attn.masked_bias', 'decoder.1.enc_attn.w_vs.bias', 'encoder.2.slf_attn.w_ks.bias', 'decoder.4.enc_attn.w_qs.bias', 'encoder.1.slf_attn.w_ks.weight', 'encoder.1.pos_ffn.layer_norm.weight', 'decoder.5.slf_attn.layer_norm.weight', 'encoder.2.slf_attn.w_qs.weight', 'decoder.3.slf_attn.fc.bias', 'encoder.3.pos_ffn.layer_norm.bias', 'decoder.3.enc_attn.w_vs.weight', 'decoder.2.enc_attn.fc.weight', 'encoder.4.slf_attn.w_ks.weight', 'decoder.1.enc_attn.w_qs.bias', 'encoder.3.pos_ffn.w_1.bias', 'encoder.1.slf_attn.w_qs.bias', 'decoder.5.pos_ffn.w_2.weight', 'decoder.2.slf_attn.w_ks.bias', 'decoder.3.slf_attn.fc.weight', 'encoder.1.slf_attn.w_vs.weight', 'decoder.1.slf_attn.layer_norm.bias', 'decoder.5.slf_attn.w_vs.bias', 'encoder.0.slf_attn.fc.bias', 'decoder.2.pos_ffn.layer_norm.weight', 'decoder.4.slf_attn.fc.bias', 'encoder.2.slf_attn.layer_norm.bias', 'encoder.4.pos_ffn.w_2.bias', 'decoder.0.enc_attn.w_vs.weight', 'encoder.4.pos_ffn.layer_norm.weight', 'decoder.3.pos_ffn.layer_norm.weight', 'encoder.3.slf_attn.fc.bias', 'encoder.0.pos_ffn.layer_norm.weight', 'decoder.3.slf_attn.w_ks.weight', 'encoder.5.pos_ffn.layer_norm.weight', 'decoder.3.enc_attn.w_vs.bias', 'decoder.3.enc_attn.w_ks.weight', 'encoder.0.pos_ffn.w_1.bias', 'encoder.0.slf_attn.w_qs.weight', 'decoder.4.slf_attn.w_qs.weight', 'encoder.2.slf_attn.layer_norm.weight', 'decoder.1.enc_attn.layer_norm.bias', 'encoder.5.pos_ffn.w_1.weight', 'h.5.attn.masked_bias', 'decoder.3.pos_ffn.w_2.weight', 'decoder.0.enc_attn.w_vs.bias', 'decoder.4.slf_attn.w_qs.bias', 'decoder.5.slf_attn.layer_norm.bias', 'encoder.1.slf_attn.w_qs.weight', 'encoder.5.slf_attn.w_ks.bias', 'decoder.1.pos_ffn.w_2.weight', 'decoder.4.enc_attn.w_qs.weight', 'decoder.0.slf_attn.w_ks.bias', 'decoder.0.enc_attn.fc.weight', 'decoder.5.enc_attn.w_vs.weight', 'decoder.0.enc_attn.w_qs.weight', 'decoder.3.pos_ffn.layer_norm.bias', 'decoder.5.enc_attn.w_ks.weight', 'decoder.1.enc_attn.w_qs.weight', 'decoder.5.enc_attn.w_qs.bias', 'decoder.5.enc_attn.w_qs.weight', 'encoder.2.pos_ffn.w_2.bias', 'decoder.5.slf_attn.w_vs.weight', 'h.9.attn.masked_bias', 'decoder.5.pos_ffn.layer_norm.bias', 'decoder.2.pos_ffn.w_1.weight', 'encoder.4.pos_ffn.w_1.bias', 'encoder.4.slf_attn.layer_norm.weight', 'decoder.4.slf_attn.layer_norm.bias', 'encoder.2.pos_ffn.w_1.bias', 'decoder.2.slf_attn.w_vs.bias', 'decoder.3.slf_attn.w_qs.bias', 'encoder.4.pos_ffn.layer_norm.bias', 'decoder.5.pos_ffn.w_1.bias', 'decoder.0.enc_attn.layer_norm.bias', 'decoder.3.pos_ffn.w_1.weight', 'encoder.0.slf_attn.layer_norm.bias', 'decoder.1.enc_attn.w_ks.bias', 'encoder.1.slf_attn.w_vs.bias', 'decoder.2.enc_attn.w_qs.bias', 'decoder.0.slf_attn.fc.bias', 'encoder.5.pos_ffn.w_2.weight', 'encoder.2.pos_ffn.w_2.weight', 'depl.weight', 'decoder.2.enc_attn.w_vs.bias', 'encoder.5.slf_attn.w_qs.weight', 'encoder.2.pos_ffn.w_1.weight', 'encoder.4.slf_attn.fc.weight', 'decoder.1.slf_attn.w_vs.weight', 'decoder.0.slf_attn.layer_norm.weight', 'decoder.0.pos_ffn.w_1.weight', 'encoder.4.slf_attn.w_vs.bias', 'encoder.2.slf_attn.fc.weight', 'encoder.3.slf_attn.w_qs.bias', 'decoder.2.pos_ffn.layer_norm.bias', 'decoder.4.enc_attn.fc.bias', 'encoder.5.slf_attn.w_vs.weight', 'decoder.0.pos_ffn.w_1.bias', 'decoder.5.enc_attn.layer_norm.bias', 'decoder.5.enc_attn.w_ks.bias', 'encoder.1.pos_ffn.w_1.bias', 'decoder.2.slf_attn.w_vs.weight', 'encoder.0.pos_ffn.w_2.bias', 'h.6.attn.masked_bias', 'decoder.4.slf_attn.w_ks.weight', 'decoder.2.slf_attn.fc.bias', 'encoder.3.slf_attn.w_vs.bias', 'encoder.5.pos_ffn.layer_norm.bias', 'decoder.5.enc_attn.w_vs.bias', 'decoder.4.enc_attn.layer_norm.bias', 'encoder.0.slf_attn.w_vs.bias', 'decoder.2.enc_attn.layer_norm.weight', 'encoder.3.pos_ffn.w_2.bias', 'encoder.0.slf_attn.w_qs.bias', 'decoder.3.slf_attn.w_ks.bias', 'decoder.0.pos_ffn.layer_norm.bias', 'decoder.0.pos_ffn.w_2.bias', 'dep.weight', 'decoder.1.pos_ffn.layer_norm.bias', 'pose.weight', 'decoder.2.enc_attn.fc.bias', 'encoder.4.slf_attn.w_ks.bias', 'decoder.1.pos_ffn.w_1.weight', 'encoder.4.slf_attn.layer_norm.bias', 'decoder.1.enc_attn.fc.weight', 'h.2.attn.masked_bias', 'decoder.1.slf_attn.fc.bias', 'h.8.attn.masked_bias', 'decoder.1.slf_attn.w_ks.weight', 'decoder.1.pos_ffn.w_2.bias', 'decoder.2.enc_attn.layer_norm.bias', 'decoder.1.enc_attn.w_vs.weight', 'encoder.1.pos_ffn.w_1.weight', 'encoder.5.slf_attn.layer_norm.bias', 'decoder.4.slf_attn.fc.weight', 'decoder.1.slf_attn.w_qs.bias', 'encoder.4.pos_ffn.w_1.weight', 'decoder.1.pos_ffn.w_1.bias', 'decoder.2.enc_attn.w_ks.weight', 'decoder.2.enc_attn.w_vs.weight', 'decoder.5.slf_attn.w_qs.weight', 'decoder.3.slf_attn.w_vs.bias', 'encoder.0.slf_attn.w_ks.weight', 'decoder.3.slf_attn.w_qs.weight', 'encoder.5.slf_attn.fc.bias', 'encoder.3.slf_attn.w_ks.bias', 'decoder.4.pos_ffn.layer_norm.weight', 'decoder.4.pos_ffn.w_1.weight', 'decoder.3.enc_attn.w_qs.weight', 'decoder.5.enc_attn.fc.weight', 'encoder.0.slf_attn.fc.weight', 'lm_head.weight', 'encoder.1.slf_attn.layer_norm.bias', 'encoder.0.slf_attn.w_vs.weight', 'encoder.1.slf_attn.w_ks.bias', 'encoder.2.slf_attn.w_qs.bias', 'encoder.0.pos_ffn.w_2.weight', 'encoder.3.slf_attn.layer_norm.bias', 'decoder.2.pos_ffn.w_2.bias', 'decoder.3.pos_ffn.w_2.bias', 'decoder.3.enc_attn.w_ks.bias', 'decoder.1.slf_attn.fc.weight', 'decoder.5.slf_attn.fc.weight', 'h.10.attn.masked_bias', 'decoder.3.slf_attn.w_vs.weight', 'decoder.0.enc_attn.w_ks.weight', 'decoder.4.slf_attn.w_vs.bias', 'decoder.2.enc_attn.w_ks.bias', 'encoder.0.slf_attn.layer_norm.weight', 'h.0.attn.masked_bias', 'decoder.1.slf_attn.w_qs.weight', 'h.4.attn.masked_bias', 'encoder.1.pos_ffn.w_2.weight', 'decoder.3.pos_ffn.w_1.bias', 'decoder.1.slf_attn.layer_norm.weight', 'decoder.5.slf_attn.fc.bias', 'encoder.0.slf_attn.w_ks.bias', 'decoder.2.pos_ffn.w_1.bias', 'decoder.5.pos_ffn.w_1.weight', 'decoder.0.slf_attn.w_vs.bias', 'decoder.0.slf_attn.fc.weight', 'encoder.4.slf_attn.fc.bias', 'decoder.0.enc_attn.fc.bias', 'decoder.5.enc_attn.fc.bias', 'decoder.2.slf_attn.layer_norm.bias', 'decoder.5.pos_ffn.w_2.bias', 'encoder.3.pos_ffn.w_2.weight', 'decoder.0.slf_attn.w_qs.weight', 'decoder.5.slf_attn.w_ks.bias', 'decoder.2.slf_attn.layer_norm.weight', 'decoder.0.slf_attn.w_vs.weight', 'decoder.5.slf_attn.w_qs.bias', 'encoder.1.slf_attn.layer_norm.weight', 'decoder.0.slf_attn.w_ks.weight', 'encoder.2.slf_attn.w_ks.weight', 'encoder.2.slf_attn.w_vs.bias', 'encoder.3.slf_attn.w_ks.weight', 'decoder.2.slf_attn.w_ks.weight', 'decoder.0.enc_attn.layer_norm.weight', 'decoder.3.slf_attn.layer_norm.weight', 'encoder.5.slf_attn.layer_norm.weight', 'encoder.2.slf_attn.w_vs.weight', 'decoder.4.pos_ffn.layer_norm.bias', 'decoder.0.slf_attn.layer_norm.bias', 'decoder.4.enc_attn.w_vs.bias', 'decoder.3.enc_attn.w_qs.bias', 'decoder.2.slf_attn.w_qs.weight', 'decoder.4.enc_attn.w_vs.weight', 'encoder.2.pos_ffn.layer_norm.bias', 'encoder.5.slf_attn.fc.weight', 'decoder.1.slf_attn.w_vs.bias', 'decoder.5.enc_attn.layer_norm.weight', 'decoder.0.pos_ffn.w_2.weight', 'encoder.0.pos_ffn.w_1.weight', 'decoder.5.slf_attn.w_ks.weight', 'decoder.5.pos_ffn.layer_norm.weight', 'decoder.4.slf_attn.w_vs.weight', 'decoder.3.enc_attn.fc.bias', 'encoder.1.slf_attn.fc.weight', 'decoder.4.pos_ffn.w_1.bias', 'decoder.0.slf_attn.w_qs.bias', 'encoder.3.pos_ffn.w_1.weight', 'encoder.3.slf_attn.w_qs.weight', 'encoder.2.pos_ffn.layer_norm.weight', 'encoder.3.pos_ffn.layer_norm.weight', 'decoder.3.slf_attn.layer_norm.bias', 'encoder.5.pos_ffn.w_1.bias', 'decoder.4.slf_attn.layer_norm.weight', 'encoder.3.slf_attn.w_vs.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Creating examples
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 128.26it/s]
+{
+  "classification": "Z3_P2A_MODEL_LOAD_PREFLIGHT_PASS",
+  "stage": "P2A",
+  "forward_authorized": false,
+  "checks": {
+    "gpt2_path": "/models/gpt2",
+    "network_guard": "installed_after_torch_import",
+    "packages": {
+      "torch": "1.13.1+cpu",
+      "transformers": "4.25.1",
+      "tensorboardX": "2.5.1",
+      "protobuf": "3.20.1",
+      "cuda": false
+    },
+    "rss_mb_start": 201.23828125,
+    "import_scripts_model": true,
+    "import_train_no_main": true,
+    "loading_info": {
+      "n_missing": 268,
+      "n_unexpected": 0,
+      "n_mismatched": 0,
+      "missing_sample": [
+        "decoder.0.enc_attn.w_qs.bias",
+        "encoder.4.slf_attn.w_qs.bias",
+        "decoder.4.enc_attn.w_ks.bias",
+        "encoder.4.slf_attn.w_qs.weight",
+        "decoder.4.enc_attn.layer_norm.weight",
+        "decoder.1.slf_attn.w_ks.bias",
+        "encoder.4.pos_ffn.w_2.weight",
+        "decoder.1.enc_attn.layer_norm.weight",
+        "encoder.5.pos_ffn.w_2.bias",
+        "encoder.3.slf_attn.layer_norm.weight",
+        "encoder.0.pos_ffn.layer_norm.bias",
+        "decoder.4.pos_ffn.w_2.bias",
+        "h.7.attn.masked_bias",
+        "decoder.4.enc_attn.w_ks.weight",
+        "encoder.1.pos_ffn.layer_norm.bias",
+        "encoder.5.slf_attn.w_vs.bias",
+        "decoder.0.enc_attn.w_ks.bias",
+        "decoder.1.enc_attn.w_ks.weight",
+        "encoder.5.slf_attn.w_qs.bias",
+        "decoder.3.enc_attn.layer_norm.bias"
+      ],
+      "unexpected": [],
+      "mismatched": [],
+      "unexplained_missing": [],
+      "core_bad_missing": [],
+      "compatibility": "custom_sgpt_layers_expected_missing"
+    },
+    "model": {
+      "n_params": 223797504,
+      "dtypes": [
+        "torch.float32"
+      ],
+      "vocab_after_special": 50263,
+      "load_seconds": 7.405,
+      "rss_mb_after_load": 1774.03515625
+    },
+    "forward_executed": false,
+    "dataset": {
+      "n_train": 1,
+      "batch_keys": [
+        "non_dict"
+      ],
+      "collate_ok": true
+    },
+    "step_budget": {
+      "train_n": 1,
+      "train_batch_size": 1,
+      "len_dataloader": 1,
+      "grad_accum": 1,
+      "epochs": 1,
+      "expected_optimizer_steps": 1
+    }
+  },
+  "errors": [],
+  "elapsed_seconds": 9.968
+}

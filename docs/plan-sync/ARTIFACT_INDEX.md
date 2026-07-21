@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-21 (Prompt 14A)  
+**Última actualización:** 2026-07-21 (Prompt 14B)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -202,6 +202,10 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | P14A-RPT | Protocolo Z3 reduced train | `audit/sgpt/Z3_REDUCED_TRAINING_PROTOCOL_REPORT.md` | 14A |
 | P14A-DIR | Artefactos protocolo Z3 | `docs/protocols/sgpt/z3/20260721T134213Z/` | gate |
 | P14A-LOG | Logs Prompt 14A | `logs/protocol-definition-sgpt-z3/20260721T134213Z/` | metadata GET |
+| P14B-RPT | P2A artifact+load report | `audit/sgpt/Z3_P2A_ARTIFACT_AND_MODEL_LOAD_REPORT.md` | PASS |
+| P14B-AUTH | Auth 14B signed/consumed | `environments/sgpt/builds/20260721T135432Z/AUTHORIZATION_CONSUMPTION_RECORD.md` | Mori |
+| P14B-SMK | Harness P2A | `scripts/smoke/sgpt_z3_p2a_model_load_preflight.py` | offline |
+| P14B-LOG | Logs Prompt 14B | `logs/sgpt-z3-artifact-preflight/20260721T135432Z/` | integrity+P2A |
 
 ## Qué está / no está en GitHub
 

@@ -1,0 +1,20 @@
+# Z3 extension — derived from local Z2; DO NOT rebuild Z2 via auth 13A
+FROM text2sparql-lab/sgpt-z2-py38:20260721T114919Z
+ENV PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    TRANSFORMERS_OFFLINE=1 \
+    HF_HUB_OFFLINE=1 \
+    HF_DATASETS_OFFLINE=1
+# Only authorized packages; pin protobuf exactly
+RUN pip install --no-cache-dir \
+      'protobuf==3.20.1' \
+      'tensorboardX==2.5.1' \
+ && python - <<'PY'
+import tensorboardX, google.protobuf
+assert tensorboardX.__version__=='2.5.1'
+import pkg_resources
+assert pkg_resources.get_distribution('protobuf').version=='3.20.1'
+print('OK tensorboardX', tensorboardX.__version__, 'protobuf', pkg_resources.get_distribution('protobuf').version)
+PY
+WORKDIR /work
+CMD ["python3", "--version"]

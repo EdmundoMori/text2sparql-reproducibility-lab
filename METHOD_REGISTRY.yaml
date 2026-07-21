@@ -526,10 +526,10 @@ methods:
   adapter_legal_gate: conditional_deferred
   generality_class: retraining_required
   gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-  next_native_action: await_human_z3_artifact_preflight_approval_then_14B
+  next_native_action: await_human_z3_one_step_training_approval
   next_native_action_class: GO_NEXT_ZERO_COST
   gate_confidence: high
-  next_execution_prompt: Prompt_14B_controlled_GPT2_download_and_offline_model_preflight_ZERO_COST_no_train
+  next_execution_prompt: Prompt_14C_one_step_training_AFTER_human_approval_ZERO_COST
   execution_blockers:
   - checkpoint_absent_in_repo
   - vram_6GiB_vs_paper_2x12GB
@@ -538,11 +538,11 @@ methods:
   - metric_double_update_anomaly
   - gpt2_download_requires_network
   - epochs_cli_vs_params_json_divergence
-  notes: "Prompt 14A: Z3 reduced training protocol defined; gate READY_FOR_Z3_ARTIFACT_PREFLIGHT_AUTHORIZATION; canary 1/1/1;
-    expected steps 1; GPT-2/TBX NOT_DOWNLOADED; no train; audit_only; native_audit_complete=false; common_adapter_allowed=false."
+  notes: "Prompt 14B: GPT-2 verified + TBX/protobuf; Z3 image; P2A PASS; no forward/train; auth 14B consumed; audit_only;
+    native_audit_complete=false."
 
   zero_cost_gate_class: GO_NEXT_ZERO_COST
-  zero_cost_next_action: Prompt_14B_after_human_approval
+  zero_cost_next_action: Prompt_14C_after_training_approval
   zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
   zero_cost_gate_confidence: high
   environment_definition_artifact: audit/sgpt/ENVIRONMENT_DEFINITION_REPORT.md
@@ -609,7 +609,7 @@ methods:
   z3_protocol_status: defined_ready_for_artifact_preflight_authorization
   z3_protocol_run_id: 20260721T134213Z
   z3_protocol_artifact: audit/sgpt/Z3_REDUCED_TRAINING_PROTOCOL_REPORT.md
-  z3_protocol_gate: READY_FOR_Z3_ARTIFACT_PREFLIGHT_AUTHORIZATION
+  z3_protocol_gate: READY_FOR_Z3_ONE_STEP_TRAINING_AUTHORIZATION
   z3_variant: lcquad2_question_only_cpu
   z3_dataset: lcquad2
   z3_canary_status: proposed_deterministic_1_1_1
@@ -619,21 +619,24 @@ methods:
   z3_expected_optimizer_steps: 1
   z3_gpt2_repository: openai-community/gpt2
   z3_gpt2_revision: 607a30d783dfa663caf39e06633721c8d4cfcd7e
-  z3_gpt2_artifact_status: NOT_DOWNLOADED
-  z3_summary_writer_dependency: tensorboardX==2.5.1
-  z3_model_preflight_status: NOT_EXECUTED
-  z3_download_authorization_status: UNSIGNED_FORM_READY
+  z3_gpt2_artifact_status: DOWNLOADED_AND_VERIFIED_14B
+  z3_summary_writer_dependency: tensorboardX==2.5.1_INSTALLED
+  z3_model_preflight_status: Z3_P2A_MODEL_LOAD_PREFLIGHT_PASS
+  z3_download_authorization_status: AUTHORIZED_AND_CONSUMED_14B_P1_P2A
   z3_training_authorization_status: UNSIGNED_FORM_READY
   z3_training_execution_status: NOT_EXECUTED
   z3_resource_budget_status: PROPOSED_RESOURCE_BOUND
   z3_claim_boundary: reduced_training_smoke_only_future_max
   remaining_z3_blockers:
-  - human_artifact_preflight_authorization_unsigned
-  - gpt2_not_downloaded
-  - tensorboardX_not_installed
-  - z3_image_not_built
-  - model_load_not_executed
-  - one_step_training_not_authorized
+  - human_one_step_training_authorization_unsigned
+  - one_step_training_not_executed
+  - table4_not_reproduced
+  - checkpoints_absent_paper
+  z3_protobuf_pin: 3.20.1_INSTALLED
+  z3_p2b_status: NOT_AUTHORIZED
+  z3_build_run_id: 20260721T135432Z
+  z3_build_image: text2sparql-lab/sgpt-z3-py38:20260721T135432Z
+  z3_p2a_report: audit/sgpt/Z3_P2A_ARTIFACT_AND_MODEL_LOAD_REPORT.md
 - method_id: tebaqa
   display_name: TeBaQA
   repositories:
