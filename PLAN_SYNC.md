@@ -94,5 +94,5 @@ No ejecutar en 11C. No chat smoke. No OpenRouter.
 | commit inicial | `60590cc000cc18c76c796ca7a4655c07c658ffda` |
 | gate online | `NO_GO_ECONOMIC_ZERO_COST_POLICY` |
 | GO_NEXT_ZERO_COST | `Z1` / `sgpt` |
-| commit final | _(tras push)_ |
-| push | _(pendiente)_ |
+| commit final | `32f597c006d95b5603bf2fc4f5c18f423df28ca8` |
+| push | confirmado en origin/main |
