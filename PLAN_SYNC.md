@@ -77,5 +77,5 @@ Informe: [`audit/sgpt/ENVIRONMENT_DEFINITION_REPORT.md`](audit/sgpt/ENVIRONMENT_
 |---|---|
 | commit inicial | `d7b199c9caf8035e88eedf717ab7926dcc2d7a11` |
 | gate | `CONDITIONAL_DEPENDENCY_RESOLUTION` |
-| commit final | _(tras push)_ |
-| push | _(pendiente)_ |
+| commit final | `dbdefdf4bffc04d5f7ea231ee068e7b9cdfaeea6` |
+| push | confirmado en origin/main |
