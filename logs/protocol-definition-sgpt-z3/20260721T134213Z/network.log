@@ -1,0 +1,5 @@
+GET huggingface.co/api/models/openai-community/gpt2
+GET huggingface.co/api/models/openai-community/gpt2/revision/607a30d783dfa663caf39e06633721c8d4cfcd7e
+GET pypi.org/pypi/tensorboardX/2.5.1/json
+no_binary_download
+GET .../revision/.../?blobs=true

@@ -2,11 +2,11 @@
 
 **Audiencia:** ChatGPT e investigador.  
 **Repo:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-**Última actualización:** 2026-07-21 (Prompt **13B** — cierre Z1/Z2 + re-gate post-Z2)  
+**Última actualización:** 2026-07-21 (Prompt **14A** — protocolo Z3 documental)  
 **Fase:** 1 — native audit; **abierta**  
-**SHA inicial 13B:** `9d9d578cb62533576a40fe00e29342a87710a80d`
+**SHA inicial 14A:** `9d7f9412c663544251c73582f7b6c7db79446555`
 
-> ZERO_COST. Z1/Z2 **cerrados**. Auth 13A **consumida**. Sin GPT-2 / spaCy / NLTK data / train. Sin rebuild.
+> ZERO_COST. Z1/Z2 cerrados. Z3 **protocolo definido**. Sin GPT-2 download, sin train, sin model load.
 
 ---
 
@@ -16,47 +16,43 @@ reproducción nativa → evaluación común → caso de estudio → errores → 
 
 ---
 
-## 2. Cierre Prompt 13A (metadata corregida)
+## 2. Metadata Prompt 13B (reconciliada)
 
 | Campo | Valor |
 |---|---|
-| RUN_ID | `20260721T114919Z` |
-| Clasificación | `Z2_ENV_IMPORT_DATA_METRIC_PASS` |
-| Gate | `Z2_ENV_READY_PREFLIGHT_PASS` |
-| **ARTIFACT_COMMIT** | `fa82586bea8c7932843aee1cf4d0cffea63b7f4a` |
-| **FINAL_HEAD (pre-13B)** | `9d9d578cb62533576a40fe00e29342a87710a80d` |
-| Commits intermedios (no usar como final) | `bca804c3…`, `7f9b54c4…` |
-| Auth | `AUTHORIZED_AND_CONSUMED_13A` |
-| Freeze SHA-256 | `916d4b76a980ed1b558eb3bb26122f5e6dca9e02ffaeb5ee8e553f7cd66e71a5` |
-| Entorno | Z2 CPU runtime verificado (no *native paper environment*) |
-| Preflight | core imports/data/métricas unidad; **no** model execution |
+| ARTIFACT_COMMIT | `15e918540b7de616751ce06b96ef8de4f25f0f75` |
+| CONTENT_HEAD | `15e918540b7de616751ce06b96ef8de4f25f0f75` |
+| publication metadata commits | `f753cbf6…`, `979d7275…`, `94ef66a2…` |
+| remote tip after 13B publication | `9d7f9412c663544251c73582f7b6c7db79446555` |
 
 ---
 
-## 3. Prompt 13B — resumen
+## 3. Prompt 14A — resumen
 
 | Campo | Valor |
 |---|---|
-| Modo | documental (sin Docker/pip/download) |
-| Z1 | `COMPLETE_DOCUMENTED` |
-| Z2 | `COMPLETE_Z2_CORE_PREFLIGHT` |
-| Matriz evidencia | `audit/sgpt/Z2_EVIDENCE_MATRIX.csv` |
-| Matriz post-Z2 | `audit/POST_Z2_ZERO_COST_ACTION_MATRIX.csv` |
-| Cola post-Z2 | `audit/POST_Z2_ZERO_COST_QUEUE.csv` |
-| **GO_NEXT_ZERO_COST** | **PZ1** protocolo Z3 reduced training (documental) |
+| Acción | PZ1 protocolo Z3 |
+| RUN_ID | `20260721T134213Z` |
+| Gate | **`READY_FOR_Z3_ARTIFACT_PREFLIGHT_AUTHORIZATION`** |
+| Variante | lcquad2 QUESTION_ONLY CPU |
+| Subset | 1/1/1 uids 8714 / 3988 / 6077 |
+| Expected optimizer steps | **1** (validar pre-run) |
+| GPT-2 | `openai-community/gpt2` @ `607a30d783dfa663caf39e06633721c8d4cfcd7e` |
+| tensorboardX | `2.5.1` |
+| Descargas / install / load / forward / train | **0** |
 | Coste | **0.00** |
+| Auths | 2 formularios UNSIGNED |
 | `reproduction_status` | `audit_only` |
-| `native_audit_complete` | `false` |
-| `common_adapter_allowed` | `false` |
 
-Informe: [`audit/sgpt/Z2_CLOSURE_AND_POST_Z2_REGATE_REPORT.md`](audit/sgpt/Z2_CLOSURE_AND_POST_Z2_REGATE_REPORT.md)  
-Decisión: [`audit/NEXT_POST_Z2_ZERO_COST_DECISION.md`](audit/NEXT_POST_Z2_ZERO_COST_DECISION.md)
+Informe: [`audit/sgpt/Z3_REDUCED_TRAINING_PROTOCOL_REPORT.md`](audit/sgpt/Z3_REDUCED_TRAINING_PROTOCOL_REPORT.md)
 
 ---
 
 ## 4. Siguiente prompt (único)
 
-**Prompt 14A — Definición documental del protocolo SGPT Z3 reduced training smoke, ZERO_COST, sin descarga de GPT-2 y sin train.**
+Tras firma de `HUMAN_Z3_ARTIFACT_AND_MODEL_PREFLIGHT_APPROVAL.md`:
+
+**Prompt 14B — Descarga controlada de artefactos GPT-2 y preflight offline de carga SGPT Z3, ZERO_COST, sin train.**
 
 → [`docs/plan-sync/NEXT_PROMPT_GUIDANCE.md`](docs/plan-sync/NEXT_PROMPT_GUIDANCE.md)
 
@@ -67,18 +63,17 @@ Decisión: [`audit/NEXT_POST_Z2_ZERO_COST_DECISION.md`](audit/NEXT_POST_Z2_ZERO_
 | PE | Estado |
 |---|---|
 | PE1 | substantially_answered |
-| PE2 | partial_evidence + `SGPT_Z2_ENVIRONMENT_AND_CORE_PREFLIGHT_VERIFIED` |
+| PE2 | partial_evidence |
 | PE3 | not_started |
 | PE4 | partial_evidence |
 
 ---
 
-## 6. Registro Prompt 13B
+## 6. Registro Prompt 14A
 
 | Campo | Valor |
 |---|---|
-| commit inicial | `9d9d578cb62533576a40fe00e29342a87710a80d` |
-| ARTIFACT_COMMIT | 15e918540b7de616751ce06b96ef8de4f25f0f75 |
-| FINAL_HEAD | 15e918540b7de616751ce06b96ef8de4f25f0f75 |
-| push | done |
-| publication_metadata_commit | `94ef66a2286354a15280ed0aaa3460168522bd14` |
+| commit inicial | `9d7f9412c663544251c73582f7b6c7db79446555` |
+| ARTIFACT_COMMIT | PENDING_ARTIFACT |
+| FINAL_HEAD / CONTENT tip | PENDING_FINAL |
+| push | pending |

@@ -1,0 +1,29 @@
+{
+  "dataset_args": {
+    "input_max_tokens": 50,
+    "knowledge_max_tokens": 50
+  },
+  "task": "generation",
+  "model_name_or_path": "__LOCAL_PINNED_GPT2_PATH__",
+  "per_gpu_train_batch_size": 1,
+  "per_gpu_eval_batch_size": 1,
+  "gradient_accumulation_steps": 1,
+  "learning_rate": 6.25e-05,
+  "adam_epsilon": 1e-08,
+  "max_grad_norm": 1,
+  "num_train_epochs": 1,
+  "warmup_steps": 0,
+  "fp16": "",
+  "seed": 42,
+  "_protocol_notes": {
+    "epochs_cli_mandatory": "--epochs 1",
+    "do_not_trust_json_epochs_alone": true,
+    "expected_optimizer_steps_formula": "floor(len(train_dataloader) / gradient_accumulation_steps) * num_train_epochs",
+    "with_canary_assumptions": "train_n=1; per_gpu_train_batch_size=1; n_gpu=0\u2192max(1,0)=1; grad_accum=1; epochs=1 \u2192 expected_steps=1",
+    "pre_run_formula_validation_required": true,
+    "divergence_is_nogo": true,
+    "learning_rate_source": "upstream config/gpt-2-base/params.json",
+    "no_hyperparameter_search": true,
+    "main_hardcode_train_batch_size_2": "train.py:298 overwritten inside train() via per_gpu"
+  }
+}

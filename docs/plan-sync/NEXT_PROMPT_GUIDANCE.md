@@ -1,17 +1,21 @@
 # NEXT_PROMPT_GUIDANCE
 
 **Fecha:** 2026-07-21  
-**Tras:** Prompt 13B — cierre Z1/Z2 + re-gate post-Z2
+**Tras:** Prompt 14A — protocolo Z3 reduced training (documental)
 
-## Prompt recomendado (único)
+## Prerrequisito humano
 
-**Título:** Prompt 14A — Definición documental del protocolo SGPT Z3 reduced training smoke, ZERO_COST, sin descarga de GPT-2 y sin train.
+Completar y firmar:
+`docs/protocols/sgpt/z3/20260721T134213Z/HUMAN_Z3_ARTIFACT_AND_MODEL_PREFLIGHT_APPROVAL.md`
+
+## Prompt recomendado (único) tras aprobación
+
+**Título:** Prompt 14B — Descarga controlada de artefactos GPT-2 y preflight offline de carga SGPT Z3, ZERO_COST, sin train.
 
 **Método:** `sgpt`  
-**Acción:** PZ1 `GO_NEXT_ZERO_COST`  
-**Objetivo:** Documentar protocolo de smoke de entrenamiento reducido (subset, steps, recursos, outputs, stop conditions, matriz de autorización futura). **Sin** descarga GPT-2, **sin** train, **sin** rebuild Z2, **sin** Table 4.
+**Objetivo:** P1+P2A (y P2B solo si marcado): descarga GPT-2 fijada + tensorboardX + load preflight offline. **Sin** train. **Sin** Table 4.
 
-**Restricciones:** ZERO_COST; auth 13A no reutilizable; conservar `audit_only`; `native_audit_complete=false`; `common_adapter_allowed=false`.
+**Restricciones:** ZERO_COST; no reutilizar auth 13A; conservar `audit_only`.
 
 ## Objetivo de fase
 

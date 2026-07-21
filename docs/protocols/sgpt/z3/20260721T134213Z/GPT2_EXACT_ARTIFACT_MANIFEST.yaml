@@ -1,0 +1,57 @@
+repository: openai-community/gpt2
+alias_gpt2_relation: "string 'gpt2' historically resolves to this repo; future runs MUST use local pinned path — alias mutability UNKNOWN/INFERENCE until verified at download time"
+revision: "607a30d783dfa663caf39e06633721c8d4cfcd7e"
+license: mit
+evidence_class: OFFICIAL_METADATA_VERIFIED
+metadata_queries:
+  - https://huggingface.co/api/models/openai-community/gpt2
+  - https://huggingface.co/api/models/openai-community/gpt2/revision/607a30d783dfa663caf39e06633721c8d4cfcd7e?blobs=true
+workdir_responses: workdir/metadata/sgpt-z3/20260721T134213Z/
+downloaded_in_14A: false
+status: NOT_DOWNLOADED
+prefer_pytorch_bin_reason: "safetensors not in Z2 freeze; torch 1.13.1+cpu + transformers 4.25.1 load pytorch_model.bin"
+
+required:
+  - name: config.json
+    size_bytes: 665
+    lfs_sha256: null
+    file_sha256: PENDING_UNTIL_DOWNLOAD
+  - name: pytorch_model.bin
+    size_bytes: 548118077
+    lfs_sha256: "7c5d3f4b8b76583b422fcb9189ad6c89d5d97a094541ce8932dce3ecabde1421"
+    file_sha256: PENDING_UNTIL_DOWNLOAD
+  - name: vocab.json
+    size_bytes: 1042301
+    lfs_sha256: null
+    file_sha256: PENDING_UNTIL_DOWNLOAD
+  - name: merges.txt
+    size_bytes: 456318
+    lfs_sha256: null
+    file_sha256: PENDING_UNTIL_DOWNLOAD
+  - name: tokenizer_config.json
+    size_bytes: 26
+    lfs_sha256: null
+    file_sha256: PENDING_UNTIL_DOWNLOAD
+
+optional_or_redundant:
+  - name: tokenizer.json
+    size_bytes: 1355256
+    download: false
+  - name: generation_config.json
+    size_bytes: 124
+    download: false
+  - name: README.md
+    size_bytes: 8092
+    download: false
+  - name: model.safetensors
+    size_bytes: 548105171
+    lfs_sha256: "248dfc3911869ec493c76e65bf2fcf7f615828b0254c12b473182f0f81d3a707"
+    download: false
+    note: do_not_download_alternate_formats
+
+rules:
+  - no_mutable_main
+  - local_path_only_at_execution
+  - no_tf_jax_onnx_tflite
+  - hashes_of_small_files_pending_until_download
+  - do_not_invent_hashes

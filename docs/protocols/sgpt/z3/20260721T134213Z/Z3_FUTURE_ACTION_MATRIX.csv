@@ -1,0 +1,10 @@
+action_id,action,current_status,download_required,execution_required,model_execution,training,authorization_required,expected_evidence,prerequisites,stop_conditions,next_class
+A,GPT2_AND_TENSORBOARDX_METADATA_CLOSURE,done_in_14A,false,false,false,false,false,metadata manifests,none,n/a,DOCUMENT_ONLY_DONE
+B,GPT2_AND_TENSORBOARDX_DOWNLOAD_AUTHORIZATION,pending_unsigned,false,false,false,false,true,signed approval,A,unsigned form,READY_FOR_HUMAN_APPROVAL
+C,CONTROLLED_ARTIFACT_DOWNLOAD,blocked,true,false,false,false,true,local GPT2+TBX files,B,incomplete/hash fail,GO_AFTER_DOWNLOAD_AUTHORIZATION
+D,Z3_ENVIRONMENT_EXTENSION,blocked,true,true,false,false,true,Z3 image+freeze,C;local Z2 image,image missing→rebuild auth,GO_AFTER_DOWNLOAD_AUTHORIZATION
+E,MODEL_LOAD_PREFLIGHT,blocked,false,true,false,false,true,P2A evidence,D,load fail,GO_AFTER_ARTIFACT_PREFLIGHT_AUTH
+F,OPTIONAL_NO_GRAD_FORWARD_PREFLIGHT,blocked,false,true,true,false,true,P2B evidence,E;explicit mark,forward unauthorized,GO_AFTER_EXPLICIT_FORWARD_AUTH
+G,ONE_STEP_TRAINING_AUTHORIZATION,pending_unsigned,false,false,false,false,true,signed train approval,E_or_F,unsigned,READY_FOR_HUMAN_APPROVAL
+H,ONE_STEP_TRAINING_EXECUTION,blocked,false,true,true,true,true,Z3_ONE_STEP_PASS,G,any abort code,GO_AFTER_PROTOCOL
+I,Z3_EVIDENCE_CLOSURE,blocked,false,false,false,false,false,inventory+regate,H,missing artifacts,DOCUMENT_ONLY

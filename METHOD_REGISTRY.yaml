@@ -36,8 +36,7 @@ methods:
     doi_or_id: "10.48550/arXiv.2512.14277"
     publisher_doi: UNKNOWN
     arxiv_comment: "Under Review"
-    authors: ["Panayiotis Smeros", "Vincent Emonet", "Ruijie Wang", "Ana-Claudia Sima", "Tarcisio Mendes
-        de Farias"]
+    authors: ["Panayiotis Smeros", "Vincent Emonet", "Ruijie Wang", "Ana-Claudia Sima", "Tarcisio Mendes de Farias"]
   artifacts:
     checkpoints: absent_in_repo
     processed_datasets: absent_in_repo
@@ -136,9 +135,8 @@ methods:
   - virtuoso_text2sparql_blocked_on_host
   - host_python_3_10_incompatible_typing_Required
   - investigator_zero_usd_blocks_openrouter_smoke
-  notes: "Prompt 11C: ZERO_COST policy; online_smoke_gate=NO_GO_ECONOMIC_ZERO_COST_POLICY; Prompt 12 chat
-    CANCELLED. Lab GO_NEXT_ZERO_COST=SGPT_ENVIRONMENT_DEFINITION. reproduction_status remains smoke_only.
-    native_audit_complete=false; common_adapter_allowed=false."
+  notes: "Prompt 11C: ZERO_COST policy; online_smoke_gate=NO_GO_ECONOMIC_ZERO_COST_POLICY; Prompt 12 chat CANCELLED. Lab GO_NEXT_ZERO_COST=SGPT_ENVIRONMENT_DEFINITION.
+    reproduction_status remains smoke_only. native_audit_complete=false; common_adapter_allowed=false."
 
   paid_api_execution_allowed: false
   max_external_monetary_cost_usd: 0.0
@@ -162,8 +160,8 @@ methods:
     last_push_utc: "2026-07-07T08:59:37Z"
     fork: false
   paper:
-    title: "Text-to-SPARQL Goes Beyond English: Multilingual Question Answering Over Knowledge Graphs
-      through Human-Inspired Reasoning"
+    title: "Text-to-SPARQL Goes Beyond English: Multilingual Question Answering Over Knowledge Graphs through Human-Inspired
+      Reasoning"
     year: 2025
     publication_status: workshop_proceedings_published
     venue: "TEXT2SPARQL Challenge @ ESWC 2025; CEUR-WS Vol. 4094"
@@ -237,8 +235,7 @@ methods:
     publication_status: published_article
     venue: "SEMANTiCS 2024 / IOS Press SSW"
     doi_or_id: "10.3233/SSW240028"
-    authors: ["Hamada M. Zahera", "Manzoor Ali", "Mohamed Ahmed Sherif", "Diego Moussallem", "Axel-Cyrille
-        Ngonga Ngomo"]
+    authors: ["Hamada M. Zahera", "Manzoor Ali", "Mohamed Ahmed Sherif", "Diego Moussallem", "Axel-Cyrille Ngonga Ngomo"]
   artifacts:
     checkpoints: absent_in_repo_external_hf
     processed_datasets: partial
@@ -292,9 +289,9 @@ methods:
   - assert_empty_question_concatenation_bug
   - import_side_effect_loads_MiniLM
   - validation_is_HTTP_200_not_local_syntax
-  notes: "WAVE_C Prompt 7A static audit complete. Not end-to-end: external EL/RL + gold-annotated one-shot
-    retrieval + GPTQ LLM. CoT is prompt-induced. reproduction_status remains audit_only; native_audit_complete=false;
-    common_adapter_allowed=false; license LICENSE_NOT_CONFIRMED."
+  notes: "WAVE_C Prompt 7A static audit complete. Not end-to-end: external EL/RL + gold-annotated one-shot retrieval + GPTQ
+    LLM. CoT is prompt-induced. reproduction_status remains audit_only; native_audit_complete=false; common_adapter_allowed=false;
+    license LICENSE_NOT_CONFIRMED."
 
   zero_cost_gate_class: HOLD_HARDWARE
   zero_cost_next_action: hold_legal_and_hardware
@@ -378,9 +375,8 @@ methods:
   - xueli_data_and_Snellius_hardcoded_paths
   - Llama3_8B_fp16_exceeds_local_6GiB
   - sparql_results_csv_partial_coverage
-  notes: "WAVE_C Prompt 7B static complete. MIT on HF checkpoint does NOT license GitHub code. Results
-    versioned (~458MiB) are RESULT_FILE_VERIFIED not local reproduction. Native reproduction not_ready.
-    common_adapter_allowed=false."
+  notes: "WAVE_C Prompt 7B static complete. MIT on HF checkpoint does NOT license GitHub code. Results versioned (~458MiB)
+    are RESULT_FILE_VERIFIED not local reproduction. Native reproduction not_ready. common_adapter_allowed=false."
 
   zero_cost_gate_class: DOCUMENT_ONLY
   zero_cost_next_action: FIRESPARQL_RESULT_CONSISTENCY_AUDIT_deferred
@@ -465,8 +461,8 @@ methods:
   - ruby_bundler_ABSENT_on_host
   - sparql_yaml_mutation_on_run
   - possible_divergence_vendored_vs_companion_pin
-  notes: "Prompt 11C: rdfconfig legal closure DOCUMENT_ONLY (not GO_NEXT). Interim re-gate rdfconfig GO_NEXT
-    superseded. Prefer Zenodo; never run in-place on upstream."
+  notes: "Prompt 11C: rdfconfig legal closure DOCUMENT_ONLY (not GO_NEXT). Interim re-gate rdfconfig GO_NEXT superseded. Prefer
+    Zenodo; never run in-place on upstream."
 
   zero_cost_gate_class: DOCUMENT_ONLY
   zero_cost_next_action: RDFCONFIG_SOURCE_LICENSE_CLOSURE_deferred
@@ -530,10 +526,10 @@ methods:
   adapter_legal_gate: conditional_deferred
   generality_class: retraining_required
   gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-  next_native_action: define_z3_reduced_training_protocol_documentary
+  next_native_action: await_human_z3_artifact_preflight_approval_then_14B
   next_native_action_class: GO_NEXT_ZERO_COST
   gate_confidence: high
-  next_execution_prompt: Prompt_14A_SGPT_Z3_reduced_training_protocol_ZERO_COST_no_gpt2_no_train
+  next_execution_prompt: Prompt_14B_controlled_GPT2_download_and_offline_model_preflight_ZERO_COST_no_train
   execution_blockers:
   - checkpoint_absent_in_repo
   - vram_6GiB_vs_paper_2x12GB
@@ -542,12 +538,11 @@ methods:
   - metric_double_update_anomaly
   - gpt2_download_requires_network
   - epochs_cli_vs_params_json_divergence
-  notes: "Prompt 13B: Z1 COMPLETE_DOCUMENTED; Z2 COMPLETE_Z2_CORE_PREFLIGHT; auth 13A consumed; freeze
-    sha256 916d4b76…; GO_NEXT PZ1 protocol 14A; no GPT-2/train; audit_only; native_audit_complete=false;
-    common_adapter_allowed=false."
+  notes: "Prompt 14A: Z3 reduced training protocol defined; gate READY_FOR_Z3_ARTIFACT_PREFLIGHT_AUTHORIZATION; canary 1/1/1;
+    expected steps 1; GPT-2/TBX NOT_DOWNLOADED; no train; audit_only; native_audit_complete=false; common_adapter_allowed=false."
 
   zero_cost_gate_class: GO_NEXT_ZERO_COST
-  zero_cost_next_action: Prompt_14A
+  zero_cost_next_action: Prompt_14B_after_human_approval
   zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
   zero_cost_gate_confidence: high
   environment_definition_artifact: audit/sgpt/ENVIRONMENT_DEFINITION_REPORT.md
@@ -560,7 +555,7 @@ methods:
   transformers_pin_status: INSTALLED_4.25.1_RUNTIME_VERIFIED
   gpt2_download_status: not_downloaded
   z2_preflight_status: Z2_ENV_IMPORT_DATA_METRIC_PASS
-  z3_reduced_training_status: blocked_pending_protocol_and_authorization
+  z3_reduced_training_status: protocol_defined_awaiting_artifact_authorization
   remaining_environment_blockers:
   - nltk_data_not_authorized
   - gpt2_not_authorized
@@ -611,6 +606,34 @@ methods:
   post_z2_queue_artifact: audit/POST_Z2_ZERO_COST_QUEUE.csv
   pe2_evidence_tags:
   - SGPT_Z2_ENVIRONMENT_AND_CORE_PREFLIGHT_VERIFIED
+  z3_protocol_status: defined_ready_for_artifact_preflight_authorization
+  z3_protocol_run_id: 20260721T134213Z
+  z3_protocol_artifact: audit/sgpt/Z3_REDUCED_TRAINING_PROTOCOL_REPORT.md
+  z3_protocol_gate: READY_FOR_Z3_ARTIFACT_PREFLIGHT_AUTHORIZATION
+  z3_variant: lcquad2_question_only_cpu
+  z3_dataset: lcquad2
+  z3_canary_status: proposed_deterministic_1_1_1
+  z3_canary_train_size: 1
+  z3_canary_val_size: 1
+  z3_canary_test_size: 1
+  z3_expected_optimizer_steps: 1
+  z3_gpt2_repository: openai-community/gpt2
+  z3_gpt2_revision: 607a30d783dfa663caf39e06633721c8d4cfcd7e
+  z3_gpt2_artifact_status: NOT_DOWNLOADED
+  z3_summary_writer_dependency: tensorboardX==2.5.1
+  z3_model_preflight_status: NOT_EXECUTED
+  z3_download_authorization_status: UNSIGNED_FORM_READY
+  z3_training_authorization_status: UNSIGNED_FORM_READY
+  z3_training_execution_status: NOT_EXECUTED
+  z3_resource_budget_status: PROPOSED_RESOURCE_BOUND
+  z3_claim_boundary: reduced_training_smoke_only_future_max
+  remaining_z3_blockers:
+  - human_artifact_preflight_authorization_unsigned
+  - gpt2_not_downloaded
+  - tensorboardX_not_installed
+  - z3_image_not_built
+  - model_load_not_executed
+  - one_step_training_not_authorized
 - method_id: tebaqa
   display_name: TeBaQA
   repositories:
@@ -629,8 +652,8 @@ methods:
     publication_status: published_article
     venue: "Studies on the Semantic Web (IOS Press)"
     doi_or_id: "10.3233/SSW210038"
-    authors: ["Daniel Vollmers", "Rricha Jalota", "Diego Moussallem", "Hardik Topiwala", "Axel-Cyrille
-        Ngonga Ngomo", "Ricardo Usbeck"]
+    authors: ["Daniel Vollmers", "Rricha Jalota", "Diego Moussallem", "Hardik Topiwala", "Axel-Cyrille Ngonga Ngomo", "Ricardo
+        Usbeck"]
   artifacts:
     checkpoints: n_a_ml_classifiers
     processed_datasets: external_indices

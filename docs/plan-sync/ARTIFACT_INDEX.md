@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-21 (Prompt 13B)  
+**Última actualización:** 2026-07-21 (Prompt 14A)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -199,6 +199,9 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | P13B-DEC | Decisión post-Z2 | `audit/NEXT_POST_Z2_ZERO_COST_DECISION.md` | PZ1 GO |
 | P13B-Q | Cola post-Z2 | `audit/POST_Z2_ZERO_COST_QUEUE.csv` | operativa |
 | P13B-LOG | Logs Prompt 13B | `logs/sgpt-z2-closure-regate/` | documental |
+| P14A-RPT | Protocolo Z3 reduced train | `audit/sgpt/Z3_REDUCED_TRAINING_PROTOCOL_REPORT.md` | 14A |
+| P14A-DIR | Artefactos protocolo Z3 | `docs/protocols/sgpt/z3/20260721T134213Z/` | gate |
+| P14A-LOG | Logs Prompt 14A | `logs/protocol-definition-sgpt-z3/20260721T134213Z/` | metadata GET |
 
 ## Qué está / no está en GitHub
 

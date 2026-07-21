@@ -1,0 +1,46 @@
+{
+  "algorithm": "sgpt-z3-canary-v1",
+  "length_limits": {
+    "question_chars_max": 200,
+    "sparql_chars_max": 500
+  },
+  "embedding_bound": 50,
+  "selection": {
+    "train": {
+      "split": "train",
+      "uid": 8714,
+      "selection_key_sha256": "00045aa6a0915d88d2f5f0477f8e6dd3d028da644539ec0b62a7b66ba5d9ce13",
+      "record_sha256": "9bec27f17bdec58e145a83caa6fb62e962d4299be8504ab9c2c70c4c3b74ab78",
+      "question_chars": 100,
+      "sparql_chars": 89,
+      "n_valid_candidates": 21491,
+      "n_split": 21497
+    },
+    "val": {
+      "split": "val",
+      "uid": 3988,
+      "selection_key_sha256": "000ce196104e7db58f3dff6712aba2d5b8cfffa9af3a2d6fe22cf422be25b88d",
+      "record_sha256": "472dedd3e90fef308ea160f534ea427ae31a65e3192100fc80e4137660be7f08",
+      "question_chars": 66,
+      "sparql_chars": 107,
+      "n_valid_candidates": 2388,
+      "n_split": 2389
+    },
+    "test": {
+      "split": "test",
+      "uid": 6077,
+      "selection_key_sha256": "0023a477dfafecf230f76d482dd700cf9ef3992af85babd6388aeb2b7ccf552b",
+      "record_sha256": "04c8d8b13f704aa19b00b468b33aa8e753c1020fc71d57a99a077a124c7a033b",
+      "question_chars": 57,
+      "sparql_chars": 91,
+      "n_valid_candidates": 5969,
+      "n_split": 5969
+    }
+  },
+  "subset_manifest_sha256": "97f3c8b40c140ed5d88fa3426a5d0800ce9f77f4961f5c33249a3ffd0e77e37e",
+  "labels": [
+    "PROPOSED_CANARY",
+    "RESOURCE_CANARY_NOT_REPRESENTATIVE",
+    "NOT_FOR_METRIC_COMPARISON"
+  ]
+}

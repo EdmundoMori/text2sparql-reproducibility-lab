@@ -1,0 +1,20 @@
+risk_id,risk,source,probability,impact,detection,mitigation,stop_condition,residual_risk,evidence
+R01,GPT-2 alias mutable,HF hub,med,high,pin revision+local path,local path only,abort if main used,med,OFFICIAL_METADATA_VERIFIED
+R02,artifacts incompletos,download,med,high,manifest check,checksum gate,abort incomplete,low,PROPOSED_PROTOCOL
+R03,tensorboardX missing,train import,high,high,pip show preflight,install in Z3 ext,abort import fail,low,CODE_VERIFIED
+R04,import train.py failure,deps,med,high,P2 import probe,fix deps,Z3_ENTRYPOINT_IMPORT_FAILED,med,CODE_VERIFIED
+R05,custom model key mismatches,scripts.model,med,high,loading_info,document mismatches,abort unexpected critical,med,CODE_VERIFIED
+R06,CPU RAM exhaustion,host 7.4GiB,high,high,RSS monitors,5-6GiB limits,Z3_OOM_ABORT,med,PROPOSED_RESOURCE_BOUND
+R07,slow backward,CPU,med,med,timeout,3600s budget,Z3_TIMEOUT_ABORT,med,PROPOSED_RESOURCE_BOUND
+R08,checkpoint disk amplification,save_pretrained,med,med,du watch,6GiB output budget,Z3_DISK_BUDGET_ABORT,med,CODE_VERIFIED
+R09,epochs -1 bug,train.py:267,high,high,require --epochs 1,CLI mandatory,NO-GO without flag,low,CODE_VERIFIED
+R10,step-count mismatch,dataloader math,med,high,pre-run formula,validate len(dl),Z3_STEP_COUNT_MISMATCH,med,PROPOSED_PROTOCOL
+R11,dataroot ignored,dataset_lcquad2,high,high,place subset at data/lcquad2,disposable copy,abort wrong data root,low,CODE_VERIFIED
+R12,feature embedding IDs >=50,model.py Emb(50),med,high,canary filter,uid selection,Z3_DATASET_CANARY_FAILED,low,DATA_VERIFIED
+R13,query length,tokens,med,med,char limits+max_tokens,truncate behavior unknown,monitor OOM,med,PROPOSED_CANARY
+R14,nonfinite loss,train step,low,high,isnan check,abort,Z3_NONFINITE_LOSS,med,PROPOSED_PROTOCOL
+R15,eval loop side effects,metrics anomalies,med,med,accept as SIDE_EFFECT,no metric claims,do not claim quality,med,CODE_VERIFIED
+R16,auth reuse,process,med,high,separate forms,consume after use,Z3_UNAUTHORIZED_ACTION_ABORT,low,HUMAN_DECISION_VERIFIED
+R17,network leakage,HF default,med,high,--network none,block,Z3_UNEXPECTED_NETWORK_ABORT,low,PROPOSED_PROTOCOL
+R18,Table 4 overclaim,comms,med,high,claim boundary,forbid labels,stop overclaim,low,PROPOSED_PROTOCOL
+R19,freeze 2026 ≠ paper env,Z2,high,med,label reduced smoke,no paper lock claim,document limitation,med,FREEZE/ENVIRONMENT

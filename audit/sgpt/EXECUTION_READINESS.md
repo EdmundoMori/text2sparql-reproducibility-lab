@@ -60,3 +60,18 @@ Ver checklist en respuesta del agente y `STATIC_AUDIT.md` §26.
 - Gate: `Z2_ENV_READY_PREFLIGHT_PASS`
 - Siguiente: Prompt **14A** (protocolo Z3 documental; sin GPT-2; sin train)
 - Conservado: `audit_only`; `native_audit_complete=false`; `common_adapter_allowed=false`; PE3 `not_started`
+
+
+---
+
+## Prompt 14A — Z3 protocol definition (añadido)
+
+- RUN_ID: `20260721T134213Z`
+- Gate Z3: `READY_FOR_Z3_ARTIFACT_PREFLIGHT_AUTHORIZATION`
+- Variante: lcquad2 QUESTION_ONLY CPU canary 1/1/1; expected optimizer steps = 1 (validar pre-run)
+- GPT-2: `openai-community/gpt2` @ `607a30d7…` — **NOT_DOWNLOADED**
+- tensorboardX==2.5.1 — **NOT_DOWNLOADED**
+- Auths: dos formularios UNSIGNED en `docs/protocols/sgpt/z3/20260721T134213Z/`
+- Informe: `audit/sgpt/Z3_REDUCED_TRAINING_PROTOCOL_REPORT.md`
+- Gate Z2 permanece cerrado: `Z2_ENV_READY_PREFLIGHT_PASS`
+- Conservado: `audit_only`; PE3 `not_started`; sin train
