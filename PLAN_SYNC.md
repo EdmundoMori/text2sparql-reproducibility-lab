@@ -92,5 +92,5 @@ Gate dir: [`docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/`](doc
 | commit inicial | `df41c8c5ad7404c491cb0164dbba7be37b40a228` |
 | RUN_ID | `20260721T100618Z` |
 | gate | `READY_FOR_HUMAN_APPROVAL` |
-| commit final | _(se registra tras push)_ |
-| push | _(pendiente)_ |
+| commit final | `ee477c9d1d37b86d03593c141cd90577f7f1ba43` |
+| push | confirmado en origin/main |
