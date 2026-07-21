@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-21 (Prompt 13A)  
+**Última actualización:** 2026-07-21 (Prompt 13B)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -188,6 +188,17 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | P13A-DF | Dockerfile Z2 build | `environments/sgpt/builds/20260721T114919Z/Dockerfile.z2-py38` | built |
 | P13A-SMK | Harness offline Z2 | `scripts/smoke/sgpt_z2_offline_preflight.py` | network none |
 | P13A-LOG | Logs Prompt 13A | `logs/environment-z2-build-sgpt/20260721T114919Z/` | freeze+preflight |
+| P13B-RPT | Cierre Z2 + re-gate | `audit/sgpt/Z2_CLOSURE_AND_POST_Z2_REGATE_REPORT.md` | 13B |
+| P13B-AUTH | Auth consumption | `environments/sgpt/builds/20260721T114919Z/AUTHORIZATION_CONSUMPTION_RECORD.md` | consumed |
+| P13B-MAN | Z2 run manifest | `environments/sgpt/builds/20260721T114919Z/Z2_RUN_MANIFEST.yaml` | CLOSED |
+| P13B-FRZ | Freeze resuelto | `environments/sgpt/builds/20260721T114919Z/z2-resolved-freeze.txt` | sha256 |
+| P13B-EV | Matriz evidencia Z2 | `audit/sgpt/Z2_EVIDENCE_MATRIX.csv` | scope |
+| P13B-LIM | Scope preflight | `audit/sgpt/Z2_PREFLIGHT_SCOPE_AND_LIMITATIONS.md` | limitations |
+| P13B-CL | Cierre Z1/Z2 | `audit/sgpt/ZERO_COST_Z1_Z2_CLOSURE.md` | COMPLETE |
+| P13B-MX | Matriz post-Z2 | `audit/POST_Z2_ZERO_COST_ACTION_MATRIX.csv` | PZ1-PZ12 |
+| P13B-DEC | Decisión post-Z2 | `audit/NEXT_POST_Z2_ZERO_COST_DECISION.md` | PZ1 GO |
+| P13B-Q | Cola post-Z2 | `audit/POST_Z2_ZERO_COST_QUEUE.csv` | operativa |
+| P13B-LOG | Logs Prompt 13B | `logs/sgpt-z2-closure-regate/` | documental |
 
 ## Qué está / no está en GitHub
 

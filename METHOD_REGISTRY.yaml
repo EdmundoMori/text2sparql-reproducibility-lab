@@ -36,8 +36,8 @@ methods:
     doi_or_id: "10.48550/arXiv.2512.14277"
     publisher_doi: UNKNOWN
     arxiv_comment: "Under Review"
-    authors: ["Panayiotis Smeros", "Vincent Emonet", "Ruijie Wang", "Ana-Claudia Sima",
-      "Tarcisio Mendes de Farias"]
+    authors: ["Panayiotis Smeros", "Vincent Emonet", "Ruijie Wang", "Ana-Claudia Sima", "Tarcisio Mendes
+        de Farias"]
   artifacts:
     checkpoints: absent_in_repo
     processed_datasets: absent_in_repo
@@ -117,8 +117,7 @@ methods:
   model_budget_gate_artifact: docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/
   model_budget_final_report: audit/sparql_llm/LOCAL_CHAT_API_MODEL_BUDGET_FINAL_GATE_REPORT.md
   economic_nogo_run_id: "20260721T103536Z"
-  economic_nogo_artifact: 
-    docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/ECONOMIC_NO_GO_DECISION.md
+  economic_nogo_artifact: docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/ECONOMIC_NO_GO_DECISION.md
   comparative_gate_rerun_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md
 
   native_gate_class: NO_GO_ECONOMIC_online_path
@@ -137,9 +136,9 @@ methods:
   - virtuoso_text2sparql_blocked_on_host
   - host_python_3_10_incompatible_typing_Required
   - investigator_zero_usd_blocks_openrouter_smoke
-  notes: "Prompt 11C: ZERO_COST policy; online_smoke_gate=NO_GO_ECONOMIC_ZERO_COST_POLICY;
-    Prompt 12 chat CANCELLED. Lab GO_NEXT_ZERO_COST=SGPT_ENVIRONMENT_DEFINITION. reproduction_status
-    remains smoke_only. native_audit_complete=false; common_adapter_allowed=false."
+  notes: "Prompt 11C: ZERO_COST policy; online_smoke_gate=NO_GO_ECONOMIC_ZERO_COST_POLICY; Prompt 12 chat
+    CANCELLED. Lab GO_NEXT_ZERO_COST=SGPT_ENVIRONMENT_DEFINITION. reproduction_status remains smoke_only.
+    native_audit_complete=false; common_adapter_allowed=false."
 
   paid_api_execution_allowed: false
   max_external_monetary_cost_usd: 0.0
@@ -163,8 +162,8 @@ methods:
     last_push_utc: "2026-07-07T08:59:37Z"
     fork: false
   paper:
-    title: "Text-to-SPARQL Goes Beyond English: Multilingual Question Answering Over
-      Knowledge Graphs through Human-Inspired Reasoning"
+    title: "Text-to-SPARQL Goes Beyond English: Multilingual Question Answering Over Knowledge Graphs
+      through Human-Inspired Reasoning"
     year: 2025
     publication_status: workshop_proceedings_published
     venue: "TEXT2SPARQL Challenge @ ESWC 2025; CEUR-WS Vol. 4094"
@@ -214,8 +213,7 @@ methods:
   - ram_risk_e5_large
   - double_agent_import_in_main
   - requests_missing_from_requirements
-  notes: "LICENSE_NOT_CONFIRMED. native_reproduction_ready=not_ready_or_weak (reconciled
-    with WAVE_A_EXECUTION_READINESS)."
+  notes: "LICENSE_NOT_CONFIRMED. native_reproduction_ready=not_ready_or_weak (reconciled with WAVE_A_EXECUTION_READINESS)."
 
   zero_cost_gate_class: HOLD_LEGAL
   zero_cost_next_action: hold_until_license
@@ -239,8 +237,8 @@ methods:
     publication_status: published_article
     venue: "SEMANTiCS 2024 / IOS Press SSW"
     doi_or_id: "10.3233/SSW240028"
-    authors: ["Hamada M. Zahera", "Manzoor Ali", "Mohamed Ahmed Sherif", "Diego Moussallem",
-      "Axel-Cyrille Ngonga Ngomo"]
+    authors: ["Hamada M. Zahera", "Manzoor Ali", "Mohamed Ahmed Sherif", "Diego Moussallem", "Axel-Cyrille
+        Ngonga Ngomo"]
   artifacts:
     checkpoints: absent_in_repo_external_hf
     processed_datasets: partial
@@ -294,10 +292,9 @@ methods:
   - assert_empty_question_concatenation_bug
   - import_side_effect_loads_MiniLM
   - validation_is_HTTP_200_not_local_syntax
-  notes: "WAVE_C Prompt 7A static audit complete. Not end-to-end: external EL/RL +
-    gold-annotated one-shot retrieval + GPTQ LLM. CoT is prompt-induced. reproduction_status
-    remains audit_only; native_audit_complete=false; common_adapter_allowed=false;
-    license LICENSE_NOT_CONFIRMED."
+  notes: "WAVE_C Prompt 7A static audit complete. Not end-to-end: external EL/RL + gold-annotated one-shot
+    retrieval + GPTQ LLM. CoT is prompt-induced. reproduction_status remains audit_only; native_audit_complete=false;
+    common_adapter_allowed=false; license LICENSE_NOT_CONFIRMED."
 
   zero_cost_gate_class: HOLD_HARDWARE
   zero_cost_next_action: hold_legal_and_hardware
@@ -321,8 +318,7 @@ methods:
     license_status: CONFIRMED_MODEL_CARD
     license_spdx: MIT
   paper:
-    title: "FIRESPARQL: A LLM-Based Framework for SPARQL Query Generation over Scholarly
-      Knowledge Graphs"
+    title: "FIRESPARQL: A LLM-Based Framework for SPARQL Query Generation over Scholarly Knowledge Graphs"
     year: 2025
     publication_status: published_article
     venue: "IC3K 2025 KDIR (SCITEPRESS)"
@@ -382,9 +378,9 @@ methods:
   - xueli_data_and_Snellius_hardcoded_paths
   - Llama3_8B_fp16_exceeds_local_6GiB
   - sparql_results_csv_partial_coverage
-  notes: "WAVE_C Prompt 7B static complete. MIT on HF checkpoint does NOT license
-    GitHub code. Results versioned (~458MiB) are RESULT_FILE_VERIFIED not local reproduction.
-    Native reproduction not_ready. common_adapter_allowed=false."
+  notes: "WAVE_C Prompt 7B static complete. MIT on HF checkpoint does NOT license GitHub code. Results
+    versioned (~458MiB) are RESULT_FILE_VERIFIED not local reproduction. Native reproduction not_ready.
+    common_adapter_allowed=false."
 
   zero_cost_gate_class: DOCUMENT_ONLY
   zero_cost_next_action: FIRESPARQL_RESULT_CONSISTENCY_AUDIT_deferred
@@ -417,14 +413,12 @@ methods:
     last_push_utc: "2026-07-16T04:54:33Z"
     fork: false
   paper:
-    title: "Accurate SPARQL generation via in-context learning and schema-based query
-      construction"
+    title: "Accurate SPARQL generation via in-context learning and schema-based query construction"
     year: 2026
     publication_status: published_article
     venue: "Bioinformatics (OUP)"
     doi_or_id: "10.1093/bioinformatics/btag174"
-    authors: ["Hikaru Nagazumi", "Yuki Moriya", "Shuichi Kawashima", "Toshiaki Katayama",
-      "Kana Shimizu"]
+    authors: ["Hikaru Nagazumi", "Yuki Moriya", "Shuichi Kawashima", "Toshiaki Katayama", "Kana Shimizu"]
   artifacts:
     checkpoints: n_a_api_llm
     processed_datasets: present
@@ -471,8 +465,8 @@ methods:
   - ruby_bundler_ABSENT_on_host
   - sparql_yaml_mutation_on_run
   - possible_divergence_vendored_vs_companion_pin
-  notes: "Prompt 11C: rdfconfig legal closure DOCUMENT_ONLY (not GO_NEXT). Interim
-    re-gate rdfconfig GO_NEXT superseded. Prefer Zenodo; never run in-place on upstream."
+  notes: "Prompt 11C: rdfconfig legal closure DOCUMENT_ONLY (not GO_NEXT). Interim re-gate rdfconfig GO_NEXT
+    superseded. Prefer Zenodo; never run in-place on upstream."
 
   zero_cost_gate_class: DOCUMENT_ONLY
   zero_cost_next_action: RDFCONFIG_SOURCE_LICENSE_CLOSURE_deferred
@@ -491,14 +485,12 @@ methods:
     last_push_utc: "2024-09-15T09:21:37Z"
     fork: false
   paper:
-    title: "SGPT: A Generative Approach for SPARQL Query Generation From Natural Language
-      Questions"
+    title: "SGPT: A Generative Approach for SPARQL Query Generation From Natural Language Questions"
     year: 2022
     publication_status: published_article
     venue: "IEEE Access"
     doi_or_id: "10.1109/ACCESS.2022.3188714"
-    authors: ["Md Rashad Al Hasan Rony", "Uttam Kumar", "Roman Teucher", "Liubov Kovriguina",
-      "Jens Lehmann"]
+    authors: ["Md Rashad Al Hasan Rony", "Uttam Kumar", "Roman Teucher", "Liubov Kovriguina", "Jens Lehmann"]
   table4_evidence: closed
   table4_source: "https://doi.org/10.1109/ACCESS.2022.3188714"
   artifacts:
@@ -526,7 +518,7 @@ methods:
   dataset_inventory_artifact: audit/sgpt/DATASET_INVENTORY.csv
   metrics_audit_artifact: audit/sgpt/METRICS_AUDIT.md
   checkpoint_status: absent_in_repo
-  environment_definition_status: documented_conditional_dependency_resolution
+  environment_definition_status: z2_environment_built_runtime_verified
   import_smoke_ready: conditional
   inference_smoke_ready: blocked
   training_smoke_ready: conditional
@@ -538,25 +530,24 @@ methods:
   adapter_legal_gate: conditional_deferred
   generality_class: retraining_required
   gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-  next_native_action: document_z2_closure_decide_next_zero_cost
+  next_native_action: define_z3_reduced_training_protocol_documentary
   next_native_action_class: GO_NEXT_ZERO_COST
   gate_confidence: high
-  next_execution_prompt: Prompt_13B_document_Z2_closure_and_zero_cost_queue
+  next_execution_prompt: Prompt_14A_SGPT_Z3_reduced_training_protocol_ZERO_COST_no_gpt2_no_train
   execution_blockers:
   - checkpoint_absent_in_repo
   - vram_6GiB_vs_paper_2x12GB
   - lcquad2_test_5969_vs_paper_6046
   - qald9_id_reuse_train_test_150
   - metric_double_update_anomaly
-  - transformers_unpinned
   - gpt2_download_requires_network
   - epochs_cli_vs_params_json_divergence
-  notes: "Prompt 13A: Z2 CPU image built; torch 1.13.1+cpu + transformers 4.25.1 verified;
-    preflight Z2_ENV_IMPORT_DATA_METRIC_PASS; no GPT-2/spaCy/NLTK data; cost 0. audit_only;
-    native_audit_complete=false; common_adapter_allowed=false."
+  notes: "Prompt 13B: Z1 COMPLETE_DOCUMENTED; Z2 COMPLETE_Z2_CORE_PREFLIGHT; auth 13A consumed; freeze
+    sha256 916d4b76…; GO_NEXT PZ1 protocol 14A; no GPT-2/train; audit_only; native_audit_complete=false;
+    common_adapter_allowed=false."
 
   zero_cost_gate_class: GO_NEXT_ZERO_COST
-  zero_cost_next_action: Prompt_13B
+  zero_cost_next_action: Prompt_14A
   zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
   zero_cost_gate_confidence: high
   environment_definition_artifact: audit/sgpt/ENVIRONMENT_DEFINITION_REPORT.md
@@ -569,12 +560,13 @@ methods:
   transformers_pin_status: INSTALLED_4.25.1_RUNTIME_VERIFIED
   gpt2_download_status: not_downloaded
   z2_preflight_status: Z2_ENV_IMPORT_DATA_METRIC_PASS
-  z3_reduced_training_status: blocked_pending_explicit_authorization
+  z3_reduced_training_status: blocked_pending_protocol_and_authorization
   remaining_environment_blockers:
   - nltk_data_not_authorized
   - gpt2_not_authorized
   - checkpoints_absent
   - table4_not_reproduced
+  - z3_protocol_not_yet_documented
   environment_artifacts: environments/sgpt/
   pin_resolution_status: direct_pins_candidate_ready
   pin_resolution_run_id: 20260721T113310Z
@@ -597,6 +589,28 @@ methods:
   z2_build_run_id: 20260721T114919Z
   z2_build_image: text2sparql-lab/sgpt-z2-py38:20260721T114919Z
   z2_build_report: audit/sgpt/Z2_BUILD_AND_PREFLIGHT_REPORT.md
+  historical_blockers:
+  - transformers_unpinned
+  z1_status: complete_documented
+  z2_status: complete_core_preflight
+  z2_environment_runtime_status: verified
+  z2_direct_pins_status: runtime_verified
+  z2_transitive_freeze_status: resolved_2026_not_native_paper_lock
+  z2_core_metric_status: verified
+  z2_full_metric_status: not_tested
+  z2_dataset_file_contract_status: verified
+  z2_dataset_class_status: not_tested
+  z2_model_import_status: not_tested
+  z2_authorization_status: AUTHORIZED_AND_CONSUMED_13A
+  z2_closure_artifact: audit/sgpt/ZERO_COST_Z1_Z2_CLOSURE.md
+  z2_evidence_matrix_artifact: audit/sgpt/Z2_EVIDENCE_MATRIX.csv
+  z2_resolved_freeze_artifact: environments/sgpt/builds/20260721T114919Z/z2-resolved-freeze.txt
+  z2_resolved_freeze_sha256: 916d4b76a980ed1b558eb3bb26122f5e6dca9e02ffaeb5ee8e553f7cd66e71a5
+  z2_run_manifest: environments/sgpt/builds/20260721T114919Z/Z2_RUN_MANIFEST.yaml
+  post_z2_decision_artifact: audit/NEXT_POST_Z2_ZERO_COST_DECISION.md
+  post_z2_queue_artifact: audit/POST_Z2_ZERO_COST_QUEUE.csv
+  pe2_evidence_tags:
+  - SGPT_Z2_ENVIRONMENT_AND_CORE_PREFLIGHT_VERIFIED
 - method_id: tebaqa
   display_name: TeBaQA
   repositories:
@@ -615,8 +629,8 @@ methods:
     publication_status: published_article
     venue: "Studies on the Semantic Web (IOS Press)"
     doi_or_id: "10.3233/SSW210038"
-    authors: ["Daniel Vollmers", "Rricha Jalota", "Diego Moussallem", "Hardik Topiwala",
-      "Axel-Cyrille Ngonga Ngomo", "Ricardo Usbeck"]
+    authors: ["Daniel Vollmers", "Rricha Jalota", "Diego Moussallem", "Hardik Topiwala", "Axel-Cyrille
+        Ngonga Ngomo", "Ricardo Usbeck"]
   artifacts:
     checkpoints: n_a_ml_classifiers
     processed_datasets: external_indices

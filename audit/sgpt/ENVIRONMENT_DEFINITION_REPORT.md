@@ -109,3 +109,19 @@ PE1 ok; PE2 partial (env doc); PE3 not_started; PE4 barriers refined.
 ## 25. Conclusión
 
 Entorno **documentado, no resuelto**. Coste 0. SGPT sigue `audit_only`. No train/Table 4.
+
+
+---
+
+## Prompt 13A/13B closure (añadido; no reescribe auditoría histórica)
+
+- **Z1:** `COMPLETE_DOCUMENTED`
+- **Z2:** `COMPLETE_Z2_CORE_PREFLIGHT` (`RUN_ID=20260721T114919Z`)
+- Autorización 13A: `AUTHORIZED_AND_CONSUMED_13A`
+- Freeze SHA-256: `916d4b76a980ed1b558eb3bb26122f5e6dca9e02ffaeb5ee8e553f7cd66e71a5`
+- Matriz evidencia: `audit/sgpt/Z2_EVIDENCE_MATRIX.csv`
+- Cierre: `audit/sgpt/ZERO_COST_Z1_Z2_CLOSURE.md`
+- Informe 13B: `audit/sgpt/Z2_CLOSURE_AND_POST_Z2_REGATE_REPORT.md`
+- Gate: `Z2_ENV_READY_PREFLIGHT_PASS`
+- Siguiente: Prompt **14A** (protocolo Z3 documental; sin GPT-2; sin train)
+- Conservado: `audit_only`; `native_audit_complete=false`; `common_adapter_allowed=false`; PE3 `not_started`

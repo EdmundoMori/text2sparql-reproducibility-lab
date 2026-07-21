@@ -1,16 +1,17 @@
 # NEXT_PROMPT_GUIDANCE
 
 **Fecha:** 2026-07-21  
-**Tras:** Prompt 13A — SGPT Z2 CPU build + preflight **PASS**
+**Tras:** Prompt 13B — cierre Z1/Z2 + re-gate post-Z2
 
 ## Prompt recomendado (único)
 
-**Título:** Prompt 13B — Cierre documental del entorno SGPT Z2 y decisión de cola ZERO_COST (sin Z3; sin train).
+**Título:** Prompt 14A — Definición documental del protocolo SGPT Z3 reduced training smoke, ZERO_COST, sin descarga de GPT-2 y sin train.
 
 **Método:** `sgpt`  
-**Objetivo:** Congelar evidencia RUNTIME_VERIFIED del Z2, actualizar cola ZERO_COST, decidir explícitamente si el siguiente paso es (a) NLTK data autorizado, (b) otro método $0, o (c) diferir. **Sin** GPT-2, **sin** train, **sin** Table 4.
+**Acción:** PZ1 `GO_NEXT_ZERO_COST`  
+**Objetivo:** Documentar protocolo de smoke de entrenamiento reducido (subset, steps, recursos, outputs, stop conditions, matriz de autorización futura). **Sin** descarga GPT-2, **sin** train, **sin** rebuild Z2, **sin** Table 4.
 
-**Restricciones:** ZERO_COST; no instalar más sin nueva autorización; conservar `audit_only`.
+**Restricciones:** ZERO_COST; auth 13A no reutilizable; conservar `audit_only`; `native_audit_complete=false`; `common_adapter_allowed=false`.
 
 ## Objetivo de fase
 

@@ -98,3 +98,14 @@ pin_resolution_12B:
   transformers_candidate_pin: "4.25.1"
   transformers_pin_status: SELECTED_CANDIDATE_UNTESTED
   status: pins_documented_not_installed
+
+# Prompt 13B closure fields
+z1_status: complete_documented
+z2_status: complete_core_preflight
+z2_run_id: "20260721T114919Z"
+z2_authorization_status: AUTHORIZED_AND_CONSUMED_13A
+z2_resolved_freeze: environments/sgpt/builds/20260721T114919Z/z2-resolved-freeze.txt
+z2_resolved_freeze_sha256: "916d4b76a980ed1b558eb3bb26122f5e6dca9e02ffaeb5ee8e553f7cd66e71a5"
+environment_gate: Z2_ENV_READY_PREFLIGHT_PASS
+reproduction_status_note: audit_only_unchanged
+

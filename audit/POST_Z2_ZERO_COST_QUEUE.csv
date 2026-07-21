@@ -1,0 +1,13 @@
+queue_order,action_id,method_id,action_class,action_type,action_title,external_cost_usd,prerequisites,expected_new_evidence,pe_impact,evidence_paths
+1,PZ1,sgpt,GO_NEXT_ZERO_COST,protocol_definition,SGPT Z3 reduced training protocol definition (no GPT-2 download; no train),0.00,Z1_Z2_closed;AUTH_13A_consumed,Z3_protocol_subset_steps_resources_outputs_stops,PE2_prep;PE4_protocol,audit/NEXT_POST_Z2_ZERO_COST_DECISION.md;audit/sgpt/ZERO_COST_Z1_Z2_CLOSURE.md
+2,PZ2,sgpt,GO_AFTER_DOWNLOAD_AUTHORIZATION,metric_extension,SGPT full NLTK metric preflight,0.00,new_nltk_download_auth,METEOR_or_NLTK_resource_unit_evidence,PE4_metric,audit/sgpt/METRIC_PREFLIGHT_BOUNDARY.md
+3,PZ3,sgpt,GO_AFTER_PROTOCOL,reduced_training_smoke,SGPT reduced training execution,0.00,PZ1;gpt2_auth;resource_ok,reduced_smoke_EXECUTION_VERIFIED_not_Table4,PE2_weak_not_PE3,audit/sgpt/TRAINING_CONFIGURATION_AUDIT.md
+4,PZ4,rdfconfig_llm,DOCUMENT_ONLY,legal_documental,RDF-config generator license closure,0.00,static_audit,LICENSE_status_may_UNKNOWN,PE4_LICENSE,audit/rdfconfig_llm/STATIC_AUDIT.md
+5,PZ5,rdfconfig_llm,DOCUMENT_ONLY,environment_definition,Companion rdf-config environment definition,0.00,companion_MIT;Ruby_ABSENT,Ruby_env_spec_not_generator,PE2_conditional,audit/rdfconfig_llm/COMPANION_RDF_CONFIG_AUDIT.md
+6,PZ6,firesparql,DOCUMENT_ONLY,result_audit,FIRESPARQL versioned result consistency closure,0.00,WAVE_C,result_consistency_not_reproduction,PE4,audit/firesparql/RESULT_PROVENANCE_AND_COMPLETENESS.md
+7,PZ7,firesparql,DOCUMENT_ONLY,lab_harness_protocol,FIRESPARQL lab-owned metric protocol,0.00,no_upstream_copy,lab_harness_protocol_only,PE4_METRIC,audit/firesparql/METRICS_AUDIT.md
+8,PZ8,sparql_llm,NO_GO_ZERO_COST_POLICY,online_smoke,SPARQL-LLM paid online smoke,gt_0,ZERO_COST_POLICY,none_while_policy,PE2_deferred,audit/ZERO_COST_POLICY.md
+9,PZ9,sparql_llm,SUBSTITUTION_NOT_NATIVE,substitution,SPARQL-LLM local LLM substitution,0.00,scientific_gate,labeled_deviation_only,PE2_deviation,audit/ZERO_COST_POLICY.md
+10,PZ10,mkgqagent,HOLD_LEGAL,any_executable,mKGQAgent execution,0.00,LICENSE_clarified,n_a,PE4_LICENSE,audit/mkgqagent/STATIC_AUDIT.md
+11,PZ11,cot_sparql,HOLD_HARDWARE,any_executable,CoT-SPARQL execution,0.00,LICENSE_HW_embeddings,n_a,PE4,audit/cot_sparql/EXECUTION_READINESS.md
+12,PZ12,lab,DEFERRED_LOW_INCREMENTAL_VALUE,phase_regate,Phase 1 evidence closure re-gate,0.00,only_if_no_incremental,meta_inventory,PE1-PE4_meta,PLAN_SYNC.md

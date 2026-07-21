@@ -1,0 +1,14 @@
+no_docker_pull
+no_docker_build
+no_docker_run
+no_pip
+no_download
+no_runtime_imports
+no_nltk_data
+no_gpt2
+no_spacy_models
+no_train
+no_infer
+no_metric_execution
+no_upstream_modification
+cost_usd=0.00
