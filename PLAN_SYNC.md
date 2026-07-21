@@ -74,6 +74,6 @@ Tras firma de `HUMAN_Z3_ARTIFACT_AND_MODEL_PREFLIGHT_APPROVAL.md`:
 | Campo | Valor |
 |---|---|
 | commit inicial | `9d7f9412c663544251c73582f7b6c7db79446555` |
-| ARTIFACT_COMMIT | PENDING_ARTIFACT |
-| FINAL_HEAD / CONTENT tip | PENDING_FINAL |
-| push | pending |
+| ARTIFACT_COMMIT | b560eae6c407d9f797c1ef4db702c36bde06ebb3 |
+| FINAL_HEAD / CONTENT tip | b560eae6c407d9f797c1ef4db702c36bde06ebb3 |
+| push | done |
