@@ -1,30 +1,29 @@
 # NEXT_PROMPT_GUIDANCE
 
 **Fecha:** 2026-07-21  
-**Tras:** Prompt 11 → modelo `openrouter/openai/gpt-4o-mini-2024-07-18`, cota ≈ $0.0581, límite propuesto $0.10, gate **`READY_FOR_HUMAN_APPROVAL`**
+**Tras:** rechazo ZERO_USD del smoke online sparql_llm (`NO_GO_ECONOMIC`) + re-gate comparativo
 
-## Acción inmediata (investigador)
+## Prompt recomendado (prioridad 1)
 
-Completar y enviar en el chat el bloque de:
+**Título:** Prompt 12 — Cierre documental legal/fuente de rdfconfig_llm (ZERO_USD, sin installs)
 
-`docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/HUMAN_LLM_SMOKE_APPROVAL.md`
-
-Sin esa firma **y** sin clave OpenRouter dedicada con límite duro $0.10, **no** ejecutar Prompt 12.
-
-## Prompt recomendado (prioridad 1) — solo tras aprobación
-
-**Título:** Prompt 12 — Ejecución controlada de LOCAL_CHAT_API_ONE_QUESTION
-
-**Método:** `sparql_llm`  
-**Objetivo:** Un único POST `/chat` con la pregunta y el request congelados en Prompt 11, bajo Settings mínimos, `enable_sparql_execution=false`, modelo exacto aprobado, clave dedicada limitada. Registrar evidencia de smoke; conservar `smoke_only`.
+**Método:** `rdfconfig_llm`  
+**Tipo:** `legal_closure`  
+**Objetivo:** Determinar con evidencia etiquetada la licencia y fuente canónica del **generador** (HEAD vs Zenodo vs companion MIT); emitir GO/NO-GO hacia un futuro entorno Ruby **sin instalarlo** en este prompt.
 
 **Restricciones:**
-- Revalidar metadata OpenRouter antes de gastar.  
-- No biodata; no MCP público como nativo; no Virtuoso; no adapters.  
-- No afirmar reproducción paper / PE3.  
-- Conservar `native_audit_complete=false` / `common_adapter_allowed=false`.
+- Coste API = **$0**. Sin OpenRouter. Sin POST `/chat`.  
+- Sin install Ruby/Bundler. Sin adapters. Sin modificar upstream.  
+- No confundir companion MIT con licencia del generador.  
+- Conservar `native_audit_complete=false` / `common_adapter_allowed=false`.  
+- No reabrir smoke chat sparql_llm sin nueva política de presupuesto.
 
-**Condición de éxito:** smoke funcional documentado o aborto seguro con evidencia.
+**Condición de éxito:** documento de cierre legal/fuente + implicaciones de ejecución/adapters + checklist hacia env Ruby.
+
+## No proponer
+
+- Prompt 12 antiguo (`LOCAL_CHAT_API_ONE_QUESTION`) — **CANCELLED**.  
+- Modelos “free” OpenRouter o LLM local como sustituto silencioso.
 
 ## Objetivo de fase
 

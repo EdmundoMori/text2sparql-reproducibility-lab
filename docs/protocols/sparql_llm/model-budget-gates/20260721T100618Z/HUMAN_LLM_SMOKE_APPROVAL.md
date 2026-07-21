@@ -1,19 +1,28 @@
 # HUMAN_LLM_SMOKE_APPROVAL — Prompt 11
 
 **RUN_ID:** `20260721T100618Z`  
-**Estado:** **NO FIRMADO** — Cursor no aprueba en nombre del investigador.  
-**Etiqueta:** `HUMAN_APPROVAL_REQUIRED`
+**Estado:** **REFUSED_ZERO_USD** (2026-07-21) — no se autoriza gasto.  
+**Etiqueta:** resolución humana = rechazo económico (no firma de smoke).
 
 ---
 
-## Instrucciones
+## Resolución humana registrada
 
-Complete el bloque siguiente **literalmente** (copie, rellene y responda en el chat).  
-Sin este bloque completado **y** sin clave OpenRouter dedicada con límite duro verificado, **no** se autoriza Prompt 12 / POST `/chat`.
+| Campo | Valor |
+|---|---|
+| Aprobador | EDMUNDO MORI ORRILLO |
+| Fecha | 2026-07-21 |
+| Política | SOLO $0; SIN Prompt 12 chat |
+| Clave OpenRouter | no autorizada (crear ni usar) |
+| POST `/chat` / modelos de pago | no autorizados |
+| Gate resultante | `NO_GO_ECONOMIC` |
+| Artefacto | `ECONOMIC_NO_GO_DECISION.md` |
+
+El bloque de aprobación de gasto **no** se completa. Queda como registro histórico de lo que se habría requerido.
 
 ---
 
-## Bloque de aprobación (pendiente)
+## Bloque de aprobación (NO USADO — rechazo vigente)
 
 ```text
 APPROVAL_FOR: LOCAL_CHAT_API_ONE_QUESTION

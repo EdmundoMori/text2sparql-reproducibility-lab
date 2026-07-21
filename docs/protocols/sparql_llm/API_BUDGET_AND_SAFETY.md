@@ -1,10 +1,10 @@
 # Presupuesto y seguridad API — SPARQL-LLM (futuro smoke)
 
-**Estado:** modelo y cota **PROPOSED** — firma humana **pendiente** (`HUMAN_APPROVAL_PENDING`).  
+**Estado:** presupuesto OpenRouter **REFUSED_ZERO_USD** (Mori 2026-07-21). Smoke online **`NO_GO_ECONOMIC`**.  
 **Commit pin:** `3748730e3bd2df2595280b918269fdaadb9fc0c3`  
-**Acción cubierta:** `LOCAL_CHAT_API_ONE_QUESTION`  
-**Actualizado:** Prompt 11 (2026-07-21) — RUN_ID `20260721T100618Z`.  
-**Inferencias Prompt 11:** 0.
+**Acción cubierta:** `LOCAL_CHAT_API_ONE_QUESTION` — **no autorizada** bajo política actual.  
+**Actualizado:** rechazo económico RUN_ID `20260721T103536Z` (tras Prompt 11 `20260721T100618Z`).  
+**Inferencias:** 0.
 
 ---
 
@@ -55,10 +55,11 @@ Con `use_tools=false` (grafo default):
 | context_length | 128000 | |
 | max_completion_tokens | 16384 | |
 | TWO_CALL_BOUND | ≈ **$0.0581** | COST_BOUND_DERIVED |
-| MAX_OPENROUTER_USD | **0.10** | PROPOSED |
-| Estado | **HUMAN_APPROVAL_PENDING** | |
+| MAX_OPENROUTER_USD | **0.00** (política ZERO_USD) | REFUSED |
+| Estado | **REFUSED_ZERO_USD** / gate **NO_GO_ECONOMIC** | HUMAN |
 
-Artefactos: `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/`.
+Artefactos: `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/`  
+Decisión: `ECONOMIC_NO_GO_DECISION.md`.
 
 ---
 
@@ -107,7 +108,7 @@ Detalle: `RESOLVED_CLIENT_DEFAULTS.md`.
 | Campo | Valor |
 |---|---|
 | Nombre sugerido | `text2sparql-lab-local-chat-smoke-2026-07-21` |
-| Límite duro | **$0.10** (= MAX_OPENROUTER_USD propuesto) |
+| Límite duro | **n/a** — clave **no autorizada** bajo ZERO_USD |
 | Reset | sin reset si la UI lo permite |
 | Expiración | 24–48 h preferible |
 | Reutilizar clave personal | **prohibido** |
@@ -146,12 +147,12 @@ Autorizada y ejecutada en Prompt 10B (Mori, 2026-07-21). Caché en workdir.
 
 | Campo | Valor |
 |---|---|
-| Aprobador | _pendiente_ |
-| Fecha aprobación | _pendiente_ |
-| `MAX_OPENROUTER_USD` aprobado | _pendiente_ (propuesto 0.10) |
-| Modelo exacto aprobado | _pendiente_ (propuesto `openrouter/openai/gpt-4o-mini-2024-07-18`) |
+| Aprobador | EDMUNDO MORI ORRILLO |
+| Fecha | 2026-07-21 |
+| Decisión | **REFUSED_ZERO_USD** — no clave; no POST `/chat`; no Prompt 12 chat |
+| `MAX_OPENROUTER_USD` aprobado | **0** (rechazo de gasto) |
+| Modelo exacto aprobado para gastar | **ninguno** |
 | Descarga embeddings | **sí** (10B) |
-| Gate documental Prompt 11 | **READY_FOR_HUMAN_APPROVAL** |
-| Notas | Firma: `HUMAN_LLM_SMOKE_APPROVAL.md` — **no firmada** |
+| Gate documental | **NO_GO_ECONOMIC** |
 
-**Sin aprobación LLM firmada + clave limitada, el smoke permanece bloqueado.** Este documento **no** firma el presupuesto.
+**El smoke online permanece bloqueado por política de coste.** No se firmará presupuesto OpenRouter mientras rija ZERO_USD.

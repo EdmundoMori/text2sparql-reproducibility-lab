@@ -1,0 +1,9 @@
+RUN_ID=20260721T103536Z
+action=ECONOMIC_NO_GO_AND_COMPARATIVE_REGATE
+approver=EDMUNDO_MORI_ORRILLO
+policy=ZERO_USD
+openrouter=not_authorized
+post_chat=not_authorized
+prompt12_chat=CANCELLED
+go_next=rdfconfig_source_license_closure
+inference=0

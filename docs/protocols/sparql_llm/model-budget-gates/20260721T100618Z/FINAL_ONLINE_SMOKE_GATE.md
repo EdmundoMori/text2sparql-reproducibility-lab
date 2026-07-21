@@ -1,59 +1,41 @@
-# FINAL_ONLINE_SMOKE_GATE — Prompt 11
+# FINAL_ONLINE_SMOKE_GATE — Prompt 11 + rechazo económico
 
-**RUN_ID:** `20260721T100618Z`  
+**RUN_ID modelo:** `20260721T100618Z`  
+**RUN_ID rechazo:** `20260721T103536Z`  
 **method_id:** `sparql_llm`  
 **Acción:** `LOCAL_CHAT_API_ONE_QUESTION`
 
 ---
 
-## Veredicto
+## Veredicto actual
 
 | Campo | Valor |
 |---|---|
-| **Gate documental** | **`READY_FOR_HUMAN_APPROVAL`** |
-| GO | **no** (falta firma humana + clave limitada) |
-| Modelo | `openrouter/openai/gpt-4o-mini-2024-07-18` SELECTED |
-| Coste TWO_CALL_BOUND | ≈ $0.0581 |
-| MAX_OPENROUTER_USD | $0.10 PROPOSED |
-| Pregunta | congelada |
-| Request | congelado (no ejecutado) |
-| Inferencias LLM Prompt 11 | **0** |
+| **Gate documental** | **`NO_GO_ECONOMIC`** |
+| Equivalente Prompt 11 | `NO_GO_OTHER` (política ZERO_USD) |
+| GO / Prompt 12 chat | **no** |
+| Aprobador del rechazo | EDMUNDO MORI ORRILLO |
+| Fecha rechazo | 2026-07-21 |
+| Inferencias | **0** |
 
 ---
 
-## Checklist técnico (ya listo)
+## Historial
+
+| Estado | Momento |
+|---|---|
+| `READY_FOR_HUMAN_APPROVAL` | Prompt 11 (modelo/cota listos) |
+| `NO_GO_ECONOMIC` | Rechazo explícito: SOLO $0; sin clave; sin POST `/chat` |
+
+---
+
+## Checklist técnico (sigue listo, sin uso online)
 
 | Ítem | Estado |
 |---|---|
-| Agent Py3.11 | ready |
-| Embedding cache exacta | ready |
-| LAB_MINIMAL_INDEX | INDEX_VERIFIED |
-| FastAPI preflight | pass |
-| Modelo metadata | OFFICIAL_METADATA_VERIFIED |
-| Client retries inspeccionados | ENVIRONMENT_VERIFIED |
+| Agent / índice / preflight | ready (10/10B) |
+| Modelo metadata | SELECTED documental (no gastar) |
+| Firma de gasto | **REFUSED** |
+| Clave limitada | **no autorizada** |
 
-## Checklist humano (pendiente)
-
-| Ítem | Estado |
-|---|---|
-| HUMAN_LLM_SMOKE_APPROVAL firmado | **pending** |
-| Clave dedicada creada | **pending** (investigador) |
-| Límite de clave = $0.10 verificado | **pending** |
-| Revalidación metadata pre-Prompt 12 | **required** |
-
----
-
-## Valores descartados
-
-- `GO_AFTER_SIGNED_APPROVAL_AND_KEY_LIMIT_VERIFICATION` — aún no; es el estado **tras** firma+clave.  
-- `NO_GO_MODEL_UNAVAILABLE` — modelo A disponible.  
-- `NO_GO_COST_BOUND_UNRESOLVED` — cota básica resuelta; riesgo retry documentado bajo HUMAN_DECISION.  
-- `NO_GO_CLIENT_RETRY_RISK_UNBOUNDED` — retries acotados a max_retries=2 (no unbounded).
-
----
-
-## Siguiente paso
-
-1. Investigador completa y envía el bloque de `HUMAN_LLM_SMOKE_APPROVAL.md`.  
-2. Tras aprobación + clave limitada: **Prompt 12 — Ejecución controlada de LOCAL_CHAT_API_ONE_QUESTION**.  
-3. Prompt 11 **no** redacta ni ejecuta Prompt 12.
+Detalle: `ECONOMIC_NO_GO_DECISION.md`.

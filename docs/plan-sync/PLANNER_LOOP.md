@@ -1,6 +1,6 @@
 # Bucle de optimización del plan (operativo)
 
-**Última actualización:** 2026-07-21 (post Prompt 11)
+**Última actualización:** 2026-07-21 (post NO_GO_ECONOMIC + re-gate ZERO_USD)
 
 ## Ciclo fijo
 
@@ -17,24 +17,21 @@
 
 1. `PLAN_SYNC.md`  
 2. `docs/plan-sync/NEXT_PROMPT_GUIDANCE.md`  
-3. `audit/sparql_llm/LOCAL_CHAT_API_MODEL_BUDGET_FINAL_GATE_REPORT.md`  
-4. `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/FINAL_ONLINE_SMOKE_GATE.md`  
-5. `docs/protocols/sparql_llm/API_BUDGET_AND_SAFETY.md`  
-6. `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/HUMAN_LLM_SMOKE_APPROVAL.md`
+3. `audit/NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md`  
+4. `audit/NEXT_EXECUTION_DECISION.md`  
+5. `docs/decisions/004_economic_nogo_online_smoke_and_re_gate.md`  
+6. `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/ECONOMIC_NO_GO_DECISION.md`
 
 ## Reglas
 
 - Un prompt por turno.  
-- No POST `/chat` sin firma humana + clave dedicada limitada.  
+- **ZERO_USD:** no OpenRouter / no POST `/chat` / no modelos de pago.  
 - Caché e índice en `workdir/` no se versionan.  
-- Catálogo OpenRouter completo solo en workdir.  
 - `common_adapter_allowed: false` hasta native audit.  
-- No firmar por el investigador.
+- No firmar gasto por el investigador.
 
-## Estado al cerrar Prompt 11
+## Estado actual
 
-- Gate: **READY_FOR_HUMAN_APPROVAL**  
-- Modelo seleccionado (PROPOSED): `openrouter/openai/gpt-4o-mini-2024-07-18`  
-- Inferencias: **0**  
-- Siguiente: firma humana → **Prompt 12**  
-- Objetivo largo plazo intacto; Fase 1 abierta.
+- sparql_llm online: **NO_GO_ECONOMIC**  
+- GO_NEXT: **rdfconfig legal/source closure**  
+- Fase 1 abierta; objetivo largo plazo intacto.

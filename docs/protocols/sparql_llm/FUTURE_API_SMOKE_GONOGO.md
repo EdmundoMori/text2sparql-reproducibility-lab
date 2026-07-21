@@ -11,7 +11,7 @@
 | Campo | Valor |
 |---|---|
 | **Selected future action** | `LOCAL_CHAT_API_ONE_QUESTION` |
-| **Gate** | `CONDITIONAL_GO` |
+| **Gate** | ~~`CONDITIONAL_GO`~~ → **`NO_GO_ECONOMIC`** (2026-07-21; ZERO_USD) |
 | **reproduction_status** | permanece `smoke_only` |
 | **native_audit_complete** | permanece `false` |
 | **common_adapter_allowed** | permanece `false` |

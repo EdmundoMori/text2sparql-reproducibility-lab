@@ -76,16 +76,15 @@ methods:
     execution_surface_matrix_artifact: docs/protocols/sparql_llm/EXECUTION_SURFACES.csv
     selected_future_online_action: LOCAL_CHAT_API_ONE_QUESTION
     selected_future_online_action_class: online_functional_smoke
-    selected_future_online_action_gate: CONDITIONAL_GO
-    api_budget_status: proposed_human_approval_pending
+    selected_future_online_action_gate: NO_GO_ECONOMIC
+    api_budget_status: refused_zero_usd_policy
     indexing_prerequisite_status: ready_lab_minimal_index
     endpoint_prerequisite_status: optional_if_enable_sparql_execution_false
-    api_smoke_ready: conditional
+    api_smoke_ready: no_go_economic
     protocol_blockers:
-      - OPENROUTER_API_KEY_dedicated_with_hard_limit
-      - investigator_signed_HUMAN_LLM_SMOKE_APPROVAL
-      - max_tokens_not_enforced_on_openrouter_branch_mitigated_by_key_limit
-      - revalidate_openrouter_metadata_before_prompt_12
+      - investigator_zero_usd_policy
+      - OPENROUTER_not_authorized
+      - max_tokens_not_enforced_on_openrouter_branch_mitigated_by_key_limit_if_ever_authorized
 
     agent_environment_status: ready
     agent_environment_run_id: "20260721T084637Z"
@@ -100,42 +99,42 @@ methods:
     local_chat_startup_preflight_status: pass
     selected_online_model: openrouter/openai/gpt-4o-mini-2024-07-18
     selected_online_model_snapshot: "20260721T100618Z"
-    model_selection_status: SELECTED_PROPOSED_PENDING_HUMAN_APPROVAL
-    cost_bound_status: COMPUTED_TWO_CALL_BOUND_0_0581
-    proposed_openrouter_limit_usd: 0.10
+    model_selection_status: SELECTED_BUT_SPEND_REFUSED_ZERO_USD
+    cost_bound_status: COMPUTED_THEN_REFUSED
+    proposed_openrouter_limit_usd: 0.0
     client_retry_status: INSPECTED_MAX_RETRIES_2_HTTP_ATTEMPTS_LE_6
-    smoke_question_status: FROZEN
-    smoke_request_spec_status: FROZEN
-    human_llm_approval_status: PENDING
-    online_smoke_gate: READY_FOR_HUMAN_APPROVAL
+    smoke_question_status: FROZEN_UNUSED
+    smoke_request_spec_status: FROZEN_UNUSED
+    human_llm_approval_status: REFUSED_ZERO_USD
+    online_smoke_gate: NO_GO_ECONOMIC
     remaining_online_blockers:
-      - human_signed_approval
-      - dedicated_openrouter_key_hard_limit_0_10
-      - revalidate_metadata_pre_prompt_12
-      - max_tokens_not_enforced_on_openrouter_branch
-    next_execution_prompt: Prompt_12_controlled_LOCAL_CHAT_API_ONE_QUESTION_after_human_approval
+      - investigator_zero_usd_policy
+      - OPENROUTER_not_authorized
+    next_execution_prompt: Prompt_12_rdfconfig_legal_source_closure_ZERO_USD
     model_budget_gate_run_id: "20260721T100618Z"
     model_budget_gate_artifact: docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/
     model_budget_final_report: audit/sparql_llm/LOCAL_CHAT_API_MODEL_BUDGET_FINAL_GATE_REPORT.md
+    economic_nogo_run_id: "20260721T103536Z"
+    economic_nogo_artifact: docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/ECONOMIC_NO_GO_DECISION.md
+    comparative_gate_rerun_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md
 
-    native_gate_class: CONDITIONAL_GO
+    native_gate_class: NO_GO_ECONOMIC_online_path
     scientific_baseline_role: core_baseline_candidate
     experimental_track: end_to_end_with_schema_validation
     internal_execution_legal_gate: allowed
     adapter_legal_gate: conditional_deferred
     generality_class: configurable_general
-    gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-    next_native_action: human_approval_then_controlled_chat_smoke
-    next_native_action_class: online_functional_smoke
+    gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md
+    next_native_action: deferred_online_smoke_pursue_rdfconfig_legal_closure
+    next_native_action_class: legal_closure_other_method
     gate_confidence: high
     execution_blockers:
       - compose_plugin_absent_on_host
       - uv_uvx_absent_on_host
-      - ram_risk_e5_large_indexing
       - virtuoso_text2sparql_blocked_on_host
       - host_python_3_10_incompatible_typing_Required
-      - human_llm_approval_and_dedicated_key_pending
-    notes: "Prompt 11: model openrouter/openai/gpt-4o-mini-2024-07-18 SELECTED; TWO_CALL_BOUND~0.0581; MAX_OPENROUTER_USD=0.10 PROPOSED; gate READY_FOR_HUMAN_APPROVAL; 0 LLM calls. reproduction_status remains smoke_only. native_audit_complete=false; common_adapter_allowed=false."
+      - investigator_zero_usd_blocks_openrouter_smoke
+    notes: "Prompt 11 model/cota ready then HUMAN REFUSED ZERO_USD (Mori 2026-07-21): online_smoke_gate=NO_GO_ECONOMIC; Prompt 12 chat CANCELLED. Re-gate GO_NEXT=rdfconfig legal closure. reproduction_status remains smoke_only. native_audit_complete=false; common_adapter_allowed=false."
 
   - method_id: mkgqagent
     display_name: mKGQAgent
@@ -424,18 +423,18 @@ methods:
     internal_execution_legal_gate: conditional
     adapter_legal_gate: blocked
     generality_class: domain_specific_reimplementation_required
-    gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
+    gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md
     next_native_action: clarify_generator_source_license_then_Ruby_env
-    next_native_action_class: HOLD_LEGAL
+    next_native_action_class: GO_NEXT_legal_closure
     gate_confidence: medium
-    next_execution_prompt: deferred_HOLD_LEGAL_rdfconfig_llm
+    next_execution_prompt: Prompt_12_rdfconfig_legal_source_closure_ZERO_USD
     execution_blockers:
       - LICENSE_NOT_CONFIRMED_generator_HEAD
       - requirements_txt_incomplete_vs_evaluator
       - ruby_bundler_ABSENT_on_host
       - sparql_yaml_mutation_on_run
       - possible_divergence_vendored_vs_companion_pin
-    notes: "Env specs ready_documented. Host Ruby/Bundler ABSENT. Prefer Zenodo for fidelity; never run in-place on upstream."
+    notes: "Re-gate ZERO_USD 2026-07-21: GO_NEXT legal/source closure (no Ruby install). Env specs ready_documented. Prefer Zenodo for fidelity; never run in-place on upstream."
 
   - method_id: sgpt
     display_name: SGPT

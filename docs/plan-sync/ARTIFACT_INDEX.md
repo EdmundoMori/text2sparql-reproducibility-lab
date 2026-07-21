@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-21 (Prompt 11)  
+**Última actualización:** 2026-07-21 (NO_GO_ECONOMIC + re-gate ZERO_USD)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -114,10 +114,10 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | WF-LOG | Log Prompt 7B | `logs/static-audit-firesparql/commands.log` | solo lectura |
 | GATE-RPT | Gate comparativo nativo | `audit/NATIVE_AUDIT_COMPARATIVE_GATE.md` | Prompt 8 — informe 21 §§ |
 | GATE-MX | Matriz gate (6 métodos) | `audit/NATIVE_AUDIT_GATE_MATRIX.csv` | dimensiones A–E |
-| GATE-Q | Cola reproducción nativa | `audit/NATIVE_REPRODUCTION_QUEUE.csv` | exactamente 1× GO_NEXT |
+| GATE-Q | Cola reproducción nativa | `audit/NATIVE_REPRODUCTION_QUEUE.csv` | 1× GO_NEXT (rdfconfig legal) |
 | GATE-PF | Portafolio baselines | `audit/SCIENTIFIC_BASELINE_PORTFOLIO.csv` | diversidad metodológica |
 | GATE-BR | Barreras transversales | `audit/REPRODUCIBILITY_BARRIER_MATRIX.csv` | taxonomía barreras |
-| GATE-NX | Decisión siguiente acción | `audit/NEXT_EXECUTION_DECISION.md` | GO/NO-GO Prompt 9 |
+| GATE-NX | Decisión siguiente acción | `audit/NEXT_EXECUTION_DECISION.md` | GO_NEXT rdfconfig legal (re-gate $0) |
 | DEC003 | Decisión formal gate | `docs/decisions/003_native_audit_comparative_gate.md` | ADR Prompt 8 |
 | GATE-LOG | Log Prompt 8 | `logs/native-audit-comparative-gate/commands.log` | documental; no install |
 | P9-PROT | Protocolo API/SIB principal | `docs/protocols/sparql_llm/API_SIB_PROTOCOL.md` | Prompt 9 — 26 §§ |
@@ -159,6 +159,9 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | P11-GATE | Gate online | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/FINAL_ONLINE_SMOKE_GATE.md` | READY_FOR_HUMAN_APPROVAL |
 | P11-BUD | Presupuesto actualizado | `docs/protocols/sparql_llm/API_BUDGET_AND_SAFETY.md` | HUMAN_APPROVAL_PENDING |
 | P11-LOG | Logs Prompt 11 | `logs/preparation/sparql-llm-model-budget-gate/20260721T100618Z/` | metadata SHA |
+| P11-NOGO | NO-GO económico smoke online | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/ECONOMIC_NO_GO_DECISION.md` | Mori ZERO_USD |
+| GATE-RERUN | Re-gate comparativo $0 | `audit/NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md` | GO_NEXT rdfconfig |
+| DEC004 | ADR NO-GO económico + re-gate | `docs/decisions/004_economic_nogo_online_smoke_and_re_gate.md` | política $0 |
 
 ## Qué está / no está en GitHub
 
