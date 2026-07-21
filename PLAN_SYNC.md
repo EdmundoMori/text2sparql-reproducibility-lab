@@ -78,6 +78,7 @@ Decisión: [`audit/NEXT_POST_Z2_ZERO_COST_DECISION.md`](audit/NEXT_POST_Z2_ZERO_
 | Campo | Valor |
 |---|---|
 | commit inicial | `9d9d578cb62533576a40fe00e29342a87710a80d` |
-| ARTIFACT_COMMIT | PENDING_ARTIFACT |
-| FINAL_HEAD | PENDING_FINAL |
+| ARTIFACT_COMMIT | 15e918540b7de616751ce06b96ef8de4f25f0f75 |
+| FINAL_HEAD | 15e918540b7de616751ce06b96ef8de4f25f0f75 |
 | push | pending |
+| publication_metadata_commit | PENDING_PUB |
