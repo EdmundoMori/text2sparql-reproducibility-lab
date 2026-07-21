@@ -1,0 +1,66 @@
+{
+  "classification": "Z3_P2B_NOGRAD_FORWARD_PASS",
+  "stage": "P2B",
+  "forward_authorized": true,
+  "backward_authorized": false,
+  "checks": {
+    "network_guard": "installed_after_torch_import",
+    "packages": {
+      "torch": "1.13.1+cpu",
+      "transformers": "4.25.1",
+      "cuda": false
+    },
+    "rss_mb_start": 194.296875,
+    "load_seconds": 7.026,
+    "loading_info": {
+      "n_missing": 268,
+      "n_unexpected": 0,
+      "n_mismatched": 0
+    },
+    "rss_mb_after_load": 1766.9375,
+    "forward": {
+      "count": 1,
+      "loss": 45.16395568847656,
+      "logits_shape": [
+        1,
+        74,
+        50263
+      ],
+      "logits_dtype": "torch.float32",
+      "batch_shapes": [
+        [
+          1,
+          74
+        ],
+        [
+          1,
+          74
+        ],
+        [
+          1,
+          74
+        ],
+        [
+          1,
+          74
+        ],
+        [
+          1,
+          74
+        ],
+        [
+          1,
+          74
+        ]
+      ],
+      "forward_seconds": 2.071,
+      "rss_mb_after_forward": 1766.9375,
+      "requires_grad_loss": false
+    },
+    "optimizer_created": false,
+    "backward_executed": false,
+    "train_main_executed": false
+  },
+  "errors": [],
+  "elapsed_seconds": 12.704
+}

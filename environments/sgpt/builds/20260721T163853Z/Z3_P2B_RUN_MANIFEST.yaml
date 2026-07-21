@@ -1,0 +1,19 @@
+run_id: "20260721T163853Z"
+protocol_run_id: "20260721T134213Z"
+p2a_run_id: "20260721T135432Z"
+status: CLOSED_Z3_P2B_NOGRAD_FORWARD
+classification: Z3_P2B_NOGRAD_FORWARD_PASS
+authorization_status: AUTHORIZED_AND_CONSUMED_14B2_P2B
+z3_image_tag: "text2sparql-lab/sgpt-z3-py38:20260721T135432Z"
+z3_image_id: "sha256:3363d73b8a36059698eff046f4a18bd5eaebc689c56f3f825ab1e5f39c273c35"
+gpt2_revision: "607a30d783dfa663caf39e06633721c8d4cfcd7e"
+forward_count: 1
+loss_technical: 45.16395568847656
+logits_shape: [1, 74, 50263]
+forward_seconds: 2.071
+rss_mb_after_forward: 1766.9375
+backward: NOT_EXECUTED
+optimizer: NOT_CREATED
+train: NOT_EXECUTED
+downloads: 0
+monetary_cost_usd: 0.00

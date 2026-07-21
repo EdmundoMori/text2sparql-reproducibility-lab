@@ -1,0 +1,70 @@
+Some weights of GPT2LMHeadModel were not initialized from the model checkpoint at /models/gpt2 and are newly initialized: ['encoder.0.pos_ffn.w_2.bias', 'encoder.0.slf_attn.w_ks.bias', 'decoder.5.slf_attn.w_vs.bias', 'decoder.4.slf_attn.w_qs.bias', 'decoder.1.enc_attn.fc.bias', 'encoder.3.pos_ffn.w_2.weight', 'decoder.5.slf_attn.layer_norm.weight', 'encoder.4.slf_attn.w_ks.weight', 'decoder.1.pos_ffn.w_1.weight', 'encoder.3.pos_ffn.layer_norm.bias', 'encoder.4.slf_attn.w_qs.bias', 'encoder.1.slf_attn.fc.weight', 'encoder.4.slf_attn.w_ks.bias', 'decoder.1.slf_attn.w_vs.bias', 'lm_head.weight', 'encoder.2.slf_attn.fc.weight', 'decoder.4.enc_attn.layer_norm.weight', 'decoder.4.pos_ffn.layer_norm.weight', 'decoder.3.pos_ffn.w_2.bias', 'decoder.3.enc_attn.layer_norm.bias', 'decoder.3.enc_attn.w_ks.weight', 'decoder.3.pos_ffn.layer_norm.bias', 'decoder.2.pos_ffn.w_2.bias', 'encoder.4.pos_ffn.layer_norm.weight', 'decoder.5.pos_ffn.w_2.weight', 'decoder.1.enc_attn.fc.weight', 'decoder.1.slf_attn.layer_norm.bias', 'encoder.2.slf_attn.w_qs.bias', 'decoder.2.enc_attn.w_ks.weight', 'pose.weight', 'encoder.2.slf_attn.w_vs.weight', 'decoder.2.pos_ffn.w_1.bias', 'decoder.5.enc_attn.fc.bias', 'decoder.2.pos_ffn.w_2.weight', 'encoder.3.pos_ffn.w_2.bias', 'encoder.1.pos_ffn.w_2.bias', 'encoder.3.slf_attn.layer_norm.bias', 'encoder.4.pos_ffn.w_2.bias', 'encoder.0.pos_ffn.w_1.weight', 'encoder.0.slf_attn.fc.weight', 'encoder.3.slf_attn.w_vs.bias', 'decoder.4.enc_attn.layer_norm.bias', 'decoder.4.pos_ffn.w_2.bias', 'decoder.0.enc_attn.w_vs.bias', 'decoder.4.slf_attn.w_vs.weight', 'decoder.3.slf_attn.layer_norm.bias', 'decoder.0.pos_ffn.layer_norm.bias', 'decoder.5.pos_ffn.w_1.weight', 'encoder.5.slf_attn.w_vs.bias', 'encoder.2.pos_ffn.layer_norm.weight', 'encoder.2.pos_ffn.w_1.weight', 'decoder.2.slf_attn.layer_norm.bias', 'decoder.4.enc_attn.w_ks.weight', 'decoder.3.slf_attn.w_ks.bias', 'encoder.2.slf_attn.w_qs.weight', 'decoder.3.enc_attn.fc.bias', 'decoder.4.slf_attn.w_ks.weight', 'encoder.0.pos_ffn.w_2.weight', 'encoder.4.slf_attn.w_qs.weight', 'decoder.1.pos_ffn.layer_norm.bias', 'encoder.4.slf_attn.w_vs.bias', 'decoder.2.enc_attn.w_ks.bias', 'encoder.0.slf_attn.fc.bias', 'decoder.3.pos_ffn.w_1.weight', 'encoder.3.slf_attn.w_ks.bias', 'decoder.0.slf_attn.layer_norm.bias', 'encoder.2.pos_ffn.layer_norm.bias', 'encoder.2.pos_ffn.w_1.bias', 'decoder.5.slf_attn.fc.bias', 'encoder.0.slf_attn.w_qs.bias', 'decoder.3.enc_attn.w_qs.bias', 'h.8.attn.masked_bias', 'decoder.2.slf_attn.fc.bias', 'decoder.0.slf_attn.w_ks.weight', 'decoder.4.enc_attn.w_qs.bias', 'decoder.0.enc_attn.w_qs.bias', 'decoder.3.enc_attn.fc.weight', 'decoder.3.slf_attn.w_ks.weight', 'decoder.1.enc_attn.layer_norm.weight', 'h.2.attn.masked_bias', 'decoder.5.pos_ffn.layer_norm.bias', 'decoder.3.pos_ffn.w_2.weight', 'decoder.0.slf_attn.layer_norm.weight', 'decoder.3.pos_ffn.layer_norm.weight', 'encoder.5.pos_ffn.w_1.bias', 'decoder.0.slf_attn.w_qs.bias', 'encoder.2.slf_attn.layer_norm.weight', 'h.5.attn.masked_bias', 'encoder.3.pos_ffn.w_1.bias', 'decoder.5.enc_attn.w_ks.bias', 'decoder.4.slf_attn.layer_norm.weight', 'decoder.3.enc_attn.layer_norm.weight', 'decoder.2.pos_ffn.layer_norm.bias', 'decoder.4.pos_ffn.w_2.weight', 'decoder.5.slf_attn.fc.weight', 'encoder.1.slf_attn.fc.bias', 'decoder.5.slf_attn.w_ks.bias', 'encoder.1.slf_attn.w_ks.bias', 'decoder.4.enc_attn.fc.bias', 'decoder.1.enc_attn.w_qs.weight', 'encoder.5.pos_ffn.layer_norm.weight', 'encoder.3.slf_attn.w_qs.weight', 'encoder.4.pos_ffn.w_1.bias', 'h.4.attn.masked_bias', 'decoder.4.enc_attn.w_vs.bias', 'decoder.2.slf_attn.w_qs.bias', 'encoder.3.slf_attn.layer_norm.weight', 'decoder.0.slf_attn.w_vs.weight', 'decoder.4.slf_attn.fc.weight', 'encoder.4.pos_ffn.w_1.weight', 'decoder.2.pos_ffn.layer_norm.weight', 'decoder.4.enc_attn.fc.weight', 'decoder.0.slf_attn.w_ks.bias', 'decoder.0.enc_attn.w_vs.weight', 'encoder.1.pos_ffn.layer_norm.bias', 'encoder.3.slf_attn.fc.bias', 'decoder.5.pos_ffn.w_2.bias', 'decoder.1.enc_attn.w_qs.bias', 'encoder.0.slf_attn.w_qs.weight', 'encoder.5.pos_ffn.w_2.weight', 'decoder.2.enc_attn.w_qs.bias', 'decoder.5.pos_ffn.w_1.bias', 'decoder.3.slf_attn.w_vs.bias', 'decoder.3.enc_attn.w_vs.bias', 'encoder.0.pos_ffn.layer_norm.weight', 'decoder.0.slf_attn.fc.bias', 'encoder.1.slf_attn.w_vs.bias', 'decoder.2.enc_attn.layer_norm.weight', 'decoder.1.enc_attn.w_ks.weight', 'encoder.1.slf_attn.w_ks.weight', 'dep.weight', 'decoder.0.enc_attn.layer_norm.weight', 'decoder.2.pos_ffn.w_1.weight', 'decoder.1.slf_attn.w_qs.bias', 'decoder.5.enc_attn.layer_norm.bias', 'decoder.5.enc_attn.w_vs.bias', 'encoder.4.slf_attn.fc.weight', 'encoder.5.pos_ffn.w_2.bias', 'decoder.3.slf_attn.w_qs.bias', 'decoder.3.enc_attn.w_vs.weight', 'h.10.attn.masked_bias', 'decoder.5.slf_attn.layer_norm.bias', 'decoder.0.enc_attn.fc.bias', 'decoder.4.enc_attn.w_qs.weight', 'encoder.0.slf_attn.w_ks.weight', 'decoder.2.enc_attn.fc.bias', 'decoder.0.enc_attn.w_ks.bias', 'decoder.2.slf_attn.w_qs.weight', 'encoder.1.pos_ffn.w_1.weight', 'encoder.5.slf_attn.w_ks.bias', 'decoder.1.pos_ffn.w_2.bias', 'encoder.4.slf_attn.layer_norm.bias', 'decoder.3.slf_attn.w_vs.weight', 'encoder.5.pos_ffn.layer_norm.bias', 'h.0.attn.masked_bias', 'encoder.3.slf_attn.fc.weight', 'encoder.0.slf_attn.layer_norm.bias', 'encoder.0.slf_attn.w_vs.weight', 'decoder.0.slf_attn.w_vs.bias', 'encoder.2.slf_attn.w_ks.weight', 'decoder.0.pos_ffn.w_1.bias', 'decoder.3.slf_attn.w_qs.weight', 'decoder.0.enc_attn.fc.weight', 'encoder.0.slf_attn.w_vs.bias', 'encoder.4.slf_attn.w_vs.weight', 'decoder.2.enc_attn.w_qs.weight', 'decoder.5.slf_attn.w_vs.weight', 'decoder.2.enc_attn.w_vs.weight', 'decoder.4.pos_ffn.w_1.bias', 'encoder.3.pos_ffn.layer_norm.weight', 'decoder.2.slf_attn.w_ks.bias', 'h.11.attn.masked_bias', 'encoder.1.pos_ffn.layer_norm.weight', 'decoder.2.enc_attn.layer_norm.bias', 'decoder.1.slf_attn.layer_norm.weight', 'decoder.1.slf_attn.fc.bias', 'decoder.1.slf_attn.w_ks.weight', 'h.3.attn.masked_bias', 'decoder.4.slf_attn.layer_norm.bias', 'encoder.1.slf_attn.w_qs.bias', 'encoder.5.slf_attn.fc.bias', 'decoder.5.enc_attn.w_vs.weight', 'decoder.1.enc_attn.layer_norm.bias', 'decoder.1.pos_ffn.w_1.bias', 'h.1.attn.masked_bias', 'decoder.4.pos_ffn.w_1.weight', 'decoder.5.slf_attn.w_ks.weight', 'encoder.0.slf_attn.layer_norm.weight', 'encoder.2.slf_attn.layer_norm.bias', 'decoder.1.enc_attn.w_vs.weight', 'decoder.0.slf_attn.fc.weight', 'encoder.5.slf_attn.layer_norm.weight', 'encoder.0.pos_ffn.layer_norm.bias', 'encoder.2.pos_ffn.w_2.weight', 'encoder.2.pos_ffn.w_2.bias', 'encoder.1.slf_attn.layer_norm.bias', 'decoder.1.slf_attn.w_ks.bias', 'h.7.attn.masked_bias', 'encoder.2.slf_attn.fc.bias', 'decoder.1.enc_attn.w_ks.bias', 'encoder.5.pos_ffn.w_1.weight', 'encoder.5.slf_attn.w_qs.weight', 'decoder.2.slf_attn.w_ks.weight', 'encoder.4.pos_ffn.layer_norm.bias', 'decoder.3.pos_ffn.w_1.bias', 'decoder.2.slf_attn.w_vs.bias', 'encoder.0.pos_ffn.w_1.bias', 'decoder.1.enc_attn.w_vs.bias', 'encoder.5.slf_attn.w_ks.weight', 'encoder.5.slf_attn.fc.weight', 'decoder.0.pos_ffn.w_2.weight', 'encoder.3.slf_attn.w_ks.weight', 'encoder.4.slf_attn.layer_norm.weight', 'decoder.4.slf_attn.w_qs.weight', 'decoder.0.slf_attn.w_qs.weight', 'decoder.4.slf_attn.fc.bias', 'encoder.4.pos_ffn.w_2.weight', 'decoder.1.slf_attn.fc.weight', 'decoder.5.enc_attn.layer_norm.weight', 'decoder.3.enc_attn.w_qs.weight', 'decoder.5.pos_ffn.layer_norm.weight', 'encoder.5.slf_attn.w_vs.weight', 'encoder.3.pos_ffn.w_1.weight', 'h.9.attn.masked_bias', 'decoder.2.slf_attn.layer_norm.weight', 'encoder.1.pos_ffn.w_2.weight', 'decoder.0.pos_ffn.w_2.bias', 'decoder.0.pos_ffn.w_1.weight', 'decoder.5.enc_attn.w_qs.bias', 'decoder.5.enc_attn.fc.weight', 'encoder.1.slf_attn.layer_norm.weight', 'decoder.0.enc_attn.w_ks.weight', 'encoder.1.slf_attn.w_qs.weight', 'decoder.2.slf_attn.fc.weight', 'decoder.1.pos_ffn.layer_norm.weight', 'decoder.2.enc_attn.fc.weight', 'encoder.3.slf_attn.w_qs.bias', 'decoder.3.slf_attn.fc.weight', 'encoder.1.slf_attn.w_vs.weight', 'decoder.5.slf_attn.w_qs.bias', 'encoder.1.pos_ffn.w_1.bias', 'decoder.0.enc_attn.w_qs.weight', 'encoder.5.slf_attn.w_qs.bias', 'decoder.1.slf_attn.w_vs.weight', 'decoder.2.slf_attn.w_vs.weight', 'decoder.0.enc_attn.layer_norm.bias', 'encoder.5.slf_attn.layer_norm.bias', 'decoder.0.pos_ffn.layer_norm.weight', 'decoder.4.slf_attn.w_ks.bias', 'encoder.3.slf_attn.w_vs.weight', 'decoder.4.enc_attn.w_ks.bias', 'decoder.3.enc_attn.w_ks.bias', 'decoder.4.enc_attn.w_vs.weight', 'decoder.2.enc_attn.w_vs.bias', 'decoder.4.pos_ffn.layer_norm.bias', 'decoder.5.enc_attn.w_ks.weight', 'decoder.3.slf_attn.layer_norm.weight', 'encoder.2.slf_attn.w_vs.bias', 'decoder.1.pos_ffn.w_2.weight', 'encoder.2.slf_attn.w_ks.bias', 'depl.weight', 'decoder.3.slf_attn.fc.bias', 'decoder.4.slf_attn.w_vs.bias', 'decoder.5.slf_attn.w_qs.weight', 'decoder.1.slf_attn.w_qs.weight', 'decoder.5.enc_attn.w_qs.weight', 'encoder.4.slf_attn.fc.bias', 'h.6.attn.masked_bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Creating examples
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 111.08it/s]
+{
+  "classification": "Z3_P2B_NOGRAD_FORWARD_PASS",
+  "stage": "P2B",
+  "forward_authorized": true,
+  "backward_authorized": false,
+  "checks": {
+    "network_guard": "installed_after_torch_import",
+    "packages": {
+      "torch": "1.13.1+cpu",
+      "transformers": "4.25.1",
+      "cuda": false
+    },
+    "rss_mb_start": 194.296875,
+    "load_seconds": 7.026,
+    "loading_info": {
+      "n_missing": 268,
+      "n_unexpected": 0,
+      "n_mismatched": 0
+    },
+    "rss_mb_after_load": 1766.9375,
+    "forward": {
+      "count": 1,
+      "loss": 45.16395568847656,
+      "logits_shape": [
+        1,
+        74,
+        50263
+      ],
+      "logits_dtype": "torch.float32",
+      "batch_shapes": [
+        [
+          1,
+          74
+        ],
+        [
+          1,
+          74
+        ],
+        [
+          1,
+          74
+        ],
+        [
+          1,
+          74
+        ],
+        [
+          1,
+          74
+        ],
+        [
+          1,
+          74
+        ]
+      ],
+      "forward_seconds": 2.071,
+      "rss_mb_after_forward": 1766.9375,
+      "requires_grad_loss": false
+    },
+    "optimizer_created": false,
+    "backward_executed": false,
+    "train_main_executed": false
+  },
+  "errors": [],
+  "elapsed_seconds": 12.704
+}

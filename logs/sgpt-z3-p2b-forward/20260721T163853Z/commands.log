@@ -1,0 +1,8 @@
+initial_head=0199c93ff7e5715433177dc198d778e07441ced8
+z3_image_expected=sha256:3363d73b8a36059698eff046f4a18bd5eaebc689c56f3f825ab1e5f39c273c35
+auth=SIGNED_14B2_P2B
+no_download=1
+no_train=1
+cost_usd=0.00
+z3_image_actual=sha256:3363d73b8a36059698eff046f4a18bd5eaebc689c56f3f825ab1e5f39c273c35
+P2B_START 2026-07-21T16:45:57Z

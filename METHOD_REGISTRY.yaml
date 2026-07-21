@@ -538,8 +538,7 @@ methods:
   - metric_double_update_anomaly
   - gpt2_download_requires_network
   - epochs_cli_vs_params_json_divergence
-  notes: "Prompt 14B: GPT-2 verified + TBX/protobuf; Z3 image; P2A PASS; no forward/train; auth 14B consumed; audit_only;
-    native_audit_complete=false."
+  notes: "Prompt 14B2: single no-grad forward PASS; loss technical only; no train; auth 14B2 consumed; audit_only; native_audit_complete=false."
 
   zero_cost_gate_class: GO_NEXT_ZERO_COST
   zero_cost_next_action: Prompt_14C_after_training_approval
@@ -633,10 +632,13 @@ methods:
   - table4_not_reproduced
   - checkpoints_absent_paper
   z3_protobuf_pin: 3.20.1_INSTALLED
-  z3_p2b_status: NOT_AUTHORIZED
+  z3_p2b_status: Z3_P2B_NOGRAD_FORWARD_PASS
   z3_build_run_id: 20260721T135432Z
   z3_build_image: text2sparql-lab/sgpt-z3-py38:20260721T135432Z
   z3_p2a_report: audit/sgpt/Z3_P2A_ARTIFACT_AND_MODEL_LOAD_REPORT.md
+  z3_p2b_run_id: 20260721T163853Z
+  z3_p2b_report: audit/sgpt/Z3_P2B_NOGRAD_FORWARD_REPORT.md
+  z3_p2b_authorization_status: AUTHORIZED_AND_CONSUMED_14B2_P2B
 - method_id: tebaqa
   display_name: TeBaQA
   repositories:

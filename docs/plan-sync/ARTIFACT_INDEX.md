@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-21 (Prompt 14B)  
+**Última actualización:** 2026-07-21 (Prompt 14B2)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -206,6 +206,9 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | P14B-AUTH | Auth 14B signed/consumed | `environments/sgpt/builds/20260721T135432Z/AUTHORIZATION_CONSUMPTION_RECORD.md` | Mori |
 | P14B-SMK | Harness P2A | `scripts/smoke/sgpt_z3_p2a_model_load_preflight.py` | offline |
 | P14B-LOG | Logs Prompt 14B | `logs/sgpt-z3-artifact-preflight/20260721T135432Z/` | integrity+P2A |
+| P14B2-RPT | P2B no-grad forward | `audit/sgpt/Z3_P2B_NOGRAD_FORWARD_REPORT.md` | PASS |
+| P14B2-SMK | Harness P2B | `scripts/smoke/sgpt_z3_p2b_nograd_forward.py` | one forward |
+| P14B2-LOG | Logs Prompt 14B2 | `logs/sgpt-z3-p2b-forward/20260721T163853Z/` | offline |
 
 ## Qué está / no está en GitHub
 
