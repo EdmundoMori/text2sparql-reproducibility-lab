@@ -87,5 +87,5 @@ No API de pago. No Ruby install en ese prompt. No resucitar chat smoke sin nueva
 | RUN_ID | `20260721T103536Z` |
 | gate online | `NO_GO_ECONOMIC` |
 | GO_NEXT | `rdfconfig_source_license_closure` |
-| commit final | _(tras push)_ |
-| push | _(pendiente)_ |
+| commit final | `e86920148e07b13bb48332244e01e36b3c40b17a` |
+| push | confirmado en origin/main |
