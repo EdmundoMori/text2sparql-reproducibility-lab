@@ -81,4 +81,4 @@ Decisión: [`audit/NEXT_POST_Z2_ZERO_COST_DECISION.md`](audit/NEXT_POST_Z2_ZERO_
 | ARTIFACT_COMMIT | 15e918540b7de616751ce06b96ef8de4f25f0f75 |
 | FINAL_HEAD | 15e918540b7de616751ce06b96ef8de4f25f0f75 |
 | push | done |
-| publication_metadata_commit |  |
+| publication_metadata_commit | `94ef66a2286354a15280ed0aaa3460168522bd14` |
