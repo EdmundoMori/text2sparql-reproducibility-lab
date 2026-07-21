@@ -57,6 +57,6 @@ Tras firma training approval:
 | Campo | Valor |
 |---|---|
 | commit inicial | `0199c93ff7e5715433177dc198d778e07441ced8` |
-| ARTIFACT_COMMIT | PENDING_ARTIFACT |
-| FINAL_HEAD | PENDING_FINAL |
-| push | pending |
+| ARTIFACT_COMMIT | 378d193e3638670b174228b00a536a265ec27853 |
+| FINAL_HEAD | 378d193e3638670b174228b00a536a265ec27853 |
+| push | done |
