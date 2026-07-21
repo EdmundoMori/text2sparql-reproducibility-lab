@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-21 (Prompt 11C)  
+**Última actualización:** 2026-07-21 (Prompt 12 SGPT env)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -169,6 +169,13 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | P11C-DEC | Decisión ejecución $0 | `audit/NEXT_ZERO_COST_EXECUTION_DECISION.md` | Z1 SGPT env |
 | P11C-RPT | Informe re-gate 11C | `audit/ZERO_COST_NATIVE_AUDIT_REGATE.md` | 19 §§ |
 | P11C-LOG | Logs Prompt 11C | `logs/zero-cost-native-regate/` | sin red/install |
+| P12-RPT | Env definition SGPT | `audit/sgpt/ENVIRONMENT_DEFINITION_REPORT.md` | Prompt 12 |
+| P12-GATE | Gate entorno SGPT | `environments/sgpt/ENVIRONMENT_GATE.md` | CONDITIONAL_DEPENDENCY_RESOLUTION |
+| P12-SPEC | Spec entorno | `environments/sgpt/ENVIRONMENT_SPEC.yaml` | perfiles A/B/C |
+| P12-DEP | Manifest deps | `environments/sgpt/DEPENDENCY_MANIFEST.yaml` | implícitas vs declared |
+| P12-AST | Inventario imports AST | `logs/environment-definition-sgpt/import_inventory.json` | sin import runtime |
+| P12-Z2 | Spec Z2 futuro | `environments/sgpt/Z2_DATA_METRIC_PREFLIGHT_SPEC.md` | no ejecutado |
+| P12-LOG | Logs Prompt 12 | `logs/environment-definition-sgpt/` | coste 0 |
 
 ## Qué está / no está en GitHub
 

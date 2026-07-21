@@ -1,0 +1,286 @@
+# DEPENDENCY_MANIFEST — SGPT (Prompt 12)
+# AST-only + requirements.txt + README. No installs. No version invention for unpinned pkgs.
+
+schema_version: "1"
+method_id: sgpt
+pinned_commit: 1f6964d1c3bfee50c7dec2c25546f32b4ab94b2b
+import_inventory: logs/environment-definition-sgpt/import_inventory.json
+requirements_file: upstream/sgpt/requirements.txt
+
+dependencies:
+  - name: Python
+    declared_in_requirements: false
+    used_in_code: true
+    source_files: ["*"]
+    declared_version: "3.8"
+    exact_pin_status: README_REPORTED
+    purpose: runtime
+    required_for: [data, metrics, import, model, training, evaluation]
+    optional: false
+    external_artifact: false
+    network_first_use: false
+    legal_status: n/a
+    status: declared_not_resolved_on_host
+    evidence: README_REPORTED badge python-3.8; host is 3.10.12 MACHINE_VERIFIED
+
+  - name: torch
+    declared_in_requirements: true
+    used_in_code: true
+    source_files: [train.py, eval.py, scripts/model.py, scripts/dataset_*.py]
+    declared_version: "1.13.1"
+    exact_pin_status: exact_pin_in_requirements
+    purpose: tensors, nn, optim, distributed
+    required_for: [import, model, training, evaluation]
+    optional: false
+    external_artifact: false
+    network_first_use: true  # wheel download if not cached
+    legal_status: third_party
+    status: declared_not_installed
+    evidence: CODE_VERIFIED requirements.txt; AST imports
+
+  - name: transformers
+    declared_in_requirements: true
+    used_in_code: true
+    source_files: [train.py, eval.py, scripts/model.py, utils/dptree.py]
+    declared_version: null
+    exact_pin_status: unpinned
+    purpose: GPT-2 modeling helpers, AdamW, tokenizers, schedulers
+    required_for: [model, training, evaluation]
+    optional: false
+    external_artifact: false
+    network_first_use: true
+    legal_status: third_party
+    status: unresolved_pin_UNKNOWN
+    evidence: CODE_VERIFIED requirements unpinned; PROPOSED pin forbidden in Prompt 12
+
+  - name: numpy
+    declared_in_requirements: false
+    used_in_code: true
+    source_files: [train.py, eval.py, scripts/model.py, utils/data.py]
+    declared_version: null
+    exact_pin_status: implicit_unpinned
+    purpose: numeric arrays
+    required_for: [training, evaluation, model]
+    optional: false
+    external_artifact: false
+    network_first_use: true
+    legal_status: third_party
+    status: implicit_dependency
+    evidence: CODE_VERIFIED AST; NOT_FOUND in requirements.txt
+
+  - name: tqdm
+    declared_in_requirements: false
+    used_in_code: true
+    source_files: [train.py, eval.py, measure.py]
+    declared_version: null
+    exact_pin_status: implicit_unpinned
+    purpose: progress bars
+    required_for: [training, evaluation]
+    optional: false
+    external_artifact: false
+    network_first_use: true
+    legal_status: third_party
+    status: implicit_dependency
+    evidence: CODE_VERIFIED AST; NOT_FOUND in requirements.txt
+
+  - name: spacy
+    declared_in_requirements: true
+    used_in_code: true
+    source_files: [scripts/dataset_qald9.py, utils/dptree.py]
+    declared_version: null
+    exact_pin_status: unpinned
+    purpose: tokenization / dependency for knowledge features
+    required_for: [data]
+    optional: false
+    external_artifact: false
+    network_first_use: true
+    legal_status: third_party
+    status: unresolved_pin_UNKNOWN
+    evidence: CODE_VERIFIED
+
+  - name: en_core_web_sm
+    declared_in_requirements: false
+    used_in_code: true
+    source_files: [scripts/dataset_qald9.py]
+    declared_version: null
+    exact_pin_status: README_download_command
+    purpose: spaCy model for QALD9
+    required_for: [data]
+    optional: false
+    external_artifact: true
+    network_first_use: true
+    legal_status: third_party_model
+    status: not_downloaded
+    evidence: README_REPORTED; CODE_VERIFIED spacy.load("en_core_web_sm")
+
+  - name: en_core_web_lg
+    declared_in_requirements: false
+    used_in_code: true
+    source_files: [utils/dptree.py]
+    declared_version: null
+    exact_pin_status: code_hardcoded_not_in_readme
+    purpose: spaCy large model in dptree helper
+    required_for: [data]
+    optional: true
+    external_artifact: true
+    network_first_use: true
+    legal_status: third_party_model
+    status: not_downloaded_divergence
+    evidence: CODE_VERIFIED utils/dptree.py loads en_core_web_lg (differs from README sm)
+
+  - name: nltk
+    declared_in_requirements: true
+    used_in_code: true
+    source_files: [utils/metrics.py]
+    declared_version: null
+    exact_pin_status: unpinned
+    purpose: BLEU/METEOR tokenize ngrams
+    required_for: [metrics, evaluation]
+    optional: false
+    external_artifact: false
+    network_first_use: true
+    legal_status: third_party
+    status: unresolved_pin_UNKNOWN
+    evidence: CODE_VERIFIED
+
+  - name: python-Levenshtein
+    declared_in_requirements: true
+    used_in_code: false
+    source_files: []
+    declared_version: null
+    exact_pin_status: declared_unused_in_ast
+    purpose: UNKNOWN (declared)
+    required_for: []
+    optional: true
+    external_artifact: false
+    network_first_use: true
+    legal_status: third_party
+    status: declared_not_referenced_in_ast
+    evidence: CODE_VERIFIED requirements; NOT_FOUND in AST imports
+
+  - name: unidecode
+    declared_in_requirements: true
+    used_in_code: false
+    source_files: []
+    declared_version: null
+    exact_pin_status: declared_unused_in_ast
+    purpose: UNKNOWN (declared)
+    required_for: []
+    optional: true
+    external_artifact: false
+    network_first_use: true
+    legal_status: third_party
+    status: declared_not_referenced_in_ast
+    evidence: CODE_VERIFIED requirements; NOT_FOUND in AST imports
+
+  - name: tensorboardX
+    declared_in_requirements: true
+    used_in_code: true
+    source_files: [train.py, eval.py]
+    declared_version: null
+    exact_pin_status: unpinned
+    purpose: SummaryWriter fallback
+    required_for: [training, evaluation]
+    optional: true
+    external_artifact: false
+    network_first_use: true
+    legal_status: third_party
+    status: optional_fallback
+    evidence: CODE_VERIFIED try torch.utils.tensorboard else tensorboardX
+
+  - name: TensorBoard
+    declared_in_requirements: false
+    used_in_code: true
+    source_files: [train.py, eval.py]
+    declared_version: null
+    exact_pin_status: via_torch_utils_tensorboard
+    purpose: logging
+    required_for: [training, evaluation]
+    optional: true
+    external_artifact: false
+    network_first_use: false
+    legal_status: third_party
+    status: preferred_over_tensorboardX_if_available
+    evidence: CODE_VERIFIED
+
+  - name: optuna-dashboard
+    declared_in_requirements: true
+    used_in_code: false
+    source_files: []
+    declared_version: null
+    exact_pin_status: declared_unused_in_ast
+    purpose: UNKNOWN (declared; no optuna imports in AST)
+    required_for: []
+    optional: true
+    external_artifact: false
+    network_first_use: true
+    legal_status: third_party
+    status: declared_not_referenced_in_ast
+    evidence: CODE_VERIFIED requirements; NOT_FOUND in AST
+
+  - name: Apex
+    declared_in_requirements: false
+    used_in_code: true
+    source_files: [train.py]
+    declared_version: null
+    exact_pin_status: optional_import
+    purpose: fp16 amp
+    required_for: [training]
+    optional: true
+    external_artifact: true
+    network_first_use: true
+    legal_status: third_party
+    status: optional_fp16_only
+    evidence: CODE_VERIFIED conditional import apex.amp
+
+  - name: GPT-2 tokenizer/config/model
+    declared_in_requirements: false
+    used_in_code: true
+    source_files: [train.py, eval.py, utils/dptree.py, config/gpt-2-base/params.json]
+    declared_version: gpt2
+    exact_pin_status: hf_id_string
+    purpose: pretrained base for train / dptree demo
+    required_for: [model, training, evaluation]
+    optional: false
+    external_artifact: true
+    network_first_use: true
+    legal_status: third_party_weights
+    status: not_downloaded
+    evidence: CODE_VERIFIED model_name_or_path gpt2; dptree AutoTokenizer.from_pretrained("gpt2")
+
+  - name: CUDA runtime
+    declared_in_requirements: false
+    used_in_code: true
+    source_files: [train.py, eval.py]
+    declared_version: null
+    exact_pin_status: UNKNOWN_wheel_vs_driver
+    purpose: GPU tensors
+    required_for: [training, evaluation]
+    optional: true
+    external_artifact: true
+    network_first_use: true
+    legal_status: n/a
+    status: host_driver_present_nvcc_absent
+    evidence: MACHINE_VERIFIED nvidia-smi; nvcc absent
+
+  - name: NCCL
+    declared_in_requirements: false
+    used_in_code: true
+    source_files: [train.py, eval.py]
+    declared_version: null
+    exact_pin_status: UNKNOWN
+    purpose: distributed backend
+    required_for: [training]
+    optional: true
+    external_artifact: true
+    network_first_use: false
+    legal_status: n/a
+    status: only_if_distributed_launch
+    evidence: CODE_VERIFIED init_process_group backend=nccl
+
+summary:
+  declared_in_requirements_count: 8
+  third_party_ast_top_levels: 8
+  implicit_not_in_requirements: [numpy, tqdm, apex, en_core_web_sm, en_core_web_lg, GPT-2, CUDA, NCCL, TensorBoard]
+  declared_unused_in_ast: [python-Levenshtein, unidecode, optuna-dashboard]
+  transformers_pin: UNKNOWN

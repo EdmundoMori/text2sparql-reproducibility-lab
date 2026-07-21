@@ -1,0 +1,20 @@
+component,symbol_or_behavior,source_file,required_for,upstream_version_pin,compatibility_status,future_probe_required,failure_impact,evidence
+transformers,AdamW,train.py,training,NONE_unpinned,UNKNOWN,yes,train_optimizer_break,CODE_VERIFIED
+transformers,AutoConfig,train.py,model;training,NONE_unpinned,UNKNOWN,yes,cannot_load_config,CODE_VERIFIED
+transformers,AutoTokenizer,train.py;eval.py;utils/dptree.py,model;training;evaluation;data_helper,NONE_unpinned,UNKNOWN,yes,cannot_tokenize,CODE_VERIFIED
+transformers,PreTrainedModel,train.py,training;evaluation,NONE_unpinned,UNKNOWN,yes,type_hints_and_apis,CODE_VERIFIED
+transformers,PreTrainedTokenizer,train.py,training;evaluation,NONE_unpinned,UNKNOWN,yes,type_hints,CODE_VERIFIED
+transformers,get_linear_schedule_with_warmup,train.py,training,NONE_unpinned,UNKNOWN,yes,scheduler_break,CODE_VERIFIED
+transformers.activations,ACT2FN,scripts/model.py,model,NONE_unpinned,UNKNOWN,yes,activation_lookup_fail,CODE_VERIFIED
+transformers.modeling_utils,Conv1D,scripts/model.py,model,NONE_unpinned,UNKNOWN,yes,gpt2_block_construction_fail,CODE_VERIFIED
+transformers.modeling_utils,find_pruneable_heads_and_indices,scripts/model.py,model,NONE_unpinned,UNKNOWN,yes,prune_path_fail,CODE_VERIFIED
+transformers.modeling_utils,prune_conv1d_layer,scripts/model.py,model,NONE_unpinned,UNKNOWN,yes,prune_path_fail,CODE_VERIFIED
+transformers.models.gpt2,GPT2PreTrainedModel,scripts/model.py,model,NONE_unpinned,UNKNOWN,yes,custom_gpt2_base_class_missing,CODE_VERIFIED
+transformers,PreTrainedModel.from_pretrained,train.py;eval.py,model;training;evaluation,NONE_unpinned,UNKNOWN,yes,cannot_load_weights,CODE_VERIFIED
+transformers,PreTrainedModel.save_pretrained,train.py,training,NONE_unpinned,UNKNOWN,yes,cannot_save_checkpoint,CODE_VERIFIED
+torch,torch.distributed.launch,README.md,training,torch==1.13.1,README_REPORTED,yes_if_multi_gpu,distributed_entry_changed_in_newer_torch,README_REPORTED;CODE_VERIFIED local_rank
+torch.utils.tensorboard,SummaryWriter,train.py;eval.py,training;evaluation,via_torch_or_tensorboardX,UNKNOWN,yes,logging_fallback,CODE_VERIFIED
+torch.optim,AdamW_via_transformers_and_lr_scheduler,train.py,training,torch==1.13.1,UNKNOWN,yes,optim_api_drift,CODE_VERIFIED
+spacy,en_core_web_sm,scripts/dataset_qald9.py,data,NONE,UNKNOWN,yes,qald9_knowledge_path_fail,CODE_VERIFIED
+spacy,en_core_web_lg,utils/dptree.py,data_helper,NONE,UNKNOWN,yes,dptree_helper_fail,CODE_VERIFIED divergence_from_README_sm
+nltk,word_tokenize;bigrams;trigrams;ngrams;sentence_bleu;single_meteor_score,utils/metrics.py,metrics,NONE_unpinned,UNKNOWN,yes,metric_unit_fail,CODE_VERIFIED

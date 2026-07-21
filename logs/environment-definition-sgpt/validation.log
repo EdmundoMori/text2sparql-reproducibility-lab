@@ -1,0 +1,4 @@
+validation_pass
+third_party 8 ['apex', 'nltk', 'numpy', 'spacy', 'tensorboardX', 'torch', 'tqdm', 'transformers']
+gate CONDITIONAL_DEPENDENCY_RESOLUTION
+next Prompt_12B_documentary_pin_resolution_SGPT_ZERO_COST

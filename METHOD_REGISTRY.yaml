@@ -526,7 +526,7 @@ methods:
   dataset_inventory_artifact: audit/sgpt/DATASET_INVENTORY.csv
   metrics_audit_artifact: audit/sgpt/METRICS_AUDIT.md
   checkpoint_status: absent_in_repo
-  environment_definition_status: not_started
+  environment_definition_status: documented_conditional_dependency_resolution
   import_smoke_ready: conditional
   inference_smoke_ready: blocked
   training_smoke_ready: conditional
@@ -541,7 +541,7 @@ methods:
   next_native_action: SGPT_ENVIRONMENT_DEFINITION
   next_native_action_class: GO_NEXT_ZERO_COST
   gate_confidence: high
-  next_execution_prompt: Prompt_12_SGPT_environment_definition_ZERO_COST
+  next_execution_prompt: Prompt_12B_documentary_pin_resolution_SGPT_ZERO_COST
   execution_blockers:
   - checkpoint_absent_in_repo
   - vram_6GiB_vs_paper_2x12GB
@@ -551,16 +551,31 @@ methods:
   - transformers_unpinned
   - gpt2_download_requires_network
   - epochs_cli_vs_params_json_divergence
-  notes: "WAVE_B static audit 2026-07-20 complete. SGPT_Q≈no --knowledge; SGPT_Q_K≈--knowledge
-    (entities only; LC-QuAD gold-SPARQL-filtered new_LabelsEnt). Metrics lexical only
-    (no Answer F1). Checkpoints NOT_FOUND. reproduction_status remains audit_only;
-    native_audit_complete=false; common_adapter_allowed=false. Prompt 11C: selected
-    GO_NEXT_ZERO_COST for SGPT env definition."
+  notes: "Prompt 12: environment definition documentary; gate CONDITIONAL_DEPENDENCY_RESOLUTION;
+    AST import inventory done; no install/download/train. reproduction_status=audit_only;
+    native_audit_complete=false; common_adapter_allowed=false."
 
   zero_cost_gate_class: GO_NEXT_ZERO_COST
-  zero_cost_next_action: SGPT_ENVIRONMENT_DEFINITION
+  zero_cost_next_action: Prompt_12B_pin_resolution
   zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
   zero_cost_gate_confidence: high
+  environment_definition_artifact: audit/sgpt/ENVIRONMENT_DEFINITION_REPORT.md
+  environment_spec_artifact: environments/sgpt/ENVIRONMENT_SPEC.yaml
+  dependency_manifest_artifact: environments/sgpt/DEPENDENCY_MANIFEST.yaml
+  runtime_profiles_artifact: environments/sgpt/RUNTIME_PROFILES.md
+  environment_gate: CONDITIONAL_DEPENDENCY_RESOLUTION
+  python_declared_version: '3.8'
+  torch_declared_version: 1.13.1
+  transformers_pin_status: unpinned_UNKNOWN
+  gpt2_download_status: not_downloaded
+  z2_preflight_status: specified_not_executed
+  z3_reduced_training_status: blocked_pending_Z2_and_download_authorization
+  remaining_environment_blockers:
+  - transformers_unpinned
+  - python38_image_digest_unresolved
+  - spacy_nltk_gpt2_downloads_unauthorized
+  - host_python_3_10_mismatch
+  environment_artifacts: environments/sgpt/
 - method_id: tebaqa
   display_name: TeBaQA
   repositories:

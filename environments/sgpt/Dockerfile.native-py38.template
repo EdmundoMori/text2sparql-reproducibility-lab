@@ -1,0 +1,27 @@
+# TEMPLATE_ONLY — DO_NOT_BUILD
+# Prompt 12 SGPT environment definition
+# no dependency resolution performed
+# no downloads authorized
+# no train
+#
+# Placeholders must be replaced by a future authorized prompt before any build:
+#   __PYTHON38_BASE_IMAGE_DIGEST__
+#   __RESOLVED_CONSTRAINTS_FILE__
+
+FROM python@sha256:__PYTHON38_BASE_IMAGE_DIGEST__
+
+LABEL lab.method="sgpt" \
+      lab.prompt="12" \
+      lab.template="true" \
+      lab.do_not_build="true"
+
+WORKDIR /opt/sgpt-lab
+
+# DO_NOT_BUILD: constraints file does not exist yet
+# COPY __RESOLVED_CONSTRAINTS_FILE__ /tmp/constraints.txt
+# RUN pip install --no-cache-dir -r /tmp/constraints.txt
+
+# Upstream must be mounted read-only at runtime; do not COPY writable tree here in template.
+# COPY --chown=root:root is intentionally omitted.
+
+CMD ["python3", "-c", "print('TEMPLATE_ONLY: replace digests and constraints before build')"]

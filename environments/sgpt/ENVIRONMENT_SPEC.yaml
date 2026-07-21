@@ -1,0 +1,90 @@
+method_id: sgpt
+prompt: 12
+environment_definition_type: documentary_only
+zero_cost_policy:
+  MAX_EXTERNAL_MONETARY_COST_USD: 0.00
+  paid_api_execution_allowed: false
+  paid_compute_allowed: false
+upstream:
+  path: upstream/sgpt
+  pinned_commit: 1f6964d1c3bfee50c7dec2c25546f32b4ab94b2b
+  license_spdx: MIT
+  license_file: LICENSE.md
+  license_evidence: LEGAL_VERIFIED
+declared_python: "3.8"
+declared_torch: "1.13.1"
+transformers_pin: UNKNOWN
+transformers_pin_status: unresolved_no_version_in_requirements
+status: documented_not_resolved
+gate: CONDITIONAL_DEPENDENCY_RESOLUTION
+profiles:
+  - id: NATIVE_DECLARED
+    status: documented_not_resolved
+  - id: Z2_CPU_DATA_METRIC_PREFLIGHT
+    status: proposed_pending_dependency_resolution
+  - id: Z3_REDUCED_TRAINING_SMOKE
+    status: blocked_pending_Z2_and_download_authorization
+data_paths:
+  - upstream/sgpt/data/lcquad2/
+  - upstream/sgpt/data/qald9/
+  - upstream/sgpt/data/vquanda/
+expected_write_paths_lab_only:
+  - workdir/sgpt/  # gitignored; never write into upstream
+  - logs/environment-definition-sgpt/
+  - experiments/native/sgpt/  # future only
+external_artifacts:
+  - name: gpt2_base
+    status: not_downloaded
+    required_for: [model, training, evaluation]
+  - name: en_core_web_sm
+    status: not_downloaded
+    required_for: [data_qald9]
+  - name: en_core_web_lg
+    status: not_downloaded
+    note: "utils/dptree.py loads en_core_web_lg (CODE_VERIFIED); README/qald9 use en_core_web_sm"
+  - name: nltk_data
+    status: not_downloaded
+    required_for: [metrics]
+checkpoints:
+  sgpt_trained: NOT_FOUND
+  paper_announced: NOT_FOUND_locally
+  lab_reduced_future: not_created
+model_source:
+  train_default: gpt2  # params.json model_name_or_path
+network_boundaries:
+  prompt_12: no_network_used
+  z2_future: network_blocked
+  z3_future: may_require_gpt2_download_with_explicit_auth
+cpu_gpu_boundaries:
+  z2: cpu_only
+  z3: gpu_conditional_or_cpu_fallback
+  paper: 2x12GB_reported
+resource_limits_ref: RESOURCE_LIMITS.md
+unresolved_dependencies:
+  - transformers
+  - numpy
+  - tqdm
+  - spacy
+  - nltk
+  - tensorboardX
+  - python-Levenshtein
+  - unidecode
+  - optuna-dashboard
+  - apex
+  - en_core_web_sm
+  - en_core_web_lg
+  - gpt2
+  - cuda_runtime_wheel
+  - nccl
+stop_conditions:
+  - no_modify_upstream
+  - no_claim_table4
+  - no_answer_f1
+  - no_sparql_execution
+  - no_paid_api
+  - no_silent_dependency_upgrade_to_fix_code
+future_prompt_dependency: Prompt_12B_documentary_pin_resolution_ZERO_COST
+evidence:
+  import_inventory: logs/environment-definition-sgpt/import_inventory.json
+  requirements: upstream/sgpt/requirements.txt
+  readme: upstream/sgpt/README.md
