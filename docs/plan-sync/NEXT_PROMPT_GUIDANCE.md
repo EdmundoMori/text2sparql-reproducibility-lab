@@ -1,21 +1,30 @@
 # NEXT_PROMPT_GUIDANCE
 
 **Fecha:** 2026-07-21  
-**Tras:** Prompt 10B → caché e5-large + `LAB_MINIMAL_INDEX` + preflight FastAPI **pass**; gate sigue **CONDITIONAL_GO**
+**Tras:** Prompt 11 → modelo `openrouter/openai/gpt-4o-mini-2024-07-18`, cota ≈ $0.0581, límite propuesto $0.10, gate **`READY_FOR_HUMAN_APPROVAL`**
 
-## Prompt recomendado (prioridad 1)
+## Acción inmediata (investigador)
 
-**Título:** Prompt 11 — Cierre de presupuesto, selección de modelo y gate final para LOCAL_CHAT_API_ONE_QUESTION
+Completar y enviar en el chat el bloque de:
+
+`docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/HUMAN_LLM_SMOKE_APPROVAL.md`
+
+Sin esa firma **y** sin clave OpenRouter dedicada con límite duro $0.10, **no** ejecutar Prompt 12.
+
+## Prompt recomendado (prioridad 1) — solo tras aprobación
+
+**Título:** Prompt 12 — Ejecución controlada de LOCAL_CHAT_API_ONE_QUESTION
 
 **Método:** `sparql_llm`  
-**Objetivo:** Firmar/registrar presupuesto OpenRouter (`MAX_OPENROUTER_USD`), elegir **un** modelo exacto, fijar `MAX_LLM_CALLS=2` con Settings ya preparados (`max_try_fix_sparql=0`, `enable_sparql_execution=false`), documentar límites no enforceados (`max_tokens` OpenRouter), y emitir GO / CONDITIONAL / NO-GO **final** para el smoke de una pregunta. **Sin** ejecutar POST `/chat` en Prompt 11 salvo que el investigador autorice explícitamente la ejecución en el mismo prompt.
+**Objetivo:** Un único POST `/chat` con la pregunta y el request congelados en Prompt 11, bajo Settings mínimos, `enable_sparql_execution=false`, modelo exacto aprobado, clave dedicada limitada. Registrar evidencia de smoke; conservar `smoke_only`.
 
 **Restricciones:**
-- Preferible: solo documental + checklist GO; no LLM si no hay firma.  
+- Revalidar metadata OpenRouter antes de gastar.  
 - No biodata; no MCP público como nativo; no Virtuoso; no adapters.  
-- Conservar `smoke_only` / `native_audit_complete=false` / `common_adapter_allowed=false` hasta evidencia de ejecución.
+- No afirmar reproducción paper / PE3.  
+- Conservar `native_audit_complete=false` / `common_adapter_allowed=false`.
 
-**Condición de éxito:** decisión formal de gate + presupuesto/modelo registrados (o NO-GO documentado).
+**Condición de éxito:** smoke funcional documentado o aborto seguro con evidencia.
 
 ## Objetivo de fase
 

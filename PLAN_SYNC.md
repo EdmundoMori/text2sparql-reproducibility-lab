@@ -2,12 +2,13 @@
 
 **Audiencia principal:** ChatGPT (planificador) e investigador.  
 **Repo:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-**Última actualización:** 2026-07-21 (Prompt 10B — embedding + índice + preflight)  
+**Última actualización:** 2026-07-21 (Prompt 11 — modelo, cota, gate humano)  
 **Fase:** 1 — native audit; **abierta**  
-**Commit inicial 10B:** `96d5bab9556065cd0cd5785327475565ce910cba`  
-**RUN_ID:** `20260721T092249Z`
+**Commit inicial 11:** `df41c8c5ad7404c491cb0164dbba7be37b40a228`  
+**RUN_ID:** `20260721T100618Z`
 
-> Smoke ≠ PE3. Caché/índice en `workdir/` **no** van a Git. MCP público ≠ pin local.
+> Smoke ≠ PE3. Caché/índice en `workdir/` **no** van a Git. MCP público ≠ pin local.  
+> Prompt 11: **0** inferencias; **no** POST `/chat`; autorización humana **pendiente**.
 
 ---
 
@@ -24,33 +25,40 @@ reproducción nativa → evaluación común → caso de estudio → errores → 
 | 5B | CORE_OFFLINE | `smoke_only` |
 | 9 | Protocolo API/SIB | CONDITIONAL_GO → LOCAL_CHAT_API_ONE_QUESTION |
 | 10 | Env agent + docs | index blocked (sin caché) |
-| **10B** | Download e5-large + index + preflight | **`ENVIRONMENT_READY_INDEX_READY_PREFLIGHT_PASS`** |
+| 10B | Download e5-large + index + preflight | `ENVIRONMENT_READY_INDEX_READY_PREFLIGHT_PASS` |
+| **11** | Modelo + cota + gate humano | **`READY_FOR_HUMAN_APPROVAL`** |
 
 ---
 
-## 3. Prompt 10B — resumen
+## 3. Prompt 11 — resumen
 
 | Campo | Valor |
 |---|---|
-| Autorización | EDMUNDO MORI ORRILLO, 2026-07-21 |
-| Modelo | `intfloat/multilingual-e5-large` (exacto) |
-| Procedencia | FastEmbed 0.8.0 → GCS `fast-multilingual-e5-large.tar.gz` (HF metadata `qdrant/multilingual-e5-large-onnx`) |
-| Caché | ~2.1 GiB en workdir (**gitignored**) |
-| Índice | 12 pts, dim 1024, Cosine, `INDEX_VERIFIED` |
-| Preflight | pass — `/chat`,`/mcp`,`/openapi.json`; **sin** POST `/chat` |
-| LLM / SPARQL / POST | **0 / 0 / 0** |
-| Gate | **CONDITIONAL_GO** (presupuesto/modelo) |
+| RUN_ID | `20260721T100618Z` |
+| Modelo seleccionado | `openrouter/openai/gpt-4o-mini-2024-07-18` |
+| Slug OpenRouter | `openai/gpt-4o-mini-2024-07-18` |
+| Precios (prompt/completion) | `1.5e-7` / `6e-7` USD/token |
+| TWO_CALL_BOUND | ≈ **$0.0581** |
+| MAX_OPENROUTER_USD propuesto | **$0.10** |
+| Retries cliente | openai `max_retries=2` ⇒ ≤3 HTTP/logical; ≤6 total |
+| Pregunta congelada | `How can I retrieve active site annotations in UniProt?` |
+| Gate documental | **READY_FOR_HUMAN_APPROVAL** |
+| Autorización humana | **PENDING** (`HUMAN_LLM_SMOKE_APPROVAL.md`) |
+| Inferencias / POST /chat / SPARQL | **0 / 0 / 0** |
 | `reproduction_status` | `smoke_only` |
+| `native_audit_complete` | `false` |
+| `common_adapter_allowed` | `false` |
 
-Informe: [`audit/sparql_llm/LOCAL_CHAT_API_EMBEDDING_INDEX_PREFLIGHT_REPORT.md`](audit/sparql_llm/LOCAL_CHAT_API_EMBEDDING_INDEX_PREFLIGHT_REPORT.md)
+Informe: [`audit/sparql_llm/LOCAL_CHAT_API_MODEL_BUDGET_FINAL_GATE_REPORT.md`](audit/sparql_llm/LOCAL_CHAT_API_MODEL_BUDGET_FINAL_GATE_REPORT.md)  
+Gate dir: [`docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/`](docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/)
 
 ---
 
-## 4. Siguiente prompt
+## 4. Siguiente paso
 
-**Prompt 11 — Cierre de presupuesto, selección de modelo y gate final para LOCAL_CHAT_API_ONE_QUESTION**
-
-No gastar clave hasta firma. No biodata. No otros métodos.
+1. Investigador completa y responde con el bloque de `HUMAN_LLM_SMOKE_APPROVAL.md`.  
+2. Tras firma + clave dedicada con límite $0.10: **Prompt 12 — Ejecución controlada de LOCAL_CHAT_API_ONE_QUESTION**.  
+3. No redactar Prompt 12 hasta esa aprobación.
 
 → [`docs/plan-sync/NEXT_PROMPT_GUIDANCE.md`](docs/plan-sync/NEXT_PROMPT_GUIDANCE.md)
 
@@ -61,7 +69,7 @@ No gastar clave hasta firma. No biodata. No otros métodos.
 | PE | Estado |
 |---|---|
 | PE1 | substantially_answered |
-| PE2 | partial_evidence (online path prepared; smoke no ejecutado) |
+| PE2 | partial_evidence (modelo/cota listos; smoke no ejecutado) |
 | PE3 | not_started |
 | PE4 | partial_evidence |
 
@@ -73,15 +81,16 @@ No gastar clave hasta firma. No biodata. No otros métodos.
 |---|---|
 | 2026-07-21 | Prompt 10 env ready; index blocked |
 | 2026-07-21 | Prompt 10B cache+index+preflight pass; next=Prompt 11 |
+| 2026-07-21 | Prompt 11 model+budget gate READY_FOR_HUMAN_APPROVAL; next=aprobación humana → Prompt 12 |
 
 ---
 
-## 7. Registro Prompt 10B
+## 7. Registro Prompt 11
 
 | Campo | Valor |
 |---|---|
-| commit inicial | `96d5bab9556065cd0cd5785327475565ce910cba` |
-| RUN_ID | `20260721T092249Z` |
-| clasificación | `ENVIRONMENT_READY_INDEX_READY_PREFLIGHT_PASS` |
-| commit final | `c3ad6c03daec5226f9ccd808294c0a1165d54975` (artefactos); HEAD `f823615cd69c34989c5933a3340213401c91303a` |
-| push | confirmado en origin/main |
+| commit inicial | `df41c8c5ad7404c491cb0164dbba7be37b40a228` |
+| RUN_ID | `20260721T100618Z` |
+| gate | `READY_FOR_HUMAN_APPROVAL` |
+| commit final | _(se registra tras push)_ |
+| push | _(pendiente)_ |

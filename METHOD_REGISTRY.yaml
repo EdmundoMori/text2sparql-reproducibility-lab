@@ -77,15 +77,15 @@ methods:
     selected_future_online_action: LOCAL_CHAT_API_ONE_QUESTION
     selected_future_online_action_class: online_functional_smoke
     selected_future_online_action_gate: CONDITIONAL_GO
-    api_budget_status: proposed_pending_investigator_approval
+    api_budget_status: proposed_human_approval_pending
     indexing_prerequisite_status: ready_lab_minimal_index
     endpoint_prerequisite_status: optional_if_enable_sparql_execution_false
     api_smoke_ready: conditional
     protocol_blockers:
-      - OPENROUTER_API_KEY
-      - investigator_budget_approval
-      - max_tokens_not_enforced_on_openrouter_branch
-      - model_selection_for_smoke_pending
+      - OPENROUTER_API_KEY_dedicated_with_hard_limit
+      - investigator_signed_HUMAN_LLM_SMOKE_APPROVAL
+      - max_tokens_not_enforced_on_openrouter_branch_mitigated_by_key_limit
+      - revalidate_openrouter_metadata_before_prompt_12
 
     agent_environment_status: ready
     agent_environment_run_id: "20260721T084637Z"
@@ -98,12 +98,25 @@ methods:
     minimal_index_status: INDEX_VERIFIED
     minimal_index_run_id: "20260721T092249Z"
     local_chat_startup_preflight_status: pass
-    online_smoke_gate: CONDITIONAL_GO
+    selected_online_model: openrouter/openai/gpt-4o-mini-2024-07-18
+    selected_online_model_snapshot: "20260721T100618Z"
+    model_selection_status: SELECTED_PROPOSED_PENDING_HUMAN_APPROVAL
+    cost_bound_status: COMPUTED_TWO_CALL_BOUND_0_0581
+    proposed_openrouter_limit_usd: 0.10
+    client_retry_status: INSPECTED_MAX_RETRIES_2_HTTP_ATTEMPTS_LE_6
+    smoke_question_status: FROZEN
+    smoke_request_spec_status: FROZEN
+    human_llm_approval_status: PENDING
+    online_smoke_gate: READY_FOR_HUMAN_APPROVAL
     remaining_online_blockers:
-      - OPENROUTER_API_KEY_and_budget_unsigned
+      - human_signed_approval
+      - dedicated_openrouter_key_hard_limit_0_10
+      - revalidate_metadata_pre_prompt_12
       - max_tokens_not_enforced_on_openrouter_branch
-      - model_selection_for_smoke_pending
-    next_execution_prompt: Prompt_11_budget_model_and_final_gate_LOCAL_CHAT_API_ONE_QUESTION
+    next_execution_prompt: Prompt_12_controlled_LOCAL_CHAT_API_ONE_QUESTION_after_human_approval
+    model_budget_gate_run_id: "20260721T100618Z"
+    model_budget_gate_artifact: docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/
+    model_budget_final_report: audit/sparql_llm/LOCAL_CHAT_API_MODEL_BUDGET_FINAL_GATE_REPORT.md
 
     native_gate_class: CONDITIONAL_GO
     scientific_baseline_role: core_baseline_candidate
@@ -112,8 +125,8 @@ methods:
     adapter_legal_gate: conditional_deferred
     generality_class: configurable_general
     gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-    next_native_action: budget_model_approval_then_controlled_chat_smoke
-    next_native_action_class: protocol_definition
+    next_native_action: human_approval_then_controlled_chat_smoke
+    next_native_action_class: online_functional_smoke
     gate_confidence: high
     execution_blockers:
       - compose_plugin_absent_on_host
@@ -121,8 +134,8 @@ methods:
       - ram_risk_e5_large_indexing
       - virtuoso_text2sparql_blocked_on_host
       - host_python_3_10_incompatible_typing_Required
-      - online_index_and_OPENROUTER_budget_pending
-    notes: "Prompt 10B: embedding cache complete; LAB_MINIMAL INDEX_VERIFIED (12); FastAPI preflight pass. Gate CONDITIONAL_GO pending budget/model. reproduction_status remains smoke_only (5B). native_audit_complete=false; common_adapter_allowed=false."
+      - human_llm_approval_and_dedicated_key_pending
+    notes: "Prompt 11: model openrouter/openai/gpt-4o-mini-2024-07-18 SELECTED; TWO_CALL_BOUND~0.0581; MAX_OPENROUTER_USD=0.10 PROPOSED; gate READY_FOR_HUMAN_APPROVAL; 0 LLM calls. reproduction_status remains smoke_only. native_audit_complete=false; common_adapter_allowed=false."
 
   - method_id: mkgqagent
     display_name: mKGQAgent

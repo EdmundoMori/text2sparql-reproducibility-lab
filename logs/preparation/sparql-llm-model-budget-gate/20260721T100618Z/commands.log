@@ -1,0 +1,10 @@
+RUN_ID=20260721T100618Z
+start_utc=2026-07-21T10:06:37+00:00
+no_Authorization
+no_OPENROUTER_API_KEY
+no_inference
+catalog_ec=0
+validation_utc=2026-07-21T10:11:10Z
+artifacts_written=yes
+inference=0
+post_chat=0

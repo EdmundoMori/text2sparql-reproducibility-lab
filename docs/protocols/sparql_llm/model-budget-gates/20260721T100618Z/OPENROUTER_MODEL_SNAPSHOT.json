@@ -1,0 +1,199 @@
+{
+  "lab": "text2sparql-reproducibility-lab",
+  "prompt": 11,
+  "run_id": "20260721T100618Z",
+  "retrieved_at_utc": "2026-07-21T10:08:25Z",
+  "catalog_endpoint": "https://openrouter.ai/api/v1/models",
+  "catalog_model_count": 338,
+  "catalog_full_sha256": "876ea047203ab02b48463bbd74e4578866981fe61bf5d7d9fd0959d2f6395628",
+  "catalog_stored_in_git": false,
+  "catalog_workdir_path": "workdir/runs/sparql-llm-model-budget-gate/20260721T100618Z/openrouter_models_full.json",
+  "auth_header_used": false,
+  "candidates": [
+    {
+      "candidate_id": "A",
+      "retrieved_at_utc": "2026-07-21T10:08:25Z",
+      "requested_slug": "openai/gpt-4o-mini-2024-07-18",
+      "resolved_id": "openai/gpt-4o-mini-2024-07-18",
+      "canonical_slug": "openai/gpt-4o-mini-2024-07-18",
+      "name": "OpenAI: GPT-4o-mini (2024-07-18)",
+      "created": 1721260800,
+      "context_length": 128000,
+      "max_completion_tokens": 16384,
+      "pricing": {
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "request": null,
+        "input_cache_read": "0.000000075"
+      },
+      "supported_parameters": [
+        "frequency_penalty",
+        "logit_bias",
+        "logprobs",
+        "max_tokens",
+        "prediction",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_logprobs",
+        "top_p",
+        "web_search_options"
+      ],
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT"
+      },
+      "provider_count": null,
+      "moderation": true,
+      "availability": true,
+      "alias_status": "exact_dated",
+      "metadata_source": "https://openrouter.ai/api/v1/models + /api/v1/model/openai/gpt-4o-mini-2024-07-18",
+      "raw_response_sha256": "ebdc632b3795f41ebe771c811de4857ec1b327706b3531c95ff1a80642ee7d33",
+      "catalog_full_sha256": "876ea047203ab02b48463bbd74e4578866981fe61bf5d7d9fd0959d2f6395628",
+      "evidence_tag": "OFFICIAL_METADATA_VERIFIED"
+    },
+    {
+      "candidate_id": "B",
+      "retrieved_at_utc": "2026-07-21T10:08:25Z",
+      "requested_slug": "openai/gpt-4o-mini",
+      "resolved_id": "openai/gpt-4o-mini",
+      "canonical_slug": "openai/gpt-4o-mini",
+      "name": "OpenAI: GPT-4o-mini",
+      "created": 1721260800,
+      "context_length": 128000,
+      "max_completion_tokens": 16384,
+      "pricing": {
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "request": null,
+        "input_cache_read": "0.000000075"
+      },
+      "supported_parameters": [
+        "frequency_penalty",
+        "logit_bias",
+        "logprobs",
+        "max_completion_tokens",
+        "max_tokens",
+        "prediction",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_logprobs",
+        "top_p",
+        "web_search_options"
+      ],
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT"
+      },
+      "provider_count": null,
+      "moderation": true,
+      "availability": true,
+      "alias_status": "alias",
+      "metadata_source": "https://openrouter.ai/api/v1/models + /api/v1/model/openai/gpt-4o-mini",
+      "raw_response_sha256": "db50736183ebbec187a282c797f5e4a2135a1ee5b848ad04296e7e6668f7c66e",
+      "catalog_full_sha256": "876ea047203ab02b48463bbd74e4578866981fe61bf5d7d9fd0959d2f6395628",
+      "evidence_tag": "OFFICIAL_METADATA_VERIFIED"
+    },
+    {
+      "candidate_id": "C",
+      "retrieved_at_utc": "2026-07-21T10:08:25Z",
+      "requested_slug": "openai/gpt-5.2",
+      "resolved_id": "openai/gpt-5.2",
+      "canonical_slug": "openai/gpt-5.2",
+      "name": "OpenAI: GPT-5.2",
+      "created": 1765389775,
+      "context_length": 400000,
+      "max_completion_tokens": 128000,
+      "pricing": {
+        "prompt": "0.00000175",
+        "completion": "0.000014",
+        "request": null,
+        "input_cache_read": "0.000000175"
+      },
+      "supported_parameters": [
+        "include_reasoning",
+        "max_completion_tokens",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT"
+      },
+      "provider_count": null,
+      "moderation": true,
+      "availability": true,
+      "alias_status": "alias_or_current",
+      "metadata_source": "https://openrouter.ai/api/v1/models + /api/v1/model/openai/gpt-5.2",
+      "raw_response_sha256": "2d56d9771b7279fad1b1704068cd6dc9a7291cb1227cdfcba5a923f2ae952402",
+      "catalog_full_sha256": "876ea047203ab02b48463bbd74e4578866981fe61bf5d7d9fd0959d2f6395628",
+      "evidence_tag": "OFFICIAL_METADATA_VERIFIED"
+    },
+    {
+      "candidate_id": "D",
+      "retrieved_at_utc": "2026-07-21T10:08:25Z",
+      "requested_slug": "openai/gpt-5.2-20251211",
+      "resolved_id": null,
+      "canonical_slug": null,
+      "name": null,
+      "created": null,
+      "context_length": null,
+      "max_completion_tokens": null,
+      "pricing": null,
+      "supported_parameters": null,
+      "architecture": null,
+      "provider_count": null,
+      "moderation": null,
+      "availability": false,
+      "alias_status": "exact_dated_requested",
+      "metadata_source": "https://openrouter.ai/api/v1/model/openai/gpt-5.2-20251211",
+      "raw_response_sha256": "d5b1a421b6e20580e8fc56d0f21e80fe586635514e57d9edf50eb6ebdcf9ce04",
+      "error": {
+        "message": "Model not found: openai/gpt-5.2-20251211",
+        "code": 404
+      },
+      "catalog_full_sha256": "876ea047203ab02b48463bbd74e4578866981fe61bf5d7d9fd0959d2f6395628"
+    }
+  ]
+}

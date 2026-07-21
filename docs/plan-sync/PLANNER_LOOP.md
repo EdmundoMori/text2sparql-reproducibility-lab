@@ -1,6 +1,6 @@
 # Bucle de optimización del plan (operativo)
 
-**Última actualización:** 2026-07-21 (post Prompt 10B)
+**Última actualización:** 2026-07-21 (post Prompt 11)
 
 ## Ciclo fijo
 
@@ -17,20 +17,24 @@
 
 1. `PLAN_SYNC.md`  
 2. `docs/plan-sync/NEXT_PROMPT_GUIDANCE.md`  
-3. `audit/sparql_llm/LOCAL_CHAT_API_EMBEDDING_INDEX_PREFLIGHT_REPORT.md`  
-4. `docs/protocols/sparql_llm/API_BUDGET_AND_SAFETY.md`  
-5. `docs/protocols/sparql_llm/FUTURE_API_SMOKE_GONOGO.md`
+3. `audit/sparql_llm/LOCAL_CHAT_API_MODEL_BUDGET_FINAL_GATE_REPORT.md`  
+4. `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/FINAL_ONLINE_SMOKE_GATE.md`  
+5. `docs/protocols/sparql_llm/API_BUDGET_AND_SAFETY.md`  
+6. `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/HUMAN_LLM_SMOKE_APPROVAL.md`
 
 ## Reglas
 
 - Un prompt por turno.  
-- No descargar embeddings sin autorización explícita (10B ya autorizada y consumida).  
-- No POST `/chat` sin firma de presupuesto/modelo.  
+- No POST `/chat` sin firma humana + clave dedicada limitada.  
 - Caché e índice en `workdir/` no se versionan.  
-- `common_adapter_allowed: false` hasta native audit.
+- Catálogo OpenRouter completo solo en workdir.  
+- `common_adapter_allowed: false` hasta native audit.  
+- No firmar por el investigador.
 
-## Estado al cerrar Prompt 10B
+## Estado al cerrar Prompt 11
 
-- `ENVIRONMENT_READY_INDEX_READY_PREFLIGHT_PASS`  
-- Siguiente: **Prompt 11** (presupuesto + modelo + gate final)  
-- Objetivo largo plazo intacto.
+- Gate: **READY_FOR_HUMAN_APPROVAL**  
+- Modelo seleccionado (PROPOSED): `openrouter/openai/gpt-4o-mini-2024-07-18`  
+- Inferencias: **0**  
+- Siguiente: firma humana → **Prompt 12**  
+- Objetivo largo plazo intacto; Fase 1 abierta.

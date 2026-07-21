@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-21 (Prompt 10B)  
+**Última actualización:** 2026-07-21 (Prompt 11)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -147,6 +147,18 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | P10B-PREP | Manifest 10B | `environments/sparql_llm/preparations/20260721T092249Z/` | result/cache inv |
 | P10B-DL | Script descarga | `scripts/preparation/sparql_llm_download_embedding.py` | exact model only |
 | P10B-LOG | Logs 10B | `logs/preparation/sparql-llm-embedding-index/20260721T092249Z/` | sin pesos en git |
+| P11-RPT | Modelo+cota+gate final | `audit/sparql_llm/LOCAL_CHAT_API_MODEL_BUDGET_FINAL_GATE_REPORT.md` | Prompt 11 |
+| P11-SNAP | Snapshot OpenRouter | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/OPENROUTER_MODEL_SNAPSHOT.json` | extracto candidatos |
+| P11-MX | Matriz selección | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/MODEL_SELECTION_MATRIX.csv` | 1× SELECTED |
+| P11-CLI | Defaults cliente | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/RESOLVED_CLIENT_DEFAULTS.md` | max_retries=2 |
+| P11-COST | Cota económica | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/COST_BOUND.md` | TWO_CALL_BOUND |
+| P11-Q | Pregunta smoke | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/SMOKE_QUESTION.md` | congelada |
+| P11-REQ | Request spec | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/LOCAL_CHAT_SMOKE_REQUEST_SPEC.json` | no ejecutado |
+| P11-DEC | Decisión modelo | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/MODEL_SELECTION_DECISION.md` | slug fechado |
+| P11-HUM | Aprobación humana | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/HUMAN_LLM_SMOKE_APPROVAL.md` | sin firmar |
+| P11-GATE | Gate online | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/FINAL_ONLINE_SMOKE_GATE.md` | READY_FOR_HUMAN_APPROVAL |
+| P11-BUD | Presupuesto actualizado | `docs/protocols/sparql_llm/API_BUDGET_AND_SAFETY.md` | HUMAN_APPROVAL_PENDING |
+| P11-LOG | Logs Prompt 11 | `logs/preparation/sparql-llm-model-budget-gate/20260721T100618Z/` | metadata SHA |
 
 ## Qué está / no está en GitHub
 

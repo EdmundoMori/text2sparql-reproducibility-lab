@@ -1,0 +1,10 @@
+=== validation 2026-07-21T10:11:09Z ===
+OPENROUTER_MODEL_SNAPSHOT.json OK
+LOCAL_CHAT_SMOKE_REQUEST_SPEC.json OK
+MODEL_SELECTION_MATRIX.csv OK
+METHOD_REGISTRY.yaml OK READY_FOR_HUMAN_APPROVAL
+SELECTED_COUNT 1 openai/gpt-4o-mini-2024-07-18
+no_secret_patterns OK
+lock_pin_probe=
+workdir_only_full_catalog OK
+validation_pass

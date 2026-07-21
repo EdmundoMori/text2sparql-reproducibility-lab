@@ -1,0 +1,42 @@
+langchain_openai 1.3.5
+openai 2.46.0
+MODEL_FIELDS
+{
+  "max_retries": {
+    "annotation": "int | None",
+    "default": null
+  },
+  "max_tokens": {
+    "annotation": "int | None",
+    "default": null
+  },
+  "model": "NOT_IN_MODEL_FIELDS",
+  "n": {
+    "annotation": "int | None",
+    "default": null
+  },
+  "request_timeout": {
+    "annotation": "float | tuple[float, float] | typing.Any | None",
+    "default": null
+  },
+  "seed": {
+    "annotation": "int | None",
+    "default": null
+  },
+  "streaming": {
+    "annotation": "<class 'bool'>",
+    "default": false
+  },
+  "temperature": {
+    "annotation": "float | None",
+    "default": null
+  },
+  "timeout": "NOT_IN_MODEL_FIELDS"
+}
+INSTANCE_ATTRS {"max_retries": null, "max_tokens": null, "model": "openai/gpt-4o-mini-2024-07-18", "model_name": "openai/gpt-4o-mini-2024-07-18", "n": null, "request_timeout": null, "seed": null, "streaming": false, "temperature": null}
+openai_client_max_retries 2
+openai_client_timeout Timeout(connect=5.0, read=600, write=600, pool=600)
+INIT_SIG_DEFAULTS {}
+root_type <class 'openai.OpenAI'>
+root_max_retries 2
+root_timeout None

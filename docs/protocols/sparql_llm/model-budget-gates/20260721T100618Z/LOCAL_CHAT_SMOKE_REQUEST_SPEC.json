@@ -1,0 +1,31 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "How can I retrieve active site annotations in UniProt?"
+    }
+  ],
+  "model": "openrouter/openai/gpt-4o-mini-2024-07-18",
+  "max_tokens": 512,
+  "temperature": 0.0,
+  "stream": false,
+  "validate_output": true,
+  "enable_sparql_execution": false,
+  "headers": {},
+  "session_id": "text2sparql-lab-local-chat-smoke-20260721T100618Z",
+  "_lab_notes": {
+    "configuration_model_prefix": "openrouter/",
+    "openrouter_model_slug": "openai/gpt-4o-mini-2024-07-18",
+    "body_max_tokens_ignored_by_handler": true,
+    "body_temperature_ignored_by_handler": true,
+    "validate_output_does_not_map_to_enable_output_validation": true,
+    "enable_output_validation_remains_default_true_via_Configuration": true,
+    "settings_default_max_try_fix_sparql": 0,
+    "settings_enable_sparql_execution_request_false": true,
+    "settings_use_tools": false,
+    "settings_default_temperature_effective": 0.0,
+    "settings_default_seed_effective": 42,
+    "do_not_execute_in_prompt_11": true,
+    "evidence": "CODE_VERIFIED agent/main.py ChatCompletionRequest wiring"
+  }
+}
