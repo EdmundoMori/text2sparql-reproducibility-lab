@@ -79,5 +79,5 @@ Fuente: `audit/NEXT_PHASE2_PROTOCOL_DECISION.md` (T1). **No ejecutado en 15.**
 | Campo | Valor |
 |---|---|
 | commit inicial | `220ecbee3a22287980be2bb4c9757681386fd01f` |
-| ARTIFACT_COMMIT | _(tras commit de evidencia; sin cadena recursiva)_ |
+| ARTIFACT_COMMIT | `9ceb112e7e8b157cb1961a24183cfea45abde07b` |
 | push | pending |
