@@ -8,6 +8,6 @@
 | **Siguiente** | **`HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION`** |
 | Estado | HUMAN_GATE_REQUIRED |
 | Reserved | Prompt 25B |
-| ARTIFACT_COMMIT | *(post-commit)* |
+| ARTIFACT_COMMIT | `efdf63ccc28ede5b6fbe34bf502f1959f88be9ba` |
 
 No executable deployment prompt.

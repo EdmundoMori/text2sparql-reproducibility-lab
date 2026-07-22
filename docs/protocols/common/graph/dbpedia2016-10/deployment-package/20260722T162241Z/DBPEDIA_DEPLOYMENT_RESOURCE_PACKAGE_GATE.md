@@ -33,4 +33,4 @@
 
 Reserved: **Prompt 25B** (apply human profile selection; prepare final deployment auth). Not executable now.
 
-ARTIFACT_COMMIT: *(post-commit)*
+ARTIFACT_COMMIT: `efdf63ccc28ede5b6fbe34bf502f1959f88be9ba`

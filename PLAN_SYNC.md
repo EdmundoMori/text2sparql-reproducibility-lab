@@ -63,6 +63,6 @@ No prompt de despliegue ejecutable. Reservado: **Prompt 25B**.
 | Campo | Valor |
 |---|---|
 | commit inicial | `4637fb5facd62166b3ee992c07c99aa3f1632d96` |
-| ARTIFACT_COMMIT | *(post-commit)* |
+| ARTIFACT_COMMIT | `efdf63ccc28ede5b6fbe34bf502f1959f88be9ba` |
 | publication metadata commit | *(post-commit tip; max 2 commits)* |
 | push | pending |
