@@ -1,0 +1,10 @@
+order,action_id,title,depends_on,status,notes
+1,GRAPH_ACQUISITION_OR_REBASE_DECISION,DBpedia graph target selection + acquisition package definition,T6C_done,SELECTED_NEXT,Prompt_23 documentary; no graph download
+2,METRIC_IMPLEMENTATION_AND_CONFORMANCE,Metric runtime,G4_or_parallel,queued,
+3,G6I_G7_ADAPTER_IMPLEMENTATION_DECISION,G6I approval,legal+G4+G5,queued,
+4,ADAPTER_IMPLEMENTATION,Implement adapters,G6I,queued,
+5,COMMON_PREFLIGHT,Preflight,adapters,queued,
+6,BENCHMARK,Common benchmark,preflight,queued,NOT_CURRENTLY_ELIGIBLE
+7,CASE_STUDY,Case study,benchmark,queued,
+8,LCQUAD2_FUTURE_ACQUISITION_PACKAGE,Only if license later clarified,T6C_HOLD,queued_not_critical_path,secondary dataset
+9,LCQUAD2_UNSENT_AUTHOR_CLARIFICATION,Unsent template backlog,T6C,backlog_documentary,do not send

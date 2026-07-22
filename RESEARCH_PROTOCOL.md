@@ -215,7 +215,7 @@ La creación de estos artefactos se realizará en fases posteriores solicitadas 
 **Fecha cierre Fase 1:** 2026-07-22  
 **Gate:** `PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION`  
 **Qualifier:** `RESIDUAL_METHOD_BLOCKERS_PRESERVED`  
-**phase1_status:** `closed` · **phase2_status:** `qald9plus_acquired_validated_human_auth_consumed`  
+**phase1_status:** `closed` · **phase2_status:** `lcquad2_scope_clarified_graph_decision_pending`  
 **Adapters:** `common_adapter_allowed=false` (todos)  
 **Distribución (6 activos):** smoke_only×2 (sparql_llm, sgpt); blocked×3 (mkgqagent, rdfconfig_llm, cot_sparql); not_reproducible×1 (firesparql)  
 **TeBaQA:** `HISTORICAL_ONLY` (fuera del denominador)  
@@ -352,3 +352,12 @@ Authorization **UNSIGNED**. Acquisition **NOT_ACQUIRED**. T6B no ejecutado. Prom
 **Gate:** `QALD9PLUS_CONTROLLED_ACQUISITION_PASS_VALIDATED`
 
 Payload QALD EN/DBpedia adquirido y validado en workdir únicamente. Test SEALED. Sin grafos, SPARQL, adapters ni benchmark. Autorización consumida tras PASS.
+
+---
+
+## Addendum Prompt 22 — LC-QuAD T6C license clarification
+
+**Fecha:** 2026-07-22 · **RUN_ID:** `20260722T112721Z`  
+**Gate:** `LCQUAD2_SCOPE_CLARIFIED_ALL_REPRESENTATIONS_HOLD`
+
+Authors source HOLD (LICENSE absent). HF card CC BY 3.0 = platform metadata; no alternativa elegible. Sin payload. T6C cerrado. Siguiente: decisión documental de grafo DBpedia (Prompt 23).

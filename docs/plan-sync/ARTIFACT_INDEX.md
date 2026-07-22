@@ -1,12 +1,16 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-22 (Prompt 21B)  
+**Última actualización:** 2026-07-22 (Prompt 22)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
 
 | ID | Tema | Ruta | Cuándo leerlo |
 |---|---|---|---|
+| P22-GATE | LC-QuAD T6C gate | `docs/protocols/common/legal/lcquad2/20260722T112721Z/LCQUAD2_LICENSE_SCOPE_CLARIFICATION_GATE.md` | Tras T6C |
+| P22-RPT | LC-QuAD clarification report | `audit/PHASE2_LCQUAD2_LICENSE_CLARIFICATION_REPORT.md` | Detalle T6C |
+| P22-NEXT | Next after T6C | `audit/NEXT_AFTER_LCQUAD2_CLARIFICATION_DECISION.md` | Prompt 23 |
+| P22-Q | Post-T6C queue | `audit/PHASE2_POST_T6C_QUEUE.csv` | Cola |
 | P21B-GATE | QALD T6B execution gate | `docs/protocols/common/acquisition/qald9plus/20260722T111153Z/QALD9PLUS_ACQUISITION_EXECUTION_GATE.md` | Tras T6B |
 | P21B-RPT | Acquisition execution report | `audit/PHASE2_QALD9PLUS_ACQUISITION_EXECUTION_REPORT.md` | Detalle T6B |
 | P21B-NEXT | Next after T6B | `audit/NEXT_AFTER_QALD9PLUS_ACQUISITION_EXECUTION_DECISION.md` | Siguiente |

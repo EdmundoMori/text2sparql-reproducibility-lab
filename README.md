@@ -3,16 +3,16 @@
 Laboratorio local de investigación en **Text-to-SPARQL** / KGQA orientado a auditoría, reproducibilidad nativa y, posteriormente, evaluación común de métodos publicados.
 
 
-## Estado actual (Prompt 21B)
+## Estado actual (Prompt 22)
 
 | Campo | Valor |
 |---|---|
 | Fase 1 | **cerrada** |
-| Fase 2 | **QALD EN/DBpedia adquirido** (`QALD9PLUS_CONTROLLED_ACQUISITION_PASS_VALIDATED`) |
-| Auth | `AUTH_QALD9PLUS_T6B_20260722T105246Z_EMO_01` **CONSUMED** |
-| Payload | workdir only · test SEALED · no versionado en Git |
+| Fase 2 | **LC-QuAD T6C CLOSED HOLD** (`LCQUAD2_SCOPE_CLARIFIED_ALL_REPRESENTATIONS_HOLD`) |
+| QALD | ACQUIRED_VALIDATED · test SEALED · auth CONSUMED |
+| LC-QuAD | authors LICENSE absent · HF card insufficient · **no payload** |
 | G4 / adapters / benchmark | no / false / NOT_CURRENTLY_ELIGIBLE |
-| Siguiente | Prompt 22 / T6C — LC-QuAD license clarification |
+| Siguiente | Prompt 23 — DBpedia graph target / acquisition package (documental) |
 
 
 ## Documentos rectores
@@ -101,7 +101,7 @@ Pendiente de decisión explícita. Los métodos upstream conservan sus propias l
 **Fecha cierre Fase 1:** 2026-07-22  
 **Gate:** `PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION`  
 **Qualifier:** `RESIDUAL_METHOD_BLOCKERS_PRESERVED`  
-**phase1_status:** `closed` · **phase2_status:** `qald9plus_acquired_validated_human_auth_consumed`  
+**phase1_status:** `closed` · **phase2_status:** `lcquad2_scope_clarified_graph_decision_pending`  
 **Adapters:** `common_adapter_allowed=false` (todos)  
 **Distribución (6 activos):** smoke_only×2 (sparql_llm, sgpt); blocked×3 (mkgqagent, rdfconfig_llm, cot_sparql); not_reproducible×1 (firesparql)  
 **TeBaQA:** `HISTORICAL_ONLY` (fuera del denominador)  

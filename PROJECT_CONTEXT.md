@@ -3,7 +3,7 @@
 **Proyecto:** `text2sparql-reproducibility-lab`  
 **Dominio:** Text-to-SPARQL / Knowledge Graph Question Answering (KGQA)  
 **Inicio documental:** 2026-07-18  
-**Fase actual:** Fase 1 **cerrada** · Fase 2 **QALD EN/DBpedia ACQUIRED_VALIDATED** (workdir) · auth T6B **CONSUMED** · grafo pendiente · LC-QuAD HOLD · adapters **deshabilitados** · benchmark **no ejecutado**  
+**Fase actual:** Fase 1 **cerrada** · Fase 2 **QALD adquirido** · LC-QuAD T6C **CLOSED HOLD** · siguiente **grafo DBpedia (Prompt 23)** · adapters **deshabilitados** · benchmark **no ejecutado**  
 **Estado:** Fase 1 nativa cerrada (smokes/bloqueos documentados). Clones presentes. Fase 2: framework de evaluación común definido; adapters deshabilitados; benchmark no ejecutado.  
 **Perfil de máquina (obligatorio):** [`MACHINE_PROFILE.md`](MACHINE_PROFILE.md)  
 **Auditoría documental:** `audit/PAPER_CODE_MAPPING.md`, `audit/INITIAL_AUDIT_MATRIX.csv`, `audit/INCLUSION_DECISIONS.md`, `audit/RESOURCE_ESTIMATION.md`  
@@ -280,7 +280,7 @@ Auditoría estática de `upstream/` y, solo bajo petición explícita, smoke tes
 **Fecha cierre Fase 1:** 2026-07-22  
 **Gate:** `PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION`  
 **Qualifier:** `RESIDUAL_METHOD_BLOCKERS_PRESERVED`  
-**phase1_status:** `closed` · **phase2_status:** `qald9plus_acquired_validated_human_auth_consumed`  
+**phase1_status:** `closed` · **phase2_status:** `lcquad2_scope_clarified_graph_decision_pending`  
 **Adapters:** `common_adapter_allowed=false` (todos)  
 **Distribución (6 activos):** smoke_only×2 (sparql_llm, sgpt); blocked×3 (mkgqagent, rdfconfig_llm, cot_sparql); not_reproducible×1 (firesparql)  
 **TeBaQA:** `HISTORICAL_ONLY` (fuera del denominador)  
@@ -378,3 +378,12 @@ Auditoría estática de `upstream/` y, solo bajo petición explícita, smoke tes
 - Graph pending · G4 not satisfied · LC-QuAD HOLD · G5 runtime/G6I pending.
 - common_adapter_allowed=false · benchmark NOT_CURRENTLY_ELIGIBLE.
 - Siguiente: Prompt 22 (T6C LC-QuAD clarification).
+
+---
+
+## Estado actual post-Prompt 22
+
+- T6C RUN_ID: `20260722T112721Z` · Gate: `LCQUAD2_SCOPE_CLARIFIED_ALL_REPRESENTATIONS_HOLD`.
+- Authors LC-QuAD: LICENSE absent @ `0a5f8f85b6f863c3b80f0fa02839e25d438af3ae` · HOLD.
+- HF mohnish/lc_quad: CC BY 3.0 card added by platform username · authority/lineage insufficient · no alternative.
+- No LC-QuAD payload · QALD path not blocked · next Prompt 23 graph decision.

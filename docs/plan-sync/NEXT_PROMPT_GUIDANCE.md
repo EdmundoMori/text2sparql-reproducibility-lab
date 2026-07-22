@@ -1,12 +1,12 @@
 # NEXT_PROMPT_GUIDANCE
 
 **Fecha:** 2026-07-22  
-**Tras:** Prompt 21B — QALD T6B acquisition (`20260722T111153Z`) · auth `AUTH_QALD9PLUS_T6B_20260722T105246Z_EMO_01` CONSUMED
+**Tras:** Prompt 22 — LC-QuAD T6C (`20260722T112721Z`) · gate `LCQUAD2_SCOPE_CLARIFIED_ALL_REPRESENTATIONS_HOLD`
 
 ## Prompt recomendado (único)
 
-**Título:** Prompt 22 — Clarificación documental de licencia/alcance de LC-QuAD 2.0 o representación alternativa, ZERO_COST, sin descargar payloads.
+**Título:** Prompt 23 — Selección documental del objetivo de grafo DBpedia para QALD-9 Plus EN/DBpedia —snapshot histórico o common graph rebase— y definición del paquete de adquisición, ZERO_COST, sin descargar grafos ni ejecutar SPARQL.
 
-**Acción:** T6C — LCQUAD2_LICENSE_CLARIFICATION_OR_ALTERNATIVE
+**Acción:** GRAPH_ACQUISITION_OR_REBASE_DECISION
 
-**Restricciones:** ZERO_COST; documental; sin descarga LC-QuAD; sin grafos; sin adapters; G4 sigue pendiente (acción de grafo en cola, no seleccionada ahora).
+**Restricciones:** ZERO_COST; documental; sin descarga de grafos; sin SPARQL; sin LC-QuAD acquisition; adapters false.

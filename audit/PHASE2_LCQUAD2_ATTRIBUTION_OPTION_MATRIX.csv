@@ -1,0 +1,3 @@
+representation_id,title,authors,source,revision,reported_license,attribution,indicate_changes,license_copy,citation,unknowns,status
+lcquad2_authors_repo,LC-QuAD 2.0,see_paper_Crossref,AskNowQA/LC-QuAD2.0,0a5f8f85b6f863c3b80f0fa02839e25d438af3ae,ABSENT,UNKNOWN_UNTIL_LICENSE,n_a,ABSENT,paper_DOI,license_scope,NO_FINAL_ATTRIBUTION
+mohnish/lc_quad,LC-QuAD 2.0 (HF card pretty_name),UNKNOWN_vs_card,mohnish/lc_quad,b054a263b39b4a1cd041f85806e500ffdcb5be7f,cc-by-3.0,NOT_FINAL_AUTHORITY_UNVERIFIED,UNKNOWN,card_only,paper_DOI,authority_lineage_payload_scope,NO_FINAL_ATTRIBUTION

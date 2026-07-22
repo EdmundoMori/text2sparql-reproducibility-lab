@@ -1,7 +1,7 @@
-schema_version: '0.19'
-updated_at: '2026-07-22T13:20:00+02:00'
-phase: phase2_qald9plus_acquired_validated_graph_and_lcquad_pending
-audit_prompt: Prompt_21B_QALD9PLUS_CONTROLLED_ACQUISITION_EXECUTION
+schema_version: '0.20'
+updated_at: '2026-07-22T13:40:00+02:00'
+phase: phase2_lcquad2_scope_clarified_graph_decision_pending
+audit_prompt: Prompt_22_LCQUAD2_LICENSE_SCOPE_CLARIFICATION
 clones_performed: true
 evidence_closure_complete: true
 wave_a_static_audit_complete: true
@@ -1124,8 +1124,8 @@ phase1_status: closed
 phase1_final_gate: PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION
 phase1_closure_artifact: audit/PHASE1_FINAL_NATIVE_AUDIT_REPORT.md
 phase1_gate_qualifier: RESIDUAL_METHOD_BLOCKERS_PRESERVED
-phase2_status: qald9plus_acquired_validated_human_auth_consumed
-current_phase: phase2_post_t6b
+phase2_status: lcquad2_scope_clarified_graph_decision_pending
+current_phase: phase2_post_t6c
 phase1_decision_artifact: docs/decisions/006_phase1_native_audit_closure_and_phase2_transition.md
 phase2_protocol_run_id: 20260722T083201Z
 phase2_protocol_artifact: docs/protocols/common/20260722T083201Z/
@@ -1175,8 +1175,8 @@ phase2_graph_pin_status: GRAPH_SNAPSHOT_PENDING
 phase2_metric_detail_status: METRIC_CONTRACT_DEFINED
 phase2_adapter_status: disabled_common_adapter_allowed_false
 phase2_benchmark_status: NOT_CURRENTLY_ELIGIBLE
-phase2_next_action: T6C_LCQUAD2_LICENSE_CLARIFICATION_OR_ALTERNATIVE
-phase2_next_prompt: Prompt_22
+phase2_next_action: GRAPH_ACQUISITION_OR_REBASE_DECISION
+phase2_next_prompt: Prompt_23
 pe5_status: protocol_metric_adapter_and_legal_contracts_defined_pending_assets_implementation_and_benchmark
 pe5_preparatory_evidence:
 - dataset_source_provenance_documented
@@ -1204,6 +1204,12 @@ pe5_preparatory_evidence:
 - qald_test_sealed
 - authorization_consumed
 - no_graph_no_sparql
+- lcquad2_license_scope_rechecked
+- lcquad2_representation_authority_classified
+- lcquad2_lineage_classified
+- lcquad2_t6c_closed
+- no_payload_acquired
+- primary_qald_path_not_blocked
 pe6_status: diagnostic_metric_observability_and_legal_boundaries_defined_pending_execution
 pe7_status: not_started
 pe8_status: not_started
@@ -1227,6 +1233,12 @@ pe6_preparatory_evidence:
 - attribution_manifest_drafted
 - test_seal_plan_defined
 - human_authorization_pending
+- lcquad2_license_scope_rechecked
+- lcquad2_representation_authority_classified
+- lcquad2_lineage_classified
+- lcquad2_t6c_closed
+- no_payload_acquired
+- primary_qald_path_not_blocked
 phase2_qald_acquisition_package_run_id: 20260722T105246Z
 phase2_qald_acquisition_package_report: audit/PHASE2_QALD9PLUS_ACQUISITION_PACKAGE_REPORT.md
 phase2_qald_acquisition_package_gate: QALD9PLUS_ACQUISITION_PACKAGE_READY_FOR_HUMAN_AUTHORIZATION
@@ -1247,3 +1259,13 @@ qald_authorization_id: AUTH_QALD9PLUS_T6B_20260722T105246Z_EMO_01
 qald_test_seal_status: SEALED
 qald_payload_location: workdir/datasets/qald9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/
 qald_payload_versioned_in_git: false
+phase2_lcquad2_clarification_run_id: 20260722T112721Z
+phase2_lcquad2_clarification_report: audit/PHASE2_LCQUAD2_LICENSE_CLARIFICATION_REPORT.md
+phase2_lcquad2_clarification_gate: LCQUAD2_SCOPE_CLARIFIED_ALL_REPRESENTATIONS_HOLD
+lcquad2_authors_license_status: AUTHORS_REPO_LICENSE_ABSENT_AT_PIN
+lcquad2_authors_acquisition_status: LAB_POLICY_ACQUISITION_HOLD_SCOPE_UNCLEAR
+lcquad2_hf_license_status: HF_CARD_CC_BY_3_0_REPORTED
+lcquad2_hf_authority_status: PLATFORM_MAINTAINED_REPRESENTATION
+lcquad2_hf_lineage_status: HF_SOURCE_LINEAGE_PARTIAL
+lcquad2_alternative_representation_status: NONE_HOLD
+lcquad2_t6c_status: CLOSED_HOLD

@@ -1,0 +1,10 @@
+validation.log Prompt 22
+gate=LCQUAD2_SCOPE_CLARIFIED_ALL_REPRESENTATIONS_HOLD
+authors_license=ABSENT pin=HEAD
+hf_cc_by_3_0_first_rev=ad2a5cfa actor=albertvillanova PLATFORM
+no_payload=PASS
+no_prompt_22B=PASS
+next=Prompt_23_graph
+G4_not G5_runtime_pending G6I_pending adapters_false benchmark_not_eligible=PASS
+qald_untouched_auth_consumed=PASS
+cost_0=PASS

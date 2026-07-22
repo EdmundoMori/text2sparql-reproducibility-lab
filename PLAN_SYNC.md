@@ -2,16 +2,16 @@
 
 **Audiencia:** ChatGPT e investigador.  
 **Repo:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-**Última actualización:** 2026-07-22 (Prompt **21B** — QALD controlled acquisition T6B)  
-**Fase:** 1 **cerrada** · 2 **QALD EN/DBpedia adquirido y validado** (grafo y LC-QuAD pendientes)  
-**SHA inicial 21B:** `4a790711453c8c3801a9f08915bedb710613b883`  
-**Execution RUN_ID:** `20260722T111153Z`  
-**authorization_id:** `AUTH_QALD9PLUS_T6B_20260722T105246Z_EMO_01` · **CONSUMED**
+**Última actualización:** 2026-07-22 (Prompt **22** — LC-QuAD T6C license clarification)  
+**Fase:** 1 **cerrada** · 2 **LC-QuAD T6C CLOSED HOLD** · grafo DBpedia pendiente  
+**SHA inicial 22:** `35e97535da6e5018423a66c30c3f4bf4163a53f1`  
+**T6C RUN_ID:** `20260722T112721Z`  
 
-> ZERO_COST. Gate `QALD9PLUS_CONTROLLED_ACQUISITION_PASS_VALIDATED`.  
-> 4 archivos verificados · total 7815874 · test SEALED · payloads en workdir only.  
+> ZERO_COST. Gate `LCQUAD2_SCOPE_CLARIFIED_ALL_REPRESENTATIONS_HOLD`.  
+> Authors LICENSE absent · HF CC BY 3.0 card = platform add · no alternativa elegible · no payload.  
+> QALD ACQUIRED_VALIDATED · auth CONSUMED · test SEALED.  
 > G4 **no** · G5 runtime **pending** · G6I **pending**. Adapters **false**. Benchmark **no**.  
-> Siguiente: **Prompt 22 / T6C** (LC-QuAD license clarification). Objetivo largo plazo intacto.
+> Siguiente: **Prompt 23** (graph acquisition/rebase decision). Objetivo largo plazo intacto.
 
 ---
 
@@ -21,17 +21,17 @@ reproducción nativa → evaluación común → caso de estudio → errores → 
 
 ---
 
-## 2. Prompt 21B — resumen
+## 2. Prompt 22 — resumen
 
 | Campo | Valor |
 |---|---|
-| RUN_ID | `20260722T111153Z` |
-| Auth | `AUTH_QALD9PLUS_T6B_20260722T105246Z_EMO_01` CONSUMED |
-| Gate | **QALD9PLUS_CONTROLLED_ACQUISITION_PASS_VALIDATED** |
-| Counts | train 408 / test 150 |
-| Test seal | SEALED |
-| Graph | still pending |
-| Coste | 0.00 |
+| RUN_ID | `20260722T112721Z` |
+| Gate | **LCQUAD2_SCOPE_CLARIFIED_ALL_REPRESENTATIONS_HOLD** |
+| Authors pin/HEAD | `0a5f8f85b6f863c3b80f0fa02839e25d438af3ae` / equal · LICENSE ABSENT |
+| HF | `b054a263b39b4a1cd041f85806e500ffdcb5be7f` · card cc-by-3.0 · PLATFORM · lineage PARTIAL · HOLD |
+| Alternative | NONE_HOLD |
+| QALD | PASS validated · auth consumed |
+| Coste | 0.00 · no LC-QuAD payload |
 
 ### PE5–PE8
 
@@ -44,29 +44,29 @@ reproducción nativa → evaluación común → caso de estudio → errores → 
 
 ---
 
-## 3. Metadata Prompt 21A (reconciliada)
+## 3. Metadata Prompt 21B (reconciliada)
 
 | Campo | SHA |
 |---|---|
-| ARTIFACT_COMMIT | `2a2e6610d6f7ddd2b087a28eac856316196061a8` |
-| publication metadata commit | `4a790711453c8c3801a9f08915bedb710613b883` |
-| remote tip final post-21A | `4a790711453c8c3801a9f08915bedb710613b883` |
+| ARTIFACT_COMMIT | `0439421345cc63d167589f5ac399c97cc432eff2` |
+| publication metadata commit | `35e97535da6e5018423a66c30c3f4bf4163a53f1` |
+| remote tip final post-21B | `35e97535da6e5018423a66c30c3f4bf4163a53f1` |
 
 ---
 
 ## 4. Siguiente prompt (único)
 
-**Prompt 22 — Clarificación documental de licencia/alcance de LC-QuAD 2.0 o representación alternativa, ZERO_COST, sin descargar payloads.**
+**Prompt 23 — Selección documental del objetivo de grafo DBpedia para QALD-9 Plus EN/DBpedia —snapshot histórico o common graph rebase— y definición del paquete de adquisición, ZERO_COST, sin descargar grafos ni ejecutar SPARQL.**
 
-Acción: **T6C**. **No ejecutado en 21B.**
+Acción: **GRAPH_ACQUISITION_OR_REBASE_DECISION**. **No ejecutado en 22.**
 
 ---
 
-## 5. Registro Prompt 21B
+## 5. Registro Prompt 22
 
 | Campo | Valor |
 |---|---|
-| commit inicial | `4a790711453c8c3801a9f08915bedb710613b883` |
-| ARTIFACT_COMMIT | `0439421345cc63d167589f5ac399c97cc432eff2` |
+| commit inicial | `35e97535da6e5018423a66c30c3f4bf4163a53f1` |
+| ARTIFACT_COMMIT | PLACEHOLDER_ARTIFACT |
 | publication metadata commit | *(post-push tip; max 2 commits)* |
 | push | pending |

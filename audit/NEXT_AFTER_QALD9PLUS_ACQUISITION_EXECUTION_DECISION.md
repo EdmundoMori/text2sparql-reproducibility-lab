@@ -33,3 +33,10 @@ G4 auto · G5 impl · G6I · adapters · benchmark · segundo T6B
 ## Commits
 
 - ARTIFACT_COMMIT: `0439421345cc63d167589f5ac399c97cc432eff2`
+
+## Publication metadata (reconciled in Prompt 22)
+
+- ARTIFACT_COMMIT: `0439421345cc63d167589f5ac399c97cc432eff2`
+- publication metadata commit: `35e97535da6e5018423a66c30c3f4bf4163a53f1`
+- remote tip final post-21B: `35e97535da6e5018423a66c30c3f4bf4163a53f1`
+- push: done
