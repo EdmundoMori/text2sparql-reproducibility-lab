@@ -76,5 +76,5 @@ Fuente: `audit/NEXT_AFTER_DATASET_PROVENANCE_DECISION.md` (T3). **No ejecutado e
 | commit inicial | `ba306d069910e3807bd211cc7416c1e88e637e86` |
 | ARTIFACT_COMMIT | `4f642c2718b1a99244958ac31e9eef7d2c74f7cf` |
 | publication metadata commit | `34e2d4589f1c19a5e58237399ef364f4a657ed56` |
-| remote tip final post-17 | `34e2d4589f1c19a5e58237399ef364f4a657ed56` |
+| remote tip final post-17 | `2043b98d11cced9eb1f55485ec6614b873839f5f` |
 | push | done |
