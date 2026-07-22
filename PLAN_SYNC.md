@@ -69,6 +69,6 @@ Fuente: `audit/NEXT_AFTER_METRIC_ORACLE_CONTRACT_DECISION.md` (T4). **No ejecuta
 | Campo | Valor |
 |---|---|
 | commit inicial | `dd6a01196d72589c1d0c304c959398df002e0aff` |
-| ARTIFACT_COMMIT | *(se registra tras commit)* |
-| publication metadata commit | *(siguiente)* |
-| push | pending |
+| ARTIFACT_COMMIT | `09f38f5fc77302dff235651375120415f2213399` |
+| publication metadata commit | *(igual al tip remoto post-push; max 2 commits)* |
+| push | done |
