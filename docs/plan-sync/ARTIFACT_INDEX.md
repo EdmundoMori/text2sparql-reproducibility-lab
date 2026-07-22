@@ -1,12 +1,21 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-22 (Prompt 19)  
+**Última actualización:** 2026-07-22 (Prompt 20)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
 
 | ID | Tema | Ruta | Cuándo leerlo |
 |---|---|---|---|
+|---|---|---|---|
+| P20-GATE | Legal eligibility gate | `docs/protocols/common/legal/20260722T102434Z/LEGAL_ELIGIBILITY_GATE.md` | Tras T5 |
+| P20-RPT | Legal recheck report | `audit/PHASE2_LEGAL_ELIGIBILITY_RECHECK_REPORT.md` | Detalle T5 |
+| P20-NEXT | Next after legal | `audit/NEXT_AFTER_LEGAL_ELIGIBILITY_DECISION.md` | Siguiente acción |
+| P20-DEC | Decisión 011 | `docs/decisions/011_phase2_legal_eligibility_and_acquisition_scope.md` | Alcance adquisición |
+| P20-Q | Post-T5 queue | `audit/PHASE2_POST_T5_QUEUE.csv` | T6A/T6B/T6C |
+| P20-CODE | Code license revalidation | `audit/PHASE2_CODE_LICENSE_REVALIDATION_MATRIX.csv` | Pin vs HEAD |
+| P20-ACQ | Acquisition eligibility | `audit/PHASE2_CONTROLLED_ACQUISITION_ELIGIBILITY_MATRIX.csv` | Scopes |
+| P20-EV | Legal evidence registry | `configs/common/LEGAL_EVIDENCE_REGISTRY.yaml` | Evidencia |
 | CTX | Contexto operativo Cursor | `PROJECT_CONTEXT.md` | Siempre (reglas duras) |
 | PROT | Protocolo científico | `RESEARCH_PROTOCOL.md` | Antes de proponer evaluación/adaptadores |
 | MACH | Perfil host/WSL/GPU | `MACHINE_PROFILE.md` | Antes de proponer train/GPU/Docker |

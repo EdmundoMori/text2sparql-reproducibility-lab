@@ -1,13 +1,7 @@
-# METHOD_REGISTRY.yaml
-# Estados de reproducción: RESEARCH_PROTOCOL.md §5.
-# feasibility_class: MACHINE_PROFILE.md §4.
-# inclusion_decision: audit/INCLUSION_DECISIONS.md
-# Evidencia pendiente cerrada: audit/EVIDENCE_CLOSURE.md
-
-schema_version: '0.16'
-updated_at: '2026-07-22T12:00:00+02:00'
-phase: phase2_adapter_contracts_documented
-audit_prompt: Prompt_19_TRACK_SPECIFIC_ADAPTER_CONTRACTS
+schema_version: '0.17'
+updated_at: '2026-07-22T12:35:00+02:00'
+phase: phase2_legal_recheck_complete_acquisition_authorization_pending
+audit_prompt: Prompt_20_PHASE2_LEGAL_ELIGIBILITY_RECHECK
 clones_performed: true
 evidence_closure_complete: true
 wave_a_static_audit_complete: true
@@ -185,6 +179,27 @@ methods:
   g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
   g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
   next_adapter_action: T5_then_G6I
+  g3_code_status: SATISFIED_EVIDENCE
+  g3_dataset_status: CONDITIONAL
+  g3_graph_status: CONDITIONAL
+  g3_model_status: CONDITIONAL
+  g3_artifact_status: CONDITIONAL
+  g3_service_status: CONDITIONAL
+  g3_output_status: CONDITIONAL
+  g3_composite_status: LAB_POLICY_G3_COMPOSITE_CONDITIONAL
+  license_pin_status: PINNED_LICENSE_FILE_VERIFIED_MIT
+  license_head_status: CURRENT_HEAD_LICENSE_FILE_VERIFIED_MIT
+  acquisition_candidates:
+  - QALD9_PLUS_EN_DBPEDIA
+  implementation_candidate_after_legal: true
+  legal_primary_blocker: none_G3C
+  legal_secondary_blockers:
+  - dataset
+  - graph
+  - model
+  - service
+  next_legal_action: T6A
+  license_revalidation_date: 20260722T102434Z
 - method_id: mkgqagent
   display_name: mKGQAgent
   repositories:
@@ -292,6 +307,24 @@ methods:
   g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
   g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
   next_adapter_action: T5_legal
+  g3_code_status: NOT_SATISFIED
+  g3_dataset_status: CONDITIONAL
+  g3_graph_status: CONDITIONAL
+  g3_model_status: CONDITIONAL
+  g3_artifact_status: CONDITIONAL
+  g3_service_status: CONDITIONAL
+  g3_output_status: CONDITIONAL
+  g3_composite_status: LAB_POLICY_G3_NOT_SATISFIED
+  license_pin_status: LICENSE_ABSENT_AT_PIN
+  license_head_status: LICENSE_ABSENT_AT_CURRENT_HEAD
+  acquisition_candidates: []
+  implementation_candidate_after_legal: false
+  legal_primary_blocker: LICENSE_ABSENT_AT_PIN
+  legal_secondary_blockers:
+  - runtime
+  - cost
+  next_legal_action: HOLD
+  license_revalidation_date: 20260722T102434Z
 - method_id: cot_sparql
   display_name: COT-SPARQL
   repositories:
@@ -412,6 +445,24 @@ methods:
   g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
   g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
   next_adapter_action: T5_legal
+  g3_code_status: NOT_SATISFIED
+  g3_dataset_status: CONDITIONAL
+  g3_graph_status: CONDITIONAL
+  g3_model_status: NOT_SATISFIED
+  g3_artifact_status: NOT_SATISFIED
+  g3_service_status: CONDITIONAL
+  g3_output_status: CONDITIONAL
+  g3_composite_status: LAB_POLICY_G3_NOT_SATISFIED
+  license_pin_status: LICENSE_ABSENT_AT_PIN
+  license_head_status: LICENSE_ABSENT_AT_CURRENT_HEAD
+  acquisition_candidates: []
+  implementation_candidate_after_legal: false
+  legal_primary_blocker: LICENSE_ABSENT_AT_PIN
+  legal_secondary_blockers:
+  - artifacts
+  - runtime
+  next_legal_action: HOLD
+  license_revalidation_date: 20260722T102434Z
 - method_id: firesparql
   display_name: FIRESPARQL
   repositories:
@@ -537,6 +588,24 @@ methods:
   g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
   g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
   next_adapter_action: T5_legal
+  g3_code_status: NOT_SATISFIED
+  g3_dataset_status: CONDITIONAL
+  g3_graph_status: CONDITIONAL
+  g3_model_status: CONDITIONAL
+  g3_artifact_status: NOT_SATISFIED
+  g3_service_status: CONDITIONAL
+  g3_output_status: CONDITIONAL
+  g3_composite_status: LAB_POLICY_G3_NOT_SATISFIED
+  license_pin_status: LICENSE_ABSENT_AT_PIN
+  license_head_status: LICENSE_ABSENT_AT_CURRENT_HEAD
+  acquisition_candidates: []
+  implementation_candidate_after_legal: false
+  legal_primary_blocker: LICENSE_ABSENT_AT_PIN
+  legal_secondary_blockers:
+  - hf_checkpoint_separate
+  - missing_surface
+  next_legal_action: HOLD
+  license_revalidation_date: 20260722T102434Z
 - method_id: rdfconfig_llm
   display_name: LLM + RDF-config
   repositories:
@@ -665,6 +734,25 @@ methods:
   g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
   g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
   next_adapter_action: T5_legal
+  g3_code_status: NOT_SATISFIED
+  g3_dataset_status: CONDITIONAL
+  g3_graph_status: CONDITIONAL
+  g3_model_status: CONDITIONAL
+  g3_artifact_status: CONDITIONAL
+  g3_service_status: CONDITIONAL
+  g3_output_status: CONDITIONAL
+  g3_composite_status: LAB_POLICY_G3_NOT_SATISFIED
+  license_pin_status: LICENSE_ABSENT_AT_PIN
+  license_head_status: LICENSE_ABSENT_AT_CURRENT_HEAD
+  acquisition_candidates:
+  - RDFCONFIG_ZENODO_SEPARATE_PENDING_CONTENT_VERIFY
+  implementation_candidate_after_legal: false
+  legal_primary_blocker: LICENSE_ABSENT_AT_PIN
+  legal_secondary_blockers:
+  - archive_separation
+  - negative_dbpedia
+  next_legal_action: HOLD
+  license_revalidation_date: 20260722T102434Z
 - method_id: sgpt
   display_name: SGPT
   repositories:
@@ -921,6 +1009,26 @@ methods:
   g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
   g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
   next_adapter_action: T5_then_G6I
+  g3_code_status: SATISFIED_EVIDENCE
+  g3_dataset_status: CONDITIONAL
+  g3_graph_status: CONDITIONAL
+  g3_model_status: CONDITIONAL
+  g3_artifact_status: CONDITIONAL
+  g3_service_status: NOT_APPLICABLE
+  g3_output_status: CONDITIONAL
+  g3_composite_status: LAB_POLICY_G3_COMPOSITE_CONDITIONAL
+  license_pin_status: PINNED_LICENSE_FILE_VERIFIED_MIT
+  license_head_status: CURRENT_HEAD_LICENSE_FILE_VERIFIED_MIT
+  acquisition_candidates:
+  - QALD9_PLUS_EN_DBPEDIA
+  implementation_candidate_after_legal: true
+  legal_primary_blocker: none_G3C
+  legal_secondary_blockers:
+  - dataset
+  - model
+  - checkpoint
+  next_legal_action: T6A
+  license_revalidation_date: 20260722T102434Z
 - method_id: tebaqa
   display_name: TeBaQA
   repositories:
@@ -996,12 +1104,28 @@ methods:
   g6d_status: n_a
   g6i_status: n_a
   next_adapter_action: none
+  g3_code_status: SATISFIED_EVIDENCE_AGPL_REF
+  g3_dataset_status: NOT_APPLICABLE
+  g3_graph_status: NOT_APPLICABLE
+  g3_model_status: NOT_APPLICABLE
+  g3_artifact_status: NOT_APPLICABLE
+  g3_service_status: NOT_APPLICABLE
+  g3_output_status: NOT_APPLICABLE
+  g3_composite_status: LAB_POLICY_HISTORICAL_ONLY
+  license_pin_status: AGPL_HISTORICAL_REF
+  license_head_status: n_a
+  acquisition_candidates: []
+  implementation_candidate_after_legal: false
+  legal_primary_blocker: HISTORICAL
+  legal_secondary_blockers: []
+  next_legal_action: none
+  license_revalidation_date: 20260722T102434Z
 phase1_status: closed
 phase1_final_gate: PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION
 phase1_closure_artifact: audit/PHASE1_FINAL_NATIVE_AUDIT_REPORT.md
 phase1_gate_qualifier: RESIDUAL_METHOD_BLOCKERS_PRESERVED
-phase2_status: adapter_contracts_documented_legal_recheck_pending
-current_phase: phase2_adapter_contracts_documented
+phase2_status: legal_recheck_complete_acquisition_authorization_pending
+current_phase: phase2_legal_recheck_complete
 phase1_decision_artifact: docs/decisions/006_phase1_native_audit_closure_and_phase2_transition.md
 phase2_protocol_run_id: 20260722T083201Z
 phase2_protocol_artifact: docs/protocols/common/20260722T083201Z/
@@ -1021,7 +1145,7 @@ adapter_contract_registry: configs/common/ADAPTER_CONTRACT_REGISTRY.yaml
 adapter_contract_vector_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
 g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
 g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
-phase2_legal_recheck_status: PENDING_T5
+phase2_legal_recheck_status: COMPLETE_T5
 phase2_answer_canonicalization_status: RDF_TERM_CANONICALIZATION_V1_DEFINED
 phase2_sparql_canonicalization_status: SPARQL_CANONICALIZATION_V1_CONSERVATIVE_DEFINED
 phase2_gold_contract_status: GOLD_CONTRACT_DEFINED
@@ -1051,9 +1175,9 @@ phase2_graph_pin_status: GRAPH_SNAPSHOT_PENDING
 phase2_metric_detail_status: METRIC_CONTRACT_DEFINED
 phase2_adapter_status: disabled_common_adapter_allowed_false
 phase2_benchmark_status: NOT_CURRENTLY_ELIGIBLE
-phase2_next_action: T5_LEGAL_ELIGIBILITY_RECHECK
-phase2_next_prompt: Prompt_20
-pe5_status: protocol_metric_and_adapter_contracts_defined_pending_implementation_and_benchmark
+phase2_next_action: T6A_CONTROLLED_ACQUISITION_AUTHORIZATION_PACKAGE
+phase2_next_prompt: Prompt_21A
+pe5_status: protocol_metric_adapter_and_legal_contracts_defined_pending_assets_implementation_and_benchmark
 pe5_preparatory_evidence:
 - dataset_source_provenance_documented
 - payload_not_acquired
@@ -1066,6 +1190,25 @@ pe5_preparatory_evidence:
 - input_output_mappings_documented
 - failure_mapping_documented
 - observability_contract_documented
-pe6_status: diagnostic_metric_and_adapter_observability_contracts_defined_pending_execution
+- legal_layers_revalidated
+- acquisition_scope_classified
+- attribution_requirements_documented
+- no_assets_acquired
+pe6_status: diagnostic_metric_observability_and_legal_boundaries_defined_pending_execution
 pe7_status: not_started
 pe8_status: not_started
+phase2_legal_run_id: 20260722T102434Z
+phase2_legal_report: audit/PHASE2_LEGAL_ELIGIBILITY_RECHECK_REPORT.md
+phase2_legal_gate: LEGAL_RECHECK_COMPLETE_PARTIAL_SCOPE_READY_FOR_ACQUISITION_AUTHORIZATION_PACKAGE
+legal_evidence_registry: configs/common/LEGAL_EVIDENCE_REGISTRY.yaml
+g3_component_model: documented
+qald_acquisition_policy_status: LAB_POLICY_ACQUISITION_ELIGIBLE_AFTER_AUTHORIZATION
+lcquad2_acquisition_policy_status: LAB_POLICY_ACQUISITION_HOLD_SCOPE_UNCLEAR
+graph_legal_status: GRAPH_SNAPSHOT_ACQUISITION_PENDING_TERMS_INVENTORIED_NOT_INTERPRETED
+model_artifact_legal_status: INVENTORIED_CONDITIONAL_TERMS_REVIEW_PENDING
+service_terms_status: SERVICE_TERMS_URL_VERIFIED_NOT_INTERPRETED
+attribution_manifest_status: TEMPLATE_READY_NOT_FILLED_FOR_ACQUISITION
+pe6_preparatory_evidence:
+- legal_layers_revalidated
+- acquisition_scope_classified
+- no_assets_acquired

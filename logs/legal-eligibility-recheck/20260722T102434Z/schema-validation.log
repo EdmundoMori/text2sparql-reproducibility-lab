@@ -1,0 +1,7 @@
+schema-validation.log
+LEGAL_COMPONENT_RECORD_SCHEMA.json draft-2020-12: loaded
+LEGAL_EVIDENCE_REGISTRY.yaml: loaded
+ATTRIBUTION_MANIFEST_TEMPLATE.yaml: loaded
+ACQUISITION_LEGAL_MANIFEST_TEMPLATE.yaml: loaded
+ADAPTER_CONTRACT_REGISTRY.yaml: loaded
+METHOD_REGISTRY.yaml schema_version 0.17: loaded

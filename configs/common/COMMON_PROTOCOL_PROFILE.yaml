@@ -1,12 +1,11 @@
-# COMMON_PROTOCOL_PROFILE — Prompt 16–19
 protocol_id: common_text2sparql_eval
-protocol_version: "0.1.3-adapter-contracts"
-protocol_run_id: "20260722T083201Z"
-dataset_provenance_run_id: "20260722T090627Z"
-metric_contract_run_id: "20260722T093257Z"
-adapter_contract_run_id: "20260722T095602Z"
-adapter_contract_version: "0.1.0-documentary"
-metric_contract_version: "0.1.0-documentary"
+protocol_version: 0.1.3-adapter-contracts
+protocol_run_id: 20260722T083201Z
+dataset_provenance_run_id: 20260722T090627Z
+metric_contract_run_id: 20260722T093257Z
+adapter_contract_run_id: 20260722T095602Z
+adapter_contract_version: 0.1.0-documentary
+metric_contract_version: 0.1.0-documentary
 phase: phase2_adapter_contracts_documented
 primary_dataset_candidate: QALD9_PLUS_EN_DBPEDIA
 secondary_dataset_candidate: LCQUAD2_DBPEDIA18
@@ -24,5 +23,7 @@ benchmark_status: NOT_CURRENTLY_ELIGIBLE
 zero_cost_policy: MAX_EXTERNAL_MONETARY_COST_USD_0.00
 next_action: T5_LEGAL_ELIGIBILITY_RECHECK
 next_prompt: Prompt_20
-gate: ADAPTER_CONTRACTS_DOCUMENTED_READY_FOR_LEGAL_ELIGIBILITY_RECHECK
-claim_boundary: ADAPTER_CONTRACTS_DOCUMENTED_no_impl_no_benchmark
+gate: LEGAL_RECHECK_COMPLETE_PARTIAL_SCOPE_READY_FOR_ACQUISITION_AUTHORIZATION_PACKAGE
+claim_boundary: LEGAL_RECHECK_COMPLETE_no_acquisition_no_impl_no_benchmark
+legal_run_id: 20260722T102434Z
+phase2_next_action: T6A

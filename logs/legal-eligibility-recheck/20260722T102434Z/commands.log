@@ -1,0 +1,8 @@
+# commands.log Prompt 20 RUN_ID=20260722T102434Z
+git fetch origin
+git branch --show-current # main
+git rev-parse HEAD # e209fb4044125516d04ee04d1638ad5b00d448c3
+git rev-parse origin/main # e209fb4044125516d04ee04d1638ad5b00d448c3
+git status --short # clean
+# metadata GET/HEAD only: api.github.com, raw.githubusercontent.com LICENSE*, zenodo.org/api/records, huggingface.co/api, creativecommons.org
+# NO dataset payloads, model weights, archives, SPARQL, inference, implementation

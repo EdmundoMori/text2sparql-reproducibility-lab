@@ -1,0 +1,20 @@
+template_version: 0.1.0
+status: TEMPLATE_ONLY
+fields:
+  manifest_id: null
+  artifact_id: null
+  artifact_type: null
+  title: null
+  authors_or_owner: null
+  source: null
+  revision: null
+  license_identifier: null
+  license_source: null
+  copyright_notice: null
+  attribution_text: null
+  changes_made: null
+  source_link: null
+  included_license_path: null
+  notice_path: null
+  generated_at: null
+  evidence_hash: null

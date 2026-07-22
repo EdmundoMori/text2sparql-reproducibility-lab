@@ -215,7 +215,7 @@ La creación de estos artefactos se realizará en fases posteriores solicitadas 
 **Fecha cierre Fase 1:** 2026-07-22  
 **Gate:** `PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION`  
 **Qualifier:** `RESIDUAL_METHOD_BLOCKERS_PRESERVED`  
-**phase1_status:** `closed` · **phase2_status:** `protocol_definition_pending`  
+**phase1_status:** `closed` · **phase2_status:** `legal_recheck_complete_acquisition_authorization_pending`  
 **Adapters:** `common_adapter_allowed=false` (todos)  
 **Distribución (6 activos):** smoke_only×2 (sparql_llm, sgpt); blocked×3 (mkgqagent, rdfconfig_llm, cot_sparql); not_reproducible×1 (firesparql)  
 **TeBaQA:** `HISTORICAL_ONLY` (fuera del denominador)  
@@ -300,3 +300,25 @@ Evidencia preparatoria: metric/oracle/statistical contracts documented; conforma
 | PE8 | `not_started` |
 
 Sin implementación ni ejecución de adapters.
+
+---
+
+## Addendum Prompt 20 — Legal eligibility recheck
+
+**Fecha:** 2026-07-22 · **RUN_ID:** `20260722T102434Z`  
+**Gate:** `LEGAL_RECHECK_COMPLETE_PARTIAL_SCOPE_READY_FOR_ACQUISITION_AUTHORIZATION_PACKAGE`  
+**Clasificación:** `LAB_POLICY_CLASSIFICATION_BASED_ON_PUBLISHED_EVIDENCE`
+
+### PE5–PE8
+
+| PE | Estado |
+|---|---|
+| PE5 | `protocol_metric_adapter_and_legal_contracts_defined_pending_assets_implementation_and_benchmark` |
+| PE6 | `diagnostic_metric_observability_and_legal_boundaries_defined_pending_execution` |
+| PE7 | `not_started` |
+| PE8 | `not_started` |
+
+Evidencia preparatoria: legal_layers_revalidated · acquisition_scope_classified · attribution_requirements_documented · no_assets_acquired.
+
+T6 dividido: T6A autorización documental · T6B ejecución (auth humana) · T6C LC-QuAD clarification.  
+Sin descarga, implementación ni autorización de adquisición en Prompt 20.

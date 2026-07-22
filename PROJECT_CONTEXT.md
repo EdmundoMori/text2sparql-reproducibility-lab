@@ -280,7 +280,7 @@ Auditoría estática de `upstream/` y, solo bajo petición explícita, smoke tes
 **Fecha cierre Fase 1:** 2026-07-22  
 **Gate:** `PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION`  
 **Qualifier:** `RESIDUAL_METHOD_BLOCKERS_PRESERVED`  
-**phase1_status:** `closed` · **phase2_status:** `protocol_definition_pending`  
+**phase1_status:** `closed` · **phase2_status:** `legal_recheck_complete_acquisition_authorization_pending`  
 **Adapters:** `common_adapter_allowed=false` (todos)  
 **Distribución (6 activos):** smoke_only×2 (sparql_llm, sgpt); blocked×3 (mkgqagent, rdfconfig_llm, cot_sparql); not_reproducible×1 (firesparql)  
 **TeBaQA:** `HISTORICAL_ONLY` (fuera del denominador)  
@@ -337,3 +337,20 @@ Auditoría estática de `upstream/` y, solo bajo petición explícita, smoke tes
 - RDFConfig dual track resolved (domain vs DBpedia negative).
 - SPARQL-LLM generate-only vs feedback; SGPT q/qk; CoT native/frozen; FIRE raw/cleaned/RAG.
 - Siguiente: Prompt 20 (T5 legal eligibility recheck).
+
+---
+
+## Estado actual post-Prompt 20
+
+- Legal RUN_ID: `20260722T102434Z`.
+- Gate: `LEGAL_RECHECK_COMPLETE_PARTIAL_SCOPE_READY_FOR_ACQUISITION_AUTHORIZATION_PACKAGE`.
+- Clasificación: `LAB_POLICY_CLASSIFICATION_BASED_ON_PUBLISHED_EVIDENCE` (no asesoramiento jurídico).
+- G3C: SPARQL-LLM/SGPT MIT pin verified; mKG/RDFConfig GitHub/CoT/FIRE LICENSE_ABSENT.
+- G3 composite: CONDITIONAL (SPARQL-LLM/SGPT) o NOT_SATISFIED (resto activo).
+- QALD-9 Plus EN/DBpedia: `LAB_POLICY_ACQUISITION_ELIGIBLE_AFTER_AUTHORIZATION` (CC BY 4.0).
+- LC-QuAD authors: `LAB_POLICY_ACQUISITION_HOLD_SCOPE_UNCLEAR` (T6C).
+- RDFConfig Zenodo archive separado; content equivalence NOT_VERIFIED.
+- Modelos/servicios inventariados; terms NOT_INTERPRETED.
+- G4 not satisfied; G5 runtime pending; G6D documented; G6I pending.
+- common_adapter_allowed=false; benchmark NOT_CURRENTLY_ELIGIBLE; no download; no implementation.
+- Siguiente: Prompt 21A (T6A acquisition authorization package documental).

@@ -3,16 +3,18 @@
 Laboratorio local de investigación en **Text-to-SPARQL** / KGQA orientado a auditoría, reproducibilidad nativa y, posteriormente, evaluación común de métodos publicados.
 
 
-## Estado actual (Prompt 19)
+## Estado actual (Prompt 20)
 
 | Campo | Valor |
 |---|---|
 | Fase 1 | **cerrada** |
-| Fase 2 | **adapter contracts documentales** (`ADAPTER_CONTRACTS_DOCUMENTED_READY_FOR_LEGAL_ELIGIBILITY_RECHECK`) |
-| RUN_IDs | protocol `20260722T083201Z` · provenance `20260722T090627Z` · metrics `20260722T093257Z` · adapters `20260722T095602Z` |
+| Fase 2 | **legal recheck complete** (`LEGAL_RECHECK_COMPLETE_PARTIAL_SCOPE_READY_FOR_ACQUISITION_AUTHORIZATION_PACKAGE`) |
+| RUN_IDs | protocol `20260722T083201Z` · provenance `20260722T090627Z` · metrics `20260722T093257Z` · adapters `20260722T095602Z` · legal `20260722T102434Z` |
+| G3C | SPARQL-LLM/SGPT MIT pin · otros LICENSE_ABSENT · composite CONDITIONAL/NOT_SATISFIED |
+| QALD / LC-QuAD | elegible tras autorización / HOLD scope unclear |
 | G6D / G6I | documented / **pending** |
 | Adapters / benchmark | `common_adapter_allowed=false` / `NOT_CURRENTLY_ELIGIBLE` |
-| Siguiente | Prompt 20 / T5 — legal eligibility recheck (documental) |
+| Siguiente | Prompt 21A / T6A — acquisition authorization package (documental; sin descarga) |
 
 Clones y ejecuciones nativas de Fase 1 están **documentadas**. La secuencia de largo plazo permanece intacta.
 
@@ -103,7 +105,7 @@ Pendiente de decisión explícita. Los métodos upstream conservan sus propias l
 **Fecha cierre Fase 1:** 2026-07-22  
 **Gate:** `PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION`  
 **Qualifier:** `RESIDUAL_METHOD_BLOCKERS_PRESERVED`  
-**phase1_status:** `closed` · **phase2_status:** `protocol_definition_pending`  
+**phase1_status:** `closed` · **phase2_status:** `legal_recheck_complete_acquisition_authorization_pending`  
 **Adapters:** `common_adapter_allowed=false` (todos)  
 **Distribución (6 activos):** smoke_only×2 (sparql_llm, sgpt); blocked×3 (mkgqagent, rdfconfig_llm, cot_sparql); not_reproducible×1 (firesparql)  
 **TeBaQA:** `HISTORICAL_ONLY` (fuera del denominador)  

@@ -1,0 +1,25 @@
+validation.log Prompt 20
+RUN_ID=20260722T102434Z
+YAML/CSV/JSON parseable: PASS
+pinned vs current separated: PASS
+no README-only upgrade: PASS
+no paper/code conflation: PASS
+no model-card/code conflation: PASS
+no mirror/source conflation: PASS
+no archive/HEAD conflation: PASS
+no companion/wrapper conflation: PASS
+QALD CC BY 4.0 pin verified: PASS
+LC-QuAD authors HOLD: PASS
+G3C/composite separated: PASS
+G4 not satisfied: PASS
+G5 runtime pending: PASS
+G6I pending: PASS
+common_adapter_allowed=false: PASS
+benchmark NOT_CURRENTLY_ELIGIBLE: PASS
+no acquisition authorized: PASS
+no payload downloaded: PASS
+no implementation: PASS
+exactly one gate: PASS
+exactly one next action T6A/21A: PASS
+Prompt 21A not executed: PASS
+cost 0.00: PASS

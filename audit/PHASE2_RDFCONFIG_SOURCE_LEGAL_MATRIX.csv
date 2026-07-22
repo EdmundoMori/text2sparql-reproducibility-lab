@@ -1,0 +1,4 @@
+source_id,ref,license,status,equivalence,notes
+github_generator_pin,fe63171d3c8b9679779749ee11f731b2a8318053,ABSENT,G3C_NOT_SATISFIED,n_a,HEAD contract blocked
+zenodo_v1.0.0,10.5281/zenodo.18539214,CC-BY-4.0,ARCHIVE_LICENSE_METADATA_VERIFIED,ARCHIVE_CONTENT_EQUIVALENCE_NOT_VERIFIED,candidate pending content verification
+companion_rdf_config,cccc581c16f0b24865030bc5459475a9d0fcbd5f,MIT,PINNED_LICENSE_FILE_VERIFIED,separate_artifact,not wrapper license

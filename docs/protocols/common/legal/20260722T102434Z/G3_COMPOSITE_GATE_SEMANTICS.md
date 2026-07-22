@@ -1,0 +1,13 @@
+# G3_COMPOSITE_GATE_SEMANTICS
+
+## Subgates
+G3C_CODE · G3D_DATASET · G3G_GRAPH · G3M_MODEL · G3A_ARTIFACT · G3S_SERVICE_TERMS · G3O_OUTPUT_AND_REDISTRIBUTION
+
+## Estados
+SATISFIED_EVIDENCE · CONDITIONAL · NOT_SATISFIED · NOT_APPLICABLE · UNKNOWN
+
+## Regla
+G3 compuesto = SATISFIED solo si todos los componentes requeridos son SATISFIED_EVIDENCE o NOT_APPLICABLE.
+Cualquier UNKNOWN necesario → `LAB_POLICY_G3_COMPOSITE_CONDITIONAL` o `LAB_POLICY_G3_NOT_SATISFIED`.
+
+Arquitectura external-process **no** demuestra por sí sola ausencia de derivación.

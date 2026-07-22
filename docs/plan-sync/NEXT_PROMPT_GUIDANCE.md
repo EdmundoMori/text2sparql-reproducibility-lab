@@ -1,12 +1,12 @@
 # NEXT_PROMPT_GUIDANCE
 
 **Fecha:** 2026-07-22  
-**Tras:** Prompt 19 — adapter contracts
+**Tras:** Prompt 20 — legal eligibility recheck (`20260722T102434Z`)
 
 ## Prompt recomendado (único)
 
-**Título:** Prompt 20 — Revalidación documental de licencias y gate de elegibilidad legal para adapters, datasets y artefactos de Fase 2, ZERO_COST, sin descargar ni implementar.
+**Título:** Prompt 21A — Preparación documental del manifiesto exacto y gate humano para adquisición controlada de QALD-9 Plus EN/DBpedia bajo CC BY 4.0, ZERO_COST, sin descargar datasets ni grafos.
 
-**Acción:** T5 — LEGAL_ELIGIBILITY_RECHECK
+**Acción:** T6A — CONTROLLED_ACQUISITION_AUTHORIZATION_PACKAGE
 
-**Restricciones:** ZERO_COST; sin descargas; sin implementación; no habilitar `common_adapter_allowed`; G6I permanece pending.
+**Restricciones:** ZERO_COST; documental; sin descarga; sin implementación; `common_adapter_allowed=false`; G6I pending; LC-QuAD permanece HOLD (T6C separado); no ejecutar T6B.

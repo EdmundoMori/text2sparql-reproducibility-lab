@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.lab/legal-component-record",
+  "title": "LegalComponentRecord",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "component_id",
+    "component_layer",
+    "status",
+    "evidence_class"
+  ],
+  "properties": {
+    "component_id": {
+      "type": "string"
+    },
+    "component_layer": {
+      "type": "string"
+    },
+    "method_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "variant_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "artifact_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "pinned_revision": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "current_revision": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "license_identifier": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "scope": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "evidence_class": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

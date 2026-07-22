@@ -1,0 +1,6 @@
+component_id,license_identifier,attribution_required,copyright_notice_required,license_notice_required,indicate_changes_required,source_link_required,share_alike_reported,noncommercial_reported,no_derivatives_reported,patent_clause_reported,trademark_clause_reported,model_terms_reported,service_terms_reported,obligation_source,applies_to,future_manifest_field,status,notes
+qald9plus_authors,CC-BY-4.0,true,true,true,true_if_adapted,true,false,false,false,UNKNOWN,UNKNOWN,n_a,n_a,CC_BY_4.0_LICENSE_FILE,dataset_acquisition_future,attribution_text,ATTRIBUTION_REQUIRED,no_legal_interpretation
+sparql_llm_mit,MIT,true,true,true,false_typical,false_typical,false,false,false,n_a,UNKNOWN,separate,separate,LICENSE.txt,code_redistribution_if_any,copyright_notice,NOTICE_PRESERVATION_REQUIRED,
+sgpt_mit,MIT,true,true,true,false_typical,false_typical,false,false,false,n_a,UNKNOWN,separate,n_a,LICENSE.md,code_redistribution_if_any,copyright_notice,NOTICE_PRESERVATION_REQUIRED,
+rdfconfig_zenodo,CC-BY-4.0,true,true,true,true_if_adapted,true,false,false,false,UNKNOWN,UNKNOWN,n_a,n_a,zenodo_metadata,archive_only,attribution_text,ATTRIBUTION_REQUIRED,not_github_pin
+lcquad2_authors,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,n_a,n_a,ABSENT,hold,n_a,LICENSE_SCOPE_UNCLEAR,T6C

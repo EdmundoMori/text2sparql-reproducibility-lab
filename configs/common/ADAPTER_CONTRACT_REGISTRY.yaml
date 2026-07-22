@@ -13,7 +13,7 @@ contracts:
   variant_id: sparql_llm_schema_common_native
   track: IA_SCHEMA_COMMON
   contract_status: ADAPTER_CONTRACT_DEFINED
-  legal_status: LEGAL_VERIFIED_MIT
+  legal_status: G3C_SATISFIED_COMPOSITE_CONDITIONAL
   runtime_status: RUNTIME_GATE_PENDING
   g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
   g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
@@ -21,17 +21,23 @@ contracts:
   negative_contract: 'false'
   historical: 'false'
   prerequisites:
-  - T5
   - G4
   - G5_runtime
-  next_gate: T5
+  - T6A
+  - G4
+  - G5_runtime
+  - G6I
+  next_gate: T6A
+  G3C_code: SATISFIED_EVIDENCE
+  composite_G3: LAB_POLICY_G3_COMPOSITE_CONDITIONAL
+  legal_recheck_status: T5_COMPLETE
 - contract_id: AC_SPARQL_LLM_SCHEMA_COMMON_INTERNAL_FEEDBACK
   path: configs/common/adapters/sparql_llm_internal_feedback.contract.yaml
   method_id: sparql_llm
   variant_id: sparql_llm_schema_common_internal_feedback
   track: IA_SCHEMA_COMMON
   contract_status: ADAPTER_CONTRACT_DEFINED
-  legal_status: LEGAL_VERIFIED_MIT
+  legal_status: G3C_SATISFIED_COMPOSITE_CONDITIONAL
   runtime_status: BLOCKED_UNTIL_G4
   g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
   g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
@@ -39,17 +45,23 @@ contracts:
   negative_contract: 'false'
   historical: 'false'
   prerequisites:
-  - T5
   - G4
   - G5_runtime
-  next_gate: T5
+  - T6A
+  - G4
+  - G5_runtime
+  - G6I
+  next_gate: T6A
+  G3C_code: SATISFIED_EVIDENCE
+  composite_G3: LAB_POLICY_G3_COMPOSITE_CONDITIONAL
+  legal_recheck_status: T5_COMPLETE
 - contract_id: AC_SGPT_Q
   path: configs/common/adapters/sgpt_q.contract.yaml
   method_id: sgpt
   variant_id: sgpt_q
   track: IA_Q_ONLY
   contract_status: ADAPTER_CONTRACT_DEFINED
-  legal_status: LEGAL_VERIFIED_MIT
+  legal_status: G3C_SATISFIED_COMPOSITE_CONDITIONAL
   runtime_status: RUNTIME_GATE_PENDING
   g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
   g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
@@ -57,17 +69,23 @@ contracts:
   negative_contract: 'false'
   historical: 'false'
   prerequisites:
-  - T5
   - G4
   - G5_runtime
-  next_gate: T5
+  - T6A
+  - G4
+  - G5_runtime
+  - G6I
+  next_gate: T6A
+  G3C_code: SATISFIED_EVIDENCE
+  composite_G3: LAB_POLICY_G3_COMPOSITE_CONDITIONAL
+  legal_recheck_status: T5_COMPLETE
 - contract_id: AC_SGPT_QK
   path: configs/common/adapters/sgpt_qk.contract.yaml
   method_id: sgpt
   variant_id: sgpt_qk
   track: IA_ORACLE_GROUNDING
   contract_status: ADAPTER_CONTRACT_DEFINED
-  legal_status: LEGAL_VERIFIED_MIT
+  legal_status: G3C_SATISFIED_COMPOSITE_CONDITIONAL
   runtime_status: RUNTIME_GATE_PENDING
   g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
   g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
@@ -75,17 +93,23 @@ contracts:
   negative_contract: 'false'
   historical: 'false'
   prerequisites:
-  - T5
   - G4
   - G5_runtime
-  next_gate: T5
+  - T6A
+  - G4
+  - G5_runtime
+  - G6I
+  next_gate: T6A
+  G3C_code: SATISFIED_EVIDENCE
+  composite_G3: LAB_POLICY_G3_COMPOSITE_CONDITIONAL
+  legal_recheck_status: T5_COMPLETE
 - contract_id: AC_MKGQAGENT_Q_ONLY
   path: configs/common/adapters/mkgqagent.contract.yaml
   method_id: mkgqagent
   variant_id: mkgqagent_q_only_agentic
   track: IA_Q_ONLY
   contract_status: CONTRACT_BLOCKED_LEGAL
-  legal_status: LICENSE_NOT_CONFIRMED
+  legal_status: G3C_NOT_SATISFIED
   runtime_status: RUNTIME_GATE_PENDING
   g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
   g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
@@ -93,17 +117,20 @@ contracts:
   negative_contract: 'false'
   historical: 'false'
   prerequisites:
-  - T5
   - G4
   - G5_runtime
-  next_gate: T5
+  - legal_hold
+  next_gate: HOLD_LEGAL
+  G3C_code: NOT_SATISFIED
+  composite_G3: LAB_POLICY_G3_NOT_SATISFIED
+  legal_recheck_status: T5_COMPLETE
 - contract_id: AC_RDFCONFIG_DOMAIN_NATIVE
   path: configs/common/adapters/rdfconfig_domain_native.contract.yaml
   method_id: rdfconfig_llm
   variant_id: rdfconfig_domain_native
   track: IA_DOMAIN_NATIVE
   contract_status: CONTRACT_DOMAIN_NATIVE_ONLY
-  legal_status: LICENSE_NOT_CONFIRMED
+  legal_status: G3C_NOT_SATISFIED
   runtime_status: RUNTIME_GATE_PENDING
   g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
   g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
@@ -111,17 +138,20 @@ contracts:
   negative_contract: 'false'
   historical: 'false'
   prerequisites:
-  - T5
   - G4
   - G5_runtime
-  next_gate: T5
+  - legal_hold
+  next_gate: HOLD_LEGAL
+  G3C_code: NOT_SATISFIED
+  composite_G3: LAB_POLICY_G3_NOT_SATISFIED
+  legal_recheck_status: T5_COMPLETE
 - contract_id: AC_RDFCONFIG_SCHEMA_COMMON_DBPEDIA_NEGATIVE
   path: configs/common/adapters/rdfconfig_schema_common_dbpedia.negative.yaml
   method_id: rdfconfig_llm
   variant_id: rdfconfig_schema_common_dbpedia
   track: IA_SCHEMA_COMMON
   contract_status: ADAPTER_NEGATIVE_CONTRACT_DEFINED
-  legal_status: LICENSE_NOT_CONFIRMED
+  legal_status: G3C_NOT_SATISFIED
   runtime_status: CONTRACT_BLOCKED_MISSING_ARTIFACT
   g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
   g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
@@ -129,17 +159,20 @@ contracts:
   negative_contract: 'true'
   historical: 'false'
   prerequisites:
-  - T5
   - G4
   - G5_runtime
-  next_gate: T5
+  - legal_hold
+  next_gate: HOLD_LEGAL
+  G3C_code: NOT_SATISFIED
+  composite_G3: LAB_POLICY_G3_NOT_SATISFIED
+  legal_recheck_status: T5_COMPLETE
 - contract_id: AC_COT_SPARQL_NATIVE_EXTERNAL
   path: configs/common/adapters/cot_sparql.contract.yaml
   method_id: cot_sparql
   variant_id: cot_native_external_services
   track: IA_FIXED_EXTERNAL_GROUNDING
   contract_status: CONTRACT_BLOCKED_LEGAL
-  legal_status: LICENSE_NOT_CONFIRMED
+  legal_status: G3C_NOT_SATISFIED
   runtime_status: CONTRACT_BLOCKED_RUNTIME
   g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
   g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
@@ -147,17 +180,20 @@ contracts:
   negative_contract: 'false'
   historical: 'false'
   prerequisites:
-  - T5
   - G4
   - G5_runtime
-  next_gate: T5
+  - legal_hold
+  next_gate: HOLD_LEGAL
+  G3C_code: NOT_SATISFIED
+  composite_G3: LAB_POLICY_G3_NOT_SATISFIED
+  legal_recheck_status: T5_COMPLETE
 - contract_id: AC_COT_SPARQL_FROZEN_GROUNDING
   path: configs/common/adapters/cot_sparql_frozen_grounding.contract.yaml
   method_id: cot_sparql
   variant_id: cot_common_frozen_grounding
   track: IA_FIXED_EXTERNAL_GROUNDING
   contract_status: ADAPTER_CONTRACT_DEFINED
-  legal_status: LICENSE_NOT_CONFIRMED
+  legal_status: G3C_NOT_SATISFIED
   runtime_status: CONTRACT_BLOCKED_RUNTIME
   g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
   g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
@@ -165,17 +201,20 @@ contracts:
   negative_contract: 'false'
   historical: 'false'
   prerequisites:
-  - T5
   - G4
   - G5_runtime
-  next_gate: T5
+  - legal_hold
+  next_gate: HOLD_LEGAL
+  G3C_code: NOT_SATISFIED
+  composite_G3: LAB_POLICY_G3_NOT_SATISFIED
+  legal_recheck_status: T5_COMPLETE
 - contract_id: AC_FIRESPARQL_DOMAIN_NATIVE
   path: configs/common/adapters/firesparql_domain_native.contract.yaml
   method_id: firesparql
   variant_id: firesparql_raw_generation
   track: IA_DOMAIN_NATIVE
   contract_status: CONTRACT_DOMAIN_NATIVE_ONLY
-  legal_status: LICENSE_NOT_CONFIRMED
+  legal_status: G3C_NOT_SATISFIED
   runtime_status: CONTRACT_BLOCKED_MISSING_NATIVE_SURFACE
   g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
   g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
@@ -183,17 +222,20 @@ contracts:
   negative_contract: 'false'
   historical: 'false'
   prerequisites:
-  - T5
   - G4
   - G5_runtime
-  next_gate: T5
+  - legal_hold
+  next_gate: HOLD_LEGAL
+  G3C_code: NOT_SATISFIED
+  composite_G3: LAB_POLICY_G3_NOT_SATISFIED
+  legal_recheck_status: T5_COMPLETE
 - contract_id: AC_FIRESPARQL_CLEANED
   path: configs/common/adapters/firesparql_cleaned.contract.yaml
   method_id: firesparql
   variant_id: firesparql_cleaned_generation
   track: IA_DOMAIN_NATIVE
   contract_status: CONTRACT_DOMAIN_NATIVE_ONLY
-  legal_status: LICENSE_NOT_CONFIRMED
+  legal_status: G3C_NOT_SATISFIED
   runtime_status: CONTRACT_BLOCKED_POLICY
   g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
   g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
@@ -201,17 +243,20 @@ contracts:
   negative_contract: 'false'
   historical: 'false'
   prerequisites:
-  - T5
   - G4
   - G5_runtime
-  next_gate: T5
+  - legal_hold
+  next_gate: HOLD_LEGAL
+  G3C_code: NOT_SATISFIED
+  composite_G3: LAB_POLICY_G3_NOT_SATISFIED
+  legal_recheck_status: T5_COMPLETE
 - contract_id: AC_FIRESPARQL_RAG
   path: configs/common/adapters/firesparql_rag.contract.yaml
   method_id: firesparql
   variant_id: firesparql_rag
   track: IA_DOMAIN_NATIVE
   contract_status: CONTRACT_DOMAIN_NATIVE_ONLY
-  legal_status: LICENSE_NOT_CONFIRMED
+  legal_status: G3C_NOT_SATISFIED
   runtime_status: CONTRACT_BLOCKED_MISSING_NATIVE_SURFACE
   g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
   g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
@@ -219,22 +264,33 @@ contracts:
   negative_contract: 'false'
   historical: 'false'
   prerequisites:
-  - T5
   - G4
   - G5_runtime
-  next_gate: T5
+  - legal_hold
+  next_gate: HOLD_LEGAL
+  G3C_code: NOT_SATISFIED
+  composite_G3: LAB_POLICY_G3_NOT_SATISFIED
+  legal_recheck_status: T5_COMPLETE
 - contract_id: HISTORICAL_TEBAQA
   path: n_a
   method_id: tebaqa
   variant_id: tebaqa_historical
   track: IA_HISTORICAL
   contract_status: CONTRACT_HISTORICAL_ONLY
-  legal_status: AGPL
+  legal_status: LAB_POLICY_HISTORICAL_ONLY
   runtime_status: n_a
   g6d_status: n_a
   g6i_status: n_a
   implementation_candidate: 'false'
   negative_contract: 'false'
   historical: 'true'
-  prerequisites: []
+  prerequisites:
+  - legal_hold
   next_gate: none
+  G3C_code: SATISFIED_EVIDENCE_AGPL_REF
+  composite_G3: LAB_POLICY_HISTORICAL_ONLY
+  legal_recheck_status: T5_COMPLETE
+legal_recheck_run_id: 20260722T102434Z
+legal_recheck_gate: LEGAL_RECHECK_COMPLETE_PARTIAL_SCOPE_READY_FOR_ACQUISITION_AUTHORIZATION_PACKAGE
+g3_component_model: documented
+phase2_next_action: T6A_CONTROLLED_ACQUISITION_AUTHORIZATION_PACKAGE

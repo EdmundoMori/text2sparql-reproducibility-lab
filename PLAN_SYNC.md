@@ -2,13 +2,15 @@
 
 **Audiencia:** ChatGPT e investigador.  
 **Repo:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-**Última actualización:** 2026-07-22 (Prompt **19** — adapter contracts)  
-**Fase:** 1 **cerrada** · 2 **G6D documental** (T5 legal pending)  
-**SHA inicial 19:** `39bddbb2c85bce866d41d020f7ea5b50ce4fa45e`  
-**Adapter RUN_ID:** `20260722T095602Z`  
-**adapter_contract_version:** `0.1.0-documentary`
+**Última actualización:** 2026-07-22 (Prompt **20** — legal eligibility recheck)  
+**Fase:** 1 **cerrada** · 2 **legal recheck complete** (T6A acquisition auth package pending)  
+**SHA inicial 20:** `e209fb4044125516d04ee04d1638ad5b00d448c3`  
+**Legal RUN_ID:** `20260722T102434Z`  
 
-> ZERO_COST. Gate `ADAPTER_CONTRACTS_DOCUMENTED_READY_FOR_LEGAL_ELIGIBILITY_RECHECK`. G6D **sí** · G6I **pending**. Adapters **false**. Benchmark **no**. Objetivo largo plazo intacto.
+> ZERO_COST. Gate `LEGAL_RECHECK_COMPLETE_PARTIAL_SCOPE_READY_FOR_ACQUISITION_AUTHORIZATION_PACKAGE`.  
+> G3C: SPARQL-LLM/SGPT SATISFIED · otros NOT_SATISFIED. G3 composite CONDITIONAL/NOT_SATISFIED.  
+> QALD candidate after auth · LC-QuAD HOLD · Zenodo RDFConfig separado.  
+> G4 **no** · G5 runtime **pending** · G6D **sí** · G6I **pending**. Adapters **false**. Benchmark **no**. Sin descargas. Objetivo largo plazo intacto.
 
 ---
 
@@ -18,53 +20,57 @@ reproducción nativa → evaluación común → caso de estudio → errores → 
 
 ---
 
-## 2. Prompt 19 — resumen
+## 2. Prompt 20 — resumen
 
 | Campo | Valor |
 |---|---|
-| RUN_ID | `20260722T095602Z` |
-| Gate | **ADAPTER_CONTRACTS_DOCUMENTED_READY_FOR_LEGAL_ELIGIBILITY_RECHECK** |
-| G6D / G6I | documented / pending |
-| Contratos | SPARQL-LLM (generate-only + feedback) · SGPT q/qk · mKG legal-blocked · RDFConfig domain + DBpedia **negative** · CoT native/frozen · FIRE raw/cleaned/RAG · TeBaQA historical |
-| Vectors | 42 · NOT_EXECUTED |
-| Candidates after gates | sparql_llm · sgpt_q/qk (current allowed=false) |
-| G3/G4/G5 | legal recheck pending / G4 no / G5 runtime pending |
-| Coste | 0.00 |
+| RUN_ID | `20260722T102434Z` |
+| Gate | **LEGAL_RECHECK_COMPLETE_PARTIAL_SCOPE_READY_FOR_ACQUISITION_AUTHORIZATION_PACKAGE** |
+| G3C | SPARQL-LLM/SGPT MIT pin verified · mKG/RDFConfig GitHub/CoT/FIRE LICENSE_ABSENT |
+| QALD | `LAB_POLICY_ACQUISITION_ELIGIBLE_AFTER_AUTHORIZATION` (CC BY 4.0) |
+| LC-QuAD | `LAB_POLICY_ACQUISITION_HOLD_SCOPE_UNCLEAR` |
+| RDFConfig Zenodo | separate candidate; content equivalence NOT_VERIFIED |
+| Modelos/servicios | inventariados; TERMS_REVIEW_PENDING / NOT_INTERPRETED |
+| G4/G5/G6D/G6I | not / runtime pending / documented / pending |
+| Adapters / benchmark | false / NOT_CURRENTLY_ELIGIBLE |
+| Coste | 0.00 · no download · no implementation |
 
 ### PE5–PE8
 
 | PE | Estado |
 |---|---|
-| PE5 | protocol_metric_and_adapter_contracts_defined_pending_implementation_and_benchmark |
-| PE6 | diagnostic_metric_and_adapter_observability_contracts_defined_pending_execution |
+| PE5 | protocol_metric_adapter_and_legal_contracts_defined_pending_assets_implementation_and_benchmark |
+| PE6 | diagnostic_metric_observability_and_legal_boundaries_defined_pending_execution |
 | PE7 | not_started |
 | PE8 | not_started |
 
 ---
 
-## 3. Metadata Prompt 18 (reconciliada)
+## 3. Metadata Prompt 19 (reconciliada)
 
 | Campo | SHA |
 |---|---|
-| ARTIFACT_COMMIT | `09f38f5fc77302dff235651375120415f2213399` |
-| publication metadata commit | `39bddbb2c85bce866d41d020f7ea5b50ce4fa45e` |
-| remote tip final post-18 | `39bddbb2c85bce866d41d020f7ea5b50ce4fa45e` |
+| ARTIFACT_COMMIT | `3f97ce499fae189e12efcce4c8f450e7b3020d91` |
+| publication metadata commit | `e209fb4044125516d04ee04d1638ad5b00d448c3` |
+| remote tip final post-19 | `e209fb4044125516d04ee04d1638ad5b00d448c3` |
 
 ---
 
 ## 4. Siguiente prompt (único)
 
-**Prompt 20 — Revalidación documental de licencias y gate de elegibilidad legal para adapters, datasets y artefactos de Fase 2, ZERO_COST, sin descargar ni implementar.**
+**Prompt 21A — Preparación documental del manifiesto exacto y gate humano para adquisición controlada de QALD-9 Plus EN/DBpedia bajo CC BY 4.0, ZERO_COST, sin descargar datasets ni grafos.**
 
-Fuente: `audit/NEXT_AFTER_ADAPTER_CONTRACT_DECISION.md` (T5). **No ejecutado en 19.**
+Acción: **T6A — CONTROLLED_ACQUISITION_AUTHORIZATION_PACKAGE**. Documental. **No ejecutado en 20.**
+
+Cola: `audit/PHASE2_POST_T5_QUEUE.csv` (T6A → human auth → T6B → T6C LC-QuAD → …).
 
 ---
 
-## 5. Registro Prompt 19
+## 5. Registro Prompt 20
 
 | Campo | Valor |
 |---|---|
-| commit inicial | `39bddbb2c85bce866d41d020f7ea5b50ce4fa45e` |
-| ARTIFACT_COMMIT | `3f97ce499fae189e12efcce4c8f450e7b3020d91` |
-| publication metadata commit | *(igual al tip remoto post-push; max 2 commits)* |
-| push | done |
+| commit inicial | `e209fb4044125516d04ee04d1638ad5b00d448c3` |
+| ARTIFACT_COMMIT | PLACEHOLDER_ARTIFACT |
+| publication metadata commit | *(post-push tip; max 2 commits)* |
+| push | pending |

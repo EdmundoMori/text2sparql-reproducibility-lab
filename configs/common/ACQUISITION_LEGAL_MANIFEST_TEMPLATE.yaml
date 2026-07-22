@@ -1,0 +1,22 @@
+template_version: 0.1.0
+status: TEMPLATE_ONLY_NO_AUTHORIZATION
+fields:
+  acquisition_scope_id: null
+  authorization_id: null
+  artifact_id: null
+  logical_view: null
+  exact_source: null
+  exact_revision: null
+  expected_files: null
+  expected_hashes: null
+  license_evidence_ids: null
+  attribution_manifest: null
+  obligations: null
+  prohibited_actions: null
+  payload_destination: null
+  redistribution_policy: null
+  cost_limit_usd: 0.0
+  network_allowlist: null
+  stop_conditions: null
+  authorization_status: NOT_AUTHORIZED
+  acquisition_status: NOT_ACQUIRED
