@@ -1,0 +1,204 @@
+{
+  "acquisition_manifest_sha256": "786767f40a768ee671298af9b1189dc040af046e7595780a2b9832de9d5e024b",
+  "acquisition_status": "NOT_ACQUIRED",
+  "allowlist_payload_host_count": 1,
+  "allowlist_payload_path_count": 114,
+  "allowlist_sha256": "3a773f39b41f26f3ce1e077053c58c37c8f7fd6486f78303688b2ec9197067eb",
+  "authorization_status": "UNSIGNED",
+  "byte_cap": 6995053391,
+  "checks": [
+    {
+      "check": "scope_status_closed",
+      "detail": "CLOSED",
+      "pass": true
+    },
+    {
+      "check": "exact_file_count_field",
+      "detail": "114",
+      "pass": true
+    },
+    {
+      "check": "files_len",
+      "detail": "114",
+      "pass": true
+    },
+    {
+      "check": "file_id_unique",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "path_unique",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "source_url_unique",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "https_host_path_canonical",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "total_bytes",
+      "detail": "6925795437",
+      "pass": true
+    },
+    {
+      "check": "md5_count",
+      "detail": "112",
+      "pass": true
+    },
+    {
+      "check": "no_md5_exact",
+      "detail": "['instance_types_lhd_dbo_en.ttl.bz2', 'instance_types_lhd_ext_en.ttl.bz2']",
+      "pass": true
+    },
+    {
+      "check": "payload_path_count",
+      "detail": "114",
+      "pass": true
+    },
+    {
+      "check": "no_tql_duplicates",
+      "detail": "0",
+      "pass": true
+    },
+    {
+      "check": "payload_hosts",
+      "detail": "['downloads.dbpedia.org']",
+      "pass": true
+    },
+    {
+      "check": "payload_path_len",
+      "detail": "114",
+      "pass": true
+    },
+    {
+      "check": "payload_paths_unique",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "set_equality",
+      "detail": "missing=0 extra=0",
+      "pass": true
+    },
+    {
+      "check": "no_double_slash",
+      "detail": "[]",
+      "pass": true
+    },
+    {
+      "check": "checksum_paths_disjoint",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "checksum_not_empty",
+      "detail": "14",
+      "pass": true
+    },
+    {
+      "check": "no_checksum_in_payload",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "allowlist_inactive",
+      "detail": "DOCUMENTARY_ONLY_NOT_ACTIVE",
+      "pass": true
+    },
+    {
+      "check": "no_mirrors_in_payload_hosts",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "acq_file_count",
+      "detail": "114",
+      "pass": true
+    },
+    {
+      "check": "acq_bytes",
+      "detail": "6925795437",
+      "pass": true
+    },
+    {
+      "check": "acq_cap",
+      "detail": "6995053391",
+      "pass": true
+    },
+    {
+      "check": "acq_hash",
+      "detail": "2dcbc4df0b4af368d797a36525d607dae809317310c8c35d70066c5275c454c7",
+      "pass": true
+    },
+    {
+      "check": "acq_auth_id_null",
+      "detail": "None",
+      "pass": true
+    },
+    {
+      "check": "acq_auth_unsigned",
+      "detail": "UNSIGNED",
+      "pass": true
+    },
+    {
+      "check": "acq_not_acquired",
+      "detail": "NOT_ACQUIRED",
+      "pass": true
+    },
+    {
+      "check": "acq_not_deployed",
+      "detail": "NOT_DEPLOYED",
+      "pass": true
+    },
+    {
+      "check": "acq_g4_runtime",
+      "detail": "NOT_SATISFIED",
+      "pass": true
+    },
+    {
+      "check": "lock_hash",
+      "detail": "2dcbc4df0b4af368d797a36525d607dae809317310c8c35d70066c5275c454c7",
+      "pass": true
+    },
+    {
+      "check": "lock_count",
+      "detail": "114",
+      "pass": true
+    },
+    {
+      "check": "lock_bytes",
+      "detail": "6925795437",
+      "pass": true
+    }
+  ],
+  "checksum_coverage_files": 112,
+  "checksum_path_count": 14,
+  "deployment_status": "NOT_DEPLOYED",
+  "duplicate_paths": [],
+  "errors": [],
+  "extra_payload_paths": [],
+  "final_status": "STATIC_CONSISTENCY_PASS",
+  "manifest_content_hash": "2dcbc4df0b4af368d797a36525d607dae809317310c8c35d70066c5275c454c7",
+  "manifest_file_count": 114,
+  "manifest_sha256": "3993dde79ece90062bc1303d9e0de3b0016ec6572ab1c1fc6491f9d1cff0bc6c",
+  "manifest_total_bytes": 6925795437,
+  "metadata_host_count": 3,
+  "metadata_path_count": 2,
+  "missing_payload_paths": [],
+  "no_checksum_files": [
+    "instance_types_lhd_dbo_en.ttl.bz2",
+    "instance_types_lhd_ext_en.ttl.bz2"
+  ],
+  "noncanonical_paths": [],
+  "run_id": "20260722T134313Z",
+  "scope_lock_sha256": "68ec8ca0b0916c3d6de092a8cb29b22542c3f20fe25d48eb6c7e5ec5646699e9",
+  "validation_version": "1.0.0",
+  "warnings": []
+}

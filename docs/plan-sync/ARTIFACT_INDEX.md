@@ -1,12 +1,18 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-22 (Prompt 23B)  
+**Última actualización:** 2026-07-22 (Prompt 23C)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
 
 | ID | Tema | Ruta | Cuándo leerlo |
 |---|---|---|---|
+| P23C-GATE | Static consistency gate | `docs/protocols/common/graph/dbpedia2016-10/acquisition-consistency/20260722T134313Z/DBPEDIA_ACQUISITION_PACKAGE_STATIC_CONSISTENCY_GATE.md` | Tras 23C |
+| P23C-RPT | Static consistency report | `audit/PHASE2_DBPEDIA_ACQUISITION_PACKAGE_STATIC_CONSISTENCY_REPORT.md` | Detalle |
+| P23C-DEC | Decisión 017 | `docs/decisions/017_dbpedia_acquisition_manifest_allowlist_consistency.md` | Allowlist fix |
+| P23C-VAL | Offline validator | `scripts/preparation/validate_dbpedia_2016_10_acquisition_package.py` | Offline |
+| P23C-MX | Manifest↔allowlist matrix | `audit/PHASE2_DBPEDIA_MANIFEST_ALLOWLIST_CONSISTENCY_MATRIX.csv` | 114 rows |
+| P23C-FORM | Human form (23C) | `docs/protocols/common/graph/dbpedia2016-10/acquisition-consistency/20260722T134313Z/HUMAN_DBPEDIA_GRAPH_ACQUISITION_APPROVAL.md` | READY_UNSIGNED |
 | P23B-GATE | File-scope closure gate | `docs/protocols/common/graph/dbpedia2016-10/file-scope/20260722T132719Z/DBPEDIA_ENDPOINT_FILE_SCOPE_GATE.md` | Tras 23B |
 | P23B-RPT | File-scope closure report | `audit/PHASE2_DBPEDIA_FILE_SCOPE_CLOSURE_REPORT.md` | Detalle 23B |
 | P23B-NEXT | Next after scope closure | `audit/NEXT_AFTER_DBPEDIA_FILE_SCOPE_CLOSURE_DECISION.md` | Human gate |

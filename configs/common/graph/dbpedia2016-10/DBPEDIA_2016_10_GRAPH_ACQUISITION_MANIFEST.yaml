@@ -40,3 +40,10 @@ stop_conditions:
   - redirect_to_non_allowlisted_host
   - attempt_decompress_or_load
   - cost_nonzero
+static_consistency_run_id: 20260722T134313Z
+static_consistency_report: audit/PHASE2_DBPEDIA_ACQUISITION_PACKAGE_STATIC_CONSISTENCY_REPORT.md
+static_consistency_status: STATIC_CONSISTENCY_PASS
+validated_allowlist_hash: c51993149add578a71f6904a7ca575a8e60f8872b7845f45f32cb22dface167c
+payload_path_count: 114
+manifest_allowlist_set_equality: true
+authorization_package_status: READY_FOR_HUMAN_AUTHORIZATION_UNSIGNED

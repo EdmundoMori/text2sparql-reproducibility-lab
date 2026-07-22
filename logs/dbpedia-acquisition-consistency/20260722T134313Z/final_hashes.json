@@ -1,0 +1,7 @@
+{
+  "allowlist_file_sha256": "3a773f39b41f26f3ce1e077053c58c37c8f7fd6486f78303688b2ec9197067eb",
+  "validation_report_sha256": "7690437868942ff1cae8eae6af60bf28b94ed82f9fecc5f8941e683b070bc15b",
+  "manifest_file_sha256": "3993dde79ece90062bc1303d9e0de3b0016ec6572ab1c1fc6491f9d1cff0bc6c",
+  "allowlist_content_sha256": "c51993149add578a71f6904a7ca575a8e60f8872b7845f45f32cb22dface167c",
+  "gate": "DBPEDIA_ACQUISITION_PACKAGE_STATIC_CONSISTENCY_VERIFIED_READY_FOR_HUMAN_AUTHORIZATION"
+}

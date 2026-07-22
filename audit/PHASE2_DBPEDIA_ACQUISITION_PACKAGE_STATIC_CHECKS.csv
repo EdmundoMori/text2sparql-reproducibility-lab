@@ -1,0 +1,35 @@
+check,pass,detail
+scope_status_closed,true,CLOSED
+exact_file_count_field,true,114
+files_len,true,114
+file_id_unique,true,
+path_unique,true,
+source_url_unique,true,
+https_host_path_canonical,true,
+total_bytes,true,6925795437
+md5_count,true,112
+no_md5_exact,true,"['instance_types_lhd_dbo_en.ttl.bz2', 'instance_types_lhd_ext_en.ttl.bz2']"
+payload_path_count,true,114
+no_tql_duplicates,true,0
+payload_hosts,true,['downloads.dbpedia.org']
+payload_path_len,true,114
+payload_paths_unique,true,
+set_equality,true,missing=0 extra=0
+no_double_slash,true,[]
+checksum_paths_disjoint,true,
+checksum_not_empty,true,14
+no_checksum_in_payload,true,
+allowlist_inactive,true,DOCUMENTARY_ONLY_NOT_ACTIVE
+no_mirrors_in_payload_hosts,true,
+acq_file_count,true,114
+acq_bytes,true,6925795437
+acq_cap,true,6995053391
+acq_hash,true,2dcbc4df0b4af368d797a36525d607dae809317310c8c35d70066c5275c454c7
+acq_auth_id_null,true,None
+acq_auth_unsigned,true,UNSIGNED
+acq_not_acquired,true,NOT_ACQUIRED
+acq_not_deployed,true,NOT_DEPLOYED
+acq_g4_runtime,true,NOT_SATISFIED
+lock_hash,true,2dcbc4df0b4af368d797a36525d607dae809317310c8c35d70066c5275c454c7
+lock_count,true,114
+lock_bytes,true,6925795437

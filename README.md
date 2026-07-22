@@ -3,16 +3,13 @@
 Laboratorio local de investigación en **Text-to-SPARQL** / KGQA orientado a auditoría, reproducibilidad nativa y, posteriormente, evaluación común de métodos publicados.
 
 
-## Estado actual (Prompt 23B)
+## Estado actual (Prompt 23C)
 
 | Campo | Valor |
 |---|---|
-| Fase 1 | **cerrada** |
-| Fase 2 | **file scope CLOSED** · gate partial checksums · human auth pending |
-| Graph package | **114** files / **6925795437** bytes · NOT_ACQUIRED |
-| QALD | ACQUIRED_VALIDATED · SEALED · auth CONSUMED |
-| LC-QuAD | T6C HOLD |
-| G4 / adapters / benchmark | runtime no · false · NOT_CURRENTLY_ELIGIBLE |
+| Fase 2 | static consistency **PASS** · human auth pending |
+| Package | 114 files / 6925795437 bytes · allowlist 114/114 |
+| Auth | UNSIGNED · NOT_ACQUIRED |
 | Siguiente | **HUMAN** acquisition authorization (Prompt 24B reserved) |
 
 ## Documentos rectores

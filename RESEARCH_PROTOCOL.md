@@ -377,3 +377,8 @@ Authors source HOLD (LICENSE absent). HF card CC BY 3.0 = platform metadata; no 
 - Published MD5 coverage partial (2 LHD); local SHA-256 required post-download.
 - Human acquisition authorization pending; deployment remains a separate gate.
 - No graph payload acquired; G4 runtime not satisfied.
+
+## Estado operativo post-Prompt 23C (2026-07-22)
+
+- Manifest↔allowlist static consistency verified (114/114, no `//`).
+- Human acquisition authorization still required; no payload acquired.

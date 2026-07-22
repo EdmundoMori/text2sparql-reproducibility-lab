@@ -1,0 +1,8 @@
+{
+  "before_double_slash": 114,
+  "before_payload_like": 114,
+  "before_exact_match": 0,
+  "after_payload_paths": 114,
+  "allowlist_content_sha256": "c51993149add578a71f6904a7ca575a8e60f8872b7845f45f32cb22dface167c",
+  "allowlist_file_sha256": "65444d3b4d6d34af2c000d88820eb8ca44fb12c5571eb2a54b44ab2c42852d7f"
+}

@@ -3,7 +3,7 @@
 **Proyecto:** `text2sparql-reproducibility-lab`  
 **Dominio:** Text-to-SPARQL / Knowledge Graph Question Answering (KGQA)  
 **Inicio documental:** 2026-07-18  
-**Fase actual:** Fase 1 **cerrada** · Fase 2 **file scope CLOSED** · human graph acquisition auth **pending** · adapters **deshabilitados** · benchmark **no**
+**Fase actual:** Fase 1 **cerrada** · Fase 2 **static consistency PASS** · human graph acquisition auth **pending**
 **Estado:** Fase 1 nativa cerrada (smokes/bloqueos documentados). Clones presentes. Fase 2: framework de evaluación común definido; adapters deshabilitados; benchmark no ejecutado.  
 **Perfil de máquina (obligatorio):** [`MACHINE_PROFILE.md`](MACHINE_PROFILE.md)  
 **Auditoría documental:** `audit/PAPER_CODE_MAPPING.md`, `audit/INITIAL_AUDIT_MATRIX.csv`, `audit/INCLUSION_DECISIONS.md`, `audit/RESOURCE_ESTIMATION.md`  
@@ -403,3 +403,9 @@ Auditoría estática de `upstream/` y, solo bajo petición explícita, smoke tes
 - 33/33 blockers resolved · final 114 files / 6925795437 bytes.
 - Form `READY_UNSIGNED` · acquisition/deployment not executed.
 - Next: human authorization; Prompt 24B reserved only.
+
+## Estado actual post-Prompt 23C
+
+- RUN_ID: `20260722T134313Z` · Gate: `DBPEDIA_ACQUISITION_PACKAGE_STATIC_CONSISTENCY_VERIFIED_READY_FOR_HUMAN_AUTHORIZATION`.
+- Allowlist double-slash fixed · 114/114 equality verified offline.
+- Next: human authorization; Prompt 24B reserved.
