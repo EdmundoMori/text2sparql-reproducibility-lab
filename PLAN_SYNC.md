@@ -68,4 +68,5 @@ Fuente: `audit/NEXT_AFTER_COMMON_PROTOCOL_DECISION.md` (T2). **No ejecutado en 1
 |---|---|
 | commit inicial | `df1ee9758e2b9f4bc78515dfa5f67f3af057d2ed` |
 | ARTIFACT_COMMIT | `ee3ae4a20c2243f3f432ef0097ad2bfcd4f46382` |
-| push | pending |
+| publication metadata commit | `4a51e6a60833a1224651f4dc3c077baba79e4e18` |
+| push | done |
