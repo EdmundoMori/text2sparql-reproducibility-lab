@@ -409,3 +409,11 @@ Auditoría estática de `upstream/` y, solo bajo petición explícita, smoke tes
 - RUN_ID: `20260722T134313Z` · Gate: `DBPEDIA_ACQUISITION_PACKAGE_STATIC_CONSISTENCY_VERIFIED_READY_FOR_HUMAN_AUTHORIZATION`.
 - Allowlist double-slash fixed · 114/114 equality verified offline.
 - Next: human authorization; Prompt 24B reserved.
+
+### Prompt 24B — compressed acquisition (20260722T135601Z)
+- Gate: `DBPEDIA_2016_10_ENDPOINT_EQUIVALENT_COMPRESSED_ACQUISITION_PASS_VALIDATED`.
+- Auth `AUTH_DBPEDIA2016_10_ACQ_20260722T134313Z_EMO_01` CONSUMED_AFTER_PASS.
+- 114 files / 6925795437 bytes in workdir only; MD5 112/114; SHA-256 114/114.
+- Deployment NOT_DEPLOYED · G4 runtime NOT_SATISFIED · adapters false · benchmark not eligible.
+- Next: `PREPARE_DBPEDIA_2016_10_DEPLOYMENT_RESOURCE_AND_AUTHORIZATION_PACKAGE`.
+

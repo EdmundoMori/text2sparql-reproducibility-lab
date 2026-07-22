@@ -1,8 +1,8 @@
 # Human authorization — DBpedia 2016-10 graph acquisition (Prompt 23C)
 
-**RUN_ID:** `20260722T134313Z`  
-**Form status:** `READY_UNSIGNED`  
-**authorization_id:** _(null)_ · **UNSIGNED**
+**RUN_ID (form package):** `20260722T134313Z`  
+**Form status:** `APPROVED_CONSUMED_BY_PROMPT_24B`  
+**authorization_id:** `AUTH_DBPEDIA2016_10_ACQ_20260722T134313Z_EMO_01`
 
 ## Package identity
 
@@ -47,12 +47,18 @@
 
 size/MD5 mismatch · URL fuera de allowlist · bytes > cap · archivo extra · redirect no allowlisted · intento de load · coste > 0
 
-## Campos UNSIGNED (vacíos)
+## Campos de autorización (cumplimentados)
 
-- approver:
-- date:
-- decision:
-- authorization_id:
-- confirmation:
+- approver: EDMUNDO MORI ORRILLO
+- date: 2026-07-22
+- decision: APPROVED
+- authorization_id: AUTH_DBPEDIA2016_10_ACQ_20260722T134313Z_EMO_01
+- confirmation: CONFIRMED — single Prompt 24B attempt; consumed after PASS/FAIL/ABORT
 
-No reutilizar auth QALD. Autorización consumible tras un intento (futuro).
+## Consumo
+
+- Ejecución autorizada: **Prompt 24B** (único intento)
+- execution_run_id: `20260722T135601Z`
+- consumption: autorizado al inicio del intento; estado final tras PASS/FAIL/ABORT
+
+No reutilizar auth QALD. Esta autorización no es reutilizable tras el intento.

@@ -10,7 +10,7 @@ Laboratorio local de investigación en **Text-to-SPARQL** / KGQA orientado a aud
 | Fase 2 | static consistency **PASS** · human auth pending |
 | Package | 114 files / 6925795437 bytes · allowlist 114/114 |
 | Auth | UNSIGNED · NOT_ACQUIRED |
-| Siguiente | **HUMAN** acquisition authorization (Prompt 24B reserved) |
+| Siguiente | **PREPARE_DBPEDIA_2016_10_DEPLOYMENT_RESOURCE_AND_AUTHORIZATION_PACKAGE** |
 
 ## Documentos rectores
 

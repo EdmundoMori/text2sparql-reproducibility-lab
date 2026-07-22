@@ -1,7 +1,7 @@
 acquisition_scope_id: DBPEDIA_2016_10_ENDPOINT_EQUIVALENT_CANONICAL_V1
 target_graph_id: DBPEDIA_2016_10_QALD9_NATIVE_ENDPOINT_EQUIVALENT
 release: 2016-10
-source: "https://downloads.dbpedia.org/2016-10/"
+source: https://downloads.dbpedia.org/2016-10/
 exact_file_manifest: configs/common/graph/dbpedia2016-10/DBPEDIA_2016_10_ENDPOINT_FILE_MANIFEST.yaml
 canonical_scope_lock: configs/common/graph/dbpedia2016-10/DBPEDIA_2016_10_CANONICAL_SCOPE_LOCK.yaml
 exact_file_manifest_hash: 2dcbc4df0b4af368d797a36525d607dae809317310c8c35d70066c5275c454c7
@@ -9,11 +9,12 @@ serialization: ttl.bz2_core_lhd__links_as_published
 exact_file_count: 114
 compressed_total_bytes: 6925795437
 maximum_payload_bytes: 6995053391
-maximum_payload_bytes_formula: "compressed_total_bytes + floor(1% of compressed_total_bytes); rejects extra files"
+maximum_payload_bytes_formula: compressed_total_bytes + floor(1% of compressed_total_bytes);
+  rejects extra files
 published_checksum_coverage: PARTIAL_MD5_112_OF_114_FILES
 files_without_published_checksum:
-  - instance_types_lhd_dbo_en.ttl.bz2
-  - instance_types_lhd_ext_en.ttl.bz2
+- instance_types_lhd_dbo_en.ttl.bz2
+- instance_types_lhd_ext_en.ttl.bz2
 license_evidence: docs/protocols/common/graph/dbpedia2016-10/20260722T120239Z/DBPEDIA_2016_10_LICENSE_AND_ATTRIBUTION.md
 attribution_manifest: configs/common/graph/dbpedia2016-10/DBPEDIA_2016_10_ATTRIBUTION_MANIFEST_DRAFT.yaml
 network_allowlist: configs/common/graph/dbpedia2016-10/DBPEDIA_2016_10_GRAPH_NETWORK_ALLOWLIST.yaml
@@ -22,28 +23,33 @@ minimum_disk_acquisition: 15GiB
 recommended_disk_acquisition: 25GiB
 resource_class_acquisition: FEASIBLE_CURRENT_DISK_CONDITIONAL_HUMAN_AUTHORIZATION
 resource_class_deployment: CONDITIONAL_HIGH_RISK_REQUIRES_SEPARATE_RESOURCE_AND_DEPLOYMENT_GATE
-authorization_id: null
-authorization_status: UNSIGNED
-acquisition_status: NOT_ACQUIRED
+authorization_id: AUTH_DBPEDIA2016_10_ACQ_20260722T134313Z_EMO_01
+authorization_status: CONSUMED_AFTER_PASS
+acquisition_status: ACQUIRED_VALIDATED_WORKDIR_ONLY
 deployment_authorization_id: null
 deployment_authorization_status: NOT_PREPARED
 deployment_status: NOT_DEPLOYED
 graph_status: TARGET_DOCUMENTED_RUNTIME_PENDING
 g4_runtime_status: NOT_SATISFIED
 stop_conditions:
-  - authorization_not_approved
-  - url_not_in_allowlist
-  - size_mismatch
-  - md5_mismatch_when_published
-  - payload_bytes_exceed_cap
-  - extra_file_not_in_manifest
-  - redirect_to_non_allowlisted_host
-  - attempt_decompress_or_load
-  - cost_nonzero
+- authorization_not_approved
+- url_not_in_allowlist
+- size_mismatch
+- md5_mismatch_when_published
+- payload_bytes_exceed_cap
+- extra_file_not_in_manifest
+- redirect_to_non_allowlisted_host
+- attempt_decompress_or_load
+- cost_nonzero
 static_consistency_run_id: 20260722T134313Z
 static_consistency_report: audit/PHASE2_DBPEDIA_ACQUISITION_PACKAGE_STATIC_CONSISTENCY_REPORT.md
 static_consistency_status: STATIC_CONSISTENCY_PASS
 validated_allowlist_hash: c51993149add578a71f6904a7ca575a8e60f8872b7845f45f32cb22dface167c
 payload_path_count: 114
 manifest_allowlist_set_equality: true
-authorization_package_status: READY_FOR_HUMAN_AUTHORIZATION_UNSIGNED
+authorization_package_status: AUTHORIZED_AND_CONSUMED
+acquisition_execution_run_id: 20260722T135601Z
+acquisition_result_manifest: docs/protocols/common/graph/dbpedia2016-10/acquisition-execution/20260722T135601Z/acquisition_result_manifest.yaml
+acquisition_gate: DBPEDIA_2016_10_ENDPOINT_EQUIVALENT_COMPRESSED_ACQUISITION_PASS_VALIDATED
+payload_destination_populated: true
+payload_bytes_on_disk: 6925795437

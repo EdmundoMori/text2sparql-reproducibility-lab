@@ -1,16 +1,11 @@
-# Bucle de optimización del plan (operativo)
-
-**Última actualización:** 2026-07-22 (post Prompt 23C)
-
-## Fuentes de verdad
+# PLANNER_LOOP
 
 1. `PLAN_SYNC.md`
-2. `docs/protocols/common/graph/dbpedia2016-10/acquisition-consistency/20260722T134313Z/DBPEDIA_ACQUISITION_PACKAGE_STATIC_CONSISTENCY_GATE.md`
-3. `audit/PHASE2_DBPEDIA_ACQUISITION_PACKAGE_STATIC_CONSISTENCY_REPORT.md`
-4. `docs/decisions/017_dbpedia_acquisition_manifest_allowlist_consistency.md`
-5. `scripts/preparation/validate_dbpedia_2016_10_acquisition_package.py`
+2. `docs/protocols/common/graph/dbpedia2016-10/acquisition-execution/20260722T135601Z/DBPEDIA_COMPRESSED_ACQUISITION_EXECUTION_GATE.md`
+3. `audit/PHASE2_DBPEDIA_COMPRESSED_ACQUISITION_EXECUTION_REPORT.md`
+4. `audit/NEXT_AFTER_DBPEDIA_COMPRESSED_ACQUISITION_DECISION.md`
+5. `METHOD_REGISTRY.yaml`
 
-## Estado
-
-- Static consistency **PASS** · human auth pending
-- Siguiente: **HUMAN_GATE** (Prompt 24B reserved)
+- Auth acquisition: CONSUMED_AFTER_PASS
+- Payloads: workdir only
+- Siguiente: **PREPARE_DBPEDIA_2016_10_DEPLOYMENT_RESOURCE_AND_AUTHORIZATION_PACKAGE**

@@ -1,0 +1,16 @@
+# NEXT AFTER DBPEDIA COMPRESSED ACQUISITION
+
+| Campo | Valor |
+|---|---|
+| Prompt | 24B |
+| RUN_ID | `20260722T135601Z` |
+| Gate | `DBPEDIA_2016_10_ENDPOINT_EQUIVALENT_COMPRESSED_ACQUISITION_PASS_VALIDATED` |
+| Auth | `AUTH_DBPEDIA2016_10_ACQ_20260722T134313Z_EMO_01` CONSUMED_AFTER_PASS |
+| Acquisition | ACQUIRED_VALIDATED_WORKDIR_ONLY |
+| Deployment | NOT_DEPLOYED |
+| G4 runtime | NOT_SATISFIED |
+| **Siguiente** | **`PREPARE_DBPEDIA_2016_10_DEPLOYMENT_RESOURCE_AND_AUTHORIZATION_PACKAGE`** |
+| Estado | DOCUMENTARY_HUMAN_GATE_REQUIRED |
+| ARTIFACT_COMMIT | *(post-commit)* |
+
+No reutilizar la autorización de adquisición. Deployment requiere paquete y autorización separados.

@@ -382,3 +382,11 @@ Authors source HOLD (LICENSE absent). HF card CC BY 3.0 = platform metadata; no 
 
 - Manifest↔allowlist static consistency verified (114/114, no `//`).
 - Human acquisition authorization still required; no payload acquired.
+
+## Prompt 24B — DBpedia compressed acquisition
+
+**Gate:** `DBPEDIA_2016_10_ENDPOINT_EQUIVALENT_COMPRESSED_ACQUISITION_PASS_VALIDATED`  
+**Auth:** `AUTH_DBPEDIA2016_10_ACQ_20260722T134313Z_EMO_01` CONSUMED_AFTER_PASS  
+**Payload:** workdir only · 114 / 6925795437 · no decompress · no Virtuoso · no SPARQL  
+**Next:** `PREPARE_DBPEDIA_2016_10_DEPLOYMENT_RESOURCE_AND_AUTHORIZATION_PACKAGE`
+

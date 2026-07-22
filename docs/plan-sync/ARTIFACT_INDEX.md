@@ -7,6 +7,11 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 
 | ID | Tema | Ruta | Cuándo leerlo |
 |---|---|---|---|
+| P24B-GATE | Compressed acquisition gate | `docs/protocols/common/graph/dbpedia2016-10/acquisition-execution/20260722T135601Z/DBPEDIA_COMPRESSED_ACQUISITION_EXECUTION_GATE.md` | Tras 24B |
+| P24B-RPT | Acquisition execution report | `audit/PHASE2_DBPEDIA_COMPRESSED_ACQUISITION_EXECUTION_REPORT.md` | Detalle |
+| P24B-NEXT | Next after acquisition | `audit/NEXT_AFTER_DBPEDIA_COMPRESSED_ACQUISITION_DECISION.md` | Siguiente |
+| P24B-MAT | File acquisition matrix | `audit/PHASE2_DBPEDIA_COMPRESSED_ACQUISITION_FILE_MATRIX.csv` | 114 rows |
+| P24B-MAN | Local result manifest | `docs/protocols/common/graph/dbpedia2016-10/acquisition-execution/20260722T135601Z/acquisition_result_manifest.yaml` | workdir hashes |
 | P23C-GATE | Static consistency gate | `docs/protocols/common/graph/dbpedia2016-10/acquisition-consistency/20260722T134313Z/DBPEDIA_ACQUISITION_PACKAGE_STATIC_CONSISTENCY_GATE.md` | Tras 23C |
 | P23C-RPT | Static consistency report | `audit/PHASE2_DBPEDIA_ACQUISITION_PACKAGE_STATIC_CONSISTENCY_REPORT.md` | Detalle |
 | P23C-DEC | Decisión 017 | `docs/decisions/017_dbpedia_acquisition_manifest_allowlist_consistency.md` | Allowlist fix |
