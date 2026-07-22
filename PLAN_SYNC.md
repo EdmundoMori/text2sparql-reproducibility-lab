@@ -67,5 +67,5 @@ Fuente: `audit/NEXT_AFTER_COMMON_PROTOCOL_DECISION.md` (T2). **No ejecutado en 1
 | Campo | Valor |
 |---|---|
 | commit inicial | `df1ee9758e2b9f4bc78515dfa5f67f3af057d2ed` |
-| ARTIFACT_COMMIT | _(tras commit de evidencia; sin cadena recursiva)_ |
+| ARTIFACT_COMMIT | `ee3ae4a20c2243f3f432ef0097ad2bfcd4f46382` |
 | push | pending |
