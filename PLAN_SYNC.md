@@ -67,6 +67,6 @@ Acción: **T6C**. **No ejecutado en 21B.**
 | Campo | Valor |
 |---|---|
 | commit inicial | `4a790711453c8c3801a9f08915bedb710613b883` |
-| ARTIFACT_COMMIT | PLACEHOLDER_ARTIFACT |
+| ARTIFACT_COMMIT | `0439421345cc63d167589f5ac399c97cc432eff2` |
 | publication metadata commit | *(post-push tip; max 2 commits)* |
 | push | pending |
