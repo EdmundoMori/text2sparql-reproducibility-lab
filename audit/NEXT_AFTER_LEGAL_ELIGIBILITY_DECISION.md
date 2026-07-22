@@ -21,3 +21,7 @@ SPARQL_LLM_G3C_SATISFIED_MIT · SGPT_G3C_SATISFIED_MIT · MKGQAGENT/RDFCONFIG_GI
 
 ## No seleccionado
 T6B download · LC-QuAD acq · graph · model · metric/adapter impl · benchmark · Prompt 20B
+
+## Commits
+
+- ARTIFACT_COMMIT: `127362e3d706a668f528a54371f0ab1bdb6cb8cb`

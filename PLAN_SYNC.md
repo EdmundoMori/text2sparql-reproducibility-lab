@@ -71,6 +71,6 @@ Cola: `audit/PHASE2_POST_T5_QUEUE.csv` (T6A → human auth → T6B → T6C LC-Qu
 | Campo | Valor |
 |---|---|
 | commit inicial | `e209fb4044125516d04ee04d1638ad5b00d448c3` |
-| ARTIFACT_COMMIT | PLACEHOLDER_ARTIFACT |
+| ARTIFACT_COMMIT | `127362e3d706a668f528a54371f0ab1bdb6cb8cb` |
 | publication metadata commit | *(post-push tip; max 2 commits)* |
 | push | pending |
