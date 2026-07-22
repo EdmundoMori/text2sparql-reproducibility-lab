@@ -65,6 +65,6 @@ Fuente: `audit/NEXT_AFTER_ADAPTER_CONTRACT_DECISION.md` (T5). **No ejecutado en 
 | Campo | Valor |
 |---|---|
 | commit inicial | `39bddbb2c85bce866d41d020f7ea5b50ce4fa45e` |
-| ARTIFACT_COMMIT | *(se registra tras commit)* |
-| publication metadata commit | *(tip remoto = publication commit; max 2 commits)* |
-| push | pending |
+| ARTIFACT_COMMIT | `3f97ce499fae189e12efcce4c8f450e7b3020d91` |
+| publication metadata commit | *(igual al tip remoto post-push; max 2 commits)* |
+| push | done |
