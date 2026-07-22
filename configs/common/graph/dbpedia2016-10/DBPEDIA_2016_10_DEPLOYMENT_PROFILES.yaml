@@ -1,61 +1,86 @@
-schema_version: 0.1.0-documentary
+schema_version: 0.2.0-prompt25a
+run_id: 20260722T162241Z
+selection_status: PENDING_HUMAN_SELECTION
 profiles:
-  LOCAL_WSL_VIRTUOSO:
-    resource_requirements: "RAM>>7.4GiB_likely; disk>=50GiB"
-    cost: 0.00
+  LOCAL_WSL_CURRENT:
+    ram_gib_detected: 7.35
+    swap_gib_detected: 2.0
+    disk_free_gib: 910.8
+    cpu_threads: 16
+    runtime: virtuoso_docker_digest_pinned
     reproducibility: HIGH_IF_PINNED
-    graph_ownership: LOCAL
-    endpoint_stability: LAB_CONTROLLED
-    data_persistence: LOCAL_VOLUME
-    suitability: CONDITIONAL_HIGH_RISK
-    current_status: NOT_DEPLOYED
+    cost_usd: 0.0
+    access: local
+    security: localhost_bind_required
+    persistence: workdir_bind_mount
+    current_readiness: NOT_FEASIBLE_FOR_SAFE_LOAD
+    feasibility_tag: LOCAL_WSL_CURRENT_PROFILE_CONDITIONAL_HIGH_RISK
+    required_user_action: select_alternate_profile_or_accept_extreme_risk_not_recommended
     blockers:
-      - file_scope_conditional
-      - wsl_ram
-      - compose_absent
-      - no_image_digest
-  HOST_ADJUSTED_WSL_VIRTUOSO:
-    resource_requirements: Increase WSL memory toward host ~16GiB; still may be tight
-    cost: 0.00
+    - wsl_ram_7_35gib
+    - swap_2gib
+    - compose_absent
+    - oom_risk_high
+    recommendation: NOT_RECOMMENDED_AS_PRIMARY
+  LOCAL_WSL_HOST_ADJUSTED:
+    ram_gib_target: 12-14 of host ~15.2
+    swap_gib_target: 8-16
+    disk_free_gib: 910.8
+    cpu_threads: 16
+    runtime: virtuoso_docker_digest_pinned
     reproducibility: HIGH_IF_PINNED
-    graph_ownership: LOCAL
-    endpoint_stability: LAB_CONTROLLED
-    data_persistence: LOCAL_VOLUME
-    suitability: CONDITIONAL
-    current_status: NOT_DEPLOYED
+    cost_usd: 0.0
+    access: local
+    security: localhost_bind_required
+    persistence: workdir_bind_mount
+    current_readiness: CONDITIONAL_REQUIRES_WSLCONFIG_AND_RESTART
+    feasibility_tag: HOST_ADJUSTED_WSL_PROFILE_CONDITIONAL
+    required_user_action: create_userprofile_.wslconfig_memory_swap_then_wsl_shutdown_restart
     blockers:
-      - file_scope_conditional
-      - no_image_digest
-  EXTERNAL_RESEARCH_SERVER:
-    resource_requirements: Server with adequate RAM/disk
-    cost: MUST_REMAIN_0.00_OR_REJECT
-    reproducibility: HIGH_IF_PINNED
-    graph_ownership: EXTERNAL
-    endpoint_stability: DEPENDS
-    data_persistence: EXTERNAL
-    suitability: NOT_AUTO_SELECTED_ZERO_COST
-    current_status: NOT_SELECTED
+    - wslconfig_absent
+    - requires_human_host_change
+    - compose_absent_use_docker_run
+    recommendation: CANDIDATE_IF_USER_ACCEPTS_HOST_CHANGES
+  WINDOWS_HOST_NATIVE_DOCKER:
+    ram_gib: docker_desktop_memory_limit_on_host
+    notes: Run engine via Docker Desktop on Windows host with bind to WSL path or
+      mirrored path
+    cost_usd: 0.0
+    reproducibility: MEDIUM_PATH_COMPLEXITY
+    current_readiness: CONDITIONAL_UNTESTED_IN_LAB
+    feasibility_tag: HOST_ADJUSTED_WSL_PROFILE_CONDITIONAL
+    required_user_action: configure_docker_desktop_resources_and_file_sharing
     blockers:
-      - ZERO_COST_POLICY
+    - path_interop
+    - compose_absent_in_wsl
+    - lab_workflow_centered_in_wsl
+    recommendation: ALTERNATIVE_NOT_DEFAULT
+  EXTERNAL_ZERO_COST_RESEARCH_SERVER:
+    ram_gib_recommended: 64
+    disk_gib_recommended: 500
+    cost_usd: 0.0
+    reproducibility: HIGH_IF_PINNED_AND_SPECS_RECORDED
+    current_readiness: CANDIDATE_NEEDS_USER_SPECS
+    feasibility_tag: EXTERNAL_ZERO_COST_RESEARCH_SERVER_CANDIDATE
+    required_user_action: provide_zero_cost_server_specs_access_and_accept_data_transfer_policy
+    blockers:
+    - no_server_selected
+    - must_remain_zero_cost
+    recommendation: PREFERRED_FOR_SAFE_NATIVE_LOAD_IF_AVAILABLE
   REMOTE_IMMUTABLE_ENDPOINT:
-    resource_requirements: Network only
-    cost: 0.00_if_public
+    cost_usd: 0.0
     reproducibility: ONLY_IF_IMMUTABLE_PIN_VERIFIED
-    graph_ownership: REMOTE
-    endpoint_stability: REQUIRES_PIN
-    data_persistence: REMOTE
-    suitability: NOT_PRIMARY_WITHOUT_SNAPSHOT
-    current_status: NOT_SELECTED
+    current_readiness: NOT_PRIMARY
+    feasibility_tag: REMOTE_IMMUTABLE_ENDPOINT_CANDIDATE
+    required_user_action: identify_immutable_2016-10_equivalent_endpoint_with_pin
     blockers:
-      - no_verified_immutable_remote
-  COMMON_GRAPH_REBASE:
-    resource_requirements: Depends on modern snapshot
-    cost: 0.00
+    - no_verified_immutable_remote_for_exact_scope
+    recommendation: NOT_SUBSTITUTE_FOR_NATIVE_WITHOUT_LABEL
+  COMMON_GRAPH_REBASE_FALLBACK:
+    cost_usd: 0.0
     reproducibility: HIGH_AS_REBASE
-    graph_ownership: LAB_OR_PINNED
-    endpoint_stability: LAB_CONTROLLED
-    data_persistence: LAB
-    suitability: FALLBACK_ONLY
-    current_status: DOCUMENTED_FALLBACK
+    current_readiness: DOCUMENTED_FALLBACK_ONLY
+    required_user_action: explicit_scientific_rebase_decision_separate_from_native_target
     blockers:
-      - must_not_replace_native_without_label
+    - must_not_silently_replace_native_target
+    recommendation: FALLBACK_ONLY_NOT_SELECTED_HERE

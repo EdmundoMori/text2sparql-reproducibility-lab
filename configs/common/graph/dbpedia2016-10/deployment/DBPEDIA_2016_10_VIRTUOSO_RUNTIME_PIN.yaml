@@ -1,0 +1,24 @@
+runtime_id: VIRTUOSO_OPENLINK_7_2_17_R25_UBUNTU_AMD64
+runtime_name: OpenLink Virtuoso Open Source 7
+runtime_version: 7.2.17
+source_repository: https://github.com/openlink/virtuoso-opensource
+source_revision: v7.2.17
+source_commit_short_from_tag: g6eb68b6
+license: VERIFY_BEFORE_LOAD__github_api_NOASSERTION__historically_GPL-2.0-family
+image_repository: docker.io/openlink/virtuoso-opensource-7
+image_tag: 7.2.17-r25-g6eb68b6-ubuntu
+image_index_digest: sha256:2a9914b95f8a52927a73947c87ec2727f78f87d38e41c38c379efb121f9cbed1
+image_digest: sha256:748863fd9026fac41667dac484e5044c6c34e95c75bce3bf26c9225fe7684eb6
+image_digest_scope: platform_manifest_linux_amd64
+architecture: linux/amd64
+manifest_media_type: application/vnd.oci.image.index.v1+json
+loader_tool: virtuoso-t / isql bulk load (to be confirmed at D3/D4)
+loader_version: bundled_with_image_7.2.17
+config_version: template_v1_parameterized
+selected: false
+pin_ready_for_future_pull: true
+evidence:
+- logs/dbpedia-deployment-package/20260722T162241Z/runtime_pin_evidence.json
+- logs/dbpedia-deployment-package/20260722T162241Z/network.log
+status: PINNED_METADATA_ONLY
+notes: No docker pull performed. Do not use latest/7/7.2 mutable tags for execution.

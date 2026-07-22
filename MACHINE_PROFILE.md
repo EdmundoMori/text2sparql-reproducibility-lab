@@ -153,3 +153,23 @@ node --version
 conda --version; uv --version; poetry --version
 df -h /
 ```
+
+
+---
+
+## Observation — Prompt 25A (20260722T162241Z)
+
+Redeetected read-only for deployment package (no host changes):
+
+| Campo | Valor |
+|---|---|
+| WSL RAM | 7.35 GiB |
+| Host RAM | 15.19 GiB |
+| Swap | 2.0 GiB |
+| Disk free | 910.8 GiB (ext4) |
+| Docker | 29.1.3 |
+| Compose | ABSENT |
+| `.wslconfig` | ABSENT |
+| Feasibility tag | `LOCAL_WSL_CURRENT_PROFILE_CONDITIONAL_HIGH_RISK` |
+
+Historical profile above preserved. No `.wslconfig` created/modified.

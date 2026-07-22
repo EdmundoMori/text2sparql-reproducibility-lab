@@ -1,0 +1,18 @@
+{
+  "acquisition_status": "ACQUIRED_VALIDATED_WORKDIR_ONLY",
+  "auth_id": "AUTH_DBPEDIA2016_10_ACQ_20260722T134313Z_EMO_01",
+  "auth_status": "CONSUMED_AFTER_PASS",
+  "bytes_match": true,
+  "destination": "workdir/graphs/dbpedia/2016-10/endpoint-equivalent/compressed",
+  "expected_bytes": 6925795437,
+  "expected_count": 114,
+  "extras": [],
+  "free_bytes": 977903906816,
+  "missing": [],
+  "payload_gitignored": true,
+  "present_count": 114,
+  "run_id": "20260722T162241Z",
+  "size_mismatches": [],
+  "total_bytes": 6925795437
+}
+HANDOFF_OK

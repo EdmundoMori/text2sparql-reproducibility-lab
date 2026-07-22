@@ -1,0 +1,34 @@
+{
+  "image": "openlink/virtuoso-opensource-7:7.2.17-r25-g6eb68b6-ubuntu",
+  "platforms": [
+    {
+      "digest": "sha256:748863fd9026fac41667dac484e5044c6c34e95c75bce3bf26c9225fe7684eb6",
+      "arch": "amd64",
+      "os": "linux",
+      "mediaType": "application/vnd.oci.image.manifest.v1+json"
+    },
+    {
+      "digest": "sha256:e31547877849b7705eafdccc2b3c2b0ab6d5973bd3557c0dffa885b01b191bee",
+      "arch": "arm64",
+      "os": "linux",
+      "mediaType": "application/vnd.oci.image.manifest.v1+json"
+    },
+    {
+      "digest": "sha256:41bec1f9ce2f2af36204d1451aa8e7f7f4bdbda5dbb389010d5bbdf192df8c28",
+      "arch": "unknown",
+      "os": "unknown",
+      "mediaType": "application/vnd.oci.image.manifest.v1+json"
+    },
+    {
+      "digest": "sha256:7b0288b7665b80a5948172fca1dc3cc4407d79050ff72f496a481d6629f26353",
+      "arch": "unknown",
+      "os": "unknown",
+      "mediaType": "application/vnd.oci.image.manifest.v1+json"
+    }
+  ],
+  "amd64_manifest_digest": "sha256:748863fd9026fac41667dac484e5044c6c34e95c75bce3bf26c9225fe7684eb6",
+  "media_index": "application/vnd.oci.image.index.v1+json",
+  "imagetools_head": "",
+  "index_digest_header": "sha256:2a9914b95f8a52927a73947c87ec2727f78f87d38e41c38c379efb121f9cbed1",
+  "index_digest_computed": "sha256:2a9914b95f8a52927a73947c87ec2727f78f87d38e41c38c379efb121f9cbed1"
+}

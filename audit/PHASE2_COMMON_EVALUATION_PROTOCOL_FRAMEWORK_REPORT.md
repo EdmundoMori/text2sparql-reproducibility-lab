@@ -68,7 +68,7 @@ COMMON_PROTOCOL_FRAMEWORK_DEFINED_READY_FOR_DATASET_PROVENANCE → Prompt 17 (T2
 
 | PE | Estado |
 |---|---|
-| PE5 | protocol_framework_defined_pending_benchmark |
+| PE5 | protocol_framework_defined_pending_benchmark (25A: graph_compressed_acquisition_completed; deployment_resource_envelope_documented; resource_profile_selection_pending; graph_not_deployed; gold_not_materialized) |
 | PE6 | diagnostic_metric_framework_defined_pending_execution |
 | PE7 | not_started |
 | PE8 | not_started |

@@ -1,0 +1,9 @@
+stage,resource_profile_required,authorization_required,input_gate,output_gate,network,disk,ram,runtime,allowed_actions,prohibited_actions,rollback,current_status,blocker,next_action
+D0_RESOURCE_AND_RUNTIME_PACKAGE,no,no,ACQUISITION_PASS,DEPLOYMENT_PACKAGE_GATE,metadata_only,n/a,n/a,n/a,document,decompress_pull_load,n/a,COMPLETE_THIS_PROMPT,none,HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION
+D1_RESOURCE_CONFIGURATION,yes,yes_profile,PROFILE_SELECTED,RESOURCES_CONFIGURED_DOC,none,n/a,depends,n/a,edit_wslconfig_swap_docs,graph_ops,revert_wslconfig,PENDING,profile_not_selected,HUMAN_PROFILE_SELECTION
+D2_DECOMPRESSION_AND_STATIC_RDF_VALIDATION,yes,yes_exec,D1,RDF_STATIC_VALIDATED,none,envelope,low,n/a,decompress_validate,virtuoso_sparql,delete_uncompressed,BLOCKED,auth_not_ready,—
+D3_RUNTIME_IMAGE_ACQUISITION_AND_CONFIGURATION,yes,yes_exec,D2_or_parallel_policy,IMAGE_PINNED_LOCAL,registry_pull_digest,image_size,low,digest_pin,docker_pull_digest,docker_run_load,rmi_image,BLOCKED,no_pull_yet,—
+D4_VIRTUOSO_LOAD,yes,yes_exec,D2+D3,GRAPH_LOADED,none,db_growth,high,virtuoso,bulk_load,sparql_test_gold,drop_db_volume,BLOCKED,not_authorized,—
+D5_GRAPH_RUNTIME_TECHNICAL_VALIDATION,yes,yes_exec,D4,G4_RUNTIME_TECH_PASS,local_only,low,medium,endpoint,tech_queries,qald_test_gold,stop_container,BLOCKED,g4_unsatisfied,—
+D6_GOLD_MATERIALIZATION,yes,yes_exec,D5+gates,GOLD_READY,none,medium,medium,endpoint,train_gold,test_leak,delete_gold,BLOCKED,premature,—
+D7_COMMON_EVALUATION,yes,yes_exec,gold+adapters,BENCHMARK,none,low,medium,full,evaluate,costly_apis,n/a,BLOCKED,adapters_false,—

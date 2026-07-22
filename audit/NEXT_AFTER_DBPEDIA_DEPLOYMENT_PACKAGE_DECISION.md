@@ -1,0 +1,13 @@
+# NEXT AFTER DBPEDIA DEPLOYMENT PACKAGE
+
+| Campo | Valor |
+|---|---|
+| Prompt | 25A |
+| RUN_ID | `20260722T162241Z` |
+| Gate | `DBPEDIA_DEPLOYMENT_RESOURCE_PACKAGE_READY_FOR_HUMAN_PROFILE_SELECTION` |
+| **Siguiente** | **`HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION`** |
+| Estado | HUMAN_GATE_REQUIRED |
+| Reserved | Prompt 25B |
+| ARTIFACT_COMMIT | *(post-commit)* |
+
+No executable deployment prompt.

@@ -1,0 +1,32 @@
+risk,severity,evidence,mitigation,status
+insufficient_wsl_ram,HIGH,current 7.35GiB,raise WSL memory or external server,open
+host_starvation,HIGH,host ~15.2GiB shared,leave host headroom,open
+insufficient_swap,MEDIUM,2GiB swap,increase swap only after human profile,open
+wsl_oom,HIGH,Virtuoso load,abort thresholds,open
+disk_expansion_underestimate,MEDIUM,uncompressed unknown,use conservative scenario,open
+disk_exhaustion,LOW,910GiB free,monitor free_after_recommended,open
+ntfs_ext4_performance,LOW,guest ext4 ok,keep payloads on ext4,open
+docker_volume_location,MEDIUM,default /var/lib/docker,document bind mounts under workdir,open
+image_tag_drift,HIGH,mutable tags,digest pin only,mitigated_in_pin
+digest_mismatch,MEDIUM,pull-time verify,abort on mismatch,planned
+architecture_mismatch,LOW,need amd64,pin linux/amd64,mitigated
+unsupported_virtuoso_image,MEDIUM,third-party,prefer OpenLink official,mitigated
+license_ambiguity,MEDIUM,GitHub NOASSERTION,record attribution; verify SPDX before load,open
+corrupt_compressed_input,LOW,24B validated,stat handoff; no rehash unless mismatch,mitigated
+decompression_failure,MEDIUM,future D2,abort+cleanup,planned
+rdf_syntax_failure,MEDIUM,future D2,abort file,planned
+duplicate_triples,LOW,load semantics,document graph IRI policy,open
+load_order,MEDIUM,114 files,deterministic order contract,planned
+default_graph_mismatch,HIGH,scientific validity,explicit graph mapping,open
+named_graph_mismatch,HIGH,scientific validity,explicit policy,open
+transaction_log_growth,MEDIUM,disk envelope,monitor,planned
+checkpoint_failure,MEDIUM,D4,retry/rollback,planned
+container_restart_loss,MEDIUM,volumes,persist DB dir,planned
+open_endpoint_exposure,HIGH,bind 0.0.0.0,localhost only,planned
+query_timeout_mismatch,MEDIUM,eval fairness,document MaxQueryExecutionTime,planned
+result_limit_mismatch,MEDIUM,eval fairness,document ResultSetMaxRows,planned
+authorization_scope_creep,HIGH,human forms,separate checkboxes,planned
+acquisition_auth_reuse,HIGH,consumed auth,forbid reuse,mitigated
+test_leakage,HIGH,QALD sealed,no test queries until gate,planned
+gold_before_g4,HIGH,protocol,D6 after D5,planned
+cost_above_zero,HIGH,ZERO_COST,reject paid services,policy

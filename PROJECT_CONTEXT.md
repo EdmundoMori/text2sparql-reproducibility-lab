@@ -417,3 +417,11 @@ Auditoría estática de `upstream/` y, solo bajo petición explícita, smoke tes
 - Deployment NOT_DEPLOYED · G4 runtime NOT_SATISFIED · adapters false · benchmark not eligible.
 - Next: `PREPARE_DBPEDIA_2016_10_DEPLOYMENT_RESOURCE_AND_AUTHORIZATION_PACKAGE`.
 
+### Prompt 25A — deployment resource package (20260722T162241Z)
+- Gate: `DBPEDIA_DEPLOYMENT_RESOURCE_PACKAGE_READY_FOR_HUMAN_PROFILE_SELECTION`.
+- Handoff compressed verified; acquisition auth CONSUMED.
+- Current machine: WSL 7.35 GiB RAM — CONDITIONAL_HIGH_RISK for load.
+- Runtime pin metadata: `openlink/virtuoso-opensource-7:7.2.17-r25-g6eb68b6-ubuntu`.
+- Resource selection PENDING · deployment NOT_DEPLOYED · G4 runtime NOT_SATISFIED.
+- Next: `HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION` (Prompt 25B reserved).
+

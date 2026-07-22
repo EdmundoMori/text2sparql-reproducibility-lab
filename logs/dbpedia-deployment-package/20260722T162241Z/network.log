@@ -1,0 +1,36 @@
+[2026-07-22T17:32:21+00:00] QUERY api.github.com openlink/virtuoso-opensource releases
+HTTP 200 size=41598
+[2026-07-22T17:32:21+00:00] QUERY api.github.com openlink/virtuoso-opensource repo
+HTTP 200 size=5787
+[2026-07-22T17:32:22+00:00] QUERY hub.docker.com openlink/virtuoso-opensource-7 tags
+HTTP 200 size=43945
+[2026-07-22T17:32:22+00:00] QUERY hub.docker.com tenforce/virtuoso tags
+HTTP 200 size=7506
+[2026-07-22T17:32:22+00:00] docker manifest inspect openlink/virtuoso-opensource-7:latest (audit only)
+exit=0
+[2026-07-22T17:39:12+00:00] docker manifest inspect openlink/virtuoso-opensource-7:7.2.17-r25-g6eb68b6-ubuntu
+exit=0
+[2026-07-22T17:39:04+00:00] QUERY dbpedia.org 2016-10 docs for size metadata
+HTTP 200 size=116412
+HTTP/1.1 200 OK
+Server: nginx/1.24.0 (Ubuntu)
+Date: Wed, 22 Jul 2026 17:39:10 GMT
+Content-Type: text/html
+Connection: keep-alive
+
+[2026-07-22T17:39:40+00:00] QUERY auth.docker.io token + registry manifest list digest
+HTTP/2 200 
+date: Wed, 22 Jul 2026 17:39:41 GMT
+content-type: application/vnd.oci.image.index.v1+json
+content-length: 1607
+docker-content-digest: sha256:2a9914b95f8a52927a73947c87ec2727f78f87d38e41c38c379efb121f9cbed1
+docker-distribution-api-version: registry/2.0
+etag: "sha256:2a9914b95f8a52927a73947c87ec2727f78f87d38e41c38c379efb121f9cbed1"
+docker-ratelimit-source: 79.117.200.138
+x-ratelimit-limit: 100;w=3600
+ratelimit-limit: 100;w=3600
+x-ratelimit-remaining: 91;w=3600
+ratelimit-remaining: 91;w=3600
+strict-transport-security: max-age=31536000
+
+HTTP 200 size=1607

@@ -14,3 +14,7 @@
 | ARTIFACT_COMMIT | `d3fde8b40338b2801ef287812de710f2dd9e48fb` |
 
 No reutilizar la autorización de adquisición. Deployment requiere paquete y autorización separados.
+
+## Update Prompt 25A
+
+Package ready `20260722T162241Z`. Next `HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION`.

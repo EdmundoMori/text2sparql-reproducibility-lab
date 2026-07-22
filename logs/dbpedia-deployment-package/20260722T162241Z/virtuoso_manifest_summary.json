@@ -1,0 +1,83 @@
+{
+  "candidates": [],
+  "tag_names": [
+    "latest",
+    "7",
+    "7.2",
+    "7.2.17",
+    "7.2.17-r25-g6eb68b6-ubuntu",
+    "7-alpine",
+    "7.2-alpine",
+    "7.2.17-alpine",
+    "7.2.17-r25-g6eb68b6-alpine",
+    "7.2.17-r24-g49d82bd-ubuntu",
+    "7.2.17-r24-g49d82bd-alpine",
+    "7.2.16",
+    "7.2.16-r23.1-g01a90e1-ubuntu",
+    "7.2.16-alpine",
+    "7.2.16-r23.1-g01a90e1-alpine",
+    "7.2.16-r23-gb973ebf-alpine",
+    "7.2.16-r23-gb973ebf-ubuntu",
+    "7.2.15",
+    "7.2.15-r22-g1865944-ubuntu",
+    "7.2.15-alpine",
+    "7.2.15-r22-g1865944-alpine",
+    "7.2.14",
+    "7.2.14-r21-g092d7fb-ubuntu",
+    "7.2.14-alpine",
+    "7.2.14-r21-g092d7fb-alpine"
+  ],
+  "versioned_sample": [
+    "7",
+    "7.2",
+    "7.2.17",
+    "7.2.17-r25-g6eb68b6-ubuntu",
+    "7-alpine",
+    "7.2-alpine",
+    "7.2.17-alpine",
+    "7.2.17-r25-g6eb68b6-alpine",
+    "7.2.17-r24-g49d82bd-ubuntu",
+    "7.2.17-r24-g49d82bd-alpine",
+    "7.2.16",
+    "7.2.16-r23.1-g01a90e1-ubuntu",
+    "7.2.16-alpine",
+    "7.2.16-r23.1-g01a90e1-alpine",
+    "7.2.16-r23-gb973ebf-alpine"
+  ],
+  "inspect_tag": "7.2",
+  "inspect_rc": 0,
+  "platform_manifests": [
+    {
+      "digest": "sha256:748863fd9026fac41667dac484e5044c6c34e95c75bce3bf26c9225fe7684eb6",
+      "mediaType": "application/vnd.oci.image.manifest.v1+json",
+      "architecture": "amd64",
+      "os": "linux"
+    },
+    {
+      "digest": "sha256:e31547877849b7705eafdccc2b3c2b0ab6d5973bd3557c0dffa885b01b191bee",
+      "mediaType": "application/vnd.oci.image.manifest.v1+json",
+      "architecture": "arm64",
+      "os": "linux"
+    },
+    {
+      "digest": "sha256:41bec1f9ce2f2af36204d1451aa8e7f7f4bdbda5dbb389010d5bbdf192df8c28",
+      "mediaType": "application/vnd.oci.image.manifest.v1+json",
+      "architecture": "unknown",
+      "os": "unknown"
+    },
+    {
+      "digest": "sha256:7b0288b7665b80a5948172fca1dc3cc4407d79050ff72f496a481d6629f26353",
+      "mediaType": "application/vnd.oci.image.manifest.v1+json",
+      "architecture": "unknown",
+      "os": "unknown"
+    }
+  ],
+  "amd64": [
+    {
+      "digest": "sha256:748863fd9026fac41667dac484e5044c6c34e95c75bce3bf26c9225fe7684eb6",
+      "mediaType": "application/vnd.oci.image.manifest.v1+json",
+      "architecture": "amd64",
+      "os": "linux"
+    }
+  ]
+}

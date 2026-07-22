@@ -7,6 +7,10 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 
 | ID | Tema | Ruta | Cuándo leerlo |
 |---|---|---|---|
+| P25A-GATE | Deployment resource package gate | `docs/protocols/common/graph/dbpedia2016-10/deployment-package/20260722T162241Z/DBPEDIA_DEPLOYMENT_RESOURCE_PACKAGE_GATE.md` | Tras 25A |
+| P25A-RPT | Deployment package report | `audit/PHASE2_DBPEDIA_DEPLOYMENT_RESOURCE_AND_AUTHORIZATION_PACKAGE_REPORT.md` | Detalle |
+| P25A-FORM | Resource profile selection form | `docs/protocols/common/graph/dbpedia2016-10/deployment-package/20260722T162241Z/HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION.md` | READY_UNSIGNED |
+| P25A-PIN | Virtuoso runtime pin | `configs/common/graph/dbpedia2016-10/deployment/DBPEDIA_2016_10_VIRTUOSO_RUNTIME_PIN.yaml` | METADATA_ONLY |
 | P24B-GATE | Compressed acquisition gate | `docs/protocols/common/graph/dbpedia2016-10/acquisition-execution/20260722T135601Z/DBPEDIA_COMPRESSED_ACQUISITION_EXECUTION_GATE.md` | Tras 24B |
 | P24B-RPT | Acquisition execution report | `audit/PHASE2_DBPEDIA_COMPRESSED_ACQUISITION_EXECUTION_REPORT.md` | Detalle |
 | P24B-NEXT | Next after acquisition | `audit/NEXT_AFTER_DBPEDIA_COMPRESSED_ACQUISITION_DECISION.md` | Siguiente |

@@ -390,3 +390,9 @@ Authors source HOLD (LICENSE absent). HF card CC BY 3.0 = platform metadata; no 
 **Payload:** workdir only · 114 / 6925795437 · no decompress · no Virtuoso · no SPARQL  
 **Next:** `PREPARE_DBPEDIA_2016_10_DEPLOYMENT_RESOURCE_AND_AUTHORIZATION_PACKAGE`
 
+## Prompt 25A — Deployment resource package
+
+**Gate:** `DBPEDIA_DEPLOYMENT_RESOURCE_PACKAGE_READY_FOR_HUMAN_PROFILE_SELECTION`  
+**Forms:** resource selection READY_UNSIGNED · execution NOT_READY  
+**Runtime:** PINNED_METADATA_ONLY (no pull)  
+**Next:** `HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION`

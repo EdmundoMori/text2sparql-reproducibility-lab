@@ -1,0 +1,20 @@
+layout_id: DBPEDIA_2016_10_ENDPOINT_EQUIVALENT_LAYOUT_V1
+root: workdir/graphs/dbpedia/2016-10/endpoint-equivalent/
+directories:
+  compressed: compressed/
+  uncompressed: uncompressed/
+  validation: validation/
+  loader: loader/
+  virtuoso_database: virtuoso/database/
+  virtuoso_config: virtuoso/config/
+  virtuoso_logs: virtuoso/logs/
+  virtuoso_checkpoints: virtuoso/checkpoints/
+  manifests: manifests/
+  rollback: rollback/
+compressed_immutable: true
+payloads_gitignored: true
+docker_volume_policy: bind_mount_under_workdir_preferred_over_anonymous_volume
+cleanup_policy: uncompressed_and_temp_deletable_after_validated_db_AND_authorization;
+  compressed retained until explicit human cleanup
+rollback_policy: keep compressed golden; recreate uncompressed/db from compressed
+  on failure

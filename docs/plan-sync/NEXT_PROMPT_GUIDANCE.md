@@ -1,15 +1,14 @@
 # NEXT_PROMPT_GUIDANCE
 
 **Fecha:** 2026-07-22  
-**Tras:** Prompt 24B (`20260722T135601Z`) · gate `DBPEDIA_2016_10_ENDPOINT_EQUIVALENT_COMPRESSED_ACQUISITION_PASS_VALIDATED`
+**Tras:** Prompt 25A (`20260722T162241Z`) · gate `DBPEDIA_DEPLOYMENT_RESOURCE_PACKAGE_READY_FOR_HUMAN_PROFILE_SELECTION`
 
-## Acción siguiente
+## HUMAN AUTHORIZATION REQUIRED
 
-`PREPARE_DBPEDIA_2016_10_DEPLOYMENT_RESOURCE_AND_AUTHORIZATION_PACKAGE`
+`HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION`
 
-Documentary / human resource gate for deployment. Separate from acquisition.
+Formulario: `docs/protocols/common/graph/dbpedia2016-10/deployment-package/20260722T162241Z/HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION.md`
 
-## No hacer ahora
+## Reservado
 
-- reutilizar `AUTH_DBPEDIA2016_10_ACQ_20260722T134313Z_EMO_01`
-- descomprimir / Virtuoso / SPARQL / gold / adapters / benchmark
+**Prompt 25B** — Aplicación documental de la selección humana del perfil de recursos y preparación de la autorización final de despliegue, ZERO_COST, sin descomprimir ni cargar.
