@@ -1,0 +1,678 @@
+title: ADAPTER_CONTRACT_TEST_VECTORS
+run_id: 20260722T095602Z
+status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+executed: false
+vector_count: 42
+vectors:
+- vector_id: V01
+  contract_id: sgpt_q
+  category: valid_IA_Q_ONLY
+  common_input:
+    track_scenario: valid_IA_Q_ONLY
+  environment_state: ok_input
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_SUCCESS
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_SUCCESS
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: valid_IA_Q_ONLY:ok_input
+- vector_id: V02
+  contract_id: sparql_llm_schema_common_native
+  category: valid_IA_SCHEMA
+  common_input:
+    track_scenario: valid_IA_SCHEMA
+  environment_state: ok_schema
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_SUCCESS
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_SUCCESS
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: valid_IA_SCHEMA:ok_schema
+- vector_id: V03
+  contract_id: sgpt_qk
+  category: valid_IA_ORACLE
+  common_input:
+    track_scenario: valid_IA_ORACLE
+  environment_state: ok_oracle_roles
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_SUCCESS
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_SUCCESS
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: valid_IA_ORACLE:ok_oracle_roles
+- vector_id: V04
+  contract_id: cot_native_external_services
+  category: valid_IA_FIXED
+  common_input:
+    track_scenario: valid_IA_FIXED
+  environment_state: ok_ext_ground
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_SUCCESS_if_unblocked
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_SUCCESS_if_unblocked
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: valid_IA_FIXED:ok_ext_ground
+- vector_id: V05
+  contract_id: rdfconfig_domain_native
+  category: valid_IA_DOMAIN
+  common_input:
+    track_scenario: valid_IA_DOMAIN
+  environment_state: ok_domain
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_SUCCESS_if_unblocked
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_SUCCESS_if_unblocked
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: valid_IA_DOMAIN:ok_domain
+- vector_id: V06
+  contract_id: sgpt_q
+  category: oracle_in_IA_Q_ONLY
+  common_input:
+    track_scenario: oracle_in_IA_Q_ONLY
+  environment_state: oracle_present
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_TRACK_VIOLATION
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_TRACK_VIOLATION
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: oracle_in_IA_Q_ONLY:oracle_present
+- vector_id: V07
+  contract_id: sparql_llm_schema_common_native
+  category: schema_missing
+  common_input:
+    track_scenario: schema_missing
+  environment_state: no_schema
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_ARTIFACT_MISSING
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_ARTIFACT_MISSING
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: schema_missing:no_schema
+- vector_id: V08
+  contract_id: sgpt_q
+  category: artifact_missing
+  common_input:
+    track_scenario: artifact_missing
+  environment_state: no_checkpoint
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_ARTIFACT_MISSING
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_ARTIFACT_MISSING
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: artifact_missing:no_checkpoint
+- vector_id: V09
+  contract_id: sparql_llm_schema_common_native
+  category: model_mutable_latest
+  common_input:
+    track_scenario: model_mutable_latest
+  environment_state: latest_tag
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_CONFIGURATION_INVALID
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_CONFIGURATION_INVALID
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: model_mutable_latest:latest_tag
+- vector_id: V10
+  contract_id: sparql_llm_schema_common_native
+  category: prompt_hash_mismatch
+  common_input:
+    track_scenario: prompt_hash_mismatch
+  environment_state: bad_hash
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_CONFIGURATION_INVALID
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_CONFIGURATION_INVALID
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: prompt_hash_mismatch:bad_hash
+- vector_id: V11
+  contract_id: sgpt_q
+  category: test_leakage
+  common_input:
+    track_scenario: test_leakage
+  environment_state: test_in_prep
+  expected_contract_status: documentary
+  expected_adapter_status: RUN_INVALID_TEST_LEAKAGE
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: RUN_INVALID_TEST_LEAKAGE
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: test_leakage:test_in_prep
+- vector_id: V12
+  contract_id: mkgqagent_q_only_agentic
+  category: no_output
+  common_input:
+    track_scenario: no_output
+  environment_state: empty
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_NO_OUTPUT
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_NO_OUTPUT
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: no_output:empty
+- vector_id: V13
+  contract_id: mkgqagent_q_only_agentic
+  category: timeout
+  common_input:
+    track_scenario: timeout
+  environment_state: timeout
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_TIMEOUT
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_TIMEOUT
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: timeout:timeout
+- vector_id: V14
+  contract_id: rdfconfig_domain_native
+  category: exception
+  common_input:
+    track_scenario: exception
+  environment_state: raise
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_UPSTREAM_EXECUTION_ERROR
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_UPSTREAM_EXECUTION_ERROR
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: exception:raise
+- vector_id: V15
+  contract_id: mkgqagent_q_only_agentic
+  category: fallback_upstream
+  common_input:
+    track_scenario: fallback_upstream
+  environment_state: generic_query
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_FALLBACK_OUTPUT
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_FALLBACK_OUTPUT
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: fallback_upstream:generic_query
+- vector_id: V16
+  contract_id: sparql_llm_schema_common_native
+  category: multiple_queries
+  common_input:
+    track_scenario: multiple_queries
+  environment_state: multi
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_MULTIPLE_FINAL_QUERIES
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_MULTIPLE_FINAL_QUERIES
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: multiple_queries:multi
+- vector_id: V17
+  contract_id: sparql_llm_schema_common_native
+  category: network_not_allowlisted
+  common_input:
+    track_scenario: network_not_allowlisted
+  environment_state: bad_host
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_NETWORK_BLOCKED
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_NETWORK_BLOCKED
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: network_not_allowlisted:bad_host
+- vector_id: V18
+  contract_id: sparql_llm_schema_common_native
+  category: secret_missing
+  common_input:
+    track_scenario: secret_missing
+  environment_state: no_key
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_SECRET_MISSING
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_SECRET_MISSING
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: secret_missing:no_key
+- vector_id: V19
+  contract_id: sparql_llm_schema_common_native
+  category: cost_gt_zero_ZERO_COST
+  common_input:
+    track_scenario: cost_gt_zero_ZERO_COST
+  environment_state: paid
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_NETWORK_BLOCKED
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_NETWORK_BLOCKED
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: cost_gt_zero_ZERO_COST:paid
+- vector_id: V20
+  contract_id: sparql_llm_schema_common_internal_feedback
+  category: endpoint_feedback_internal
+  common_input:
+    track_scenario: endpoint_feedback_internal
+  environment_state: feedback
+  expected_contract_status: documentary
+  expected_adapter_status: METHOD_INTERNAL_ENDPOINT_FEEDBACK
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: METHOD_INTERNAL_ENDPOINT_FEEDBACK
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: endpoint_feedback_internal:feedback
+- vector_id: V21
+  contract_id: any
+  category: evaluator_endpoint_forbidden
+  common_input:
+    track_scenario: evaluator_endpoint_forbidden
+  environment_state: eval_from_adapter
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_UNSAFE_SIDE_EFFECT
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_UNSAFE_SIDE_EFFECT
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: evaluator_endpoint_forbidden:eval_from_adapter
+- vector_id: V22
+  contract_id: sgpt_q
+  category: sgpt_q
+  common_input:
+    track_scenario: sgpt_q
+  environment_state: q_only
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_SUCCESS_if_ready
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_SUCCESS_if_ready
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: sgpt_q:q_only
+- vector_id: V23
+  contract_id: sgpt_qk
+  category: sgpt_qk
+  common_input:
+    track_scenario: sgpt_qk
+  environment_state: oracle
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_SUCCESS_if_ready
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_SUCCESS_if_ready
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: sgpt_qk:oracle
+- vector_id: V24
+  contract_id: sparql_llm_schema_common_native
+  category: sparql_llm_no_exec
+  common_input:
+    track_scenario: sparql_llm_no_exec
+  environment_state: exec_false
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_SUCCESS_if_ready
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_SUCCESS_if_ready
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: sparql_llm_no_exec:exec_false
+- vector_id: V25
+  contract_id: sparql_llm_schema_common_internal_feedback
+  category: sparql_llm_feedback
+  common_input:
+    track_scenario: sparql_llm_feedback
+  environment_state: exec_true
+  expected_contract_status: documentary
+  expected_adapter_status: requires_G4
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: requires_G4
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: sparql_llm_feedback:exec_true
+- vector_id: V26
+  contract_id: mkgqagent_q_only_agentic
+  category: mkg_fallback
+  common_input:
+    track_scenario: mkg_fallback
+  environment_state: fallback
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_FALLBACK_OUTPUT
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_FALLBACK_OUTPUT
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: mkg_fallback:fallback
+- vector_id: V27
+  contract_id: rdfconfig_domain_native
+  category: rdfconfig_domain
+  common_input:
+    track_scenario: rdfconfig_domain
+  environment_state: bgee
+  expected_contract_status: documentary
+  expected_adapter_status: domain_only
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: domain_only
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: rdfconfig_domain:bgee
+- vector_id: V28
+  contract_id: rdfconfig_schema_common_dbpedia
+  category: rdfconfig_dbpedia_negative
+  common_input:
+    track_scenario: rdfconfig_dbpedia_negative
+  environment_state: attempt_exec
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_NEGATIVE_CONTRACT
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_NEGATIVE_CONTRACT
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: rdfconfig_dbpedia_negative:attempt_exec
+- vector_id: V29
+  contract_id: cot_native_external_services
+  category: cot_native_linkers
+  common_input:
+    track_scenario: cot_native_linkers
+  environment_state: spotlight
+  expected_contract_status: documentary
+  expected_adapter_status: EXTERNAL_SERVICE
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: EXTERNAL_SERVICE
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: cot_native_linkers:spotlight
+- vector_id: V30
+  contract_id: cot_common_frozen_grounding
+  category: cot_frozen_grounding
+  common_input:
+    track_scenario: cot_frozen_grounding
+  environment_state: shared_manifest
+  expected_contract_status: documentary
+  expected_adapter_status: controlled_variant
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: controlled_variant
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: cot_frozen_grounding:shared_manifest
+- vector_id: V31
+  contract_id: firesparql_raw_generation
+  category: fire_raw
+  common_input:
+    track_scenario: fire_raw
+  environment_state: raw
+  expected_contract_status: documentary
+  expected_adapter_status: MISSING_SURFACE
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: MISSING_SURFACE
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: fire_raw:raw
+- vector_id: V32
+  contract_id: firesparql_cleaned_generation
+  category: fire_cleaned
+  common_input:
+    track_scenario: fire_cleaned
+  environment_state: gpt4o
+  expected_contract_status: documentary
+  expected_adapter_status: paid_separate
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: paid_separate
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: fire_cleaned:gpt4o
+- vector_id: V33
+  contract_id: firesparql_rag
+  category: fire_rag
+  common_input:
+    track_scenario: fire_rag
+  environment_state: rag
+  expected_contract_status: documentary
+  expected_adapter_status: MISSING_SURFACE
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: MISSING_SURFACE
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: fire_rag:rag
+- vector_id: V34
+  contract_id: tebaqa_historical
+  category: tebaqa_historical
+  common_input:
+    track_scenario: tebaqa_historical
+  environment_state: n_a
+  expected_contract_status: documentary
+  expected_adapter_status: CONTRACT_HISTORICAL_ONLY
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: CONTRACT_HISTORICAL_ONLY
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: tebaqa_historical:n_a
+- vector_id: V35
+  contract_id: sparql_llm_schema_common_native
+  category: output_extraction
+  common_input:
+    track_scenario: output_extraction
+  environment_state: parse_fail
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_OUTPUT_EXTRACTION_ERROR
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_OUTPUT_EXTRACTION_ERROR
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: output_extraction:parse_fail
+- vector_id: V36
+  contract_id: sgpt_q
+  category: accounting_NOT_OBSERVABLE
+  common_input:
+    track_scenario: accounting_NOT_OBSERVABLE
+  environment_state: no_token_api
+  expected_contract_status: documentary
+  expected_adapter_status: NOT_OBSERVABLE
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: NOT_OBSERVABLE
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: accounting_NOT_OBSERVABLE:no_token_api
+- vector_id: V37
+  contract_id: any
+  category: illegal_implementation_attempt
+  common_input:
+    track_scenario: illegal_implementation_attempt
+  environment_state: code_added
+  expected_contract_status: documentary
+  expected_adapter_status: FORBIDDEN_G6I_PENDING
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: FORBIDDEN_G6I_PENDING
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: illegal_implementation_attempt:code_added
+- vector_id: V38
+  contract_id: any
+  category: gold_query_resolved
+  common_input:
+    track_scenario: gold_query_resolved
+  environment_state: resolve_gold
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_TRACK_VIOLATION
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_TRACK_VIOLATION
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: gold_query_resolved:resolve_gold
+- vector_id: V39
+  contract_id: sparql_llm_schema_common_native
+  category: download_during_benchmark
+  common_input:
+    track_scenario: download_during_benchmark
+  environment_state: wget
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_NETWORK_BLOCKED
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_NETWORK_BLOCKED
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: download_during_benchmark:wget
+- vector_id: V40
+  contract_id: rdfconfig_domain_native
+  category: upstream_write
+  common_input:
+    track_scenario: upstream_write
+  environment_state: mutate_upstream
+  expected_contract_status: documentary
+  expected_adapter_status: ADAPTER_UNSAFE_SIDE_EFFECT
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: ADAPTER_UNSAFE_SIDE_EFFECT
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: upstream_write:mutate_upstream
+- vector_id: V41
+  contract_id: any
+  category: best_of_gold
+  common_input:
+    track_scenario: best_of_gold
+  environment_state: select_by_gold
+  expected_contract_status: documentary
+  expected_adapter_status: FORBIDDEN
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: FORBIDDEN
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: best_of_gold:select_by_gold
+- vector_id: V42
+  contract_id: sgpt_qk
+  category: hidden_oracle_in_qk_claim_as_q
+  common_input:
+    track_scenario: hidden_oracle_in_qk_claim_as_q
+  environment_state: mislabel
+  expected_contract_status: documentary
+  expected_adapter_status: FORBIDDEN_CLAIM
+  expected_common_output:
+    documentary: true
+    not_executed: true
+  expected_failure_mapping: FORBIDDEN_CLAIM
+  expected_network_calls: per_contract
+  expected_claim: documentary_conformance
+  forbidden_claim: ADAPTER_IMPLEMENTED
+  rationale: hidden_oracle_in_qk_claim_as_q:mislabel

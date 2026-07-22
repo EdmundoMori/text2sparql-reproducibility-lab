@@ -1,0 +1,82 @@
+contract_version: 0.1.0-documentary
+implementation_status: NOT_IMPLEMENTED
+benchmark_status: NOT_CURRENTLY_ELIGIBLE
+g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
+g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
+common_adapter_allowed: false
+negative_contract: false
+historical: false
+contract_id: AC_COT_SPARQL_NATIVE_EXTERNAL
+method_id: cot_sparql
+variant_id: cot_native_external_services
+upstream_repository: cot_sparql
+upstream_commit: 063edd9868425e54010a0cb49ce585ed2186be4d
+license_status: LICENSE_NOT_CONFIRMED
+information_access_track: IA_FIXED_EXTERNAL_GROUNDING
+execution_style: ES_COT_RETRIEVAL
+adaptation_regime: AR_FEW_SHOT_TRAIN_ONLY
+model_control_regime: MC_NATIVE_BACKBONE
+direct_comparison_group: fixed_external_grounding_native_services
+dataset_views:
+- QALD9_PLUS_EN_DBPEDIA
+contract_status: CONTRACT_BLOCKED_LEGAL
+native_surface:
+  type: python_main
+  linkers:
+  - Spotlight
+  - Entity-Fishing
+  - Falcon
+  - REBEL
+preparation_contract:
+  retrieval: train_only_parquet_pkl
+training_contract:
+  required: false
+inference_contract:
+  profiles:
+  - cot_native_external_services
+  - cot_common_frozen_grounding_future
+input_mapping:
+  external_grounding_ref: required
+allowed_information:
+- question
+- external_grounding
+- retrieval_train
+prohibited_information:
+- gold
+- test_retrieval
+artifact_requirements:
+- name: retrieval_index
+  hash_required: true
+- name: model_codellama34b
+  hash_required: true
+configuration_freeze: {}
+network_contract:
+  classes:
+  - METHOD_INTERNAL_LLM_CALL
+  - METHOD_INTERNAL_LINKER_CALL
+  - METHOD_INTERNAL_ENDPOINT_FEEDBACK
+secret_contract: {}
+resource_contract:
+  gpu: CodeLlama-34B
+side_effect_contract: {}
+output_mapping:
+  final_sparql: required
+candidate_selection_policy: {}
+failure_mapping: {}
+observability: {}
+determinism:
+  class: EXTERNAL_SERVICE_NONDETERMINISTIC
+evidence_contract: {}
+claim_boundary: not_e2e_Q_ONLY; legal+runtime+artifact blocked
+legal_gate: CONTRACT_BLOCKED_LEGAL
+runtime_gate: CONTRACT_BLOCKED_RUNTIME
+prerequisites:
+- T5
+- artifacts
+- GPU
+stop_conditions:
+- LICENSE
+- MISSING_ARTIFACT
+- GPU
+evidence_paths:
+- docs/protocols/common/adapters/20260722T095602Z/COT_SPARQL_ADAPTER_CONTRACT.md

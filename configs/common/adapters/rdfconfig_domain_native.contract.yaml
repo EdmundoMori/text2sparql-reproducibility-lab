@@ -1,0 +1,78 @@
+contract_version: 0.1.0-documentary
+implementation_status: NOT_IMPLEMENTED
+benchmark_status: NOT_CURRENTLY_ELIGIBLE
+g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
+g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
+common_adapter_allowed: false
+negative_contract: false
+historical: false
+contract_id: AC_RDFCONFIG_DOMAIN_NATIVE
+method_id: rdfconfig_llm
+variant_id: rdfconfig_domain_native
+upstream_repository: rdfconfig_llm
+upstream_commit: fe63171d3c8b9679779749ee11f731b2a8318053
+license_status: LICENSE_NOT_CONFIRMED
+information_access_track: IA_DOMAIN_NATIVE
+execution_style: ES_DETERMINISTIC_SCHEMA_CONSTRUCTION
+adaptation_regime: AR_ZERO_SHOT
+model_control_regime: MC_NATIVE_BACKBONE
+direct_comparison_group: domain_native_life_science
+dataset_views:
+- DOMAIN_NATIVE_BGEE_RHEA_UNIPROT
+contract_status: CONTRACT_DOMAIN_NATIVE_ONLY
+native_surface:
+  type: python_plus_ruby
+  generator: SPARQL_generator.py
+  companion: cccc581c16f0b24865030bc5459475a9d0fcbd5f
+preparation_contract:
+  configs:
+  - bgee
+  - rhea
+  - uniprot
+training_contract:
+  required: false
+inference_contract:
+  pipeline: LLM_vars→workdir_yaml→rdf-config→sparql
+input_mapping:
+  allowed:
+  - question
+  - db
+  - prompt_id
+allowed_information:
+- question
+- domain_config
+prohibited_information:
+- gold
+artifact_requirements:
+- name: domain_config
+  hash_required: true
+- name: ruby_companion
+  hash_required: true
+configuration_freeze: {}
+network_contract:
+  classes:
+  - METHOD_INTERNAL_LLM_CALL
+  paid_blocked: true
+secret_contract: {}
+resource_contract: {}
+side_effect_contract:
+  workdir_only: true
+  no_upstream_mutation: true
+output_mapping:
+  final_sparql: from_rdf_config
+candidate_selection_policy: {}
+failure_mapping: {}
+observability: {}
+determinism:
+  class: STOCHASTIC_UNSEEDED_PROVIDER
+evidence_contract: {}
+claim_boundary: not_QALD_common; legal_blocked
+legal_gate: CONTRACT_BLOCKED_LEGAL
+runtime_gate: RUNTIME_GATE_PENDING
+prerequisites:
+- T5_legal
+stop_conditions:
+- LICENSE_NOT_CONFIRMED
+- paid_api
+evidence_paths:
+- docs/protocols/common/adapters/20260722T095602Z/RDFCONFIG_ADAPTER_CONTRACTS.md

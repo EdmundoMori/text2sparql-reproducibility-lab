@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.lab/ADAPTER_FAILURE_RECORD_SCHEMA.json",
+  "title": "AdapterFailureRecord",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifest_version",
+    "contract_id",
+    "status"
+  ],
+  "properties": {
+    "manifest_version": {
+      "type": "string"
+    },
+    "contract_id": {
+      "type": "string"
+    },
+    "variant_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "hashes": {
+      "type": "object"
+    },
+    "accounting": {
+      "type": "object"
+    },
+    "failure_code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidence_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

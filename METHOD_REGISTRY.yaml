@@ -4,17 +4,16 @@
 # inclusion_decision: audit/INCLUSION_DECISIONS.md
 # Evidencia pendiente cerrada: audit/EVIDENCE_CLOSURE.md
 
-schema_version: "0.15"
-updated_at: "2026-07-22T11:40:00+02:00"
-phase: "phase2_metric_oracle_contract_documented"
-audit_prompt: "Prompt_18_METRIC_ORACLE_STATISTICAL_CONTRACT"
+schema_version: '0.16'
+updated_at: '2026-07-22T12:00:00+02:00'
+phase: phase2_adapter_contracts_documented
+audit_prompt: Prompt_19_TRACK_SPECIFIC_ADAPTER_CONTRACTS
 clones_performed: true
 evidence_closure_complete: true
 wave_a_static_audit_complete: true
 wave_a_environment_definition_complete: true
 wave_b_static_audit_complete: true
 wave_c_static_audit_complete: true
-
 methods:
 - method_id: sparql_llm
   display_name: SPARQL-LLM
@@ -26,17 +25,22 @@ methods:
     license_status: CONFIRMED_LICENSE_FILE
     license_spdx: MIT
     license_file: LICENSE.txt
-    last_push_utc: "2026-05-19T16:43:59Z"
+    last_push_utc: '2026-05-19T16:43:59Z'
     fork: false
   paper:
-    title: "SPARQL-LLM: Real-Time SPARQL Query Generation from Natural Language Questions"
+    title: 'SPARQL-LLM: Real-Time SPARQL Query Generation from Natural Language Questions'
     year: 2025
     publication_status: preprint_under_review
-    venue: "arXiv cs.IR; ACM TWEB claim in HTML UNVERIFIED"
-    doi_or_id: "10.48550/arXiv.2512.14277"
+    venue: arXiv cs.IR; ACM TWEB claim in HTML UNVERIFIED
+    doi_or_id: 10.48550/arXiv.2512.14277
     publisher_doi: UNKNOWN
-    arxiv_comment: "Under Review"
-    authors: ["Panayiotis Smeros", "Vincent Emonet", "Ruijie Wang", "Ana-Claudia Sima", "Tarcisio Mendes de Farias"]
+    arxiv_comment: Under Review
+    authors:
+    - Panayiotis Smeros
+    - Vincent Emonet
+    - Ruijie Wang
+    - Ana-Claudia Sima
+    - Tarcisio Mendes de Farias
   artifacts:
     checkpoints: absent_in_repo
     processed_datasets: absent_in_repo
@@ -62,13 +66,13 @@ methods:
   environment_artifacts: environments/sparql_llm/
   offline_smoke_ready: validated_in_python311_container
   native_reproduction_ready: conditional
-  last_smoke_run_id: "20260720T134943Z"
+  last_smoke_run_id: 20260720T134943Z
   last_smoke_report: audit/sparql_llm/CORE_OFFLINE_PY311_SMOKE_REPORT.md
   prior_smoke_runs:
-  - run_id: "20260719T112306Z"
+  - run_id: 20260719T112306Z
     status: setup_failed
     report: audit/sparql_llm/CORE_OFFLINE_SMOKE_REPORT.md
-    note: "Host Python 3.10 typing.Required import failure"
+    note: Host Python 3.10 typing.Required import failure
   blocked_local_protocols:
   - TEXT2SPARQL_VIRTUOSO
   api_sib_protocol_status: defined_conditional_go
@@ -85,20 +89,19 @@ methods:
   - investigator_zero_usd_policy
   - OPENROUTER_not_authorized
   - max_tokens_not_enforced_on_openrouter_branch_mitigated_by_key_limit_if_ever_authorized
-
   agent_environment_status: ready
-  agent_environment_run_id: "20260721T084637Z"
-  agent_environment_image: "text2sparql-lab/sparql-llm-agent-py311:20260721T084637Z"
+  agent_environment_run_id: 20260721T084637Z
+  agent_environment_image: text2sparql-lab/sparql-llm-agent-py311:20260721T084637Z
   embedding_cache_status: complete_exact_model_cache
-  embedding_cache_run_id: "20260721T092249Z"
+  embedding_cache_run_id: 20260721T092249Z
   embedding_model_id: intfloat/multilingual-e5-large
   minimal_documents_status: ready
   minimal_documents_count: 12
   minimal_index_status: INDEX_VERIFIED
-  minimal_index_run_id: "20260721T092249Z"
+  minimal_index_run_id: 20260721T092249Z
   local_chat_startup_preflight_status: pass
   selected_online_model: openrouter/openai/gpt-4o-mini-2024-07-18
-  selected_online_model_snapshot: "20260721T100618Z"
+  selected_online_model_snapshot: 20260721T100618Z
   model_selection_status: HISTORICAL_PROPOSAL_ONLY
   cost_bound_status: COMPUTED_THEN_REFUSED
   proposed_openrouter_limit_usd: 0.0
@@ -112,13 +115,12 @@ methods:
   - max_tokens_not_enforced
   - new_human_authorization_required_to_reopen
   next_execution_prompt: Prompt_17
-  model_budget_gate_run_id: "20260721T100618Z"
+  model_budget_gate_run_id: 20260721T100618Z
   model_budget_gate_artifact: docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/
   model_budget_final_report: audit/sparql_llm/LOCAL_CHAT_API_MODEL_BUDGET_FINAL_GATE_REPORT.md
-  economic_nogo_run_id: "20260721T103536Z"
+  economic_nogo_run_id: 20260721T103536Z
   economic_nogo_artifact: docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/ECONOMIC_NO_GO_DECISION.md
   comparative_gate_rerun_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md
-
   native_gate_class: NO_GO_ECONOMIC_online_path
   scientific_baseline_role: core_baseline_candidate
   experimental_track: end_to_end_with_schema_validation
@@ -135,8 +137,7 @@ methods:
   - virtuoso_text2sparql_blocked_on_host
   - host_python_3_10_incompatible_typing_Required
   - investigator_zero_usd_blocks_openrouter_smoke
-  notes: "Prompt15: Phase1 closed smoke_only; online deferred ZERO_COST; nac=true; adapters false."
-
+  notes: 'Prompt15: Phase1 closed smoke_only; online deferred ZERO_COST; nac=true; adapters false.'
   paid_api_execution_allowed: false
   max_external_monetary_cost_usd: 0.0
   prompt_12_status: CANCELLED_BY_ZERO_COST_POLICY
@@ -172,6 +173,18 @@ methods:
   variants_candidate:
   - sparql_llm_schema_common_native
   - sparql_llm_online_api_deferred
+  adapter_contract_ids:
+  - AC_SPARQL_LLM_SCHEMA_COMMON_NATIVE
+  - AC_SPARQL_LLM_SCHEMA_COMMON_INTERNAL_FEEDBACK
+  adapter_contract_status: ADAPTER_CONTRACT_DEFINED
+  negative_contracts: []
+  implementation_candidate_after_gates: true
+  legal_gate: LEGAL_VERIFIED_MIT
+  runtime_gate: RUNTIME_GATE_PENDING
+  artifact_gate: schema_index_pending
+  g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
+  g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
+  next_adapter_action: T5_then_G6I
 - method_id: mkgqagent
   display_name: mKGQAgent
   repositories:
@@ -182,15 +195,18 @@ methods:
     license_status: LICENSE_NOT_CONFIRMED
     license_spdx: UNKNOWN
     license_file: ABSENT
-    last_push_utc: "2026-07-07T08:59:37Z"
+    last_push_utc: '2026-07-07T08:59:37Z'
     fork: false
   paper:
-    title: "Text-to-SPARQL Goes Beyond English: Multilingual Question Answering Over Knowledge Graphs through Human-Inspired Reasoning"
+    title: 'Text-to-SPARQL Goes Beyond English: Multilingual Question Answering Over Knowledge Graphs through Human-Inspired
+      Reasoning'
     year: 2025
     publication_status: workshop_proceedings_published
-    venue: "TEXT2SPARQL Challenge @ ESWC 2025; CEUR-WS Vol. 4094"
-    doi_or_id: "10.48550/arXiv.2507.16971"
-    authors: ["Aleksandr Perevalov", "Andreas Both"]
+    venue: TEXT2SPARQL Challenge @ ESWC 2025; CEUR-WS Vol. 4094
+    doi_or_id: 10.48550/arXiv.2507.16971
+    authors:
+    - Aleksandr Perevalov
+    - Andreas Both
   artifacts:
     checkpoints: absent_in_repo_uses_api
     processed_datasets: present
@@ -214,7 +230,7 @@ methods:
   static_audit_artifact: audit/mkgqagent/STATIC_AUDIT.md
   environment_definition_status: ready_documented
   environment_artifacts: environments/mkgqagent/
-  offline_smoke_ready: no
+  offline_smoke_ready: false
   api_smoke_ready: conditional
   native_reproduction_ready: not_ready_or_weak
   native_gate_class: HOLD_LEGAL
@@ -235,8 +251,7 @@ methods:
   - ram_risk_e5_large
   - double_agent_import_in_main
   - requests_missing_from_requirements
-  notes: "Prompt15: Phase1 closed blocked legal; nac=true; no execution; adapters false."
-
+  notes: 'Prompt15: Phase1 closed blocked legal; nac=true; no execution; adapters false.'
   zero_cost_gate_class: HOLD_LEGAL
   zero_cost_next_action: hold_until_license
   zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
@@ -266,6 +281,17 @@ methods:
   phase2_protocol_design_status: G1_conditional_G2_candidate
   variants_candidate:
   - mkgqagent_q_only_agentic
+  adapter_contract_ids:
+  - AC_MKGQAGENT_Q_ONLY
+  adapter_contract_status: CONTRACT_BLOCKED_LEGAL
+  negative_contracts: []
+  implementation_candidate_after_gates: false
+  legal_gate: CONTRACT_BLOCKED_LEGAL
+  runtime_gate: RUNTIME_GATE_PENDING
+  artifact_gate: hub_pending
+  g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
+  g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
+  next_adapter_action: T5_legal
 - method_id: cot_sparql
   display_name: COT-SPARQL
   repositories:
@@ -276,15 +302,20 @@ methods:
     license_status: LICENSE_NOT_CONFIRMED
     license_spdx: UNKNOWN
     license_file: ABSENT
-    last_push_utc: "2024-06-03T13:26:40Z"
+    last_push_utc: '2024-06-03T13:26:40Z'
     fork: false
   paper:
-    title: "Generating SPARQL from Natural Language Using Chain-of-Thoughts Prompting"
+    title: Generating SPARQL from Natural Language Using Chain-of-Thoughts Prompting
     year: 2024
     publication_status: published_article
-    venue: "SEMANTiCS 2024 / IOS Press SSW"
-    doi_or_id: "10.3233/SSW240028"
-    authors: ["Hamada M. Zahera", "Manzoor Ali", "Mohamed Ahmed Sherif", "Diego Moussallem", "Axel-Cyrille Ngonga Ngomo"]
+    venue: SEMANTiCS 2024 / IOS Press SSW
+    doi_or_id: 10.3233/SSW240028
+    authors:
+    - Hamada M. Zahera
+    - Manzoor Ali
+    - Mohamed Ahmed Sherif
+    - Diego Moussallem
+    - Axel-Cyrille Ngonga Ngomo
   artifacts:
     checkpoints: absent_in_repo_external_hf
     processed_datasets: partial
@@ -338,8 +369,7 @@ methods:
   - assert_empty_question_concatenation_bug
   - import_side_effect_loads_MiniLM
   - validation_is_HTTP_200_not_local_syntax
-  notes: "Prompt15: Phase1 closed blocked legal+HW+artifacts; no 34B substitution; nac=true; adapters false."
-
+  notes: 'Prompt15: Phase1 closed blocked legal+HW+artifacts; no 34B substitution; nac=true; adapters false.'
   zero_cost_gate_class: HOLD_HARDWARE
   zero_cost_next_action: hold_legal_and_hardware
   zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
@@ -370,6 +400,18 @@ methods:
   phase2_protocol_design_status: G1_documentary_G2_candidate
   variants_candidate:
   - cot_fixed_external_grounding
+  adapter_contract_ids:
+  - AC_COT_SPARQL_NATIVE_EXTERNAL
+  - AC_COT_SPARQL_FROZEN_GROUNDING
+  adapter_contract_status: CONTRACT_BLOCKED_LEGAL
+  negative_contracts: []
+  implementation_candidate_after_gates: false
+  legal_gate: CONTRACT_BLOCKED_LEGAL
+  runtime_gate: CONTRACT_BLOCKED_RUNTIME
+  artifact_gate: MISSING
+  g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
+  g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
+  next_adapter_action: T5_legal
 - method_id: firesparql
   display_name: FIRESPARQL
   repositories:
@@ -380,7 +422,7 @@ methods:
     license_status: LICENSE_NOT_CONFIRMED
     license_spdx: UNKNOWN
     license_file: ABSENT
-    last_push_utc: "2025-05-28T10:00:52Z"
+    last_push_utc: '2025-05-28T10:00:52Z'
     fork: false
   - url: https://huggingface.co/Sherry791/Meta-Llama-3-8B-Instruct-ft4sciqa
     role: model_checkpoint
@@ -388,12 +430,15 @@ methods:
     license_status: CONFIRMED_MODEL_CARD
     license_spdx: MIT
   paper:
-    title: "FIRESPARQL: A LLM-Based Framework for SPARQL Query Generation over Scholarly Knowledge Graphs"
+    title: 'FIRESPARQL: A LLM-Based Framework for SPARQL Query Generation over Scholarly Knowledge Graphs'
     year: 2025
     publication_status: published_article
-    venue: "IC3K 2025 KDIR (SCITEPRESS)"
-    doi_or_id: "10.5220/0013774000004000"
-    authors: ["Xueli Pan", "Victor de Boer", "Jacco van Ossenbruggen"]
+    venue: IC3K 2025 KDIR (SCITEPRESS)
+    doi_or_id: 10.5220/0013774000004000
+    authors:
+    - Xueli Pan
+    - Victor de Boer
+    - Jacco van Ossenbruggen
   artifacts:
     checkpoints: present_on_hf_absent_in_git
     processed_datasets: present
@@ -448,8 +493,7 @@ methods:
   - xueli_data_and_Snellius_hardcoded_paths
   - Llama3_8B_fp16_exceeds_local_6GiB
   - sparql_results_csv_partial_coverage
-  notes: "Prompt15: Phase1 closed not_reproducible; HF MIT≠code license; results≠repro; nac=true; adapters false."
-
+  notes: 'Prompt15: Phase1 closed not_reproducible; HF MIT≠code license; results≠repro; nac=true; adapters false.'
   zero_cost_gate_class: DOCUMENT_ONLY
   zero_cost_next_action: FIRESPARQL_RESULT_CONSISTENCY_AUDIT_deferred
   zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
@@ -480,6 +524,19 @@ methods:
   phase2_protocol_design_status: G1_documentary_G2_candidate
   variants_candidate:
   - firesparql_domain_native
+  adapter_contract_ids:
+  - AC_FIRESPARQL_DOMAIN_NATIVE
+  - AC_FIRESPARQL_CLEANED
+  - AC_FIRESPARQL_RAG
+  adapter_contract_status: CONTRACT_DOMAIN_NATIVE_ONLY
+  negative_contracts: []
+  implementation_candidate_after_gates: false
+  legal_gate: CONTRACT_BLOCKED_LEGAL
+  runtime_gate: CONTRACT_BLOCKED_MISSING_NATIVE_SURFACE
+  artifact_gate: MISSING_SURFACE
+  g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
+  g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
+  next_adapter_action: T5_legal
 - method_id: rdfconfig_llm
   display_name: LLM + RDF-config
   repositories:
@@ -490,7 +547,7 @@ methods:
     license_status: LICENSE_NOT_CONFIRMED
     license_spdx: UNKNOWN
     license_file: ABSENT
-    last_push_utc: "2026-02-09T09:20:34Z"
+    last_push_utc: '2026-02-09T09:20:34Z'
     fork: false
   - url: https://doi.org/10.5281/zenodo.18539214
     role: zenodo_archive
@@ -504,15 +561,20 @@ methods:
     license_status: CONFIRMED_LICENSE_FILE
     license_spdx: MIT
     license_file: LICENSE
-    last_push_utc: "2026-07-16T04:54:33Z"
+    last_push_utc: '2026-07-16T04:54:33Z'
     fork: false
   paper:
-    title: "Accurate SPARQL generation via in-context learning and schema-based query construction"
+    title: Accurate SPARQL generation via in-context learning and schema-based query construction
     year: 2026
     publication_status: published_article
-    venue: "Bioinformatics (OUP)"
-    doi_or_id: "10.1093/bioinformatics/btag174"
-    authors: ["Hikaru Nagazumi", "Yuki Moriya", "Shuichi Kawashima", "Toshiaki Katayama", "Kana Shimizu"]
+    venue: Bioinformatics (OUP)
+    doi_or_id: 10.1093/bioinformatics/btag174
+    authors:
+    - Hikaru Nagazumi
+    - Yuki Moriya
+    - Shuichi Kawashima
+    - Toshiaki Katayama
+    - Kana Shimizu
   artifacts:
     checkpoints: n_a_api_llm
     processed_datasets: present
@@ -539,7 +601,7 @@ methods:
   companion_static_audit_artifact: audit/rdfconfig_llm/COMPANION_RDF_CONFIG_AUDIT.md
   environment_definition_status: ready_documented
   environment_artifacts: environments/rdfconfig_llm/
-  offline_smoke_ready: no
+  offline_smoke_ready: false
   api_smoke_ready: conditional
   native_reproduction_ready: conditional
   native_gate_class: HOLD_LEGAL
@@ -559,8 +621,7 @@ methods:
   - ruby_bundler_ABSENT_on_host
   - sparql_yaml_mutation_on_run
   - possible_divergence_vendored_vs_companion_pin
-  notes: "Prompt15: Phase1 closed blocked; companion MIT≠generator; nac=true; adapters false."
-
+  notes: 'Prompt15: Phase1 closed blocked; companion MIT≠generator; nac=true; adapters false.'
   zero_cost_gate_class: DOCUMENT_ONLY
   zero_cost_next_action: RDFCONFIG_SOURCE_LICENSE_CLOSURE_deferred
   zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
@@ -591,6 +652,19 @@ methods:
   phase2_protocol_design_status: G1_conditional_G2_candidate
   variants_candidate:
   - rdfconfig_schema_or_domain
+  adapter_contract_ids:
+  - AC_RDFCONFIG_DOMAIN_NATIVE
+  - AC_RDFCONFIG_SCHEMA_COMMON_DBPEDIA_NEGATIVE
+  adapter_contract_status: CONTRACT_DOMAIN_NATIVE_ONLY
+  negative_contracts:
+  - AC_RDFCONFIG_SCHEMA_COMMON_DBPEDIA_NEGATIVE
+  implementation_candidate_after_gates: false
+  legal_gate: CONTRACT_BLOCKED_LEGAL
+  runtime_gate: RUNTIME_GATE_PENDING
+  artifact_gate: domain_ok_common_bundle_missing
+  g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
+  g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
+  next_adapter_action: T5_legal
 - method_id: sgpt
   display_name: SGPT
   repositories:
@@ -601,17 +675,22 @@ methods:
     license_status: CONFIRMED_LICENSE_FILE
     license_spdx: MIT
     license_file: LICENSE.md
-    last_push_utc: "2024-09-15T09:21:37Z"
+    last_push_utc: '2024-09-15T09:21:37Z'
     fork: false
   paper:
-    title: "SGPT: A Generative Approach for SPARQL Query Generation From Natural Language Questions"
+    title: 'SGPT: A Generative Approach for SPARQL Query Generation From Natural Language Questions'
     year: 2022
     publication_status: published_article
-    venue: "IEEE Access"
-    doi_or_id: "10.1109/ACCESS.2022.3188714"
-    authors: ["Md Rashad Al Hasan Rony", "Uttam Kumar", "Roman Teucher", "Liubov Kovriguina", "Jens Lehmann"]
+    venue: IEEE Access
+    doi_or_id: 10.1109/ACCESS.2022.3188714
+    authors:
+    - Md Rashad Al Hasan Rony
+    - Uttam Kumar
+    - Roman Teucher
+    - Liubov Kovriguina
+    - Jens Lehmann
   table4_evidence: closed
-  table4_source: "https://doi.org/10.1109/ACCESS.2022.3188714"
+  table4_source: https://doi.org/10.1109/ACCESS.2022.3188714
   artifacts:
     checkpoints: absent_in_repo_despite_paper_claim
     processed_datasets: present
@@ -660,8 +739,8 @@ methods:
   - qald9_id_reuse_train_test_150
   - metric_double_update_anomaly
   - epochs_cli_vs_params_json_divergence
-  notes: "Prompt15: Phase1 closed; Z3 smoke_only with indirect optimizer qualifier preserved; nac=true; adapters false; next Prompt16."
-
+  notes: 'Prompt15: Phase1 closed; Z3 smoke_only with indirect optimizer qualifier preserved; nac=true; adapters false; next
+    Prompt16.'
   zero_cost_gate_class: GO_NEXT_ZERO_COST
   zero_cost_next_action: Prompt_16
   zero_cost_gate_artifact: audit/NEXT_POST_Z3_ZERO_COST_DECISION.md
@@ -830,6 +909,18 @@ methods:
   variants_candidate:
   - sgpt_q
   - sgpt_qk
+  adapter_contract_ids:
+  - AC_SGPT_Q
+  - AC_SGPT_QK
+  adapter_contract_status: ADAPTER_CONTRACT_DEFINED
+  negative_contracts: []
+  implementation_candidate_after_gates: true
+  legal_gate: LEGAL_VERIFIED_MIT
+  runtime_gate: RUNTIME_GATE_PENDING
+  artifact_gate: checkpoint_pending
+  g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
+  g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
+  next_adapter_action: T5_then_G6I
 - method_id: tebaqa
   display_name: TeBaQA
   repositories:
@@ -840,15 +931,21 @@ methods:
     license_status: CONFIRMED_LICENSE_FILE
     license_spdx: AGPL-3.0
     license_file: LICENSE
-    last_push_utc: "2023-10-30T15:28:03Z"
+    last_push_utc: '2023-10-30T15:28:03Z'
     fork: false
   paper:
-    title: "Knowledge Graph Question Answering Using Graph-Pattern Isomorphism"
+    title: Knowledge Graph Question Answering Using Graph-Pattern Isomorphism
     year: 2021
     publication_status: published_article
-    venue: "Studies on the Semantic Web (IOS Press)"
-    doi_or_id: "10.3233/SSW210038"
-    authors: ["Daniel Vollmers", "Rricha Jalota", "Diego Moussallem", "Hardik Topiwala", "Axel-Cyrille Ngonga Ngomo", "Ricardo Usbeck"]
+    venue: Studies on the Semantic Web (IOS Press)
+    doi_or_id: 10.3233/SSW210038
+    authors:
+    - Daniel Vollmers
+    - Rricha Jalota
+    - Diego Moussallem
+    - Hardik Topiwala
+    - Axel-Cyrille Ngonga Ngomo
+    - Ricardo Usbeck
   artifacts:
     checkpoints: n_a_ml_classifiers
     processed_datasets: external_indices
@@ -865,11 +962,11 @@ methods:
   common_adapter_allowed: false
   clone_wave: WAVE_D_EXCLUDED
   cloned: false
-  upstream_path:
-  pinned_commit:
-  notes_clone: "Not cloned: HISTORICAL_ONLY / WAVE_D_EXCLUDED for this cloning phase."
+  upstream_path: null
+  pinned_commit: null
+  notes_clone: 'Not cloned: HISTORICAL_ONLY / WAVE_D_EXCLUDED for this cloning phase.'
   needs_api: false
-  notes: "Prompt15: remains HISTORICAL_ONLY; outside active Phase1 denominator; adapters false."
+  notes: 'Prompt15: remains HISTORICAL_ONLY; outside active Phase1 denominator; adapters false.'
   zero_cost_gate_class: NOT_CURRENTLY_ACTIONABLE
   zero_cost_next_action: historical_only
   zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
@@ -889,12 +986,22 @@ methods:
   phase2_protocol_design_status: HISTORICAL_ONLY
   variants_candidate:
   - tebaqa_historical
+  adapter_contract_ids: []
+  adapter_contract_status: CONTRACT_HISTORICAL_ONLY
+  negative_contracts: []
+  implementation_candidate_after_gates: false
+  legal_gate: AGPL
+  runtime_gate: n_a
+  artifact_gate: n_a
+  g6d_status: n_a
+  g6i_status: n_a
+  next_adapter_action: none
 phase1_status: closed
 phase1_final_gate: PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION
 phase1_closure_artifact: audit/PHASE1_FINAL_NATIVE_AUDIT_REPORT.md
 phase1_gate_qualifier: RESIDUAL_METHOD_BLOCKERS_PRESERVED
-phase2_status: metric_oracle_contract_documented_adapter_contracts_pending
-current_phase: phase2_metric_oracle_contract_documented
+phase2_status: adapter_contracts_documented_legal_recheck_pending
+current_phase: phase2_adapter_contracts_documented
 phase1_decision_artifact: docs/decisions/006_phase1_native_audit_closure_and_phase2_transition.md
 phase2_protocol_run_id: 20260722T083201Z
 phase2_protocol_artifact: docs/protocols/common/20260722T083201Z/
@@ -906,6 +1013,15 @@ phase2_metric_contract_run_id: 20260722T093257Z
 phase2_metric_contract_artifact: docs/protocols/common/metrics/20260722T093257Z/
 phase2_metric_contract_version: 0.1.0-documentary
 phase2_metric_contract_gate: METRIC_ORACLE_CONTRACT_DOCUMENTED_READY_FOR_ADAPTER_CONTRACTS
+phase2_adapter_contract_run_id: 20260722T095602Z
+phase2_adapter_contract_artifact: docs/protocols/common/adapters/20260722T095602Z/
+phase2_adapter_contract_version: 0.1.0-documentary
+phase2_adapter_contract_gate: ADAPTER_CONTRACTS_DOCUMENTED_READY_FOR_LEGAL_ELIGIBILITY_RECHECK
+adapter_contract_registry: configs/common/ADAPTER_CONTRACT_REGISTRY.yaml
+adapter_contract_vector_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
+g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
+phase2_legal_recheck_status: PENDING_T5
 phase2_answer_canonicalization_status: RDF_TERM_CANONICALIZATION_V1_DEFINED
 phase2_sparql_canonicalization_status: SPARQL_CANONICALIZATION_V1_CONSERVATIVE_DEFINED
 phase2_gold_contract_status: GOLD_CONTRACT_DEFINED
@@ -935,9 +1051,9 @@ phase2_graph_pin_status: GRAPH_SNAPSHOT_PENDING
 phase2_metric_detail_status: METRIC_CONTRACT_DEFINED
 phase2_adapter_status: disabled_common_adapter_allowed_false
 phase2_benchmark_status: NOT_CURRENTLY_ELIGIBLE
-phase2_next_action: T4_TRACK_SPECIFIC_ADAPTER_CONTRACTS
-phase2_next_prompt: Prompt_19
-pe5_status: protocol_and_metric_contract_defined_pending_benchmark
+phase2_next_action: T5_LEGAL_ELIGIBILITY_RECHECK
+phase2_next_prompt: Prompt_20
+pe5_status: protocol_metric_and_adapter_contracts_defined_pending_implementation_and_benchmark
 pe5_preparatory_evidence:
 - dataset_source_provenance_documented
 - payload_not_acquired
@@ -946,6 +1062,10 @@ pe5_preparatory_evidence:
 - oracle_contract_documented
 - statistical_contract_documented
 - conformance_vectors_not_executed
-pe6_status: diagnostic_metric_contract_defined_pending_execution
+- adapter_contracts_documented
+- input_output_mappings_documented
+- failure_mapping_documented
+- observability_contract_documented
+pe6_status: diagnostic_metric_and_adapter_observability_contracts_defined_pending_execution
 pe7_status: not_started
 pe8_status: not_started

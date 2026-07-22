@@ -205,6 +205,60 @@
     "metric_implementation_status": {
       "type": "string",
       "const": "METRIC_IMPLEMENTATION_PENDING"
+    },
+    "adapter_contract_version": {
+      "type": "string"
+    },
+    "adapter_contract_run_id": {
+      "type": "string"
+    },
+    "adapter_contract_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "adapter_execution_profile": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "g6d_status": {
+      "type": "string"
+    },
+    "g6i_status": {
+      "type": "string"
+    },
+    "adapter_evidence_manifest_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "method_internal_endpoint_calls": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "linker_calls": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "fallback_count": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "artifact_manifest_hash": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": true

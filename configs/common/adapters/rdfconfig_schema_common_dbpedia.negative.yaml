@@ -1,0 +1,60 @@
+contract_version: 0.1.0-documentary
+implementation_status: NOT_IMPLEMENTED
+benchmark_status: NOT_CURRENTLY_ELIGIBLE
+g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
+g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
+common_adapter_allowed: false
+negative_contract: true
+historical: false
+contract_id: AC_RDFCONFIG_SCHEMA_COMMON_DBPEDIA_NEGATIVE
+method_id: rdfconfig_llm
+variant_id: rdfconfig_schema_common_dbpedia
+upstream_repository: rdfconfig_llm
+upstream_commit: fe63171d3c8b9679779749ee11f731b2a8318053
+license_status: LICENSE_NOT_CONFIRMED
+information_access_track: IA_SCHEMA_COMMON
+execution_style: ES_DETERMINISTIC_SCHEMA_CONSTRUCTION
+adaptation_regime: AR_ZERO_SHOT
+model_control_regime: MC_NATIVE_BACKBONE
+direct_comparison_group: n_a_negative
+dataset_views:
+- QALD9_PLUS_EN_DBPEDIA
+contract_status: ADAPTER_NEGATIVE_CONTRACT_DEFINED
+native_surface:
+  note: vendored config/dbpedia is toy demo; not lab common QALD schema bundle
+preparation_contract: {}
+training_contract:
+  required: false
+inference_contract:
+  executable: false
+input_mapping: {}
+allowed_information: []
+prohibited_information:
+- all_execution
+artifact_requirements:
+- name: common_qald_schema_bundle
+  status: MISSING
+configuration_freeze: {}
+network_contract: {}
+secret_contract: {}
+resource_contract: {}
+side_effect_contract: {}
+output_mapping: {}
+candidate_selection_policy: {}
+failure_mapping: {}
+observability: {}
+determinism: {}
+evidence_contract: {}
+claim_boundary: not_executable_candidate
+legal_gate: CONTRACT_BLOCKED_LEGAL
+runtime_gate: CONTRACT_BLOCKED_MISSING_ARTIFACT
+prerequisites:
+- common_schema_bundle
+- T5
+stop_conditions:
+- MISSING_COMMON_SCHEMA
+- LICENSE
+evidence_paths:
+- docs/protocols/common/adapters/20260722T095602Z/RDFCONFIG_TRACK_RESOLUTION.md
+notes: Toy dbpedia YAML present under vendored rdf-config; does NOT satisfy common
+  protocol schema bundle.

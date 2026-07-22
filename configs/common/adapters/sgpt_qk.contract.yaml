@@ -1,0 +1,79 @@
+contract_version: 0.1.0-documentary
+implementation_status: NOT_IMPLEMENTED
+benchmark_status: NOT_CURRENTLY_ELIGIBLE
+g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
+g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
+common_adapter_allowed: false
+negative_contract: false
+historical: false
+contract_id: AC_SGPT_QK
+method_id: sgpt
+variant_id: sgpt_qk
+upstream_repository: https://github.com/semantic-systems/SGPT
+upstream_commit: 1f6964d1c3bfee50c7dec2c25546f32b4ab94b2b
+license_status: CONFIRMED_LICENSE_FILE_MIT
+information_access_track: IA_ORACLE_GROUNDING
+execution_style: ES_SUPERVISED_GENERATOR
+adaptation_regime: AR_ORACLE_INPUT
+model_control_regime: MC_NATIVE_BACKBONE
+direct_comparison_group: oracle_grounding
+dataset_views:
+- QALD9_PLUS_EN_DBPEDIA
+contract_status: ADAPTER_CONTRACT_DEFINED
+native_surface:
+  type: python_eval_train
+  modules:
+  - train.py
+  - eval.py
+preparation_contract:
+  features: syntax_pipeline
+  gold_in_features: oracle_roles_only
+training_contract:
+  required: true
+  outside_test: true
+  checkpoint_hash: required
+inference_contract:
+  kg_runtime: false
+  linking_internal: false
+input_mapping:
+  oracle_grounding_ref: required_roles
+allowed_information:
+- question
+- oracle_roles
+prohibited_information:
+- gold_answers
+- gold_sparql_full
+artifact_requirements:
+- name: checkpoint
+  hash_required: true
+- name: preprocessor
+  hash_required: true
+configuration_freeze: {}
+network_contract:
+  classes: []
+secret_contract: {}
+resource_contract:
+  gpu: may_require
+side_effect_contract:
+  workdir_only: true
+output_mapping:
+  final_sparql: string
+candidate_selection_policy: {}
+failure_mapping: {}
+observability:
+  llm_calls: NOT_OBSERVABLE_or_zero
+determinism:
+  class: STOCHASTIC_SEEDED
+evidence_contract: {}
+claim_boundary: sgpt_q_neq_sgpt_qk
+legal_gate: LEGAL_VERIFIED_MIT
+runtime_gate: RUNTIME_GATE_PENDING
+prerequisites:
+- dataset_payload
+- checkpoint
+- G4
+- G5_runtime
+stop_conditions:
+- compare_to_q_only
+evidence_paths:
+- docs/protocols/common/adapters/20260722T095602Z/SGPT_ADAPTER_CONTRACTS.md

@@ -1,0 +1,62 @@
+contract_version: 0.1.0-documentary
+implementation_status: NOT_IMPLEMENTED
+benchmark_status: NOT_CURRENTLY_ELIGIBLE
+g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
+g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
+common_adapter_allowed: false
+negative_contract: false
+historical: false
+contract_id: AC_COT_SPARQL_FROZEN_GROUNDING
+method_id: cot_sparql
+variant_id: cot_common_frozen_grounding
+upstream_repository: cot_sparql
+upstream_commit: 063edd9868425e54010a0cb49ce585ed2186be4d
+license_status: LICENSE_NOT_CONFIRMED
+information_access_track: IA_FIXED_EXTERNAL_GROUNDING
+execution_style: ES_COT_RETRIEVAL
+adaptation_regime: AR_FEW_SHOT_TRAIN_ONLY
+model_control_regime: MC_NATIVE_BACKBONE
+direct_comparison_group: fixed_external_grounding_frozen_common
+dataset_views:
+- QALD9_PLUS_EN_DBPEDIA
+contract_status: ADAPTER_CONTRACT_DEFINED
+native_surface:
+  type: controlled_variant_future
+preparation_contract:
+  shared_grounding_manifest: true
+training_contract:
+  required: false
+inference_contract:
+  same_manifest_all_methods: true
+  not_native_reproduction: true
+input_mapping:
+  external_grounding_ref: common_frozen
+allowed_information:
+- question
+- frozen_grounding
+prohibited_information:
+- gold
+artifact_requirements:
+- name: frozen_grounding_manifest
+  hash_required: true
+configuration_freeze: {}
+network_contract: {}
+secret_contract: {}
+resource_contract: {}
+side_effect_contract: {}
+output_mapping: {}
+candidate_selection_policy: {}
+failure_mapping: {}
+observability: {}
+determinism: {}
+evidence_contract: {}
+claim_boundary: controlled_not_native; legal/runtime still blocked
+legal_gate: CONTRACT_BLOCKED_LEGAL
+runtime_gate: CONTRACT_BLOCKED_RUNTIME
+prerequisites:
+- T5
+- frozen_manifest
+stop_conditions:
+- LICENSE
+evidence_paths:
+- docs/protocols/common/adapters/20260722T095602Z/COT_SPARQL_ADAPTER_CONTRACT.md

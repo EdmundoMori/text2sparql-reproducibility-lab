@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-22 (Prompt 18)  
+**Última actualización:** 2026-07-22 (Prompt 19)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -308,3 +308,12 @@ El planificador **puede** leer el código en `upstream/` directamente en el repo
 | P18-NEXT | Next after metric | `audit/NEXT_AFTER_METRIC_ORACLE_CONTRACT_DECISION.md` | Prompt19 |
 | P18-Q | Post-T3 queue | `audit/PHASE2_POST_T3_QUEUE.csv` | T4 selected |
 | P18-LOG | Logs Prompt 18 | `logs/metric-oracle-contract/20260722T093257Z/` | documental |
+
+| P19-DIR | Adapter contracts pack | `docs/protocols/common/adapters/20260722T095602Z/` | 19 |
+| P19-GATE | Adapter gate | `docs/protocols/common/adapters/20260722T095602Z/ADAPTER_CONTRACT_GATE.md` | G6D |
+| P19-REG | Adapter registry | `configs/common/ADAPTER_CONTRACT_REGISTRY.yaml` | 19 |
+| P19-RPT | Adapter contract report | `audit/PHASE2_ADAPTER_CONTRACT_REPORT.md` | 19 |
+| P19-DEC | Decision 010 | `docs/decisions/010_common_adapter_contracts.md` | 19 |
+| P19-NEXT | Next after adapters | `audit/NEXT_AFTER_ADAPTER_CONTRACT_DECISION.md` | Prompt20 |
+| P19-Q | Post-T4 queue | `audit/PHASE2_POST_T4_QUEUE.csv` | T5 selected |
+| P19-LOG | Logs Prompt 19 | `logs/adapter-contract-definition/20260722T095602Z/` | documental |

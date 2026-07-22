@@ -1,0 +1,55 @@
+contract_version: 0.1.0-documentary
+implementation_status: NOT_IMPLEMENTED
+benchmark_status: NOT_CURRENTLY_ELIGIBLE
+g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
+g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
+common_adapter_allowed: false
+negative_contract: false
+historical: false
+contract_id: AC_FIRESPARQL_RAG
+method_id: firesparql
+variant_id: firesparql_rag
+upstream_repository: firesparql
+upstream_commit: 48d6f168e4c1dd3dc467553aef370299911d4e76
+license_status: LICENSE_NOT_CONFIRMED
+information_access_track: IA_DOMAIN_NATIVE
+execution_style: ES_DOMAIN_FINETUNED_RAG
+adaptation_regime: AR_DOMAIN_RETRAINED
+model_control_regime: MC_NATIVE_BACKBONE
+direct_comparison_group: domain_native_orkg_rag
+dataset_views:
+- ORKG_SCIQA_NATIVE
+contract_status: CONTRACT_DOMAIN_NATIVE_ONLY
+native_surface:
+  rag: true
+preparation_contract: {}
+training_contract:
+  required: true
+inference_contract: {}
+input_mapping: {}
+allowed_information:
+- question
+- rag_context
+prohibited_information: []
+artifact_requirements: []
+configuration_freeze: {}
+network_contract: {}
+secret_contract: {}
+resource_contract: {}
+side_effect_contract: {}
+output_mapping: {}
+candidate_selection_policy: {}
+failure_mapping: {}
+observability: {}
+determinism: {}
+evidence_contract: {}
+claim_boundary: separate_from_raw_cleaned
+legal_gate: CONTRACT_BLOCKED_LEGAL
+runtime_gate: CONTRACT_BLOCKED_MISSING_NATIVE_SURFACE
+prerequisites:
+- T5
+stop_conditions:
+- LICENSE
+- MISSING_SURFACE
+evidence_paths:
+- docs/protocols/common/adapters/20260722T095602Z/FIRESPARQL_ADAPTER_CONTRACT.md

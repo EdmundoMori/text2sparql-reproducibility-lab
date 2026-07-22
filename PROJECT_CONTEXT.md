@@ -325,3 +325,15 @@ Auditoría estática de `upstream/` y, solo bajo petición explícita, smoke tes
 - G5 documentary satisfied; G5 runtime pending; G4 still not satisfied.
 - Adapters false; benchmark not eligible; no metric implementation.
 - Siguiente: Prompt 19 (T4 adapter contracts documentales).
+
+
+---
+
+## Estado actual post-Prompt 19
+
+- Adapter contract RUN_ID: `20260722T095602Z` · version `0.1.0-documentary`.
+- Gate: `ADAPTER_CONTRACTS_DOCUMENTED_READY_FOR_LEGAL_ELIGIBILITY_RECHECK`.
+- G6D documented; G6I pending; common_adapter_allowed=false.
+- RDFConfig dual track resolved (domain vs DBpedia negative).
+- SPARQL-LLM generate-only vs feedback; SGPT q/qk; CoT native/frozen; FIRE raw/cleaned/RAG.
+- Siguiente: Prompt 20 (T5 legal eligibility recheck).

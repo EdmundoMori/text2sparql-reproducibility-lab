@@ -1,0 +1,75 @@
+contract_version: 0.1.0-documentary
+implementation_status: NOT_IMPLEMENTED
+benchmark_status: NOT_CURRENTLY_ELIGIBLE
+g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
+g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
+common_adapter_allowed: false
+negative_contract: false
+historical: false
+contract_id: AC_SPARQL_LLM_SCHEMA_COMMON_INTERNAL_FEEDBACK
+method_id: sparql_llm
+variant_id: sparql_llm_schema_common_internal_feedback
+upstream_repository: https://github.com/sib-swiss/sparql-llm
+upstream_commit: 3748730e3bd2df2595280b918269fdaadb9fc0c3
+license_status: CONFIRMED_LICENSE_FILE_MIT
+information_access_track: IA_SCHEMA_COMMON
+execution_style: ES_SCHEMA_RAG_VALIDATION
+adaptation_regime: AR_ZERO_SHOT
+model_control_regime: MC_NATIVE_BACKBONE
+direct_comparison_group: schema_common_internal_feedback
+dataset_views:
+- QALD9_PLUS_EN_DBPEDIA
+contract_status: ADAPTER_CONTRACT_DEFINED
+native_surface:
+  type: http_post
+  enable_sparql_execution: true
+  feedback: METHOD_INTERNAL_ENDPOINT_FEEDBACK
+preparation_contract:
+  schema_index: prebuilt_hashed
+training_contract:
+  required: false
+inference_contract:
+  enable_sparql_execution: true
+input_mapping:
+  allowed:
+  - question
+  - schema_bundle_ref
+  prohibited:
+  - gold
+allowed_information:
+- question
+- schema_bundle
+prohibited_information:
+- gold
+artifact_requirements:
+- name: schema_index
+  hash_required: true
+- name: endpoint_config
+  hash_required: true
+configuration_freeze: {}
+network_contract:
+  classes:
+  - METHOD_INTERNAL_LLM_CALL
+  - METHOD_INTERNAL_ENDPOINT_FEEDBACK
+secret_contract:
+  secret_names_only: true
+resource_contract: {}
+side_effect_contract:
+  workdir_only: true
+output_mapping:
+  final_sparql: required
+candidate_selection_policy: {}
+failure_mapping: {}
+observability: {}
+determinism:
+  class: STOCHASTIC_UNSEEDED_PROVIDER
+evidence_contract: {}
+claim_boundary: separate_from_generate_only; requires G4
+legal_gate: LEGAL_VERIFIED_MIT
+runtime_gate: BLOCKED_UNTIL_G4
+prerequisites:
+- G4_graph_endpoint
+stop_conditions:
+- G4_unsatisfied
+evidence_paths:
+- docs/protocols/common/adapters/20260722T095602Z/SPARQL_LLM_ADAPTER_CONTRACT.md

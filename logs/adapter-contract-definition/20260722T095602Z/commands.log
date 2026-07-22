@@ -1,0 +1,4 @@
+# Prompt 19 — 20260722T095602Z
+HEAD_verified=39bddbb2c85bce866d41d020f7ea5b50ce4fa45e
+# documentary only; no network beyond git; no docker/pip/downloads/imports/SPARQL/metrics/adapters/methods
+cost_usd=0.00

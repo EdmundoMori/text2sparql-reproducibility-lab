@@ -3,18 +3,16 @@
 Laboratorio local de investigación en **Text-to-SPARQL** / KGQA orientado a auditoría, reproducibilidad nativa y, posteriormente, evaluación común de métodos publicados.
 
 
-## Estado actual (Prompt 18)
+## Estado actual (Prompt 19)
 
 | Campo | Valor |
 |---|---|
 | Fase 1 | **cerrada** |
-| Fase 2 | **contrato métricas/oracle documental** (`METRIC_ORACLE_CONTRACT_DOCUMENTED_READY_FOR_ADAPTER_CONTRACTS`) |
-| RUN_IDs | protocol `20260722T083201Z` · provenance `20260722T090627Z` · metrics `20260722T093257Z` |
-| metric_contract_version | `0.1.0-documentary` |
-| G4 / G5 | G4 **no** · G5 documentary **sí** · G5 runtime **pending** |
-| Adapters / benchmark | `false` / `NOT_CURRENTLY_ELIGIBLE` |
-| Implementación métricas | `METRIC_IMPLEMENTATION_PENDING` · vectores **no** ejecutados |
-| Siguiente | Prompt 19 / T4 — contratos de adapters (documental; sin implementar) |
+| Fase 2 | **adapter contracts documentales** (`ADAPTER_CONTRACTS_DOCUMENTED_READY_FOR_LEGAL_ELIGIBILITY_RECHECK`) |
+| RUN_IDs | protocol `20260722T083201Z` · provenance `20260722T090627Z` · metrics `20260722T093257Z` · adapters `20260722T095602Z` |
+| G6D / G6I | documented / **pending** |
+| Adapters / benchmark | `common_adapter_allowed=false` / `NOT_CURRENTLY_ELIGIBLE` |
+| Siguiente | Prompt 20 / T5 — legal eligibility recheck (documental) |
 
 Clones y ejecuciones nativas de Fase 1 están **documentadas**. La secuencia de largo plazo permanece intacta.
 

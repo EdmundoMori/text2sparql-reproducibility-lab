@@ -1,0 +1,9 @@
+order,action_id,title,depends_on,status,notes
+1,T5,LEGAL_ELIGIBILITY_RECHECK,T4_done,SELECTED_NEXT,Prompt_20 documentary
+2,T6,CONTROLLED_DATASET_ACQUISITION,T5,queued,authorization required
+3,GRAPH_ACQUISITION_OR_REBASE,T6,queued,when applicable
+4,METRIC_IMPLEMENTATION_AND_CONFORMANCE,GRAPH_OR_PARALLEL,queued,after contracts
+5,T7,ADAPTER_IMPLEMENTATION,G6I_approved,queued,blocked until G6I
+6,T8,COMMON_PREFLIGHT,T7,queued,
+7,T9,BENCHMARK_EXECUTION,T8,queued,NOT_CURRENTLY_ELIGIBLE
+8,T10,CASE_STUDY,T9,queued,

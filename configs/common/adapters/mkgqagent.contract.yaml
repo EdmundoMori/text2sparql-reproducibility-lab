@@ -1,0 +1,76 @@
+contract_version: 0.1.0-documentary
+implementation_status: NOT_IMPLEMENTED
+benchmark_status: NOT_CURRENTLY_ELIGIBLE
+g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
+g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
+common_adapter_allowed: false
+negative_contract: false
+historical: false
+contract_id: AC_MKGQAGENT_Q_ONLY
+method_id: mkgqagent
+variant_id: mkgqagent_q_only_agentic
+upstream_repository: mkgqagent
+upstream_commit: ba0f2f78611a7ccacc8c985a97f6008ef7ee6a6
+license_status: LICENSE_NOT_CONFIRMED
+information_access_track: IA_Q_ONLY
+execution_style: ES_AGENTIC_MULTI_CALL
+adaptation_regime: AR_ZERO_SHOT
+model_control_regime: MC_NATIVE_BACKBONE
+direct_comparison_group: q_only_e2e
+dataset_views:
+- QALD9_PLUS_EN_DBPEDIA
+contract_status: CONTRACT_BLOCKED_LEGAL
+native_surface:
+  type: http_get
+  path: /api
+preparation_contract: {}
+training_contract:
+  required: false
+inference_contract:
+  internal:
+  - LLM
+  - experience_pool
+  - EL
+  - endpoint_feedback
+input_mapping:
+  allowed:
+  - question
+  - dataset_id
+allowed_information:
+- question
+prohibited_information:
+- gold
+- oracle
+artifact_requirements:
+- name: langchain_hub_prompt
+  preacquire: true
+configuration_freeze: {}
+network_contract:
+  classes:
+  - METHOD_INTERNAL_LLM_CALL
+  - METHOD_INTERNAL_ENDPOINT_FEEDBACK
+  - METHOD_INTERNAL_LINKER_CALL
+secret_contract:
+  secret_names_only: true
+resource_contract:
+  memory_risk: dual_agents_on_import
+side_effect_contract: {}
+output_mapping:
+  final_sparql: json.query
+  fallback: ADAPTER_FALLBACK_OUTPUT
+candidate_selection_policy: {}
+failure_mapping: {}
+observability:
+  linking: NOT_OBSERVABLE
+determinism:
+  class: STOCHASTIC_UNSEEDED_PROVIDER
+evidence_contract: {}
+claim_boundary: legal_blocked
+legal_gate: CONTRACT_BLOCKED_LEGAL
+runtime_gate: RUNTIME_GATE_PENDING
+prerequisites:
+- T5_legal
+stop_conditions:
+- LICENSE_NOT_CONFIRMED
+evidence_paths:
+- docs/protocols/common/adapters/20260722T095602Z/MKGQAGENT_ADAPTER_CONTRACT.md

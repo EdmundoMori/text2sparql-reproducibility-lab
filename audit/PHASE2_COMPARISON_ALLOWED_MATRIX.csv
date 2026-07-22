@@ -1,11 +1,17 @@
-comparison_id,left_track,right_track,verdict,notes,metric_contract_status,g5_documentary,g5_runtime
-Q_ONLY_vs_ORACLE,IA_Q_ONLY,IA_ORACLE_GROUNDING,DIRECT_COMPARISON_FORBIDDEN,oracle advantage,METRIC_CONTRACT_DEFINED,satisfied,pending
-Q_ONLY_vs_FIXED_EXT,IA_Q_ONLY,IA_FIXED_EXTERNAL_GROUNDING,DIRECT_COMPARISON_FORBIDDEN,external grounding,METRIC_CONTRACT_DEFINED,satisfied,pending
-DOMAIN_vs_DBPEDIA,IA_DOMAIN_NATIVE,IA_Q_ONLY|IA_SCHEMA_COMMON,DIRECT_COMPARISON_FORBIDDEN,KG mismatch,METRIC_CONTRACT_DEFINED,satisfied,pending
-SCHEMA_vs_SCHEMA,IA_SCHEMA_COMMON,IA_SCHEMA_COMMON,DIRECT_COMPARISON_ALLOWED,if all other conditions match,METRIC_CONTRACT_DEFINED,satisfied,pending
-Q_ONLY_vs_Q_ONLY,IA_Q_ONLY,IA_Q_ONLY,DIRECT_COMPARISON_ALLOWED,if all other conditions match,METRIC_CONTRACT_DEFINED,satisfied,pending
-ORACLE_vs_ORACLE,IA_ORACLE_GROUNDING,IA_ORACLE_GROUNDING,DIRECT_COMPARISON_ALLOWED,same oracle contract,METRIC_CONTRACT_DEFINED,satisfied,pending
-FIXED_vs_FIXED,IA_FIXED_EXTERNAL_GROUNDING,IA_FIXED_EXTERNAL_GROUNDING,DIRECT_COMPARISON_ALLOWED,same frozen linker,METRIC_CONTRACT_DEFINED,satisfied,pending
-CROSS_TRACK_DESC,ANY,OTHER_IA,DESCRIPTIVE_CROSS_TRACK_ONLY,no ranking,METRIC_CONTRACT_DEFINED,satisfied,pending
-MC_NATIVE_vs_CONTROLLED,MC_NATIVE_BACKBONE,MC_CONTROLLED_BACKBONE,REPORT_SEPARATELY,not causal method-only,METRIC_CONTRACT_DEFINED,satisfied,pending
-SGPT_Q_vs_SGPT_QK,sgpt_q,sgpt_qk,DIRECT_COMPARISON_FORBIDDEN,different IA tracks,METRIC_CONTRACT_DEFINED,satisfied,pending
+comparison_pair,allowed,condition,notes,metric_contract_status,g5_documentary,g5_runtime
+:,,oracle advantage,oracle advantage,METRIC_CONTRACT_DEFINED,satisfied,pending
+:,,external grounding,external grounding,METRIC_CONTRACT_DEFINED,satisfied,pending
+:,,KG mismatch,KG mismatch,METRIC_CONTRACT_DEFINED,satisfied,pending
+:,,if all other conditions match,if all other conditions match,METRIC_CONTRACT_DEFINED,satisfied,pending
+:,,if all other conditions match,if all other conditions match,METRIC_CONTRACT_DEFINED,satisfied,pending
+:,,same oracle contract,same oracle contract,METRIC_CONTRACT_DEFINED,satisfied,pending
+:,,same frozen linker,same frozen linker,METRIC_CONTRACT_DEFINED,satisfied,pending
+:,,no ranking,no ranking,METRIC_CONTRACT_DEFINED,satisfied,pending
+:,,not causal method-only,not causal method-only,METRIC_CONTRACT_DEFINED,satisfied,pending
+:,,different IA tracks,different IA tracks,METRIC_CONTRACT_DEFINED,satisfied,pending
+sparql_llm_generate_only_vs_internal_feedback,false_direct_mix,report_as_separate_profiles,Prompt19,METRIC_CONTRACT_DEFINED,satisfied,pending
+firesparql_raw_vs_cleaned,conditional_separate_variants,distinct_variant_ids,Prompt19,METRIC_CONTRACT_DEFINED,satisfied,pending
+cot_native_vs_frozen_grounding,false_as_same,distinct_variants,Prompt19,METRIC_CONTRACT_DEFINED,satisfied,pending
+sgpt_q_vs_sgpt_qk,false,FORBIDDEN,Prompt16/19,METRIC_CONTRACT_DEFINED,satisfied,pending
+rdfconfig_domain_vs_qald_common,false,FORBIDDEN,Prompt19,METRIC_CONTRACT_DEFINED,satisfied,pending
+historical_outputs_vs_common_runs,false,FORBIDDEN,Prompt19,METRIC_CONTRACT_DEFINED,satisfied,pending

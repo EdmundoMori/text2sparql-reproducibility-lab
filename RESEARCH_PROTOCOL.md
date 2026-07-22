@@ -281,3 +281,22 @@ Puede avanzar T3 (contrato métricas/oracle documental). **No** implica adquisic
 | PE8 | `not_started` |
 
 Evidencia preparatoria: metric/oracle/statistical contracts documented; conformance vectors defined not executed. Sin resultados experimentales.
+
+
+---
+
+## Addendum Prompt 19 — Adapter contracts
+
+**Fecha:** 2026-07-22 · **RUN_ID:** `20260722T095602Z`  
+**Gate:** `ADAPTER_CONTRACTS_DOCUMENTED_READY_FOR_LEGAL_ELIGIBILITY_RECHECK`
+
+### PE5–PE8
+
+| PE | Estado |
+|---|---|
+| PE5 | `protocol_metric_and_adapter_contracts_defined_pending_implementation_and_benchmark` |
+| PE6 | `diagnostic_metric_and_adapter_observability_contracts_defined_pending_execution` |
+| PE7 | `not_started` |
+| PE8 | `not_started` |
+
+Sin implementación ni ejecución de adapters.

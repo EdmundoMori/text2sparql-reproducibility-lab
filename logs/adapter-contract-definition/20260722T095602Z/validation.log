@@ -1,0 +1,12 @@
+PASS
+run_id=20260722T095602Z
+vector_count=42
+vectors_executed=false
+g6d=documented
+g6i=pending
+adapters_false=true
+benchmark_not_eligible=true
+exactly_one_next=Prompt_20
+rdfconfig_dual_resolved=true
+cost_usd=0.00
+upstream_intact=true

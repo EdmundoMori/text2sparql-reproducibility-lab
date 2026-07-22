@@ -1,0 +1,244 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.lab/adapter-contract",
+  "title": "AdapterContract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "contract_version",
+    "contract_status",
+    "method_id",
+    "variant_id",
+    "upstream_repository",
+    "upstream_commit",
+    "license_status",
+    "information_access_track",
+    "execution_style",
+    "adaptation_regime",
+    "model_control_regime",
+    "direct_comparison_group",
+    "dataset_views",
+    "native_surface",
+    "preparation_contract",
+    "training_contract",
+    "inference_contract",
+    "input_mapping",
+    "allowed_information",
+    "prohibited_information",
+    "artifact_requirements",
+    "configuration_freeze",
+    "network_contract",
+    "secret_contract",
+    "resource_contract",
+    "side_effect_contract",
+    "output_mapping",
+    "candidate_selection_policy",
+    "failure_mapping",
+    "observability",
+    "determinism",
+    "evidence_contract",
+    "claim_boundary",
+    "legal_gate",
+    "runtime_gate",
+    "g6d_status",
+    "g6i_status",
+    "implementation_status",
+    "benchmark_status",
+    "prerequisites",
+    "stop_conditions",
+    "evidence_paths"
+  ],
+  "properties": {
+    "contract_id": {
+      "type": "string"
+    },
+    "contract_version": {
+      "type": "string"
+    },
+    "contract_status": {
+      "type": "string",
+      "enum": [
+        "ADAPTER_CONTRACT_DEFINED",
+        "ADAPTER_NEGATIVE_CONTRACT_DEFINED",
+        "CONTRACT_BLOCKED_LEGAL",
+        "CONTRACT_BLOCKED_POLICY",
+        "CONTRACT_BLOCKED_RUNTIME",
+        "CONTRACT_BLOCKED_MISSING_ARTIFACT",
+        "CONTRACT_BLOCKED_MISSING_NATIVE_SURFACE",
+        "CONTRACT_DOMAIN_NATIVE_ONLY",
+        "CONTRACT_HISTORICAL_ONLY"
+      ]
+    },
+    "method_id": {
+      "type": "string"
+    },
+    "variant_id": {
+      "type": "string"
+    },
+    "upstream_repository": {
+      "type": "string"
+    },
+    "upstream_commit": {
+      "type": "string"
+    },
+    "license_status": {
+      "type": "string"
+    },
+    "information_access_track": {
+      "type": "string",
+      "enum": [
+        "IA_Q_ONLY",
+        "IA_SCHEMA_COMMON",
+        "IA_ORACLE_GROUNDING",
+        "IA_FIXED_EXTERNAL_GROUNDING",
+        "IA_DOMAIN_NATIVE",
+        "IA_HISTORICAL"
+      ]
+    },
+    "execution_style": {
+      "type": "string"
+    },
+    "adaptation_regime": {
+      "type": "string"
+    },
+    "model_control_regime": {
+      "type": "string"
+    },
+    "direct_comparison_group": {
+      "type": "string"
+    },
+    "dataset_views": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "native_surface": {
+      "type": "object"
+    },
+    "preparation_contract": {
+      "type": "object"
+    },
+    "training_contract": {
+      "type": "object"
+    },
+    "inference_contract": {
+      "type": "object"
+    },
+    "input_mapping": {
+      "type": "object"
+    },
+    "allowed_information": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "prohibited_information": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "artifact_requirements": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "configuration_freeze": {
+      "type": "object"
+    },
+    "network_contract": {
+      "type": "object"
+    },
+    "secret_contract": {
+      "type": "object"
+    },
+    "resource_contract": {
+      "type": "object"
+    },
+    "side_effect_contract": {
+      "type": "object"
+    },
+    "output_mapping": {
+      "type": "object"
+    },
+    "candidate_selection_policy": {
+      "type": "object"
+    },
+    "failure_mapping": {
+      "type": "object"
+    },
+    "observability": {
+      "type": "object"
+    },
+    "determinism": {
+      "type": "object"
+    },
+    "evidence_contract": {
+      "type": "object"
+    },
+    "claim_boundary": {
+      "type": "string"
+    },
+    "legal_gate": {
+      "type": "string"
+    },
+    "runtime_gate": {
+      "type": "string"
+    },
+    "g6d_status": {
+      "type": "string",
+      "enum": [
+        "G6D_ADAPTER_CONTRACT_DOCUMENTED",
+        "pending",
+        "n_a"
+      ]
+    },
+    "g6i_status": {
+      "type": "string",
+      "enum": [
+        "G6I_IMPLEMENTATION_APPROVAL_PENDING",
+        "approved",
+        "n_a"
+      ]
+    },
+    "implementation_status": {
+      "type": "string",
+      "const": "NOT_IMPLEMENTED"
+    },
+    "benchmark_status": {
+      "type": "string",
+      "const": "NOT_CURRENTLY_ELIGIBLE"
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "stop_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "negative_contract": {
+      "type": "boolean"
+    },
+    "historical": {
+      "type": "boolean"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

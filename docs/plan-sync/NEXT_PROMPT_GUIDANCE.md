@@ -1,12 +1,12 @@
 # NEXT_PROMPT_GUIDANCE
 
 **Fecha:** 2026-07-22  
-**Tras:** Prompt 18 — metric/oracle/statistical contract
+**Tras:** Prompt 19 — adapter contracts
 
 ## Prompt recomendado (único)
 
-**Título:** Prompt 19 — Definición documental de contratos de adapters externos por track, variante y método elegible, ZERO_COST, sin implementar adapters ni ejecutar métodos.
+**Título:** Prompt 20 — Revalidación documental de licencias y gate de elegibilidad legal para adapters, datasets y artefactos de Fase 2, ZERO_COST, sin descargar ni implementar.
 
-**Acción:** T4 — TRACK_SPECIFIC_ADAPTER_CONTRACTS
+**Acción:** T5 — LEGAL_ELIGIBILITY_RECHECK
 
-**Restricciones:** ZERO_COST; sin implementar adapters; sin ejecutar métodos; conservar `common_adapter_allowed=false`; G4 no satisfecho; G5 runtime pending.
+**Restricciones:** ZERO_COST; sin descargas; sin implementación; no habilitar `common_adapter_allowed`; G6I permanece pending.

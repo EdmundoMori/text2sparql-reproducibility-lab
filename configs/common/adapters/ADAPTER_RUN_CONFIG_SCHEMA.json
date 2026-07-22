@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.lab/adapter-run-config",
+  "title": "AdapterRunConfig",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol_version",
+    "contract_id",
+    "contract_version",
+    "method_id",
+    "variant_id",
+    "adapter_version",
+    "dataset_view",
+    "dry_run",
+    "test_seal_status",
+    "secret_names"
+  ],
+  "properties": {
+    "protocol_version": {
+      "type": "string"
+    },
+    "contract_id": {
+      "type": "string"
+    },
+    "contract_version": {
+      "type": "string"
+    },
+    "method_id": {
+      "type": "string"
+    },
+    "variant_id": {
+      "type": "string"
+    },
+    "adapter_version": {
+      "type": "string"
+    },
+    "dataset_view": {
+      "type": "string"
+    },
+    "graph_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "graph_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "model_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "model_revision": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "prompt_hash": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "schema_bundle_hash": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "oracle_manifest_hash": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "external_grounding_hash": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "seed": {},
+    "temperature": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "max_tokens": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "retries": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "timeout": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "network_allowlist": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "artifact_manifest": {
+      "type": "object"
+    },
+    "secret_names": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "env var names only; never secret values"
+    },
+    "resource_limits": {
+      "type": "object"
+    },
+    "output_directory": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dry_run": {
+      "type": "boolean"
+    },
+    "test_seal_status": {
+      "type": "string"
+    }
+  }
+}

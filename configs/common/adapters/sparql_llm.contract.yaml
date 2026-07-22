@@ -1,0 +1,98 @@
+contract_version: 0.1.0-documentary
+implementation_status: NOT_IMPLEMENTED
+benchmark_status: NOT_CURRENTLY_ELIGIBLE
+g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
+g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
+common_adapter_allowed: false
+negative_contract: false
+historical: false
+contract_id: AC_SPARQL_LLM_SCHEMA_COMMON_NATIVE
+method_id: sparql_llm
+variant_id: sparql_llm_schema_common_native
+upstream_repository: https://github.com/sib-swiss/sparql-llm
+upstream_commit: 3748730e3bd2df2595280b918269fdaadb9fc0c3
+license_status: CONFIRMED_LICENSE_FILE_MIT
+information_access_track: IA_SCHEMA_COMMON
+execution_style: ES_SCHEMA_RAG_VALIDATION
+adaptation_regime: AR_ZERO_SHOT
+model_control_regime: MC_NATIVE_BACKBONE
+direct_comparison_group: schema_common_e2e_generate_only
+dataset_views:
+- QALD9_PLUS_EN_DBPEDIA
+contract_status: ADAPTER_CONTRACT_DEFINED
+native_surface:
+  type: http_post
+  path: /chat
+  enable_sparql_execution: false
+preparation_contract:
+  schema_index: prebuilt_hashed
+  auto_download: false
+training_contract:
+  required: false
+inference_contract:
+  surface: POST /chat
+  final_sparql: single_explicit
+input_mapping:
+  allowed:
+  - question
+  - schema_bundle_ref
+  - model
+  prohibited:
+  - oracle_grounding_ref
+  - gold_query_ref
+  - gold_answer_ref
+allowed_information:
+- question
+- schema_bundle
+prohibited_information:
+- gold
+- oracle
+- test
+artifact_requirements:
+- name: schema_index
+  hash_required: true
+configuration_freeze:
+  model_revision: required
+  prompt_hash: required
+network_contract:
+  classes:
+  - METHOD_INTERNAL_LLM_CALL
+  evaluator_endpoint: false
+  paid_blocked: true
+secret_contract:
+  secret_names_only: true
+  values_forbidden_in_logs: true
+resource_contract:
+  notes: online BLOCKED_POLICY ZERO_COST
+side_effect_contract:
+  workdir_only: true
+  upstream_readonly: true
+output_mapping:
+  final_sparql: required
+  raw: required
+candidate_selection_policy:
+  best_of_gold: false
+failure_mapping:
+  ref: PHASE2_ADAPTER_FAILURE_MAPPING_MATRIX.csv
+observability:
+  llm_calls: required
+  NOT_OBSERVABLE_allowed: true
+determinism:
+  class: STOCHASTIC_UNSEEDED_PROVIDER
+evidence_contract:
+  hashes_required: true
+claim_boundary: not_IA_Q_ONLY; online deferred
+legal_gate: LEGAL_VERIFIED_MIT
+runtime_gate: RUNTIME_GATE_PENDING
+prerequisites:
+- G4
+- G5_runtime
+- schema_bundle
+- model_auth_if_online
+stop_conditions:
+- ZERO_COST_blocks_paid
+- undeclared_network
+evidence_paths:
+- docs/protocols/common/adapters/20260722T095602Z/SPARQL_LLM_ADAPTER_CONTRACT.md
+notes: secondary profile sparql_llm_schema_common_internal_feedback documented separately
+  in same md
