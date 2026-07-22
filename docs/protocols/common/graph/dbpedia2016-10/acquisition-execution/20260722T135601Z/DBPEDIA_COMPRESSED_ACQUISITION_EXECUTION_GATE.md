@@ -38,4 +38,4 @@ G4 satisfied · deployment authorized · Virtuoso ready · SPARQL · gold · ada
 
 **`PREPARE_DBPEDIA_2016_10_DEPLOYMENT_RESOURCE_AND_AUTHORIZATION_PACKAGE`** — documentary / human resource gate (no executable acquisition reuse).
 
-ARTIFACT_COMMIT: *(post-commit)*
+ARTIFACT_COMMIT: `d3fde8b40338b2801ef287812de710f2dd9e48fb`

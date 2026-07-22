@@ -58,6 +58,6 @@ No reutilizar auth de adquisición. No Prompt 24B re-ejecutable.
 | Campo | Valor |
 |---|---|
 | commit inicial | `2bdf009f176fd7b0efe5396afdd078ea4516d7fd` |
-| ARTIFACT_COMMIT | *(post-commit)* |
+| ARTIFACT_COMMIT | `d3fde8b40338b2801ef287812de710f2dd9e48fb` |
 | publication metadata commit | *(post-commit tip; max 2 commits)* |
 | push | pending |
