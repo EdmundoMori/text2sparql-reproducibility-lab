@@ -60,6 +60,6 @@ No prompt Cursor ejecutable. Reservado: **Prompt 24B**.
 | Campo | Valor |
 |---|---|
 | commit inicial | `db2debaec4063b4145a3c83f533dc31a2f4ae9a9` |
-| ARTIFACT_COMMIT | *(post-commit)* |
+| ARTIFACT_COMMIT | `057438982cf40561bd0b18dafe03ca976243f415` |
 | publication metadata commit | *(post-push tip; max 2 commits)* |
 | push | pending |

@@ -37,3 +37,5 @@
 **`HUMAN_DBPEDIA_2016_10_GRAPH_ACQUISITION_AUTHORIZATION`** — HUMAN_GATE_REQUIRED  
 
 Reserved: Prompt 24B (compressed-only acquisition after approval). Not executable now.
+
+ARTIFACT_COMMIT: `057438982cf40561bd0b18dafe03ca976243f415`
