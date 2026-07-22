@@ -1,26 +1,12 @@
 # NEXT_PROMPT_GUIDANCE
 
 **Fecha:** 2026-07-22  
-**Tras:** Prompt 21A — QALD acquisition authorization package (`20260722T105246Z`)
+**Tras:** Prompt 21B — QALD T6B acquisition (`20260722T111153Z`) · auth `AUTH_QALD9PLUS_T6B_20260722T105246Z_EMO_01` CONSUMED
 
-## Estado
+## Prompt recomendado (único)
 
-**HUMAN AUTHORIZATION REQUIRED**
+**Título:** Prompt 22 — Clarificación documental de licencia/alcance de LC-QuAD 2.0 o representación alternativa, ZERO_COST, sin descargar payloads.
 
-- No hay prompt ejecutable para Cursor.
-- No ejecutar Prompt 21B.
-- No usar `GO_NEXT_ZERO_COST` para T6B automático.
+**Acción:** T6C — LCQUAD2_LICENSE_CLARIFICATION_OR_ALTERNATIVE
 
-## Acción humana
-
-Completar y firmar (fuera de Cursor):
-
-`docs/protocols/common/acquisition/qald9plus/20260722T105246Z/HUMAN_QALD9PLUS_ACQUISITION_APPROVAL.md`
-
-Estado actual del formulario: **UNSIGNED**.
-
-## Prompt reservado (NO autorizado)
-
-**Título:** Prompt 21B — Adquisición controlada y validación de QALD-9 Plus EN/DBpedia desde el pin fijado, ZERO_COST, sin grafos, adapters ni benchmark.
-
-Solo tras autorización humana explícita.
+**Restricciones:** ZERO_COST; documental; sin descarga LC-QuAD; sin grafos; sin adapters; G4 sigue pendiente (acción de grafo en cola, no seleccionada ahora).

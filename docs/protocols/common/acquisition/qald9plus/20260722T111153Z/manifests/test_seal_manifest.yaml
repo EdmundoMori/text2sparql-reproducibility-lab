@@ -1,0 +1,18 @@
+seal_status: SEALED
+test_file_id: QALD9PLUS_TEST_DBPEDIA_JSON
+sealed_path: workdir/datasets/qald9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/sealed_test/qald_9_plus_test_dbpedia.json
+expected_size_bytes: 1424744
+expected_git_blob_oid: 06cc04be82be7c807631a419670fb011a9565ec1
+local_sha256: 6d3367b1231adb650f9a39ec4d8112d93a3726cc1b00c39490f5a6f23842c7d6
+acquisition_timestamp: '2026-07-22T11:12:45.013336+00:00'
+authorization_id: AUTH_QALD9PLUS_T6B_20260722T105246Z_EMO_01
+run_id: 20260722T111153Z
+leakage_status: NOT_INSPECTED_CONTENT
+test_use_gate: BLOCKED_UNTIL_LATER_PHASE_GATES
+prohibited:
+- print_questions
+- print_sparql_gold
+- few_shot
+- prompts
+- adapters
+- queries

@@ -31,10 +31,11 @@ files:
   expected_git_blob_oid: cce48cbdf2af7f5e8ce59308dda667de7fc209b8
   git_object_algorithm: sha1_git_blob
   published_checksum_status: PUBLISHED_SHA256_NOT_AVAILABLE
-  expected_local_sha256: LOCAL_SHA256_PENDING_ACQUISITION
+  expected_local_sha256: 95e1644fbcbfaf1614adc866e86857a0eac99e4905a595b8bcf1775c6bc7d2e8
   future_destination: workdir/datasets/qald9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/raw/train/qald_9_plus_train_dbpedia.json
   test_seal_class: NOT_APPLICABLE_TRAIN
-  acquisition_status: NOT_ACQUIRED
+  acquisition_status: ACQUIRED_VALIDATED
+  local_sha256_status: COMPUTED
 - file_id: QALD9PLUS_TEST_DBPEDIA_JSON
   role: test_payload
   repository: Perevalov/qald_9_plus
@@ -46,10 +47,11 @@ files:
   expected_git_blob_oid: 06cc04be82be7c807631a419670fb011a9565ec1
   git_object_algorithm: sha1_git_blob
   published_checksum_status: PUBLISHED_SHA256_NOT_AVAILABLE
-  expected_local_sha256: LOCAL_SHA256_PENDING_ACQUISITION
+  expected_local_sha256: 6d3367b1231adb650f9a39ec4d8112d93a3726cc1b00c39490f5a6f23842c7d6
   future_destination: workdir/datasets/qald9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/sealed_test/qald_9_plus_test_dbpedia.json
   test_seal_class: SEALED_TEST
-  acquisition_status: NOT_ACQUIRED
+  acquisition_status: ACQUIRED_VALIDATED
+  local_sha256_status: COMPUTED
 - file_id: QALD9PLUS_LICENSE
   role: license
   repository: Perevalov/qald_9_plus
@@ -64,7 +66,8 @@ files:
   expected_local_sha256: 7e7170e3cebf88a9f60c7b8421418323c09304da1af4d5e90f4da1dc1c8a2661
   future_destination: workdir/datasets/qald9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/legal/LICENSE
   test_seal_class: NOT_APPLICABLE
-  acquisition_status: NOT_ACQUIRED
+  acquisition_status: ACQUIRED_VALIDATED
+  local_sha256_status: COMPUTED
 - file_id: QALD9PLUS_CITATION_CFF
   role: citation
   repository: Perevalov/qald_9_plus
@@ -79,4 +82,7 @@ files:
   expected_local_sha256: 40c2e632613eea4599d7d6742b935b5b207351c31b4026e729e8b8121fc31887
   future_destination: workdir/datasets/qald9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/legal/CITATION.cff
   test_seal_class: NOT_APPLICABLE
-  acquisition_status: NOT_ACQUIRED
+  acquisition_status: ACQUIRED_VALIDATED
+  local_sha256_status: COMPUTED
+acquisition_status: ACQUIRED_VALIDATED
+execution_run_id: 20260722T111153Z

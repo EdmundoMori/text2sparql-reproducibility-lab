@@ -1,5 +1,5 @@
 manifest_id: QALD9PLUS_ATTRIBUTION_MANIFEST_DRAFT
-status: DRAFT_NOT_APPLIED
+status: APPLIED_AT_ACQUISITION
 artifact_id: QALD9_PLUS_EN_DBPEDIA
 artifact_type: dataset
 title: 'QALD-9-plus: A Multilingual Dataset for Question Answering over DBpedia and Wikidata Translated by Native Speakers'
@@ -41,3 +41,7 @@ evidence_hashes:
   citation_sha256: 40c2e632613eea4599d7d6742b935b5b207351c31b4026e729e8b8121fc31887
   commit_tree_oid: 7159958810958ff185187cf603e2c4a997dc2df9
 generated_at: 20260722T105246Z
+authorization_id: AUTH_QALD9PLUS_T6B_20260722T105246Z_EMO_01
+execution_run_id: 20260722T111153Z
+included_license_path: workdir/datasets/qald9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/legal/LICENSE
+included_citation_path: workdir/datasets/qald9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/legal/CITATION.cff

@@ -1,0 +1,5 @@
+# T6B execution RUN_ID=20260722T111153Z AUTH=AUTH_QALD9PLUS_T6B_20260722T105246Z_EMO_01
+started=2026-07-22T11:12:41.871002+00:00
+free_disk_bytes=984795377664 required>=67108864
+bytes_received_total=7815874
+download_phase=PASS reason=None

@@ -1,0 +1,44 @@
+{
+  "train": {
+    "train_top_level_keys": [
+      "questions"
+    ],
+    "train_item_field_names": [
+      "answers",
+      "id",
+      "query",
+      "question"
+    ],
+    "train_nested_field_names": [
+      "language",
+      "sparql",
+      "string"
+    ]
+  },
+  "test": {
+    "test_top_level_keys": [
+      "questions"
+    ],
+    "test_item_field_names": [
+      "answers",
+      "id",
+      "query",
+      "question"
+    ],
+    "test_nested_field_names": [
+      "language",
+      "sparql",
+      "string"
+    ]
+  },
+  "counts": {
+    "train_record_count": 408,
+    "test_record_count": 150,
+    "train_expected": 408,
+    "test_expected": 150,
+    "train_match": true,
+    "test_match": true,
+    "status": "COUNTS_MATCH"
+  },
+  "note": "field_names_only_no_payload_content"
+}

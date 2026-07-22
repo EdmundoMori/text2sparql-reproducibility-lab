@@ -1,0 +1,9 @@
+order,action_id,title,depends_on,status,notes
+1,T6C,LCQUAD2_LICENSE_CLARIFICATION_OR_ALTERNATIVE,T6B_done,SELECTED_NEXT,Prompt_22 documentary; HOLD remains until clarified
+2,GRAPH_ACQUISITION_OR_REBASE_DECISION,Graph pin or rebase,T6B_done,queued,Required for G4
+3,METRIC_IMPLEMENTATION_AND_CONFORMANCE,Metric runtime+conformance,G4_or_parallel,queued,
+4,G6I_G7_ADAPTER_IMPLEMENTATION_DECISION,G6I approval,legal+G4+G5,queued,
+5,ADAPTER_IMPLEMENTATION,Implement adapters,G6I,queued,
+6,COMMON_PREFLIGHT,Preflight,adapters,queued,
+7,BENCHMARK,Common benchmark,preflight,queued,NOT_CURRENTLY_ELIGIBLE
+8,CASE_STUDY,Case study,benchmark,queued,

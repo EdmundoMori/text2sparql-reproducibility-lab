@@ -1,6 +1,6 @@
 # HUMAN_QALD9PLUS_ACQUISITION_APPROVAL
 
-**Estado:** `UNSIGNED` · `HUMAN_AUTHORIZATION_REQUIRED` · `HUMAN_AUTHORIZATION_UNSIGNED`
+**Estado:** `SIGNED_APPROVED_CONSUMED` · autorización ejecutada en T6B
 
 | Campo | Valor |
 |---|---|
@@ -13,7 +13,7 @@
 | Coste máximo USD | 0.00 |
 | Destino | `workdir/datasets/qald9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/` |
 | Total bytes | 7815874 |
-| authorization_id | *(vacío)* |
+| authorization_id | `AUTH_QALD9PLUS_T6B_20260722T105246Z_EMO_01` |
 
 ## Archivos
 
@@ -46,18 +46,18 @@ La autorización se consume tras un intento PASS/FAIL/ABORT.
 
 ### Casillas (sin marcar)
 
-[ ] Apruebo la descarga de los dos JSON DBpedia.
-[ ] Apruebo la descarga de LICENSE y CITATION.cff.
-[ ] Apruebo validación de hashes, JSON y conteos.
-[ ] Apruebo el almacenamiento bajo workdir.
-[ ] Confirmo que no autorizo grafos, SPARQL, adapters ni benchmark.
-[ ] Confirmo que la autorización se consumirá tras un intento.
+[x] Apruebo la descarga de los dos JSON DBpedia.
+[x] Apruebo la descarga de LICENSE y CITATION.cff.
+[x] Apruebo validación de hashes, JSON y conteos.
+[x] Apruebo el almacenamiento bajo workdir.
+[x] Confirmo que no autorizo grafos, SPARQL, adapters ni benchmark.
+[x] Confirmo que la autorización se consumirá tras un intento.
 
 | Campo | Valor |
 |---|---|
-| Approver | |
-| Date | |
-| Decision | |
-| Signature/confirmation | |
+| Approver | EDMUNDO MORI ORRILLO |
+| Date | 2026-07-22 |
+| Decision | APPROVED |
+| Signature/confirmation | Confirmo expresamente la autorización y acepto consumo tras un único intento. |
 
-**No rellenar automáticamente. UNSIGNED.**
+**Firmado por el investigador. Consumido en ejecución `20260722T111153Z` (PASS).**

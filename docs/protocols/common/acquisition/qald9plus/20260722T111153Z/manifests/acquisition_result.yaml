@@ -1,0 +1,95 @@
+acquisition_scope_id: QALD9PLUS_EN_DBPEDIA_T6B
+authorization_id: AUTH_QALD9PLUS_T6B_20260722T105246Z_EMO_01
+execution_run_id: 20260722T111153Z
+package_run_id: 20260722T105246Z
+source_repository: Perevalov/qald_9_plus
+source_pin: 8eb038a61e1bc09cbd21640aa667a1714f53cda4
+commit_tree_oid: 7159958810958ff185187cf603e2c4a997dc2df9
+overall_status: PASS
+abort_or_conditional_reason: null
+bytes_received_total: 7815874
+authorization_consumed: true
+cost_usd: 0.0
+files:
+- path: data/qald_9_plus_train_dbpedia.json
+  role: train
+  dest: workdir/datasets/qald9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/raw/train/qald_9_plus_train_dbpedia.json
+  size: 6371289
+  git_blob_oid: cce48cbdf2af7f5e8ce59308dda667de7fc209b8
+  sha256: 95e1644fbcbfaf1614adc866e86857a0eac99e4905a595b8bcf1775c6bc7d2e8
+  status: VERIFIED
+  attempts: 1
+- path: data/qald_9_plus_test_dbpedia.json
+  role: test
+  dest: workdir/datasets/qald9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/sealed_test/qald_9_plus_test_dbpedia.json
+  size: 1424744
+  git_blob_oid: 06cc04be82be7c807631a419670fb011a9565ec1
+  sha256: 6d3367b1231adb650f9a39ec4d8112d93a3726cc1b00c39490f5a6f23842c7d6
+  status: VERIFIED
+  attempts: 1
+- path: LICENSE
+  role: license
+  dest: workdir/datasets/qald9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/legal/LICENSE
+  size: 18650
+  git_blob_oid: 2f244ac814036ecd9ba9f69782e89ce6b1dca9eb
+  sha256: 7e7170e3cebf88a9f60c7b8421418323c09304da1af4d5e90f4da1dc1c8a2661
+  status: VERIFIED
+  attempts: 1
+- path: CITATION.cff
+  role: citation
+  dest: workdir/datasets/qald9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/legal/CITATION.cff
+  size: 1191
+  git_blob_oid: 4506fd12bdff0cbe14dd40a92a193c38cb747bc7
+  sha256: 40c2e632613eea4599d7d6742b935b5b207351c31b4026e729e8b8121fc31887
+  status: VERIFIED
+  attempts: 1
+counts:
+  train_record_count: 408
+  test_record_count: 150
+  train_expected: 408
+  test_expected: 150
+  train_match: true
+  test_match: true
+  status: COUNTS_MATCH
+json_validation:
+  train_ok: true
+  test_ok: true
+  train_error: null
+  test_error: null
+id_checks:
+  train_duplicate_ids: 0
+  test_duplicate_ids: 0
+  train_unique_ids: 408
+  test_unique_ids: 150
+  train_test_overlap_count: 150
+  train_ids_set_sha256: e3d04a489a1ee12c89fbe206934663622dfc2951aba5a1951f9fdcd4cfb4a5c4
+  test_ids_set_sha256: eb22f80fbb1ce840c6a87664b36f1bc0669b504ed28e3515123cfa7d592687b2
+  overlap_interpretation: LIKELY_INDEPENDENT_NUMERIC_ID_NAMESPACES_ACROSS_SPLITS
+  within_split_duplicates: none
+english_coverage:
+  train_en_count: 408
+  test_en_count: 150
+  note: count_only_no_content_printed
+dbpedia_sparql_coverage:
+  train_sparql_field_count: 408
+  test_sparql_field_count: 150
+  note: presence_count_only_no_sparql_printed
+test_seal_status: SEALED
+dataset_ready_claim: false
+acquisition_status: ACQUIRED_VALIDATED
+qualifiers:
+- FOUR_FILES_ACQUIRED_AND_VERIFIED
+- GIT_BLOB_OID_VERIFIED
+- LOCAL_SHA256_COMPUTED
+- JSON_VALIDATED
+- COUNTS_MATCH_408_150
+- ENGLISH_COVERAGE_COMPLETE
+- DBPEDIA_SPARQL_FIELD_COVERAGE_COMPLETE
+- TEST_SEALED
+- TRAIN_TEST_ID_NAMESPACE_OVERLAP_OBSERVED_LIKELY_INDEPENDENT_NUMBERING
+- AUTHORIZATION_CONSUMED
+- NO_GRAPH_NO_SPARQL_NO_ADAPTERS
+- PAYLOADS_NOT_VERSIONED
+benchmark_status: NOT_CURRENTLY_ELIGIBLE
+g4_status: G4_RUNTIME_PIN_NOT_SATISFIED
+authorization_status: CONSUMED_AFTER_PASS

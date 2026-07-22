@@ -2,16 +2,16 @@
 
 **Audiencia:** ChatGPT e investigador.  
 **Repo:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-**Última actualización:** 2026-07-22 (Prompt **21A** — QALD acquisition authorization package)  
-**Fase:** 1 **cerrada** · 2 **T6A package ready** (human authorization pending)  
-**SHA inicial 21A:** `7628a8c68c9070819dab8a221c71d54341ba62b6`  
-**Acquisition package RUN_ID:** `20260722T105246Z`  
+**Última actualización:** 2026-07-22 (Prompt **21B** — QALD controlled acquisition T6B)  
+**Fase:** 1 **cerrada** · 2 **QALD EN/DBpedia adquirido y validado** (grafo y LC-QuAD pendientes)  
+**SHA inicial 21B:** `4a790711453c8c3801a9f08915bedb710613b883`  
+**Execution RUN_ID:** `20260722T111153Z`  
+**authorization_id:** `AUTH_QALD9PLUS_T6B_20260722T105246Z_EMO_01` · **CONSUMED**
 
-> ZERO_COST. Gate `QALD9PLUS_ACQUISITION_PACKAGE_READY_FOR_HUMAN_AUTHORIZATION`.  
-> Scope: 4 archivos QALD EN/DBpedia · total **7815874** · pin `8eb038a61e1bc09cbd21640aa667a1714f53cda4` · tree `7159958810958ff185187cf603e2c4a997dc2df9`.  
-> Authorization **UNSIGNED** · acquisition **NOT_ACQUIRED** · form humano pendiente.  
-> G4 **no** · G5 runtime **pending** · G6D **sí** · G6I **pending**. Adapters **false**. Benchmark **no**.  
-> Siguiente: **decisión humana** (no Cursor prompt ejecutable). Objetivo largo plazo intacto.
+> ZERO_COST. Gate `QALD9PLUS_CONTROLLED_ACQUISITION_PASS_VALIDATED`.  
+> 4 archivos verificados · total 7815874 · test SEALED · payloads en workdir only.  
+> G4 **no** · G5 runtime **pending** · G6I **pending**. Adapters **false**. Benchmark **no**.  
+> Siguiente: **Prompt 22 / T6C** (LC-QuAD license clarification). Objetivo largo plazo intacto.
 
 ---
 
@@ -21,21 +21,17 @@ reproducción nativa → evaluación común → caso de estudio → errores → 
 
 ---
 
-## 2. Prompt 21A — resumen
+## 2. Prompt 21B — resumen
 
 | Campo | Valor |
 |---|---|
-| RUN_ID | `20260722T105246Z` |
-| Gate | **QALD9PLUS_ACQUISITION_PACKAGE_READY_FOR_HUMAN_AUTHORIZATION** |
-| Source pin | `8eb038a61e1bc09cbd21640aa667a1714f53cda4` |
-| Tree OID | `7159958810958ff185187cf603e2c4a997dc2df9` |
-| Files | train/test DBpedia JSON + LICENSE + CITATION.cff |
-| Total bytes | 7815874 |
-| Attribution | DRAFT_NOT_APPLIED |
-| Test seal | PLAN_DEFINED (not sealed) |
-| Authorization | UNSIGNED |
-| Acquisition | NOT_ACQUIRED |
-| Coste | 0.00 · no download · no T6B |
+| RUN_ID | `20260722T111153Z` |
+| Auth | `AUTH_QALD9PLUS_T6B_20260722T105246Z_EMO_01` CONSUMED |
+| Gate | **QALD9PLUS_CONTROLLED_ACQUISITION_PASS_VALIDATED** |
+| Counts | train 408 / test 150 |
+| Test seal | SEALED |
+| Graph | still pending |
+| Coste | 0.00 |
 
 ### PE5–PE8
 
@@ -48,34 +44,29 @@ reproducción nativa → evaluación común → caso de estudio → errores → 
 
 ---
 
-## 3. Metadata Prompt 20 (reconciliada)
+## 3. Metadata Prompt 21A (reconciliada)
 
 | Campo | SHA |
 |---|---|
-| ARTIFACT_COMMIT | `127362e3d706a668f528a54371f0ab1bdb6cb8cb` |
-| publication metadata commit | `7628a8c68c9070819dab8a221c71d54341ba62b6` |
-| remote tip final post-20 | `7628a8c68c9070819dab8a221c71d54341ba62b6` |
+| ARTIFACT_COMMIT | `2a2e6610d6f7ddd2b087a28eac856316196061a8` |
+| publication metadata commit | `4a790711453c8c3801a9f08915bedb710613b883` |
+| remote tip final post-21A | `4a790711453c8c3801a9f08915bedb710613b883` |
 
 ---
 
-## 4. Siguiente paso (humano; único)
+## 4. Siguiente prompt (único)
 
-**HUMAN_QALD9PLUS_ACQUISITION_AUTHORIZATION**
+**Prompt 22 — Clarificación documental de licencia/alcance de LC-QuAD 2.0 o representación alternativa, ZERO_COST, sin descargar payloads.**
 
-Formulario UNSIGNED: `docs/protocols/common/acquisition/qald9plus/20260722T105246Z/HUMAN_QALD9PLUS_ACQUISITION_APPROVAL.md`
-
-**No** hay Prompt Cursor ejecutable hasta decisión humana.  
-Prompt 21B queda **reservado / no autorizado**.
-
-Cola: `audit/PHASE2_POST_T6A_QUEUE.csv`.
+Acción: **T6C**. **No ejecutado en 21B.**
 
 ---
 
-## 5. Registro Prompt 21A
+## 5. Registro Prompt 21B
 
 | Campo | Valor |
 |---|---|
-| commit inicial | `7628a8c68c9070819dab8a221c71d54341ba62b6` |
-| ARTIFACT_COMMIT | `2a2e6610d6f7ddd2b087a28eac856316196061a8` |
+| commit inicial | `4a790711453c8c3801a9f08915bedb710613b883` |
+| ARTIFACT_COMMIT | PLACEHOLDER_ARTIFACT |
 | publication metadata commit | *(post-push tip; max 2 commits)* |
 | push | pending |

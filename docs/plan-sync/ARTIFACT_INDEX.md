@@ -1,12 +1,16 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-22 (Prompt 21A)  
+**Última actualización:** 2026-07-22 (Prompt 21B)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
 
 | ID | Tema | Ruta | Cuándo leerlo |
 |---|---|---|---|
+| P21B-GATE | QALD T6B execution gate | `docs/protocols/common/acquisition/qald9plus/20260722T111153Z/QALD9PLUS_ACQUISITION_EXECUTION_GATE.md` | Tras T6B |
+| P21B-RPT | Acquisition execution report | `audit/PHASE2_QALD9PLUS_ACQUISITION_EXECUTION_REPORT.md` | Detalle T6B |
+| P21B-NEXT | Next after T6B | `audit/NEXT_AFTER_QALD9PLUS_ACQUISITION_EXECUTION_DECISION.md` | Siguiente |
+| P21B-Q | Post-T6B queue | `audit/PHASE2_POST_T6B_QUEUE.csv` | Cola |
 | P21A-GATE | QALD acquisition package gate | `docs/protocols/common/acquisition/qald9plus/20260722T105246Z/QALD9PLUS_ACQUISITION_PACKAGE_GATE.md` | Tras T6A |
 | P21A-FORM | Human approval UNSIGNED | `docs/protocols/common/acquisition/qald9plus/20260722T105246Z/HUMAN_QALD9PLUS_ACQUISITION_APPROVAL.md` | Auth humana |
 | P21A-RPT | Acquisition package report | `audit/PHASE2_QALD9PLUS_ACQUISITION_PACKAGE_REPORT.md` | Detalle T6A |

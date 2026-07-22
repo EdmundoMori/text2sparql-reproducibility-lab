@@ -1,0 +1,52 @@
+overall_status: PASS
+reason: null
+bytes_received_total: 7815874
+files_verified: 4
+counts:
+  train_record_count: 408
+  test_record_count: 150
+  train_expected: 408
+  test_expected: 150
+  train_match: true
+  test_match: true
+  status: COUNTS_MATCH
+json_validation:
+  train_ok: true
+  test_ok: true
+  train_error: null
+  test_error: null
+id_checks:
+  train_duplicate_ids: 0
+  test_duplicate_ids: 0
+  train_unique_ids: 408
+  test_unique_ids: 150
+  train_test_overlap_count: 150
+  train_ids_set_sha256: e3d04a489a1ee12c89fbe206934663622dfc2951aba5a1951f9fdcd4cfb4a5c4
+  test_ids_set_sha256: eb22f80fbb1ce840c6a87664b36f1bc0669b504ed28e3515123cfa7d592687b2
+english_coverage:
+  train_en_count: 408
+  test_en_count: 150
+  note: count_only_no_content_printed
+dbpedia_sparql_coverage:
+  train_sparql_field_count: 408
+  test_sparql_field_count: 150
+  note: presence_count_only_no_sparql_printed
+test_content_printed: false
+sparql_executed: false
+graph_downloaded: false
+cost_usd: 0.0
+authorization_consumed: true
+qualifiers:
+- FOUR_FILES_ACQUIRED_AND_VERIFIED
+- GIT_BLOB_OID_VERIFIED
+- LOCAL_SHA256_COMPUTED
+- JSON_VALIDATED
+- COUNTS_MATCH_408_150
+- ENGLISH_COVERAGE_COMPLETE
+- DBPEDIA_SPARQL_FIELD_COVERAGE_COMPLETE
+- TEST_SEALED
+- TRAIN_TEST_ID_NAMESPACE_OVERLAP_OBSERVED_LIKELY_INDEPENDENT_NUMBERING
+- AUTHORIZATION_CONSUMED
+- NO_GRAPH_NO_SPARQL_NO_ADAPTERS
+- PAYLOADS_NOT_VERSIONED
+id_overlap_note: LIKELY_INDEPENDENT_NUMERIC_ID_NAMESPACES_ACROSS_SPLITS

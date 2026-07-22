@@ -1,5 +1,5 @@
 acquisition_scope_id: QALD9PLUS_EN_DBPEDIA_T6B
-authorization_id: null
+authorization_id: AUTH_QALD9PLUS_T6B_20260722T105246Z_EMO_01
 package_run_id: 20260722T105246Z
 package_gate: QALD9PLUS_ACQUISITION_PACKAGE_READY_FOR_HUMAN_AUTHORIZATION
 source_repository: Perevalov/qald_9_plus
@@ -27,13 +27,16 @@ local_sha256: required_after_acquisition
 json_validation: required
 train_reported_count: 408
 test_reported_count: 150
-train_test_count_status: REPORTED_EXPECTATION_PENDING_PAYLOAD_VALIDATION
-test_seal: required
+train_test_count_status: COUNTS_VALIDATED_408_150
+test_seal: SEALED
 graph_dependency: separate_and_pending
-authorization_status: UNSIGNED
-acquisition_status: NOT_ACQUIRED
+authorization_status: CONSUMED_AFTER_PASS
+acquisition_status: ACQUIRED_VALIDATED
 classification: LAB_POLICY_CLASSIFICATION_BASED_ON_PUBLISHED_EVIDENCE
 cost_limit_usd: 0.0
 mirrors: DENY
 archives: DENY
 wikidata_files: OUT_OF_SCOPE
+execution_run_id: 20260722T111153Z
+execution_gate: QALD9PLUS_CONTROLLED_ACQUISITION_PASS_VALIDATED
+local_sha256_status: COMPUTED

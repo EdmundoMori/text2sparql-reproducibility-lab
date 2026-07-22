@@ -215,7 +215,7 @@ La creación de estos artefactos se realizará en fases posteriores solicitadas 
 **Fecha cierre Fase 1:** 2026-07-22  
 **Gate:** `PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION`  
 **Qualifier:** `RESIDUAL_METHOD_BLOCKERS_PRESERVED`  
-**phase1_status:** `closed` · **phase2_status:** `qald9plus_acquisition_package_ready_human_authorization_pending`  
+**phase1_status:** `closed` · **phase2_status:** `qald9plus_acquired_validated_human_auth_consumed`  
 **Adapters:** `common_adapter_allowed=false` (todos)  
 **Distribución (6 activos):** smoke_only×2 (sparql_llm, sgpt); blocked×3 (mkgqagent, rdfconfig_llm, cot_sparql); not_reproducible×1 (firesparql)  
 **TeBaQA:** `HISTORICAL_ONLY` (fuera del denominador)  
@@ -342,3 +342,13 @@ Sin descarga, implementación ni autorización de adquisición en Prompt 20.
 Evidencia preparatoria: qald_acquisition_package_documented · exact_file_scope_locked · attribution_manifest_drafted · test_seal_plan_defined · human_authorization_pending · no_assets_acquired.
 
 Authorization **UNSIGNED**. Acquisition **NOT_ACQUIRED**. T6B no ejecutado. Prompt 21B solo reservado.
+
+---
+
+## Addendum Prompt 21B — QALD controlled acquisition (T6B)
+
+**Fecha:** 2026-07-22 · **RUN_ID:** `20260722T111153Z`  
+**authorization_id:** `AUTH_QALD9PLUS_T6B_20260722T105246Z_EMO_01` · CONSUMED  
+**Gate:** `QALD9PLUS_CONTROLLED_ACQUISITION_PASS_VALIDATED`
+
+Payload QALD EN/DBpedia adquirido y validado en workdir únicamente. Test SEALED. Sin grafos, SPARQL, adapters ni benchmark. Autorización consumida tras PASS.

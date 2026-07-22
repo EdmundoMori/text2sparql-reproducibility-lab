@@ -3,18 +3,16 @@
 Laboratorio local de investigación en **Text-to-SPARQL** / KGQA orientado a auditoría, reproducibilidad nativa y, posteriormente, evaluación común de métodos publicados.
 
 
-## Estado actual (Prompt 21A)
+## Estado actual (Prompt 21B)
 
 | Campo | Valor |
 |---|---|
 | Fase 1 | **cerrada** |
-| Fase 2 | **T6A package ready** (`QALD9PLUS_ACQUISITION_PACKAGE_READY_FOR_HUMAN_AUTHORIZATION`) |
-| RUN_IDs | … · legal `20260722T102434Z` · acquisition package `20260722T105246Z` |
-| QALD scope | 4 archivos EN/DBpedia · pin `8eb038a61e1b…` · total 7815874 B · **NOT_ACQUIRED** |
-| Auth | **UNSIGNED** (human gate) |
-| G6D / G6I | documented / **pending** |
-| Adapters / benchmark | `common_adapter_allowed=false` / `NOT_CURRENTLY_ELIGIBLE` |
-| Siguiente | **HUMAN_QALD9PLUS_ACQUISITION_AUTHORIZATION** (no Cursor; 21B reservado) |
+| Fase 2 | **QALD EN/DBpedia adquirido** (`QALD9PLUS_CONTROLLED_ACQUISITION_PASS_VALIDATED`) |
+| Auth | `AUTH_QALD9PLUS_T6B_20260722T105246Z_EMO_01` **CONSUMED** |
+| Payload | workdir only · test SEALED · no versionado en Git |
+| G4 / adapters / benchmark | no / false / NOT_CURRENTLY_ELIGIBLE |
+| Siguiente | Prompt 22 / T6C — LC-QuAD license clarification |
 
 
 ## Documentos rectores
@@ -103,7 +101,7 @@ Pendiente de decisión explícita. Los métodos upstream conservan sus propias l
 **Fecha cierre Fase 1:** 2026-07-22  
 **Gate:** `PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION`  
 **Qualifier:** `RESIDUAL_METHOD_BLOCKERS_PRESERVED`  
-**phase1_status:** `closed` · **phase2_status:** `qald9plus_acquisition_package_ready_human_authorization_pending`  
+**phase1_status:** `closed` · **phase2_status:** `qald9plus_acquired_validated_human_auth_consumed`  
 **Adapters:** `common_adapter_allowed=false` (todos)  
 **Distribución (6 activos):** smoke_only×2 (sparql_llm, sgpt); blocked×3 (mkgqagent, rdfconfig_llm, cot_sparql); not_reproducible×1 (firesparql)  
 **TeBaQA:** `HISTORICAL_ONLY` (fuera del denominador)  

@@ -1,7 +1,7 @@
-schema_version: '0.18'
-updated_at: '2026-07-22T13:00:00+02:00'
-phase: phase2_qald9plus_acquisition_package_ready_human_authorization_pending
-audit_prompt: Prompt_21A_QALD9PLUS_ACQUISITION_AUTHORIZATION_PACKAGE
+schema_version: '0.19'
+updated_at: '2026-07-22T13:20:00+02:00'
+phase: phase2_qald9plus_acquired_validated_graph_and_lcquad_pending
+audit_prompt: Prompt_21B_QALD9PLUS_CONTROLLED_ACQUISITION_EXECUTION
 clones_performed: true
 evidence_closure_complete: true
 wave_a_static_audit_complete: true
@@ -1124,8 +1124,8 @@ phase1_status: closed
 phase1_final_gate: PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION
 phase1_closure_artifact: audit/PHASE1_FINAL_NATIVE_AUDIT_REPORT.md
 phase1_gate_qualifier: RESIDUAL_METHOD_BLOCKERS_PRESERVED
-phase2_status: qald9plus_acquisition_package_ready_human_authorization_pending
-current_phase: phase2_qald_acquisition_package
+phase2_status: qald9plus_acquired_validated_human_auth_consumed
+current_phase: phase2_post_t6b
 phase1_decision_artifact: docs/decisions/006_phase1_native_audit_closure_and_phase2_transition.md
 phase2_protocol_run_id: 20260722T083201Z
 phase2_protocol_artifact: docs/protocols/common/20260722T083201Z/
@@ -1166,7 +1166,7 @@ lcquad2_source_pin: 0a5f8f85b6f863c3b80f0fa02839e25d438af3ae
 lcquad2_dbpedia_view_status: LCQUAD2_DBPEDIA18_DEFINED
 lcquad2_wikidata_view_status: LCQUAD2_WIKIDATA_DEFINED
 dataset_license_status: QALD_CC_BY_4_0_FILE_VERIFIED__LCQUAD2_SCOPE_UNCLEAR
-dataset_payload_status: DATASET_PAYLOAD_NOT_ACQUIRED
+dataset_payload_status: QALD9PLUS_EN_DBPEDIA_ACQUIRED_VALIDATED_WORKDIR_ONLY
 graph_provenance_status: DOCUMENTED_GRAPH_SNAPSHOT_NOT_PUBLISHED
 graph_snapshot_status: GRAPH_SNAPSHOT_ACQUISITION_PENDING
 g4_status: G4_RUNTIME_PIN_NOT_SATISFIED
@@ -1175,8 +1175,8 @@ phase2_graph_pin_status: GRAPH_SNAPSHOT_PENDING
 phase2_metric_detail_status: METRIC_CONTRACT_DEFINED
 phase2_adapter_status: disabled_common_adapter_allowed_false
 phase2_benchmark_status: NOT_CURRENTLY_ELIGIBLE
-phase2_next_action: HUMAN_QALD9PLUS_ACQUISITION_AUTHORIZATION
-phase2_next_prompt: NONE_UNTIL_HUMAN_DECISION
+phase2_next_action: T6C_LCQUAD2_LICENSE_CLARIFICATION_OR_ALTERNATIVE
+phase2_next_prompt: Prompt_22
 pe5_status: protocol_metric_adapter_and_legal_contracts_defined_pending_assets_implementation_and_benchmark
 pe5_preparatory_evidence:
 - dataset_source_provenance_documented
@@ -1199,6 +1199,11 @@ pe5_preparatory_evidence:
 - attribution_manifest_drafted
 - test_seal_plan_defined
 - human_authorization_pending
+- qald_controlled_acquisition_executed
+- qald_hashes_verified
+- qald_test_sealed
+- authorization_consumed
+- no_graph_no_sparql
 pe6_status: diagnostic_metric_observability_and_legal_boundaries_defined_pending_execution
 pe7_status: not_started
 pe8_status: not_started
@@ -1231,7 +1236,14 @@ qald_exact_file_manifest: configs/common/acquisition/qald9plus/QALD9PLUS_EN_DBPE
 qald_expected_total_bytes: 7815874
 qald_attribution_manifest_status: DRAFT_NOT_APPLIED
 qald_test_seal_plan_status: TEST_SEAL_PLAN_DEFINED
-qald_authorization_status: UNSIGNED
-qald_acquisition_status: NOT_ACQUIRED
+qald_authorization_status: CONSUMED_AFTER_PASS
+qald_acquisition_status: ACQUIRED_VALIDATED
 qald_future_execution_contract: docs/protocols/common/acquisition/qald9plus/20260722T105246Z/T6B_CONTROLLED_ACQUISITION_EXECUTION_CONTRACT.md
-phase2_next_prompt_status: NONE_UNTIL_HUMAN_DECISION
+phase2_next_prompt_status: GO_NEXT_ZERO_COST
+phase2_qald_acquisition_execution_run_id: 20260722T111153Z
+phase2_qald_acquisition_execution_report: audit/PHASE2_QALD9PLUS_ACQUISITION_EXECUTION_REPORT.md
+phase2_qald_acquisition_execution_gate: QALD9PLUS_CONTROLLED_ACQUISITION_PASS_VALIDATED
+qald_authorization_id: AUTH_QALD9PLUS_T6B_20260722T105246Z_EMO_01
+qald_test_seal_status: SEALED
+qald_payload_location: workdir/datasets/qald9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/
+qald_payload_versioned_in_git: false
