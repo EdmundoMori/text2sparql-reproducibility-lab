@@ -497,9 +497,9 @@ methods:
     reproduction_instructions: present
   inclusion_status: included
   inclusion_decision: INCLUDE_PRIMARY
-  reproduction_status: audit_only
+  reproduction_status: smoke_only
   feasibility_class: feasible_local_gpu
-  native_audit_complete: false
+  native_audit_complete: true
   paper_code_audit_complete: true
   evidence_closure_complete: true
   common_adapter_allowed: false
@@ -516,34 +516,34 @@ methods:
   checkpoint_status: absent_in_repo
   environment_definition_status: z2_environment_built_runtime_verified
   import_smoke_ready: conditional
-  inference_smoke_ready: blocked
-  training_smoke_ready: conditional
+  inference_smoke_ready: smoke_forward_done_no_paper_ckpt
+  training_smoke_ready: reduced_one_step_done
   native_reproduction_ready: not_ready
-  native_gate_class: HOLD_MISSING_MODEL
+  native_gate_class: SGPT_NATIVE_AUDIT_CLOSED_SMOKE_ONLY
   scientific_baseline_role: core_baseline_candidate
   experimental_track: oracle_grounding_generator
   internal_execution_legal_gate: allowed
   adapter_legal_gate: conditional_deferred
   generality_class: retraining_required
   gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-  next_native_action: document_z3_one_step_closure_regate
+  next_native_action: global_phase1_native_audit_final_gate
   next_native_action_class: GO_NEXT_ZERO_COST
   gate_confidence: high
-  next_execution_prompt: Prompt_14D_document_Z3_closure_and_zero_cost_regate
+  next_execution_prompt: Prompt_15_phase1_native_audit_final_gate
   execution_blockers:
   - checkpoint_absent_in_repo
   - vram_6GiB_vs_paper_2x12GB
   - lcquad2_test_5969_vs_paper_6046
   - qald9_id_reuse_train_test_150
   - metric_double_update_anomaly
-  - gpt2_download_requires_network
   - epochs_cli_vs_params_json_divergence
-  notes: "Prompt 14C: one-step reduced training PASS on canary; attempt1 harness FAIL then human reauth; NOT Table4; audit_only;
-    native_audit_complete=false; common_adapter_allowed=false."
+  notes: "Prompt 14D: Z3 closed smoke_only; raw attempt2 Z3_OTHER_FAILED; operational PASS with indirect optimizer verification;
+    native_audit_complete=true outcome smoke_only_full_repro_not_achieved; common_adapter_allowed=false; PE3 not_started;
+    next Prompt 15 Q11."
 
   zero_cost_gate_class: GO_NEXT_ZERO_COST
-  zero_cost_next_action: Prompt_14D
-  zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
+  zero_cost_next_action: Prompt_15
+  zero_cost_gate_artifact: audit/NEXT_POST_Z3_ZERO_COST_DECISION.md
   zero_cost_gate_confidence: high
   environment_definition_artifact: audit/sgpt/ENVIRONMENT_DEFINITION_REPORT.md
   environment_spec_artifact: environments/sgpt/ENVIRONMENT_SPEC.yaml
@@ -604,10 +604,14 @@ methods:
   post_z2_queue_artifact: audit/POST_Z2_ZERO_COST_QUEUE.csv
   pe2_evidence_tags:
   - SGPT_Z2_ENVIRONMENT_AND_CORE_PREFLIGHT_VERIFIED
-  z3_protocol_status: one_step_smoke_complete_awaiting_closure
+  - SGPT_MODEL_LOAD_VERIFIED
+  - SGPT_MODEL_FORWARD_VERIFIED
+  - SGPT_REDUCED_TRAINING_PATH_VERIFIED
+  - SGPT_OPTIMIZER_STEP_INDIRECT_HIGH_CONFIDENCE
+  z3_protocol_status: closed_smoke_only
   z3_protocol_run_id: 20260721T134213Z
   z3_protocol_artifact: audit/sgpt/Z3_REDUCED_TRAINING_PROTOCOL_REPORT.md
-  z3_protocol_gate: Z3_ONE_STEP_SMOKE_COMPLETE_AWAITING_CLOSURE
+  z3_protocol_gate: SGPT_NATIVE_AUDIT_CLOSED_SMOKE_ONLY
   z3_variant: lcquad2_question_only_cpu
   z3_dataset: lcquad2
   z3_canary_status: proposed_deterministic_1_1_1
@@ -626,10 +630,12 @@ methods:
   z3_resource_budget_status: PROPOSED_RESOURCE_BOUND
   z3_claim_boundary: reduced_training_smoke_only
   remaining_z3_blockers:
+  - paper_checkpoint_absent
   - table4_not_reproduced
-  - checkpoints_absent_paper
+  - vram_6GiB_vs_paper_2x12GB
+  - lcquad2_test_split_drift
+  - metric_quality_not_comparable
   - full_training_not_executed
-  - metric_quality_not_claimed
   z3_protobuf_pin: 3.20.1_INSTALLED
   z3_p2b_status: Z3_P2B_NOGRAD_FORWARD_PASS
   z3_build_run_id: 20260721T135432Z
@@ -642,6 +648,44 @@ methods:
   z3_one_step_report: audit/sgpt/Z3_ONE_STEP_REDUCED_TRAINING_REPORT.md
   z3_one_step_attempt1_run_id: 20260721T183611Z
   z3_one_step_attempt1_status: Z3_OTHER_FAILED
+  reproduction_status_qualifier: reduced_training_smoke_only
+  native_audit_outcome: completed_smoke_only_full_reproduction_not_achieved
+  native_audit_closure_artifact: audit/sgpt/SGPT_NATIVE_AUDIT_CLOSURE_CHECKLIST.md
+  z3_closure_status: CLOSED
+  z3_closure_artifact: audit/sgpt/Z3_CLOSURE_REPORT.md
+  z3_closure_gate: SGPT_NATIVE_AUDIT_CLOSED_SMOKE_ONLY
+  z3_attempt_ledger: audit/sgpt/Z3_ONE_STEP_ATTEMPT_LEDGER.csv
+  z3_evidence_matrix: audit/sgpt/Z3_ONE_STEP_EVIDENCE_MATRIX.csv
+  z3_raw_attempt2_classification: Z3_OTHER_FAILED
+  z3_operational_classification: Z3_ONE_STEP_REDUCED_TRAINING_PASS
+  z3_verification_qualifier: PASS_WITH_INDIRECT_OPTIMIZER_STEP_VERIFICATION
+  z3_optimizer_step_direct_hook_status: NOT_VERIFIED_ATTEMPT2
+  z3_optimizer_step_indirect_status: INDIRECT_CONTROL_FLOW_VERIFIED_HIGH_CONFIDENCE
+  z3_optimizer_step_verification: indirect_control_flow_and_checkpoint_high_confidence
+  z3_backward_status: DIRECT_COUNTER_VERIFIED_ATTEMPT2
+  z3_checkpoint_status: checkpoint_1_workdir_only
+  z3_authorization_ledger: audit/sgpt/Z3_AUTHORIZATION_LEDGER.md
+  remaining_native_barriers:
+  - paper_checkpoint_absent
+  - table4_not_reproduced
+  - vram_6GiB_vs_paper_2x12GB
+  - lcquad2_test_split_drift
+  - metric_quality_not_comparable
+  - full_training_not_executed
+  post_z3_decision_artifact: audit/NEXT_POST_Z3_ZERO_COST_DECISION.md
+  post_z3_queue_artifact: audit/POST_Z3_ZERO_COST_QUEUE.csv
+  post_z3_matrix_artifact: audit/POST_Z3_ZERO_COST_ACTION_MATRIX.csv
+  pe1_status: substantially_answered
+  pe2_status: partial_evidence
+  pe3_status: not_started
+  pe4_status: partial_evidence
+  pe4_evidence_tags:
+  - HARNESS_INSTRUMENTATION_LIMITATION_ADAMW_HOOK
+  - MISSING_PAPER_CHECKPOINT
+  - HARDWARE_GAP_VRAM
+  - SPLIT_DRIFT_LCQUAD2
+  - METRIC_AMBIGUITY
+  - FULL_TRAINING_COST_RESOURCE_BARRIER
 - method_id: tebaqa
   display_name: TeBaQA
   repositories:

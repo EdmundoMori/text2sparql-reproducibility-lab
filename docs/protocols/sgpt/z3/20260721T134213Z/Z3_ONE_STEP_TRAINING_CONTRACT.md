@@ -1,27 +1,31 @@
 # Z3_ONE_STEP_TRAINING_CONTRACT (P3)
 
 **RUN_ID protocolo:** `20260721T134213Z`  
-**Estado:** **EXECUTED** (Prompt 14C)  
-**Auth:** `AUTHORIZED_AND_CONSUMED_14C_ATTEMPT2`
+**Estado:** **EXECUTED_AND_CLOSED** (Prompts 14C + 14D)  
+**Auth:** attempt1+2 consumidas
 
-## Resultado
+## Resultado reconciliado (14D)
 
 | Campo | Valor |
 |---|---|
-| Attempt 1 | `20260721T183611Z` → `Z3_OTHER_FAILED` |
-| Attempt 2 | `20260722T072146Z` → **`Z3_ONE_STEP_REDUCED_TRAINING_PASS`** |
-| Imagen | `text2sparql-lab/sgpt-z3-py38:20260721T135432Z` |
-| Image ID | `sha256:3363d73b8a36059698eff046f4a18bd5eaebc689c56f3f825ab1e5f39c273c35` |
-| Canario | 8714 / 3988 / 6077 |
-| expected_optimizer_steps | 1 |
+| Attempt 1 raw | `Z3_OTHER_FAILED` (`20260721T183611Z`) |
+| Attempt 2 raw | `Z3_OTHER_FAILED` (`20260722T072146Z`) |
+| Operativo | `Z3_ONE_STEP_REDUCED_TRAINING_PASS` |
+| Qualifier | `PASS_WITH_INDIRECT_OPTIMIZER_STEP_VERIFICATION` |
+| Direct optimizer hook att.2 | `NOT_VERIFIED_ATTEMPT2` |
 | Claim | `reduced_training_smoke_only` |
+
+## Fórmula pre-run (cumplida en ambos intentos)
+
+```
+expected_steps = (len(train_dataloader) // gradient_accumulation_steps) * num_train_epochs = 1
+```
 
 ## No implica
 
-Table 4 · PE3 · convergencia · calidad · reproducción nativa completa
+Table 4 · PE3 · convergencia · calidad · reproducción nativa completa · `partially_reproduced`
 
-## Evidencia versionable
+## Evidencia
 
-`audit/sgpt/Z3_ONE_STEP_REDUCED_TRAINING_REPORT.md`  
-`environments/sgpt/builds/20260722T072146Z/`  
-Pesos/checkpoints: solo `workdir/` (gitignore).
+`audit/sgpt/Z3_ONE_STEP_EVIDENCE_RECONCILIATION.md`  
+`audit/sgpt/Z3_CLOSURE_REPORT.md`

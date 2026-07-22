@@ -1,0 +1,13 @@
+priority,action_id,method_id,decision_class,queue_role,title,external_cost_usd,when,evidence_focus,PE_link,artifact
+1,Q11,lab,GO_NEXT_ZERO_COST,selected,GLOBAL_PHASE1_NATIVE_AUDIT_FINAL_GATE,0.0,next_prompt,phase1_inventory,PE1-PE4_meta,audit/NEXT_POST_Z3_ZERO_COST_DECISION.md
+2,Q5,rdfconfig_llm,DOCUMENT_ONLY,deferred,RDFCONFIG_GENERATOR_LICENSE_CLOSURE,0.0,after_Q11_if_gap,license,PE4,audit/rdfconfig_llm/STATIC_AUDIT.md
+3,Q7,firesparql,DOCUMENT_ONLY,deferred,FIRESPARQL_RESULT_CONSISTENCY_CLOSURE,0.0,after_Q11_if_gap,results_vs_repro,PE4,audit/firesparql/RESULT_PROVENANCE_AND_COMPLETENESS.md
+4,Q1,sgpt,GO_AFTER_AUTHORIZATION,deferred_low,SGPT_FULL_NLTK_METRIC_PREFLIGHT,0.0,only_with_new_auth,metric_path,PE2,n/a
+5,Q12,sgpt,NO_GO_NO_INCREMENTAL_SCIENTIFIC_VALUE,rejected,REPEAT_SGPT_ONE_STEP_FOR_INSTRUMENTATION,0.0,never_for_counter_only,instrumentation,none,n/a
+6,Q2,sgpt,NO_GO_NO_INCREMENTAL_SCIENTIFIC_VALUE,rejected,SGPT_FULL_TRAINING_OR_TABLE4,0.0,not_selected,Table4,PE3,n/a
+7,Q3,sparql_llm,NO_GO_ZERO_COST_POLICY,rejected,SPARQL_LLM_PAID_ONLINE_SMOKE,>0.00,policy_block,online,PE2,audit/ZERO_COST_POLICY.md
+8,Q4,sparql_llm,SUBSTITUTION_NOT_NATIVE,rejected,SPARQL_LLM_LOCAL_MODEL_SUBSTITUTION,0.0,not_native,substitution,PE2,n/a
+9,Q9,mkgqagent,HOLD_LEGAL,hold,MKGQAGENT_EXECUTION,0.0,legal_hold,legal,PE4,audit/mkgqagent/STATIC_AUDIT.md
+10,Q10,cot_sparql,HOLD_LEGAL_AND_HARDWARE,hold,COT_SPARQL_EXECUTION,0.0,legal_hw_hold,legal+hw,PE4,audit/cot_sparql/EXECUTION_READINESS.md
+11,Q6,rdfconfig_llm,HOLD_HARDWARE,hold,RDFCONFIG_COMPANION_ENVIRONMENT,0.0,Ruby_absent,companion,PE4,audit/rdfconfig_llm/COMPANION_RDF_CONFIG_AUDIT.md
+12,Q8,firesparql,DEFERRED,phase2,FIRESPARQL_LAB_METRIC_PROTOCOL,0.0,phase2,lab_metric,PE4,audit/firesparql/METRICS_AUDIT.md

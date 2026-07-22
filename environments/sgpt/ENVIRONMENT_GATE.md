@@ -1,23 +1,28 @@
 # ENVIRONMENT_GATE — SGPT
 
-**Actualizado:** Prompt **14C** (one-step reduced training)
+**Actualizado:** Prompt **14D** (cierre Z3 + re-gate)
 
 ## Gate Z2 (cerrado)
 
 `Z2_ENV_READY_PREFLIGHT_PASS` · Auth 13A consumida
 
-## Gate Z3
+## Gate Z3 (cerrado smoke)
 
 | Campo | Valor |
 |---|---|
 | P2A | `Z3_P2A_MODEL_LOAD_PREFLIGHT_PASS` |
 | P2B | `Z3_P2B_NOGRAD_FORWARD_PASS` |
-| One-step | **`Z3_ONE_STEP_REDUCED_TRAINING_PASS`** (`20260722T072146Z`) |
-| Auth 14B / 14B2 / 14C | consumidas |
-| **Gate Z3 actual** | **`Z3_ONE_STEP_SMOKE_COMPLETE_AWAITING_CLOSURE`** |
-| Table 4 / PE3 | **no** |
+| One-step raw att.2 | `Z3_OTHER_FAILED` |
+| One-step operativo | `Z3_ONE_STEP_REDUCED_TRAINING_PASS` + qualifier indirecto |
+| **Gate Z3** | **`SGPT_NATIVE_AUDIT_CLOSED_SMOKE_ONLY`** |
+| reproduction_status | `smoke_only` |
+| native_audit_complete | `true` (smoke_only; full repro not achieved) |
+| common_adapter_allowed | `false` |
+| Table 4 / PE3 | **no** / `not_started` |
 | Coste | **0.00** |
+
+Detalle: `environments/sgpt/Z3_CLOSURE_GATE.md`
 
 ## Siguiente
 
-**Prompt 14D** — cierre documental Z3 + re-gate ZERO_COST (sin nuevo train sin auth).
+**Prompt 15** — gate final Fase 1 (Q11), ZERO_COST, sin adapters. **No** nuevo train SGPT.

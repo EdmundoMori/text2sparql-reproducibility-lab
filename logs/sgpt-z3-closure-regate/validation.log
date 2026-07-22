@@ -1,0 +1,25 @@
+# Prompt 14D validation
+external_cost_usd=0.00
+docker=false
+pip=false
+downloads=false
+model_load=false
+forward=false
+backward=false
+optimizer=false
+scheduler=false
+training=false
+metric_execution=false
+checkpoint_creation=false
+upstream_modification=false
+raw_attempt2_classification_visible=Z3_OTHER_FAILED
+optimizer_hook_pass_claimed=false
+verification_qualifier=PASS_WITH_INDIRECT_OPTIMIZER_STEP_VERIFICATION
+reproduction_status=smoke_only
+partially_reproduced=false
+table4=false
+pe3=not_started
+common_adapter_allowed=false
+go_next_count=1
+go_next_action=Q11
+repeat_sgpt_for_instrumentation=rejected

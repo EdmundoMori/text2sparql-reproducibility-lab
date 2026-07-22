@@ -1,0 +1,10 @@
+# Prompt 14D — commands (documentary only)
+# 2026-07-22
+git fetch origin
+git branch --show-current
+git rev-parse HEAD
+git rev-parse origin/main
+git status --short
+# Recovered raw harness JSON from train-run.log (no re-run)
+# Wrote audit/docs/registry/plan-sync artefacts
+# NO docker / pip / downloads / model load / forward / backward / optimizer / train / eval / checkpoints / upstream edits

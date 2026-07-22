@@ -1,0 +1,28 @@
+{
+  "classification": "Z3_OTHER_FAILED",
+  "attempt": 2,
+  "checks": {
+    "rss_mb_start": 186.546875,
+    "pre_step_budget": {
+      "train_n": 1,
+      "train_batch_size": 1,
+      "len_dataloader": 1,
+      "grad_accum": 1,
+      "epochs": 1,
+      "expected_optimizer_steps": 1
+    }
+  },
+  "counters": {
+    "optimizer_step": 0,
+    "scheduler_step_total": 2,
+    "scheduler_step_after_optimizer": 0,
+    "backward": 1,
+    "train_batches": 0
+  },
+  "errors": [
+    "RuntimeError('optimizer_step=0 expected 1')"
+  ],
+  "traceback": "Traceback (most recent call last):\n  File \"z3_one_step_train_launcher.py\", line 163, in main\n    raise RuntimeError(f\"optimizer_step={COUNTERS['optimizer_step']} expected 1\")\nRuntimeError: optimizer_step=0 expected 1\n",
+  "elapsed_seconds": 50.06,
+  "_recovery_note": "Extracted in Prompt 14D from train-run.log; original launcher stdout. z3_one_step_report.json was overwritten post-run with scientific interpretation in 14C \u2014 do not treat that overwrite as raw."
+}

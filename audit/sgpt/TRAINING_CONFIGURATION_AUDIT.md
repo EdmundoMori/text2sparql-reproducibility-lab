@@ -83,3 +83,17 @@ python train.py --dataset lcquad2 --epochs 40
 - Informe: `audit/sgpt/Z3_REDUCED_TRAINING_PROTOCOL_REPORT.md`
 - Gate Z2 permanece cerrado: `Z2_ENV_READY_PREFLIGHT_PASS`
 - Conservado: `audit_only`; PE3 `not_started`; sin train
+
+---
+
+## Prompt 14D — Z3 closure (añadido)
+
+- Cierre Z3: `SGPT_NATIVE_AUDIT_CLOSED_SMOKE_ONLY`
+- Raw attempt1/2: `Z3_OTHER_FAILED` / `Z3_OTHER_FAILED`
+- Operativo attempt2: `Z3_ONE_STEP_REDUCED_TRAINING_PASS` + `PASS_WITH_INDIRECT_OPTIMIZER_STEP_VERIFICATION`
+- `reproduction_status=smoke_only` (`reduced_training_smoke_only`)
+- `native_audit_complete=true` · outcome `completed_smoke_only_full_reproduction_not_achieved`
+- `common_adapter_allowed=false` · PE3 `not_started` · Table 4 `NOT_REPRODUCED`
+- Optimizer direct hook attempt2: `NOT_VERIFIED_ATTEMPT2`
+- Artefactos: `audit/sgpt/Z3_CLOSURE_REPORT.md`, `Z3_ONE_STEP_EVIDENCE_RECONCILIATION.md`, `Z3_AUTHORIZATION_LEDGER.md`
+- Siguiente: Prompt **15** (Q11) — **no** ejecutado en 14D; **no** nuevo train

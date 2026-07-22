@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-21 (Prompt 14B2)  
+**Última actualización:** 2026-07-22 (Prompt 14D)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -209,6 +209,25 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | P14B2-RPT | P2B no-grad forward | `audit/sgpt/Z3_P2B_NOGRAD_FORWARD_REPORT.md` | PASS |
 | P14B2-SMK | Harness P2B | `scripts/smoke/sgpt_z3_p2b_nograd_forward.py` | one forward |
 | P14B2-LOG | Logs Prompt 14B2 | `logs/sgpt-z3-p2b-forward/20260721T163853Z/` | offline |
+
+| P14C-RPT | One-step reduced train report | `audit/sgpt/Z3_ONE_STEP_REDUCED_TRAINING_REPORT.md` | raw vs operativo |
+| P14C-A1 | Attempt 1 build | `environments/sgpt/builds/20260721T183611Z/` | Z3_OTHER_FAILED |
+| P14C-A2 | Attempt 2 build | `environments/sgpt/builds/20260722T072146Z/` | raw+evidence |
+| P14C-RAW | Raw harness attempt2 | `environments/sgpt/builds/20260722T072146Z/z3_one_step_raw_harness_report.json` | optimizer_step=0 |
+| P14C-SMK | One-step launcher | `scripts/smoke/sgpt_z3_one_step_train_launcher.py` | hook limitation |
+| P14C-LOG | Logs 14C | `logs/sgpt-z3-one-step-train/` | att1+att2 |
+| P14D-CL | Z3 closure report | `audit/sgpt/Z3_CLOSURE_REPORT.md` | 14D |
+| P14D-REC | Evidence reconciliation | `audit/sgpt/Z3_ONE_STEP_EVIDENCE_RECONCILIATION.md` | hook vs flow |
+| P14D-LED | Attempt ledger | `audit/sgpt/Z3_ONE_STEP_ATTEMPT_LEDGER.csv` | att1+att2 |
+| P14D-EV | Evidence matrix | `audit/sgpt/Z3_ONE_STEP_EVIDENCE_MATRIX.csv` | hierarchy |
+| P14D-AUTH | Authorization ledger | `audit/sgpt/Z3_AUTHORIZATION_LEDGER.md` | consumed |
+| P14D-CHK | Native audit checklist | `audit/sgpt/SGPT_NATIVE_AUDIT_CLOSURE_CHECKLIST.md` | complete=true |
+| P14D-GATE | Closure gate | `environments/sgpt/Z3_CLOSURE_GATE.md` | SMOKE_ONLY |
+| P14D-DEC | Decision 005 | `docs/decisions/005_sgpt_z3_reduced_training_smoke_closure.md` | closure |
+| P14D-MX | Matriz post-Z3 | `audit/POST_Z3_ZERO_COST_ACTION_MATRIX.csv` | Q1-Q12 |
+| P14D-NEXT | Decisión post-Z3 | `audit/NEXT_POST_Z3_ZERO_COST_DECISION.md` | Q11 GO |
+| P14D-Q | Cola post-Z3 | `audit/POST_Z3_ZERO_COST_QUEUE.csv` | operativa |
+| P14D-LOG | Logs Prompt 14D | `logs/sgpt-z3-closure-regate/` | documental |
 
 ## Qué está / no está en GitHub
 

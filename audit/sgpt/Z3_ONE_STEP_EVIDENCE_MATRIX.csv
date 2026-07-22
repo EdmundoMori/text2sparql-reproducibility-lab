@@ -1,0 +1,31 @@
+evidence_item,attempt,status,evidence_class,direct_or_indirect,confidence,artifact,source_code_support,claim_allowed,claim_forbidden,limitation
+human_authorization_attempt1,1,AUTHORIZED_AND_CONSUMED,HUMAN_DECISION_VERIFIED,direct,high,AUTHORIZATION_14C_SIGNED.md,n/a,auth_consumed,reuse,single use
+human_authorization_attempt2,2,AUTHORIZED_AND_CONSUMED,HUMAN_DECISION_VERIFIED,direct,high,AUTHORIZATION_14C_SIGNED.md,n/a,auth_consumed,reuse,reauth after attempt1
+environment_identity,2,verified,ENVIRONMENT_RUNTIME_VERIFIED,direct,high,Z3_ONE_STEP_RUN_MANIFEST.yaml,image sha256:3363d73b...,reuse_image,rebuild,no docker in 14D
+GPT2_revision,2,verified,NATIVE_ARTIFACT_VERIFIED,direct,high,gpt2 workdir cache,rev 607a30d7...,local_reuse,redownload,14B consumed
+canary_identity,2,verified,NATIVE_ARTIFACT_VERIFIED,direct,high,Z3_CANARY_SELECTION.json,uids 8714/3988/6077,canary_only,full_splits,1/1/1
+pre_step_budget,2,pass_expected=1,RAW_HARNESS_VERIFIED,direct,high,train-run.log pre_step_budget,launcher prevalidate,abort_if!=1,continue,formula verified
+single_iteration_log,2,Iteration 1/1,NATIVE_LOG_VERIFIED,direct,high,train-run.log,train.py loop,one_batch,multi_epoch,tqdm
+forward_train,2,loss≈31.3,NATIVE_LOG_VERIFIED,direct,high,train-run.log,train.py:94 run_batch_fn_train,technical_loss,quality,not Answer F1
+finite_train_loss,2,finite,NATIVE_LOG_VERIFIED,direct,high,train-run.log,train.py,finite,NaN_claim,no NaN observed
+backward,2,backward=1,DIRECT_COUNTER_VERIFIED,direct,high,raw harness counters,torch.Tensor.backward hook,one_backward,multi_backward,attempt2
+optimizer_step_direct_counter_attempt1,1,optimizer_step=1,DIRECT_COUNTER_VERIFIED,direct,high,attempt1 report.json,Optimizer.step hook fired,attempt1_only,attempt2_transfer,HF AdamW path differed? attempt1 counted
+optimizer_step_direct_counter_attempt2,2,optimizer_step=0,NOT_DIRECTLY_INSTRUMENTED,direct_miss,high,z3_one_step_raw_harness_report.json,hook on torch.optim.Optimizer.step only,no_EXACT_HOOK_PASS,claim_direct_intercept,do not use OPTIMIZER_STEP_DIRECT_COUNTER_VERIFIED
+optimizer_step_control_flow_attempt2,2,inferred_once,INDIRECT_CONTROL_FLOW_VERIFIED,indirect,high,train.py:114 + checkpoint-1,"train.py 105-120,139",PASS_WITH_INDIRECT,param_delta,HIGH_CONFIDENCE_INFERENCE
+scheduler_initialization_step,2,included_in_total=2,RAW_HARNESS_VERIFIED,direct,high,raw counters,LambdaLR __init__ steps,document_init,treat_as_train_step,attempt1 abort cause
+scheduler_training_step,2,expected_once_after_opt,SOURCE_CONTROL_FLOW_VERIFIED,indirect,high,train.py:115-116,linear scheduler,one_train_sched,multi,post-opt counter=0 due to miss
+global_step_1,2,checkpoint-1 name,NATIVE_ARTIFACT_VERIFIED,indirect,high,checkpoint-1 dir,"train.py:120,139",global_step==1,multi_step,naming convention
+checkpoint_1,2,present,NATIVE_ARTIFACT_VERIFIED,direct,high,workdir checkpoint-1,train.py:137-152,smoke_artifact,paper_ckpt,gitignored
+validation_eval,2,Eval results 1,NATIVE_LOG_VERIFIED,direct,high,eval_results.txt,train.py:124 evaluate,technical_val_loss,Answer_F1,no quality claim
+final_save,2,present,NATIVE_ARTIFACT_VERIFIED,direct,high,pytorch_model.bin params training_args,train.py main save,workdir_only,git_publish,~1.8GB
+model_reload,2,logged,NATIVE_LOG_VERIFIED,direct,high,train-run.log,train.py reload path,reload_ok,fresh_weights,native entrypoint
+test_eval,2,Eval results test,NATIVE_LOG_VERIFIED,direct,high,eval_results.txt,train.py test eval,technical_test_loss,Table4,not comparable
+output_size,2,~1.82GiB,NATIVE_ARTIFACT_VERIFIED,direct,high,z3_one_step_evidence.json,budget <=6GiB,within_budget,oversize,workdir
+network_block,2,blocked,RAW_HARNESS_VERIFIED,direct,high,launcher NetworkGuard,socket patch,offline,network,ZERO_COST
+upstream_integrity,both,intact,SOURCE_CONTROL_FLOW_VERIFIED,direct,high,git upstream/sgpt HEAD,pin 1f6964d1,read_only,modify_upstream,14D no edits
+paper_checkpoint,n/a,absent,NOT_REPRODUCED,n/a,high,CHECKPOINT_AND_RESULTS_INVENTORY.md,n/a,document_absence,claim_paper_weights,remaining barrier
+full_training,n/a,not_executed,NOT_TESTED,n/a,high,n/a,n/a,none,full_train,auth consumed
+Table4,n/a,not_reproduced,NOT_REPRODUCED,n/a,high,PAPER_TABLE4_CODE_MAPPING.csv,n/a,none,Table4_pass,OUT_OF_SCOPE
+comparable_original_metrics,n/a,absent,NOT_COMPARABLE,n/a,high,METRICS_AUDIT.md,n/a,none,paper_match,technical losses only
+Answer_F1,n/a,absent,OUT_OF_SCOPE,n/a,high,METRICS_AUDIT.md,code does not compute,none,Answer_F1,not in entrypoint
+PE3,n/a,not_started,OUT_OF_SCOPE,n/a,high,PLAN_SYNC.md,n/a,none,PE3_started,technical loss != PE3

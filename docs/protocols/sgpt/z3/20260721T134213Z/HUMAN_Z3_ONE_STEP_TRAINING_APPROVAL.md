@@ -27,3 +27,8 @@ Autorizaciones 14C attempt-1 y attempt-2 **consumidas**. No hay segundo intento 
 **Aprobador:** EDMUNDO MORI ORRILLO  
 **Fecha:** 2026-07-21 (auth) / 2026-07-22 (ejecución PASS)  
 **Firma:** HUMAN_DECISION_VERIFIED (mensaje Cursor Prompt 14C + reauth post-attempt-1)
+
+
+## Cierre 14D
+
+Autorizaciones attempt-1 y attempt-2 permanecen **consumidas**. Cierre gate . No nueva auth en 14D.

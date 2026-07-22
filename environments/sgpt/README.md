@@ -9,12 +9,17 @@
 |---|---|
 | Z1 | `COMPLETE_DOCUMENTED` |
 | Z2 | `COMPLETE_Z2_CORE_PREFLIGHT` |
-| Z3 protocolo | `READY_FOR_Z3_ARTIFACT_PREFLIGHT_AUTHORIZATION` (`20260721T134213Z`) |
-| `reproduction_status` | `audit_only` |
+| Z3 | **`SGPT_NATIVE_AUDIT_CLOSED_SMOKE_ONLY`** |
+| `reproduction_status` | **`smoke_only`** (`reduced_training_smoke_only`) |
+| `native_audit_complete` | `true` (full reproduction **not** achieved) |
+| `common_adapter_allowed` | `false` |
 
-Protocolo Z3: `docs/protocols/sgpt/z3/20260721T134213Z/`  
-Informe: `audit/sgpt/Z3_REDUCED_TRAINING_PROTOCOL_REPORT.md`
+Cierre: `audit/sgpt/Z3_CLOSURE_REPORT.md` · Gate: `Z3_CLOSURE_GATE.md`
+
+## Pesos
+
+Checkpoints/tokenizer/model bins solo en `workdir/` (gitignore). No publicar en Git.
 
 ## Siguiente
 
-Aprobación humana de artefactos → Prompt **14B** (download+preflight load; **sin** train).
+Prompt **15** — gate final Fase 1 (comparativo), ZERO_COST, sin adapters. Sin nuevo train sin auth.
