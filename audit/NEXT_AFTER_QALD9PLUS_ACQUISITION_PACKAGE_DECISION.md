@@ -24,3 +24,7 @@ No Cursor prompt ejecutable hasta decisión humana.
 > Prompt 21B — Adquisición controlada y validación de QALD-9 Plus EN/DBpedia desde el pin fijado, ZERO_COST, sin grafos, adapters ni benchmark.
 
 Formulario: `docs/protocols/common/acquisition/qald9plus/20260722T105246Z/HUMAN_QALD9PLUS_ACQUISITION_APPROVAL.md`
+
+## Commits
+
+- ARTIFACT_COMMIT: `2a2e6610d6f7ddd2b087a28eac856316196061a8`

@@ -76,6 +76,6 @@ Cola: `audit/PHASE2_POST_T6A_QUEUE.csv`.
 | Campo | Valor |
 |---|---|
 | commit inicial | `7628a8c68c9070819dab8a221c71d54341ba62b6` |
-| ARTIFACT_COMMIT | PLACEHOLDER_ARTIFACT |
+| ARTIFACT_COMMIT | `2a2e6610d6f7ddd2b087a28eac856316196061a8` |
 | publication metadata commit | *(post-push tip; max 2 commits)* |
 | push | pending |
