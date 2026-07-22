@@ -74,5 +74,6 @@ Fuente: `audit/NEXT_AFTER_DATASET_PROVENANCE_DECISION.md` (T3). **No ejecutado e
 | Campo | Valor |
 |---|---|
 | commit inicial | `ba306d069910e3807bd211cc7416c1e88e637e86` |
-| ARTIFACT_COMMIT | *(se registra tras commit)* |
-| push | pending hasta cierre |
+| ARTIFACT_COMMIT | `4f642c2718b1a99244958ac31e9eef7d2c74f7cf` |
+| publication metadata commit | *(siguiente)* |
+| push | pending |
