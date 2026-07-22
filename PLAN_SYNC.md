@@ -67,6 +67,6 @@ Acción: **GRAPH_ACQUISITION_OR_REBASE_DECISION**. **No ejecutado en 22.**
 | Campo | Valor |
 |---|---|
 | commit inicial | `35e97535da6e5018423a66c30c3f4bf4163a53f1` |
-| ARTIFACT_COMMIT | PLACEHOLDER_ARTIFACT |
+| ARTIFACT_COMMIT | `3818db51b9468bc4b7b74b7b783a76c96d102b43` |
 | publication metadata commit | *(post-push tip; max 2 commits)* |
 | push | pending |
