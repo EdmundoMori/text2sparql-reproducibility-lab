@@ -1,0 +1,8 @@
+query_form,v1_status,answer_metrics,exact,structure,notes
+SELECT_ROWSET,supported_documentary,yes,yes,yes,primary
+SELECT_AGGREGATE,supported_documentary,yes,yes,yes,scalar/table
+ASK_BOOLEAN,supported_documentary,boolean_as_result,yes,yes,
+CONSTRUCT_GRAPH,out_of_scope_v1,no,no,diagnostic_only_future,needs explicit decision
+DESCRIBE_GRAPH,out_of_scope_v1,no,no,no,implementation-dependent
+UPDATE_OR_GRAPH_MANAGEMENT,prohibited,zero_unsafe,0,n_a,UNSAFE
+UNKNOWN_FORM,not_evaluable_until_classified,no,no,no,post-payload

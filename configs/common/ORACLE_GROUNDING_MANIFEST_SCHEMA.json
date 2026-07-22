@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.lab/oracle-grounding-manifest",
+  "title": "OracleGroundingManifest",
+  "type": "object",
+  "required": [
+    "manifest_version",
+    "dataset_view",
+    "item_id",
+    "source_gold_query_hash",
+    "extraction_algorithm_version",
+    "entries",
+    "manifest_hash"
+  ],
+  "properties": {
+    "manifest_version": {
+      "type": "string"
+    },
+    "dataset_view": {
+      "type": "string"
+    },
+    "item_id": {
+      "type": "string"
+    },
+    "source_gold_query_hash": {
+      "type": "string"
+    },
+    "extraction_algorithm_version": {
+      "type": "string"
+    },
+    "track_id": {
+      "type": "string"
+    },
+    "manifest_hash": {
+      "type": "string"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "iri",
+          "iri_role",
+          "oracle_allowed",
+          "provenance"
+        ],
+        "properties": {
+          "iri": {
+            "type": "string"
+          },
+          "iri_role": {
+            "type": "string"
+          },
+          "source_location": {
+            "type": "string"
+          },
+          "oracle_allowed": {
+            "type": "boolean"
+          },
+          "provenance": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "const": "ORACLE_MANIFEST_MATERIALIZATION_PENDING"
+    }
+  }
+}

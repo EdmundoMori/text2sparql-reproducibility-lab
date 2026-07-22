@@ -1,12 +1,12 @@
 # NEXT_PROMPT_GUIDANCE
 
 **Fecha:** 2026-07-22  
-**Tras:** Prompt 17 — dataset version & provenance
+**Tras:** Prompt 18 — metric/oracle/statistical contract
 
 ## Prompt recomendado (único)
 
-**Título:** Prompt 18 — Cierre documental del contrato de métricas, canonicalización de respuestas y SPARQL, oracle/grounding y análisis estadístico del protocolo común, ZERO_COST, sin implementar métricas ni ejecutar consultas.
+**Título:** Prompt 19 — Definición documental de contratos de adapters externos por track, variante y método elegible, ZERO_COST, sin implementar adapters ni ejecutar métodos.
 
-**Acción:** T3 — METRIC_SPECIFICATION_AND_ORACLE_CONTRACT
+**Acción:** T4 — TRACK_SPECIFIC_ADAPTER_CONTRACTS
 
-**Restricciones:** ZERO_COST; sin implementar métricas; sin ejecutar consultas SPARQL; sin descargas; sin adapters; sin benchmark; conservar `common_adapter_allowed=false`; G4 sigue no satisfecho.
+**Restricciones:** ZERO_COST; sin implementar adapters; sin ejecutar métodos; conservar `common_adapter_allowed=false`; G4 no satisfecho; G5 runtime pending.

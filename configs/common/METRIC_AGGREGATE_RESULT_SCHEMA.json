@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.lab/metric-aggregate-result",
+  "title": "MetricAggregateResult",
+  "type": "object",
+  "required": [
+    "metric_contract_version",
+    "dataset_view",
+    "track_id",
+    "variant_id",
+    "aggregates",
+    "denominator",
+    "statistical_results"
+  ],
+  "properties": {
+    "metric_contract_version": {
+      "type": "string"
+    },
+    "dataset_view": {
+      "type": "string"
+    },
+    "graph_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "track_id": {
+      "type": "string"
+    },
+    "variant_id": {
+      "type": "string"
+    },
+    "model_control_regime": {
+      "type": "string"
+    },
+    "adaptation_regime": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "seed": {},
+    "aggregates": {
+      "type": "object"
+    },
+    "denominator": {
+      "type": "object"
+    },
+    "failure_status_counts": {
+      "type": "object"
+    },
+    "statistical_results": {
+      "type": "object"
+    },
+    "claim_boundary": {
+      "type": "string"
+    },
+    "implementation_status": {
+      "type": "string",
+      "const": "METRIC_IMPLEMENTATION_PENDING"
+    }
+  }
+}

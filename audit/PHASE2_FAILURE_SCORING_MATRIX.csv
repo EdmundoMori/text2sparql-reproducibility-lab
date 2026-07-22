@@ -1,0 +1,13 @@
+status,failure_owner,included_in_denominator,answer_precision,answer_recall,answer_f1,execution_exact,syntax_validity,safe_query,executable_query,coverage_metric,latency_policy,rerun_policy,global_exclusion_allowed,notes
+GLOBAL_DATASET_DEFECT,dataset,false,EXCLUDE,EXCLUDE,EXCLUDE,EXCLUDE,n_a,n_a,n_a,n_a,n_a,adjudicate,true,uniform exclusion
+SYSTEM_ENDPOINT_OUTAGE,system,conditional,HOLD,HOLD,HOLD,HOLD,n_a,n_a,n_a,n_a,exclude_or_rerun,rerun,false,not method failure
+METHOD_ABSTENTION,method,true,0,0,0,0,0,0,0,count,record,none,false,
+METHOD_TIMEOUT,method,true,0,0,0,0,prior,prior,0,count,timeout_separate,none,false,
+METHOD_NO_OUTPUT,method,true,0,0,0,0,0,0,0,count,record,none,false,≠ empty
+METHOD_INVALID_QUERY,method,true,0,0,0,0,0,0,0,count,record,none,false,
+METHOD_UNSAFE_QUERY,method,true,0,0,0,0,1_if_parse,0,0,count,record,none,false,safe=0
+METHOD_EXECUTION_ERROR,method,true,0,0,0,0,1_if_parse,1_if_safe,0,count,record,none,false,
+METHOD_VALID_EMPTY_RESULT,method,true,vs_gold,vs_gold,vs_gold,vs_gold,1,1,1,count,record,none,false,may score 1 if gold empty
+METHOD_VALID_NONEMPTY_RESULT,method,true,computed,computed,computed,computed,1,1,1,count,record,none,false,
+QUERY_FORM_OUT_OF_SCOPE,method_or_global,true_if_pred,0,0,0,0,n_a,n_a,n_a,count,record,none,true_if_gold,gold→global
+METRIC_IMPLEMENTATION_ERROR,evaluator,false,INVALIDATE,INVALIDATE,INVALIDATE,INVALIDATE,n_a,n_a,n_a,n_a,n_a,fix_and_rerun,false,not method failure

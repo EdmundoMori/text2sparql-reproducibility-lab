@@ -1,0 +1,583 @@
+title: METRIC_CONFORMANCE_TEST_VECTORS
+run_id: 20260722T093257Z
+status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+metric_contract_version: 0.1.0-documentary
+vector_count: 36
+executed: false
+vectors:
+- vector_id: V01
+  category: iri_host_case
+  gold_input: http://Example.org/a
+  predicted_input: http://example.org/a
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: equal_terms
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: IRI scheme/host case
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V02
+  category: iri_path_case
+  gold_input: http://ex.org/A
+  predicted_input: http://ex.org/a
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: unequal_terms
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: path case preserved
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V03
+  category: trailing_slash
+  gold_input: http://ex.org/a
+  predicted_input: http://ex.org/a/
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: unequal_terms
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: no slash strip
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V04
+  category: percent_encoding
+  gold_input: http://ex.org/%7E
+  predicted_input: http://ex.org/~
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: equal_or_norm_per_rfc
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: percent norm unreserved
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V05
+  category: plain_vs_xsd_string
+  gold_input: '"x"'
+  predicted_input: '"x"^^xsd:string'
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: equal_textual
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: plain↔xsd:string
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V06
+  category: language_tags
+  gold_input: '"x"@EN'
+  predicted_input: '"x"@en'
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: equal_terms
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: lang lowercase
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V07
+  category: lang_vs_untagged
+  gold_input: '"x"@en'
+  predicted_input: '"x"'
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: unequal_terms
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: lang≠untagged
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V08
+  category: numeric_value
+  gold_input: '"01"^^xsd:integer'
+  predicted_input: '"1"^^xsd:integer'
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: equal_value_space
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: numeric value space
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V09
+  category: tz_both
+  gold_input: '2020-01-01T00:00:00Z'
+  predicted_input: '2020-01-01T01:00:00+01:00'
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: equal_if_both_tz
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: timezone present both
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V10
+  category: tz_absent
+  gold_input: '2020-01-01T00:00:00'
+  predicted_input: '2020-01-01T00:00:00Z'
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: unequal_or_unresolved
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: no invented tz
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V11
+  category: unbound
+  gold_input: UNBOUND
+  predicted_input: UNBOUND
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: equal_tokens
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: unbound token
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V12
+  category: blank_nodes
+  gold_input: _:a
+  predicted_input: _:b
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: GLOBAL_BNODE_OR_BIJECTION
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: bnode policy
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V13
+  category: duplicate_rows
+  gold_input: '{r,r}'
+  predicted_input: '{r}'
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: set_equal_primary
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: duplicates ignored primary
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V14
+  category: row_ordering
+  gold_input: '[r1,r2]'
+  predicted_input: '[r2,r1]'
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: set_equal_primary
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: order ignored
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V15
+  category: multi_col_rename
+  gold_input: (?a,?b)
+  predicted_input: (?x,?y)
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: equal_if_corr_preserved
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: var rename
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V16
+  category: multi_col_correlation
+  gold_input: (1,2)
+  predicted_input: (2,1)
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: unequal_rows
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: preserve association
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V17
+  category: empty_empty
+  gold_input: ∅_valid
+  predicted_input: ∅_valid
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: P=R=F1=Exact=1
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: valid empty/empty
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V18
+  category: empty_nonempty
+  gold_input: ∅_valid
+  predicted_input: '{row}'
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: all_zero
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: empty vs nonempty
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V19
+  category: no_output
+  gold_input: METHOD_NO_OUTPUT
+  predicted_input: '{row}'
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: all_zero_failure
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: no_output≠empty
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V20
+  category: timeout
+  gold_input: METHOD_TIMEOUT
+  predicted_input: '{row}'
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: all_zero_failure
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: timeout in denom
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V21
+  category: invalid_query
+  gold_input: METHOD_INVALID_QUERY
+  predicted_input: '{row}'
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: all_zero_failure
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: invalid
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V22
+  category: ask_true_false
+  gold_input: ASK true
+  predicted_input: ASK false
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: Exact=0
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: ASK mismatch
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V23
+  category: ask_true_true
+  gold_input: ASK true
+  predicted_input: ASK true
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: Exact=1
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: ASK match
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V24
+  category: aggregate_scalar
+  gold_input: COUNT=3
+  predicted_input: COUNT=3
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: Exact=1
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: aggregate
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V25
+  category: bgp_reorder
+  gold_input: '{?s :p ?o . ?s :q ?o2}'
+  predicted_input: '{?s :q ?o2 . ?s :p ?o}'
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: normalized_equal
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: BGP reorder allowed
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V26
+  category: alpha_rename
+  gold_input: SELECT ?x
+  predicted_input: SELECT ?y
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: normalized_equal
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: α-rename
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V27
+  category: optional
+  gold_input: OPTIONAL{...}
+  predicted_input: (no OPTIONAL)
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: structure_unequal
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: OPTIONAL preserved
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V28
+  category: union
+  gold_input: A UNION B
+  predicted_input: B UNION A
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: structure_may_unequal
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: no UNION reorder
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V29
+  category: filter
+  gold_input: FILTER(?x>1)
+  predicted_input: FILTER(?x>=2)
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: structure_unequal
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: no FILTER simplify
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V30
+  category: property_path
+  gold_input: :p/:q
+  predicted_input: :p/:q
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: structure_equal
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: path AST
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V31
+  category: unsafe_service
+  gold_input: SERVICE <http://evil>
+  predicted_input: SAFE
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: UNSAFE_QUERY_score0
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: unsafe SERVICE
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V32
+  category: gold_defect
+  gold_input: GOLD_INVALID
+  predicted_input: any
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: GLOBAL_DATASET_DEFECT
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: exclude globally
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V33
+  category: observable_linker
+  gold_input: linker_out=[e1]
+  predicted_input: gold=[e1]
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: EL_F1_applicable
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: observable linking
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V34
+  category: non_observable_linker
+  gold_input: (none)
+  predicted_input: gold=[e1]
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: NOT_OBSERVABLE
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: no inferred linking
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V35
+  category: oracle_input
+  gold_input: roles=SUBJECT,PREDICATE
+  predicted_input: sgpt_qk
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: ORACLE_TRACK_SEPARATE
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: oracle≠Q_ONLY
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18
+- vector_id: V36
+  category: external_grounding
+  gold_input: fixed_linker_manifest
+  predicted_input: all_methods_same
+  context:
+    metric_contract_version: 0.1.0-documentary
+    run_id: 20260722T093257Z
+  expected_status: FIXED_EXTERNAL_SEPARATE
+  expected_metric_values:
+    documentary: true
+    not_executed: true
+  expected_claim: documentary_conformance_expectation
+  forbidden_claim: METRIC_RUNTIME_VERIFIED
+  rationale: same manifest
+  normative_reference: RDF 1.1 / SPARQL 1.1 / RFC 3986 / Unicode NFC / lab Prompt
+    18

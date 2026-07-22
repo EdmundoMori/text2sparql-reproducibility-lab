@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.lab/metric-item-result",
+  "title": "MetricItemResult",
+  "type": "object",
+  "required": [
+    "metric_contract_version",
+    "canonicalization_version",
+    "item_id",
+    "failure_status",
+    "metrics"
+  ],
+  "properties": {
+    "metric_contract_version": {
+      "type": "string"
+    },
+    "canonicalization_version": {
+      "type": "object"
+    },
+    "item_id": {
+      "type": "string"
+    },
+    "dataset_view": {
+      "type": "string"
+    },
+    "track_id": {
+      "type": "string"
+    },
+    "variant_id": {
+      "type": "string"
+    },
+    "failure_status": {
+      "type": "string"
+    },
+    "observability": {
+      "type": "object"
+    },
+    "oracle": {
+      "type": "object"
+    },
+    "gold_manifest_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "prediction_result_hash": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "evidence": {
+      "type": "object"
+    },
+    "implementation_status": {
+      "type": "string",
+      "const": "METRIC_IMPLEMENTATION_PENDING"
+    }
+  }
+}

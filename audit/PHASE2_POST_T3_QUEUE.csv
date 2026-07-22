@@ -1,0 +1,10 @@
+order,action_id,title,depends_on,status,notes
+1,T4,TRACK_SPECIFIC_ADAPTER_CONTRACTS,T3_done,SELECTED_NEXT,Prompt_19 documentary; adapters remain false
+2,T5,LEGAL_ELIGIBILITY_RECHECK,T4,queued,method+dataset acquisition gates
+3,T6,CONTROLLED_DATASET_ACQUISITION,T5,queued,authorization required
+4,GRAPH_ACQUISITION_OR_REBASE,T6,queued,when applicable
+5,METRIC_IMPLEMENTATION_AND_CONFORMANCE,GRAPH_OR_PARALLEL,queued,after contracts; execute vectors later
+6,T7,ADAPTER_IMPLEMENTATION,contracts+legal,queued,blocked until authorized
+7,T8,COMMON_PREFLIGHT,T7,queued,
+8,T9,BENCHMARK_EXECUTION,T8,queued,NOT_CURRENTLY_ELIGIBLE
+9,T10,CASE_STUDY,T9,queued,

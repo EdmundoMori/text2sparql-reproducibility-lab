@@ -261,3 +261,23 @@ Estados **sin cambio experimental**. Evidencia preparatoria: `dataset_source_pro
 ### Condición de transición
 
 Puede avanzar T3 (contrato métricas/oracle documental). **No** implica adquisición de payloads, SPARQL, adapters ni benchmark.
+
+
+---
+
+## Addendum Prompt 18 — Metric/oracle/statistical contract
+
+**Fecha:** 2026-07-22  
+**RUN_ID:** `20260722T093257Z`  
+**Gate:** `METRIC_ORACLE_CONTRACT_DOCUMENTED_READY_FOR_ADAPTER_CONTRACTS`
+
+### PE5–PE8
+
+| PE | Estado |
+|---|---|
+| PE5 | `protocol_and_metric_contract_defined_pending_benchmark` |
+| PE6 | `diagnostic_metric_contract_defined_pending_execution` |
+| PE7 | `not_started` |
+| PE8 | `not_started` |
+
+Evidencia preparatoria: metric/oracle/statistical contracts documented; conformance vectors defined not executed. Sin resultados experimentales.

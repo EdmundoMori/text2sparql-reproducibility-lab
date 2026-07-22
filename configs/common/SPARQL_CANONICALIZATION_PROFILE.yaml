@@ -1,0 +1,46 @@
+profile_id: SPARQL_CANONICALIZATION_V1_CONSERVATIVE
+version: 0.1.0-documentary
+allowed:
+- parse_sparql_1_1
+- resolve_prefix_base
+- uniform_prefixes
+- whitespace_norm
+- unicode_nfc
+- rdf_term_canon
+- deterministic_var_alpha_rename
+- deterministic_bgp_triple_order
+- deterministic_prefix_order
+- safe_keyword_norm
+forbidden:
+- general_algebraic_rewrite
+- inference
+- optional_removal
+- union_reorder
+- minus_reorder
+- filter_simplify
+- property_path_substitute
+- entailment
+- execute_to_prove
+- gold_repair
+- llm_equivalence
+preserves:
+- BGP
+- OPTIONAL
+- UNION
+- MINUS
+- GRAPH
+- SERVICE
+- subquery
+- FILTER
+- BIND
+- VALUES
+- GROUP_BY
+- HAVING
+- ORDER_BY
+- LIMIT
+- OFFSET
+- DISTINCT
+- REDUCED
+- aggregates
+- property_path_AST
+implementation_status: METRIC_IMPLEMENTATION_PENDING

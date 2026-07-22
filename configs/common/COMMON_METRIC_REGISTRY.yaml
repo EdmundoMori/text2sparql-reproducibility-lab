@@ -1,0 +1,818 @@
+registry_version: 0.1.0-documentary
+metric_contract_version: 0.1.0-documentary
+run_id: 20260722T093257Z
+status: METRIC_CONTRACT_DEFINED
+implementation_status: METRIC_IMPLEMENTATION_PENDING
+conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+primary_metrics:
+- answer_precision
+- answer_recall
+- answer_f1
+- execution_exact_accuracy
+canonicalization:
+  rdf_term_profile: RDF_TERM_CANONICALIZATION_V1
+  sparql_profile: SPARQL_CANONICALIZATION_V1_CONSERVATIVE
+  result_table_semantics: SET_OF_ROWS
+statistics:
+  bootstrap_seed: 2026072201
+  bootstrap_replicates: 10000
+  multiple_comparison: Holm
+metrics:
+- metric_id: answer_precision
+  display_name: Answer Precision
+  version: 0.1.0-documentary
+  family: answer
+  primary_or_diagnostic: primary
+  evaluation_object: PredictedExecutionResult
+  applicable_query_forms: &id001
+  - SELECT_ROWSET
+  - SELECT_AGGREGATE
+  - ASK_BOOLEAN
+  applicable_tracks: &id002
+  - IA_Q_ONLY
+  - IA_SCHEMA_COMMON
+  - IA_ORACLE_GROUNDING
+  - IA_FIXED_EXTERNAL_GROUNDING
+  - IA_DOMAIN_NATIVE
+  required_gold: GoldExecutionResult
+  required_graph: true
+  required_observability: none
+  per_item_formula: TP/|P| if |P|>0
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: bootstrap_or_wilson
+  claim_supported: within_track_answer_quality
+  claim_forbidden: cross_track_ranking
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: answer_recall
+  display_name: Answer Recall
+  version: 0.1.0-documentary
+  family: answer
+  primary_or_diagnostic: primary
+  evaluation_object: PredictedExecutionResult
+  applicable_query_forms: *id001
+  applicable_tracks: *id002
+  required_gold: GoldExecutionResult
+  required_graph: true
+  required_observability: none
+  per_item_formula: TP/|G| if |G|>0
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: bootstrap_or_wilson
+  claim_supported: within_track_answer_quality
+  claim_forbidden: cross_track_ranking
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: answer_f1
+  display_name: Answer F1
+  version: 0.1.0-documentary
+  family: answer
+  primary_or_diagnostic: primary
+  evaluation_object: PredictedExecutionResult
+  applicable_query_forms: *id001
+  applicable_tracks: *id002
+  required_gold: GoldExecutionResult
+  required_graph: true
+  required_observability: none
+  per_item_formula: harmonic(P,R)
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: paired_item_bootstrap_CI95
+  claim_supported: within_track_answer_quality
+  claim_forbidden: cross_track_ranking
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: execution_exact_accuracy
+  display_name: Execution Exact Accuracy
+  version: 0.1.0-documentary
+  family: answer
+  primary_or_diagnostic: primary
+  evaluation_object: PredictedExecutionResult
+  applicable_query_forms: *id001
+  applicable_tracks: *id002
+  required_gold: GoldExecutionResult
+  required_graph: true
+  required_observability: none
+  per_item_formula: 1 iff canonical equal
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: item_proportion
+  statistical_method: wilson_CI95
+  claim_supported: within_track_answer_quality
+  claim_forbidden: cross_track_ranking
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: generation_success_rate
+  display_name: Generation Success Rate
+  version: 0.1.0-documentary
+  family: validity
+  primary_or_diagnostic: diagnostic
+  evaluation_object: PredictedSPARQL
+  applicable_query_forms:
+  - SELECT_ROWSET
+  - SELECT_AGGREGATE
+  - ASK_BOOLEAN
+  - UNKNOWN_FORM
+  applicable_tracks: *id002
+  required_gold: none
+  required_graph: false
+  required_observability: none
+  per_item_formula: rate
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: item_proportion
+  statistical_method: wilson_CI95
+  claim_supported: within_track_answer_quality
+  claim_forbidden: cross_track_ranking
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: syntax_validity_rate
+  display_name: Syntax Validity Rate
+  version: 0.1.0-documentary
+  family: validity
+  primary_or_diagnostic: diagnostic
+  evaluation_object: PredictedSPARQL
+  applicable_query_forms:
+  - SELECT_ROWSET
+  - SELECT_AGGREGATE
+  - ASK_BOOLEAN
+  - UNKNOWN_FORM
+  applicable_tracks: *id002
+  required_gold: none
+  required_graph: false
+  required_observability: none
+  per_item_formula: rate
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: item_proportion
+  statistical_method: wilson_CI95
+  claim_supported: within_track_answer_quality
+  claim_forbidden: cross_track_ranking
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: safe_query_rate
+  display_name: Safe Query Rate
+  version: 0.1.0-documentary
+  family: validity
+  primary_or_diagnostic: diagnostic
+  evaluation_object: PredictedSPARQL
+  applicable_query_forms:
+  - SELECT_ROWSET
+  - SELECT_AGGREGATE
+  - ASK_BOOLEAN
+  - UNKNOWN_FORM
+  applicable_tracks: *id002
+  required_gold: none
+  required_graph: false
+  required_observability: none
+  per_item_formula: rate
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: item_proportion
+  statistical_method: wilson_CI95
+  claim_supported: within_track_answer_quality
+  claim_forbidden: cross_track_ranking
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: executable_query_rate
+  display_name: Executable Query Rate
+  version: 0.1.0-documentary
+  family: validity
+  primary_or_diagnostic: diagnostic
+  evaluation_object: PredictedSPARQL
+  applicable_query_forms:
+  - SELECT_ROWSET
+  - SELECT_AGGREGATE
+  - ASK_BOOLEAN
+  - UNKNOWN_FORM
+  applicable_tracks: *id002
+  required_gold: none
+  required_graph: false
+  required_observability: none
+  per_item_formula: rate
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: item_proportion
+  statistical_method: wilson_CI95
+  claim_supported: within_track_answer_quality
+  claim_forbidden: cross_track_ranking
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: abstention_rate
+  display_name: Abstention Rate
+  version: 0.1.0-documentary
+  family: validity
+  primary_or_diagnostic: diagnostic
+  evaluation_object: PredictedSPARQL
+  applicable_query_forms:
+  - SELECT_ROWSET
+  - SELECT_AGGREGATE
+  - ASK_BOOLEAN
+  - UNKNOWN_FORM
+  applicable_tracks: *id002
+  required_gold: none
+  required_graph: false
+  required_observability: none
+  per_item_formula: rate
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: item_proportion
+  statistical_method: wilson_CI95
+  claim_supported: within_track_answer_quality
+  claim_forbidden: cross_track_ranking
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: timeout_rate
+  display_name: Timeout Rate
+  version: 0.1.0-documentary
+  family: validity
+  primary_or_diagnostic: diagnostic
+  evaluation_object: PredictedSPARQL
+  applicable_query_forms:
+  - SELECT_ROWSET
+  - SELECT_AGGREGATE
+  - ASK_BOOLEAN
+  - UNKNOWN_FORM
+  applicable_tracks: *id002
+  required_gold: none
+  required_graph: false
+  required_observability: none
+  per_item_formula: rate
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: item_proportion
+  statistical_method: wilson_CI95
+  claim_supported: within_track_answer_quality
+  claim_forbidden: cross_track_ranking
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: no_output_rate
+  display_name: No-Output Rate
+  version: 0.1.0-documentary
+  family: validity
+  primary_or_diagnostic: diagnostic
+  evaluation_object: PredictedSPARQL
+  applicable_query_forms:
+  - SELECT_ROWSET
+  - SELECT_AGGREGATE
+  - ASK_BOOLEAN
+  - UNKNOWN_FORM
+  applicable_tracks: *id002
+  required_gold: none
+  required_graph: false
+  required_observability: none
+  per_item_formula: rate
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: item_proportion
+  statistical_method: wilson_CI95
+  claim_supported: within_track_answer_quality
+  claim_forbidden: cross_track_ranking
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: execution_error_rate
+  display_name: Execution Error Rate
+  version: 0.1.0-documentary
+  family: validity
+  primary_or_diagnostic: diagnostic
+  evaluation_object: PredictedSPARQL
+  applicable_query_forms:
+  - SELECT_ROWSET
+  - SELECT_AGGREGATE
+  - ASK_BOOLEAN
+  - UNKNOWN_FORM
+  applicable_tracks: *id002
+  required_gold: none
+  required_graph: false
+  required_observability: none
+  per_item_formula: rate
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: item_proportion
+  statistical_method: wilson_CI95
+  claim_supported: within_track_answer_quality
+  claim_forbidden: cross_track_ranking
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: valid_empty_result_rate
+  display_name: Valid Empty Result Rate
+  version: 0.1.0-documentary
+  family: validity
+  primary_or_diagnostic: diagnostic
+  evaluation_object: PredictedSPARQL
+  applicable_query_forms:
+  - SELECT_ROWSET
+  - SELECT_AGGREGATE
+  - ASK_BOOLEAN
+  - UNKNOWN_FORM
+  applicable_tracks: *id002
+  required_gold: none
+  required_graph: false
+  required_observability: none
+  per_item_formula: rate
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: item_proportion
+  statistical_method: wilson_CI95
+  claim_supported: within_track_answer_quality
+  claim_forbidden: cross_track_ranking
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: nonempty_result_rate
+  display_name: Nonempty Result Rate
+  version: 0.1.0-documentary
+  family: validity
+  primary_or_diagnostic: diagnostic
+  evaluation_object: PredictedSPARQL
+  applicable_query_forms:
+  - SELECT_ROWSET
+  - SELECT_AGGREGATE
+  - ASK_BOOLEAN
+  - UNKNOWN_FORM
+  applicable_tracks: *id002
+  required_gold: none
+  required_graph: false
+  required_observability: none
+  per_item_formula: rate
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: item_proportion
+  statistical_method: wilson_CI95
+  claim_supported: within_track_answer_quality
+  claim_forbidden: cross_track_ranking
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: raw_string_exact_match
+  display_name: Raw String Exact Match
+  version: 0.1.0-documentary
+  family: query_structure
+  primary_or_diagnostic: diagnostic
+  evaluation_object: QueryStructure
+  applicable_query_forms: *id001
+  applicable_tracks: *id002
+  required_gold: GoldSPARQL
+  required_graph: false
+  required_observability: none
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: bootstrap_or_wilson
+  claim_supported: structure_diagnostic
+  claim_forbidden: substitute_for_answer_f1
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: normalized_query_exact_match
+  display_name: Normalized Query Exact Match
+  version: 0.1.0-documentary
+  family: query_structure
+  primary_or_diagnostic: diagnostic
+  evaluation_object: QueryStructure
+  applicable_query_forms: *id001
+  applicable_tracks: *id002
+  required_gold: GoldSPARQL
+  required_graph: false
+  required_observability: none
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: bootstrap_or_wilson
+  claim_supported: structure_diagnostic
+  claim_forbidden: substitute_for_answer_f1
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: query_form_match
+  display_name: Query Form Match
+  version: 0.1.0-documentary
+  family: query_structure
+  primary_or_diagnostic: diagnostic
+  evaluation_object: QueryStructure
+  applicable_query_forms: *id001
+  applicable_tracks: *id002
+  required_gold: GoldSPARQL
+  required_graph: false
+  required_observability: none
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: bootstrap_or_wilson
+  claim_supported: structure_diagnostic
+  claim_forbidden: substitute_for_answer_f1
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: projection_arity_match
+  display_name: Projection Arity Match
+  version: 0.1.0-documentary
+  family: query_structure
+  primary_or_diagnostic: diagnostic
+  evaluation_object: QueryStructure
+  applicable_query_forms: *id001
+  applicable_tracks: *id002
+  required_gold: GoldSPARQL
+  required_graph: false
+  required_observability: none
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: bootstrap_or_wilson
+  claim_supported: structure_diagnostic
+  claim_forbidden: substitute_for_answer_f1
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: triple_pattern_precision
+  display_name: Triple Pattern Precision
+  version: 0.1.0-documentary
+  family: query_structure
+  primary_or_diagnostic: diagnostic
+  evaluation_object: QueryStructure
+  applicable_query_forms: *id001
+  applicable_tracks: *id002
+  required_gold: GoldSPARQL
+  required_graph: false
+  required_observability: none
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: bootstrap_or_wilson
+  claim_supported: structure_diagnostic
+  claim_forbidden: substitute_for_answer_f1
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: triple_pattern_recall
+  display_name: Triple Pattern Recall
+  version: 0.1.0-documentary
+  family: query_structure
+  primary_or_diagnostic: diagnostic
+  evaluation_object: QueryStructure
+  applicable_query_forms: *id001
+  applicable_tracks: *id002
+  required_gold: GoldSPARQL
+  required_graph: false
+  required_observability: none
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: bootstrap_or_wilson
+  claim_supported: structure_diagnostic
+  claim_forbidden: substitute_for_answer_f1
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: triple_pattern_f1
+  display_name: Triple Pattern F1
+  version: 0.1.0-documentary
+  family: query_structure
+  primary_or_diagnostic: diagnostic
+  evaluation_object: QueryStructure
+  applicable_query_forms: *id001
+  applicable_tracks: *id002
+  required_gold: GoldSPARQL
+  required_graph: false
+  required_observability: none
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: bootstrap_or_wilson
+  claim_supported: structure_diagnostic
+  claim_forbidden: substitute_for_answer_f1
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: filter_structure_match
+  display_name: Filter Structure Match
+  version: 0.1.0-documentary
+  family: query_structure
+  primary_or_diagnostic: diagnostic
+  evaluation_object: QueryStructure
+  applicable_query_forms: *id001
+  applicable_tracks: *id002
+  required_gold: GoldSPARQL
+  required_graph: false
+  required_observability: none
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: bootstrap_or_wilson
+  claim_supported: structure_diagnostic
+  claim_forbidden: substitute_for_answer_f1
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: aggregation_structure_match
+  display_name: Aggregation Structure Match
+  version: 0.1.0-documentary
+  family: query_structure
+  primary_or_diagnostic: diagnostic
+  evaluation_object: QueryStructure
+  applicable_query_forms: *id001
+  applicable_tracks: *id002
+  required_gold: GoldSPARQL
+  required_graph: false
+  required_observability: none
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: bootstrap_or_wilson
+  claim_supported: structure_diagnostic
+  claim_forbidden: substitute_for_answer_f1
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: modifier_structure_match
+  display_name: Modifier Structure Match
+  version: 0.1.0-documentary
+  family: query_structure
+  primary_or_diagnostic: diagnostic
+  evaluation_object: QueryStructure
+  applicable_query_forms: *id001
+  applicable_tracks: *id002
+  required_gold: GoldSPARQL
+  required_graph: false
+  required_observability: none
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: bootstrap_or_wilson
+  claim_supported: structure_diagnostic
+  claim_forbidden: substitute_for_answer_f1
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: property_path_structure_match
+  display_name: Property Path Structure Match
+  version: 0.1.0-documentary
+  family: query_structure
+  primary_or_diagnostic: diagnostic
+  evaluation_object: QueryStructure
+  applicable_query_forms: *id001
+  applicable_tracks: *id002
+  required_gold: GoldSPARQL
+  required_graph: false
+  required_observability: none
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: bootstrap_or_wilson
+  claim_supported: structure_diagnostic
+  claim_forbidden: substitute_for_answer_f1
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: query_grounding_constant_precision
+  display_name: Query Grounding Constant Precision
+  version: 0.1.0-documentary
+  family: query_structure
+  primary_or_diagnostic: diagnostic
+  evaluation_object: QueryStructure
+  applicable_query_forms: *id001
+  applicable_tracks: *id002
+  required_gold: GoldSPARQL
+  required_graph: false
+  required_observability: none
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: bootstrap_or_wilson
+  claim_supported: structure_diagnostic
+  claim_forbidden: substitute_for_answer_f1
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: query_grounding_constant_recall
+  display_name: Query Grounding Constant Recall
+  version: 0.1.0-documentary
+  family: query_structure
+  primary_or_diagnostic: diagnostic
+  evaluation_object: QueryStructure
+  applicable_query_forms: *id001
+  applicable_tracks: *id002
+  required_gold: GoldSPARQL
+  required_graph: false
+  required_observability: none
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: bootstrap_or_wilson
+  claim_supported: structure_diagnostic
+  claim_forbidden: substitute_for_answer_f1
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: query_grounding_constant_f1
+  display_name: Query Grounding Constant F1
+  version: 0.1.0-documentary
+  family: query_structure
+  primary_or_diagnostic: diagnostic
+  evaluation_object: QueryStructure
+  applicable_query_forms: *id001
+  applicable_tracks: *id002
+  required_gold: GoldSPARQL
+  required_graph: false
+  required_observability: none
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: bootstrap_or_wilson
+  claim_supported: structure_diagnostic
+  claim_forbidden: substitute_for_answer_f1
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: hallucinated_iri_rate
+  display_name: Hallucinated IRI Rate
+  version: 0.1.0-documentary
+  family: iri
+  primary_or_diagnostic: diagnostic
+  evaluation_object: PredictedSPARQL
+  applicable_query_forms: *id001
+  applicable_tracks: *id002
+  required_gold: none
+  required_graph: true
+  required_observability: graph_dictionary_required
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: bootstrap_or_wilson
+  claim_supported: hallucination_when_dictionary
+  claim_forbidden: gold_query_as_only_universe
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: entity_linking_f1
+  display_name: Entity Linking F1
+  version: 0.1.0-documentary
+  family: linking
+  primary_or_diagnostic: diagnostic
+  evaluation_object: PredictedExecutionResult
+  applicable_query_forms: *id001
+  applicable_tracks:
+  - IA_ORACLE_GROUNDING
+  - IA_FIXED_EXTERNAL_GROUNDING
+  required_gold: GoldGroundingManifest
+  required_graph: false
+  required_observability: METHOD_INTERNAL_OR_FIXED_OBSERVABLE
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: bootstrap_or_wilson
+  claim_supported: linking_when_observable
+  claim_forbidden: inferred_from_final_query
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: relation_linking_f1
+  display_name: Relation Linking F1
+  version: 0.1.0-documentary
+  family: linking
+  primary_or_diagnostic: diagnostic
+  evaluation_object: PredictedExecutionResult
+  applicable_query_forms: *id001
+  applicable_tracks:
+  - IA_ORACLE_GROUNDING
+  - IA_FIXED_EXTERNAL_GROUNDING
+  required_gold: GoldGroundingManifest
+  required_graph: false
+  required_observability: METHOD_INTERNAL_OR_FIXED_OBSERVABLE
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: bootstrap_or_wilson
+  claim_supported: linking_when_observable
+  claim_forbidden: inferred_from_final_query
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: oracle_coverage
+  display_name: Oracle Coverage
+  version: 0.1.0-documentary
+  family: oracle
+  primary_or_diagnostic: diagnostic
+  evaluation_object: PredictedExecutionResult
+  applicable_query_forms: *id001
+  applicable_tracks:
+  - IA_ORACLE_GROUNDING
+  required_gold: OracleInputManifest
+  required_graph: false
+  required_observability: GOLD_ORACLE_SUPPLIED
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: bootstrap_or_wilson
+  claim_supported: within_track_answer_quality
+  claim_forbidden: cross_track_ranking
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: oracle_consumption
+  display_name: Oracle Consumption
+  version: 0.1.0-documentary
+  family: oracle
+  primary_or_diagnostic: diagnostic
+  evaluation_object: PredictedExecutionResult
+  applicable_query_forms: *id001
+  applicable_tracks:
+  - IA_ORACLE_GROUNDING
+  required_gold: OracleInputManifest
+  required_graph: false
+  required_observability: GOLD_ORACLE_SUPPLIED
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: macro_per_item
+  statistical_method: bootstrap_or_wilson
+  claim_supported: within_track_answer_quality
+  claim_forbidden: cross_track_ranking
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: total_latency_ms
+  display_name: Total Latency ms
+  version: 0.1.0-documentary
+  family: operational
+  primary_or_diagnostic: diagnostic
+  evaluation_object: MethodFailure
+  applicable_query_forms:
+  - ALL
+  applicable_tracks: *id002
+  required_gold: none
+  required_graph: false
+  required_observability: none
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: median_p90_p95
+  statistical_method: percentile_bootstrap
+  claim_supported: operational_reporting
+  claim_forbidden: quality_proxy
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: estimated_cost_usd
+  display_name: Estimated Cost USD
+  version: 0.1.0-documentary
+  family: operational
+  primary_or_diagnostic: diagnostic
+  evaluation_object: MethodFailure
+  applicable_query_forms:
+  - ALL
+  applicable_tracks: *id002
+  required_gold: none
+  required_graph: false
+  required_observability: none
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: median_p90_p95
+  statistical_method: percentile_bootstrap
+  claim_supported: operational_reporting
+  claim_forbidden: quality_proxy
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: llm_calls
+  display_name: LLM Calls
+  version: 0.1.0-documentary
+  family: operational
+  primary_or_diagnostic: diagnostic
+  evaluation_object: MethodFailure
+  applicable_query_forms:
+  - ALL
+  applicable_tracks: *id002
+  required_gold: none
+  required_graph: false
+  required_observability: none
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: median_p90_p95
+  statistical_method: percentile_bootstrap
+  claim_supported: operational_reporting
+  claim_forbidden: quality_proxy
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+- metric_id: endpoint_calls
+  display_name: Endpoint Calls
+  version: 0.1.0-documentary
+  family: operational
+  primary_or_diagnostic: diagnostic
+  evaluation_object: MethodFailure
+  applicable_query_forms:
+  - ALL
+  applicable_tracks: *id002
+  required_gold: none
+  required_graph: false
+  required_observability: none
+  per_item_formula: ''
+  empty_case: see ANSWER_METRIC_CONTRACT
+  failure_case: score 0; remain in denominator
+  aggregation: median_p90_p95
+  statistical_method: percentile_bootstrap
+  claim_supported: operational_reporting
+  claim_forbidden: quality_proxy
+  implementation_status: METRIC_IMPLEMENTATION_PENDING
+  conformance_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED

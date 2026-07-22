@@ -312,3 +312,16 @@ Auditoría estática de `upstream/` y, solo bajo petición explícita, smoke tes
 - Adapters false; benchmark `NOT_CURRENTLY_ELIGIBLE`.
 - PE5/PE6 sin cambio de estado experimental; evidencia preparatoria de provenance añadida.
 - Siguiente: Prompt 18 (T3 métricas/oracle documental).
+
+
+---
+
+## Estado actual post-Prompt 18
+
+- Metric contract RUN_ID: `20260722T093257Z` · version `0.1.0-documentary`.
+- Gate: `METRIC_ORACLE_CONTRACT_DOCUMENTED_READY_FOR_ADAPTER_CONTRACTS`.
+- Primary metrics: Answer P/R/F1 + Execution Exact; set semantics; empty≠no_output.
+- RDF/SPARQL canonicalization V1; oracle/linking observability defined; stats (bootstrap 10000, Holm).
+- G5 documentary satisfied; G5 runtime pending; G4 still not satisfied.
+- Adapters false; benchmark not eligible; no metric implementation.
+- Siguiente: Prompt 19 (T4 adapter contracts documentales).

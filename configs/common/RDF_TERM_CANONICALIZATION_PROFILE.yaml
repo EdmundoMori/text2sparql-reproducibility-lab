@@ -1,0 +1,29 @@
+profile_id: RDF_TERM_CANONICALIZATION_V1
+version: 0.1.0-documentary
+unicode_form: NFC
+iri:
+  lowercase_scheme_host: true
+  remove_default_port: true
+  rfc3986_dot_segments: true
+  normalize_unreserved_percent: true
+  preserve_path_query_fragment_case: true
+  strip_trailing_slash: false
+  follow_redirects: false
+  owl_sameAs: false
+  resolve_labels: false
+literals:
+  case_fold: false
+  collapse_whitespace: false
+  plain_eq_xsd_string_textual: true
+  language_tags_lowercase: true
+  language_tagged_neq_untagged: true
+  numeric_value_space: true
+  implicit_numeric_tolerance: false
+  timezone_only_if_both_explicit: true
+  invent_timezone: false
+blank_nodes:
+  local_id_equality: false
+  result_local_bijection_future: true
+  unresolved_status: GLOBAL_BNODE_CANONICALIZATION_UNRESOLVED
+unbound_token: UNBOUND
+implementation_status: METRIC_IMPLEMENTATION_PENDING

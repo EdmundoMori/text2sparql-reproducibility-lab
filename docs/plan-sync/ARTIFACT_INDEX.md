@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-22 (Prompt 17)  
+**Última actualización:** 2026-07-22 (Prompt 18)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -298,3 +298,13 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | `.env` | No | Secretos |
 
 El planificador **puede** leer el código en `upstream/` directamente en el repo.
+
+| P18-DIR | Metric/oracle pack | `docs/protocols/common/metrics/20260722T093257Z/` | 18 |
+| P18-GATE | Metric gate | `docs/protocols/common/metrics/20260722T093257Z/METRIC_ORACLE_CONTRACT_GATE.md` | G5 doc |
+| P18-REG | Metric registry | `configs/common/COMMON_METRIC_REGISTRY.yaml` | 0.1.0-documentary |
+| P18-VEC | Conformance vectors | `docs/protocols/common/metrics/20260722T093257Z/METRIC_CONFORMANCE_TEST_VECTORS.yaml` | not executed |
+| P18-RPT | Metric/oracle report | `audit/PHASE2_METRIC_ORACLE_CONTRACT_REPORT.md` | 18 |
+| P18-DEC | Decision 009 | `docs/decisions/009_common_metric_oracle_and_statistics_contract.md` | 18 |
+| P18-NEXT | Next after metric | `audit/NEXT_AFTER_METRIC_ORACLE_CONTRACT_DECISION.md` | Prompt19 |
+| P18-Q | Post-T3 queue | `audit/PHASE2_POST_T3_QUEUE.csv` | T4 selected |
+| P18-LOG | Logs Prompt 18 | `logs/metric-oracle-contract/20260722T093257Z/` | documental |

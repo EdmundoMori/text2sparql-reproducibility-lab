@@ -1,66 +1,40 @@
-# COMMON_PROTOCOL_PROFILE — Prompt 16 framework + Prompt 17 provenance
+# COMMON_PROTOCOL_PROFILE — Prompt 16–18
 protocol_id: common_text2sparql_eval
-protocol_version: "0.1.1-provenance"
+protocol_version: "0.1.2-metric-oracle"
 protocol_run_id: "20260722T083201Z"
 dataset_provenance_run_id: "20260722T090627Z"
-phase: phase2_dataset_provenance_documented
+metric_contract_run_id: "20260722T093257Z"
+metric_contract_version: "0.1.0-documentary"
+phase: phase2_metric_oracle_contract_documented
 primary_dataset_candidate: QALD9_PLUS_EN_DBPEDIA
 secondary_dataset_candidate: LCQUAD2_DBPEDIA18
 secondary_dataset_extension: LCQUAD2_WIKIDATA
 qald9plus_source_pin: "8eb038a61e1bc09cbd21640aa667a1714f53cda4"
 lcquad2_source_pin: "0a5f8f85b6f863c3b80f0fa02839e25d438af3ae"
-temporal_pin_type: CURRENT_SOURCE_SNAPSHOT_NOT_PUBLICATION_RELEASE
-track_ids:
-  - IA_Q_ONLY
-  - IA_SCHEMA_COMMON
-  - IA_ORACLE_GROUNDING
-  - IA_FIXED_EXTERNAL_GROUNDING
-  - IA_DOMAIN_NATIVE
-  - IA_HISTORICAL
-execution_style_tags:
-  - ES_SCHEMA_RAG_VALIDATION
-  - ES_AGENTIC_MULTI_CALL
-  - ES_SUPERVISED_GENERATOR
-  - ES_DETERMINISTIC_SCHEMA_CONSTRUCTION
-  - ES_COT_RETRIEVAL
-  - ES_DOMAIN_FINETUNED_RAG
-  - ES_TEMPLATE_HISTORICAL
-adaptation_regimes:
-  - AR_ZERO_SHOT
-  - AR_FEW_SHOT_TRAIN_ONLY
-  - AR_SUPERVISED_TRAIN_SPLIT
-  - AR_DOMAIN_RETRAINED
-  - AR_NATIVE_RELEASED_ASSET
-  - AR_ORACLE_INPUT
-model_control_regimes:
-  - MC_NATIVE_BACKBONE
-  - MC_CONTROLLED_BACKBONE
 primary_metrics:
   - answer_precision
   - answer_recall
   - answer_f1
   - execution_exact_accuracy
-diagnostic_metrics:
-  - syntax_validity_rate
-  - executable_query_rate
-  - entity_linking_f1
-  - relation_linking_f1
-operational_metrics:
-  - total_latency_ms
-  - estimated_cost_usd
-  - llm_calls
-  - endpoint_calls
+rdf_canonicalization_profile: RDF_TERM_CANONICALIZATION_V1
+sparql_canonicalization_profile: SPARQL_CANONICALIZATION_V1_CONSERVATIVE
+result_table_semantics: SET_OF_ROWS
+oracle_contract_status: ORACLE_CONTRACT_DEFINED
+linking_observability_status: DEFINED
+statistical_contract_status: STATISTICAL_CONTRACT_DEFINED
+conformance_vectors_status: CONFORMANCE_VECTORS_DEFINED_NOT_EXECUTED
+metric_implementation_status: METRIC_IMPLEMENTATION_PENDING
+gold_materialization_status: GOLD_MATERIALIZATION_PENDING
 dataset_pin_status: SOURCE_COMMIT_PINNED_TEMPORAL_PAYLOAD_NOT_ACQUIRED
 graph_pin_status: GRAPH_SNAPSHOT_PENDING
-provenance_status: SOURCE_PROVENANCE_DOCUMENTED_PAYLOAD_NOT_ACQUIRED
 payload_status: DATASET_PAYLOAD_NOT_ACQUIRED
-metric_detail_status: METRIC_DETAIL_PENDING
-oracle_contract_status: ORACLE_CONTRACT_PENDING
+g4_status: G4_RUNTIME_PIN_NOT_SATISFIED
+g5_documentary_status: G5_DOCUMENTARY_CONTRACT_SATISFIED
+g5_runtime_status: G5_IMPLEMENTATION_AND_CONFORMANCE_PENDING
 adapter_status: disabled_common_adapter_allowed_false
 benchmark_status: NOT_CURRENTLY_ELIGIBLE
-g4_status: G4_RUNTIME_PIN_NOT_SATISFIED
 zero_cost_policy: MAX_EXTERNAL_MONETARY_COST_USD_0.00
-next_action: T3_METRIC_SPECIFICATION_AND_ORACLE_CONTRACT
-next_prompt: Prompt_18
-claim_boundary: SOURCE_PROVENANCE_DOCUMENTED_no_benchmark_no_adapters_no_payload
-gate: DATASET_PROVENANCE_DOCUMENTED_READY_FOR_METRIC_ORACLE_CONTRACT
+next_action: T4_TRACK_SPECIFIC_ADAPTER_CONTRACTS
+next_prompt: Prompt_19
+gate: METRIC_ORACLE_CONTRACT_DOCUMENTED_READY_FOR_ADAPTER_CONTRACTS
+claim_boundary: METRIC_ORACLE_CONTRACT_DOCUMENTED_no_impl_no_benchmark

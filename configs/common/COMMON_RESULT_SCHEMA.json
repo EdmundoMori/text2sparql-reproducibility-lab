@@ -156,6 +156,55 @@
     },
     "claim_boundary": {
       "type": "string"
+    },
+    "metric_contract_version": {
+      "type": "string"
+    },
+    "canonicalization_version": {
+      "type": "object"
+    },
+    "gold_manifest": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "prediction_result": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "per_item_metrics": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "aggregate_metrics": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "failure_status": {
+      "type": "string"
+    },
+    "observability": {
+      "type": "object"
+    },
+    "oracle": {
+      "type": "object"
+    },
+    "statistical_results": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "metric_implementation_status": {
+      "type": "string",
+      "const": "METRIC_IMPLEMENTATION_PENDING"
     }
   },
   "additionalProperties": true

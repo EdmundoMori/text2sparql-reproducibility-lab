@@ -1,0 +1,8 @@
+method_id,native_metric,native_metric_source,common_metric_candidate,exactly_equivalent,mapping_type,reason,native_result_available,common_result_available,direct_numeric_comparison_allowed,claim_boundary,evidence
+sgpt,Table4_F1_or_Acc,audit/sgpt/METRICS_AUDIT.md,answer_f1,false,CONCEPTUALLY_RELATED_NOT_EQUIVALENT,native protocol≠common graph/denom,partial_smoke,false,false,no_numeric_equivalence,PAPER_TABLE4_CODE_MAPPING.csv
+firesparql,reported_paper_metrics,audit/firesparql/METRICS_AUDIT.md,answer_f1,false,NATIVE_ONLY,domain ORKG; incomplete artifacts,partial,false,false,domain≠common,RESULT_PROVENANCE
+cot_sparql,paper_eval_metrics,audit/cot_sparql/EVALUATION_AND_METRICS_AUDIT.md,answer_f1,false,CONCEPTUALLY_RELATED_NOT_EQUIVALENT,external grounding track,unknown,false,false,track_separate,EVALUATION_AND_METRICS_AUDIT
+mkgqagent,GERBIL_or_agent_scores,audit/mkgqagent/STATIC_AUDIT.md,answer_f1,false,CONCEPTUALLY_RELATED_NOT_EQUIVALENT,native GERBIL≠lab common,false,false,false,no_equivalence,STATIC_AUDIT
+rdfconfig_llm,companion_eval,audit/rdfconfig_llm/STATIC_AUDIT.md,syntax_validity_rate,false,UNKNOWN,schema construction focus,false,false,false,unknown,STATIC_AUDIT
+sparql_llm,text2sparql_tests,upstream/sparql_llm/tests/text2sparql/README.md,normalized_query_exact_match,false,CONCEPTUALLY_RELATED_NOT_EQUIVALENT,query_transform≠answer F1,tests_present,false,false,structure≠answer,query_transform.py
+common,n_a,n_a,execution_exact_accuracy,n_a,COMMON_ONLY,lab-defined primary,false,false,false,common_only,metrics/20260722T093257Z
