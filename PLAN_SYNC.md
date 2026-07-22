@@ -2,11 +2,11 @@
 
 **Audiencia:** ChatGPT e investigador.  
 **Repo:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-**Última actualización:** 2026-07-21 (Prompt **14B2** — P2B no-grad)  
+**Última actualización:** 2026-07-22 (Prompt **14C** — one-step reduced training)  
 **Fase:** 1 — native audit; **abierta**  
-**SHA inicial 14B2:** `0199c93ff7e5715433177dc198d778e07441ced8`
+**SHA inicial 14C:** `20d1165d07ab41423266eb9e24c46bfca6244126`
 
-> ZERO_COST. P2B **PASS** (1 forward). Sin train. Auth 14B2 consumida.
+> ZERO_COST. One-step **PASS** (canario). Auth 14C attempt-2 consumida. **No** Table 4. **No** PE3.
 
 ---
 
@@ -16,28 +16,27 @@ reproducción nativa → evaluación común → caso de estudio → errores → 
 
 ---
 
-## 2. Prompt 14B2 — resumen
+## 2. Prompt 14C — resumen
 
 | Campo | Valor |
 |---|---|
-| RUN_ID | `20260721T163853Z` |
-| Clasificación | **`Z3_P2B_NOGRAD_FORWARD_PASS`** |
-| Forward count | 1 |
-| Loss técnica | ~45.16 |
-| Logits | [1, 74, 50263] |
-| Train / backward | 0 |
+| RUN_ID (attempt 2) | `20260722T072146Z` |
+| Attempt 1 | `20260721T183611Z` → `Z3_OTHER_FAILED` (harness scheduler count) |
+| Clasificación | **`Z3_ONE_STEP_REDUCED_TRAINING_PASS`** |
+| Canario | train 8714 / val 3988 / test 6077 |
+| Optimizer steps esperados | **1** (pre-step budget OK) |
+| Checkpoint | `checkpoint-1` (workdir only) |
 | Coste | **0.00** |
 | `reproduction_status` | `audit_only` |
+| Auth | `AUTHORIZED_AND_CONSUMED_14C_ATTEMPT2` |
 
-Informe: `audit/sgpt/Z3_P2B_NOGRAD_FORWARD_REPORT.md`
+Informe: `audit/sgpt/Z3_ONE_STEP_REDUCED_TRAINING_REPORT.md`
 
 ---
 
 ## 3. Siguiente prompt (único)
 
-Tras firma training approval:
-
-**Prompt 14C — Ejecución SGPT Z3 one-step reduced training smoke, ZERO_COST, sin Table 4.**
+**Prompt 14D — Cierre documental Z3 one-step + re-gate ZERO_COST (sin nuevo train).**
 
 ---
 
@@ -52,11 +51,10 @@ Tras firma training approval:
 
 ---
 
-## 5. Registro Prompt 14B2
+## 5. Registro Prompt 14C
 
 | Campo | Valor |
 |---|---|
-| commit inicial | `0199c93ff7e5715433177dc198d778e07441ced8` |
-| ARTIFACT_COMMIT | 378d193e3638670b174228b00a536a265ec27853 |
-| FINAL_HEAD | 378d193e3638670b174228b00a536a265ec27853 |
-| push | done |
+| commit inicial | `20d1165d07ab41423266eb9e24c46bfca6244126` |
+| ARTIFACT_COMMIT | _(pendiente este cierre)_ |
+| push | _(pendiente)_ |

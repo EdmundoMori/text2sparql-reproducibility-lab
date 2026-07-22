@@ -526,10 +526,10 @@ methods:
   adapter_legal_gate: conditional_deferred
   generality_class: retraining_required
   gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-  next_native_action: await_human_z3_one_step_training_approval
+  next_native_action: document_z3_one_step_closure_regate
   next_native_action_class: GO_NEXT_ZERO_COST
   gate_confidence: high
-  next_execution_prompt: Prompt_14C_one_step_training_AFTER_human_approval_ZERO_COST
+  next_execution_prompt: Prompt_14D_document_Z3_closure_and_zero_cost_regate
   execution_blockers:
   - checkpoint_absent_in_repo
   - vram_6GiB_vs_paper_2x12GB
@@ -538,10 +538,11 @@ methods:
   - metric_double_update_anomaly
   - gpt2_download_requires_network
   - epochs_cli_vs_params_json_divergence
-  notes: "Prompt 14B2: single no-grad forward PASS; loss technical only; no train; auth 14B2 consumed; audit_only; native_audit_complete=false."
+  notes: "Prompt 14C: one-step reduced training PASS on canary; attempt1 harness FAIL then human reauth; NOT Table4; audit_only;
+    native_audit_complete=false; common_adapter_allowed=false."
 
   zero_cost_gate_class: GO_NEXT_ZERO_COST
-  zero_cost_next_action: Prompt_14C_after_training_approval
+  zero_cost_next_action: Prompt_14D
   zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
   zero_cost_gate_confidence: high
   environment_definition_artifact: audit/sgpt/ENVIRONMENT_DEFINITION_REPORT.md
@@ -552,15 +553,13 @@ methods:
   python_declared_version: '3.8'
   torch_declared_version: 1.13.1
   transformers_pin_status: INSTALLED_4.25.1_RUNTIME_VERIFIED
-  gpt2_download_status: not_downloaded
+  gpt2_download_status: DOWNLOADED_AND_VERIFIED_14B
   z2_preflight_status: Z2_ENV_IMPORT_DATA_METRIC_PASS
-  z3_reduced_training_status: protocol_defined_awaiting_artifact_authorization
+  z3_reduced_training_status: Z3_ONE_STEP_REDUCED_TRAINING_PASS
   remaining_environment_blockers:
   - nltk_data_not_authorized
-  - gpt2_not_authorized
   - checkpoints_absent
   - table4_not_reproduced
-  - z3_protocol_not_yet_documented
   environment_artifacts: environments/sgpt/
   pin_resolution_status: direct_pins_candidate_ready
   pin_resolution_run_id: 20260721T113310Z
@@ -605,10 +604,10 @@ methods:
   post_z2_queue_artifact: audit/POST_Z2_ZERO_COST_QUEUE.csv
   pe2_evidence_tags:
   - SGPT_Z2_ENVIRONMENT_AND_CORE_PREFLIGHT_VERIFIED
-  z3_protocol_status: defined_ready_for_artifact_preflight_authorization
+  z3_protocol_status: one_step_smoke_complete_awaiting_closure
   z3_protocol_run_id: 20260721T134213Z
   z3_protocol_artifact: audit/sgpt/Z3_REDUCED_TRAINING_PROTOCOL_REPORT.md
-  z3_protocol_gate: READY_FOR_Z3_ONE_STEP_TRAINING_AUTHORIZATION
+  z3_protocol_gate: Z3_ONE_STEP_SMOKE_COMPLETE_AWAITING_CLOSURE
   z3_variant: lcquad2_question_only_cpu
   z3_dataset: lcquad2
   z3_canary_status: proposed_deterministic_1_1_1
@@ -622,15 +621,15 @@ methods:
   z3_summary_writer_dependency: tensorboardX==2.5.1_INSTALLED
   z3_model_preflight_status: Z3_P2A_MODEL_LOAD_PREFLIGHT_PASS
   z3_download_authorization_status: AUTHORIZED_AND_CONSUMED_14B_P1_P2A
-  z3_training_authorization_status: UNSIGNED_FORM_READY
-  z3_training_execution_status: NOT_EXECUTED
+  z3_training_authorization_status: AUTHORIZED_AND_CONSUMED_14C_ATTEMPT2
+  z3_training_execution_status: Z3_ONE_STEP_REDUCED_TRAINING_PASS
   z3_resource_budget_status: PROPOSED_RESOURCE_BOUND
-  z3_claim_boundary: reduced_training_smoke_only_future_max
+  z3_claim_boundary: reduced_training_smoke_only
   remaining_z3_blockers:
-  - human_one_step_training_authorization_unsigned
-  - one_step_training_not_executed
   - table4_not_reproduced
   - checkpoints_absent_paper
+  - full_training_not_executed
+  - metric_quality_not_claimed
   z3_protobuf_pin: 3.20.1_INSTALLED
   z3_p2b_status: Z3_P2B_NOGRAD_FORWARD_PASS
   z3_build_run_id: 20260721T135432Z
@@ -639,6 +638,10 @@ methods:
   z3_p2b_run_id: 20260721T163853Z
   z3_p2b_report: audit/sgpt/Z3_P2B_NOGRAD_FORWARD_REPORT.md
   z3_p2b_authorization_status: AUTHORIZED_AND_CONSUMED_14B2_P2B
+  z3_one_step_run_id: 20260722T072146Z
+  z3_one_step_report: audit/sgpt/Z3_ONE_STEP_REDUCED_TRAINING_REPORT.md
+  z3_one_step_attempt1_run_id: 20260721T183611Z
+  z3_one_step_attempt1_status: Z3_OTHER_FAILED
 - method_id: tebaqa
   display_name: TeBaQA
   repositories:

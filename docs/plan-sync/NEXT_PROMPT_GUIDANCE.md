@@ -1,15 +1,10 @@
 # NEXT_PROMPT_GUIDANCE
 
-**Fecha:** 2026-07-21  
-**Tras:** Prompt 14B2 — P2B no-grad forward **PASS**
+**Fecha:** 2026-07-22  
+**Tras:** Prompt 14C — one-step reduced training **PASS**
 
-## Prerrequisito humano
+## Prompt recomendado (único)
 
-Firmar:
-`docs/protocols/sgpt/z3/20260721T134213Z/HUMAN_Z3_ONE_STEP_TRAINING_APPROVAL.md`
+**Título:** Prompt 14D — Cierre documental Z3 one-step + re-gate ZERO_COST (sin nuevo train).
 
-## Prompt recomendado (único) tras aprobación
-
-**Título:** Prompt 14C — Ejecución SGPT Z3 one-step reduced training smoke, ZERO_COST, sin Table 4.
-
-**Restricciones:** ZERO_COST; auth 14B2 **no** cubre train; conservar `audit_only`.
+**Restricciones:** ZERO_COST; auth 14C **consumida**; no re-train; no Table 4; conservar `audit_only`.

@@ -1,0 +1,28 @@
+{
+  "classification": "Z3_OTHER_FAILED",
+  "pre_step_budget": {
+    "train_n": 1,
+    "train_batch_size": 1,
+    "len_dataloader": 1,
+    "expected_optimizer_steps": 1
+  },
+  "counters": {
+    "optimizer_step": 1,
+    "scheduler_step": 2,
+    "backward": 1
+  },
+  "artifacts": {
+    "output_dir_exists": true,
+    "checkpoint_1": false,
+    "eval_results": false,
+    "params_json": false,
+    "training_args_bin": false,
+    "files": [
+      "events.out.tfevents.1784659121.cd0ae0fe3e2d"
+    ]
+  },
+  "elapsed_seconds": 137.758,
+  "error": "RuntimeError('Z3_UNAUTHORIZED_ACTION_ABORT: more than one scheduler.step')",
+  "traceback": "Traceback (most recent call last):\n  File \"z3_one_step_train_launcher.py\", line 120, in main\n    train_mod.main()\n  File \"/work/train.py\", line 328, in main\n    global_step = train(args, train_dataset, eval_dataset, model, tokenizer, run_batch_fn_train, run_batch_fn_eval)\n  File \"/work/train.py\", line 116, in train\n    scheduler.step()\n  File \"z3_one_step_train_launcher.py\", line 48, in counted_sched_step\n    raise RuntimeError(\"Z3_UNAUTHORIZED_ACTION_ABORT: more than one scheduler.step\")\nRuntimeError: Z3_UNAUTHORIZED_ACTION_ABORT: more than one scheduler.step\n",
+  "cuda": false
+}

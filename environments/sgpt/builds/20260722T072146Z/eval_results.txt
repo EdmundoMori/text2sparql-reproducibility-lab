@@ -1,0 +1,6 @@
+***** Eval results 1 *****
+loss = 16.834726333618164
+perplexity = tensor(20475228.)
+***** Eval results test *****
+loss = 18.334009170532227
+perplexity = tensor(91697824.)

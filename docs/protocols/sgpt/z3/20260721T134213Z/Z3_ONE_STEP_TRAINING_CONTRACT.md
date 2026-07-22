@@ -1,17 +1,27 @@
-# Z3_ONE_STEP_TRAINING_CONTRACT (futuro P3)
+# Z3_ONE_STEP_TRAINING_CONTRACT (P3)
 
-**RUN_ID:** `20260721T134213Z` · **NOT_EXECUTED** · requiere `HUMAN_Z3_ONE_STEP_TRAINING_APPROVAL`
+**RUN_ID protocolo:** `20260721T134213Z`  
+**Estado:** **EXECUTED** (Prompt 14C)  
+**Auth:** `AUTHORIZED_AND_CONSUMED_14C_ATTEMPT2`
 
-## Criterios esperados (propuestos)
-subset 1/1/1; `per_gpu_train_batch_size=1`; `grad_accum=1`; `--epochs 1`; CPU; seed 42; sin workers; sin fp16/distributed/knowledge/masked; scheduler linear; loss/grad finitos; `optimizer.step` una vez; eval val inherente; eval test; checkpoints/guardado/recarga del código.
+## Resultado
 
-## Fórmula (validar pre-run)
-```
-expected_steps = (len(train_dataloader) // gradient_accumulation_steps) * num_train_epochs
-```
-Con canario y `per_gpu=1`, `n_gpu=0→factor 1`, **esperado documentado = 1**.  
-**No afirmar de antemano** que `global_step` será 1 sin validación pre-run. Divergencia → **NO-GO**.
+| Campo | Valor |
+|---|---|
+| Attempt 1 | `20260721T183611Z` → `Z3_OTHER_FAILED` |
+| Attempt 2 | `20260722T072146Z` → **`Z3_ONE_STEP_REDUCED_TRAINING_PASS`** |
+| Imagen | `text2sparql-lab/sgpt-z3-py38:20260721T135432Z` |
+| Image ID | `sha256:3363d73b8a36059698eff046f4a18bd5eaebc689c56f3f825ab1e5f39c273c35` |
+| Canario | 8714 / 3988 / 6077 |
+| expected_optimizer_steps | 1 |
+| Claim | `reduced_training_smoke_only` |
 
-## Resultados futuros
-`Z3_ONE_STEP_REDUCED_TRAINING_PASS` u otros códigos de fallo listados en el prompt  
-(**ninguno** = Table 4).
+## No implica
+
+Table 4 · PE3 · convergencia · calidad · reproducción nativa completa
+
+## Evidencia versionable
+
+`audit/sgpt/Z3_ONE_STEP_REDUCED_TRAINING_REPORT.md`  
+`environments/sgpt/builds/20260722T072146Z/`  
+Pesos/checkpoints: solo `workdir/` (gitignore).

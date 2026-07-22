@@ -1,0 +1,22 @@
+run_id: "20260722T072146Z"
+prompt: "14C"
+classification: Z3_ONE_STEP_REDUCED_TRAINING_PASS
+protocol_run_id: "20260721T134213Z"
+p2a_run_id: "20260721T135432Z"
+p2b_run_id: "20260721T163853Z"
+attempt: 2
+prior_attempt_run_id: "20260721T183611Z"
+image: "text2sparql-lab/sgpt-z3-py38:20260721T135432Z"
+image_id: "sha256:3363d73b8a36059698eff046f4a18bd5eaebc689c56f3f825ab1e5f39c273c35"
+gpt2_revision: "607a30d783dfa663caf39e06633721c8d4cfcd7e"
+canary:
+  train_uid: 8714
+  val_uid: 3988
+  test_uid: 6077
+variant: lcquad2_question_only_cpu
+expected_optimizer_steps: 1
+monetary_cost_usd: 0.00
+authorization: AUTHORIZED_AND_CONSUMED_14C_ATTEMPT2
+claim_boundary: reduced_training_smoke_only
+weights_location: workdir/runs/sgpt-z3/20260722T072146Z/disposable/runs/ (gitignored)
+launcher_sha256: 2df9514ab2afc930889a3ef765a79a60f71da9c78795d869f40fa614022981cb

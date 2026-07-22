@@ -1,0 +1,42 @@
+{
+  "classification": "Z3_ONE_STEP_REDUCED_TRAINING_PASS",
+  "attempt": 2,
+  "run_id": "20260722T072146Z",
+  "evidence_basis": "native_train_entrypoint_artifacts_and_logs",
+  "harness_note": "Optimizer.step counter missed transformers.AdamW.step override; PASS based on checkpoint-1/global_step naming, single Iteration 1/1, eval_results, final save",
+  "pre_step_budget": {
+    "expected_optimizer_steps": 1,
+    "len_dataloader": 1,
+    "train_n": 1
+  },
+  "log_markers": {
+    "single_iteration": true,
+    "train_loss_logged": true,
+    "checkpoint_1_saved": true,
+    "final_save": true,
+    "eval_val": true,
+    "eval_test": true
+  },
+  "artifacts": {
+    "checkpoint_1": true,
+    "eval_results": true,
+    "params_json": true,
+    "training_args_bin": true,
+    "final_pytorch_model_bin": true,
+    "output_bytes": 1822554263
+  },
+  "eval_results_txt": "***** Eval results 1 *****\nloss = 16.834726333618164\nperplexity = tensor(20475228.)\n***** Eval results test *****\nloss = 18.334009170532227\nperplexity = tensor(91697824.)\n",
+  "technical_losses": {
+    "train_iter": 31.3,
+    "val": 16.834726333618164,
+    "test": 18.334009170532227
+  },
+  "claim_boundary": "reduced_training_smoke_only; NOT Table4; NOT PE3; NOT quality",
+  "downloads": 0,
+  "monetary_cost_usd": 0.0,
+  "text_artifact_sha256": {
+    "eval_results.txt": "65cc0d3af8195204ab5d19a868cac3890760174222280ddc616350b23bfb5d1f",
+    "params.json": "7298a2929a6742d8575e6568bdceb91982f1d28256c022bf48181472f650c200",
+    "config.json": "3b1a66ba5dc66ff1ae5ff182a2c90f9a4f317c7e39a3b5bc4c981a14b8d3c5a7"
+  }
+}
