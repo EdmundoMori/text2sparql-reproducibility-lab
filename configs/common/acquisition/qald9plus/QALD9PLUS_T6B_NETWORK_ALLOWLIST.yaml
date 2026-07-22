@@ -1,0 +1,22 @@
+allowlist_id: QALD9PLUS_T6B_NETWORK_ALLOWLIST
+status: DOCUMENTARY_ONLY_NOT_ACTIVE
+allowed_hosts:
+- raw.githubusercontent.com
+- api.github.com
+allowed_repository: Perevalov/qald_9_plus
+allowed_commit: 8eb038a61e1bc09cbd21640aa667a1714f53cda4
+allowed_paths:
+- data/qald_9_plus_train_dbpedia.json
+- data/qald_9_plus_test_dbpedia.json
+- LICENSE
+- CITATION.cff
+allowed_immutable_raw_urls:
+- https://raw.githubusercontent.com/Perevalov/qald_9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/data/qald_9_plus_train_dbpedia.json
+- https://raw.githubusercontent.com/Perevalov/qald_9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/data/qald_9_plus_test_dbpedia.json
+- https://raw.githubusercontent.com/Perevalov/qald_9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/LICENSE
+- https://raw.githubusercontent.com/Perevalov/qald_9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/CITATION.cff
+api_github_use: metadata_only
+all_other_hosts_and_paths: DENY
+mirrors: DENY
+archives: DENY
+redirects_to_non_allowlisted: DENY

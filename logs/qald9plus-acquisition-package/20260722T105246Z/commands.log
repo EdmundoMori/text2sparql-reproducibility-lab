@@ -1,0 +1,10 @@
+# commands.log Prompt 21A RUN_ID=20260722T105246Z
+git fetch origin
+git branch --show-current # main
+git rev-parse HEAD # 7628a8c68c9070819dab8a221c71d54341ba62b6
+git rev-parse origin/main # 7628a8c68c9070819dab8a221c71d54341ba62b6
+git status --short # clean
+# GitHub API metadata only for commit/tree/contents size+sha
+# raw LICENSE + CITATION.cff small text only
+# NO raw JSON dataset · NO archive · NO graph · NO SPARQL · NO T6B · NO downloader code
+# external cost = 0.00

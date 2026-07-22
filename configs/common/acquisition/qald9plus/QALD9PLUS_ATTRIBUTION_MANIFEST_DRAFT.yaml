@@ -1,0 +1,43 @@
+manifest_id: QALD9PLUS_ATTRIBUTION_MANIFEST_DRAFT
+status: DRAFT_NOT_APPLIED
+artifact_id: QALD9_PLUS_EN_DBPEDIA
+artifact_type: dataset
+title: 'QALD-9-plus: A Multilingual Dataset for Question Answering over DBpedia and Wikidata Translated by Native Speakers'
+authors_or_owner:
+- given-names: Aleksandr
+  family-names: Perevalov
+  orcid: https://orcid.org/0000-0002-6803-3357
+  affiliation: Anhalt University of Applied Sciences
+- given-names: Dennis
+  family-names: Diefenbach
+  orcid: https://orcid.org/0000-0002-0046-2219
+  affiliation: Laboratoire Hubert Curien CNRS UMR 5516 Université de Lyon
+- given-names: Ricardo
+  family-names: Usbeck
+  orcid: https://orcid.org/0000-0002-0191-7211
+  affiliation: Universität Hamburg
+- given-names: Andreas
+  family-names: Both
+  orcid: https://orcid.org/0000-0002-9177-5463
+  affiliation: Anhalt University of Applied Sciences
+authors_display: Aleksandr Perevalov, Dennis Diefenbach, Ricardo Usbeck, Andreas Both
+source: https://github.com/Perevalov/qald_9_plus
+revision: 8eb038a61e1bc09cbd21640aa667a1714f53cda4
+license_identifier: CC-BY-4.0
+license_source: https://raw.githubusercontent.com/Perevalov/qald_9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/LICENSE
+copyright_notice: See LICENSE (CC BY 4.0) at pinned revision
+attribution_text_draft: 'QALD-9-plus: A Multilingual Dataset for Question Answering over DBpedia and Wikidata Translated by
+  Native Speakers (Aleksandr Perevalov, Dennis Diefenbach, Ricardo Usbeck, Andreas Both). Source: https://github.com/Perevalov/qald_9_plus
+  @ 8eb038a61e1bc09cbd21640aa667a1714f53cda4. Licensed under CC BY 4.0. Citation metadata from CITATION.cff at the same pin.
+  Paper DOI (Prompt 17 Crossref evidence, not present in CITATION.cff): 10.1109/ICSC52841.2022.00045.'
+indication_of_changes: no changes during acquisition
+future_derived_views: must_record_changes
+source_link: https://github.com/Perevalov/qald_9_plus/tree/8eb038a61e1bc09cbd21640aa667a1714f53cda4
+included_license_destination: workdir/datasets/qald9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/legal/LICENSE
+included_citation_destination: workdir/datasets/qald9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/legal/CITATION.cff
+paper_doi_evidence: Prompt17_Crossref_OFFICIAL_PAPER_VERIFIED_not_in_CITATION_cff
+evidence_hashes:
+  license_sha256: 7e7170e3cebf88a9f60c7b8421418323c09304da1af4d5e90f4da1dc1c8a2661
+  citation_sha256: 40c2e632613eea4599d7d6742b935b5b207351c31b4026e729e8b8121fc31887
+  commit_tree_oid: 7159958810958ff185187cf603e2c4a997dc2df9
+generated_at: 20260722T105246Z

@@ -2,15 +2,16 @@
 
 **Audiencia:** ChatGPT e investigador.  
 **Repo:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-**Última actualización:** 2026-07-22 (Prompt **20** — legal eligibility recheck)  
-**Fase:** 1 **cerrada** · 2 **legal recheck complete** (T6A acquisition auth package pending)  
-**SHA inicial 20:** `e209fb4044125516d04ee04d1638ad5b00d448c3`  
-**Legal RUN_ID:** `20260722T102434Z`  
+**Última actualización:** 2026-07-22 (Prompt **21A** — QALD acquisition authorization package)  
+**Fase:** 1 **cerrada** · 2 **T6A package ready** (human authorization pending)  
+**SHA inicial 21A:** `7628a8c68c9070819dab8a221c71d54341ba62b6`  
+**Acquisition package RUN_ID:** `20260722T105246Z`  
 
-> ZERO_COST. Gate `LEGAL_RECHECK_COMPLETE_PARTIAL_SCOPE_READY_FOR_ACQUISITION_AUTHORIZATION_PACKAGE`.  
-> G3C: SPARQL-LLM/SGPT SATISFIED · otros NOT_SATISFIED. G3 composite CONDITIONAL/NOT_SATISFIED.  
-> QALD candidate after auth · LC-QuAD HOLD · Zenodo RDFConfig separado.  
-> G4 **no** · G5 runtime **pending** · G6D **sí** · G6I **pending**. Adapters **false**. Benchmark **no**. Sin descargas. Objetivo largo plazo intacto.
+> ZERO_COST. Gate `QALD9PLUS_ACQUISITION_PACKAGE_READY_FOR_HUMAN_AUTHORIZATION`.  
+> Scope: 4 archivos QALD EN/DBpedia · total **7815874** · pin `8eb038a61e1bc09cbd21640aa667a1714f53cda4` · tree `7159958810958ff185187cf603e2c4a997dc2df9`.  
+> Authorization **UNSIGNED** · acquisition **NOT_ACQUIRED** · form humano pendiente.  
+> G4 **no** · G5 runtime **pending** · G6D **sí** · G6I **pending**. Adapters **false**. Benchmark **no**.  
+> Siguiente: **decisión humana** (no Cursor prompt ejecutable). Objetivo largo plazo intacto.
 
 ---
 
@@ -20,20 +21,21 @@ reproducción nativa → evaluación común → caso de estudio → errores → 
 
 ---
 
-## 2. Prompt 20 — resumen
+## 2. Prompt 21A — resumen
 
 | Campo | Valor |
 |---|---|
-| RUN_ID | `20260722T102434Z` |
-| Gate | **LEGAL_RECHECK_COMPLETE_PARTIAL_SCOPE_READY_FOR_ACQUISITION_AUTHORIZATION_PACKAGE** |
-| G3C | SPARQL-LLM/SGPT MIT pin verified · mKG/RDFConfig GitHub/CoT/FIRE LICENSE_ABSENT |
-| QALD | `LAB_POLICY_ACQUISITION_ELIGIBLE_AFTER_AUTHORIZATION` (CC BY 4.0) |
-| LC-QuAD | `LAB_POLICY_ACQUISITION_HOLD_SCOPE_UNCLEAR` |
-| RDFConfig Zenodo | separate candidate; content equivalence NOT_VERIFIED |
-| Modelos/servicios | inventariados; TERMS_REVIEW_PENDING / NOT_INTERPRETED |
-| G4/G5/G6D/G6I | not / runtime pending / documented / pending |
-| Adapters / benchmark | false / NOT_CURRENTLY_ELIGIBLE |
-| Coste | 0.00 · no download · no implementation |
+| RUN_ID | `20260722T105246Z` |
+| Gate | **QALD9PLUS_ACQUISITION_PACKAGE_READY_FOR_HUMAN_AUTHORIZATION** |
+| Source pin | `8eb038a61e1bc09cbd21640aa667a1714f53cda4` |
+| Tree OID | `7159958810958ff185187cf603e2c4a997dc2df9` |
+| Files | train/test DBpedia JSON + LICENSE + CITATION.cff |
+| Total bytes | 7815874 |
+| Attribution | DRAFT_NOT_APPLIED |
+| Test seal | PLAN_DEFINED (not sealed) |
+| Authorization | UNSIGNED |
+| Acquisition | NOT_ACQUIRED |
+| Coste | 0.00 · no download · no T6B |
 
 ### PE5–PE8
 
@@ -46,31 +48,34 @@ reproducción nativa → evaluación común → caso de estudio → errores → 
 
 ---
 
-## 3. Metadata Prompt 19 (reconciliada)
+## 3. Metadata Prompt 20 (reconciliada)
 
 | Campo | SHA |
 |---|---|
-| ARTIFACT_COMMIT | `3f97ce499fae189e12efcce4c8f450e7b3020d91` |
-| publication metadata commit | `e209fb4044125516d04ee04d1638ad5b00d448c3` |
-| remote tip final post-19 | `e209fb4044125516d04ee04d1638ad5b00d448c3` |
+| ARTIFACT_COMMIT | `127362e3d706a668f528a54371f0ab1bdb6cb8cb` |
+| publication metadata commit | `7628a8c68c9070819dab8a221c71d54341ba62b6` |
+| remote tip final post-20 | `7628a8c68c9070819dab8a221c71d54341ba62b6` |
 
 ---
 
-## 4. Siguiente prompt (único)
+## 4. Siguiente paso (humano; único)
 
-**Prompt 21A — Preparación documental del manifiesto exacto y gate humano para adquisición controlada de QALD-9 Plus EN/DBpedia bajo CC BY 4.0, ZERO_COST, sin descargar datasets ni grafos.**
+**HUMAN_QALD9PLUS_ACQUISITION_AUTHORIZATION**
 
-Acción: **T6A — CONTROLLED_ACQUISITION_AUTHORIZATION_PACKAGE**. Documental. **No ejecutado en 20.**
+Formulario UNSIGNED: `docs/protocols/common/acquisition/qald9plus/20260722T105246Z/HUMAN_QALD9PLUS_ACQUISITION_APPROVAL.md`
 
-Cola: `audit/PHASE2_POST_T5_QUEUE.csv` (T6A → human auth → T6B → T6C LC-QuAD → …).
+**No** hay Prompt Cursor ejecutable hasta decisión humana.  
+Prompt 21B queda **reservado / no autorizado**.
+
+Cola: `audit/PHASE2_POST_T6A_QUEUE.csv`.
 
 ---
 
-## 5. Registro Prompt 20
+## 5. Registro Prompt 21A
 
 | Campo | Valor |
 |---|---|
-| commit inicial | `e209fb4044125516d04ee04d1638ad5b00d448c3` |
-| ARTIFACT_COMMIT | `127362e3d706a668f528a54371f0ab1bdb6cb8cb` |
+| commit inicial | `7628a8c68c9070819dab8a221c71d54341ba62b6` |
+| ARTIFACT_COMMIT | PLACEHOLDER_ARTIFACT |
 | publication metadata commit | *(post-push tip; max 2 commits)* |
 | push | pending |

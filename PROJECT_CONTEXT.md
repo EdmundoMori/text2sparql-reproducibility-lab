@@ -3,7 +3,7 @@
 **Proyecto:** `text2sparql-reproducibility-lab`  
 **Dominio:** Text-to-SPARQL / Knowledge Graph Question Answering (KGQA)  
 **Inicio documental:** 2026-07-18  
-**Fase actual:** Fase 1 **cerrada** · Fase 2 **protocol framework definido** (dataset provenance pending)  
+**Fase actual:** Fase 1 **cerrada** · Fase 2 **framework + provenance + métricas + adapters + legal recheck documentados** · T6A acquisition authorization package **listo / UNSIGNED** · payload **no adquirido** · adapters **deshabilitados** · benchmark **no ejecutado**  
 **Estado:** Fase 1 nativa cerrada (smokes/bloqueos documentados). Clones presentes. Fase 2: framework de evaluación común definido; adapters deshabilitados; benchmark no ejecutado.  
 **Perfil de máquina (obligatorio):** [`MACHINE_PROFILE.md`](MACHINE_PROFILE.md)  
 **Auditoría documental:** `audit/PAPER_CODE_MAPPING.md`, `audit/INITIAL_AUDIT_MATRIX.csv`, `audit/INCLUSION_DECISIONS.md`, `audit/RESOURCE_ESTIMATION.md`  
@@ -280,7 +280,7 @@ Auditoría estática de `upstream/` y, solo bajo petición explícita, smoke tes
 **Fecha cierre Fase 1:** 2026-07-22  
 **Gate:** `PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION`  
 **Qualifier:** `RESIDUAL_METHOD_BLOCKERS_PRESERVED`  
-**phase1_status:** `closed` · **phase2_status:** `legal_recheck_complete_acquisition_authorization_pending`  
+**phase1_status:** `closed` · **phase2_status:** `qald9plus_acquisition_package_ready_human_authorization_pending`  
 **Adapters:** `common_adapter_allowed=false` (todos)  
 **Distribución (6 activos):** smoke_only×2 (sparql_llm, sgpt); blocked×3 (mkgqagent, rdfconfig_llm, cot_sparql); not_reproducible×1 (firesparql)  
 **TeBaQA:** `HISTORICAL_ONLY` (fuera del denominador)  
@@ -354,3 +354,16 @@ Auditoría estática de `upstream/` y, solo bajo petición explícita, smoke tes
 - G4 not satisfied; G5 runtime pending; G6D documented; G6I pending.
 - common_adapter_allowed=false; benchmark NOT_CURRENTLY_ELIGIBLE; no download; no implementation.
 - Siguiente: Prompt 21A (T6A acquisition authorization package documental).
+
+---
+
+## Estado actual post-Prompt 21A
+
+- Acquisition package RUN_ID: `20260722T105246Z`.
+- Gate: `QALD9PLUS_ACQUISITION_PACKAGE_READY_FOR_HUMAN_AUTHORIZATION`.
+- Exact scope: QALD9_PLUS_EN_DBPEDIA · 4 files · total 7815874 · pin `8eb038a61e1bc09cbd21640aa667a1714f53cda4` · tree `7159958810958ff185187cf603e2c4a997dc2df9`.
+- Attribution draft DRAFT_NOT_APPLIED · test seal plan defined · form UNSIGNED.
+- authorization_id null · acquisition NOT_ACQUIRED · no T6B · no download.
+- LC-QuAD HOLD · graph pending · G4 not · G5 runtime pending · G6I pending.
+- common_adapter_allowed=false · benchmark NOT_CURRENTLY_ELIGIBLE.
+- Siguiente: HUMAN_QALD9PLUS_ACQUISITION_AUTHORIZATION (Prompt 21B reservado).

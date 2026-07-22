@@ -1,0 +1,26 @@
+validation.log Prompt 21A
+RUN_ID=20260722T105246Z
+YAML/CSV/JSON parseable: PASS
+commit exact: PASS
+tree OID registered: 7159958810958ff185187cf603e2c4a997dc2df9
+four files only: PASS
+no Wikidata/LC-QuAD/archive: PASS
+sizes exact: PASS
+total 7815874: PASS
+blob OIDs exact: PASS
+Git OID vs SHA-256 separated: PASS
+published SHA-256 unavailable: PASS
+local SHA-256 pending (LICENSE known): PASS
+immutable URLs: PASS
+attribution draft: PASS
+CC BY 4.0 visible: PASS
+test seal defined / not inspected: PASS
+form UNSIGNED: PASS
+authorization_id null: PASS
+acquisition NOT_ACQUIRED: PASS
+no T6B: PASS
+G4 not / G5 runtime pending / G6I pending: PASS
+adapters false / benchmark not eligible: PASS
+exactly one gate: PASS
+next human action unique: PASS
+cost 0.00: PASS

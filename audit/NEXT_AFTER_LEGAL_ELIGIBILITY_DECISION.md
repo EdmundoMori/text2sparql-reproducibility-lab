@@ -25,3 +25,9 @@ T6B download · LC-QuAD acq · graph · model · metric/adapter impl · benchmar
 ## Commits
 
 - ARTIFACT_COMMIT: `127362e3d706a668f528a54371f0ab1bdb6cb8cb`
+
+## Publication metadata (reconciled in Prompt 21A)
+
+- ARTIFACT_COMMIT: `127362e3d706a668f528a54371f0ab1bdb6cb8cb`
+- publication metadata commit: `7628a8c68c9070819dab8a221c71d54341ba62b6`
+- remote tip final post-20: `7628a8c68c9070819dab8a221c71d54341ba62b6`

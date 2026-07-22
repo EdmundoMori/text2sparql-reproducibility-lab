@@ -1,12 +1,26 @@
 # NEXT_PROMPT_GUIDANCE
 
 **Fecha:** 2026-07-22  
-**Tras:** Prompt 20 — legal eligibility recheck (`20260722T102434Z`)
+**Tras:** Prompt 21A — QALD acquisition authorization package (`20260722T105246Z`)
 
-## Prompt recomendado (único)
+## Estado
 
-**Título:** Prompt 21A — Preparación documental del manifiesto exacto y gate humano para adquisición controlada de QALD-9 Plus EN/DBpedia bajo CC BY 4.0, ZERO_COST, sin descargar datasets ni grafos.
+**HUMAN AUTHORIZATION REQUIRED**
 
-**Acción:** T6A — CONTROLLED_ACQUISITION_AUTHORIZATION_PACKAGE
+- No hay prompt ejecutable para Cursor.
+- No ejecutar Prompt 21B.
+- No usar `GO_NEXT_ZERO_COST` para T6B automático.
 
-**Restricciones:** ZERO_COST; documental; sin descarga; sin implementación; `common_adapter_allowed=false`; G6I pending; LC-QuAD permanece HOLD (T6C separado); no ejecutar T6B.
+## Acción humana
+
+Completar y firmar (fuera de Cursor):
+
+`docs/protocols/common/acquisition/qald9plus/20260722T105246Z/HUMAN_QALD9PLUS_ACQUISITION_APPROVAL.md`
+
+Estado actual del formulario: **UNSIGNED**.
+
+## Prompt reservado (NO autorizado)
+
+**Título:** Prompt 21B — Adquisición controlada y validación de QALD-9 Plus EN/DBpedia desde el pin fijado, ZERO_COST, sin grafos, adapters ni benchmark.
+
+Solo tras autorización humana explícita.

@@ -1,0 +1,39 @@
+acquisition_scope_id: QALD9PLUS_EN_DBPEDIA_T6B
+authorization_id: null
+package_run_id: 20260722T105246Z
+package_gate: QALD9PLUS_ACQUISITION_PACKAGE_READY_FOR_HUMAN_AUTHORIZATION
+source_repository: Perevalov/qald_9_plus
+source_pin: 8eb038a61e1bc09cbd21640aa667a1714f53cda4
+commit_tree_oid: 7159958810958ff185187cf603e2c4a997dc2df9
+logical_view: QALD9_PLUS_EN_DBPEDIA
+temporal_pin: CURRENT_SOURCE_SNAPSHOT_NOT_PUBLICATION_RELEASE
+exact_four_file_allowlist:
+- data/qald_9_plus_train_dbpedia.json
+- data/qald_9_plus_test_dbpedia.json
+- LICENSE
+- CITATION.cff
+expected_individual_sizes_bytes:
+  data/qald_9_plus_train_dbpedia.json: 6371289
+  data/qald_9_plus_test_dbpedia.json: 1424744
+  LICENSE: 18650
+  CITATION.cff: 1191
+exact_total_bytes: 7815874
+maximum_network_payload_bytes: 8000000
+minimum_free_disk_bytes: 67108864
+license: CC-BY-4.0
+published_sha256_status: PUBLISHED_SHA256_NOT_AVAILABLE
+git_blob_verification: required
+local_sha256: required_after_acquisition
+json_validation: required
+train_reported_count: 408
+test_reported_count: 150
+train_test_count_status: REPORTED_EXPECTATION_PENDING_PAYLOAD_VALIDATION
+test_seal: required
+graph_dependency: separate_and_pending
+authorization_status: UNSIGNED
+acquisition_status: NOT_ACQUIRED
+classification: LAB_POLICY_CLASSIFICATION_BASED_ON_PUBLISHED_EVIDENCE
+cost_limit_usd: 0.0
+mirrors: DENY
+archives: DENY
+wikidata_files: OUT_OF_SCOPE

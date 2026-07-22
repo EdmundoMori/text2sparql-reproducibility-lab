@@ -1,12 +1,18 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-22 (Prompt 20)  
+**Última actualización:** 2026-07-22 (Prompt 21A)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
 
 | ID | Tema | Ruta | Cuándo leerlo |
 |---|---|---|---|
+| P21A-GATE | QALD acquisition package gate | `docs/protocols/common/acquisition/qald9plus/20260722T105246Z/QALD9PLUS_ACQUISITION_PACKAGE_GATE.md` | Tras T6A |
+| P21A-FORM | Human approval UNSIGNED | `docs/protocols/common/acquisition/qald9plus/20260722T105246Z/HUMAN_QALD9PLUS_ACQUISITION_APPROVAL.md` | Auth humana |
+| P21A-RPT | Acquisition package report | `audit/PHASE2_QALD9PLUS_ACQUISITION_PACKAGE_REPORT.md` | Detalle T6A |
+| P21A-NEXT | Next after package | `audit/NEXT_AFTER_QALD9PLUS_ACQUISITION_PACKAGE_DECISION.md` | Human gate |
+| P21A-MAN | Exact file manifest | `configs/common/acquisition/qald9plus/QALD9PLUS_EN_DBPEDIA_EXACT_FILE_MANIFEST.yaml` | 4 files |
+| P21A-Q | Post-T6A queue | `audit/PHASE2_POST_T6A_QUEUE.csv` | Cola |
 |---|---|---|---|
 | P20-GATE | Legal eligibility gate | `docs/protocols/common/legal/20260722T102434Z/LEGAL_ELIGIBILITY_GATE.md` | Tras T5 |
 | P20-RPT | Legal recheck report | `audit/PHASE2_LEGAL_ELIGIBILITY_RECHECK_REPORT.md` | Detalle T5 |

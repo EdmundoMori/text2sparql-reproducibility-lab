@@ -1,0 +1,11 @@
+order,action_id,title,depends_on,status,notes
+1,HUMAN_QALD9PLUS_ACQUISITION_AUTHORIZATION,Human authorization for QALD T6B,T6A_complete,selected_next_pending_user,UNSIGNED form; no Cursor prompt
+2,T6B_QALD_CONTROLLED_ACQUISITION_EXECUTION,Controlled download+validate four files,HUMAN_AUTH,blocked_pending_human_authorization,Prompt_21B reserved
+3,T6C_LCQUAD2_LICENSE_CLARIFICATION,LC-QuAD license/alternative,T5,queued,HOLD separate
+4,GRAPH_ACQUISITION_OR_REBASE_DECISION,Graph pin / rebase,T6B,queued,G4
+5,METRIC_IMPLEMENTATION_AND_CONFORMANCE,Metric runtime,G4_or_parallel,queued,
+6,G6I_G7_ADAPTER_IMPLEMENTATION_DECISION,G6I approval,legal+G4+G5,queued,
+7,ADAPTER_IMPLEMENTATION,Implement adapters,G6I,queued,common_adapter_allowed false now
+8,COMMON_PREFLIGHT,Preflight,adapters,queued,
+9,BENCHMARK,Common benchmark,preflight,queued,NOT_CURRENTLY_ELIGIBLE
+10,CASE_STUDY,Case study,benchmark,queued,

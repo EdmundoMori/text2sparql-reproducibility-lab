@@ -1,0 +1,32 @@
+template_id: QALD9PLUS_TEST_SEAL_MANIFEST_TEMPLATE
+status: TEMPLATE_READY_NOT_APPLIED
+test_file_id: QALD9PLUS_TEST_DBPEDIA_JSON
+repository_path: data/qald_9_plus_test_dbpedia.json
+expected_size_bytes: 1424744
+expected_git_blob_oid: 06cc04be82be7c807631a419670fb011a9565ec1
+local_sha256: LOCAL_SHA256_PENDING_ACQUISITION
+sealed_path: workdir/datasets/qald9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/sealed_test/qald_9_plus_test_dbpedia.json
+acquisition_timestamp: null
+allowed_validation_operations:
+- size_check
+- git_blob_oid_check
+- local_sha256
+- json_parse
+- record_count
+- field_name_inventory
+- english_representation_existence_count_without_printing_content
+prohibited_inspection_operations:
+- print_questions
+- print_sparql_gold
+- select_examples
+- design_prompts
+- choose_hyperparameters
+- create_few_shot
+- generate_dev_split
+- execute_queries
+- use_test_in_adapter
+authorized_consumers_future:
+- T6B_validation_only_until_later_gates
+test_use_gate: BLOCKED_UNTIL_LATER_PHASE_GATES
+leakage_status: NOT_INSPECTED
+seal_status: PLAN_DEFINED_NOT_SEALED

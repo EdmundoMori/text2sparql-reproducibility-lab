@@ -1,0 +1,82 @@
+manifest_id: QALD9PLUS_EN_DBPEDIA_EXACT_FILE_MANIFEST
+schema_status: ACQUISITION_PACKAGE_DOCUMENTED
+logical_view: QALD9_PLUS_EN_DBPEDIA
+repository: Perevalov/qald_9_plus
+source_commit: 8eb038a61e1bc09cbd21640aa667a1714f53cda4
+commit_tree_oid: 7159958810958ff185187cf603e2c4a997dc2df9
+exact_file_count: 4
+exact_total_bytes: 7815874
+excluded:
+- data/qald_9_plus_train_wikidata.json
+- data/qald_9_plus_test_wikidata.json
+- README.md
+- metadata.rdf
+- notebooks
+- repository ZIP/tarball
+- LC-QuAD
+- graphs
+- endpoints
+- models
+- indices
+- mKGQAgent local copies
+files:
+- file_id: QALD9PLUS_TRAIN_DBPEDIA_JSON
+  role: train_payload
+  repository: Perevalov/qald_9_plus
+  source_commit: 8eb038a61e1bc09cbd21640aa667a1714f53cda4
+  commit_tree_oid: 7159958810958ff185187cf603e2c4a997dc2df9
+  repository_path: data/qald_9_plus_train_dbpedia.json
+  immutable_raw_url: https://raw.githubusercontent.com/Perevalov/qald_9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/data/qald_9_plus_train_dbpedia.json
+  expected_size_bytes: 6371289
+  expected_git_blob_oid: cce48cbdf2af7f5e8ce59308dda667de7fc209b8
+  git_object_algorithm: sha1_git_blob
+  published_checksum_status: PUBLISHED_SHA256_NOT_AVAILABLE
+  expected_local_sha256: LOCAL_SHA256_PENDING_ACQUISITION
+  future_destination: workdir/datasets/qald9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/raw/train/qald_9_plus_train_dbpedia.json
+  test_seal_class: NOT_APPLICABLE_TRAIN
+  acquisition_status: NOT_ACQUIRED
+- file_id: QALD9PLUS_TEST_DBPEDIA_JSON
+  role: test_payload
+  repository: Perevalov/qald_9_plus
+  source_commit: 8eb038a61e1bc09cbd21640aa667a1714f53cda4
+  commit_tree_oid: 7159958810958ff185187cf603e2c4a997dc2df9
+  repository_path: data/qald_9_plus_test_dbpedia.json
+  immutable_raw_url: https://raw.githubusercontent.com/Perevalov/qald_9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/data/qald_9_plus_test_dbpedia.json
+  expected_size_bytes: 1424744
+  expected_git_blob_oid: 06cc04be82be7c807631a419670fb011a9565ec1
+  git_object_algorithm: sha1_git_blob
+  published_checksum_status: PUBLISHED_SHA256_NOT_AVAILABLE
+  expected_local_sha256: LOCAL_SHA256_PENDING_ACQUISITION
+  future_destination: workdir/datasets/qald9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/sealed_test/qald_9_plus_test_dbpedia.json
+  test_seal_class: SEALED_TEST
+  acquisition_status: NOT_ACQUIRED
+- file_id: QALD9PLUS_LICENSE
+  role: license
+  repository: Perevalov/qald_9_plus
+  source_commit: 8eb038a61e1bc09cbd21640aa667a1714f53cda4
+  commit_tree_oid: 7159958810958ff185187cf603e2c4a997dc2df9
+  repository_path: LICENSE
+  immutable_raw_url: https://raw.githubusercontent.com/Perevalov/qald_9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/LICENSE
+  expected_size_bytes: 18650
+  expected_git_blob_oid: 2f244ac814036ecd9ba9f69782e89ce6b1dca9eb
+  git_object_algorithm: sha1_git_blob
+  published_checksum_status: PUBLISHED_SHA256_NOT_AVAILABLE
+  expected_local_sha256: 7e7170e3cebf88a9f60c7b8421418323c09304da1af4d5e90f4da1dc1c8a2661
+  future_destination: workdir/datasets/qald9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/legal/LICENSE
+  test_seal_class: NOT_APPLICABLE
+  acquisition_status: NOT_ACQUIRED
+- file_id: QALD9PLUS_CITATION_CFF
+  role: citation
+  repository: Perevalov/qald_9_plus
+  source_commit: 8eb038a61e1bc09cbd21640aa667a1714f53cda4
+  commit_tree_oid: 7159958810958ff185187cf603e2c4a997dc2df9
+  repository_path: CITATION.cff
+  immutable_raw_url: https://raw.githubusercontent.com/Perevalov/qald_9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/CITATION.cff
+  expected_size_bytes: 1191
+  expected_git_blob_oid: 4506fd12bdff0cbe14dd40a92a193c38cb747bc7
+  git_object_algorithm: sha1_git_blob
+  published_checksum_status: PUBLISHED_SHA256_NOT_AVAILABLE
+  expected_local_sha256: 40c2e632613eea4599d7d6742b935b5b207351c31b4026e729e8b8121fc31887
+  future_destination: workdir/datasets/qald9_plus/8eb038a61e1bc09cbd21640aa667a1714f53cda4/legal/CITATION.cff
+  test_seal_class: NOT_APPLICABLE
+  acquisition_status: NOT_ACQUIRED
