@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-22 (Prompt 14D)  
+**Última actualización:** 2026-07-22 (Prompt 15)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -13,6 +13,7 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | REG | Registro métodos | `METHOD_REGISTRY.yaml` | Estado inclusión / waves |
 | LOCK | Pins commits clones | `REPOSITORIES.lock.yaml` | Reproducibilidad de árbol |
 | DEC001 | Decisión límites máquina | `docs/decisions/001_machine_limits_warn_and_continue.md` | Política advertir→continuar |
+| GATE8 | Native audit comparative gate (HIST) | `audit/NATIVE_AUDIT_COMPARATIVE_GATE.md` | superseded_by_15 |
 | AUD-MAP | Paper↔código | `audit/PAPER_CODE_MAPPING.md` | Origen evidencia / repos |
 | AUD-MX | Matriz auditoría inicial | `audit/INITIAL_AUDIT_MATRIX.csv` | Vista tabular candidatos |
 | AUD-INC | Decisiones inclusión | `audit/INCLUSION_DECISIONS.md` | PRIMARY/CONDITIONAL/HISTORICAL |
@@ -228,6 +229,25 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | P14D-NEXT | Decisión post-Z3 | `audit/NEXT_POST_Z3_ZERO_COST_DECISION.md` | Q11 GO |
 | P14D-Q | Cola post-Z3 | `audit/POST_Z3_ZERO_COST_QUEUE.csv` | operativa |
 | P14D-LOG | Logs Prompt 14D | `logs/sgpt-z3-closure-regate/` | documental |
+
+| P14D-HIST | Post-Z3 matrix/decision/queue | `audit/POST_Z3_ZERO_COST_*` | historical_after_15 |
+| P15-SEM | Phase1 closure semantics | `audit/PHASE1_CLOSURE_SEMANTICS.md` | 15 |
+| P15-CHK | Method closure checklist | `audit/PHASE1_METHOD_CLOSURE_CHECKLIST.csv` | 15 |
+| P15-OUT | Final method outcomes | `audit/PHASE1_FINAL_METHOD_OUTCOMES.csv` | 15 |
+| P15-MX | Final native audit matrix | `audit/PHASE1_FINAL_NATIVE_AUDIT_MATRIX.csv` | 15 |
+| P15-EV | Evidence index | `audit/PHASE1_EVIDENCE_INDEX.md` | 15 |
+| P15-BAR | Final barrier matrix | `audit/PHASE1_FINAL_BARRIER_MATRIX.csv` | 15 |
+| P15-BSUM | Barrier summary | `audit/PHASE1_BARRIER_SUMMARY.md` | 15 |
+| P15-PE | PE1-PE4 outcomes | `audit/PHASE1_EXPERIMENTAL_QUESTIONS_OUTCOME.md` | 15 |
+| P15-GCHK | Global closure checklist | `audit/PHASE1_GLOBAL_CLOSURE_CHECKLIST.md` | 15 |
+| P15-ELIG | Protocol eligibility matrix | `audit/COMMON_EVALUATION_PROTOCOL_ELIGIBILITY_MATRIX.csv` | 15 |
+| P15-GATE | Phase1 final gate | `audit/PHASE1_FINAL_GATE.md` | 15 |
+| P15-RPT | Phase1 final report | `audit/PHASE1_FINAL_NATIVE_AUDIT_REPORT.md` | 15 |
+| P15-DEC | Decision 006 | `docs/decisions/006_phase1_native_audit_closure_and_phase2_transition.md` | 15 |
+| P15-NEXT | Phase2 protocol decision | `audit/NEXT_PHASE2_PROTOCOL_DECISION.md` | T1 Prompt16 |
+| P15-Q | Phase2 transition queue | `audit/PHASE2_TRANSITION_QUEUE.csv` | T1 selected |
+| P15-LOG | Logs Prompt 15 | `logs/phase1-final-gate/` | documental |
+| P15-PORT | Portfolio updated | `audit/SCIENTIFIC_BASELINE_PORTFOLIO.csv` | 15 |
 
 ## Qué está / no está en GitHub
 

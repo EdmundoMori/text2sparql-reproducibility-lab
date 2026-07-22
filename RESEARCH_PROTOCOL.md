@@ -207,3 +207,18 @@ Para cada `method_id`, el laboratorio deberá disponer eventualmente de:
 - Decisión: ¿apto para adaptación común? (sí / no / condicionado), con justificación.
 
 La creación de estos artefactos se realizará en fases posteriores solicitadas explícitamente; este protocolo solo define el marco.
+
+---
+
+## Prompt 15 — Phase 1 final gate (añadido; no reescribe historia)
+
+**Fecha cierre Fase 1:** 2026-07-22  
+**Gate:** `PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION`  
+**Qualifier:** `RESIDUAL_METHOD_BLOCKERS_PRESERVED`  
+**phase1_status:** `closed` · **phase2_status:** `protocol_definition_pending`  
+**Adapters:** `common_adapter_allowed=false` (todos)  
+**Distribución (6 activos):** smoke_only×2 (sparql_llm, sgpt); blocked×3 (mkgqagent, rdfconfig_llm, cot_sparql); not_reproducible×1 (firesparql)  
+**TeBaQA:** `HISTORICAL_ONLY` (fuera del denominador)  
+**PE1:** substantially_answered · **PE2:** partial_evidence · **PE3:** not_started (`no_comparable_original_metric_run_available`) · **PE4:** substantially_answered_for_current_portfolio  
+**Fase 2:** aún **no** ejecutada — solo elegibilidad documental; siguiente Prompt 16 (definición protocolo común), sin adapters ni benchmarks.  
+**Informe:** `audit/PHASE1_FINAL_NATIVE_AUDIT_REPORT.md` · Decisión: `docs/decisions/006_phase1_native_audit_closure_and_phase2_transition.md`

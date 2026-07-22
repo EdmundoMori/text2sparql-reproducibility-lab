@@ -1,0 +1,9 @@
+# Prompt 15 — Phase1 final gate (documentary)
+# 2026-07-22
+git fetch origin
+git branch --show-current
+git rev-parse HEAD
+git rev-parse origin/main
+git status --short
+# Wrote Phase1 closure artefacts; updated METHOD_REGISTRY; portfolio; plan-sync
+# NO docker / pip / downloads / API / model / forward / train / metrics / SPARQL / adapters / benchmark / upstream edits

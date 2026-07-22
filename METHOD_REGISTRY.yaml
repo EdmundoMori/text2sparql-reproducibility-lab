@@ -4,10 +4,10 @@
 # inclusion_decision: audit/INCLUSION_DECISIONS.md
 # Evidencia pendiente cerrada: audit/EVIDENCE_CLOSURE.md
 
-schema_version: "0.11"
-updated_at: "2026-07-21T11:35:00+02:00"
-phase: "1_native_audit"
-audit_prompt: "SPARQL_LLM_EMBEDDING_INDEX_PREFLIGHT_10B"
+schema_version: "0.12"
+updated_at: "2026-07-22T10:04:00+02:00"
+phase: "phase1_closed_phase2_protocol_pending"
+audit_prompt: "Prompt_15_PHASE1_FINAL_GATE"
 clones_performed: true
 evidence_closure_complete: true
 wave_a_static_audit_complete: true
@@ -47,7 +47,7 @@ methods:
   inclusion_decision: INCLUDE_PRIMARY
   reproduction_status: smoke_only
   feasibility_class: feasible_using_api
-  native_audit_complete: false
+  native_audit_complete: true
   paper_code_audit_complete: true
   evidence_closure_complete: true
   common_adapter_allowed: false
@@ -111,7 +111,7 @@ methods:
   - zero_cost_policy
   - max_tokens_not_enforced
   - new_human_authorization_required_to_reopen
-  next_execution_prompt: Prompt_12_SGPT_environment_definition_ZERO_COST
+  next_execution_prompt: Prompt_16_common_evaluation_protocol_definition
   model_budget_gate_run_id: "20260721T100618Z"
   model_budget_gate_artifact: docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/
   model_budget_final_report: audit/sparql_llm/LOCAL_CHAT_API_MODEL_BUDGET_FINAL_GATE_REPORT.md
@@ -126,7 +126,7 @@ methods:
   adapter_legal_gate: conditional_deferred
   generality_class: configurable_general
   gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
-  next_native_action: defer_online_smoke_sgpt_env_is_lab_go_next
+  next_native_action: await_common_evaluation_protocol_definition
   next_native_action_class: zero_cost_other_method
   gate_confidence: high
   execution_blockers:
@@ -135,18 +135,32 @@ methods:
   - virtuoso_text2sparql_blocked_on_host
   - host_python_3_10_incompatible_typing_Required
   - investigator_zero_usd_blocks_openrouter_smoke
-  notes: "Prompt 11C: ZERO_COST policy; online_smoke_gate=NO_GO_ECONOMIC_ZERO_COST_POLICY; Prompt 12 chat CANCELLED. Lab GO_NEXT_ZERO_COST=SGPT_ENVIRONMENT_DEFINITION.
-    reproduction_status remains smoke_only. native_audit_complete=false; common_adapter_allowed=false."
+  notes: "Prompt15: Phase1 closed smoke_only; online deferred ZERO_COST; nac=true; adapters false."
 
   paid_api_execution_allowed: false
   max_external_monetary_cost_usd: 0.0
   prompt_12_status: CANCELLED_BY_ZERO_COST_POLICY
   selected_online_model_role: historical_proposed_model
   pe2_online_status: deferred_by_zero_cost_policy
-  zero_cost_gate_class: NO_GO_ZERO_COST_POLICY
-  zero_cost_next_action: none_online_smoke_closed
+  zero_cost_gate_class: GO_NEXT_ZERO_COST
+  zero_cost_next_action: Prompt_16
   zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
   zero_cost_gate_confidence: high
+  reproduction_status_qualifier: core_offline_smoke_online_path_deferred_by_zero_cost_policy
+  native_audit_outcome: completed_smoke_only_online_native_path_policy_deferred
+  phase1_final_outcome: smoke_only
+  phase1_closure_evidence: audit/PHASE1_FINAL_METHOD_OUTCOMES.csv
+  phase2_protocol_eligibility: ELIGIBLE_CORE_TRACK
+  future_adapter_eligibility: PENDING_PHASE2_PROTOCOL_GATE
+  remaining_barriers:
+  - online_cost_policy
+  - virtuoso_blocked
+  - host_py310
+  pe1_status: substantially_answered
+  pe2_status: partial_evidence
+  pe3_status: not_started
+  pe3_qualifier: no_comparable_original_metric_run_available
+  pe4_status: substantially_answered_for_current_portfolio
 - method_id: mkgqagent
   display_name: mKGQAgent
   repositories:
@@ -175,9 +189,9 @@ methods:
     reproduction_instructions: present
   inclusion_status: included
   inclusion_decision: INCLUDE_PRIMARY
-  reproduction_status: audit_only
+  reproduction_status: blocked
   feasibility_class: feasible_using_api
-  native_audit_complete: false
+  native_audit_complete: true
   paper_code_audit_complete: true
   evidence_closure_complete: true
   common_adapter_allowed: false
@@ -200,10 +214,10 @@ methods:
   adapter_legal_gate: blocked
   generality_class: generalizable_with_domain_package
   gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-  next_native_action: hold_until_license_clarified_then_single_agent_env
+  next_native_action: await_common_evaluation_protocol_definition
   next_native_action_class: HOLD_LEGAL
   gate_confidence: high
-  next_execution_prompt: deferred_HOLD_LEGAL_mkgqagent
+  next_execution_prompt: Prompt_16_common_evaluation_protocol_definition
   execution_blockers:
   - LICENSE_NOT_CONFIRMED
   - hardcoded_external_hosts
@@ -211,12 +225,27 @@ methods:
   - ram_risk_e5_large
   - double_agent_import_in_main
   - requests_missing_from_requirements
-  notes: "LICENSE_NOT_CONFIRMED. native_reproduction_ready=not_ready_or_weak (reconciled with WAVE_A_EXECUTION_READINESS)."
+  notes: "Prompt15: Phase1 closed blocked legal; nac=true; no execution; adapters false."
 
   zero_cost_gate_class: HOLD_LEGAL
   zero_cost_next_action: hold_until_license
   zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
   zero_cost_gate_confidence: high
+  reproduction_status_qualifier: blocked_legal_and_external_runtime_dependencies
+  native_audit_outcome: completed_blocked_license_not_confirmed
+  phase1_final_outcome: blocked
+  phase1_closure_evidence: audit/PHASE1_FINAL_METHOD_OUTCOMES.csv
+  phase2_protocol_eligibility: ELIGIBLE_CONDITIONAL_TRACK_PENDING_LICENSE
+  future_adapter_eligibility: PENDING_LICENSE
+  remaining_barriers:
+  - LICENSE_NOT_CONFIRMED
+  - hardcoded_hosts
+  - double_e5
+  pe1_status: substantially_answered
+  pe2_status: partial_evidence
+  pe3_status: not_started
+  pe3_qualifier: no_comparable_original_metric_run_available
+  pe4_status: substantially_answered_for_current_portfolio
 - method_id: cot_sparql
   display_name: COT-SPARQL
   repositories:
@@ -244,9 +273,9 @@ methods:
     reproduction_instructions: present
   inclusion_status: included_conditional
   inclusion_decision: INCLUDE_CONDITIONAL
-  reproduction_status: audit_only
+  reproduction_status: blocked
   feasibility_class: requires_external_gpu
-  native_audit_complete: false
+  native_audit_complete: true
   paper_code_audit_complete: true
   evidence_closure_complete: true
   common_adapter_allowed: false
@@ -274,10 +303,10 @@ methods:
   adapter_legal_gate: blocked
   generality_class: generalizable_with_domain_package
   gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-  next_native_action: hold_hardware_and_legal_no_env_now
+  next_native_action: await_common_evaluation_protocol_definition
   next_native_action_class: HOLD_HARDWARE
   gate_confidence: high
-  next_execution_prompt: deferred_HOLD_HARDWARE_cot_sparql
+  next_execution_prompt: Prompt_16_common_evaluation_protocol_definition
   execution_blockers:
   - LICENSE_NOT_CONFIRMED
   - embeddings_and_example_parquets_absent
@@ -289,14 +318,28 @@ methods:
   - assert_empty_question_concatenation_bug
   - import_side_effect_loads_MiniLM
   - validation_is_HTTP_200_not_local_syntax
-  notes: "WAVE_C Prompt 7A static audit complete. Not end-to-end: external EL/RL + gold-annotated one-shot retrieval + GPTQ
-    LLM. CoT is prompt-induced. reproduction_status remains audit_only; native_audit_complete=false; common_adapter_allowed=false;
-    license LICENSE_NOT_CONFIRMED."
+  notes: "Prompt15: Phase1 closed blocked legal+HW+artifacts; no 34B substitution; nac=true; adapters false."
 
   zero_cost_gate_class: HOLD_HARDWARE
   zero_cost_next_action: hold_legal_and_hardware
   zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
   zero_cost_gate_confidence: high
+  reproduction_status_qualifier: blocked_legal_hardware_and_missing_external_artifacts
+  native_audit_outcome: completed_blocked_legal_hardware_artifacts
+  phase1_final_outcome: blocked
+  phase1_closure_evidence: audit/PHASE1_FINAL_METHOD_OUTCOMES.csv
+  phase2_protocol_eligibility: DOCUMENTARY_TRACK_ONLY_PENDING_LICENSE_HARDWARE_ARTIFACTS
+  future_adapter_eligibility: PENDING_LICENSE
+  remaining_barriers:
+  - LICENSE_NOT_CONFIRMED
+  - CodeLlama_34B_VRAM
+  - embeddings_absent
+  - missing_evaluator
+  pe1_status: substantially_answered
+  pe2_status: partial_evidence
+  pe3_status: not_started
+  pe3_qualifier: no_comparable_original_metric_run_available
+  pe4_status: substantially_answered_for_current_portfolio
 - method_id: firesparql
   display_name: FIRESPARQL
   repositories:
@@ -329,9 +372,9 @@ methods:
     reproduction_instructions: partial
   inclusion_status: included_conditional
   inclusion_decision: INCLUDE_CONDITIONAL
-  reproduction_status: audit_only
+  reproduction_status: not_reproducible
   feasibility_class: requires_external_gpu
-  native_audit_complete: false
+  native_audit_complete: true
   paper_code_audit_complete: true
   evidence_closure_complete: true
   common_adapter_allowed: false
@@ -360,10 +403,10 @@ methods:
   adapter_legal_gate: blocked
   generality_class: domain_specific_reimplementation_required
   gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-  next_native_action: document_only_metrics_HOLD_MISSING_CODE_QLever_runner
+  next_native_action: await_common_evaluation_protocol_definition
   next_native_action_class: HOLD_MISSING_CODE
   gate_confidence: high
-  next_execution_prompt: deferred_HOLD_MISSING_CODE_firesparql
+  next_execution_prompt: Prompt_16_common_evaluation_protocol_definition
   execution_blockers:
   - LICENSE_NOT_CONFIRMED
   - requirements_coming_soon_absent
@@ -375,13 +418,28 @@ methods:
   - xueli_data_and_Snellius_hardcoded_paths
   - Llama3_8B_fp16_exceeds_local_6GiB
   - sparql_results_csv_partial_coverage
-  notes: "WAVE_C Prompt 7B static complete. MIT on HF checkpoint does NOT license GitHub code. Results versioned (~458MiB)
-    are RESULT_FILE_VERIFIED not local reproduction. Native reproduction not_ready. common_adapter_allowed=false."
+  notes: "Prompt15: Phase1 closed not_reproducible; HF MIT≠code license; results≠repro; nac=true; adapters false."
 
   zero_cost_gate_class: DOCUMENT_ONLY
   zero_cost_next_action: FIRESPARQL_RESULT_CONSISTENCY_AUDIT_deferred
   zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
   zero_cost_gate_confidence: high
+  reproduction_status_qualifier: native_trainer_and_execution_runner_not_found_code_license_unconfirmed
+  native_audit_outcome: completed_not_reproducible_missing_native_code
+  phase1_final_outcome: not_reproducible
+  phase1_closure_evidence: audit/PHASE1_FINAL_METHOD_OUTCOMES.csv
+  phase2_protocol_eligibility: DOCUMENTARY_TRACK_ONLY_PENDING_LICENSE_MISSING_CODE
+  future_adapter_eligibility: PENDING_MISSING_CODE
+  remaining_barriers:
+  - LICENSE_NOT_CONFIRMED
+  - MISSING_TRAINER
+  - MISSING_EXECUTION_RUNNER
+  - results_not_reproduction
+  pe1_status: substantially_answered
+  pe2_status: partial_evidence
+  pe3_status: not_started
+  pe3_qualifier: no_comparable_original_metric_run_available
+  pe4_status: substantially_answered_for_current_portfolio
 - method_id: rdfconfig_llm
   display_name: LLM + RDF-config
   repositories:
@@ -423,9 +481,9 @@ methods:
     reproduction_instructions: present
   inclusion_status: included_conditional
   inclusion_decision: INCLUDE_CONDITIONAL
-  reproduction_status: audit_only
+  reproduction_status: blocked
   feasibility_class: feasible_using_api
-  native_audit_complete: false
+  native_audit_complete: true
   paper_code_audit_complete: true
   evidence_closure_complete: true
   common_adapter_allowed: false
@@ -451,23 +509,37 @@ methods:
   adapter_legal_gate: blocked
   generality_class: domain_specific_reimplementation_required
   gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md
-  next_native_action: clarify_generator_source_license_then_Ruby_env
+  next_native_action: await_common_evaluation_protocol_definition
   next_native_action_class: DOCUMENT_ONLY
   gate_confidence: medium
-  next_execution_prompt: deferred_DOCUMENT_ONLY_rdfconfig_legal_after_sgpt_env
+  next_execution_prompt: Prompt_16_common_evaluation_protocol_definition
   execution_blockers:
   - LICENSE_NOT_CONFIRMED_generator_HEAD
   - requirements_txt_incomplete_vs_evaluator
   - ruby_bundler_ABSENT_on_host
   - sparql_yaml_mutation_on_run
   - possible_divergence_vendored_vs_companion_pin
-  notes: "Prompt 11C: rdfconfig legal closure DOCUMENT_ONLY (not GO_NEXT). Interim re-gate rdfconfig GO_NEXT superseded. Prefer
-    Zenodo; never run in-place on upstream."
+  notes: "Prompt15: Phase1 closed blocked; companion MIT≠generator; nac=true; adapters false."
 
   zero_cost_gate_class: DOCUMENT_ONLY
   zero_cost_next_action: RDFCONFIG_SOURCE_LICENSE_CLOSURE_deferred
   zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
   zero_cost_gate_confidence: high
+  reproduction_status_qualifier: blocked_generator_license_ruby_and_api_dependencies
+  native_audit_outcome: completed_blocked_generator_legal_and_runtime
+  phase1_final_outcome: blocked
+  phase1_closure_evidence: audit/PHASE1_FINAL_METHOD_OUTCOMES.csv
+  phase2_protocol_eligibility: ELIGIBLE_CONDITIONAL_DOMAIN_TRACK_PENDING_LICENSE
+  future_adapter_eligibility: PENDING_LICENSE
+  remaining_barriers:
+  - LICENSE_NOT_CONFIRMED_generator
+  - Ruby_ABSENT
+  - domain_life_science
+  pe1_status: substantially_answered
+  pe2_status: partial_evidence
+  pe3_status: not_started
+  pe3_qualifier: no_comparable_original_metric_run_available
+  pe4_status: substantially_answered_for_current_portfolio
 - method_id: sgpt
   display_name: SGPT
   repositories:
@@ -526,10 +598,10 @@ methods:
   adapter_legal_gate: conditional_deferred
   generality_class: retraining_required
   gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-  next_native_action: global_phase1_native_audit_final_gate
+  next_native_action: await_common_evaluation_protocol_definition
   next_native_action_class: GO_NEXT_ZERO_COST
   gate_confidence: high
-  next_execution_prompt: Prompt_15_phase1_native_audit_final_gate
+  next_execution_prompt: Prompt_16_common_evaluation_protocol_definition
   execution_blockers:
   - checkpoint_absent_in_repo
   - vram_6GiB_vs_paper_2x12GB
@@ -537,12 +609,11 @@ methods:
   - qald9_id_reuse_train_test_150
   - metric_double_update_anomaly
   - epochs_cli_vs_params_json_divergence
-  notes: "Prompt 14D: Z3 closed smoke_only; raw attempt2 Z3_OTHER_FAILED; operational PASS with indirect optimizer verification;
-    native_audit_complete=true outcome smoke_only_full_repro_not_achieved; common_adapter_allowed=false; PE3 not_started;
-    next Prompt 15 Q11."
+  notes: "Prompt15: Phase1 closed; Z3 smoke_only with indirect optimizer qualifier preserved; nac=true; adapters false; next
+    Prompt16."
 
   zero_cost_gate_class: GO_NEXT_ZERO_COST
-  zero_cost_next_action: Prompt_15
+  zero_cost_next_action: Prompt_16
   zero_cost_gate_artifact: audit/NEXT_POST_Z3_ZERO_COST_DECISION.md
   zero_cost_gate_confidence: high
   environment_definition_artifact: audit/sgpt/ENVIRONMENT_DEFINITION_REPORT.md
@@ -678,7 +749,7 @@ methods:
   pe1_status: substantially_answered
   pe2_status: partial_evidence
   pe3_status: not_started
-  pe4_status: partial_evidence
+  pe4_status: substantially_answered_for_current_portfolio
   pe4_evidence_tags:
   - HARNESS_INSTRUMENTATION_LIMITATION_ADAMW_HOOK
   - MISSING_PAPER_CHECKPOINT
@@ -686,6 +757,17 @@ methods:
   - SPLIT_DRIFT_LCQUAD2
   - METRIC_AMBIGUITY
   - FULL_TRAINING_COST_RESOURCE_BARRIER
+  phase1_final_outcome: smoke_only
+  phase1_closure_evidence: audit/sgpt/Z3_CLOSURE_REPORT.md;audit/PHASE1_FINAL_METHOD_OUTCOMES.csv
+  phase2_protocol_eligibility: ELIGIBLE_CORE_TRACK_ORACLE_GROUNDING
+  future_adapter_eligibility: PENDING_PHASE2_PROTOCOL_GATE
+  remaining_barriers:
+  - paper_checkpoint_absent
+  - table4_not_reproduced
+  - vram_gap
+  - split_drift
+  - metric_ambiguity
+  pe3_qualifier: no_comparable_original_metric_run_available
 - method_id: tebaqa
   display_name: TeBaQA
   repositories:
@@ -726,8 +808,20 @@ methods:
   pinned_commit:
   notes_clone: "Not cloned: HISTORICAL_ONLY / WAVE_D_EXCLUDED for this cloning phase."
   needs_api: false
-  notes: "Fuera del foco de cierre de licencias UNKNOWN; AGPL confirmado."
+  notes: "Prompt15: remains HISTORICAL_ONLY; outside active Phase1 denominator; adapters false."
   zero_cost_gate_class: NOT_CURRENTLY_ACTIONABLE
   zero_cost_next_action: historical_only
   zero_cost_gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
   zero_cost_gate_confidence: high
+  phase1_final_outcome: HISTORICAL_ONLY
+  phase2_protocol_eligibility: HISTORICAL_REFERENCE_ONLY
+  future_adapter_eligibility: HISTORICAL_ONLY
+  next_native_action: none_historical_only
+  next_execution_prompt: none
+phase1_status: closed
+phase1_final_gate: PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION
+phase1_closure_artifact: audit/PHASE1_FINAL_NATIVE_AUDIT_REPORT.md
+phase1_gate_qualifier: RESIDUAL_METHOD_BLOCKERS_PRESERVED
+phase2_status: protocol_definition_pending
+current_phase: phase2_protocol_definition_pending
+phase1_decision_artifact: docs/decisions/006_phase1_native_audit_closure_and_phase2_transition.md

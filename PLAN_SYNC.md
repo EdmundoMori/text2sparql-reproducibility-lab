@@ -2,11 +2,11 @@
 
 **Audiencia:** ChatGPT e investigador.  
 **Repo:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-**Última actualización:** 2026-07-22 (Prompt **14D** — cierre Z3 + re-gate)  
-**Fase:** 1 — native audit; **abierta** (hasta gate global Prompt 15)  
-**SHA inicial 14D:** `ce6c22cccfb174bf1988084bdbc0b25079161816`
+**Última actualización:** 2026-07-22 (Prompt **15** — gate final Fase 1)  
+**Fase:** 1 **cerrada** · 2 **protocol_definition_pending**  
+**SHA inicial 15:** `220ecbee3a22287980be2bb4c9757681386fd01f`
 
-> ZERO_COST. Z3 SGPT **cerrado** `smoke_only`. Auths 14C consumidas. **No** nuevo train. **No** Table 4. PE3 `not_started`.
+> ZERO_COST. Gate `PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION` + `RESIDUAL_METHOD_BLOCKERS_PRESERVED`. Adapters **false**. Sin ejecución. Objetivo largo plazo intacto.
 
 ---
 
@@ -16,74 +16,68 @@ reproducción nativa → evaluación común → caso de estudio → errores → 
 
 ---
 
-## 2. Prompt 14D — resumen
+## 2. Prompt 15 — resumen
 
 | Campo | Valor |
 |---|---|
-| Clasificación cierre | **`SGPT_NATIVE_AUDIT_CLOSED_SMOKE_ONLY`** |
-| Raw att.1 / att.2 | `Z3_OTHER_FAILED` / `Z3_OTHER_FAILED` |
-| Operativo att.2 | `Z3_ONE_STEP_REDUCED_TRAINING_PASS` |
-| Qualifier | `PASS_WITH_INDIRECT_OPTIMIZER_STEP_VERIFICATION` |
-| Optimizer direct / indirect | `NOT_VERIFIED_ATTEMPT2` / high-confidence control-flow |
-| `reproduction_status` | **`smoke_only`** |
-| `native_audit_complete` | **`true`** (full repro **not** achieved) |
-| `common_adapter_allowed` | `false` |
-| Coste | **0.00** |
-| Ejecución | ninguna (documental) |
+| Gate | **`PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION`** |
+| Qualifier | `RESIDUAL_METHOD_BLOCKERS_PRESERVED` |
+| phase1_status | `closed` |
+| phase2_status | `protocol_definition_pending` |
+| Adapters | **false** |
+| Coste / ejecución | **0.00** / ninguna |
 
-Informe: `audit/sgpt/Z3_CLOSURE_REPORT.md`  
-Decisión: `docs/decisions/005_sgpt_z3_reduced_training_smoke_closure.md`  
-Matriz/cola: `POST_Z3_ZERO_COST_*`
+### Seis métodos activos — outcomes
+
+| method | reproduction_status | nac |
+|---|---|---|
+| sparql_llm | smoke_only | true |
+| sgpt | smoke_only | true |
+| mkgqagent | blocked | true |
+| rdfconfig_llm | blocked | true |
+| cot_sparql | blocked | true |
+| firesparql | not_reproducible | true |
+
+TeBaQA: `HISTORICAL_ONLY`.
+
+### PE1–PE4
+
+| PE | Estado |
+|---|---|
+| PE1 | substantially_answered |
+| PE2 | partial_evidence |
+| PE3 | not_started (`no_comparable_original_metric_run_available`) |
+| PE4 | substantially_answered_for_current_portfolio |
+
+Residual blockers: LICENSE (varios); COST online; MISSING_CHECKPOINT/TRAINER/RUNNER; HARDWARE; METRIC_AMBIGUITY; GOLD_GROUNDING.
 
 ---
 
-## 3. Metadata commits (sin autorreferencia recursiva)
-
-### Prompt 14B2
+## 3. Metadata Prompt 14D (corregida)
 
 | Campo | SHA |
 |---|---|
-| ARTIFACT_COMMIT | `378d193e3638670b174228b00a536a265ec27853` |
-| publication metadata / remote tip post-14B2 | `20d1165d07ab41423266eb9e24c46bfca6244126` |
+| ARTIFACT_COMMIT | `39bdc72411e692fcb8b1519c45ced775056f2a06` |
+| publication metadata | `fa200879407fcc3e9a1735b84fcc2523c7097816` |
+| publication metadata | `001511931c6d8f001b1b9db9e524fdbcf4294618` |
+| remote tip final post-14D | `220ecbee3a22287980be2bb4c9757681386fd01f` |
 
-### Prompt 14C
-
-| Campo | SHA |
-|---|---|
-| ARTIFACT_COMMIT | `a257b5f1c8af7981fddbf8618ad7c635adc7f5da` |
-| publication metadata | `5abbb5ff5af168056b7e6d6117ace9b0a1693ed3` |
-| publication metadata | `14e4a6cb7058a0420cc2ccb21039e06bd940c2aa` |
-| remote tip after Prompt 14C | `ce6c22cccfb174bf1988084bdbc0b25079161816` |
-
-`14e4a6cb…` **no** es el tip remoto final post-14C.
+**No usar** el SHA erróneo `…e729…` (typo); el artifact real es `…e692…`.
 
 ---
 
 ## 4. Siguiente prompt (único)
 
-**Prompt 15 — Gate final de Fase 1: cierre comparativo de auditoría nativa y decisión de transición a evaluación común, ZERO_COST, sin adapters.**
+**Prompt 16 — Definición documental del protocolo común de evaluación Text-to-SPARQL por tracks, datasets, métricas y criterios de elegibilidad, ZERO_COST, sin implementar adapters ni ejecutar benchmarks.**
 
-Fuente: `audit/NEXT_POST_Z3_ZERO_COST_DECISION.md` (Q11). **No ejecutado en 14D.**
-
----
-
-## 5. PE1–PE4
-
-| PE | Estado |
-|---|---|
-| PE1 | substantially_answered |
-| PE2 | partial_evidence (+ SGPT load/forward/reduced-train; optimizer indirect) |
-| PE3 | **not_started** |
-| PE4 | partial_evidence (harness limit; ckpt; VRAM; splits; métricas; full-train barrier) |
+Fuente: `audit/NEXT_PHASE2_PROTOCOL_DECISION.md` (T1). **No ejecutado en 15.**
 
 ---
 
-## 6. Registro Prompt 14D
+## 5. Registro Prompt 15
 
 | Campo | Valor |
 |---|---|
-| commit inicial | `ce6c22cccfb174bf1988084bdbc0b25079161816` |
-| ARTIFACT_COMMIT | `39bdc72411e692fcb8b1519c45ced775056f2a06` |
-| remote tip after 14D (pre-metadata) | `39bdc72411e692fcb8b1519c45ced775056f2a06` |
-| publication metadata commit | `fa200879407fcc3e9a1735b84fcc2523c7097816` |
-| push | done |
+| commit inicial | `220ecbee3a22287980be2bb4c9757681386fd01f` |
+| ARTIFACT_COMMIT | _(tras commit de evidencia; sin cadena recursiva)_ |
+| push | pending |

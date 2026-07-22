@@ -1,0 +1,11 @@
+priority,action_id,method_id,decision_class,queue_role,title,external_cost_usd,when,evidence_focus,PE_link,artifact
+1,T1,lab,GO_NEXT_ZERO_COST,selected,COMMON_EVALUATION_PROTOCOL_DEFINITION,0.0,Prompt_16,protocol_tracks_metrics_eligibility,PE1-PE4,audit/NEXT_PHASE2_PROTOCOL_DECISION.md
+2,T2,lab,GO_AFTER_PROTOCOL,queued,DATASET_VERSION_AND_PROVENANCE_PROTOCOL,0.0,after_T1,dataset_pins,PE4,n/a
+3,T3,lab,GO_AFTER_PROTOCOL,queued,METRIC_SPECIFICATION_AND_ORACLE_CONTRACT,0.0,after_T1,metrics_oracle,PE3-prep,n/a
+4,T4,lab,GO_AFTER_PROTOCOL,queued,TRACK_SPECIFIC_ADAPTER_CONTRACTS,0.0,after_T1,adapter_contracts_doc_only,adapters,n/a
+5,T5,lab,GO_AFTER_LEGAL,queued,LEGAL_ELIGIBILITY_RECHECK,0.0,before_adapters,license_recheck,legal,n/a
+6,T6,lab,GO_AFTER_DATA_AUTHORIZATION,queued,CONTROLLED_DATASET_ACQUISITION,0.0,after_protocol_auth,datasets,data,n/a
+7,T7,lab,GO_AFTER_ADAPTER_GATE,queued,ADAPTER_IMPLEMENTATION_FOR_ELIGIBLE_METHODS,0.0,after_legal_protocol,adapters_impl,adapters,n/a
+8,T8,lab,GO_AFTER_ADAPTER_GATE,queued,COMMON_PREFLIGHT,0.0,after_adapters,preflight,PE2,n/a
+9,T9,lab,NOT_CURRENT_PHASE,queued,COMMON_BENCHMARK_EXECUTION,0.0,after_preflight,benchmark,PE3,n/a
+10,T10,lab,NOT_CURRENT_PHASE,queued,CASE_STUDY_PROTOCOL,0.0,after_benchmark_or_parallel_doc,case_study,later,n/a
