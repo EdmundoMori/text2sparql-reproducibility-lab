@@ -222,3 +222,25 @@ La creación de estos artefactos se realizará en fases posteriores solicitadas 
 **PE1:** substantially_answered · **PE2:** partial_evidence · **PE3:** not_started (`no_comparable_original_metric_run_available`) · **PE4:** substantially_answered_for_current_portfolio  
 **Fase 2:** aún **no** ejecutada — solo elegibilidad documental; siguiente Prompt 16 (definición protocolo común), sin adapters ni benchmarks.  
 **Informe:** `audit/PHASE1_FINAL_NATIVE_AUDIT_REPORT.md` · Decisión: `docs/decisions/006_phase1_native_audit_closure_and_phase2_transition.md`
+
+
+---
+
+## Addendum Prompt 16 — Protocolo común (framework)
+
+**Fecha:** 2026-07-22  
+**Gate:** `COMMON_PROTOCOL_FRAMEWORK_DEFINED_READY_FOR_DATASET_PROVENANCE`  
+**Fase 1:** permanece cerrada; definiciones de estados de reproducción (§5) **sin cambio**.
+
+### PE5–PE8 (registro, sin resultados de benchmark)
+
+| PE | Estado |
+|---|---|
+| PE5 | `protocol_framework_defined_pending_benchmark` |
+| PE6 | `diagnostic_metric_framework_defined_pending_execution` |
+| PE7 | `not_started` |
+| PE8 | `not_started` |
+
+### Condición de transición
+
+Puede avanzar T2 (dataset provenance documental). **No** implica adapters ni benchmark. `common_adapter_allowed` sigue false.

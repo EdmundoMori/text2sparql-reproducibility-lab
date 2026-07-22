@@ -4,10 +4,10 @@
 # inclusion_decision: audit/INCLUSION_DECISIONS.md
 # Evidencia pendiente cerrada: audit/EVIDENCE_CLOSURE.md
 
-schema_version: "0.12"
-updated_at: "2026-07-22T10:04:00+02:00"
-phase: "phase1_closed_phase2_protocol_pending"
-audit_prompt: "Prompt_15_PHASE1_FINAL_GATE"
+schema_version: "0.13"
+updated_at: "2026-07-22T10:32:00+02:00"
+phase: "phase2_protocol_framework_defined"
+audit_prompt: "Prompt_16_COMMON_EVALUATION_PROTOCOL_FRAMEWORK"
 clones_performed: true
 evidence_closure_complete: true
 wave_a_static_audit_complete: true
@@ -111,7 +111,7 @@ methods:
   - zero_cost_policy
   - max_tokens_not_enforced
   - new_human_authorization_required_to_reopen
-  next_execution_prompt: Prompt_16_common_evaluation_protocol_definition
+  next_execution_prompt: Prompt_17
   model_budget_gate_run_id: "20260721T100618Z"
   model_budget_gate_artifact: docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/
   model_budget_final_report: audit/sparql_llm/LOCAL_CHAT_API_MODEL_BUDGET_FINAL_GATE_REPORT.md
@@ -126,7 +126,7 @@ methods:
   adapter_legal_gate: conditional_deferred
   generality_class: configurable_general
   gate_artifact: audit/ZERO_COST_NATIVE_AUDIT_REGATE.md
-  next_native_action: await_common_evaluation_protocol_definition
+  next_native_action: phase1_closed_no_reopen
   next_native_action_class: zero_cost_other_method
   gate_confidence: high
   execution_blockers:
@@ -161,6 +161,17 @@ methods:
   pe3_status: not_started
   pe3_qualifier: no_comparable_original_metric_run_available
   pe4_status: substantially_answered_for_current_portfolio
+  benchmark_execution_eligibility: NOT_CURRENTLY_ELIGIBLE
+  next_common_action: await_dataset_provenance_metric_and_adapter_contracts
+  candidate_track_assignments:
+  - IA_SCHEMA_COMMON
+  execution_style_tags:
+  - ES_SCHEMA_RAG_VALIDATION
+  model_control_status: MC_NATIVE_BACKBONE
+  phase2_protocol_design_status: G1_eligible_G2_candidate
+  variants_candidate:
+  - sparql_llm_schema_common_native
+  - sparql_llm_online_api_deferred
 - method_id: mkgqagent
   display_name: mKGQAgent
   repositories:
@@ -174,8 +185,7 @@ methods:
     last_push_utc: "2026-07-07T08:59:37Z"
     fork: false
   paper:
-    title: "Text-to-SPARQL Goes Beyond English: Multilingual Question Answering Over Knowledge Graphs through Human-Inspired
-      Reasoning"
+    title: "Text-to-SPARQL Goes Beyond English: Multilingual Question Answering Over Knowledge Graphs through Human-Inspired Reasoning"
     year: 2025
     publication_status: workshop_proceedings_published
     venue: "TEXT2SPARQL Challenge @ ESWC 2025; CEUR-WS Vol. 4094"
@@ -214,10 +224,10 @@ methods:
   adapter_legal_gate: blocked
   generality_class: generalizable_with_domain_package
   gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-  next_native_action: await_common_evaluation_protocol_definition
+  next_native_action: phase1_closed_no_reopen
   next_native_action_class: HOLD_LEGAL
   gate_confidence: high
-  next_execution_prompt: Prompt_16_common_evaluation_protocol_definition
+  next_execution_prompt: Prompt_17
   execution_blockers:
   - LICENSE_NOT_CONFIRMED
   - hardcoded_external_hosts
@@ -246,6 +256,16 @@ methods:
   pe3_status: not_started
   pe3_qualifier: no_comparable_original_metric_run_available
   pe4_status: substantially_answered_for_current_portfolio
+  benchmark_execution_eligibility: NOT_CURRENTLY_ELIGIBLE
+  next_common_action: await_dataset_provenance_metric_and_adapter_contracts
+  candidate_track_assignments:
+  - IA_Q_ONLY
+  execution_style_tags:
+  - ES_AGENTIC_MULTI_CALL
+  model_control_status: MC_NATIVE_BACKBONE
+  phase2_protocol_design_status: G1_conditional_G2_candidate
+  variants_candidate:
+  - mkgqagent_q_only_agentic
 - method_id: cot_sparql
   display_name: COT-SPARQL
   repositories:
@@ -303,10 +323,10 @@ methods:
   adapter_legal_gate: blocked
   generality_class: generalizable_with_domain_package
   gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-  next_native_action: await_common_evaluation_protocol_definition
+  next_native_action: phase1_closed_no_reopen
   next_native_action_class: HOLD_HARDWARE
   gate_confidence: high
-  next_execution_prompt: Prompt_16_common_evaluation_protocol_definition
+  next_execution_prompt: Prompt_17
   execution_blockers:
   - LICENSE_NOT_CONFIRMED
   - embeddings_and_example_parquets_absent
@@ -340,6 +360,16 @@ methods:
   pe3_status: not_started
   pe3_qualifier: no_comparable_original_metric_run_available
   pe4_status: substantially_answered_for_current_portfolio
+  benchmark_execution_eligibility: NOT_CURRENTLY_ELIGIBLE
+  next_common_action: await_dataset_provenance_metric_and_adapter_contracts
+  candidate_track_assignments:
+  - IA_FIXED_EXTERNAL_GROUNDING
+  execution_style_tags:
+  - ES_COT_RETRIEVAL
+  model_control_status: MC_NATIVE_BACKBONE
+  phase2_protocol_design_status: G1_documentary_G2_candidate
+  variants_candidate:
+  - cot_fixed_external_grounding
 - method_id: firesparql
   display_name: FIRESPARQL
   repositories:
@@ -403,10 +433,10 @@ methods:
   adapter_legal_gate: blocked
   generality_class: domain_specific_reimplementation_required
   gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-  next_native_action: await_common_evaluation_protocol_definition
+  next_native_action: phase1_closed_no_reopen
   next_native_action_class: HOLD_MISSING_CODE
   gate_confidence: high
-  next_execution_prompt: Prompt_16_common_evaluation_protocol_definition
+  next_execution_prompt: Prompt_17
   execution_blockers:
   - LICENSE_NOT_CONFIRMED
   - requirements_coming_soon_absent
@@ -440,6 +470,16 @@ methods:
   pe3_status: not_started
   pe3_qualifier: no_comparable_original_metric_run_available
   pe4_status: substantially_answered_for_current_portfolio
+  benchmark_execution_eligibility: NOT_CURRENTLY_ELIGIBLE
+  next_common_action: await_dataset_provenance_metric_and_adapter_contracts
+  candidate_track_assignments:
+  - IA_DOMAIN_NATIVE
+  execution_style_tags:
+  - ES_DOMAIN_FINETUNED_RAG
+  model_control_status: MC_NATIVE_BACKBONE
+  phase2_protocol_design_status: G1_documentary_G2_candidate
+  variants_candidate:
+  - firesparql_domain_native
 - method_id: rdfconfig_llm
   display_name: LLM + RDF-config
   repositories:
@@ -509,10 +549,10 @@ methods:
   adapter_legal_gate: blocked
   generality_class: domain_specific_reimplementation_required
   gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md
-  next_native_action: await_common_evaluation_protocol_definition
+  next_native_action: phase1_closed_no_reopen
   next_native_action_class: DOCUMENT_ONLY
   gate_confidence: medium
-  next_execution_prompt: Prompt_16_common_evaluation_protocol_definition
+  next_execution_prompt: Prompt_17
   execution_blockers:
   - LICENSE_NOT_CONFIRMED_generator_HEAD
   - requirements_txt_incomplete_vs_evaluator
@@ -540,6 +580,17 @@ methods:
   pe3_status: not_started
   pe3_qualifier: no_comparable_original_metric_run_available
   pe4_status: substantially_answered_for_current_portfolio
+  benchmark_execution_eligibility: NOT_CURRENTLY_ELIGIBLE
+  next_common_action: await_dataset_provenance_metric_and_adapter_contracts
+  candidate_track_assignments:
+  - IA_SCHEMA_COMMON
+  - IA_DOMAIN_NATIVE
+  execution_style_tags:
+  - ES_DETERMINISTIC_SCHEMA_CONSTRUCTION
+  model_control_status: MC_NATIVE_BACKBONE
+  phase2_protocol_design_status: G1_conditional_G2_candidate
+  variants_candidate:
+  - rdfconfig_schema_or_domain
 - method_id: sgpt
   display_name: SGPT
   repositories:
@@ -598,10 +649,10 @@ methods:
   adapter_legal_gate: conditional_deferred
   generality_class: retraining_required
   gate_artifact: audit/NATIVE_AUDIT_COMPARATIVE_GATE.md
-  next_native_action: await_common_evaluation_protocol_definition
+  next_native_action: phase1_closed_no_reopen
   next_native_action_class: GO_NEXT_ZERO_COST
   gate_confidence: high
-  next_execution_prompt: Prompt_16_common_evaluation_protocol_definition
+  next_execution_prompt: Prompt_17
   execution_blockers:
   - checkpoint_absent_in_repo
   - vram_6GiB_vs_paper_2x12GB
@@ -609,8 +660,7 @@ methods:
   - qald9_id_reuse_train_test_150
   - metric_double_update_anomaly
   - epochs_cli_vs_params_json_divergence
-  notes: "Prompt15: Phase1 closed; Z3 smoke_only with indirect optimizer qualifier preserved; nac=true; adapters false; next
-    Prompt16."
+  notes: "Prompt15: Phase1 closed; Z3 smoke_only with indirect optimizer qualifier preserved; nac=true; adapters false; next Prompt16."
 
   zero_cost_gate_class: GO_NEXT_ZERO_COST
   zero_cost_next_action: Prompt_16
@@ -768,6 +818,18 @@ methods:
   - split_drift
   - metric_ambiguity
   pe3_qualifier: no_comparable_original_metric_run_available
+  benchmark_execution_eligibility: NOT_CURRENTLY_ELIGIBLE
+  next_common_action: await_dataset_provenance_metric_and_adapter_contracts
+  candidate_track_assignments:
+  - IA_Q_ONLY
+  - IA_ORACLE_GROUNDING
+  execution_style_tags:
+  - ES_SUPERVISED_GENERATOR
+  model_control_status: MC_NATIVE_BACKBONE
+  phase2_protocol_design_status: G1_eligible_G2_candidate_two_variants
+  variants_candidate:
+  - sgpt_q
+  - sgpt_qk
 - method_id: tebaqa
   display_name: TeBaQA
   repositories:
@@ -786,8 +848,7 @@ methods:
     publication_status: published_article
     venue: "Studies on the Semantic Web (IOS Press)"
     doi_or_id: "10.3233/SSW210038"
-    authors: ["Daniel Vollmers", "Rricha Jalota", "Diego Moussallem", "Hardik Topiwala", "Axel-Cyrille Ngonga Ngomo", "Ricardo
-        Usbeck"]
+    authors: ["Daniel Vollmers", "Rricha Jalota", "Diego Moussallem", "Hardik Topiwala", "Axel-Cyrille Ngonga Ngomo", "Ricardo Usbeck"]
   artifacts:
     checkpoints: n_a_ml_classifiers
     processed_datasets: external_indices
@@ -818,10 +879,37 @@ methods:
   future_adapter_eligibility: HISTORICAL_ONLY
   next_native_action: none_historical_only
   next_execution_prompt: none
+  benchmark_execution_eligibility: HISTORICAL_ONLY
+  next_common_action: none_historical
+  candidate_track_assignments:
+  - IA_HISTORICAL
+  execution_style_tags:
+  - ES_TEMPLATE_HISTORICAL
+  model_control_status: MC_NATIVE_BACKBONE
+  phase2_protocol_design_status: HISTORICAL_ONLY
+  variants_candidate:
+  - tebaqa_historical
 phase1_status: closed
 phase1_final_gate: PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION
 phase1_closure_artifact: audit/PHASE1_FINAL_NATIVE_AUDIT_REPORT.md
 phase1_gate_qualifier: RESIDUAL_METHOD_BLOCKERS_PRESERVED
-phase2_status: protocol_definition_pending
-current_phase: phase2_protocol_definition_pending
+phase2_status: protocol_framework_defined_dataset_provenance_pending
+current_phase: phase2_protocol_framework_defined
 phase1_decision_artifact: docs/decisions/006_phase1_native_audit_closure_and_phase2_transition.md
+phase2_protocol_run_id: 20260722T083201Z
+phase2_protocol_artifact: docs/protocols/common/20260722T083201Z/
+phase2_protocol_gate: COMMON_PROTOCOL_FRAMEWORK_DEFINED_READY_FOR_DATASET_PROVENANCE
+phase2_primary_dataset_candidate: QALD9_PLUS_EN_DBPEDIA
+phase2_secondary_dataset_candidate: LCQUAD2
+phase2_dataset_pin_status: DATASET_PIN_PENDING
+phase2_graph_pin_status: GRAPH_SNAPSHOT_PENDING
+phase2_metric_detail_status: METRIC_DETAIL_PENDING
+phase2_oracle_contract_status: ORACLE_CONTRACT_PENDING
+phase2_adapter_status: disabled_common_adapter_allowed_false
+phase2_benchmark_status: NOT_CURRENTLY_ELIGIBLE
+phase2_next_action: T2_DATASET_VERSION_AND_PROVENANCE_PROTOCOL
+phase2_next_prompt: Prompt_17
+pe5_status: protocol_framework_defined_pending_benchmark
+pe6_status: diagnostic_metric_framework_defined_pending_execution
+pe7_status: not_started
+pe8_status: not_started

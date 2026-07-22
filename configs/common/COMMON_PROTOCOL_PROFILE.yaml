@@ -1,0 +1,58 @@
+# COMMON_PROTOCOL_PROFILE — Prompt 16 draft
+protocol_id: common_text2sparql_eval
+protocol_version: "0.1.0-framework"
+protocol_run_id: "20260722T083201Z"
+phase: phase2_protocol_framework_defined
+primary_dataset_candidate: QALD9_PLUS_EN_DBPEDIA
+secondary_dataset_candidate: LCQUAD2
+track_ids:
+  - IA_Q_ONLY
+  - IA_SCHEMA_COMMON
+  - IA_ORACLE_GROUNDING
+  - IA_FIXED_EXTERNAL_GROUNDING
+  - IA_DOMAIN_NATIVE
+  - IA_HISTORICAL
+execution_style_tags:
+  - ES_SCHEMA_RAG_VALIDATION
+  - ES_AGENTIC_MULTI_CALL
+  - ES_SUPERVISED_GENERATOR
+  - ES_DETERMINISTIC_SCHEMA_CONSTRUCTION
+  - ES_COT_RETRIEVAL
+  - ES_DOMAIN_FINETUNED_RAG
+  - ES_TEMPLATE_HISTORICAL
+adaptation_regimes:
+  - AR_ZERO_SHOT
+  - AR_FEW_SHOT_TRAIN_ONLY
+  - AR_SUPERVISED_TRAIN_SPLIT
+  - AR_DOMAIN_RETRAINED
+  - AR_NATIVE_RELEASED_ASSET
+  - AR_ORACLE_INPUT
+model_control_regimes:
+  - MC_NATIVE_BACKBONE
+  - MC_CONTROLLED_BACKBONE
+primary_metrics:
+  - answer_precision
+  - answer_recall
+  - answer_f1
+  - execution_exact_accuracy
+diagnostic_metrics:
+  - syntax_validity_rate
+  - executable_query_rate
+  - entity_linking_f1
+  - relation_linking_f1
+operational_metrics:
+  - total_latency_ms
+  - estimated_cost_usd
+  - llm_calls
+  - endpoint_calls
+dataset_pin_status: DATASET_PIN_PENDING
+graph_pin_status: GRAPH_SNAPSHOT_PENDING
+metric_detail_status: METRIC_DETAIL_PENDING
+oracle_contract_status: ORACLE_CONTRACT_PENDING
+adapter_status: disabled_common_adapter_allowed_false
+benchmark_status: NOT_CURRENTLY_ELIGIBLE
+zero_cost_policy: MAX_EXTERNAL_MONETARY_COST_USD_0.00
+next_action: T2_DATASET_VERSION_AND_PROVENANCE_PROTOCOL
+next_prompt: Prompt_17
+claim_boundary: PROTOCOL_FRAMEWORK_ONLY_no_benchmark_no_adapters
+gate: COMMON_PROTOCOL_FRAMEWORK_DEFINED_READY_FOR_DATASET_PROVENANCE

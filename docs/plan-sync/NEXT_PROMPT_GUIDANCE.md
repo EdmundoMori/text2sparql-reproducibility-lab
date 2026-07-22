@@ -1,10 +1,10 @@
 # NEXT_PROMPT_GUIDANCE
 
 **Fecha:** 2026-07-22  
-**Tras:** Prompt 15 — gate final Fase 1
+**Tras:** Prompt 16 — common evaluation protocol framework
 
 ## Prompt recomendado (único)
 
-**Título:** Prompt 16 — Definición documental del protocolo común de evaluación Text-to-SPARQL por tracks, datasets, métricas y criterios de elegibilidad, ZERO_COST, sin implementar adapters ni ejecutar benchmarks.
+**Título:** Prompt 17 — Cierre documental de versiones, licencias, archivos, splits, hashes y endpoint/graph provenance de QALD-9 Plus y LC-QuAD 2.0, ZERO_COST, sin descargar datasets ni ejecutar consultas.
 
-**Restricciones:** ZERO_COST; sin adapters; sin benchmarks; sin downloads no autorizados; sin train; conservar `common_adapter_allowed=false`; separar tracks; sin ranking.
+**Restricciones:** ZERO_COST; sin descargas; sin SPARQL; sin adapters; sin benchmark; sin inventar hashes sin fuente; conservar `common_adapter_allowed=false`.

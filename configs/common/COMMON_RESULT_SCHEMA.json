@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.lab/common-result-schema-draft",
+  "title": "LabCommonResultDraft",
+  "description": "Draft laboratory schema for future common evaluation runs. PROTOCOL_FRAMEWORK_ONLY. No experimental results.",
+  "type": "object",
+  "required": [
+    "run_metadata",
+    "method_metadata",
+    "track_metadata",
+    "dataset_graph_provenance",
+    "input",
+    "output",
+    "claim_boundary"
+  ],
+  "properties": {
+    "run_metadata": {
+      "type": "object",
+      "properties": {
+        "run_id": {
+          "type": "string"
+        },
+        "protocol_version": {
+          "type": "string"
+        },
+        "protocol_run_id": {
+          "type": "string"
+        },
+        "seed": {},
+        "estimated_cost_usd": {
+          "type": "number"
+        }
+      }
+    },
+    "method_metadata": {
+      "type": "object",
+      "properties": {
+        "method_id": {
+          "type": "string"
+        },
+        "variant_id": {
+          "type": "string"
+        },
+        "upstream_commit": {
+          "type": "string"
+        },
+        "adapter_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "track_metadata": {
+      "type": "object",
+      "properties": {
+        "information_access_track": {
+          "type": "string"
+        },
+        "execution_style": {
+          "type": "string"
+        },
+        "adaptation_regime": {
+          "type": "string"
+        },
+        "model_control_regime": {
+          "type": "string"
+        }
+      }
+    },
+    "dataset_graph_provenance": {
+      "type": "object",
+      "properties": {
+        "dataset_id": {
+          "type": "string"
+        },
+        "dataset_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "graph_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "graph_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pin_status": {
+          "type": "string",
+          "const": "DATASET_PIN_PENDING"
+        }
+      }
+    },
+    "input": {
+      "type": "object",
+      "description": "CommonInput fields"
+    },
+    "output": {
+      "type": "object",
+      "description": "CommonOutput fields",
+      "properties": {
+        "final_sparql": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generation_status": {
+          "type": "string"
+        }
+      }
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "operational_measurements": {
+      "type": "object"
+    },
+    "failures": {
+      "type": "object"
+    },
+    "evidence": {
+      "type": "object"
+    },
+    "hashes": {
+      "type": "object"
+    },
+    "claim_boundary": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

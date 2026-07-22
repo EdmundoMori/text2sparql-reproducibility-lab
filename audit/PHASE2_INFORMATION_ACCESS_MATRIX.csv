@@ -1,0 +1,7 @@
+track_id,question,endpoint_access,common_schema,gold_entities,gold_relations,external_entity_linker,external_relation_linker,training_split,development_split,test_gold_query,test_gold_answers,method_internal_retrieval,notes
+IA_Q_ONLY,yes,yes,no,no,no,no,no,regime_dependent,regime_dependent,never_to_method,never_to_method_eval_only,allowed_if_declared,end-to-end question
+IA_SCHEMA_COMMON,yes,yes,yes_same_bundle,no,no,no,no,regime_dependent,regime_dependent,never_to_method,never_to_method_eval_only,allowed_if_declared,shared schema
+IA_ORACLE_GROUNDING,yes,yes,optional,yes,yes_or_declared,no,no,regime_dependent,regime_dependent,never_to_method,never_to_method_eval_only,allowed_if_declared,oracle only
+IA_FIXED_EXTERNAL_GROUNDING,yes,yes,optional,no,no,yes_frozen_common,yes_frozen_common_optional,regime_dependent,regime_dependent,never_to_method,never_to_method_eval_only,allowed_if_declared,not Q_ONLY
+IA_DOMAIN_NATIVE,yes,domain_kg,domain,method_dependent,method_dependent,method_dependent,method_dependent,domain,domain,never_to_method,never_to_method_eval_only,allowed_if_declared,no direct DBpedia compare
+IA_HISTORICAL,n_a,n_a,n_a,n_a,n_a,n_a,n_a,n_a,n_a,n_a,n_a,n_a,HISTORICAL_ONLY

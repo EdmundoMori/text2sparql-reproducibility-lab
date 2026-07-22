@@ -1,0 +1,24 @@
+risk_id,risk,affected_component,probability,impact,detection,mitigation,stop_condition,residual_risk,future_owner,evidence
+R01,test_leakage,prompts_retrieval,med,high,audit_prompts_hashes,freeze_prompts_train_only,RUN_INVALID_TEST_LEAKAGE,med,Prompt17-19,PROMPT_POLICY
+R02,track_conflation,comparisons,high,high,assignment_matrix,orthogonal_axes,reject_cross_track_rank,med,Prompt16,COMPARABILITY
+R03,oracle_advantage_hidden,IA_ORACLE,high,high,variant_ids,separate_sgpt_qk,forbid_Q_vs_oracle,low,Prompt16,ORACLE_POLICY
+R04,endpoint_drift,graph,high,high,gold_probe,prefer_snapshot,invalidate_segment,high,T2,GRAPH_PENDING
+R05,graph_drift,graph,high,high,checksum,immutable_dump,stop_benchmark,high,T2,GRAPH_PENDING
+R06,dataset_version_drift,dataset,high,high,pins,T2 provenance,no_unpinned_run,high,T2,DATASET_PIN_PENDING
+R07,gold_query_invalidity,dataset,med,high,gold_on_graph,global_exclusion,exclude_global,med,T2-T3,EVALUABLE_POLICY
+R08,answer_canonicalization_ambiguity,metrics,high,high,metric_spec,T3 detail,METRIC_DETAIL_PENDING,high,T3,METRIC_DETAIL_PENDING
+R09,query_form_incompatibility,scope,med,med,predeclare_scope,OUT_OF_SCOPE status,no_posthoc,med,T3,EVALUABLE_POLICY
+R10,success_only_denominator_bias,metrics,high,high,denominator_policy,keep_failures,forbid_success_only,low,Prompt16,FAILURE_POLICY
+R11,missing_output_exclusion_bias,metrics,high,high,item_policy,score_0_keep_item,forbid_drop,low,Prompt16,FAILURE_POLICY
+R12,stochastic_variance,models,med,med,replicates,min_3_when_needed,no_best_seed,med,T3,RANDOMNESS
+R13,api_model_mutability,LLM,high,high,revision_pin,no_latest,NONDETERMINISTIC label,med,T3,MODEL_POLICY
+R14,hidden_fallback,adapters,med,high,output_contract,forbid_silent_fallback,invalidate_run,med,T4,ADAPTER_BOUNDARY
+R15,different_LLM_backbones,MC regimes,high,high,MC_NATIVE_vs_CONTROLLED,report_separately,no_causal_confound,med,Prompt16,MODEL_POLICY
+R16,cost_inequity,ops,med,med,cost_fields,report_cost_calls,no_ignore_cost,med,T9,OPS_METRICS
+R17,latency_measurement_inconsistency,ops,med,low,contract_fields,define_clock_points,document_gaps,med,T3,OPS_METRICS
+R18,linking_non_observability,grounding,high,med,observability_flag,NOT_OBSERVABLE,no_infer_from_sparql,med,T3,ORACLE_POLICY
+R19,domain_mismatch,IA_DOMAIN,high,high,track_matrix,separate_reporting,DIRECT_COMPARISON_FORBIDDEN,low,Prompt16,COMPARABILITY
+R20,license_violation,legal,high,high,LICENSE_MATRIX,G3 gate,HOLD_LEGAL,high,T5,LEGAL_GATE_PENDING
+R21,upstream_modification,adapters,med,high,git_status,adapters_outside_upstream,abort,low,T7,ADAPTER_BOUNDARY
+R22,global_ranking_misuse,reporting,high,high,reporting_policy,no_monolithic_rank,reject,low,Prompt16,AGGREGATION
+R23,multiple_comparison_inflation,stats,med,med,stat_framework,correction,no_unadjusted_claims,med,T3,STATS

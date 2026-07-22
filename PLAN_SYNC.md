@@ -2,11 +2,12 @@
 
 **Audiencia:** ChatGPT e investigador.  
 **Repo:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-**Última actualización:** 2026-07-22 (Prompt **15** — gate final Fase 1)  
-**Fase:** 1 **cerrada** · 2 **protocol_definition_pending**  
-**SHA inicial 15:** `220ecbee3a22287980be2bb4c9757681386fd01f`
+**Última actualización:** 2026-07-22 (Prompt **16** — common protocol framework)  
+**Fase:** 1 **cerrada** · 2 **framework definido** (dataset provenance pending)  
+**SHA inicial 16:** `df1ee9758e2b9f4bc78515dfa5f67f3af057d2ed`  
+**Protocol RUN_ID:** `20260722T083201Z`
 
-> ZERO_COST. Gate `PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION` + `RESIDUAL_METHOD_BLOCKERS_PRESERVED`. Adapters **false**. Sin ejecución. Objetivo largo plazo intacto.
+> ZERO_COST. Gate `COMMON_PROTOCOL_FRAMEWORK_DEFINED_READY_FOR_DATASET_PROVENANCE`. Adapters **false**. Benchmark **no**. Objetivo largo plazo intacto.
 
 ---
 
@@ -16,69 +17,55 @@ reproducción nativa → evaluación común → caso de estudio → errores → 
 
 ---
 
-## 2. Prompt 15 — resumen
+## 2. Prompt 16 — resumen
 
 | Campo | Valor |
 |---|---|
-| Gate | **`PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION`** |
-| Qualifier | `RESIDUAL_METHOD_BLOCKERS_PRESERVED` |
-| phase1_status | `closed` |
-| phase2_status | `protocol_definition_pending` |
-| Adapters | **false** |
-| Coste / ejecución | **0.00** / ninguna |
+| RUN_ID | `20260722T083201Z` |
+| Gate | **COMMON_PROTOCOL_FRAMEWORK_DEFINED_READY_FOR_DATASET_PROVENANCE** |
+| Tracks IA | IA_Q_ONLY · IA_SCHEMA_COMMON · IA_ORACLE_GROUNDING · IA_FIXED_EXTERNAL_GROUNDING · IA_DOMAIN_NATIVE · IA_HISTORICAL |
+| Datasets | PRIMARY QALD9_PLUS_EN_DBPEDIA · SECONDARY LCQUAD2 |
+| Pins | DATASET_PIN_PENDING · GRAPH_SNAPSHOT_PENDING · METRIC_DETAIL_PENDING |
+| Adapters / benchmark | false / NOT_CURRENTLY_ELIGIBLE |
+| Coste / ejecución | 0.00 / ninguna |
 
-### Seis métodos activos — outcomes
+Variantes clave: `sgpt_q` (IA_Q_ONLY) ≠ `sgpt_qk` (IA_ORACLE_GROUNDING).
 
-| method | reproduction_status | nac |
-|---|---|---|
-| sparql_llm | smoke_only | true |
-| sgpt | smoke_only | true |
-| mkgqagent | blocked | true |
-| rdfconfig_llm | blocked | true |
-| cot_sparql | blocked | true |
-| firesparql | not_reproducible | true |
-
-TeBaQA: `HISTORICAL_ONLY`.
-
-### PE1–PE4
+### PE5–PE8
 
 | PE | Estado |
 |---|---|
-| PE1 | substantially_answered |
-| PE2 | partial_evidence |
-| PE3 | not_started (`no_comparable_original_metric_run_available`) |
-| PE4 | substantially_answered_for_current_portfolio |
+| PE5 | protocol_framework_defined_pending_benchmark |
+| PE6 | diagnostic_metric_framework_defined_pending_execution |
+| PE7 | not_started |
+| PE8 | not_started |
 
-Residual blockers: LICENSE (varios); COST online; MISSING_CHECKPOINT/TRAINER/RUNNER; HARDWARE; METRIC_AMBIGUITY; GOLD_GROUNDING.
+PE1–PE4 intactos (Fase 1 cerrada).
 
 ---
 
-## 3. Metadata Prompt 14D (corregida)
+## 3. Metadata Prompt 15 (reconciliada)
 
 | Campo | SHA |
 |---|---|
-| ARTIFACT_COMMIT | `39bdc72411e692fcb8b1519c45ced775056f2a06` |
-| publication metadata | `fa200879407fcc3e9a1735b84fcc2523c7097816` |
-| publication metadata | `001511931c6d8f001b1b9db9e524fdbcf4294618` |
-| remote tip final post-14D | `220ecbee3a22287980be2bb4c9757681386fd01f` |
-
-**No usar** el SHA erróneo `…e729…` (typo); el artifact real es `…e692…`.
+| ARTIFACT_COMMIT | `9ceb112e7e8b157cb1961a24183cfea45abde07b` |
+| publication metadata | `019e1771ee3d604e05799677b6477c3943370e7c` |
+| remote tip final post-15 | `df1ee9758e2b9f4bc78515dfa5f67f3af057d2ed` |
 
 ---
 
 ## 4. Siguiente prompt (único)
 
-**Prompt 16 — Definición documental del protocolo común de evaluación Text-to-SPARQL por tracks, datasets, métricas y criterios de elegibilidad, ZERO_COST, sin implementar adapters ni ejecutar benchmarks.**
+**Prompt 17 — Cierre documental de versiones, licencias, archivos, splits, hashes y endpoint/graph provenance de QALD-9 Plus y LC-QuAD 2.0, ZERO_COST, sin descargar datasets ni ejecutar consultas.**
 
-Fuente: `audit/NEXT_PHASE2_PROTOCOL_DECISION.md` (T1). **No ejecutado en 15.**
+Fuente: `audit/NEXT_AFTER_COMMON_PROTOCOL_DECISION.md` (T2). **No ejecutado en 16.**
 
 ---
 
-## 5. Registro Prompt 15
+## 5. Registro Prompt 16
 
 | Campo | Valor |
 |---|---|
-| commit inicial | `220ecbee3a22287980be2bb4c9757681386fd01f` |
-| ARTIFACT_COMMIT | `9ceb112e7e8b157cb1961a24183cfea45abde07b` |
-| publication metadata commit | `019e1771ee3d604e05799677b6477c3943370e7c` |
-| push | done |
+| commit inicial | `df1ee9758e2b9f4bc78515dfa5f67f3af057d2ed` |
+| ARTIFACT_COMMIT | _(tras commit de evidencia; sin cadena recursiva)_ |
+| push | pending |

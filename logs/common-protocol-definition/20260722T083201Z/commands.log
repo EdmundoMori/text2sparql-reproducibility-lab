@@ -1,0 +1,10 @@
+# Prompt 16 — common protocol framework (documentary)
+# RUN_ID=20260722T083201Z
+# 2026-07-22
+git fetch origin
+git branch --show-current
+git rev-parse HEAD
+git rev-parse origin/main
+git status --short
+# Wrote docs/protocols/common/20260722T083201Z/* ; Phase2 matrices; configs/common/* ; registry; plan-sync
+# NO network beyond git fetch; NO docker/pip/downloads/API/endpoint/dataset/metric/model/adapter/benchmark/upstream edits

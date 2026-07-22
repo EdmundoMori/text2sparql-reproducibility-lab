@@ -2,6 +2,22 @@
 
 Laboratorio local de investigación en **Text-to-SPARQL** / KGQA orientado a auditoría, reproducibilidad nativa y, posteriormente, evaluación común de métodos publicados.
 
+
+## Estado actual (Prompt 16)
+
+| Campo | Valor |
+|---|---|
+| Fase 1 | **cerrada** (`PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION`) |
+| Fase 2 | **framework definido**; dataset provenance pending |
+| Protocol RUN_ID | ver `METHOD_REGISTRY.yaml` → `phase2_protocol_run_id` |
+| Adapters | `common_adapter_allowed=false` (gate Fase 2; no implementación) |
+| Benchmark común | **no** ejecutado (`NOT_CURRENTLY_ELIGIBLE`) |
+| Datasets candidatos | QALD-9 Plus (primario); LC-QuAD 2.0 (secundario) — `DATASET_PIN_PENDING` |
+| Siguiente | Prompt 17 / T2 — provenance documental (sin descargas) |
+
+Clones y ejecuciones nativas de Fase 1 están **documentadas**. La secuencia de largo plazo permanece intacta.
+
+
 ## Documentos rectores
 
 | Documento | Rol |

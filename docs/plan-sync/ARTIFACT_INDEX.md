@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-22 (Prompt 15)  
+**Última actualización:** 2026-07-22 (Prompt 16)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -248,6 +248,26 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | P15-Q | Phase2 transition queue | `audit/PHASE2_TRANSITION_QUEUE.csv` | T1 selected |
 | P15-LOG | Logs Prompt 15 | `logs/phase1-final-gate/` | documental |
 | P15-PORT | Portfolio updated | `audit/SCIENTIFIC_BASELINE_PORTFOLIO.csv` | 15 |
+
+| P16-TERM | Common terminology | `docs/protocols/common/20260722T083201Z/COMMON_PROTOCOL_TERMINOLOGY.md` | 16 |
+| P16-TAX | Track taxonomy | `docs/protocols/common/20260722T083201Z/TRACK_TAXONOMY.md` | 16 |
+| P16-DIR | Protocol pack | `docs/protocols/common/20260722T083201Z/` | 16 |
+| P16-GATE | Protocol gate | `docs/protocols/common/20260722T083201Z/COMMON_PROTOCOL_GATE.md` | 16 |
+| P16-PROF | Protocol profile | `configs/common/COMMON_PROTOCOL_PROFILE.yaml` | 16 |
+| P16-SCH | Result schema draft | `configs/common/COMMON_RESULT_SCHEMA.json` | 16 |
+| P16-TA | Track assignment | `audit/PHASE2_TRACK_ASSIGNMENT_MATRIX.csv` | candidate |
+| P16-CMP | Comparison allowed | `audit/PHASE2_COMPARISON_ALLOWED_MATRIX.csv` | 16 |
+| P16-DT | Dataset×track | `audit/PHASE2_DATASET_TRACK_COMPATIBILITY.csv` | 16 |
+| P16-MET | Metric applicability | `audit/PHASE2_METRIC_APPLICABILITY_MATRIX.csv` | 16 |
+| P16-IA | Information access | `audit/PHASE2_INFORMATION_ACCESS_MATRIX.csv` | 16 |
+| P16-MG | Method gate matrix | `audit/PHASE2_METHOD_GATE_MATRIX.csv` | G0-G9 |
+| P16-RISK | Protocol risk register | `audit/PHASE2_PROTOCOL_RISK_REGISTER.csv` | 16 |
+| P16-RPT | Framework report | `audit/PHASE2_COMMON_EVALUATION_PROTOCOL_FRAMEWORK_REPORT.md` | 16 |
+| P16-DEC | Decision 007 | `docs/decisions/007_common_evaluation_protocol_framework.md` | 16 |
+| P16-Q | Protocol definition queue | `audit/PHASE2_PROTOCOL_DEFINITION_QUEUE.csv` | T2 selected |
+| P16-NEXT | Next after protocol | `audit/NEXT_AFTER_COMMON_PROTOCOL_DECISION.md` | Prompt17 |
+| P16-LOG | Logs Prompt 16 | `logs/common-protocol-definition/20260722T083201Z/` | documental |
+| P15Q-HIST | Phase2 transition queue (HIST) | `audit/PHASE2_TRANSITION_QUEUE.csv` | preserved |
 
 ## Qué está / no está en GitHub
 

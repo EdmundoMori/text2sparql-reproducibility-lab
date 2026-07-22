@@ -3,8 +3,8 @@
 **Proyecto:** `text2sparql-reproducibility-lab`  
 **Dominio:** Text-to-SPARQL / Knowledge Graph Question Answering (KGQA)  
 **Inicio documental:** 2026-07-18  
-**Fase activa:** Fase 1 — Auditoría y reproducibilidad nativa  
-**Estado:** Clonado estático de INCLUDE_PRIMARY/CONDITIONAL completado (`audit/CLONING_REPORT.md`). Sin instalaciones ni entrenamientos.  
+**Fase actual:** Fase 1 **cerrada** · Fase 2 **protocol framework definido** (dataset provenance pending)  
+**Estado:** Fase 1 nativa cerrada (smokes/bloqueos documentados). Clones presentes. Fase 2: framework de evaluación común definido; adapters deshabilitados; benchmark no ejecutado.  
 **Perfil de máquina (obligatorio):** [`MACHINE_PROFILE.md`](MACHINE_PROFILE.md)  
 **Auditoría documental:** `audit/PAPER_CODE_MAPPING.md`, `audit/INITIAL_AUDIT_MATRIX.csv`, `audit/INCLUSION_DECISIONS.md`, `audit/RESOURCE_ESTIMATION.md`  
 **Cierre de evidencias:** `audit/EVIDENCE_CLOSURE.md`, `audit/LICENSE_MATRIX.csv`, `audit/RESULT_EVIDENCE_MATRIX.csv`, `audit/PUBLICATION_STATUS.csv`  
@@ -287,3 +287,15 @@ Auditoría estática de `upstream/` y, solo bajo petición explícita, smoke tes
 **PE1:** substantially_answered · **PE2:** partial_evidence · **PE3:** not_started (`no_comparable_original_metric_run_available`) · **PE4:** substantially_answered_for_current_portfolio  
 **Fase 2:** aún **no** ejecutada — solo elegibilidad documental; siguiente Prompt 16 (definición protocolo común), sin adapters ni benchmarks.  
 **Informe:** `audit/PHASE1_FINAL_NATIVE_AUDIT_REPORT.md` · Decisión: `docs/decisions/006_phase1_native_audit_closure_and_phase2_transition.md`
+
+
+---
+
+## Estado actual post-Prompt 16
+
+- Fase 1 cerrada; outcomes individuales intactos.
+- Fase 2: protocolo común **framework-only** (`COMMON_PROTOCOL_FRAMEWORK_DEFINED_READY_FOR_DATASET_PROVENANCE`).
+- Tracks ortogonales; QALD-9 Plus primario; LC-QuAD 2.0 secundario; pins pending.
+- `common_adapter_allowed=false`; sin benchmark.
+- PE5/PE6: framework defined pending execution; PE7/PE8 not_started.
+- Siguiente: Prompt 17 (T2 provenance), sin descargas.
