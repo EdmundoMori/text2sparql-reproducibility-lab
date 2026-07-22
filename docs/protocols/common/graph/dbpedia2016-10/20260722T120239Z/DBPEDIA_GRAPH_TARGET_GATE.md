@@ -1,0 +1,43 @@
+# DBpedia graph target gate
+
+**RUN_ID:** `20260722T120239Z`
+
+## Gate value
+
+**`DBPEDIA_2016_10_NATIVE_GRAPH_TARGET_SELECTED_PACKAGE_CONDITIONAL_FILE_SCOPE`**
+
+## Qualifiers
+
+- `QALD9_NATIVE_GRAPH_DBPEDIA_2016_10`
+- `QALD9PLUS_DBPEDIA_LINEAGE_INFERRED_HIGH_CONFIDENCE`
+- `GRAPH_TARGET_NATIVE_SELECTED`
+- `COMMON_GRAPH_REBASE_FALLBACK_DEFINED`
+- `REMOTE_MUTABLE_ENDPOINT_REJECTED_FOR_REPRODUCIBLE_PRIMARY`
+- `QUERY_COVERAGE_SUBGRAPH_REJECTED_FOR_PRIMARY`
+- `ENDPOINT_EQUIVALENT_FILE_SCOPE_CONDITIONAL`
+- `GRAPH_FILE_METADATA_VERIFIED`
+- `GRAPH_FILE_SIZE_VERIFIED` (available subset)
+- `PUBLISHED_CHECKSUM_VERIFIED` (partial MD5) / `PUBLISHED_CHECKSUM_NOT_AVAILABLE` (LHD)
+- `GRAPH_PAYLOAD_NOT_ACQUIRED`
+- `GRAPH_DEPLOYMENT_NOT_EXECUTED`
+- `GRAPH_RESOURCE_FEASIBILITY_CONDITIONAL`
+- `G4_TARGET_DOCUMENTED_RUNTIME_NOT_SATISFIED`
+- `HUMAN_AUTHORIZATION_UNSIGNED`
+- `COMMON_ADAPTERS_DISABLED`
+- `BENCHMARK_NOT_ELIGIBLE`
+
+## Why not gate A (READY_FOR_HUMAN_AUTHORIZATION)
+
+Exact file scope not closed: `core/` URLs 404; 33 checksum entries unavailable; LHD checksums missing; ontology role open.
+
+## Why not gate C alone
+
+Resources are also conditional, but **file-scope closure** is the binding next documentary step.
+
+## Not G4 PASS
+
+This gate documents the **target** only. Runtime pin remains unsatisfied.
+
+## Next action (exactly one)
+
+**`CLOSE_DBPEDIA_2016_10_ENDPOINT_EQUIVALENT_FILE_SCOPE`** → reserved vehicle: **Prompt 23B** (documentary; ZERO_COST; no download).

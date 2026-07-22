@@ -3,7 +3,7 @@
 **Proyecto:** `text2sparql-reproducibility-lab`  
 **Dominio:** Text-to-SPARQL / Knowledge Graph Question Answering (KGQA)  
 **Inicio documental:** 2026-07-18  
-**Fase actual:** Fase 1 **cerrada** · Fase 2 **QALD adquirido** · LC-QuAD T6C **CLOSED HOLD** · siguiente **grafo DBpedia (Prompt 23)** · adapters **deshabilitados** · benchmark **no ejecutado**  
+**Fase actual:** Fase 1 **cerrada** · Fase 2 **QALD adquirido** · LC-QuAD T6C **HOLD** · grafo **target 2016-10 seleccionado (scope CONDITIONAL)** · adapters **deshabilitados** · benchmark **no ejecutado**  
 **Estado:** Fase 1 nativa cerrada (smokes/bloqueos documentados). Clones presentes. Fase 2: framework de evaluación común definido; adapters deshabilitados; benchmark no ejecutado.  
 **Perfil de máquina (obligatorio):** [`MACHINE_PROFILE.md`](MACHINE_PROFILE.md)  
 **Auditoría documental:** `audit/PAPER_CODE_MAPPING.md`, `audit/INITIAL_AUDIT_MATRIX.csv`, `audit/INCLUSION_DECISIONS.md`, `audit/RESOURCE_ESTIMATION.md`  
@@ -387,3 +387,12 @@ Auditoría estática de `upstream/` y, solo bajo petición explícita, smoke tes
 - Authors LC-QuAD: LICENSE absent @ `0a5f8f85b6f863c3b80f0fa02839e25d438af3ae` · HOLD.
 - HF mohnish/lc_quad: CC BY 3.0 card added by platform username · authority/lineage insufficient · no alternative.
 - No LC-QuAD payload · QALD path not blocked · next Prompt 23 graph decision.
+
+## Estado actual post-Prompt 23
+
+- Graph RUN_ID: `20260722T120239Z` · Gate: `DBPEDIA_2016_10_NATIVE_GRAPH_TARGET_SELECTED_PACKAGE_CONDITIONAL_FILE_SCOPE`.
+- Primary: `DBPEDIA_2016_10_QALD9_NATIVE_ENDPOINT_EQUIVALENT` (2016-10) · Fallback: `COMMON_GRAPH_REBASE`.
+- Available package: 81 files / 5023159516 bytes · 33 unavailable blockers · form `NOT_READY_CONDITIONAL`.
+- Graph payload NOT_ACQUIRED · deployment NOT_DEPLOYED · G4 runtime not satisfied.
+- QALD sealed/consumed · LC-QuAD HOLD · adapters false · benchmark NOT_CURRENTLY_ELIGIBLE.
+- Siguiente: Prompt 23B (cerrar file scope).

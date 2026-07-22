@@ -1,0 +1,10 @@
+status: DRAFT_NOT_APPLIED
+run_id: 20260722T120239Z
+works:
+  - name: DBpedia 2016-10 endpoint-equivalent package
+    license_evidence: CC BY-SA 3.0 and GNU FDL (DBpedia about page)
+    attribution_text_draft: "This work uses DBpedia 2016-10 data (https://downloads.dbpedia.org/2016-10/), licensed under Creative Commons Attribution-ShareAlike 3.0 and GNU Free Documentation License as stated by DBpedia."
+    source_urls:
+      - "https://www.dbpedia.org/about/"
+      - "https://downloads.dbpedia.org/2016-10/"
+notes: Not legal advice. External linksets may require additional notices. Not applied to any payload (none acquired).

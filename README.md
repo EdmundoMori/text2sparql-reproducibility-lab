@@ -3,16 +3,17 @@
 Laboratorio local de investigación en **Text-to-SPARQL** / KGQA orientado a auditoría, reproducibilidad nativa y, posteriormente, evaluación común de métodos publicados.
 
 
-## Estado actual (Prompt 22)
+## Estado actual (Prompt 23)
 
 | Campo | Valor |
 |---|---|
 | Fase 1 | **cerrada** |
-| Fase 2 | **LC-QuAD T6C CLOSED HOLD** (`LCQUAD2_SCOPE_CLARIFIED_ALL_REPRESENTATIONS_HOLD`) |
+| Fase 2 | **graph target selected** · gate `DBPEDIA_2016_10_NATIVE_GRAPH_TARGET_SELECTED_PACKAGE_CONDITIONAL_FILE_SCOPE` |
 | QALD | ACQUIRED_VALIDATED · test SEALED · auth CONSUMED |
-| LC-QuAD | authors LICENSE absent · HF card insufficient · **no payload** |
-| G4 / adapters / benchmark | no / false / NOT_CURRENTLY_ELIGIBLE |
-| Siguiente | Prompt 23 — DBpedia graph target / acquisition package (documental) |
+| Graph | primary `DBPEDIA_2016_10_QALD9_NATIVE_ENDPOINT_EQUIVALENT` · payload **NOT_ACQUIRED** |
+| LC-QuAD | T6C HOLD · **no payload** |
+| G4 / adapters / benchmark | target documented / runtime no · false · NOT_CURRENTLY_ELIGIBLE |
+| Siguiente | Prompt 23B — cerrar file scope endpoint-equivalent (documental) |
 
 
 ## Documentos rectores

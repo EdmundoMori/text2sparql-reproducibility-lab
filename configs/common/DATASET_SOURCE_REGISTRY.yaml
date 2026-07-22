@@ -5,12 +5,14 @@ gate: DATASET_PROVENANCE_DOCUMENTED_READY_FOR_METRIC_ORACLE_CONTRACT
 status: SOURCE_PROVENANCE_DOCUMENTED_PAYLOAD_NOT_ACQUIRED
 cost_usd: 0.0
 payload_acquisition_status: DATASET_PAYLOAD_NOT_ACQUIRED
-graph_snapshot_status: GRAPH_SNAPSHOT_ACQUISITION_PENDING
-g4_status: G4_RUNTIME_PIN_NOT_SATISFIED
+graph_snapshot_status: GRAPH_PAYLOAD_NOT_ACQUIRED_TARGET_DOCUMENTED
+g4_status: G4_TARGET_DOCUMENTED_RUNTIME_NOT_SATISFIED
 common_adapter_allowed: false
 benchmark_execution_eligibility: NOT_CURRENTLY_ELIGIBLE
-next_closure_action: T3_METRIC_SPECIFICATION_AND_ORACLE_CONTRACT
-next_prompt: Prompt_18
+dbpedia_graph_decision_run_id: 20260722T120239Z
+dbpedia_graph_target: DBPEDIA_2016_10_QALD9_NATIVE_ENDPOINT_EQUIVALENT
+next_closure_action: CLOSE_DBPEDIA_2016_10_ENDPOINT_EQUIVALENT_FILE_SCOPE
+next_prompt: Prompt_23B
 dataset_families:
   QALD9_PLUS:
     primary_representation: qald9plus_authors_repo
@@ -30,8 +32,10 @@ dataset_families:
     - qald9plus_hf_mirror
     - qald9plus_mkgqagent_train_derivative
     split_status: official_train_test_documented_dev_not_applied
-    graph_provenance: GRAPH_VERSION_NOT_SPECIFIED
-    payload_status: DATASET_PAYLOAD_NOT_ACQUIRED
+    graph_provenance: QALD9_NATIVE_GRAPH_DBPEDIA_2016_10
+    graph_target: DBPEDIA_2016_10_QALD9_NATIVE_ENDPOINT_EQUIVALENT
+    graph_scope_status: ENDPOINT_EQUIVALENT_FILE_SCOPE_CONDITIONAL
+    payload_status: QALD9PLUS_EN_DBPEDIA_ACQUIRED_VALIDATED_WORKDIR_ONLY
   LCQUAD2:
     primary_representation: lcquad2_authors_repo
     paper:

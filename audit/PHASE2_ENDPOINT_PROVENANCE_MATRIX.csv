@@ -2,3 +2,5 @@ dataset_view,endpoint_label,url_pattern,source,endpoint_queried,notes
 QALD9_PLUS_*,GERBIL_QA_experiment_URLs,http://gerbil-qa.aksw.org/gerbil/experiment?id=…,README.md,false,historical evaluation links only
 QALD9_PLUS_WIKIDATA,Uni_Hamburg_Wikidata_SPARQL_mentioned_in_commit,NOT_CAPTURED,git_commit_message,false,ENDPOINT_REPORTED_NOT_QUERIED
 LCQUAD2_*,NONE_IN_AUTHORS_README,,README.md,false,no endpoint listed
+QALD9_PLUS_EN_DBPEDIA,current_public_dbpedia_sparql_latest_core,https://dbpedia.org/sparql,www.dbpedia.org/resources/sparql/,false,REJECTED_FOR_REPRODUCIBLE_PRIMARY; historical endpoint loaded 2016-10; Prompt23 20260722T120239Z
+QALD9_PLUS_EN_DBPEDIA,historical_dbpedia_2016_10_endpoint_equivalent_local_future,local_lab_endpoint_TBD,downloads.dbpedia.org/2016-10/ endpoint-equivalent package,false,TARGET_DOCUMENTED_RUNTIME_PENDING; Prompt23 20260722T120239Z

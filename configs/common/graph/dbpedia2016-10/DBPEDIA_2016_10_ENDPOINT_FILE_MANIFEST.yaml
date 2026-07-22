@@ -1,0 +1,692 @@
+schema_version: 0.1.0-documentary
+run_id: 20260722T120239Z
+scope_id: DBPEDIA_2016_10_PUBLIC_ENDPOINT_EQUIVALENT
+scope_status: CONDITIONAL
+resolution_note: core/ Apache listing entries are broken symlinks (HEAD 404); resolve via core/_checksums.md5 paths under core-i18n/en/.
+serialization_policy: core_and_lhd_ttl_bz2_only__links_as_published_unique_files__no_ttl_tql_duplicates
+available_file_count: 81
+unavailable_file_count: 33
+compressed_total_bytes_available: 5023159516
+unavailable_files:
+  - labels_en_uris_ar.ttl.bz2
+  - labels_en_uris_de.ttl.bz2
+  - labels_en_uris_es.ttl.bz2
+  - labels_en_uris_fr.ttl.bz2
+  - labels_en_uris_it.ttl.bz2
+  - labels_en_uris_ja.ttl.bz2
+  - labels_en_uris_nl.ttl.bz2
+  - labels_en_uris_pl.ttl.bz2
+  - labels_en_uris_pt.ttl.bz2
+  - labels_en_uris_ru.ttl.bz2
+  - labels_en_uris_zh.ttl.bz2
+  - long_abstracts_en_uris_ar.ttl.bz2
+  - long_abstracts_en_uris_de.ttl.bz2
+  - long_abstracts_en_uris_es.ttl.bz2
+  - long_abstracts_en_uris_fr.ttl.bz2
+  - long_abstracts_en_uris_it.ttl.bz2
+  - long_abstracts_en_uris_ja.ttl.bz2
+  - long_abstracts_en_uris_nl.ttl.bz2
+  - long_abstracts_en_uris_pl.ttl.bz2
+  - long_abstracts_en_uris_pt.ttl.bz2
+  - long_abstracts_en_uris_ru.ttl.bz2
+  - long_abstracts_en_uris_zh.ttl.bz2
+  - short_abstracts_en_uris_ar.ttl.bz2
+  - short_abstracts_en_uris_de.ttl.bz2
+  - short_abstracts_en_uris_es.ttl.bz2
+  - short_abstracts_en_uris_fr.ttl.bz2
+  - short_abstracts_en_uris_it.ttl.bz2
+  - short_abstracts_en_uris_ja.ttl.bz2
+  - short_abstracts_en_uris_nl.ttl.bz2
+  - short_abstracts_en_uris_pl.ttl.bz2
+  - short_abstracts_en_uris_pt.ttl.bz2
+  - short_abstracts_en_uris_ru.ttl.bz2
+  - short_abstracts_en_uris_zh.ttl.bz2
+files:
+  - path: core-i18n/en/article_categories_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/article_categories_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 236365092
+    published_checksum_algorithm: md5
+    published_checksum: 5d0f04303849fc16734c94324177a54c
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/category_labels_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/category_labels_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 17447841
+    published_checksum_algorithm: md5
+    published_checksum: 31462b0af4d5092533f82f0390510ce5
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/disambiguations_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/disambiguations_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 13344953
+    published_checksum_algorithm: md5
+    published_checksum: a52c03be1ce7d1023754f8b4914eafa4
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/external_links_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/external_links_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 167510717
+    published_checksum_algorithm: md5
+    published_checksum: c59e46b1eb8c0eeb5a33e53ddb19d460
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/freebase_links_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/freebase_links_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 85282055
+    published_checksum_algorithm: md5
+    published_checksum: 92f59cdd9d08e1e4c6efc096ff6dc75b
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/geo_coordinates_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/geo_coordinates_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 17598860
+    published_checksum_algorithm: md5
+    published_checksum: d065c82cd7044624a64db2e0d60e7f7b
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/geo_coordinates_mappingbased_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/geo_coordinates_mappingbased_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 17379613
+    published_checksum_algorithm: md5
+    published_checksum: 007da0b64ef59882f624abcad97e477b
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/geonames_links_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/geonames_links_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 4010348
+    published_checksum_algorithm: md5
+    published_checksum: 6ead9d5a6c6b377c2408125549e3e42d
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/homepages_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/homepages_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 12326604
+    published_checksum_algorithm: md5
+    published_checksum: 7d9f803d1c2ed79603c436a41579a7ce
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/images_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/images_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 94728001
+    published_checksum_algorithm: md5
+    published_checksum: 64c49aa0ca5e95c1e09abb9ee895cfee
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/infobox_properties_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/infobox_properties_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 492733142
+    published_checksum_algorithm: md5
+    published_checksum: b5b0922a845a3d69c79a7e7c02fa9c17
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/infobox_property_definitions_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/infobox_property_definitions_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 788573
+    published_checksum_algorithm: md5
+    published_checksum: 30cd9abac73b8d0e797d344bb06e9145
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/instance_types_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/instance_types_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 42351931
+    published_checksum_algorithm: md5
+    published_checksum: 0d3531cb72c0cf2399f019c4a0fa9604
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/instance_types_transitive_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/instance_types_transitive_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 131023326
+    published_checksum_algorithm: md5
+    published_checksum: dc439fd64f7c56e79d849bbfc93c5dad
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/interlanguage_links_chapters_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/interlanguage_links_chapters_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 187246960
+    published_checksum_algorithm: md5
+    published_checksum: ff69bf51d8719832e1264d0bd79f569b
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/labels_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/labels_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 190221571
+    published_checksum_algorithm: md5
+    published_checksum: 436ab66e311d0cbf06dd797565aaed7f
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/long_abstracts_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/long_abstracts_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 818348209
+    published_checksum_algorithm: md5
+    published_checksum: 3a95e0ef8dc9455a9838f860c354c319
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/mappingbased_literals_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/mappingbased_literals_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 137316236
+    published_checksum_algorithm: md5
+    published_checksum: 117ba7b43d2d56669084c795383eeaff
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/mappingbased_objects_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/mappingbased_objects_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 172372141
+    published_checksum_algorithm: md5
+    published_checksum: 811a0158ac966ff51fce1731ff427eb3
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/page_ids_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/page_ids_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 175257242
+    published_checksum_algorithm: md5
+    published_checksum: 96c9d3ca9daf91da610a74cad1977b30
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/persondata_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/persondata_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 66513289
+    published_checksum_algorithm: md5
+    published_checksum: 57f9fb245bc7f6e43164db9da31b596b
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/revision_ids_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/revision_ids_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 197916335
+    published_checksum_algorithm: md5
+    published_checksum: 6f1b3582dc8050bf4dbfa3e506ccaaf7
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/revision_uris_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/revision_uris_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 261380021
+    published_checksum_algorithm: md5
+    published_checksum: 994dcb9bfdf611fd177c512cf598f6c3
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/short_abstracts_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/short_abstracts_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 547637274
+    published_checksum_algorithm: md5
+    published_checksum: 10cb432cb34b2bbac1f4ea3f2ac57782
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/skos_categories_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/skos_categories_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 45681114
+    published_checksum_algorithm: md5
+    published_checksum: 22977966069a2c707334ea0562e61d3d
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/specific_mappingbased_properties_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/specific_mappingbased_properties_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 9150864
+    published_checksum_algorithm: md5
+    published_checksum: 8f8b990150da54c1276bb1459c0867d4
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/transitive_redirects_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/transitive_redirects_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 108901507
+    published_checksum_algorithm: md5
+    published_checksum: 766cde4cfddc660e086cbd8816c8021b
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/uri_same_as_iri_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/uri_same_as_iri_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 16221273
+    published_checksum_algorithm: md5
+    published_checksum: 37eed571dc2b401244288103c8b6c761
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/wikipedia_links_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/wikipedia_links_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 317184934
+    published_checksum_algorithm: md5
+    published_checksum: 27d2a1e91eefc305a30289508dcb48df
+    required: true
+    status: AVAILABLE_METADATA
+  - path: core-i18n/en/instance_types_lhd_dbo_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/instance_types_lhd_dbo_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 39643080
+    published_checksum_algorithm: null
+    published_checksum: null
+    required: true
+    status: AVAILABLE_SIZE_CHECKSUM_NOT_IN_CORE_MD5
+  - path: core-i18n/en/instance_types_lhd_ext_en.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/core-i18n/en/instance_types_lhd_ext_en.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 46325495
+    published_checksum_algorithm: null
+    published_checksum: null
+    required: true
+    status: AVAILABLE_SIZE_CHECKSUM_NOT_IN_CORE_MD5
+  - path: links/amsterdammuseum.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/amsterdammuseum.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 6725
+    published_checksum_algorithm: md5
+    published_checksum: d6717c637a8f46455553dfc91855c097
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/bbc-things_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/bbc-things_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 119963
+    published_checksum_algorithm: md5
+    published_checksum: 131eff69a1728eb1542749a1aeb51e72
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/bbcwildlife_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/bbcwildlife_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 4942
+    published_checksum_algorithm: md5
+    published_checksum: a90ce758e20ea2d17261eedfaff56a15
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/bl-example.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/bl-example.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 16970
+    published_checksum_algorithm: md5
+    published_checksum: 9808bf59acf9903fcdb6876a24f213fa
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/bookmashup_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/bookmashup_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 72117
+    published_checksum_algorithm: md5
+    published_checksum: 0b434102ccbfe51a02d8e17e5e37fc25
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/bricklink.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/bricklink.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 25568
+    published_checksum_algorithm: md5
+    published_checksum: 55760a0645d0e588ed4cce36ec61fe56
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/cordis.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/cordis.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 2454
+    published_checksum_algorithm: md5
+    published_checksum: dff6c01e60fccf0f045991098de42a10
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/dataEco_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/dataEco_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 697
+    published_checksum_algorithm: md5
+    published_checksum: c69d25ffe00c6693feee0768e4e4d09b
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/dblp.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/dblp.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 2448
+    published_checksum_algorithm: md5
+    published_checksum: 580c0d9e94672a28ad498b9ea970a331
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/dbtune_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/dbtune_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 16877
+    published_checksum_algorithm: md5
+    published_checksum: d4fb7ace219722f9108b923e3bed391d
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/diseasome_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/diseasome_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 19254
+    published_checksum_algorithm: md5
+    published_checksum: 1038381e5d92bcfe75cf55f20caa5af5
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/dnb-links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/dnb-links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 3264943
+    published_checksum_algorithm: md5
+    published_checksum: 4502d6c3f68e8a8732856da5421fe74a
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/drugbank_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/drugbank_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 32460
+    published_checksum_algorithm: md5
+    published_checksum: 3514724da822898a9f817a77c9da27d5
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/eunis_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/eunis_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 101388
+    published_checksum_algorithm: md5
+    published_checksum: 814d33b775a16cf3f85ad74bcfb18983
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/eurostat_linkedstatistics_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/eurostat_linkedstatistics_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 2317
+    published_checksum_algorithm: md5
+    published_checksum: d10b2e9fd8166e8846c35c26285d7848
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/eurostat_wbsg.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/eurostat_wbsg.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 1680
+    published_checksum_algorithm: md5
+    published_checksum: 4ed6a96aeb4ec86a422fdcb113b9a8ef
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/factbook.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/factbook.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 3920
+    published_checksum_algorithm: md5
+    published_checksum: 8fe8240b60db5abc16343a2125ddf54b
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/gadm_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/gadm_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 299334
+    published_checksum_algorithm: md5
+    published_checksum: 118c6994f4711d8f2eeaeba0c533d4c0
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/geonames_links.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/geonames_links.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 4010348
+    published_checksum_algorithm: md5
+    published_checksum: 6ead9d5a6c6b377c2408125549e3e42d
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/geospecies.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/geospecies.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 179865
+    published_checksum_algorithm: md5
+    published_checksum: bca309939f56bf43c63df286f0794bed
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/gho.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/gho.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 1746
+    published_checksum_algorithm: md5
+    published_checksum: e91e46eb09b7e7358a9396d7b9953e37
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/ispra-core_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/ispra-core_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 43237
+    published_checksum_algorithm: md5
+    published_checksum: 1a59a5128a41d27893bb60a1618e3951
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/italian_public_schools.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/italian_public_schools.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 49007
+    published_checksum_algorithm: md5
+    published_checksum: bae79d6e4e202466ce046f824339e3bb
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/linked_web_apis.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/linked_web_apis.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 8130
+    published_checksum_algorithm: md5
+    published_checksum: 02d8a7e5c19a12abd6701ed1d375e773
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/linkedgeodata_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/linkedgeodata_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 933459
+    published_checksum_algorithm: md5
+    published_checksum: 58690bb788aae2d14a3775fbd5660906
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/linkedmdb_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/linkedmdb_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 130411
+    published_checksum_algorithm: md5
+    published_checksum: 45fc9827317ea1e7a1916ca692672e80
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/lobid.org_organization.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/lobid.org_organization.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 48102
+    published_checksum_algorithm: md5
+    published_checksum: 3023cd833bbc2cbf14b33e3d597d2917
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/logainmie_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/logainmie_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 10814
+    published_checksum_algorithm: md5
+    published_checksum: 44e364170ce3734459a4791452d83ede
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/manifestation_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/manifestation_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 85035
+    published_checksum_algorithm: md5
+    published_checksum: dc6f66f486b4d6c1af84cff7335c1f7b
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/nuts_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/nuts_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 2943
+    published_checksum_algorithm: md5
+    published_checksum: 1ec39bb1e0287a9ead47df8e8711e392
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/nytimes.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/nytimes.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 150955
+    published_checksum_algorithm: md5
+    published_checksum: 5f93924c7394abba45c645948b814dbb
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/ocd_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/ocd_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 16970
+    published_checksum_algorithm: md5
+    published_checksum: 9808bf59acf9903fcdb6876a24f213fa
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/openei_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/openei_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 7615
+    published_checksum_algorithm: md5
+    published_checksum: 249f91ca7f158a3e990b16a2982fad5c
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/organisation_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/organisation_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 47759
+    published_checksum_algorithm: md5
+    published_checksum: 05abeabec04637c619e8f9a5636746ab
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/revyu.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/revyu.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 437
+    published_checksum_algorithm: md5
+    published_checksum: 0891e2f8bf9b43d28a8afa1900b39e38
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/sider.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/sider.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 16740
+    published_checksum_algorithm: md5
+    published_checksum: dd57066f0ff3d601c059cb2205909dc1
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/springer_nature_scigraph_subjects.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/springer_nature_scigraph_subjects.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 29047
+    published_checksum_algorithm: md5
+    published_checksum: c79d0d2737c6ae4f649ac7a75eff843d
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/tcm.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/tcm.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 8704
+    published_checksum_algorithm: md5
+    published_checksum: db66c3ff36b015fd5bf0e6fdb6c8570a
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/transparency_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/transparency_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 1781
+    published_checksum_algorithm: md5
+    published_checksum: 4a1ebed507a43fadac6cb7ef1f7a12d1
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/uk-university-links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/uk-university-links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 2200
+    published_checksum_algorithm: md5
+    published_checksum: 2a2c3a38a6bce00b8ca0cf43c978700c
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/umbel_links_fixed.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/umbel_links_fixed.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 4139168
+    published_checksum_algorithm: md5
+    published_checksum: e281c2fc690b691465f4ac7dbcf597e0
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/uscensus.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/uscensus.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 158040
+    published_checksum_algorithm: md5
+    published_checksum: d961dd36a340d4c3aed3e65c8c24a70b
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/viaf2dbpedia.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/viaf2dbpedia.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 1768771
+    published_checksum_algorithm: md5
+    published_checksum: dd17279267cb2b7fcfe5747143fac78c
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/wl-example.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/wl-example.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 404
+    published_checksum_algorithm: md5
+    published_checksum: 104ef0877adf64f55ee3033b85ab3dc0
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/wordnet_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/wordnet_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 3146081
+    published_checksum_algorithm: md5
+    published_checksum: 41f9bf49ee7034b1cd6c75d0713221f8
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/worldbank_links.nt.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/worldbank_links.nt.bz2"
+    serialization: nt.bz2
+    remote_size_bytes: 2029
+    published_checksum_algorithm: md5
+    published_checksum: a01476c1fa0deb2e556bf5709ea4eecd
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/yago_links.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/yago_links.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 37993717
+    published_checksum_algorithm: md5
+    published_checksum: 707d9de894fbcec506b4dbceb76c5b42
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/yago_taxonomy.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/yago_taxonomy.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 4240370
+    published_checksum_algorithm: md5
+    published_checksum: 11b5b3c8141b13b5765892c9676cb01a
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/yago_type_links.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/yago_type_links.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 5875928
+    published_checksum_algorithm: md5
+    published_checksum: b26f7b4ab79e6826b3049f8011b799f8
+    required: true
+    status: AVAILABLE_METADATA
+  - path: links/yago_types.ttl.bz2
+    source_url: "https://downloads.dbpedia.org/2016-10/links/yago_types.ttl.bz2"
+    serialization: ttl.bz2
+    remote_size_bytes: 285847045
+    published_checksum_algorithm: md5
+    published_checksum: 1ca2ecd4c83e788181b5ea4281925ed4
+    required: true
+    status: AVAILABLE_METADATA

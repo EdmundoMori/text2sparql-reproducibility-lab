@@ -1,12 +1,22 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-22 (Prompt 22)  
+**Última actualización:** 2026-07-22 (Prompt 23)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
 
 | ID | Tema | Ruta | Cuándo leerlo |
 |---|---|---|---|
+| P23-GATE | DBpedia graph target gate | `docs/protocols/common/graph/dbpedia2016-10/20260722T120239Z/DBPEDIA_GRAPH_TARGET_GATE.md` | Tras Prompt 23 |
+| P23-RPT | Graph target + acquisition package report | `audit/PHASE2_DBPEDIA_GRAPH_TARGET_AND_ACQUISITION_PACKAGE_REPORT.md` | Detalle P23 |
+| P23-NEXT | Next after graph target | `audit/NEXT_AFTER_DBPEDIA_GRAPH_TARGET_DECISION.md` | Prompt 23B |
+| P23-DEC | Decisión 015 | `docs/decisions/015_qald9plus_dbpedia_graph_target_and_acquisition_package.md` | Target/fallback |
+| P23-Q | Post-graph-decision queue | `audit/PHASE2_POST_GRAPH_DECISION_QUEUE.csv` | Cola |
+| P23-MAN | Endpoint file manifest | `configs/common/graph/dbpedia2016-10/DBPEDIA_2016_10_ENDPOINT_FILE_MANIFEST.yaml` | Scope files |
+| P23-TGT | Graph target YAML | `configs/common/graph/dbpedia2016-10/DBPEDIA_2016_10_GRAPH_TARGET.yaml` | Primary/fallback |
+| P23-FORM | Human graph auth form | `docs/protocols/common/graph/dbpedia2016-10/20260722T120239Z/HUMAN_DBPEDIA_GRAPH_ACQUISITION_APPROVAL.md` | NOT_READY |
+| P23-OPT | Graph option matrix | `audit/PHASE2_DBPEDIA_GRAPH_OPTION_MATRIX.csv` | A–F options |
+| P23-FILES | File manifest CSV | `audit/PHASE2_DBPEDIA_2016_10_FILE_MANIFEST.csv` | Inventory |
 | P22-GATE | LC-QuAD T6C gate | `docs/protocols/common/legal/lcquad2/20260722T112721Z/LCQUAD2_LICENSE_SCOPE_CLARIFICATION_GATE.md` | Tras T6C |
 | P22-RPT | LC-QuAD clarification report | `audit/PHASE2_LCQUAD2_LICENSE_CLARIFICATION_REPORT.md` | Detalle T6C |
 | P22-NEXT | Next after T6C | `audit/NEXT_AFTER_LCQUAD2_CLARIFICATION_DECISION.md` | Prompt 23 |

@@ -361,3 +361,12 @@ Payload QALD EN/DBpedia adquirido y validado en workdir únicamente. Test SEALED
 **Gate:** `LCQUAD2_SCOPE_CLARIFIED_ALL_REPRESENTATIONS_HOLD`
 
 Authors source HOLD (LICENSE absent). HF card CC BY 3.0 = platform metadata; no alternativa elegible. Sin payload. T6C cerrado. Siguiente: decisión documental de grafo DBpedia (Prompt 23).
+
+
+## Estado operativo post-Prompt 23 (2026-07-22)
+
+- Objetivo de grafo para QALD-9 Plus EN/DBpedia: **DBpedia 2016-10 endpoint-equivalent** (primario).
+- Common graph rebase: **fallback** etiquetado, no nativo.
+- Endpoint público mutable: **rechazado** como primary reproducible.
+- Adquisición/despliegue de grafo: **no** ejecutados; G4 runtime **no** satisfecho.
+- Siguiente paso documental: cierre de file scope (Prompt 23B) antes de autorización humana de adquisición.

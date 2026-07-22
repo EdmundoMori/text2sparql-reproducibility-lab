@@ -1,0 +1,7 @@
+component,license_claimed,evidence_url,evidence_type,attribution_required,share_alike,status,notes
+DBpedia_2016_10_release_data,CC BY-SA 3.0 + GNU FDL,https://www.dbpedia.org/about/,OFFICIAL_ABOUT_PAGE,YES_DOCUMENTED,YES_DOCUMENTED,EVIDENCE_RECORDED_NOT_LEGAL_ADVICE,Creative Commons Attribution-ShareAlike 3.0 and GNU FDL mentioned
+Wikipedia_derived_content,CC BY-SA / GFDL (Wikipedia),https://www.dbpedia.org/about/,OFFICIAL_ABOUT_PAGE,YES,YES,EVIDENCE_RECORDED_NOT_LEGAL_ADVICE,DBpedia extracts Wikipedia
+DBpedia_ontology,UNKNOWN_SEPARATE_REVIEW,https://downloads.dbpedia.org/2016-10/dbpedia_2016-10.owl,HEAD_ONLY,UNKNOWN,UNKNOWN,EXCLUDED_FROM_PRIMARY_PACKAGE,Not in historical four-bullet load list
+external_links_directory,MIXED_THIRD_PARTY_LINKS,https://downloads.dbpedia.org/2016-10/links/,DIRECTORY_LISTING,UNKNOWN_PER_LINKSET,UNKNOWN_PER_LINKSET,IN_SCOPE_LICENSE_LAYER_UNKNOWN,YAGO and other linksets may carry additional terms
+Virtuoso_software,NOT_ACQUIRED,n/a,NOT_EXECUTED,n/a,n/a,DEPLOYMENT_NOT_EXECUTED,Future deployment software license separate
+Docker_images,NOT_PULLED,n/a,NOT_EXECUTED,n/a,n/a,NO_DOCKER_PULL,Prompt23 forbids image pulls

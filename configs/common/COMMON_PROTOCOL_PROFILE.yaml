@@ -9,7 +9,7 @@ metric_contract_version: 0.1.0-documentary
 phase: phase2_adapter_contracts_documented
 primary_dataset_candidate: QALD9_PLUS_EN_DBPEDIA
 secondary_dataset_candidate: LCQUAD2_DBPEDIA18
-g4_status: G4_RUNTIME_PIN_NOT_SATISFIED
+g4_status: G4_TARGET_DOCUMENTED_RUNTIME_NOT_SATISFIED
 g5_documentary_status: G5_DOCUMENTARY_CONTRACT_SATISFIED
 g5_runtime_status: G5_IMPLEMENTATION_AND_CONFORMANCE_PENDING
 g6d_status: G6D_ADAPTER_CONTRACT_DOCUMENTED
@@ -17,7 +17,7 @@ g6i_status: G6I_IMPLEMENTATION_APPROVAL_PENDING
 metric_implementation_status: METRIC_IMPLEMENTATION_PENDING
 gold_materialization_status: GOLD_MATERIALIZATION_PENDING
 payload_status: DATASET_PAYLOAD_NOT_ACQUIRED
-graph_pin_status: GRAPH_SNAPSHOT_PENDING
+graph_pin_status: TARGET_SELECTED_RUNTIME_PENDING
 adapter_status: disabled_common_adapter_allowed_false
 benchmark_status: NOT_CURRENTLY_ELIGIBLE
 zero_cost_policy: MAX_EXTERNAL_MONETARY_COST_USD_0.00
@@ -27,3 +27,5 @@ gate: LEGAL_RECHECK_COMPLETE_PARTIAL_SCOPE_READY_FOR_ACQUISITION_AUTHORIZATION_P
 claim_boundary: LEGAL_RECHECK_COMPLETE_no_acquisition_no_impl_no_benchmark
 legal_run_id: 20260722T102434Z
 phase2_next_action: T6A
+dbpedia_graph_target: DBPEDIA_2016_10_QALD9_NATIVE_ENDPOINT_EQUIVALENT
+dbpedia_graph_decision_run_id: 20260722T120239Z

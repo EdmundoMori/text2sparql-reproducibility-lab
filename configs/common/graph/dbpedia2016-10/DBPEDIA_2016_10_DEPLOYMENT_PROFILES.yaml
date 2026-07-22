@@ -1,0 +1,61 @@
+schema_version: 0.1.0-documentary
+profiles:
+  LOCAL_WSL_VIRTUOSO:
+    resource_requirements: "RAM>>7.4GiB_likely; disk>=50GiB"
+    cost: 0.00
+    reproducibility: HIGH_IF_PINNED
+    graph_ownership: LOCAL
+    endpoint_stability: LAB_CONTROLLED
+    data_persistence: LOCAL_VOLUME
+    suitability: CONDITIONAL_HIGH_RISK
+    current_status: NOT_DEPLOYED
+    blockers:
+      - file_scope_conditional
+      - wsl_ram
+      - compose_absent
+      - no_image_digest
+  HOST_ADJUSTED_WSL_VIRTUOSO:
+    resource_requirements: Increase WSL memory toward host ~16GiB; still may be tight
+    cost: 0.00
+    reproducibility: HIGH_IF_PINNED
+    graph_ownership: LOCAL
+    endpoint_stability: LAB_CONTROLLED
+    data_persistence: LOCAL_VOLUME
+    suitability: CONDITIONAL
+    current_status: NOT_DEPLOYED
+    blockers:
+      - file_scope_conditional
+      - no_image_digest
+  EXTERNAL_RESEARCH_SERVER:
+    resource_requirements: Server with adequate RAM/disk
+    cost: MUST_REMAIN_0.00_OR_REJECT
+    reproducibility: HIGH_IF_PINNED
+    graph_ownership: EXTERNAL
+    endpoint_stability: DEPENDS
+    data_persistence: EXTERNAL
+    suitability: NOT_AUTO_SELECTED_ZERO_COST
+    current_status: NOT_SELECTED
+    blockers:
+      - ZERO_COST_POLICY
+  REMOTE_IMMUTABLE_ENDPOINT:
+    resource_requirements: Network only
+    cost: 0.00_if_public
+    reproducibility: ONLY_IF_IMMUTABLE_PIN_VERIFIED
+    graph_ownership: REMOTE
+    endpoint_stability: REQUIRES_PIN
+    data_persistence: REMOTE
+    suitability: NOT_PRIMARY_WITHOUT_SNAPSHOT
+    current_status: NOT_SELECTED
+    blockers:
+      - no_verified_immutable_remote
+  COMMON_GRAPH_REBASE:
+    resource_requirements: Depends on modern snapshot
+    cost: 0.00
+    reproducibility: HIGH_AS_REBASE
+    graph_ownership: LAB_OR_PINNED
+    endpoint_stability: LAB_CONTROLLED
+    data_persistence: LAB
+    suitability: FALLBACK_ONLY
+    current_status: DOCUMENTED_FALLBACK
+    blockers:
+      - must_not_replace_native_without_label

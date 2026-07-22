@@ -2,16 +2,19 @@
 
 **Audiencia:** ChatGPT e investigador.  
 **Repo:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-**Última actualización:** 2026-07-22 (Prompt **22** — LC-QuAD T6C license clarification)  
-**Fase:** 1 **cerrada** · 2 **LC-QuAD T6C CLOSED HOLD** · grafo DBpedia pendiente  
-**SHA inicial 22:** `35e97535da6e5018423a66c30c3f4bf4163a53f1`  
-**T6C RUN_ID:** `20260722T112721Z`  
+**Última actualización:** 2026-07-22 (Prompt **23** — DBpedia graph target / acquisition package)  
+**Fase:** 1 **cerrada** · 2 **graph target selected** · file scope **CONDITIONAL** · adquisición **pending auth**  
+**SHA inicial 23:** `831f34b8aa488d17200a29ec9d04c76796adbbcf`  
+**Graph RUN_ID:** `20260722T120239Z`  
 
-> ZERO_COST. Gate `LCQUAD2_SCOPE_CLARIFIED_ALL_REPRESENTATIONS_HOLD`.  
-> Authors LICENSE absent · HF CC BY 3.0 card = platform add · no alternativa elegible · no payload.  
-> QALD ACQUIRED_VALIDATED · auth CONSUMED · test SEALED.  
-> G4 **no** · G5 runtime **pending** · G6I **pending**. Adapters **false**. Benchmark **no**.  
-> Siguiente: **Prompt 23** (graph acquisition/rebase decision). Objetivo largo plazo intacto.
+> ZERO_COST. Gate `DBPEDIA_2016_10_NATIVE_GRAPH_TARGET_SELECTED_PACKAGE_CONDITIONAL_FILE_SCOPE`.  
+> Primary: `DBPEDIA_2016_10_QALD9_NATIVE_ENDPOINT_EQUIVALENT` (2016-10).  
+> Fallback: `COMMON_GRAPH_REBASE`. Current endpoint rejected. Query subgraph rejected.  
+> Available package: **81** files / **5023159516** bytes · **33** unavailable blockers.  
+> Payload **NOT_ACQUIRED** · deployment **NOT_DEPLOYED** · human form **NOT_READY_CONDITIONAL**.  
+> QALD ACQUIRED_VALIDATED · auth CONSUMED · test SEALED · LC-QuAD T6C HOLD.  
+> G4 target documented / runtime **no** · G5 runtime **pending** · G6I **pending**. Adapters **false**. Benchmark **no**.  
+> Siguiente: **Prompt 23B** (cerrar file scope). Objetivo largo plazo intacto.
 
 ---
 
@@ -21,52 +24,59 @@ reproducción nativa → evaluación común → caso de estudio → errores → 
 
 ---
 
-## 2. Prompt 22 — resumen
+## 2. Prompt 23 — resumen
 
 | Campo | Valor |
 |---|---|
-| RUN_ID | `20260722T112721Z` |
-| Gate | **LCQUAD2_SCOPE_CLARIFIED_ALL_REPRESENTATIONS_HOLD** |
-| Authors pin/HEAD | `0a5f8f85b6f863c3b80f0fa02839e25d438af3ae` / equal · LICENSE ABSENT |
-| HF | `b054a263b39b4a1cd041f85806e500ffdcb5be7f` · card cc-by-3.0 · PLATFORM · lineage PARTIAL · HOLD |
-| Alternative | NONE_HOLD |
-| QALD | PASS validated · auth consumed |
-| Coste | 0.00 · no LC-QuAD payload |
+| RUN_ID | `20260722T120239Z` |
+| Gate | **DBPEDIA_2016_10_NATIVE_GRAPH_TARGET_SELECTED_PACKAGE_CONDITIONAL_FILE_SCOPE** |
+| QALD lineage | `QALD9PLUS_DBPEDIA_LINEAGE_INFERRED_HIGH_CONFIDENCE` |
+| Target | `DBPEDIA_2016_10_QALD9_NATIVE_ENDPOINT_EQUIVALENT` / `2016-10` |
+| Fallback | `COMMON_GRAPH_REBASE` |
+| Serialization | ttl.bz2 core+LHD; links as published |
+| Files / bytes | 81 / 5023159516 (available) |
+| Checksums | PARTIAL MD5 |
+| License | CC BY-SA 3.0 + GFDL evidence |
+| Resource class | `CONDITIONAL_HIGH_RISK` |
+| Acquisition / deployment | NOT_ACQUIRED / NOT_DEPLOYED |
+| Coste | 0.00 · no RDF payload · no SPARQL · no Docker pull |
 
 ### PE5–PE8
 
 | PE | Estado |
 |---|---|
-| PE5 | protocol_metric_adapter_and_legal_contracts_defined_pending_assets_implementation_and_benchmark |
+| PE5 | protocol_metric_adapter_and_legal_contracts_defined_pending_assets_implementation_and_benchmark (+ graph target preparatory) |
 | PE6 | diagnostic_metric_observability_and_legal_boundaries_defined_pending_execution |
 | PE7 | not_started |
 | PE8 | not_started |
 
 ---
 
-## 3. Metadata Prompt 21B (reconciliada)
+## 3. Metadata Prompt 22 (reconciliada)
 
 | Campo | SHA |
 |---|---|
-| ARTIFACT_COMMIT | `0439421345cc63d167589f5ac399c97cc432eff2` |
-| publication metadata commit | `35e97535da6e5018423a66c30c3f4bf4163a53f1` |
-| remote tip final post-21B | `35e97535da6e5018423a66c30c3f4bf4163a53f1` |
+| ARTIFACT_COMMIT | `3818db51b9468bc4b7b74b7b783a76c96d102b43` |
+| publication metadata commit | `831f34b8aa488d17200a29ec9d04c76796adbbcf` |
+| remote tip final post-22 | `831f34b8aa488d17200a29ec9d04c76796adbbcf` |
 
 ---
 
 ## 4. Siguiente prompt (único)
 
-**Prompt 23 — Selección documental del objetivo de grafo DBpedia para QALD-9 Plus EN/DBpedia —snapshot histórico o common graph rebase— y definición del paquete de adquisición, ZERO_COST, sin descargar grafos ni ejecutar SPARQL.**
+**Prompt 23B — Cierre documental del file scope endpoint-equivalent DBpedia 2016-10 (resolver 33 unavailable / ontology / core symlink resolution), ZERO_COST, sin descargar grafos ni ejecutar SPARQL.**
 
-Acción: **GRAPH_ACQUISITION_OR_REBASE_DECISION**. **No ejecutado en 22.**
+Acción: **CLOSE_DBPEDIA_2016_10_ENDPOINT_EQUIVALENT_FILE_SCOPE**. **No ejecutado en 23.**
+
+Reservado después: Prompt 24B adquisición controlada (solo tras scope cerrado + auth humana). Adquisición ≠ despliegue.
 
 ---
 
-## 5. Registro Prompt 22
+## 5. Registro Prompt 23
 
 | Campo | Valor |
 |---|---|
-| commit inicial | `35e97535da6e5018423a66c30c3f4bf4163a53f1` |
-| ARTIFACT_COMMIT | `3818db51b9468bc4b7b74b7b783a76c96d102b43` |
+| commit inicial | `831f34b8aa488d17200a29ec9d04c76796adbbcf` |
+| ARTIFACT_COMMIT | *(post-commit)* |
 | publication metadata commit | *(post-push tip; max 2 commits)* |
 | push | pending |

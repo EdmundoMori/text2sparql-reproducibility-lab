@@ -24,3 +24,4 @@ LC-QuAD acquisition package · author contact · unsent template backlog · metr
 ## Commits
 
 - ARTIFACT_COMMIT: `3818db51b9468bc4b7b74b7b783a76c96d102b43`
+- publication metadata commit / remote tip final: `831f34b8aa488d17200a29ec9d04c76796adbbcf`

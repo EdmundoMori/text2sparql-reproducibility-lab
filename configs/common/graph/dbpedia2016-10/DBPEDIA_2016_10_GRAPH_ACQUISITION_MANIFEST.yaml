@@ -1,0 +1,29 @@
+acquisition_scope_id: DBPEDIA_2016_10_ENDPOINT_EQUIVALENT_TBD
+target_graph_id: DBPEDIA_2016_10_QALD9_NATIVE_ENDPOINT_EQUIVALENT
+release: 2016-10
+source: "https://downloads.dbpedia.org/2016-10/"
+exact_file_manifest: configs/common/graph/dbpedia2016-10/DBPEDIA_2016_10_ENDPOINT_FILE_MANIFEST.yaml
+serialization: ttl.bz2_for_core_lhd__links_nt_or_ttl_bz2_as_published
+exact_file_count: 81
+compressed_total_bytes: 5023159516
+published_checksum_coverage: PARTIAL_MD5_CORE_AND_LINKS__LHD_MISSING__33_UNAVAILABLE
+license_evidence: docs/protocols/common/graph/dbpedia2016-10/20260722T120239Z/DBPEDIA_2016_10_LICENSE_AND_ATTRIBUTION.md
+attribution_manifest: configs/common/graph/dbpedia2016-10/DBPEDIA_2016_10_ATTRIBUTION_MANIFEST_DRAFT.yaml
+network_allowlist: configs/common/graph/dbpedia2016-10/DBPEDIA_2016_10_GRAPH_NETWORK_ALLOWLIST.yaml
+payload_destination: workdir/graphs/dbpedia/2016-10/endpoint-equivalent/
+minimum_disk: 50GiB
+recommended_disk: 150GiB
+resource_class: CONDITIONAL_HIGH_RISK
+authorization_id: null
+authorization_status: UNSIGNED
+acquisition_status: NOT_ACQUIRED
+deployment_status: NOT_DEPLOYED
+graph_status: TARGET_DOCUMENTED_RUNTIME_PENDING
+stop_conditions:
+  - file_scope_not_closed
+  - authorization_not_approved
+  - size_mismatch
+  - checksum_mismatch
+  - redirect_to_non_allowlisted_host
+  - cost_nonzero
+  - attempt_to_load_virtuoso_without_separate_deployment_auth
