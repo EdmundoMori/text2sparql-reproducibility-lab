@@ -57,5 +57,5 @@ Informe: `audit/sgpt/Z3_ONE_STEP_REDUCED_TRAINING_REPORT.md`
 |---|---|
 | commit inicial | `20d1165d07ab41423266eb9e24c46bfca6244126` |
 | ARTIFACT_COMMIT | `a257b5f1c8af7981fddbf8618ad7c635adc7f5da` |
-| FINAL_HEAD | `a257b5f1c8af7981fddbf8618ad7c635adc7f5da` |
-| push | pending |
+| FINAL_HEAD | `14e4a6cb7058a0420cc2ccb21039e06bd940c2aa` |
+| push | done |
