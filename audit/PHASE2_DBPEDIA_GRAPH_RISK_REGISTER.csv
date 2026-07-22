@@ -1,7 +1,7 @@
 risk_id,severity,status,mitigation
 wrong_dbpedia_release,HIGH,open,Pin 2016-10 only; reject Latest Core
 current_endpoint_substituted,HIGH,mitigated_decision,Rejected as primary
-incomplete_endpoint_scope,HIGH,open,33 unavailable + ontology unknown
+incomplete_endpoint_scope,HIGH,mitigated_prompt23b,33 blockers resolved to lang canonical paths; scope locked
 duplicate_serialization,MEDIUM,mitigated,Select ttl.bz2 for core; links unique nt/ttl files
 missing_ontology,MEDIUM,open,Not in four-bullet list; 23B decide
 missing_instance_types_lhd,HIGH,mitigated_plan,Explicitly included with size; checksum absent

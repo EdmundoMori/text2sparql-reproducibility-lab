@@ -1,0 +1,15 @@
+metric,value,unit,notes
+exact_canonical_file_count,114,files,29 core_en + 33 en_uris_lang + 2 LHD + 50 links
+exact_compressed_total_bytes,6925795437,bytes,
+baseline_prompt23_files,81,files,
+baseline_prompt23_bytes,5023159516,bytes,
+added_resolved_blockers,33,files,
+added_bytes,1902635921,bytes,
+checksum_covered_file_count,112,files,excludes 2 LHD
+checksum_covered_byte_count,6839826862,bytes,
+checksum_coverage_pct_files,98.2456,percent,
+checksum_coverage_pct_bytes,98.7587,percent,
+no_checksum_required_files,2,files,LHD dbo+ext
+unresolved_required_count,0,files,
+serialization_core_lhd,ttl.bz2,n/a,
+serialization_links,nt.bz2_or_ttl.bz2_as_published,n/a,unique files not duplicates

@@ -1,21 +1,25 @@
 # NEXT_PROMPT_GUIDANCE
 
 **Fecha:** 2026-07-22  
-**Tras:** Prompt 23 — DBpedia graph target (`20260722T120239Z`) · gate `DBPEDIA_2016_10_NATIVE_GRAPH_TARGET_SELECTED_PACKAGE_CONDITIONAL_FILE_SCOPE`
+**Tras:** Prompt 23B — file-scope closure (`20260722T132719Z`) · gate `DBPEDIA_2016_10_ENDPOINT_EQUIVALENT_FILE_SCOPE_CLOSED_PARTIAL_PUBLISHED_CHECKSUMS_READY_FOR_HUMAN_ACQUISITION_AUTHORIZATION`
 
-## Prompt recomendado (único)
+## Estado
 
-**Título:** Prompt 23B — Cierre documental del file scope endpoint-equivalent DBpedia 2016-10 (33 unavailable `*_en_uris_*`, rol de ontología, resolución `core/`→`core-i18n/en`), ZERO_COST, sin descargar grafos ni ejecutar SPARQL.
+**HUMAN AUTHORIZATION REQUIRED**
 
-**Acción:** CLOSE_DBPEDIA_2016_10_ENDPOINT_EQUIVALENT_FILE_SCOPE
+No hay prompt ejecutable automático para Cursor.
 
-**Restricciones:** ZERO_COST; documental; sin GET de RDF/dumps; sin Docker pull; sin Virtuoso; sin SPARQL; sin gold; sin adapters; sin benchmark; sin auth automática.
+## Acción humana
 
-## Contexto obligatorio
+`HUMAN_DBPEDIA_2016_10_GRAPH_ACQUISITION_AUTHORIZATION`
 
-- Primary target ya seleccionado: `DBPEDIA_2016_10_QALD9_NATIVE_ENDPOINT_EQUIVALENT`
-- Fallback: `COMMON_GRAPH_REBASE` (no ejecutar)
-- Available: 81 files / 5023159516 bytes
-- Blockers: 33 checksum-listed files HTTP 404; LHD sin MD5 en core checksums; ontology optional unknown
-- Human form: `NOT_READY_CONDITIONAL` hasta cerrar scope
-- QALD sealed/consumed; LC-QuAD HOLD; G4 runtime not satisfied
+Formulario: `docs/protocols/common/graph/dbpedia2016-10/file-scope/20260722T132719Z/HUMAN_DBPEDIA_GRAPH_ACQUISITION_APPROVAL.md`  
+Estado: `READY_UNSIGNED` · authorization_id null
+
+## Prompt reservado (no ejecutar ahora)
+
+**Prompt 24B** — Adquisición controlada compressed-only del paquete endpoint-equivalent DBpedia 2016-10, ZERO_COST, sin descomprimir, sin cargar grafo, sin SPARQL.
+
+## Prohibido ahora
+
+Descarga de grafo · Docker pull · Virtuoso · SPARQL · gold · métricas · adapters · benchmark · auto-auth · rebase execution

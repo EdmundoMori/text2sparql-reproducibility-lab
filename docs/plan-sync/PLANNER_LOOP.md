@@ -1,17 +1,18 @@
 # Bucle de optimización del plan (operativo)
 
-**Última actualización:** 2026-07-22 (post Prompt 23)
+**Última actualización:** 2026-07-22 (post Prompt 23B)
 
 ## Fuentes de verdad
 
 1. `PLAN_SYNC.md`
-2. `docs/protocols/common/graph/dbpedia2016-10/20260722T120239Z/DBPEDIA_GRAPH_TARGET_GATE.md`
-3. `audit/NEXT_AFTER_DBPEDIA_GRAPH_TARGET_DECISION.md`
-4. `docs/decisions/015_qald9plus_dbpedia_graph_target_and_acquisition_package.md`
-5. `configs/common/graph/dbpedia2016-10/DBPEDIA_2016_10_GRAPH_TARGET.yaml`
+2. `docs/protocols/common/graph/dbpedia2016-10/file-scope/20260722T132719Z/DBPEDIA_ENDPOINT_FILE_SCOPE_GATE.md`
+3. `audit/NEXT_AFTER_DBPEDIA_FILE_SCOPE_CLOSURE_DECISION.md`
+4. `docs/decisions/016_dbpedia_2016_10_endpoint_file_scope_closure.md`
+5. `configs/common/graph/dbpedia2016-10/DBPEDIA_2016_10_CANONICAL_SCOPE_LOCK.yaml`
 
 ## Estado
 
-- QALD acquired/sealed · LC-QuAD T6C HOLD · graph **target selected** · file scope **CONDITIONAL**
-- G4 target documented / runtime not · adapters false · benchmark not eligible
-- Siguiente: **Prompt 23B** (`CLOSE_DBPEDIA_2016_10_ENDPOINT_EQUIVALENT_FILE_SCOPE`)
+- File scope **CLOSED** (114 files / 6925795437 bytes)
+- Human acquisition authorization **pending**
+- G4 runtime not · adapters false · benchmark not eligible
+- Siguiente: **HUMAN_GATE** (Prompt 24B reserved only)

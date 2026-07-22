@@ -11,8 +11,8 @@ common_adapter_allowed: false
 benchmark_execution_eligibility: NOT_CURRENTLY_ELIGIBLE
 dbpedia_graph_decision_run_id: 20260722T120239Z
 dbpedia_graph_target: DBPEDIA_2016_10_QALD9_NATIVE_ENDPOINT_EQUIVALENT
-next_closure_action: CLOSE_DBPEDIA_2016_10_ENDPOINT_EQUIVALENT_FILE_SCOPE
-next_prompt: Prompt_23B
+next_closure_action: HUMAN_DBPEDIA_2016_10_GRAPH_ACQUISITION_AUTHORIZATION
+next_prompt: HUMAN_GATE_REQUIRED
 dataset_families:
   QALD9_PLUS:
     primary_representation: qald9plus_authors_repo
@@ -34,7 +34,7 @@ dataset_families:
     split_status: official_train_test_documented_dev_not_applied
     graph_provenance: QALD9_NATIVE_GRAPH_DBPEDIA_2016_10
     graph_target: DBPEDIA_2016_10_QALD9_NATIVE_ENDPOINT_EQUIVALENT
-    graph_scope_status: ENDPOINT_EQUIVALENT_FILE_SCOPE_CONDITIONAL
+    graph_scope_status: ENDPOINT_EQUIVALENT_FILE_SCOPE_CLOSED
     payload_status: QALD9PLUS_EN_DBPEDIA_ACQUIRED_VALIDATED_WORKDIR_ONLY
   LCQUAD2:
     primary_representation: lcquad2_authors_repo

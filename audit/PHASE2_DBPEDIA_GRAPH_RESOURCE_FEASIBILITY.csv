@@ -1,14 +1,7 @@
 resource,value,unit,source,status,notes
-compressed_payload_available_bytes,5023159516,bytes,HEAD+checksum_resolution,VERIFIED_METADATA,81 files available candidate
-compressed_payload_unavailable_count,33,files,HEAD_404,BLOCKER,en_uris_* listed in core md5
-uncompressed_bytes,UNKNOWN,bytes,no_official_total_for_subset,UNKNOWN,Do not invent
-triple_count,UNKNOWN,triples,no_official_count_for_endpoint_subset,UNKNOWN,
-virtuoso_db_expansion_factor,2x-5x_compressed_heuristic,ratio,literature_range_not_measured,INFERENCE,Range only; not measured
-minimum_free_disk_estimate,>=50GiB,GiB,compressed~4.7GiB + unpack + virtuoso heuristic,INFERENCE,Conservative lower bound
-recommended_free_disk,>=150GiB,GiB,lab_conservative,INFERENCE,
-host_free_disk_observed,918,GiB,df_/ Prompt23,OBSERVED,DISK_OK
-wsl_ram_observed,7.4,GiB,MACHINE_PROFILE+free,OBSERVED,Likely insufficient for full Virtuoso load
-host_ram_observed,~16,GiB,MACHINE_PROFILE,OBSERVED,May require WSL memory increase
-docker_daemon,available,n/a,MACHINE_PROFILE,OBSERVED,
-docker_compose,absent,n/a,MACHINE_PROFILE,OBSERVED,
-classification,CONDITIONAL_HIGH_RISK,class,Prompt23 assessment,EMITTED,Disk OK; RAM/WSL high risk; file scope conditional
+compressed_payload_canonical_bytes,6925795437,bytes,Prompt23B HEAD,VERIFIED_METADATA,114 files
+acquisition_resource_status,FEASIBLE_CURRENT_DISK_CONDITIONAL_HUMAN_AUTHORIZATION,class,MACHINE_PROFILE+totals,EMITTED,
+deployment_resource_status,CONDITIONAL_HIGH_RISK_REQUIRES_SEPARATE_RESOURCE_AND_DEPLOYMENT_GATE,class,MACHINE_PROFILE,EMITTED,WSL 7.4GiB
+host_free_disk_observed,918,GiB,df,OBSERVED,
+wsl_ram_observed,7.4,GiB,MACHINE_PROFILE,OBSERVED,
+classification,ACQUISITION_OK_DEPLOYMENT_HIGH_RISK,class,Prompt23B,EMITTED,

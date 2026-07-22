@@ -1,0 +1,112 @@
+2026-07-22T13:28:13.358967+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/labels_en_uris_ar.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:13.523758+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/labels_en_uris_ar.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:13.677029+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/ar/labels_en_uris_ar.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/ar/labels_en_uris_ar.ttl.bz2 status=200 bytes=4033214
+2026-07-22T13:28:13.844162+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/labels_en_uris_de.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:14.006510+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/labels_en_uris_de.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:14.162567+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/de/labels_en_uris_de.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/de/labels_en_uris_de.ttl.bz2 status=200 bytes=14757441
+2026-07-22T13:28:14.323862+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/labels_en_uris_es.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:14.476273+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/labels_en_uris_es.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:14.642858+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/es/labels_en_uris_es.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/es/labels_en_uris_es.ttl.bz2 status=200 bytes=11663333
+2026-07-22T13:28:14.796599+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/labels_en_uris_fr.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:14.963363+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/labels_en_uris_fr.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:15.120552+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/fr/labels_en_uris_fr.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/fr/labels_en_uris_fr.ttl.bz2 status=200 bytes=16831634
+2026-07-22T13:28:15.282564+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/labels_en_uris_it.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:15.445806+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/labels_en_uris_it.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:15.602326+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/it/labels_en_uris_it.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/it/labels_en_uris_it.ttl.bz2 status=200 bytes=12451796
+2026-07-22T13:28:15.763489+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/labels_en_uris_ja.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:15.917154+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/labels_en_uris_ja.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:16.086362+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/ja/labels_en_uris_ja.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/ja/labels_en_uris_ja.ttl.bz2 status=200 bytes=6939656
+2026-07-22T13:28:16.248714+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/labels_en_uris_nl.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:16.403200+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/labels_en_uris_nl.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:16.566958+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/nl/labels_en_uris_nl.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/nl/labels_en_uris_nl.ttl.bz2 status=200 bytes=9836159
+2026-07-22T13:28:16.717925+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/labels_en_uris_pl.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:16.879978+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/labels_en_uris_pl.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:17.044924+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/pl/labels_en_uris_pl.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/pl/labels_en_uris_pl.ttl.bz2 status=200 bytes=10271231
+2026-07-22T13:28:17.196183+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/labels_en_uris_pt.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:17.346083+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/labels_en_uris_pt.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:17.513067+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/pt/labels_en_uris_pt.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/pt/labels_en_uris_pt.ttl.bz2 status=200 bytes=8878067
+2026-07-22T13:28:17.662667+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/labels_en_uris_ru.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:17.826234+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/labels_en_uris_ru.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:17.983108+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/ru/labels_en_uris_ru.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/ru/labels_en_uris_ru.ttl.bz2 status=200 bytes=10933144
+2026-07-22T13:28:18.168532+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/labels_en_uris_zh.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:18.326554+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/labels_en_uris_zh.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:18.483516+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/zh/labels_en_uris_zh.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/zh/labels_en_uris_zh.ttl.bz2 status=200 bytes=6970631
+2026-07-22T13:28:18.635313+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/long_abstracts_en_uris_ar.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:18.791567+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/long_abstracts_en_uris_ar.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:18.946661+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/ar/long_abstracts_en_uris_ar.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/ar/long_abstracts_en_uris_ar.ttl.bz2 status=200 bytes=41580494
+2026-07-22T13:28:19.106758+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/long_abstracts_en_uris_de.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:19.258758+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/long_abstracts_en_uris_de.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:19.425560+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/de/long_abstracts_en_uris_de.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/de/long_abstracts_en_uris_de.ttl.bz2 status=200 bytes=147465772
+2026-07-22T13:28:19.587814+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/long_abstracts_en_uris_es.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:19.739290+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/long_abstracts_en_uris_es.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:19.892350+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/es/long_abstracts_en_uris_es.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/es/long_abstracts_en_uris_es.ttl.bz2 status=200 bytes=130307903
+2026-07-22T13:28:20.055227+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/long_abstracts_en_uris_fr.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:20.215462+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/long_abstracts_en_uris_fr.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:20.387887+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/fr/long_abstracts_en_uris_fr.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/fr/long_abstracts_en_uris_fr.ttl.bz2 status=200 bytes=133856751
+2026-07-22T13:28:20.539623+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/long_abstracts_en_uris_it.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:20.695639+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/long_abstracts_en_uris_it.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:20.857677+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/it/long_abstracts_en_uris_it.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/it/long_abstracts_en_uris_it.ttl.bz2 status=200 bytes=85013934
+2026-07-22T13:28:21.013933+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/long_abstracts_en_uris_ja.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:21.164429+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/long_abstracts_en_uris_ja.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:21.328215+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/ja/long_abstracts_en_uris_ja.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/ja/long_abstracts_en_uris_ja.ttl.bz2 status=200 bytes=62545775
+2026-07-22T13:28:21.501894+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/long_abstracts_en_uris_nl.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:21.666036+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/long_abstracts_en_uris_nl.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:21.828513+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/nl/long_abstracts_en_uris_nl.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/nl/long_abstracts_en_uris_nl.ttl.bz2 status=200 bytes=82360668
+2026-07-22T13:28:21.980602+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/long_abstracts_en_uris_pl.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:22.130836+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/long_abstracts_en_uris_pl.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:22.287272+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/pl/long_abstracts_en_uris_pl.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/pl/long_abstracts_en_uris_pl.ttl.bz2 status=200 bytes=98496657
+2026-07-22T13:28:22.437554+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/long_abstracts_en_uris_pt.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:22.599631+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/long_abstracts_en_uris_pt.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:22.764140+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/pt/long_abstracts_en_uris_pt.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/pt/long_abstracts_en_uris_pt.ttl.bz2 status=200 bytes=83768123
+2026-07-22T13:28:22.926157+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/long_abstracts_en_uris_ru.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:23.086219+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/long_abstracts_en_uris_ru.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:23.262754+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/ru/long_abstracts_en_uris_ru.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/ru/long_abstracts_en_uris_ru.ttl.bz2 status=200 bytes=111258707
+2026-07-22T13:28:23.434172+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/long_abstracts_en_uris_zh.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:23.586403+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/long_abstracts_en_uris_zh.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:23.738241+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/zh/long_abstracts_en_uris_zh.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/zh/long_abstracts_en_uris_zh.ttl.bz2 status=200 bytes=65171178
+2026-07-22T13:28:23.888140+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/short_abstracts_en_uris_ar.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:24.040742+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/short_abstracts_en_uris_ar.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:24.203704+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/ar/short_abstracts_en_uris_ar.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/ar/short_abstracts_en_uris_ar.ttl.bz2 status=200 bytes=28048144
+2026-07-22T13:28:24.365071+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/short_abstracts_en_uris_de.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:24.517911+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/short_abstracts_en_uris_de.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:24.684412+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/de/short_abstracts_en_uris_de.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/de/short_abstracts_en_uris_de.ttl.bz2 status=200 bytes=100483079
+2026-07-22T13:28:24.851588+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/short_abstracts_en_uris_es.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:25.002154+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/short_abstracts_en_uris_es.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:25.152931+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/es/short_abstracts_en_uris_es.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/es/short_abstracts_en_uris_es.ttl.bz2 status=200 bytes=83927015
+2026-07-22T13:28:25.307680+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/short_abstracts_en_uris_fr.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:25.461141+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/short_abstracts_en_uris_fr.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:25.624782+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/fr/short_abstracts_en_uris_fr.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/fr/short_abstracts_en_uris_fr.ttl.bz2 status=200 bytes=99360159
+2026-07-22T13:28:25.784411+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/short_abstracts_en_uris_it.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:25.944863+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/short_abstracts_en_uris_it.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:26.106030+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/it/short_abstracts_en_uris_it.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/it/short_abstracts_en_uris_it.ttl.bz2 status=200 bytes=60067242
+2026-07-22T13:28:26.266832+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/short_abstracts_en_uris_ja.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:26.416688+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/short_abstracts_en_uris_ja.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:26.571382+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/ja/short_abstracts_en_uris_ja.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/ja/short_abstracts_en_uris_ja.ttl.bz2 status=200 bytes=57878038
+2026-07-22T13:28:26.740992+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/short_abstracts_en_uris_nl.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:26.903268+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/short_abstracts_en_uris_nl.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:27.064488+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/nl/short_abstracts_en_uris_nl.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/nl/short_abstracts_en_uris_nl.ttl.bz2 status=200 bytes=55621227
+2026-07-22T13:28:13.308609+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/short_abstracts_en_uris_pl.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:13.460157+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/short_abstracts_en_uris_pl.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:13.616388+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/pl/short_abstracts_en_uris_pl.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/pl/short_abstracts_en_uris_pl.ttl.bz2 status=200 bytes=66748349
+2026-07-22T13:28:13.766492+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/short_abstracts_en_uris_pt.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:13.928631+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/short_abstracts_en_uris_pt.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:14.093520+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/pt/short_abstracts_en_uris_pt.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/pt/short_abstracts_en_uris_pt.ttl.bz2 status=200 bytes=55867677
+2026-07-22T13:28:14.260333+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/short_abstracts_en_uris_ru.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:14.438822+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/short_abstracts_en_uris_ru.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:14.624029+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/ru/short_abstracts_en_uris_ru.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/ru/short_abstracts_en_uris_ru.ttl.bz2 status=200 bytes=77177871
+2026-07-22T13:28:14.775437+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core-i18n/en/short_abstracts_en_uris_zh.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:14.924845+00:00 HEAD_FAIL https://downloads.dbpedia.org/2016-10/core/short_abstracts_en_uris_zh.ttl.bz2 HTTP Error 404: Not Found
+2026-07-22T13:28:15.081903+00:00 HEAD https://downloads.dbpedia.org/2016-10/core-i18n/zh/short_abstracts_en_uris_zh.ttl.bz2 -> https://downloads.dbpedia.org/2016-10/core-i18n/zh/short_abstracts_en_uris_zh.ttl.bz2 status=200 bytes=62064852
+2026-07-22T13:28:40.357523+00:00 GET https://downloads.dbpedia.org/2016-10/core-i18n/ar/_checksums.md5 status=200 bytes=13371 sha256=1df614ec8ecd1c15efd0b13a9fc1f26202681510ff18c52d3e1d63fcd5470a07
+2026-07-22T13:28:40.556576+00:00 GET https://downloads.dbpedia.org/2016-10/core-i18n/de/_checksums.md5 status=200 bytes=15582 sha256=c4da433ef8cf8fee2c12a2ad865c6c92dd926f65eb699e95f6be76f7d443c079
+2026-07-22T13:28:40.766961+00:00 GET https://downloads.dbpedia.org/2016-10/core-i18n/es/_checksums.md5 status=200 bytes=14996 sha256=2457bb5b42772b7d043b8cd393c20bb4ea8b714a9ff350284f6478a6ce217e72
+2026-07-22T13:28:40.980498+00:00 GET https://downloads.dbpedia.org/2016-10/core-i18n/fr/_checksums.md5 status=200 bytes=15916 sha256=790d706411e866ab87072f77209245469376f2eeb18c14a6290abe88912cdc03
+2026-07-22T13:28:41.194905+00:00 GET https://downloads.dbpedia.org/2016-10/core-i18n/it/_checksums.md5 status=200 bytes=14838 sha256=939ecb8c4f2d8b1a32427aa5d63331b57e210354b6daf3617296607c5afab9b3
+2026-07-22T13:28:41.403330+00:00 GET https://downloads.dbpedia.org/2016-10/core-i18n/ja/_checksums.md5 status=200 bytes=14996 sha256=3bfe51a0640f44bd28cbe34ba545d18bae8033fe65a23864ac1bfabe8a61694d
+2026-07-22T13:28:42.635724+00:00 GET https://downloads.dbpedia.org/2016-10/core-i18n/nl/_checksums.md5 status=200 bytes=14046 sha256=c7170ba75f76f25a8ca3bed769e3d405498e70505ab88acfa321c6fc9467388c
+2026-07-22T13:28:42.897200+00:00 GET https://downloads.dbpedia.org/2016-10/core-i18n/pl/_checksums.md5 status=200 bytes=14342 sha256=a1695e958b018c24ceb28a5ea1e8876db5645a595b25f346890b21529adf564f
+2026-07-22T13:28:43.107324+00:00 GET https://downloads.dbpedia.org/2016-10/core-i18n/pt/_checksums.md5 status=200 bytes=14996 sha256=ed69f51385c4fa197cf33c3b4c4ad094aa88ae0a7160483f6a43fb032b28da68
+2026-07-22T13:28:43.310003+00:00 GET https://downloads.dbpedia.org/2016-10/core-i18n/ru/_checksums.md5 status=200 bytes=14660 sha256=17061c14118ca90ab58b00ed0fc6edcbcad2b3e416e372a205a1bf401c539ad3
+2026-07-22T13:28:43.474621+00:00 GET https://downloads.dbpedia.org/2016-10/core-i18n/zh/_checksums.md5 status=200 bytes=8868 sha256=3a36e42a57700ee31497130a091f336a474e00a059a02586c6de8c206f2ffbb0
+HEAD https://downloads.dbpedia.org/2016-10/dbpedia_2016-10.owl 200 2451743
+HEAD https://downloads.dbpedia.org/2016-10/dbpedia_2016-10.nt 200 4129896

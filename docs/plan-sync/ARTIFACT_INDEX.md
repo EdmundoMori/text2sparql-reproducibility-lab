@@ -1,12 +1,20 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-22 (Prompt 23)  
+**Última actualización:** 2026-07-22 (Prompt 23B)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
 
 | ID | Tema | Ruta | Cuándo leerlo |
 |---|---|---|---|
+| P23B-GATE | File-scope closure gate | `docs/protocols/common/graph/dbpedia2016-10/file-scope/20260722T132719Z/DBPEDIA_ENDPOINT_FILE_SCOPE_GATE.md` | Tras 23B |
+| P23B-RPT | File-scope closure report | `audit/PHASE2_DBPEDIA_FILE_SCOPE_CLOSURE_REPORT.md` | Detalle 23B |
+| P23B-NEXT | Next after scope closure | `audit/NEXT_AFTER_DBPEDIA_FILE_SCOPE_CLOSURE_DECISION.md` | Human gate |
+| P23B-DEC | Decisión 016 | `docs/decisions/016_dbpedia_2016_10_endpoint_file_scope_closure.md` | Scope lock |
+| P23B-BLK | Blocker matrix | `audit/PHASE2_DBPEDIA_2016_10_BLOCKER_RESOLUTION_MATRIX.csv` | 33 rows |
+| P23B-LOCK | Canonical scope lock | `configs/common/graph/dbpedia2016-10/DBPEDIA_2016_10_CANONICAL_SCOPE_LOCK.yaml` | Exact list |
+| P23B-FORM | Human acquisition form | `docs/protocols/common/graph/dbpedia2016-10/file-scope/20260722T132719Z/HUMAN_DBPEDIA_GRAPH_ACQUISITION_APPROVAL.md` | READY_UNSIGNED |
+| P23B-Q | Post-scope-closure queue | `audit/PHASE2_POST_GRAPH_SCOPE_CLOSURE_QUEUE.csv` | Cola |
 | P23-GATE | DBpedia graph target gate | `docs/protocols/common/graph/dbpedia2016-10/20260722T120239Z/DBPEDIA_GRAPH_TARGET_GATE.md` | Tras Prompt 23 |
 | P23-RPT | Graph target + acquisition package report | `audit/PHASE2_DBPEDIA_GRAPH_TARGET_AND_ACQUISITION_PACKAGE_REPORT.md` | Detalle P23 |
 | P23-NEXT | Next after graph target | `audit/NEXT_AFTER_DBPEDIA_GRAPH_TARGET_DECISION.md` | Prompt 23B |

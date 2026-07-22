@@ -1,0 +1,2 @@
+disposition,count,required_count,resolved_count,unresolved_count,added_canonical_files,removed_duplicate_files,byte_delta,scope_impact,gate_impact
+RESOLVED_TO_REQUIRED_CANONICAL_FILE,33,33,33,0,33,0,1902635921,EXPAND_AVAILABLE_PACKAGE,ENABLES_SCOPE_CLOSURE_GATE_B

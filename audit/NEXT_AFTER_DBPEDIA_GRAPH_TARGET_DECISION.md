@@ -33,4 +33,5 @@ Prompt 22 metadata reconciliada:
 
 ## Commits Prompt 23
 
-- ARTIFACT_COMMIT: 
+- ARTIFACT_COMMIT: `e24e36c2cc65692b981e7f1e7990d4bfcce496c7`
+- publication metadata commit: `9b0a56273505cb9967d0f505ed3ba216e92287b2`

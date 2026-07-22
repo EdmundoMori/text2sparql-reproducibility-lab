@@ -3,7 +3,7 @@
 **Proyecto:** `text2sparql-reproducibility-lab`  
 **Dominio:** Text-to-SPARQL / Knowledge Graph Question Answering (KGQA)  
 **Inicio documental:** 2026-07-18  
-**Fase actual:** Fase 1 **cerrada** · Fase 2 **QALD adquirido** · LC-QuAD T6C **HOLD** · grafo **target 2016-10 seleccionado (scope CONDITIONAL)** · adapters **deshabilitados** · benchmark **no ejecutado**  
+**Fase actual:** Fase 1 **cerrada** · Fase 2 **file scope CLOSED** · human graph acquisition auth **pending** · adapters **deshabilitados** · benchmark **no**
 **Estado:** Fase 1 nativa cerrada (smokes/bloqueos documentados). Clones presentes. Fase 2: framework de evaluación común definido; adapters deshabilitados; benchmark no ejecutado.  
 **Perfil de máquina (obligatorio):** [`MACHINE_PROFILE.md`](MACHINE_PROFILE.md)  
 **Auditoría documental:** `audit/PAPER_CODE_MAPPING.md`, `audit/INITIAL_AUDIT_MATRIX.csv`, `audit/INCLUSION_DECISIONS.md`, `audit/RESOURCE_ESTIMATION.md`  
@@ -396,3 +396,10 @@ Auditoría estática de `upstream/` y, solo bajo petición explícita, smoke tes
 - Graph payload NOT_ACQUIRED · deployment NOT_DEPLOYED · G4 runtime not satisfied.
 - QALD sealed/consumed · LC-QuAD HOLD · adapters false · benchmark NOT_CURRENTLY_ELIGIBLE.
 - Siguiente: Prompt 23B (cerrar file scope).
+
+## Estado actual post-Prompt 23B
+
+- RUN_ID: `20260722T132719Z` · Gate: `DBPEDIA_2016_10_ENDPOINT_EQUIVALENT_FILE_SCOPE_CLOSED_PARTIAL_PUBLISHED_CHECKSUMS_READY_FOR_HUMAN_ACQUISITION_AUTHORIZATION`.
+- 33/33 blockers resolved · final 114 files / 6925795437 bytes.
+- Form `READY_UNSIGNED` · acquisition/deployment not executed.
+- Next: human authorization; Prompt 24B reserved only.

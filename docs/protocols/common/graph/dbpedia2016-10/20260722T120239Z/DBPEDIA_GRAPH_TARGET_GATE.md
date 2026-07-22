@@ -44,4 +44,6 @@ This gate documents the **target** only. Runtime pin remains unsatisfied.
 
 ## Publication
 
-ARTIFACT_COMMIT: 
+ARTIFACT_COMMIT:
+
+Publication metadata commit: `9b0a56273505cb9967d0f505ed3ba216e92287b2`

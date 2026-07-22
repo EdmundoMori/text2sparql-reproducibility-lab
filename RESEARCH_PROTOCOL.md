@@ -370,3 +370,10 @@ Authors source HOLD (LICENSE absent). HF card CC BY 3.0 = platform metadata; no 
 - Endpoint público mutable: **rechazado** como primary reproducible.
 - Adquisición/despliegue de grafo: **no** ejecutados; G4 runtime **no** satisfecho.
 - Siguiente paso documental: cierre de file scope (Prompt 23B) antes de autorización humana de adquisición.
+
+## Estado operativo post-Prompt 23B (2026-07-22)
+
+- Endpoint-equivalent file scope **CLOSED** (114 files, 6925795437 bytes).
+- Published MD5 coverage partial (2 LHD); local SHA-256 required post-download.
+- Human acquisition authorization pending; deployment remains a separate gate.
+- No graph payload acquired; G4 runtime not satisfied.

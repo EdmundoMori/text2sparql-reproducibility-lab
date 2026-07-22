@@ -245,6 +245,48 @@ class Resolver:
         return out
 
 
+def en_uris_lang_from_filename(name: str) -> str | None:
+    """Extract XX from labels|long_abstracts|short_abstracts_en_uris_XX.ttl.bz2."""
+    m = re.search(r"(?:labels|long_abstracts|short_abstracts)_en_uris_([a-z]{2})\.ttl\.bz2$", name)
+    return m.group(1) if m else None
+
+
+def canonical_en_uris_fallback_url(failed_url: str) -> str | None:
+    """If checksum/en path 404s for *_en_uris_<lang>, propose core-i18n/<lang>/ URL.
+
+    Prompt 23 root cause: core/_checksums.md5 lists ./core-i18n/en/<file> for
+    en_uris members, but payloads live under core-i18n/<lang>/.
+    """
+    path = urlparse(failed_url).path
+    name = path.rsplit("/", 1)[-1]
+    lang = en_uris_lang_from_filename(name)
+    if not lang:
+        return None
+    # Only rewrite mistaken en/ (or broken core/) placements
+    if f"/core-i18n/{lang}/{name}" in path:
+        return None
+    return f"https://downloads.dbpedia.org/2016-10/core-i18n/{lang}/{name}"
+
+
+def head_with_en_uris_fallback(resolver: "Resolver", url: str, label: str) -> dict:
+    """HEAD url; on 404/ERR for en_uris files, retry language-canonical path."""
+    head = resolver.head(url, label)
+    status = head.get("status")
+    ok = status == 200 or status == "200"
+    if ok:
+        return head
+    alt = canonical_en_uris_fallback_url(url)
+    if not alt or alt == url:
+        return head
+    alt_head = resolver.head(alt, f"{label}_lang_fallback")
+    alt_ok = alt_head.get("status") == 200 or alt_head.get("status") == "200"
+    if alt_ok:
+        alt_head["fallback_from"] = url
+        alt_head["resolution"] = "RESOLVED_CANONICAL_PATH"
+        return alt_head
+    return head
+
+
 def classify_file(url: str) -> dict:
     path = urlparse(url).path
     name = path.rsplit("/", 1)[-1]
@@ -268,6 +310,8 @@ def classify_file(url: str) -> dict:
         component = "links"
     elif "/core-i18n/en/" in path:
         component = "core-i18n-en"
+    elif "/core-i18n/" in path:
+        component = "core-i18n-lang"
     elif name.lower().startswith(("md5sums", "sha", "checksum")):
         component = "checksum"
     return {
@@ -310,10 +354,15 @@ def main(argv: Iterable[str] | None = None) -> int:
                 clf = classify_file(link)
                 # HEAD payload candidates; GET only metadata-looking names
                 if is_payload_path(link) and not looks_metadata_name(urlparse(link).path):
-                    head = r.head(link, f"head_{clf['filename'][:80]}")
+                    head = head_with_en_uris_fallback(r, link, f"head_{clf['filename'][:80]}")
+                    final_url = head.get("final_url") or head.get("url") or link
+                    if head.get("fallback_from"):
+                        final_url = head.get("url") or final_url
+                        clf = classify_file(final_url)
                     inventory.append(
                         {
-                            "source_url": link,
+                            "source_url": final_url,
+                            "requested_url": link,
                             **clf,
                             "remote_size_bytes": head.get("content_length"),
                             "etag": head.get("etag"),
@@ -322,6 +371,8 @@ def main(argv: Iterable[str] | None = None) -> int:
                             "head_status": head.get("status"),
                             "payload_requested": False,
                             "method": "HEAD",
+                            "resolution": head.get("resolution"),
+                            "fallback_from": head.get("fallback_from"),
                         }
                     )
                 else:

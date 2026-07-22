@@ -1,18 +1,143 @@
 status: DOCUMENTARY_ONLY_NOT_ACTIVE
-run_id: 20260722T120239Z
+run_id: 20260722T132719Z
 allowed_hosts:
   - downloads.dbpedia.org
   - www.dbpedia.org
   - dbpedia.org
-  - databus.dbpedia.org
-allowed_path_prefixes:
-  - /2016-10/core-i18n/en/
-  - /2016-10/links/
+allowed_exact_paths:
+  - //2016-10/core-i18n/ar/labels_en_uris_ar.ttl.bz2
+  - //2016-10/core-i18n/ar/long_abstracts_en_uris_ar.ttl.bz2
+  - //2016-10/core-i18n/ar/short_abstracts_en_uris_ar.ttl.bz2
+  - //2016-10/core-i18n/de/labels_en_uris_de.ttl.bz2
+  - //2016-10/core-i18n/de/long_abstracts_en_uris_de.ttl.bz2
+  - //2016-10/core-i18n/de/short_abstracts_en_uris_de.ttl.bz2
+  - //2016-10/core-i18n/en/article_categories_en.ttl.bz2
+  - //2016-10/core-i18n/en/category_labels_en.ttl.bz2
+  - //2016-10/core-i18n/en/disambiguations_en.ttl.bz2
+  - //2016-10/core-i18n/en/external_links_en.ttl.bz2
+  - //2016-10/core-i18n/en/freebase_links_en.ttl.bz2
+  - //2016-10/core-i18n/en/geo_coordinates_en.ttl.bz2
+  - //2016-10/core-i18n/en/geo_coordinates_mappingbased_en.ttl.bz2
+  - //2016-10/core-i18n/en/geonames_links_en.ttl.bz2
+  - //2016-10/core-i18n/en/homepages_en.ttl.bz2
+  - //2016-10/core-i18n/en/images_en.ttl.bz2
+  - //2016-10/core-i18n/en/infobox_properties_en.ttl.bz2
+  - //2016-10/core-i18n/en/infobox_property_definitions_en.ttl.bz2
+  - //2016-10/core-i18n/en/instance_types_en.ttl.bz2
+  - //2016-10/core-i18n/en/instance_types_lhd_dbo_en.ttl.bz2
+  - //2016-10/core-i18n/en/instance_types_lhd_ext_en.ttl.bz2
+  - //2016-10/core-i18n/en/instance_types_transitive_en.ttl.bz2
+  - //2016-10/core-i18n/en/interlanguage_links_chapters_en.ttl.bz2
+  - //2016-10/core-i18n/en/labels_en.ttl.bz2
+  - //2016-10/core-i18n/en/long_abstracts_en.ttl.bz2
+  - //2016-10/core-i18n/en/mappingbased_literals_en.ttl.bz2
+  - //2016-10/core-i18n/en/mappingbased_objects_en.ttl.bz2
+  - //2016-10/core-i18n/en/page_ids_en.ttl.bz2
+  - //2016-10/core-i18n/en/persondata_en.ttl.bz2
+  - //2016-10/core-i18n/en/revision_ids_en.ttl.bz2
+  - //2016-10/core-i18n/en/revision_uris_en.ttl.bz2
+  - //2016-10/core-i18n/en/short_abstracts_en.ttl.bz2
+  - //2016-10/core-i18n/en/skos_categories_en.ttl.bz2
+  - //2016-10/core-i18n/en/specific_mappingbased_properties_en.ttl.bz2
+  - //2016-10/core-i18n/en/transitive_redirects_en.ttl.bz2
+  - //2016-10/core-i18n/en/uri_same_as_iri_en.ttl.bz2
+  - //2016-10/core-i18n/en/wikipedia_links_en.ttl.bz2
+  - //2016-10/core-i18n/es/labels_en_uris_es.ttl.bz2
+  - //2016-10/core-i18n/es/long_abstracts_en_uris_es.ttl.bz2
+  - //2016-10/core-i18n/es/short_abstracts_en_uris_es.ttl.bz2
+  - //2016-10/core-i18n/fr/labels_en_uris_fr.ttl.bz2
+  - //2016-10/core-i18n/fr/long_abstracts_en_uris_fr.ttl.bz2
+  - //2016-10/core-i18n/fr/short_abstracts_en_uris_fr.ttl.bz2
+  - //2016-10/core-i18n/it/labels_en_uris_it.ttl.bz2
+  - //2016-10/core-i18n/it/long_abstracts_en_uris_it.ttl.bz2
+  - //2016-10/core-i18n/it/short_abstracts_en_uris_it.ttl.bz2
+  - //2016-10/core-i18n/ja/labels_en_uris_ja.ttl.bz2
+  - //2016-10/core-i18n/ja/long_abstracts_en_uris_ja.ttl.bz2
+  - //2016-10/core-i18n/ja/short_abstracts_en_uris_ja.ttl.bz2
+  - //2016-10/core-i18n/nl/labels_en_uris_nl.ttl.bz2
+  - //2016-10/core-i18n/nl/long_abstracts_en_uris_nl.ttl.bz2
+  - //2016-10/core-i18n/nl/short_abstracts_en_uris_nl.ttl.bz2
+  - //2016-10/core-i18n/pl/labels_en_uris_pl.ttl.bz2
+  - //2016-10/core-i18n/pl/long_abstracts_en_uris_pl.ttl.bz2
+  - //2016-10/core-i18n/pl/short_abstracts_en_uris_pl.ttl.bz2
+  - //2016-10/core-i18n/pt/labels_en_uris_pt.ttl.bz2
+  - //2016-10/core-i18n/pt/long_abstracts_en_uris_pt.ttl.bz2
+  - //2016-10/core-i18n/pt/short_abstracts_en_uris_pt.ttl.bz2
+  - //2016-10/core-i18n/ru/labels_en_uris_ru.ttl.bz2
+  - //2016-10/core-i18n/ru/long_abstracts_en_uris_ru.ttl.bz2
+  - //2016-10/core-i18n/ru/short_abstracts_en_uris_ru.ttl.bz2
+  - //2016-10/core-i18n/zh/labels_en_uris_zh.ttl.bz2
+  - //2016-10/core-i18n/zh/long_abstracts_en_uris_zh.ttl.bz2
+  - //2016-10/core-i18n/zh/short_abstracts_en_uris_zh.ttl.bz2
+  - //2016-10/links/amsterdammuseum.nt.bz2
+  - //2016-10/links/bbc-things_links.nt.bz2
+  - //2016-10/links/bbcwildlife_links.nt.bz2
+  - //2016-10/links/bl-example.nt.bz2
+  - //2016-10/links/bookmashup_links.nt.bz2
+  - //2016-10/links/bricklink.nt.bz2
+  - //2016-10/links/cordis.nt.bz2
+  - //2016-10/links/dataEco_links.nt.bz2
+  - //2016-10/links/dblp.nt.bz2
+  - //2016-10/links/dbtune_links.nt.bz2
+  - //2016-10/links/diseasome_links.nt.bz2
+  - //2016-10/links/dnb-links.nt.bz2
+  - //2016-10/links/drugbank_links.nt.bz2
+  - //2016-10/links/eunis_links.nt.bz2
+  - //2016-10/links/eurostat_linkedstatistics_links.nt.bz2
+  - //2016-10/links/eurostat_wbsg.nt.bz2
+  - //2016-10/links/factbook.nt.bz2
+  - //2016-10/links/gadm_links.nt.bz2
+  - //2016-10/links/geonames_links.ttl.bz2
+  - //2016-10/links/geospecies.nt.bz2
+  - //2016-10/links/gho.nt.bz2
+  - //2016-10/links/ispra-core_links.nt.bz2
+  - //2016-10/links/italian_public_schools.nt.bz2
+  - //2016-10/links/linked_web_apis.nt.bz2
+  - //2016-10/links/linkedgeodata_links.nt.bz2
+  - //2016-10/links/linkedmdb_links.nt.bz2
+  - //2016-10/links/lobid.org_organization.nt.bz2
+  - //2016-10/links/logainmie_links.nt.bz2
+  - //2016-10/links/manifestation_links.nt.bz2
+  - //2016-10/links/nuts_links.nt.bz2
+  - //2016-10/links/nytimes.nt.bz2
+  - //2016-10/links/ocd_links.nt.bz2
+  - //2016-10/links/openei_links.nt.bz2
+  - //2016-10/links/organisation_links.nt.bz2
+  - //2016-10/links/revyu.nt.bz2
+  - //2016-10/links/sider.nt.bz2
+  - //2016-10/links/springer_nature_scigraph_subjects.nt.bz2
+  - //2016-10/links/tcm.nt.bz2
+  - //2016-10/links/transparency_links.nt.bz2
+  - //2016-10/links/uk-university-links.nt.bz2
+  - //2016-10/links/umbel_links_fixed.nt.bz2
+  - //2016-10/links/uscensus.nt.bz2
+  - //2016-10/links/viaf2dbpedia.nt.bz2
+  - //2016-10/links/wl-example.nt.bz2
+  - //2016-10/links/wordnet_links.nt.bz2
+  - //2016-10/links/worldbank_links.nt.bz2
+  - //2016-10/links/yago_links.ttl.bz2
+  - //2016-10/links/yago_taxonomy.ttl.bz2
+  - //2016-10/links/yago_type_links.ttl.bz2
+  - //2016-10/links/yago_types.ttl.bz2
   - /2016-10/core/_checksums.md5
   - /2016-10/links/_checksums.md5
   - /2016-10/core-i18n/en/_checksums.md5
+  - /2016-10/core-i18n/ar/_checksums.md5
+  - /2016-10/core-i18n/de/_checksums.md5
+  - /2016-10/core-i18n/es/_checksums.md5
+  - /2016-10/core-i18n/fr/_checksums.md5
+  - /2016-10/core-i18n/it/_checksums.md5
+  - /2016-10/core-i18n/ja/_checksums.md5
+  - /2016-10/core-i18n/nl/_checksums.md5
+  - /2016-10/core-i18n/pl/_checksums.md5
+  - /2016-10/core-i18n/pt/_checksums.md5
+  - /2016-10/core-i18n/ru/_checksums.md5
+  - /2016-10/core-i18n/zh/_checksums.md5
 forbidden:
-  - GET_of_rdf_payloads_until_authorization
+  - GET_until_human_authorization
+  - aliases_core_broken_symlinks
+  - ontology_owl_nt_not_in_scope
   - docker_pull
-  - sparql_queries
-  - non_allowlisted_mirrors
+  - sparql
+  - mirrors
+  - duplicate_tql_serializations
