@@ -85,4 +85,5 @@ Fuente: `audit/NEXT_POST_Z3_ZERO_COST_DECISION.md` (Q11). **No ejecutado en 14D.
 | commit inicial | `ce6c22cccfb174bf1988084bdbc0b25079161816` |
 | ARTIFACT_COMMIT | `39bdc72411e692fcb8b1519c45ced775056f2a06` |
 | remote tip after 14D (pre-metadata) | `39bdc72411e692fcb8b1519c45ced775056f2a06` |
-| push | pending |
+| publication metadata commit | `fa200879407fcc3e9a1735b84fcc2523c7097816` |
+| push | done |
