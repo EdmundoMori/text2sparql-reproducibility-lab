@@ -1,0 +1,32 @@
+# DATASET_SPLIT_CONTRACTS — Prompt 17
+# No splits reales creados.
+
+contracts:
+  - view_id: QALD9_PLUS_EN_DBPEDIA
+    official_train: data/qald_9_plus_train_dbpedia.json
+    official_test: data/qald_9_plus_test_dbpedia.json
+    official_validation: NOT_PRESENT
+    lab_derived_development: DERIVED_DEV_SPEC_DEFINED_NOT_APPLIED
+    test_sealed: true
+    rules:
+      - derive_dev_only_from_train
+      - deterministic_ids_when_payload_acquired
+      - salt_and_algorithm_version_registered_before_application
+      - no_ids_selected_in_prompt_17
+      - ratio_pending_explicit_decision_before_acquisition
+
+  - view_id: LCQUAD2_DBPEDIA18
+    official_train: dataset/train.json
+    official_test: dataset/test.json
+    official_validation: NOT_PRESENT_IN_AUTHORS_TREE
+    lab_derived_development: DERIVED_DEV_SPEC_DEFINED_NOT_APPLIED
+    test_sealed: true
+    notes:
+      - SGPT_val_2389_is_method_derivative_not_official
+
+  - view_id: LCQUAD2_WIKIDATA
+    official_train: dataset/train.json
+    official_test: dataset/test.json
+    official_validation: NOT_PRESENT_IN_AUTHORS_TREE
+    lab_derived_development: DERIVED_DEV_SPEC_DEFINED_NOT_APPLIED
+    test_sealed: true

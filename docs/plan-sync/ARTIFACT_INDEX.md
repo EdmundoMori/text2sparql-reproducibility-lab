@@ -1,6 +1,6 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-22 (Prompt 16)  
+**Última actualización:** 2026-07-22 (Prompt 17)  
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
@@ -268,6 +268,24 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | P16-NEXT | Next after protocol | `audit/NEXT_AFTER_COMMON_PROTOCOL_DECISION.md` | Prompt17 |
 | P16-LOG | Logs Prompt 16 | `logs/common-protocol-definition/20260722T083201Z/` | documental |
 | P15Q-HIST | Phase2 transition queue (HIST) | `audit/PHASE2_TRANSITION_QUEUE.csv` | preserved |
+
+| P17-DIR | Dataset provenance pack | `docs/protocols/common/datasets/20260722T090627Z/` | 17 |
+| P17-GATE | Provenance gate | `docs/protocols/common/datasets/20260722T090627Z/DATASET_PROVENANCE_GATE.md` | T2 |
+| P17-REG | Source registry | `configs/common/DATASET_SOURCE_REGISTRY.yaml` | 17 |
+| P17-ACQ | Acquisition template | `configs/common/DATASET_ACQUISITION_MANIFEST_TEMPLATE.yaml` | template only |
+| P17-RES | Metadata resolver | `scripts/preparation/common_dataset_metadata_resolver.py` | metadata-only |
+| P17-SRC | Source matrix | `audit/PHASE2_DATASET_SOURCE_MATRIX.csv` | 17 |
+| P17-REP | Representation matrix | `audit/PHASE2_DATASET_REPRESENTATION_MATRIX.csv` | 17 |
+| P17-HASH | Hash matrix | `audit/PHASE2_DATASET_HASH_MATRIX.csv` | 17 |
+| P17-LIC | License evidence | `audit/PHASE2_DATASET_LICENSE_EVIDENCE.csv` | 17 |
+| P17-LOC | Local copy lineage | `audit/PHASE2_LOCAL_DATASET_COPY_LINEAGE.csv` | read-only |
+| P17-GRP | Graph provenance | `audit/PHASE2_GRAPH_PROVENANCE_MATRIX.csv` | 17 |
+| P17-EP | Endpoint provenance | `audit/PHASE2_ENDPOINT_PROVENANCE_MATRIX.csv` | not queried |
+| P17-RPT | Provenance report | `audit/PHASE2_DATASET_PROVENANCE_REPORT.md` | 17 |
+| P17-DEC | Decision 008 | `docs/decisions/008_common_dataset_source_and_provenance.md` | 17 |
+| P17-NEXT | Next after provenance | `audit/NEXT_AFTER_DATASET_PROVENANCE_DECISION.md` | Prompt18 |
+| P17-Q | Post-T2 queue | `audit/PHASE2_POST_T2_QUEUE.csv` | T3 selected |
+| P17-LOG | Logs Prompt 17 | `logs/dataset-provenance/20260722T090627Z/` | metadata-only |
 
 ## Qué está / no está en GitHub
 

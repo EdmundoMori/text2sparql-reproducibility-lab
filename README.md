@@ -3,17 +3,19 @@
 Laboratorio local de investigación en **Text-to-SPARQL** / KGQA orientado a auditoría, reproducibilidad nativa y, posteriormente, evaluación común de métodos publicados.
 
 
-## Estado actual (Prompt 16)
+## Estado actual (Prompt 17)
 
 | Campo | Valor |
 |---|---|
 | Fase 1 | **cerrada** (`PHASE1_CLOSED_READY_FOR_COMMON_EVALUATION_PROTOCOL_DEFINITION`) |
-| Fase 2 | **framework definido**; dataset provenance pending |
-| Protocol RUN_ID | ver `METHOD_REGISTRY.yaml` → `phase2_protocol_run_id` |
-| Adapters | `common_adapter_allowed=false` (gate Fase 2; no implementación) |
+| Fase 2 | **provenance documental** (`DATASET_PROVENANCE_DOCUMENTED_READY_FOR_METRIC_ORACLE_CONTRACT`) |
+| Protocol RUN_ID | `20260722T083201Z` · Provenance RUN_ID: `20260722T090627Z` |
+| Adapters | `common_adapter_allowed=false` (sin implementación) |
 | Benchmark común | **no** ejecutado (`NOT_CURRENTLY_ELIGIBLE`) |
-| Datasets candidatos | QALD-9 Plus (primario); LC-QuAD 2.0 (secundario) — `DATASET_PIN_PENDING` |
-| Siguiente | Prompt 17 / T2 — provenance documental (sin descargas) |
+| Source pins | QALD `8eb038a6…` · LC-QuAD `0a5f8f85…` (`CURRENT_SOURCE_SNAPSHOT_NOT_PUBLICATION_RELEASE`) |
+| Vistas | PRIMARY `QALD9_PLUS_EN_DBPEDIA` · SECONDARY `LCQUAD2_DBPEDIA18` · EXT `LCQUAD2_WIKIDATA` |
+| Payload / graph | `DATASET_PAYLOAD_NOT_ACQUIRED` · `GRAPH_SNAPSHOT_ACQUISITION_PENDING` · G4 **no** satisfecho |
+| Siguiente | Prompt 18 / T3 — contrato métricas/oracle (documental; sin implementar ni consultar) |
 
 Clones y ejecuciones nativas de Fase 1 están **documentadas**. La secuencia de largo plazo permanece intacta.
 

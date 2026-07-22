@@ -1,0 +1,95 @@
+# DATASET_VIEW_CONTRACTS — Prompt 17
+# Selectors exactos de campos JSON pendientes de payload salvo lo documentado.
+
+views:
+  - view_id: QALD9_PLUS_EN_DBPEDIA
+    dataset_family: QALD9_PLUS
+    representation_id: qald9plus_authors_repo
+    source_pin: "8eb038a61e1bc09cbd21640aa667a1714f53cda4"
+    language: en
+    knowledge_graph: DBpedia
+    question_selector: PENDING_PAYLOAD_DOCUMENTED_MULTILINGUAL_EN
+    query_selector: PENDING_PAYLOAD_DBPEDIA_SPARQL_FIELD
+    id_selector: PENDING_PAYLOAD
+    answer_selector: PENDING_PAYLOAD
+    official_splits: [train, test]
+    reported_counts: {train: 408, test: 150}
+    metadata_counts: null
+    payload_counts: null
+    train_allowed: true
+    development_policy: DERIVED_DEV_SPEC_DEFINED_NOT_APPLIED
+    test_sealed: true
+    graph_provenance_status: GRAPH_VERSION_NOT_SPECIFIED
+    license_status: CC-BY-4.0_LICENSE_FILE_VERIFIED
+    payload_status: DATASET_PAYLOAD_NOT_ACQUIRED
+    common_protocol_role: PRIMARY
+    claim_boundary: SOURCE_PROVENANCE_DOCUMENTED_PAYLOAD_NOT_ACQUIRED
+
+  - view_id: QALD9_PLUS_EN_WIKIDATA
+    dataset_family: QALD9_PLUS
+    representation_id: qald9plus_authors_repo
+    source_pin: "8eb038a61e1bc09cbd21640aa667a1714f53cda4"
+    language: en
+    knowledge_graph: Wikidata
+    question_selector: PENDING_PAYLOAD
+    query_selector: PENDING_PAYLOAD
+    id_selector: PENDING_PAYLOAD
+    answer_selector: PENDING_PAYLOAD
+    official_splits: [train, test]
+    reported_counts: {train: 371, test: 136}
+    metadata_counts: null
+    payload_counts: null
+    train_allowed: true
+    development_policy: DERIVED_DEV_SPEC_DEFINED_NOT_APPLIED
+    test_sealed: true
+    graph_provenance_status: GRAPH_VERSION_NOT_SPECIFIED
+    license_status: CC-BY-4.0_LICENSE_FILE_VERIFIED
+    payload_status: DATASET_PAYLOAD_NOT_ACQUIRED
+    common_protocol_role: EXTENSION_SEPARATE
+    claim_boundary: not_mixed_with_dbpedia_view
+
+  - view_id: LCQUAD2_DBPEDIA18
+    dataset_family: LCQUAD2
+    representation_id: lcquad2_authors_repo
+    source_pin: "0a5f8f85b6f863c3b80f0fa02839e25d438af3ae"
+    language: en
+    knowledge_graph: DBpedia2018
+    question_selector: PENDING_PAYLOAD
+    query_selector: PENDING_PAYLOAD_CONFIRM_DBPEDIA_FIELD
+    id_selector: PENDING_PAYLOAD
+    answer_selector: PENDING_PAYLOAD
+    official_splits: [train, test]
+    reported_counts: null
+    metadata_counts: null
+    payload_counts: null
+    train_allowed: true
+    development_policy: DERIVED_DEV_SPEC_DEFINED_NOT_APPLIED
+    test_sealed: true
+    graph_provenance_status: GRAPH_YEAR_REPORTED
+    license_status: LICENSE_SCOPE_UNCLEAR_AUTHORS_REPO_HF_CC_BY_3_0_REPORTED
+    payload_status: DATASET_PAYLOAD_NOT_ACQUIRED
+    common_protocol_role: SECONDARY_DBPEDIA_CANDIDATE
+    claim_boundary: separate_from_wikidata_view
+
+  - view_id: LCQUAD2_WIKIDATA
+    dataset_family: LCQUAD2
+    representation_id: lcquad2_authors_repo
+    source_pin: "0a5f8f85b6f863c3b80f0fa02839e25d438af3ae"
+    language: en
+    knowledge_graph: Wikidata
+    question_selector: PENDING_PAYLOAD
+    query_selector: PENDING_PAYLOAD
+    id_selector: PENDING_PAYLOAD
+    answer_selector: PENDING_PAYLOAD
+    official_splits: [train, test]
+    reported_counts: null
+    metadata_counts: null
+    payload_counts: null
+    train_allowed: true
+    development_policy: DERIVED_DEV_SPEC_DEFINED_NOT_APPLIED
+    test_sealed: true
+    graph_provenance_status: GRAPH_VERSION_NOT_SPECIFIED
+    license_status: LICENSE_SCOPE_UNCLEAR_AUTHORS_REPO_HF_CC_BY_3_0_REPORTED
+    payload_status: DATASET_PAYLOAD_NOT_ACQUIRED
+    common_protocol_role: EXTENSION_SEPARATE
+    claim_boundary: SGPT_local_derivative_not_canonical

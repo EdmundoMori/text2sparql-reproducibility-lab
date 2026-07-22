@@ -244,3 +244,20 @@ La creación de estos artefactos se realizará en fases posteriores solicitadas 
 ### Condición de transición
 
 Puede avanzar T2 (dataset provenance documental). **No** implica adapters ni benchmark. `common_adapter_allowed` sigue false.
+
+---
+
+## Addendum Prompt 17 — Dataset provenance
+
+**Fecha:** 2026-07-22  
+**RUN_ID:** `20260722T090627Z`  
+**Gate:** `DATASET_PROVENANCE_DOCUMENTED_READY_FOR_METRIC_ORACLE_CONTRACT`  
+**Qualifiers:** `DATASET_PAYLOAD_NOT_ACQUIRED` · `GRAPH_SNAPSHOT_ACQUISITION_PENDING` · `G4_RUNTIME_PIN_NOT_SATISFIED`
+
+### PE5–PE8
+
+Estados **sin cambio experimental**. Evidencia preparatoria: `dataset_source_provenance_documented`; `payload_not_acquired`; `graph_snapshot_pending`. PE5 **no** iniciado experimentalmente.
+
+### Condición de transición
+
+Puede avanzar T3 (contrato métricas/oracle documental). **No** implica adquisición de payloads, SPARQL, adapters ni benchmark.

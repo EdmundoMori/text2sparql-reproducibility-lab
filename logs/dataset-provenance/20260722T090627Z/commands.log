@@ -1,0 +1,12 @@
+# Prompt 17 commands.log — 20260722T090627Z
+# ZERO_COST; metadata-only; no dataset payload; no SPARQL
+
+2026-07-22T09:06:27Z git fetch origin
+2026-07-22T09:06:27Z git branch --show-current -> main
+2026-07-22T09:06:27Z git rev-parse HEAD -> ba306d069910e3807bd211cc7416c1e88e637e86
+2026-07-22T09:06:27Z git rev-parse origin/main -> ba306d069910e3807bd211cc7416c1e88e637e86
+2026-07-22T09:06:27Z git status --short -> clean
+2026-07-22T09:06:27Z RUN_ID=20260722T090627Z
+2026-07-22T09:07:xx python3 scripts/preparation/common_dataset_metadata_resolver.py (remote metadata)
+2026-07-22T09:07:xx python3 scripts/preparation/common_dataset_metadata_resolver.py --local-existing-copies
+# invariants: zero_payload_download=true; zero_sparql=true; zero_adapters=true; zero_benchmark=true; cost_usd=0.00

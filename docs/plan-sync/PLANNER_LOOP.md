@@ -1,17 +1,18 @@
 # Bucle de optimización del plan (operativo)
 
-**Última actualización:** 2026-07-22 (post Prompt 16)
+**Última actualización:** 2026-07-22 (post Prompt 17)
 
 ## Fuentes de verdad
 
 1. `PLAN_SYNC.md`
-2. `docs/protocols/common/20260722T083201Z/COMMON_PROTOCOL_GATE.md`
-3. `audit/NEXT_AFTER_COMMON_PROTOCOL_DECISION.md`
-4. `docs/decisions/007_common_evaluation_protocol_framework.md`
+2. `docs/protocols/common/datasets/20260722T090627Z/DATASET_PROVENANCE_GATE.md`
+3. `audit/NEXT_AFTER_DATASET_PROVENANCE_DECISION.md`
+4. `docs/decisions/008_common_dataset_source_and_provenance.md`
+5. `configs/common/DATASET_SOURCE_REGISTRY.yaml`
 
 ## Estado
 
 - Fase 1: closed
-- Fase 2: framework defined → T2 dataset provenance pending
-- Adapters: false · Benchmark: not eligible
-- Siguiente: **Prompt 17** (T2)
+- Fase 2: dataset provenance documented → T3 metric/oracle pending
+- Adapters: false · Benchmark: not eligible · Payload: not acquired · G4: not satisfied
+- Siguiente: **Prompt 18** (T3)

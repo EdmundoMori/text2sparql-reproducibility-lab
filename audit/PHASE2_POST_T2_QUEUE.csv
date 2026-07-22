@@ -1,0 +1,10 @@
+order,action_id,title,depends_on,status,notes
+1,T3,METRIC_SPECIFICATION_AND_ORACLE_CONTRACT,T2_done,SELECTED_NEXT,Prompt_18 documentary only
+2,T4,ADAPTER_CONTRACTS,T3,queued,common_adapter_allowed remains false until authorized
+3,T5,LEGAL_ELIGIBILITY_RECHECK,T4,queued,method licenses + dataset acquisition gates
+4,T6,CONTROLLED_DATASET_ACQUISITION,T5,queued,requires authorization; use acquisition template
+5,GRAPH_ACQUISITION_OR_REBASE_GATE,T6,queued,when applicable; COMMON_GRAPH_REBASE if rebase
+6,T7,ADAPTER_IMPLEMENTATION,GRAPH_GATE,queued,blocked until contracts+legal
+7,T8,COMMON_PREFLIGHT,T7,queued,
+8,T9,BENCHMARK_EXECUTION,T8,queued,NOT_CURRENTLY_ELIGIBLE
+9,T10,CASE_STUDY,T9,queued,

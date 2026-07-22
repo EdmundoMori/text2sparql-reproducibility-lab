@@ -94,8 +94,29 @@
           ]
         },
         "pin_status": {
+          "type": "string"
+        },
+        "logical_view_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_pin": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance_status": {
+          "type": "string"
+        },
+        "payload_status": {
           "type": "string",
-          "const": "DATASET_PIN_PENDING"
+          "const": "DATASET_PAYLOAD_NOT_ACQUIRED"
+        },
+        "graph_status": {
+          "type": "string"
         }
       }
     },

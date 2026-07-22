@@ -1,10 +1,15 @@
-# COMMON_PROTOCOL_PROFILE — Prompt 16 draft
+# COMMON_PROTOCOL_PROFILE — Prompt 16 framework + Prompt 17 provenance
 protocol_id: common_text2sparql_eval
-protocol_version: "0.1.0-framework"
+protocol_version: "0.1.1-provenance"
 protocol_run_id: "20260722T083201Z"
-phase: phase2_protocol_framework_defined
+dataset_provenance_run_id: "20260722T090627Z"
+phase: phase2_dataset_provenance_documented
 primary_dataset_candidate: QALD9_PLUS_EN_DBPEDIA
-secondary_dataset_candidate: LCQUAD2
+secondary_dataset_candidate: LCQUAD2_DBPEDIA18
+secondary_dataset_extension: LCQUAD2_WIKIDATA
+qald9plus_source_pin: "8eb038a61e1bc09cbd21640aa667a1714f53cda4"
+lcquad2_source_pin: "0a5f8f85b6f863c3b80f0fa02839e25d438af3ae"
+temporal_pin_type: CURRENT_SOURCE_SNAPSHOT_NOT_PUBLICATION_RELEASE
 track_ids:
   - IA_Q_ONLY
   - IA_SCHEMA_COMMON
@@ -45,14 +50,17 @@ operational_metrics:
   - estimated_cost_usd
   - llm_calls
   - endpoint_calls
-dataset_pin_status: DATASET_PIN_PENDING
+dataset_pin_status: SOURCE_COMMIT_PINNED_TEMPORAL_PAYLOAD_NOT_ACQUIRED
 graph_pin_status: GRAPH_SNAPSHOT_PENDING
+provenance_status: SOURCE_PROVENANCE_DOCUMENTED_PAYLOAD_NOT_ACQUIRED
+payload_status: DATASET_PAYLOAD_NOT_ACQUIRED
 metric_detail_status: METRIC_DETAIL_PENDING
 oracle_contract_status: ORACLE_CONTRACT_PENDING
 adapter_status: disabled_common_adapter_allowed_false
 benchmark_status: NOT_CURRENTLY_ELIGIBLE
+g4_status: G4_RUNTIME_PIN_NOT_SATISFIED
 zero_cost_policy: MAX_EXTERNAL_MONETARY_COST_USD_0.00
-next_action: T2_DATASET_VERSION_AND_PROVENANCE_PROTOCOL
-next_prompt: Prompt_17
-claim_boundary: PROTOCOL_FRAMEWORK_ONLY_no_benchmark_no_adapters
-gate: COMMON_PROTOCOL_FRAMEWORK_DEFINED_READY_FOR_DATASET_PROVENANCE
+next_action: T3_METRIC_SPECIFICATION_AND_ORACLE_CONTRACT
+next_prompt: Prompt_18
+claim_boundary: SOURCE_PROVENANCE_DOCUMENTED_no_benchmark_no_adapters_no_payload
+gate: DATASET_PROVENANCE_DOCUMENTED_READY_FOR_METRIC_ORACLE_CONTRACT

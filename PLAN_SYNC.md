@@ -2,12 +2,13 @@
 
 **Audiencia:** ChatGPT e investigador.  
 **Repo:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab  
-**Última actualización:** 2026-07-22 (Prompt **16** — common protocol framework)  
-**Fase:** 1 **cerrada** · 2 **framework definido** (dataset provenance pending)  
-**SHA inicial 16:** `df1ee9758e2b9f4bc78515dfa5f67f3af057d2ed`  
-**Protocol RUN_ID:** `20260722T083201Z`
+**Última actualización:** 2026-07-22 (Prompt **17** — dataset version & provenance)  
+**Fase:** 1 **cerrada** · 2 **provenance documentada** (métricas/oracle pending)  
+**SHA inicial 17:** `ba306d069910e3807bd211cc7416c1e88e637e86`  
+**Provenance RUN_ID:** `20260722T090627Z`  
+**Protocol RUN_ID (Prompt 16):** `20260722T083201Z`
 
-> ZERO_COST. Gate `COMMON_PROTOCOL_FRAMEWORK_DEFINED_READY_FOR_DATASET_PROVENANCE`. Adapters **false**. Benchmark **no**. Objetivo largo plazo intacto.
+> ZERO_COST. Gate `DATASET_PROVENANCE_DOCUMENTED_READY_FOR_METRIC_ORACLE_CONTRACT`. Adapters **false**. Benchmark **no**. Payload **no** adquirido. Graph snapshot **pending**. G4 **no** satisfecho. Objetivo largo plazo intacto.
 
 ---
 
@@ -17,25 +18,29 @@ reproducción nativa → evaluación común → caso de estudio → errores → 
 
 ---
 
-## 2. Prompt 16 — resumen
+## 2. Prompt 17 — resumen
 
 | Campo | Valor |
 |---|---|
-| RUN_ID | `20260722T083201Z` |
-| Gate | **COMMON_PROTOCOL_FRAMEWORK_DEFINED_READY_FOR_DATASET_PROVENANCE** |
-| Tracks IA | IA_Q_ONLY · IA_SCHEMA_COMMON · IA_ORACLE_GROUNDING · IA_FIXED_EXTERNAL_GROUNDING · IA_DOMAIN_NATIVE · IA_HISTORICAL |
-| Datasets | PRIMARY QALD9_PLUS_EN_DBPEDIA · SECONDARY LCQUAD2 |
-| Pins | DATASET_PIN_PENDING · GRAPH_SNAPSHOT_PENDING · METRIC_DETAIL_PENDING |
+| RUN_ID | `20260722T090627Z` |
+| Gate | **DATASET_PROVENANCE_DOCUMENTED_READY_FOR_METRIC_ORACLE_CONTRACT** |
+| Qualifiers | DATASET_PAYLOAD_NOT_ACQUIRED · GRAPH_SNAPSHOT_ACQUISITION_PENDING · LOCAL_SHA256_PENDING_CONTROLLED_ACQUISITION · G4_RUNTIME_PIN_NOT_SATISFIED |
+| QALD pin | `8eb038a61e1bc09cbd21640aa667a1714f53cda4` (`CURRENT_SOURCE_SNAPSHOT_NOT_PUBLICATION_RELEASE`) |
+| LC-QuAD pin | `0a5f8f85b6f863c3b80f0fa02839e25d438af3ae` (mismo qualifier) |
+| Vistas | PRIMARY `QALD9_PLUS_EN_DBPEDIA` · SECONDARY `LCQUAD2_DBPEDIA18` · EXT `LCQUAD2_WIKIDATA` |
+| Licencias | QALD LICENSE CC BY 4.0 verified · LC-QuAD authors `LICENSE_SCOPE_UNCLEAR` (HF card reported only) |
+| Splits | train/test oficiales; test sellado; `DERIVED_DEV_SPEC_DEFINED_NOT_APPLIED` |
+| Hash semantics | commit/tree/blob ≠ SHA-256; published file checksums NOT_PUBLISHED |
+| Graph | year reported (LC-QuAD DBpedia2018) / version not specified (QALD); snapshot not published |
+| Representaciones | authors · HF · mKGQAgent derivative · SGPT original/processed (no canónicos) |
 | Adapters / benchmark | false / NOT_CURRENTLY_ELIGIBLE |
-| Coste / ejecución | 0.00 / ninguna |
-
-Variantes clave: `sgpt_q` (IA_Q_ONLY) ≠ `sgpt_qk` (IA_ORACLE_GROUNDING).
+| Coste / ejecución | 0.00 / sin downloads / sin SPARQL |
 
 ### PE5–PE8
 
 | PE | Estado |
 |---|---|
-| PE5 | protocol_framework_defined_pending_benchmark |
+| PE5 | protocol_framework_defined_pending_benchmark (+ preparatory provenance evidence) |
 | PE6 | diagnostic_metric_framework_defined_pending_execution |
 | PE7 | not_started |
 | PE8 | not_started |
@@ -44,29 +49,30 @@ PE1–PE4 intactos (Fase 1 cerrada).
 
 ---
 
-## 3. Metadata Prompt 15 (reconciliada)
+## 3. Metadata Prompt 16 (reconciliada)
 
 | Campo | SHA |
 |---|---|
-| ARTIFACT_COMMIT | `9ceb112e7e8b157cb1961a24183cfea45abde07b` |
-| publication metadata | `019e1771ee3d604e05799677b6477c3943370e7c` |
-| remote tip final post-15 | `df1ee9758e2b9f4bc78515dfa5f67f3af057d2ed` |
+| ARTIFACT_COMMIT | `ee3ae4a20c2243f3f432ef0097ad2bfcd4f46382` |
+| publication metadata | `4a51e6a60833a1224651f4dc3c077baba79e4e18` |
+| remote tip final post-16 | `ba306d069910e3807bd211cc7416c1e88e637e86` |
+
+No tratar `4a51e6a…` como tip remoto final.
 
 ---
 
 ## 4. Siguiente prompt (único)
 
-**Prompt 17 — Cierre documental de versiones, licencias, archivos, splits, hashes y endpoint/graph provenance de QALD-9 Plus y LC-QuAD 2.0, ZERO_COST, sin descargar datasets ni ejecutar consultas.**
+**Prompt 18 — Cierre documental del contrato de métricas, canonicalización de respuestas y SPARQL, oracle/grounding y análisis estadístico del protocolo común, ZERO_COST, sin implementar métricas ni ejecutar consultas.**
 
-Fuente: `audit/NEXT_AFTER_COMMON_PROTOCOL_DECISION.md` (T2). **No ejecutado en 16.**
+Fuente: `audit/NEXT_AFTER_DATASET_PROVENANCE_DECISION.md` (T3). **No ejecutado en 17.**
 
 ---
 
-## 5. Registro Prompt 16
+## 5. Registro Prompt 17
 
 | Campo | Valor |
 |---|---|
-| commit inicial | `df1ee9758e2b9f4bc78515dfa5f67f3af057d2ed` |
-| ARTIFACT_COMMIT | `ee3ae4a20c2243f3f432ef0097ad2bfcd4f46382` |
-| publication metadata commit | `4a51e6a60833a1224651f4dc3c077baba79e4e18` |
-| push | done |
+| commit inicial | `ba306d069910e3807bd211cc7416c1e88e637e86` |
+| ARTIFACT_COMMIT | *(se registra tras commit)* |
+| push | pending hasta cierre |

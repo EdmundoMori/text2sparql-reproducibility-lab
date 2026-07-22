@@ -1,0 +1,37 @@
+# DATASET_ACQUISITION_MANIFEST_TEMPLATE — Prompt 17
+# Do NOT fill download-dependent fields until controlled acquisition is authorized.
+# Prompt 17: template only; no acquisition executed.
+
+template_version: "0.1.0"
+status: TEMPLATE_ONLY_NO_ACQUISITION
+prompt_created: Prompt_17
+
+fields:
+  acquisition_id: null  # PENDING_AUTHORIZATION
+  authorization_id: null
+  dataset_view: null  # e.g. QALD9_PLUS_EN_DBPEDIA
+  source_url: null
+  source_commit: null
+  tree_oid: null
+  expected_filename: null
+  expected_size: null
+  published_checksum: null
+  published_checksum_algorithm: null
+  download_timestamp: null
+  download_tool: null
+  local_path: null
+  local_sha256: null
+  license_evidence: null
+  network_log: null
+  payload_validation: null
+  record_count: null
+  schema_hash: null
+  split_hashes: null
+  graph_dependency: null
+  status: NOT_ACQUIRED
+
+notes:
+  - Fill only after explicit acquisition authorization.
+  - Prefer published checksums when available; else compute local SHA-256 post-download.
+  - Never treat Git blob OID as SHA-256.
+  - Graph snapshot acquisition is a separate gate.

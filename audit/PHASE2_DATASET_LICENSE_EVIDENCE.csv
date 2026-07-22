@@ -1,0 +1,5 @@
+dataset_family,representation_id,license_claim,license_identifier,license_url_or_path,source_type,scope_dataset_or_code,exact_text_available,repository_license_file,paper_claim,dataset_card_claim,conflict,protocol_design_allowed,future_acquisition_gate,confidence,evidence
+QALD9_PLUS,qald9plus_authors_repo,CC BY 4.0,CC-BY-4.0,LICENSE + creativecommons.org/licenses/by/4.0/,LICENSE_FILE,dataset_declared_in_CITATION_cff,true,true,unknown,n_a,false,true,REQUIRES_EXPLICIT_ACQUISITION_AUTH,high,LICENSE_FILE_VERIFIED
+QALD9_PLUS,qald9plus_hf_mirror,cc-by-4.0,CC-BY-4.0,HF cardData.license,DATASET_CARD,unclear_vs_authors,false,false,n_a,cc-by-4.0,false_aligned_claim,true,MIRROR_NOT_PRIMARY,med,LICENSE_METADATA_REPORTED
+LCQUAD2,lcquad2_authors_repo,NONE_IN_TREE,UNKNOWN,ABSENT,ABSENT,LICENSE_SCOPE_UNCLEAR,false,false,unknown,n_a,n_a,true_documentary,LICENSE_CLARIFICATION_BEFORE_ACQUISITION,med,LICENSE_SCOPE_UNCLEAR
+LCQUAD2,lcquad2_hf_builder,cc-by-3.0,CC-BY-3.0,HF cardData.license,DATASET_CARD,card_only_not_authors_file,false,false,unknown,cc-by-3.0,possible_vs_authors_absent,true_documentary,DO_NOT_TREAT_AS_AUTHORS_LICENSE,med,LICENSE_METADATA_REPORTED

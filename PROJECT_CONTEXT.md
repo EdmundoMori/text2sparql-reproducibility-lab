@@ -299,3 +299,16 @@ Auditoría estática de `upstream/` y, solo bajo petición explícita, smoke tes
 - `common_adapter_allowed=false`; sin benchmark.
 - PE5/PE6: framework defined pending execution; PE7/PE8 not_started.
 - Siguiente: Prompt 17 (T2 provenance), sin descargas.
+
+---
+
+## Estado actual post-Prompt 17
+
+- Provenance RUN_ID: `20260722T090627Z`.
+- Gate: `DATASET_PROVENANCE_DOCUMENTED_READY_FOR_METRIC_ORACLE_CONTRACT`.
+- Source pins: QALD `8eb038a61e1bc09cbd21640aa667a1714f53cda4`; LC-QuAD `0a5f8f85b6f863c3b80f0fa02839e25d438af3ae` (`CURRENT_SOURCE_SNAPSHOT_NOT_PUBLICATION_RELEASE`).
+- Vistas: PRIMARY `QALD9_PLUS_EN_DBPEDIA`; SECONDARY `LCQUAD2_DBPEDIA18`; EXT `LCQUAD2_WIKIDATA`.
+- Payload no adquirido; graph snapshot pending; G4 runtime pin **no** satisfecho.
+- Adapters false; benchmark `NOT_CURRENTLY_ELIGIBLE`.
+- PE5/PE6 sin cambio de estado experimental; evidencia preparatoria de provenance añadida.
+- Siguiente: Prompt 18 (T3 métricas/oracle documental).

@@ -1,0 +1,8 @@
+OK	/home/edmundo/text2sparql-reproducibility-lab/upstream/mkgqagent/data/datasets/qald_9_plus_train_dbpedia_en.json	116992	6bd0913f5dc843404e8b83f4d63e1b4b2294181318ee288c00d1f9a81daa53ad	408
+OK	/home/edmundo/text2sparql-reproducibility-lab/upstream/mkgqagent/data/datasets/corporate_en.json	4266	155a90636a1e7b9fa826eab43a2a84a95a51a2336d441c5ef6e158c2cc2749d1	15
+OK	/home/edmundo/text2sparql-reproducibility-lab/upstream/sgpt/data/lcquad2/train.json	85907717	e001876e4329e4c2144c8aea9f6c2b012c5342ad0210ea38de4c9a17c7fdbb23	21497
+OK	/home/edmundo/text2sparql-reproducibility-lab/upstream/sgpt/data/lcquad2/val.json	9550849	c521855f6bbd69a1d0ad4fc1735d6c8d10721570cf96de9e755682d125744c9b	2389
+OK	/home/edmundo/text2sparql-reproducibility-lab/upstream/sgpt/data/lcquad2/test.json	23742690	0f1b754e04de08df34cb6cc12b1eceac61dbe92fbbe5b9935ae0cdff19bcbb5c	5969
+OK	/home/edmundo/text2sparql-reproducibility-lab/upstream/sgpt/data/lcquad2/original/train.json	25208541	cd8f37d873deb17b3b9c8c06514da1ba05d747d78ae306c16fc4ba40214faab6	21497
+OK	/home/edmundo/text2sparql-reproducibility-lab/upstream/sgpt/data/lcquad2/original/val.json	2792441	256b52621f26a4e88df7c7ec61624dfcc33af5ae40fdaf3d1ebbfa980a480b06	2389
+OK	/home/edmundo/text2sparql-reproducibility-lab/upstream/sgpt/data/lcquad2/original/test.json	6973408	c159b4928736aeefee965bc642df52452d8efe840fe013fa461bf00679a7c89a	5969
