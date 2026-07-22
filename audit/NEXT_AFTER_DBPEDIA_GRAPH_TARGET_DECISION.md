@@ -30,3 +30,7 @@ Prompt 22 metadata reconciliada:
 |---|---|
 | ARTIFACT_COMMIT | `3818db51b9468bc4b7b74b7b783a76c96d102b43` |
 | publication metadata commit / remote tip | `831f34b8aa488d17200a29ec9d04c76796adbbcf` |
+
+## Commits Prompt 23
+
+- ARTIFACT_COMMIT: 

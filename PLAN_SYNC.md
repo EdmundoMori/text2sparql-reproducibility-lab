@@ -77,6 +77,6 @@ Reservado después: Prompt 24B adquisición controlada (solo tras scope cerrado 
 | Campo | Valor |
 |---|---|
 | commit inicial | `831f34b8aa488d17200a29ec9d04c76796adbbcf` |
-| ARTIFACT_COMMIT | *(post-commit)* |
+| ARTIFACT_COMMIT | e24e36c2cc65692b981e7f1e7990d4bfcce496c7 |
 | publication metadata commit | *(post-push tip; max 2 commits)* |
 | push | pending |

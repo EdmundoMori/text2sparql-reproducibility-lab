@@ -41,3 +41,7 @@ This gate documents the **target** only. Runtime pin remains unsatisfied.
 ## Next action (exactly one)
 
 **`CLOSE_DBPEDIA_2016_10_ENDPOINT_EQUIVALENT_FILE_SCOPE`** → reserved vehicle: **Prompt 23B** (documentary; ZERO_COST; no download).
+
+## Publication
+
+ARTIFACT_COMMIT: 
