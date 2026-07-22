@@ -63,6 +63,6 @@ No prompt Cursor ejecutable. Reservado: **Prompt 24B** (adquisición compressed-
 | Campo | Valor |
 |---|---|
 | commit inicial | `9b0a56273505cb9967d0f505ed3ba216e92287b2` |
-| ARTIFACT_COMMIT | *(post-commit)* |
+| ARTIFACT_COMMIT | `5fbbcc47a5a4d28c264ec6c20c4a6212ac870904` |
 | publication metadata commit | *(post-push tip; max 2 commits)* |
 | push | pending |

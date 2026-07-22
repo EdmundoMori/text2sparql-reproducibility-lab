@@ -46,3 +46,7 @@ Scope closed and zero required blockers, but **2 LHD files lack published MD5**.
 **`HUMAN_DBPEDIA_2016_10_GRAPH_ACQUISITION_AUTHORIZATION`** — HUMAN_GATE_REQUIRED  
 
 Reserved later: **Prompt 24B** (compressed-only acquisition after human approval). Not executable now.
+
+## Publication
+
+ARTIFACT_COMMIT: `5fbbcc47a5a4d28c264ec6c20c4a6212ac870904`
