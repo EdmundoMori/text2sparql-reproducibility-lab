@@ -31,4 +31,4 @@ Autorizaciones 14C attempt-1 y attempt-2 **consumidas**. No hay segundo intento 
 
 ## Cierre 14D
 
-Autorizaciones attempt-1 y attempt-2 permanecen **consumidas**. Cierre gate . No nueva auth en 14D.
+Autorizaciones attempt-1 y attempt-2 permanecen **consumidas**. Cierre gate `SGPT_NATIVE_AUDIT_CLOSED_SMOKE_ONLY`. No nueva auth en 14D.
