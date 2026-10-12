@@ -448,3 +448,14 @@ boundary rule; RDFConfig native remains domain-native. Controlled variants remai
 QALD primary/test seal and DBpedia 2016-10 target are preserved; graph NOT_DEPLOYED; G4 not satisfied; G5
 runtime and G6I pending; adapters false; benchmark not eligible. Participants are not frozen. Next:
 Prompt 25R3A documentary recovery. ZERO_EXTERNAL_MONETARY_COST; no execution/training/deployment/benchmark.
+
+## Prompt 25R3A — Pre-freeze documentary recovery (20261012T135645Z)
+
+Mandatory documentary closure is complete: four rows recovered, two exhausted and zero unresolved.
+RDFConfig's exact pinned README provides repository-wide MIT evidence (LE2), correcting the prior
+LICENSE_NOT_CONFIRMED classification while retaining NO_STANDARD_LICENSE_FILE and preserving the Phase-1
+blocked outcome. mKGQAgent and CoT code-license searches are exhausted; CoT's four remote context artifacts
+and native 34B model are metadata-verified without downloads. FIRESPARQL remains domain-native/nonblocking.
+Benchmark design freeze is ready but not yet applied; execution remains ineligible. QALD/test seal and DBpedia
+target preserved; graph NOT_DEPLOYED; G4 not satisfied; G5/G6I pending; adapters false; cost USD 0.00.
+Next: Prompt 25R4.

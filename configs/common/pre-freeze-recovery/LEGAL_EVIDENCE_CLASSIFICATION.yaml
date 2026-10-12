@@ -1,0 +1,24 @@
+schema_version: 1.0.0-25R3A
+run_id: 20261012T135645Z
+purpose: laboratory evidence classification; not legal advice
+classes:
+  LE1_STANDARD_LICENSE_FILE_AT_PIN: LICENSE/COPYING or equivalent at exact pin
+  LE2_EXPLICIT_REPOSITORY_LEVEL_LICENSE_DECLARATION_AT_PIN:
+    definition: explicit author-controlled, versioned repository statement naming
+      a standard license and its code scope
+    can_satisfy_lab_code_gate: true
+    requirements:
+    - standard_license_named
+    - scope_explicit
+    - same_repository_and_pin
+    - no_contradiction
+  LE3_AUTHOR_ARCHIVE_LICENSE: official author archive; applies only to archived artifact
+  LE4_MODEL_OR_DATA_LICENSE: model/data scope only; does not license wrapper code
+  LE5_PLATFORM_INFERRED_LICENSE: platform metadata insufficient without author evidence
+  LE6_NO_PUBLIC_LICENSE_EVIDENCE: authoritative search exhausted without public code
+    license evidence
+rules:
+- missing_LICENSE_file_or_platform_null_does_not_negate_valid_LE2
+- dataset_model_companion_or_archive_license_does_not_transfer_to_wrapper
+- no_license_by_analogy
+- no_legal_advice

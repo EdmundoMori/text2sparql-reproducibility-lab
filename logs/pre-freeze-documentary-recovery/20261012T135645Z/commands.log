@@ -1,0 +1,12 @@
+RUN_ID=20261012T135645Z
+git fetch origin
+git branch --show-current
+git rev-parse HEAD
+git rev-parse origin/main
+git status --short
+git show exact pinned README metadata/text hashes
+gh api repository/commit/tag/release/content metadata only
+curl HEAD only for CoT context artifacts and DOI redirects
+Zenodo and Hugging Face metadata APIs only
+python3 scripts/preparation/generate_prompt_25r3a_artifacts.py
+No method/model/graph/SPARQL/training/benchmark execution.

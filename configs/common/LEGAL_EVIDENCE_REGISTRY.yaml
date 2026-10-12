@@ -1,5 +1,5 @@
-registry_version: 0.1.0-documentary
-run_id: 20260722T102434Z
+registry_version: 0.2.0-25R3A
+run_id: 20261012T135645Z
 classification: LAB_POLICY_CLASSIFICATION_BASED_ON_PUBLISHED_EVIDENCE
 evidence:
 - evidence_id: E_sparql_llm_PIN_TREE
@@ -202,3 +202,96 @@ evidence:
   status: ARCHIVE_LICENSE_METADATA_VERIFIED
   confidence: high
   notes: ARCHIVE_CONTENT_EQUIVALENCE_NOT_VERIFIED
+- evidence_id: E_25R3A_MKG_LICENSE_EXHAUSTION
+  component_layer: L1_METHOD_UPSTREAM_CODE
+  method_id: mkgqagent
+  artifact_id: WSE-research/text2sparql-agent
+  source_url: https://github.com/WSE-research/text2sparql-agent
+  source_type: BOUNDED_AUTHORITATIVE_SEARCH
+  pinned_revision: ba0f2f78611a7ccacc8c985a97f6008ef7ee6a6a
+  current_revision: ba0f2f78611a7ccacc8c985a97f6008ef7ee6a6a
+  retrieved_at: 20261012T135645Z
+  license_identifier: ABSENT
+  license_text_source: ABSENT
+  scope: code
+  conflicts: none
+  status: DOCUMENTARY_GATE_EXHAUSTED
+  evidence_class: LE6_NO_PUBLIC_LICENSE_EVIDENCE
+  reopen_condition: PUBLIC_CODE_LICENSE_APPEARS
+- evidence_id: E_25R3A_RDFCONFIG_PIN_README_LE2
+  component_layer: L1_METHOD_UPSTREAM_CODE
+  method_id: rdfconfig_llm
+  artifact_id: scott2121/sparql_query_generator
+  source_url: https://github.com/scott2121/sparql_query_generator/blob/fe63171d3c8b9679779749ee11f731b2a8318053/README.md
+  source_type: OFFICIAL_AUTHOR_REPOSITORY_PINNED_README
+  pinned_revision: fe63171d3c8b9679779749ee11f731b2a8318053
+  current_revision: fe63171d3c8b9679779749ee11f731b2a8318053
+  evidence_hash: 0d234b70ebb9ac497372aa50bf56cae087fff3926a7b00a28c701c775f7481c7
+  blob_id: c813f08014babde306e2539b1119cf396220622c
+  retrieved_at: 20261012T135645Z
+  license_identifier: MIT
+  license_text_source: README.md lines 110-113
+  scope: all_files_in_repository
+  conflicts: none
+  status: CONFIRMED_REPOSITORY_LEVEL_MIT_DECLARATION_AT_PIN
+  evidence_class: LE2_EXPLICIT_REPOSITORY_LEVEL_LICENSE_DECLARATION_AT_PIN
+  qualifiers:
+  - NO_STANDARD_LICENSE_FILE
+  - GITHUB_LICENSE_DETECTION_NULL
+- evidence_id: E_25R3A_RDFCONFIG_ZENODO_LINEAGE
+  component_layer: L1_METHOD_ARCHIVE
+  method_id: rdfconfig_llm
+  artifact_id: zenodo_18539214
+  source_url: https://zenodo.org/api/records/18539214
+  source_type: OFFICIAL_AUTHOR_ARCHIVE_METADATA
+  pinned_revision: v1.0.0
+  retrieved_at: 20261012T135645Z
+  license_identifier: CC-BY-4.0
+  license_text_source: zenodo_metadata.license
+  scope: archive_deposit_only
+  conflicts: not_transferred_to_github
+  status: RECOVERED_DOCUMENTARILY
+  evidence_class: LE3_AUTHOR_ARCHIVE_LICENSE
+  notes: byte_equivalence_not_tested_nonblocking
+- evidence_id: E_25R3A_COT_LICENSE_EXHAUSTION
+  component_layer: L1_METHOD_UPSTREAM_CODE
+  method_id: cot_sparql
+  artifact_id: dice-group/CoT-Sparql
+  source_url: https://github.com/dice-group/CoT-Sparql
+  source_type: BOUNDED_AUTHORITATIVE_SEARCH
+  pinned_revision: 063edd9868425e54010a0cb49ce585ed2186be4d
+  current_revision: 063edd9868425e54010a0cb49ce585ed2186be4d
+  retrieved_at: 20261012T135645Z
+  license_identifier: ABSENT
+  scope: code
+  status: DOCUMENTARY_GATE_EXHAUSTED
+  evidence_class: LE6_NO_PUBLIC_LICENSE_EVIDENCE
+  reopen_condition: PUBLIC_CODE_LICENSE_APPEARS
+- evidence_id: E_25R3A_COT_MODEL_METADATA
+  component_layer: L3_MODEL
+  method_id: cot_sparql
+  artifact_id: TheBloke/CodeLlama-34B-Instruct-GPTQ
+  source_url: https://huggingface.co/api/models/TheBloke/CodeLlama-34B-Instruct-GPTQ
+  source_type: OFFICIAL_MODEL_REPOSITORY_METADATA
+  pinned_revision: 0a2785d47fb7330388e0487e0526bbc53d87c156
+  retrieved_at: 20261012T135645Z
+  license_identifier: llama2
+  scope: model_only
+  status: RECOVERED_DOCUMENTARILY
+  evidence_class: LE4_MODEL_OR_DATA_LICENSE
+  notes: no_weights_downloaded;does_not_license_code
+- evidence_id: E_25R3A_FIRE_LICENSE_EXHAUSTION
+  component_layer: L1_METHOD_UPSTREAM_CODE
+  method_id: firesparql
+  artifact_id: sherry-pan/FIRESPARQL
+  source_url: https://github.com/sherry-pan/FIRESPARQL
+  source_type: BOUNDED_AUTHORITATIVE_SEARCH
+  pinned_revision: 48d6f168e4c1dd3dc467553aef370299911d4e76
+  current_revision: 48d6f168e4c1dd3dc467553aef370299911d4e76
+  retrieved_at: 20261012T135645Z
+  license_identifier: ABSENT
+  scope: code
+  status: DOCUMENTARY_GATE_EXHAUSTED
+  evidence_class: LE6_NO_PUBLIC_LICENSE_EVIDENCE
+  reopen_condition: PUBLIC_CODE_LICENSE_APPEARS
+  notes: HF_model_MIT_is_separate

@@ -1,7 +1,7 @@
-schema_version: '0.28'
-updated_at: '2026-10-12T15:06:07+02:00'
-phase: phase2_fairness_contract_complete_pre_freeze_documentary_recovery_pending
-audit_prompt: Prompt_25R3_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT
+schema_version: '0.29'
+updated_at: '2026-10-12T15:56:45+02:00'
+phase: phase2_pre_freeze_documentary_recovery_complete_or_conditional
+audit_prompt: Prompt_25R3A_PRE_FREEZE_DOCUMENTARY_RECOVERY
 clones_performed: true
 evidence_closure_complete: true
 wave_a_static_audit_complete: true
@@ -1175,8 +1175,8 @@ phase2_graph_pin_status: TARGET_SELECTED_RUNTIME_PENDING
 phase2_metric_detail_status: METRIC_CONTRACT_DEFINED
 phase2_adapter_status: disabled_common_adapter_allowed_false
 phase2_benchmark_status: NOT_CURRENTLY_ELIGIBLE
-phase2_next_action: RUN_PRE_FREEZE_DOCUMENTARY_RECOVERY_WAVE
-phase2_next_prompt: Prompt_25R3A
+phase2_next_action: DEFINE_COMMON_CORE_BENCHMARK_FREEZE_AND_EXTERNAL_VALIDATION_PLAN
+phase2_next_prompt: Prompt_25R4
 pe5_status: protocol_metric_adapter_and_legal_contracts_defined_pending_assets_implementation_and_benchmark
 pe5_preparatory_evidence:
 - dataset_source_provenance_documented
@@ -1364,8 +1364,8 @@ global_recovery_report: audit/PHASE2_GLOBAL_BLOCKER_RECOVERY_AND_ZERO_COST_RECON
 recovery_candidate_matrix: audit/recovery/PHASE2_METHOD_RECOVERY_CANDIDATE_MATRIX.csv
 zero_cost_eligibility_matrix: audit/recovery/PHASE2_ZERO_COST_METHOD_ELIGIBILITY_MATRIX.csv
 revised_roadmap: audit/PHASE2_REVISED_RESEARCH_ROADMAP.csv
-current_research_action: FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT
-next_research_action: RUN_PRE_FREEZE_DOCUMENTARY_RECOVERY_WAVE
+current_research_action: PRE_FREEZE_DOCUMENTARY_RECOVERY_WAVE
+next_research_action: DEFINE_COMMON_CORE_BENCHMARK_FREEZE_AND_EXTERNAL_VALIDATION_PLAN
 deployment_profile_selection_status: DEFERRED_BY_SCIENTIFIC_REPLAN_READY_UNSIGNED
 phase2_global_blocker_recovery_gate: GLOBAL_BLOCKER_RECOVERY_AND_ZERO_COST_RECONCILIATION_COMPLETE_READY_FOR_METHOD_RECOVERY_PROTOCOL
 
@@ -1478,7 +1478,7 @@ recovery_priority_matrix: audit/recovery-protocol/PHASE2_METHOD_RECOVERY_PRIORIT
 recovery_dependency_dag: configs/common/recovery-protocol/METHOD_RECOVERY_DEPENDENCY_DAG.yaml
 future_recovery_prompt_catalog: audit/recovery-protocol/PHASE2_FUTURE_RECOVERY_PROMPT_CATALOG.csv
 fair_comparison_handoff: docs/protocols/common/recovery-protocol/20261012T125143Z/FAIR_COMPARISON_HANDOFF.md
-next_research_prompt: Prompt_25R3A
+next_research_prompt: Prompt_25R4
 phase2_recovery_protocol_gate: ZERO_COST_METHOD_RECOVERY_PROTOCOL_DEFINED_READY_FOR_FAIR_COMPARISON_CONTRACT
 
 
@@ -1500,6 +1500,46 @@ information_boundary_matrix: audit/fairness/PHASE2_METHOD_INFORMATION_BOUNDARY_M
 provisional_comparison_groups: audit/fairness/PHASE2_PROVISIONAL_COMPARISON_GROUPS.csv
 fairness_risk_register: audit/fairness/PHASE2_FAIR_COMPARISON_RISK_REGISTER.csv
 fairness_preflight_contract: docs/protocols/common/fairness/20261012T130607Z/FAIR_COMPARISON_PREFLIGHT_CONTRACT.md
-benchmark_participant_freeze_status: NOT_READY_PENDING_DOCUMENTARY_RECOVERY
-pre_freeze_recovery_required: true
+benchmark_participant_freeze_status: READY_FOR_DESIGN_FREEZE_NOT_FROZEN
+pre_freeze_recovery_required: false
 phase2_fairness_gate: FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT_DEFINED_READY_FOR_PRE_FREEZE_DOCUMENTARY_RECOVERY
+
+# Prompt 25R3A pre-freeze documentary recovery overlay
+pre_freeze_recovery_run_id: 20261012T135645Z
+pre_freeze_recovery_report: audit/PHASE2_PRE_FREEZE_DOCUMENTARY_RECOVERY_REPORT.md
+pre_freeze_recovery_gate: PRE_FREEZE_DOCUMENTARY_RECOVERY_COMPLETE_READY_FOR_BENCHMARK_DESIGN_FREEZE
+benchmark_participant_freeze_ready: true
+mandatory_recovered_count: 4
+mandatory_exhausted_count: 2
+mandatory_unresolved_count: 0
+pre_freeze_method_recovery_25r3a:
+  mkgqagent:
+    authoritative_license_recovery_status: MKG_LICENSE_EXHAUSTED_NO_PUBLIC_CODE_LICENSE
+    artifact_metadata_recovery_status: unchanged
+    documentary_gate_status: DOCUMENTARY_GATE_EXHAUSTED
+    documentary_gate_exhausted: true
+    remaining_runtime_blockers: [legal_permission, cost, services, runtime, G4, G5, G6I]
+    reopen_condition: PUBLIC_CODE_LICENSE_APPEARS
+  rdfconfig_llm:
+    authoritative_license_recovery_status: CONFIRMED_REPOSITORY_LEVEL_MIT_DECLARATION_AT_PIN
+    artifact_metadata_recovery_status: ZENODO_METADATA_LINEAGE_CONFIRMED_BYTE_EQUIVALENCE_NOT_TESTED_NONBLOCKING
+    documentary_gate_status: RECOVERED_DOCUMENTARILY
+    documentary_gate_exhausted: false
+    qualifiers: [NO_STANDARD_LICENSE_FILE, GITHUB_LICENSE_DETECTION_NULL]
+    remaining_runtime_blockers: [runtime, controlled_dbpedia_schema, G4, G5, G6I]
+    reopen_condition: NEW_CONTRADICTORY_AUTHORITATIVE_EVIDENCE
+  cot_sparql:
+    authoritative_license_recovery_status: COT_LICENSE_EXHAUSTED_NO_PUBLIC_CODE_LICENSE
+    artifact_metadata_recovery_status: FOUR_CONTEXT_ARTIFACTS_AND_NATIVE_MODEL_METADATA_RECOVERED
+    documentary_gate_status: RECOVERED_AND_EXHAUSTED
+    documentary_gate_exhausted: true
+    remaining_runtime_blockers: [legal_permission, hardware, service, runtime, G4, G5, G6I]
+    reopen_condition: PUBLIC_CODE_LICENSE_OR_OFFICIAL_SMALLER_VARIANT_APPEARS
+  firesparql:
+    authoritative_license_recovery_status: DOCUMENTARY_GATE_EXHAUSTED_NO_PUBLIC_CODE_LICENSE
+    artifact_metadata_recovery_status: OFFICIAL_HF_MODEL_CONFIRMED_TRAINER_RUNNER_NOT_FOUND
+    documentary_gate_status: DOCUMENTARY_GATE_EXHAUSTED
+    documentary_gate_exhausted: true
+    remaining_runtime_blockers: [code_license, trainer, runner, hardware, domain]
+    reopen_condition: PUBLIC_CODE_LICENSE_OR_NATIVE_SURFACE_APPEARS
+    qald_freeze_effect: NON_BLOCKING_FOR_QALD_FREEZE

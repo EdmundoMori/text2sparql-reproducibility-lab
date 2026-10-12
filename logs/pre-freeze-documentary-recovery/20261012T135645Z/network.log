@@ -1,0 +1,15 @@
+2026-10-12 metadata-only network
+GitHub API repository/commit/tags/releases/content calls: HTTP 200; public metadata/text only.
+WSE repo bytes: repo 6814; commit 24623; tags 537; releases 2836.
+RDF repo bytes: repo 5740; commit 4305; tags 453; releases 1833.
+CoT repo bytes: repo 6413; commit 73105; tags 2; releases 2.
+FIRE repo bytes: repo 5260; commit 6996; tags 2; releases 2.
+Zenodo records 18539213/18539214: HTTP 200, 3906 bytes each, ETag "4".
+HF CoT model API: HTTP 200, 2668 bytes; tree metadata 15317 bytes.
+HF FIRE model API: HTTP 200, 3448 bytes.
+OUP official paper text extraction: 42.7 KB; availability statement only.
+DOI HEAD: 302 to OUP article; OUP HEAD 403; no article payload via curl.
+CoT anon HEAD: four HTTP 200 landing responses, header bytes 1673/1679/1667/1673, body 0.
+CoT direct HEAD: four HTTP 200, header bytes 275/277/279/277, body 0.
+No archive, model weights, dataset, RDF or graph payload downloaded.
+external_monetary_cost_usd=0.00

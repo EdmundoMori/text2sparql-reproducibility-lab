@@ -1,12 +1,17 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-10-12 (Prompt 25R3)
+**Última actualización:** 2026-10-12 (Prompt 25R3A)
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
 
 | ID | Tema | Ruta | Cuándo leerlo |
 |---|---|---|---|
+| P25R3A-GATE | Pre-freeze documentary gate | `docs/protocols/common/pre-freeze-recovery/20261012T135645Z/PRE_FREEZE_DOCUMENTARY_RECOVERY_GATE.md` | Tras 25R3A |
+| P25R3A-RPT | Recovery report | `audit/PHASE2_PRE_FREEZE_DOCUMENTARY_RECOVERY_REPORT.md` | Evidencia completa |
+| P25R3A-LEGAL | Authoritative license matrix | `audit/pre-freeze-recovery/PHASE2_AUTHORITATIVE_CODE_LICENSE_RECOVERY_MATRIX.csv` | LE1–LE6 |
+| P25R3A-ART | Artifact matrix | `audit/pre-freeze-recovery/PHASE2_AUTHORITATIVE_ARTIFACT_RECOVERY_MATRIX.csv` | CoT/RDF/FIRE metadata |
+| P25R3A-CLOSE | Closure matrix | `audit/pre-freeze-recovery/PHASE2_PRE_FREEZE_DOCUMENTARY_RECOVERY_CLOSURE_MATRIX.csv` | Freeze readiness |
 | P25R3-GATE | Fairness gate | `docs/protocols/common/fairness/20261012T130607Z/FAIR_COMPARISON_AND_HOMOGENEITY_GATE.md` | Tras 25R3 |
 | P25R3-RPT | Fairness report | `audit/PHASE2_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT_REPORT.md` | Contrato completo |
 | P25R3-TRK | Track reconciliation | `audit/fairness/PHASE2_TRACK_ASSIGNMENT_RECONCILIATION.csv` | V2 evidence |

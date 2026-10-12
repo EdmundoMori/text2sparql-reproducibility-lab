@@ -1,0 +1,7 @@
+artifact,status,size,etag,last_modified,body_bytes
+dbpedia_examples.parquet,HEAD_200,462043,65db4b66-70cdb,2024-02-25T14:15:02Z,0
+embeddings_dbpedia.pkl,HEAD_200,5913763,65db4b65-5a3ca3,2024-02-25T14:15:01Z,0
+embeddings_wikidata.pkl,HEAD_200,33019555,65db4b60-1f7d6a3,2024-02-25T14:14:56Z,0
+wikidata_examples.parquet,HEAD_200,2141658,65db4b2b-20adda,2024-02-25T14:14:03Z,0
+anon_wrapper_note=HTTP_200 landing_no_HEAD_redirect; direct embedded target verified
+model_weights_downloaded=false
