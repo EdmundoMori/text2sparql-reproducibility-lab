@@ -433,3 +433,8 @@ Auditoría estática de `upstream/` y, solo bajo petición explícita, smoke tes
 - Deployment profile selection DEFERRED_BY_SCIENTIFIC_REPLAN (READY_UNSIGNED).
 - Next: `DEFINE_ZERO_COST_METHOD_RECOVERY_PROTOCOL` (Prompt 25R2).
 
+### Prompt 25R2 — ZERO_COST method recovery protocol (20261012T125143Z)
+- Gate: `ZERO_COST_METHOD_RECOVERY_PROTOCOL_DEFINED_READY_FOR_FAIR_COMPARISON_CONTRACT` · Protocol `1.0.0-25R2`.
+- RG0–RG9 + state machine + effort parity + controlled variants defined; no execution.
+- Next: `DEFINE_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT` (Prompt_25R3).
+

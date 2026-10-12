@@ -18,3 +18,7 @@
 | ARTIFACT_COMMIT | `82f0d28ac0d45cb342202e77be86cfb4a650fb57` |
 
 Stop if any paid service, training, SPARQL, or deployment attempted without new authorization.
+
+## Update Prompt 25R2
+
+Recovery protocol defined `20261012T125143Z`. Next `DEFINE_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT`.

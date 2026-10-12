@@ -1,0 +1,46 @@
+method_id: tebaqa
+variant_id: HISTORICAL
+phase1_status: historical_only
+recovery_scope: optional_classical_baseline
+native_recovery_status: HISTORICAL_ONLY
+zero_cost_recovery_status: HISTORICAL_ONLY
+common_benchmark_recovery_status: OPTIONAL_LATER
+controlled_variant_status: OPTIONAL_LATER
+priority_tier: TIER_E_HISTORICAL_OPTIONAL
+roadmap_position: after_common_core
+blockers:
+  legal: AGPL_3_0
+  cost: PASS
+  hardware: UNKNOWN
+  model: N/A
+  artifact: NOT_CLONED_HERE
+  runtime: UNKNOWN
+  service: LEGACY_DBPEDIA
+  dataset: LEGACY
+  graph: VERSION_RISK
+  evaluation: LEGACY
+  implementation: N/A
+  domain: CLASSICAL
+  fairness: HISTORICAL
+  reproducibility: UNKNOWN
+  policy: ZERO_COST
+gates:
+  RG0: DOCUMENTED_NOT_EXECUTED
+  RG1: DOCUMENTED_NOT_EXECUTED
+  RG2: DOCUMENTED_NOT_EXECUTED
+  RG3: DOCUMENTED_NOT_EXECUTED
+  RG4: DOCUMENTED_NOT_EXECUTED
+  RG5: DOCUMENTED_NOT_EXECUTED
+  RG6: DOCUMENTED_NOT_EXECUTED
+  RG7: DOCUMENTED_NOT_EXECUTED
+  RG8: DOCUMENTED_NOT_EXECUTED
+  RG9: DOCUMENTED_NOT_EXECUTED_CANNOT_PASS_NOW
+allowed_changes: []
+forbidden_changes:
+- block_main_benchmark
+terminal_conditions:
+- T_OTHER keep historical default
+reopen_conditions:
+- optional classical baseline reassessment
+future_preflight: R25-TEB-01
+claim_boundary: KEEP_HISTORICAL_ONLY

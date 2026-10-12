@@ -1,0 +1,48 @@
+method_id: mkgqagent
+variant_id: NATIVE_THEN_CONTROLLED
+phase1_status: blocked
+recovery_scope: legal_first
+native_recovery_status: LEGAL_BLOCKED
+zero_cost_recovery_status: DOCUMENTARY_UNTIL_LICENSE
+common_benchmark_recovery_status: BLOCKED_LEGAL
+controlled_variant_status: CANDIDATE_AFTER_LICENSE
+priority_tier: TIER_B_COMMON_CORE_CONDITIONAL
+roadmap_position: license_then_local_backend
+blockers:
+  legal: ABSENT
+  cost: API
+  hardware: PASS
+  model: N/A_API
+  artifact: HUB_PROMPTS
+  runtime: CONDITIONAL
+  service: OPENAI_FALCON_HUB
+  dataset: QALD_POSSIBLE
+  graph: G4_PENDING
+  evaluation: G5_PENDING
+  implementation: ADAPTERS_FALSE
+  domain: PASS
+  fairness: PENDING
+  reproducibility: HUB_MUTABLE
+  policy: ZERO_COST
+gates:
+  RG0: DOCUMENTED_NOT_EXECUTED
+  RG1: DOCUMENTED_NOT_EXECUTED
+  RG2: DOCUMENTED_NOT_EXECUTED
+  RG3: DOCUMENTED_NOT_EXECUTED
+  RG4: DOCUMENTED_NOT_EXECUTED
+  RG5: DOCUMENTED_NOT_EXECUTED
+  RG6: DOCUMENTED_NOT_EXECUTED
+  RG7: DOCUMENTED_NOT_EXECUTED
+  RG8: DOCUMENTED_NOT_EXECUTED
+  RG9: DOCUMENTED_NOT_EXECUTED_CANNOT_PASS_NOW
+allowed_changes:
+- none until LICENSE
+forbidden_changes:
+- adapter_impl
+- redistribution
+terminal_conditions:
+- T_LEGAL while LICENSE absent
+reopen_conditions:
+- public LICENSE SPDX
+future_preflight: R25-MKG-01
+claim_boundary: legal_hold

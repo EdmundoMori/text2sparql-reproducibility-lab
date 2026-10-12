@@ -1,0 +1,52 @@
+method_id: sgpt
+variant_id: MULTI
+phase1_status: smoke_only
+recovery_scope: paper_ckpt_and_retrain
+native_recovery_status: ARTIFACT_BLOCKED_FOR_PAPER_CKPT
+zero_cost_recovery_status: CONDITIONAL_RETRAIN
+common_benchmark_recovery_status: POSSIBLE_AFTER_TRAIN_AND_GATES
+controlled_variant_status: RESOURCE_EQUIVALENT_ADAPTATION_POSSIBLE
+priority_tier: TIER_A_COMMON_CORE_HIGH_FEASIBILITY
+roadmap_position: after_25R3_25R4_train_auth
+blockers:
+  legal: PASS_MIT
+  cost: PASS
+  hardware: CONDITIONAL_GPU
+  model: PAPER_CKPT_ABSENT
+  artifact: TRAIN_SCRIPT_PRESENT
+  runtime: PASS
+  service: N/A
+  dataset: QALD_OK
+  graph: G4_PENDING
+  evaluation: G5_PENDING
+  implementation: ADAPTERS_FALSE
+  domain: PASS
+  fairness: PENDING_25R3
+  reproducibility: SEED_POLICY_REQUIRED
+  policy: ZERO_COST
+gates:
+  RG0: DOCUMENTED_NOT_EXECUTED
+  RG1: DOCUMENTED_NOT_EXECUTED
+  RG2: DOCUMENTED_NOT_EXECUTED
+  RG3: DOCUMENTED_NOT_EXECUTED
+  RG4: DOCUMENTED_NOT_EXECUTED
+  RG5: DOCUMENTED_NOT_EXECUTED
+  RG6: DOCUMENTED_NOT_EXECUTED
+  RG7: DOCUMENTED_NOT_EXECUTED
+  RG8: DOCUMENTED_NOT_EXECUTED
+  RG9: DOCUMENTED_NOT_EXECUTED_CANNOT_PASS_NOW
+allowed_changes:
+- physical_batch_size
+- gradient_accumulation_steps iff effective batch constant
+forbidden_changes:
+- architecture
+- optimizer
+- lr
+- epochs
+- dataset
+- seeds without flag
+terminal_conditions: []
+reopen_conditions:
+- public paper checkpoint
+future_preflight: R25-SGPT-01
+claim_boundary: no_train_no_ckpt_claim

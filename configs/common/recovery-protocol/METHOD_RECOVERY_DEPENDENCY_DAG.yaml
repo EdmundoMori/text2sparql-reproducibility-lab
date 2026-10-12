@@ -1,0 +1,39 @@
+version: 1.0.0-25R2
+nodes:
+  sparql_llm_local:
+  - 25R3_fairness
+  - 25R4_freeze
+  - G4
+  - local_model_preflight
+  - adapter_auth
+  - execution
+  sgpt_retrain:
+  - 25R3
+  - 25R4
+  - training_preflight
+  - human_auth
+  - training
+  - G4_G5
+  - common_eval
+  mkg:
+  - public_license
+  - controlled_variant_admissibility
+  - local_backend_service
+  - adapter_gate
+  rdfconfig:
+  - zenodo_equivalence
+  - legal_artifact_decision
+  - ruby_runtime
+  - local_backend
+  - dbpedia_schema_fairness
+  - adapter_gate
+  cot:
+  - legal
+  - artifacts
+  - zero_cost_compute
+  - runtime
+  - execution
+  fire:
+  - domain_native_only_does_not_block_qald
+  tebaqa:
+  - optional_after_common_core_operational

@@ -7,6 +7,11 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 
 | ID | Tema | Ruta | Cuándo leerlo |
 |---|---|---|---|
+| P25R2-GATE | Recovery protocol gate | `docs/protocols/common/recovery-protocol/20261012T125143Z/ZERO_COST_METHOD_RECOVERY_PROTOCOL_GATE.md` | Tras 25R2 |
+| P25R2-RPT | Recovery protocol report | `audit/PHASE2_ZERO_COST_METHOD_RECOVERY_PROTOCOL_REPORT.md` | Detalle |
+| P25R2-PRI | Priority matrix | `audit/recovery-protocol/PHASE2_METHOD_RECOVERY_PRIORITY_MATRIX.csv` | Tiers A–E |
+| P25R2-CAT | Future recovery catalog | `audit/recovery-protocol/PHASE2_FUTURE_RECOVERY_PROMPT_CATALOG.csv` | RESERVED |
+| P25R2-HAND | Fairness handoff | `docs/protocols/common/recovery-protocol/20261012T125143Z/FAIR_COMPARISON_HANDOFF.md` | →25R3 |
 | P25R1-GATE | Global blocker ZERO_COST gate | `docs/protocols/common/recovery/20261012T122043Z/GLOBAL_BLOCKER_RECOVERY_ZERO_COST_GATE.md` | Tras 25R1 |
 | P25R1-RPT | Global recovery report | `audit/PHASE2_GLOBAL_BLOCKER_RECOVERY_AND_ZERO_COST_RECONCILIATION_REPORT.md` | Detalle |
 | P25R1-MAT | Blocker matrix | `audit/recovery/PHASE2_GLOBAL_METHOD_BLOCKER_MATRIX.csv` | 7 methods |

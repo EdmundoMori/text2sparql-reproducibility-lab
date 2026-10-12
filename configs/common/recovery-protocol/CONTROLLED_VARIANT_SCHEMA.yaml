@@ -1,0 +1,25 @@
+schema_version: 1.0.0-25R2
+required_fields:
+- parent_method_id
+- variant_id
+- variant_version
+- native_reference
+- changed_components
+- unchanged_components
+- change_reason
+- zero_cost_reason
+- scientific_identity_preserved
+- identity_preservation_evidence
+- track_assignment_provisional
+- benchmark_compatibility_provisional
+- legal_status
+- resource_status
+- model_status
+- service_status
+- evaluation_status
+- claim_boundary
+outcomes:
+- CONTROLLED_VARIANT_ADMISSIBLE_FOR_FAIRNESS_REVIEW
+- CONTROLLED_VARIANT_CONDITIONAL
+- CONTROLLED_VARIANT_REJECTED_METHOD_IDENTITY_LOST
+comparability_note: No controlled variant comparable until Prompt 25R3

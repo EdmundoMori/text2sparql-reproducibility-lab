@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RecoveryAuditTrail",
+  "type": "object",
+  "required": [
+    "run_id",
+    "timestamp",
+    "method_id",
+    "variant_id",
+    "recovery_id",
+    "old_state",
+    "new_state",
+    "gate",
+    "external_cost_usd",
+    "claim_boundary",
+    "next_action"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "method_id": {
+      "type": "string"
+    },
+    "variant_id": {
+      "type": "string"
+    },
+    "recovery_id": {
+      "type": "string"
+    },
+    "old_state": {
+      "type": "string"
+    },
+    "new_state": {
+      "type": "string"
+    },
+    "gate": {
+      "type": "string"
+    },
+    "evidence_ids": {
+      "type": "string"
+    },
+    "source_hashes": {
+      "type": "string"
+    },
+    "commands": {
+      "type": "string"
+    },
+    "network_requests": {
+      "type": "string"
+    },
+    "downloads": {
+      "type": "string"
+    },
+    "external_cost_usd": {
+      "type": "string"
+    },
+    "human_authorization": {
+      "type": "string"
+    },
+    "changes_to_method": {
+      "type": "string"
+    },
+    "changes_to_environment": {
+      "type": "string"
+    },
+    "claim_boundary": {
+      "type": "string"
+    },
+    "next_action": {
+      "type": "string"
+    }
+  }
+}

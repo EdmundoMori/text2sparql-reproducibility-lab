@@ -1,0 +1,23 @@
+schema_version: 1.0.0-25R2
+fields:
+- method_id
+- variant_id
+- phase1_status
+- recovery_scope
+- native_recovery_status
+- zero_cost_recovery_status
+- common_benchmark_recovery_status
+- controlled_variant_status
+- blockers
+- gates
+- required_evidence
+- missing_evidence
+- allowed_changes
+- forbidden_changes
+- terminal_conditions
+- reopen_conditions
+- future_preflight
+- future_authorization
+- claim_boundary
+- priority_tier
+- roadmap_position

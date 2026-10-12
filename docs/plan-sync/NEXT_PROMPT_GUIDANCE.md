@@ -1,18 +1,18 @@
 # NEXT_PROMPT_GUIDANCE
 
 **Fecha:** 2026-10-12  
-**Tras:** Prompt 25R1 (`20261012T122043Z`) · gate `GLOBAL_BLOCKER_RECOVERY_AND_ZERO_COST_RECONCILIATION_COMPLETE_READY_FOR_METHOD_RECOVERY_PROTOCOL`
+**Tras:** Prompt 25R2 (`20261012T125143Z`) · gate `ZERO_COST_METHOD_RECOVERY_PROTOCOL_DEFINED_READY_FOR_FAIR_COMPARISON_CONTRACT`
 
 ## Acción siguiente
 
-`DEFINE_ZERO_COST_METHOD_RECOVERY_PROTOCOL`
+`DEFINE_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT`
 
 ## Prompt
 
-**Prompt 25R2** — Definición del protocolo de recuperación ZERO_COST método por método, priorización de rutas ejecutables y gates de evidencia, sin ejecutar modelos, sin training y sin modificar upstream.
+**Prompt 25R3** — Definición del contrato de comparación justa y homogeneidad experimental entre métodos y variantes, con tracks de acceso a información, resource controls, test-seal rules y direct-comparison eligibility, ZERO_COST, sin ejecutar métodos ni benchmark.
 
 Estado: **GO_NEXT_ZERO_COST**
 
 ## No seleccionar aún
 
-Prompt 25B · resource profile · deployment · training · benchmark
+25B · resource profile · deployment · training · recovery execution · benchmark

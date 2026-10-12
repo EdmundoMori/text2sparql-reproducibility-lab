@@ -1,0 +1,48 @@
+method_id: cot_sparql
+variant_id: NATIVE_34B
+phase1_status: blocked
+recovery_scope: legal_artifacts_compute
+native_recovery_status: DOCUMENTARY_EVIDENCE_PENDING
+zero_cost_recovery_status: DOCUMENTARY_HIGH_RISK
+common_benchmark_recovery_status: BLOCKED_MULTI
+controlled_variant_status: NOT_INVENTED
+priority_tier: TIER_C_DOCUMENTARY_RECOVERY
+roadmap_position: legal_then_artifacts_then_compute
+blockers:
+  legal: ABSENT
+  cost: PASS_IF_LOCAL
+  hardware: 34B_VRAM
+  model: 34B_ABSENT_LOCAL
+  artifact: EMB_PKL_ABSENT
+  runtime: CONDITIONAL
+  service: LINKERS
+  dataset: QALD_OK
+  graph: G4_PENDING
+  evaluation: G5_PENDING
+  implementation: ADAPTERS_FALSE
+  domain: PASS
+  fairness: ORACLE_TRACK
+  reproducibility: PIN_REQUIRED
+  policy: ZERO_COST
+gates:
+  RG0: DOCUMENTED_NOT_EXECUTED
+  RG1: DOCUMENTED_NOT_EXECUTED
+  RG2: DOCUMENTED_NOT_EXECUTED
+  RG3: DOCUMENTED_NOT_EXECUTED
+  RG4: DOCUMENTED_NOT_EXECUTED
+  RG5: DOCUMENTED_NOT_EXECUTED
+  RG6: DOCUMENTED_NOT_EXECUTED
+  RG7: DOCUMENTED_NOT_EXECUTED
+  RG8: DOCUMENTED_NOT_EXECUTED
+  RG9: DOCUMENTED_NOT_EXECUTED_CANNOT_PASS_NOW
+allowed_changes: []
+forbidden_changes:
+- invent_smaller_model
+terminal_conditions: []
+reopen_conditions:
+- LICENSE
+- public embeddings
+- official smaller variant
+- ZERO_COST GPU
+future_preflight: R25-COT-01
+claim_boundary: 34B_native_reference

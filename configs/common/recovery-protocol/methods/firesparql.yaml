@@ -1,0 +1,49 @@
+method_id: firesparql
+variant_id: DOMAIN_NATIVE
+phase1_status: not_reproducible
+recovery_scope: domain_native_not_qald_core
+native_recovery_status: ARTIFACT_LEGAL_PENDING_DOMAIN
+zero_cost_recovery_status: DOCUMENTARY
+common_benchmark_recovery_status: SCIENTIFIC_INCOMPATIBILITY_R7
+controlled_variant_status: NOT_FOR_QALD_CORE
+priority_tier: TIER_D_DOMAIN_NATIVE_ONLY
+roadmap_position: does_not_block_qald
+blockers:
+  legal: ABSENT
+  cost: CONDITIONAL
+  hardware: GPU
+  model: HF_SEPARATE
+  artifact: TRAINER_RUNNER_ABSENT
+  runtime: ENV_ABSENT
+  service: QLEVER_ORKG
+  dataset: ORKG
+  graph: N/A_QALD
+  evaluation: DOMAIN
+  implementation: MISSING_RUNNER
+  domain: ORKG
+  fairness: R7
+  reproducibility: LOW
+  policy: ZERO_COST
+gates:
+  RG0: DOCUMENTED_NOT_EXECUTED
+  RG1: DOCUMENTED_NOT_EXECUTED
+  RG2: DOCUMENTED_NOT_EXECUTED
+  RG3: DOCUMENTED_NOT_EXECUTED
+  RG4: DOCUMENTED_NOT_EXECUTED
+  RG5: DOCUMENTED_NOT_EXECUTED
+  RG6: DOCUMENTED_NOT_EXECUTED
+  RG7: DOCUMENTED_NOT_EXECUTED
+  RG8: DOCUMENTED_NOT_EXECUTED
+  RG9: DOCUMENTED_NOT_EXECUTED_CANNOT_PASS_NOW
+allowed_changes: []
+forbidden_changes:
+- force_adapt_to_QALD
+terminal_conditions:
+- T_DOMAIN for common QALD
+- T_ARTIFACT if runner remains absent
+reopen_conditions:
+- code LICENSE
+- trainer
+- runner
+future_preflight: R25-FIRE-01
+claim_boundary: R7_not_method_failure

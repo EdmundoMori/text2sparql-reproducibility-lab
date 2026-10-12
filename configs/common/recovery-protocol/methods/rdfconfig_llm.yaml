@@ -1,0 +1,46 @@
+method_id: rdfconfig_llm
+variant_id: ZENODO_THEN_LOCAL
+phase1_status: blocked
+recovery_scope: zenodo_equivalence_first
+native_recovery_status: LEGAL_ARTIFACT_PENDING
+zero_cost_recovery_status: CONDITIONAL
+common_benchmark_recovery_status: CONDITIONAL
+controlled_variant_status: CANDIDATE_AFTER_EQUIVALENCE
+priority_tier: TIER_B_COMMON_CORE_CONDITIONAL
+roadmap_position: zenodo_then_runtime
+blockers:
+  legal: GH_ABSENT_ZENODO_CCBY_PRIOR
+  cost: OPENAI
+  hardware: PASS
+  model: N/A
+  artifact: EQUIVALENCE_UNPROVEN
+  runtime: RUBY
+  service: OPENAI
+  dataset: SCHEMA_GAP
+  graph: G4_PENDING
+  evaluation: G5_PENDING
+  implementation: ADAPTERS_FALSE
+  domain: PASS
+  fairness: PENDING
+  reproducibility: VERSION_PIN
+  policy: ZERO_COST
+gates:
+  RG0: DOCUMENTED_NOT_EXECUTED
+  RG1: DOCUMENTED_NOT_EXECUTED
+  RG2: DOCUMENTED_NOT_EXECUTED
+  RG3: DOCUMENTED_NOT_EXECUTED
+  RG4: DOCUMENTED_NOT_EXECUTED
+  RG5: DOCUMENTED_NOT_EXECUTED
+  RG6: DOCUMENTED_NOT_EXECUTED
+  RG7: DOCUMENTED_NOT_EXECUTED
+  RG8: DOCUMENTED_NOT_EXECUTED
+  RG9: DOCUMENTED_NOT_EXECUTED_CANNOT_PASS_NOW
+allowed_changes:
+- none that transfer Zenodo license to GH HEAD
+forbidden_changes:
+- silent_license_transfer
+terminal_conditions: []
+reopen_conditions:
+- zenodo_equivalence_confirmed
+future_preflight: R25-RDF-01
+claim_boundary: no_license_transfer

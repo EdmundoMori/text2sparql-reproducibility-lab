@@ -1,0 +1,34 @@
+registry_version: 1.0.0-25R2
+run_id: 20261012T125143Z
+gates:
+  RG0_IDENTITY:
+    purpose: method/repo/pin/paper/variant identity
+    status: DOCUMENTED_NOT_EXECUTED
+  RG1_LEGAL:
+    purpose: license/source/model/dataset/adaptation boundary
+    status: DOCUMENTED_NOT_EXECUTED
+  RG2_ARTIFACT_COMPLETENESS:
+    purpose: code/model/ckpt/config/prompts/indexes/trainer/runner/evaluator
+    status: DOCUMENTED_NOT_EXECUTED
+  RG3_ZERO_COST:
+    purpose: ZC1-ZC8 from ZERO_COST_EXECUTION_GATE
+    status: DOCUMENTED_NOT_EXECUTED
+  RG4_METHOD_FIDELITY:
+    purpose: constitutive vs replaceable components
+    status: DOCUMENTED_NOT_EXECUTED
+  RG5_COMMON_INPUT_COMPATIBILITY:
+    purpose: provisional QALD/graph/schema/oracle/linker/train precheck; fairness
+      in 25R3
+    status: DOCUMENTED_NOT_EXECUTED
+  RG6_RESOURCE_FEASIBILITY:
+    purpose: CPU/RAM/GPU/disk/time/ZERO_COST infra
+    status: DOCUMENTED_NOT_EXECUTED
+  RG7_RUNTIME_REPRODUCIBILITY:
+    purpose: pinable language/runtime/lib/model/service versions
+    status: DOCUMENTED_NOT_EXECUTED
+  RG8_EVALUATION_OBSERVABILITY:
+    purpose: observe SPARQL or executable result
+    status: DOCUMENTED_NOT_EXECUTED
+  RG9_EXECUTION_AUTHORIZATION:
+    purpose: human exec auth; cannot PASS in 25R2
+    status: DOCUMENTED_NOT_EXECUTED_CANNOT_PASS_NOW

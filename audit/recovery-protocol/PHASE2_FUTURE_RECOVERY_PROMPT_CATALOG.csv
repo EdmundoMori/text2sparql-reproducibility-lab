@@ -1,0 +1,8 @@
+recovery_prompt_id,method_id,goal,prerequisites,allowed_actions,prohibited_actions,human_gate,cost,expected_gate,success_next,failure_next,roadmap_position,status
+R25-SLLM-01,sparql_llm,Local backend metadata and model selection plan,25R3+25R4+G4,metadata docs,exec/train/weights,True,0.00,preflight_doc,adapter_auth,fail_ fidelity,after_freeze,RESERVED_NOT_EXECUTED
+R25-SGPT-01,sgpt,Full training resource preflight,25R3+25R4,measure dry-run docs,train/exec,True,0.00,train_preflight,human_train_auth,fail_resource,after_freeze,RESERVED_NOT_EXECUTED
+R25-MKG-01,mkgqagent,Public LICENSE recheck,none,metadata only,contact authors,False,0.00,legal_pass,R_MKG_LOCAL,still_absent,anytime_doc,RESERVED_NOT_EXECUTED
+R25-RDF-01,rdfconfig_llm,Zenodo source equivalence,none,metadata+future checksum plan,license transfer,False,0.00,equiv_outcome,runtime_path,unresolved,early,RESERVED_NOT_EXECUTED
+R25-COT-01,cot_sparql,Public LICENSE and artifact recovery,none,metadata,weights download invent-model,False,0.00,legal_artifact,compute_path,absent,doc,RESERVED_NOT_EXECUTED
+R25-FIRE-01,firesparql,Domain-native license and artifact recovery,none,metadata,force QALD,False,0.00,domain_doc,domain_exec_later,T_ARTIFACT,parallel_nonblocking,RESERVED_NOT_EXECUTED
+R25-TEB-01,tebaqa,Optional classical baseline reassessment,common_core_ops,docs,block main bench,False,0.00,optional,optional_exec,keep_historical,late,RESERVED_NOT_EXECUTED
