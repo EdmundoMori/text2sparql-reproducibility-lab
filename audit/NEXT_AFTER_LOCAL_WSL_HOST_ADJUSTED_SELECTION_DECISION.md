@@ -13,4 +13,4 @@ not eligible; QALD test SEALED.
 
 Exactly one next action: `HUMAN_D1_RESOURCE_CONFIGURATION_AUTHORIZATION`.
 Status: `HUMAN_GATE_REQUIRED`. D1 execution prompt: `RESERVED_NOT_AUTHORIZED`.
-ARTIFACT_COMMIT: *(post-commit)*
+ARTIFACT_COMMIT: `d5813ffa39226e9cb8f7ba8a2eb8a063c21fbd97`

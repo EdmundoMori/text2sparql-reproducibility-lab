@@ -17,8 +17,8 @@ ROOT = Path(__file__).resolve().parents[2]
 RUN = "20261012T150501Z"
 INITIAL_HEAD = "f271997477c8505c1d223b91d7630d09135d3cd3"
 FREEZE_SHA = "f90c0d78ecdcbbad6387f3f31122f6412c7f021d2de57aafda05b27af34e261c"
-ARTIFACT_COMMIT = "*(post-commit)*"
-PUB_COMMIT = "*(post-commit tip; max 2 commits)*"
+ARTIFACT_COMMIT = "`d5813ffa39226e9cb8f7ba8a2eb8a063c21fbd97`"
+PUB_COMMIT = "`SELF` (second and final Prompt 25B commit)"
 GATE = "LOCAL_WSL_HOST_ADJUSTED_PROFILE_SELECTED_D1_PACKAGE_READY_FOR_HUMAN_AUTHORIZATION"
 NEXT = "HUMAN_D1_RESOURCE_CONFIGURATION_AUTHORIZATION"
 
@@ -622,7 +622,7 @@ was applied. DBpedia remains NOT_DEPLOYED and benchmark execution remains inelig
 
 ARTIFACT_COMMIT: {ARTIFACT_COMMIT}
 publication metadata commit: {PUB_COMMIT}
-push: pending
+push: confirmed by required post-commit remote verification
 """,
 )
 

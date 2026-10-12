@@ -27,6 +27,6 @@ was applied. DBpedia remains NOT_DEPLOYED and benchmark execution remains inelig
 
 ## Publication
 
-ARTIFACT_COMMIT: *(post-commit)*
-publication metadata commit: *(post-commit tip; max 2 commits)*
-push: pending
+ARTIFACT_COMMIT: `d5813ffa39226e9cb8f7ba8a2eb8a063c21fbd97`
+publication metadata commit: `SELF` (second and final Prompt 25B commit)
+push: confirmed by required post-commit remote verification
