@@ -837,7 +837,7 @@ Manifest SHA-256: `{freeze_hash}`.
 Validator: `PASS`. Human form V2: `READY_UNSIGNED`.
 Next: `HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION`.
 Prompt25B: `RESERVED_NOT_AUTHORIZED`.
-ARTIFACT_COMMIT: *(post-commit)*
+ARTIFACT_COMMIT: `7e0bdb20be7e05601dc22072964ff0ea22b7a3c7`
 """)
 
 write(ROOT / "audit/NEXT_AFTER_COMMON_CORE_BENCHMARK_DESIGN_FREEZE_DECISION.md", f"""# Next after common-core benchmark design freeze
@@ -851,7 +851,7 @@ human form `READY_UNSIGNED`. G4 not satisfied; G5/G6I pending; adapters false; b
 
 Exactly one next action: `HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION`.
 Status: `HUMAN_GATE_REQUIRED`. Prompt25B: `RESERVED_NOT_AUTHORIZED`.
-ARTIFACT_COMMIT: *(post-commit)*
+ARTIFACT_COMMIT: `7e0bdb20be7e05601dc22072964ff0ea22b7a3c7`
 """)
 
 roadmap = [
@@ -1010,8 +1010,8 @@ Prompt25B is `RESERVED_NOT_AUTHORIZED`; no executable Cursor prompt is issued.
 
 ## Publication
 
-ARTIFACT_COMMIT: *(post-commit)*
-publication metadata commit: *(post-commit tip; max 2 commits)*
+ARTIFACT_COMMIT: `7e0bdb20be7e05601dc22072964ff0ea22b7a3c7`
+publication metadata commit: `SELF` (second and final Prompt 25R4 commit)
 push: pending
 """
 write(ROOT / "PLAN_SYNC.md", plan)

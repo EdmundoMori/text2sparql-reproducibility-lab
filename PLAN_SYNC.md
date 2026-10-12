@@ -24,6 +24,6 @@ Prompt25B is `RESERVED_NOT_AUTHORIZED`; no executable Cursor prompt is issued.
 
 ## Publication
 
-ARTIFACT_COMMIT: *(post-commit)*
-publication metadata commit: *(post-commit tip; max 2 commits)*
+ARTIFACT_COMMIT: `7e0bdb20be7e05601dc22072964ff0ea22b7a3c7`
+publication metadata commit: `SELF` (second and final Prompt 25R4 commit)
 push: pending
