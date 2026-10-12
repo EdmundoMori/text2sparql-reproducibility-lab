@@ -59,6 +59,6 @@ reproducción nativa → evaluación común → caso de estudio → errores → 
 | Campo | Valor |
 |---|---|
 | commit inicial | `3c57735c4e1f7100fc5e98c54a6505767951e61a` |
-| ARTIFACT_COMMIT | *(post-commit)* |
+| ARTIFACT_COMMIT | `5da725f3a8a2a334e38c82430a59a15d52acdff0` |
 | publication metadata commit | *(post-commit tip; max 2 commits)* |
 | push | pending |

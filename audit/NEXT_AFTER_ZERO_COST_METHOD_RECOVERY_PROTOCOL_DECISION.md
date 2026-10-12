@@ -16,4 +16,4 @@
 | **Siguiente** | **`DEFINE_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT`** |
 | Prompt | **Prompt_25R3** |
 | Deferred | 25B, profile, D1–D6, train, recovery execution, benchmark |
-| ARTIFACT_COMMIT | *(post-commit)* |
+| ARTIFACT_COMMIT | `5da725f3a8a2a334e38c82430a59a15d52acdff0` |
