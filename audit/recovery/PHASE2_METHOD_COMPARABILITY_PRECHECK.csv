@@ -1,0 +1,9 @@
+method_id,variant_id,information_access_track,execution_style,adaptation_regime,model_control_regime,dataset_view,graph_target,requires_training,uses_oracle,uses_schema,uses_external_linker,uses_internal_feedback,uses_paid_service_native,zero_cost_controlled_variant_possible,direct_comparison_group,direct_comparison_allowed,reason,fairness_risk
+sparql_llm,NATIVE_API,IA_SCHEMA_COMMON,RAG_agentic,none,external_API,QALD9_PLUS_EN_DBPEDIA,DBPEDIA_2016_10,False,False,True,False,True,True,True,SCHEMA_RAG_API,False,paid native,HIGH
+sparql_llm,ZERO_COST_LOCAL_BACKEND,IA_SCHEMA_COMMON,RAG_agentic,backend_swap,local_open,QALD9_PLUS_EN_DBPEDIA,DBPEDIA_2016_10,False,False,True,False,True,False,True,SCHEMA_RAG_LOCAL,True,same track after protocol,MEDIUM
+sgpt,GPT2_Q,IA_Q_ONLY,seq2seq,train,local_train,QALD9_PLUS_EN_DBPEDIA,DBPEDIA_2016_10,True,False,False,False,False,False,True,Q_ONLY_SEQ2SEQ,True,track-compatible,LOW
+mkgqagent,CONTROLLED_LOCAL,IA_SCHEMA_COMMON,agent_loop,backend_endpoint_swap,local_open,QALD9_PLUS_EN_DBPEDIA,DBPEDIA_2016_10,False,False,True,True,True,True,True,SCHEMA_AGENT,False,LICENSE first,HIGH
+rdfconfig_llm,CONTROLLED_LOCAL,IA_SCHEMA_COMMON,schema_codegen,backend_swap,local_open,QALD9_PLUS_EN_DBPEDIA,DBPEDIA_2016_10,False,False,True,False,False,True,True,SCHEMA_CODEGEN,False,legal/runtime pending,MEDIUM
+cot_sparql,NATIVE_34B,IA_ORACLE_GROUNDING,cot_retrieval,none,local_34B,QALD9_PLUS_EN_DBPEDIA,DBPEDIA_2016_10,False,True,False,True,True,False,False,ORACLE_COT,False,blocked multi,HIGH
+firesparql,DOMAIN_NATIVE,IA_DOMAIN_NATIVE,ft_rag,none,ft_model,ORKG,QLever_ORKG,True,False,True,False,True,False,False,DOMAIN_ORKG,False,R7 vs QALD,CRITICAL
+tebaqa,HISTORICAL,IA_HISTORICAL,classical,none,n/a,legacy_qald_family,legacy_dbpedia,False,False,True,True,False,False,True,HISTORICAL,False,historical_only,HIGH

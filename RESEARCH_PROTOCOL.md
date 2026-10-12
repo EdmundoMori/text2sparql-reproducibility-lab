@@ -396,3 +396,10 @@ Authors source HOLD (LICENSE absent). HF card CC BY 3.0 = platform metadata; no 
 **Forms:** resource selection READY_UNSIGNED · execution NOT_READY  
 **Runtime:** PINNED_METADATA_ONLY (no pull)  
 **Next:** `HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION`
+
+## Prompt 25R1 — Global blocker recovery / ZERO_COST
+
+**Gate:** `GLOBAL_BLOCKER_RECOVERY_AND_ZERO_COST_RECONCILIATION_COMPLETE_READY_FOR_METHOD_RECOVERY_PROTOCOL`  
+**Policy:** ZERO_EXTERNAL_MONETARY_COST  
+**Next:** `DEFINE_ZERO_COST_METHOD_RECOVERY_PROTOCOL` (Prompt 25R2)  
+**Deploy profile:** deferred, not cancelled

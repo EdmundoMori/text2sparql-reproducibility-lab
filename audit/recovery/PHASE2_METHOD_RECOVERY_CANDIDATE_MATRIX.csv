@@ -1,0 +1,11 @@
+priority,method_id,recovery_id,recovery_goal,blockers_addressed,zero_cost,requires_human_gate,requires_download,requires_install,requires_training,requires_license_change,requires_external_compute,expected_scientific_value,risk,success_condition,failure_condition,proposed_future_prompt,status
+1,sparql_llm,R_SPARQL_LOCAL_BACKEND,ZERO_COST local backend controlled variant protocol,B_COST|B_SERVICE,True,False,False,False,False,False,False,HIGH,MEDIUM,protocol separates faithful vs controlled,backend cannot preserve RAG,25R2,PROPOSED
+2,sgpt,R_SGPT_FULL_TRAINING,ZERO_COST training + RESOURCE_EQUIVALENT_ADAPTATION,B_MODEL|B_HARDWARE,True,True,False,False,False,False,False,HIGH,MEDIUM,documented equivalent recipe,cannot match effective batch,25R2,PROPOSED
+0,mkgqagent,R_MKG_PUBLIC_LICENSE,Detect public LICENSE without contacting authors,B_LEGAL,True,False,False,False,False,True,False,CRITICAL,HIGH,LICENSE SPDX confirmed,remains absent,25R2,PROPOSED
+3,mkgqagent,R_MKG_LOCAL_BACKEND,Local LLM+endpoint after LICENSE,B_COST|B_SERVICE,True,True,False,False,False,False,False,HIGH,HIGH,LICENSE then protocol,LICENSE absent,25R2+,BLOCKED_ON_LICENSE
+0,rdfconfig_llm,R_RDFCONFIG_ZENODO_EQUIVALENCE,Equivalence plan Zenodo vs git,B_LEGAL,True,False,False,False,False,False,False,HIGH,MEDIUM,checksum/tree plan,cannot establish equivalence,25R2,PROPOSED
+4,rdfconfig_llm,R_RDFCONFIG_LOCAL_BACKEND,Local LLM after legal,B_COST,True,True,False,True,False,False,False,MEDIUM,MEDIUM,legal+runtime protocol,Ruby/OpenAI irreducible,25R2+,BLOCKED_ON_LEGAL
+0,cot_sparql,R_COT_LICENSE_AND_ARTIFACTS,LICENSE + public embeddings/artifacts,B_LEGAL|B_ARTIFACT,True,False,False,False,False,True,False,HIGH,HIGH,LICENSE+artifacts,remain absent,25R2,PROPOSED
+5,cot_sparql,R_COT_ZERO_COST_MODEL_FEASIBILITY,34B compute on external ZERO_COST GPU; no invent smaller,B_HARDWARE|B_MODEL,True,True,False,False,False,False,True,HIGH,HIGH,compute envelope,no zero-cost GPU,25R2+,PROPOSED
+2,firesparql,R_FIRE_LICENSE_AND_ARTIFACT_RECOVERY,Domain-native recovery; do not force QALD,B_LEGAL|B_ARTIFACT,True,False,False,False,False,True,False,MEDIUM,HIGH,LICENSE+runner or R8,absent,25R2,PROPOSED
+6,tebaqa,R_TEBAQA_OPTIONAL_CLASSICAL_BASELINE,Optional classical baseline,B_RUNTIME,True,False,False,False,False,False,False,LOW_MEDIUM,LOW,KEEP or OPTIONAL,n/a,25R2,PROPOSED_KEEP_DEFAULT

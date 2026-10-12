@@ -1,0 +1,17 @@
+[2026-10-12T12:21:31+00:00] GH LICENSE files metadata
+REPO WSE-research/text2sparql-agent HTTP 200 size=6729
+LIC WSE-research/text2sparql-agent HTTP 404 size=140
+REPO dice-group/CoT-Sparql HTTP 200 size=6328
+LIC dice-group/CoT-Sparql HTTP 404 size=140
+REPO sherry-pan/FIRESPARQL HTTP 200 size=5175
+LIC sherry-pan/FIRESPARQL HTTP 404 size=140
+REPO scott2121/sparql_query_generator HTTP 200 size=5655
+LIC scott2121/sparql_query_generator HTTP 404 size=140
+REPO dice-group/TeBaQA HTTP 200 size=6391
+LIC dice-group/TeBaQA HTTP 200 size=48510
+[2026-10-12T12:21:35+00:00] Zenodo RDFConfig search metadata
+ZENODO HTTP 301 size=305
+[2026-10-12T12:22:03+00:00] HF model cards metadata (no weights)
+HF codellama/CodeLlama-34b-Instruct-hf HTTP 400 size=108
+HF rashad101/SGPT HTTP 400 size=87
+HF meta-llama/Llama-2-7b-hf HTTP 400 size=97

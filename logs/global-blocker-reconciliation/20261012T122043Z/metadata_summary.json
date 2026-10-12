@@ -1,0 +1,55 @@
+{
+  "gh_WSE-research_text2sparql-agent.json": {
+    "license": null,
+    "pushed": "2026-07-29T01:42:24Z",
+    "license_spdx": null
+  },
+  "gh_dice-group_CoT-Sparql.json": {
+    "license": null,
+    "pushed": "2024-06-03T13:26:40Z",
+    "license_spdx": null
+  },
+  "gh_dice-group_TeBaQA.json": {
+    "license": {
+      "key": "agpl-3.0",
+      "name": "GNU Affero General Public License v3.0",
+      "spdx_id": "AGPL-3.0",
+      "url": "https://api.github.com/licenses/agpl-3.0",
+      "node_id": "MDc6TGljZW5zZTE="
+    },
+    "pushed": "2023-10-30T15:28:03Z",
+    "license_spdx": "AGPL-3.0"
+  },
+  "gh_scott2121_sparql_query_generator.json": {
+    "license": null,
+    "pushed": "2026-02-09T09:20:34Z",
+    "license_spdx": null
+  },
+  "gh_sherry-pan_FIRESPARQL.json": {
+    "license": null,
+    "pushed": "2025-05-28T10:00:52Z",
+    "license_spdx": null
+  },
+  "lic_WSE-research_text2sparql-agent.json": {
+    "spdx": null,
+    "message": "Not Found"
+  },
+  "lic_dice-group_CoT-Sparql.json": {
+    "spdx": null,
+    "message": "Not Found"
+  },
+  "lic_dice-group_TeBaQA.json": {
+    "spdx": "AGPL-3.0",
+    "message": null
+  },
+  "lic_scott2121_sparql_query_generator.json": {
+    "spdx": null,
+    "message": "Not Found"
+  },
+  "lic_sherry-pan_FIRESPARQL.json": {
+    "spdx": null,
+    "message": "Not Found"
+  },
+  "zenodo_note": "HTTP_301_redirect_html_not_parsed_reuse_lab_CONFIRMED_ZENODO_METADATA_CC_BY_4_0",
+  "hf_note": "HTTP_400_overencoded_urls_reuse_lab_static_audits_no_weight_download"
+}

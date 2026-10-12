@@ -7,6 +7,11 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 
 | ID | Tema | Ruta | Cuándo leerlo |
 |---|---|---|---|
+| P25R1-GATE | Global blocker ZERO_COST gate | `docs/protocols/common/recovery/20261012T122043Z/GLOBAL_BLOCKER_RECOVERY_ZERO_COST_GATE.md` | Tras 25R1 |
+| P25R1-RPT | Global recovery report | `audit/PHASE2_GLOBAL_BLOCKER_RECOVERY_AND_ZERO_COST_RECONCILIATION_REPORT.md` | Detalle |
+| P25R1-MAT | Blocker matrix | `audit/recovery/PHASE2_GLOBAL_METHOD_BLOCKER_MATRIX.csv` | 7 methods |
+| P25R1-ZC | Zero-cost eligibility | `audit/recovery/PHASE2_ZERO_COST_METHOD_ELIGIBILITY_MATRIX.csv` | ZC1–ZC8 |
+| P25R1-ROAD | Revised roadmap | `audit/PHASE2_REVISED_RESEARCH_ROADMAP.csv` | 25R2 next |
 | P25A-GATE | Deployment resource package gate | `docs/protocols/common/graph/dbpedia2016-10/deployment-package/20260722T162241Z/DBPEDIA_DEPLOYMENT_RESOURCE_PACKAGE_GATE.md` | Tras 25A |
 | P25A-RPT | Deployment package report | `audit/PHASE2_DBPEDIA_DEPLOYMENT_RESOURCE_AND_AUTHORIZATION_PACKAGE_REPORT.md` | Detalle |
 | P25A-FORM | Resource profile selection form | `docs/protocols/common/graph/dbpedia2016-10/deployment-package/20260722T162241Z/HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION.md` | READY_UNSIGNED |

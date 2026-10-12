@@ -425,3 +425,11 @@ Auditoría estática de `upstream/` y, solo bajo petición explícita, smoke tes
 - Resource selection PENDING · deployment NOT_DEPLOYED · G4 runtime NOT_SATISFIED.
 - Next: `HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION` (Prompt 25B reserved).
 
+### Prompt 25R1 — global blocker / ZERO_COST reconciliation (20261012T122043Z)
+- Gate: `GLOBAL_BLOCKER_RECOVERY_AND_ZERO_COST_RECONCILIATION_COMPLETE_READY_FOR_METHOD_RECOVERY_PROTOCOL`.
+- Policy locked: ZERO_EXTERNAL_MONETARY_COST.
+- 7 methods reassessed; native vs controlled variants separated.
+- QALD primary + DBpedia 2016-10 preserved; LC-QuAD HOLD; TEXT2SPARQL25 future-only.
+- Deployment profile selection DEFERRED_BY_SCIENTIFIC_REPLAN (READY_UNSIGNED).
+- Next: `DEFINE_ZERO_COST_METHOD_RECOVERY_PROTOCOL` (Prompt 25R2).
+

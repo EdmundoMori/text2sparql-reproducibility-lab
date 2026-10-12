@@ -1,0 +1,22 @@
+{
+  "run_id": "20261012T122043Z",
+  "blocker_rows": 19,
+  "blocker_by_class": {
+    "B_COST": 3,
+    "B_SERVICE": 2,
+    "B_POLICY": 2,
+    "B_GRAPH": 3,
+    "B_EVALUATION": 2,
+    "B_IMPLEMENTATION": 2,
+    "B_MODEL": 2,
+    "B_HARDWARE": 2,
+    "B_LEGAL": 4,
+    "B_ARTIFACT": 3,
+    "B_REPRODUCIBILITY": 1,
+    "B_RUNTIME": 2,
+    "B_DOMAIN": 1,
+    "B_FAIRNESS": 1,
+    "B_DATASET": 1
+  },
+  "methods": 7
+}

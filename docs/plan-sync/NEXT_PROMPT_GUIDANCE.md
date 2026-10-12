@@ -1,14 +1,18 @@
 # NEXT_PROMPT_GUIDANCE
 
-**Fecha:** 2026-07-22  
-**Tras:** Prompt 25A (`20260722T162241Z`) · gate `DBPEDIA_DEPLOYMENT_RESOURCE_PACKAGE_READY_FOR_HUMAN_PROFILE_SELECTION`
+**Fecha:** 2026-10-12  
+**Tras:** Prompt 25R1 (`20261012T122043Z`) · gate `GLOBAL_BLOCKER_RECOVERY_AND_ZERO_COST_RECONCILIATION_COMPLETE_READY_FOR_METHOD_RECOVERY_PROTOCOL`
 
-## HUMAN AUTHORIZATION REQUIRED
+## Acción siguiente
 
-`HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION`
+`DEFINE_ZERO_COST_METHOD_RECOVERY_PROTOCOL`
 
-Formulario: `docs/protocols/common/graph/dbpedia2016-10/deployment-package/20260722T162241Z/HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION.md`
+## Prompt
 
-## Reservado
+**Prompt 25R2** — Definición del protocolo de recuperación ZERO_COST método por método, priorización de rutas ejecutables y gates de evidencia, sin ejecutar modelos, sin training y sin modificar upstream.
 
-**Prompt 25B** — Aplicación documental de la selección humana del perfil de recursos y preparación de la autorización final de despliegue, ZERO_COST, sin descomprimir ni cargar.
+Estado: **GO_NEXT_ZERO_COST**
+
+## No seleccionar aún
+
+Prompt 25B · resource profile · deployment · training · benchmark

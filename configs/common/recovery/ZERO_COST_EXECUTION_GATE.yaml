@@ -1,0 +1,31 @@
+gate_version: 1.0.0-25R1
+policy: ZERO_EXTERNAL_MONETARY_COST
+max_external_monetary_cost_usd: 0.0
+definition: No paid APIs, cloud GPUs, SaaS, commercial fine-tuning, purchased credits,
+  or paid endpoints. Existing local/institutional hardware and free public services
+  (if pin-reproducible) allowed. Electricity/existing hardware not claimed as literal
+  zero.
+subgates:
+  ZC1_LICENSE: SATISFIED|NOT_APPLICABLE required for ZERO_COST_EXECUTION_ELIGIBLE
+  ZC2_MODEL_WEIGHTS: public/open-weight or N/A; no paid download
+  ZC3_DATASET: public or locally acquired under lab policy
+  ZC4_RUNTIME: installable without paid deps
+  ZC5_LLM_BACKEND: local/open backend; commercial free-tier NOT primary
+  ZC6_ENDPOINT_AND_EXTERNAL_SERVICES: local or free-public pin-reproducible
+  ZC7_COMPUTE: local/institutional zero-cost compute sufficient or N/A
+  ZC8_NO_PAID_SERVICE: no paid service dependency
+  ZC9_STORAGE: optional
+  ZC10_NETWORK_REPRODUCIBILITY: optional
+eligible_requires:
+- ZC1
+- ZC2
+- ZC3
+- ZC4
+- ZC5
+- ZC6
+- ZC7
+- ZC8
+commercial_free_tier_policy: NOT_PRIMARY_DEPENDENCY_NOT_AUTO_SATISFIED
+free_public_vs_commercial_free_tier:
+  FREE_PUBLIC_SERVICE: may_satisfy_if_pin_reproducible
+  COMMERCIAL_FREE_TIER: not_auto_satisfied

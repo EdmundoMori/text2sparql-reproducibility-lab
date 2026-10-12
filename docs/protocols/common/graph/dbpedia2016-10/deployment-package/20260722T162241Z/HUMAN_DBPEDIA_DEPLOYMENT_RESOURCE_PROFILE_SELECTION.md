@@ -2,6 +2,7 @@
 
 **RUN_ID:** `20260722T162241Z`  
 **Form status:** `READY_UNSIGNED`  
+**Selection status:** `DEFERRED_BY_SCIENTIFIC_REPLAN` (Prompt 25R1; not cancelled, not selected)  
 **Tag:** `RESOURCE_PROFILE_SELECTION_REQUIRED`
 
 Select **exactly one**:

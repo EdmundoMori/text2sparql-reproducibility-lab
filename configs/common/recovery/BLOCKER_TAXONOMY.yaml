@@ -1,0 +1,19 @@
+taxonomy_version: 1.0.0-25R1
+run_id: 20261012T122043Z
+classes:
+  B_LEGAL: licencia/copyright/redistribución
+  B_COST: servicio o compute de pago
+  B_HARDWARE: GPU/RAM/disk/CPU insuficiente
+  B_MODEL: checkpoint/modelo ausente, inaccesible o incompatible
+  B_ARTIFACT: embeddings/index/config/runner/trainer ausente
+  B_RUNTIME: Python/Ruby/Docker/dependency incompatibility
+  B_SERVICE: endpoint/linker/API externo requerido
+  B_DATASET: dataset/split/provenance incompatible o ausente
+  B_GRAPH: KG/snapshot/endpoint no disponible (runtime)
+  B_EVALUATION: métrica/evaluator incompleto
+  B_IMPLEMENTATION: bug, dead code, missing runner
+  B_DOMAIN: método específico de otro dominio/KG
+  B_FAIRNESS: información de entrada incompatible con track
+  B_REPRODUCIBILITY: dependencia mutable/no versionable
+  B_POLICY: violación ZERO_COST o protocolo lab
+multi_class_allowed: true
