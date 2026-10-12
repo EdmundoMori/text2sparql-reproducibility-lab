@@ -24,6 +24,6 @@ Do not select deployment, training, method execution, adapters or benchmark.
 
 ## Publication
 
-ARTIFACT_COMMIT: *(post-commit)*
-publication metadata commit: *(post-commit tip; max 2 commits)*
-push: pending
+ARTIFACT_COMMIT: `31b214e6b9b1967537c7ed278426c2c1f67c97cc`
+publication metadata commit: `SELF` (second and final Prompt 25R3A commit)
+push: confirmed by required post-commit remote verification

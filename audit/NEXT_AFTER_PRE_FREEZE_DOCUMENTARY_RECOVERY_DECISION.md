@@ -10,4 +10,4 @@
 | Status | `GO_NEXT_ZERO_COST` |
 
 Exactly one next action. Runtime execution, deployment, training, adapters and benchmark remain deferred.
-ARTIFACT_COMMIT: *(post-commit)*
+ARTIFACT_COMMIT: `31b214e6b9b1967537c7ed278426c2c1f67c97cc`

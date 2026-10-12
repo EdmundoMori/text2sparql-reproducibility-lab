@@ -585,7 +585,7 @@ write(ROOT / "audit/NEXT_AFTER_PRE_FREEZE_DOCUMENTARY_RECOVERY_DECISION.md", f""
 | Status | `GO_NEXT_ZERO_COST` |
 
 Exactly one next action. Runtime execution, deployment, training, adapters and benchmark remain deferred.
-ARTIFACT_COMMIT: *(post-commit)*
+ARTIFACT_COMMIT: `31b214e6b9b1967537c7ed278426c2c1f67c97cc`
 """)
 
 write(DOC / "PRE_FREEZE_DOCUMENTARY_RECOVERY_GATE.md", f"""# Pre-freeze documentary recovery gate
@@ -614,7 +614,7 @@ write(DOC / "PRE_FREEZE_DOCUMENTARY_RECOVERY_GATE.md", f"""# Pre-freeze document
 
 Mandatory closure: recovered 4 · exhausted 2 · unresolved 0.
 Next: `DEFINE_COMMON_CORE_BENCHMARK_FREEZE_AND_EXTERNAL_VALIDATION_PLAN` — Prompt `25R4`.
-ARTIFACT_COMMIT: *(post-commit)*
+ARTIFACT_COMMIT: `31b214e6b9b1967537c7ed278426c2c1f67c97cc`
 """)
 
 roadmap = [
@@ -748,9 +748,9 @@ Do not select deployment, training, method execution, adapters or benchmark.
 
 ## Publication
 
-ARTIFACT_COMMIT: *(post-commit)*
-publication metadata commit: *(post-commit tip; max 2 commits)*
-push: pending
+ARTIFACT_COMMIT: `31b214e6b9b1967537c7ed278426c2c1f67c97cc`
+publication metadata commit: `SELF` (second and final Prompt 25R3A commit)
+push: confirmed by required post-commit remote verification
 """
 write(ROOT / "PLAN_SYNC.md", plan)
 

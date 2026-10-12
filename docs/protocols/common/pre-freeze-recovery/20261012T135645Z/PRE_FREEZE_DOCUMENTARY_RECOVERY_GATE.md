@@ -26,4 +26,4 @@
 
 Mandatory closure: recovered 4 · exhausted 2 · unresolved 0.
 Next: `DEFINE_COMMON_CORE_BENCHMARK_FREEZE_AND_EXTERNAL_VALIDATION_PLAN` — Prompt `25R4`.
-ARTIFACT_COMMIT: *(post-commit)*
+ARTIFACT_COMMIT: `31b214e6b9b1967537c7ed278426c2c1f67c97cc`
