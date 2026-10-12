@@ -1,0 +1,10 @@
+RUN_ID=20261012T143717Z
+git fetch origin; branch/HEAD/origin/status verification
+read existing QALD/DBpedia/metric/fairness/recovery manifests
+metadata-only official TEXT2SPARQL25 web and GitHub API inspection
+uname -a; lscpu; free -h; swapon --show --bytes; df -h; df -T; ulimit -a
+docker version; docker info; docker compose version
+wsl.exe --status; read-only PowerShell host RAM query (both unavailable)
+python3 scripts/preparation/generate_prompt_25r4_artifacts.py
+python3 scripts/preparation/validate_common_core_benchmark_freeze.py
+No method/model/training/dataset payload/graph/SPARQL/benchmark execution.

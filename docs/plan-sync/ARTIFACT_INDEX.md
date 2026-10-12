@@ -1,52 +1,23 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-10-12 (Prompt 25R3A)
+**Última actualización:** 2026-10-12 (Prompt 25R4)
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
 
 | ID | Tema | Ruta | Cuándo leerlo |
 |---|---|---|---|
+| P25R4-GATE | Design freeze gate | `docs/protocols/common/benchmark-freeze/20261012T143717Z/COMMON_CORE_BENCHMARK_DESIGN_FREEZE_GATE.md` | Human handoff |
+| P25R4-MAN | Immutable freeze manifest | `configs/common/benchmark-freeze/COMMON_CORE_BENCHMARK_FREEZE_V1.yaml` | Frozen specification |
+| P25R4-PORT | Portfolio freeze | `audit/benchmark-freeze/PHASE2_BENCHMARK_PORTFOLIO_FREEZE.csv` | Variant roles |
+| P25R4-GRP | Frozen groups | `configs/common/benchmark-freeze/COMMON_CORE_COMPARISON_GROUPS_V1.yaml` | Comparison claims |
+| P25R4-RPT | Design freeze report | `audit/PHASE2_COMMON_CORE_BENCHMARK_DESIGN_FREEZE_REPORT.md` | Full evidence |
+| P25R4-FORM | Human resource form V2 | `docs/protocols/common/benchmark-freeze/20261012T143717Z/HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION_V2.md` | READY_UNSIGNED |
 | P25R3A-GATE | Pre-freeze documentary gate | `docs/protocols/common/pre-freeze-recovery/20261012T135645Z/PRE_FREEZE_DOCUMENTARY_RECOVERY_GATE.md` | Tras 25R3A |
 | P25R3A-RPT | Recovery report | `audit/PHASE2_PRE_FREEZE_DOCUMENTARY_RECOVERY_REPORT.md` | Evidencia completa |
 | P25R3A-LEGAL | Authoritative license matrix | `audit/pre-freeze-recovery/PHASE2_AUTHORITATIVE_CODE_LICENSE_RECOVERY_MATRIX.csv` | LE1–LE6 |
 | P25R3A-ART | Artifact matrix | `audit/pre-freeze-recovery/PHASE2_AUTHORITATIVE_ARTIFACT_RECOVERY_MATRIX.csv` | CoT/RDF/FIRE metadata |
 | P25R3A-CLOSE | Closure matrix | `audit/pre-freeze-recovery/PHASE2_PRE_FREEZE_DOCUMENTARY_RECOVERY_CLOSURE_MATRIX.csv` | Freeze readiness |
-| P25R3-GATE | Fairness gate | `docs/protocols/common/fairness/20261012T130607Z/FAIR_COMPARISON_AND_HOMOGENEITY_GATE.md` | Tras 25R3 |
-| P25R3-RPT | Fairness report | `audit/PHASE2_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT_REPORT.md` | Contrato completo |
-| P25R3-TRK | Track reconciliation | `audit/fairness/PHASE2_TRACK_ASSIGNMENT_RECONCILIATION.csv` | V2 evidence |
-| P25R3-PAIR | Direct comparison matrix | `audit/fairness/PHASE2_DIRECT_COMPARISON_ELIGIBILITY_MATRIX.csv` | L0–L3 |
-| P25R3-HAND | 25R3A handoff | `docs/protocols/common/fairness/20261012T130607Z/PRE_FREEZE_DOCUMENTARY_RECOVERY_HANDOFF.md` | Next |
-| P25R3-GATE | Fairness gate | `docs/protocols/common/fairness/20261012T130607Z/FAIR_COMPARISON_AND_HOMOGENEITY_GATE.md` | Tras 25R3 |
-| P25R3-RPT | Fairness report | `audit/PHASE2_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT_REPORT.md` | Contrato completo |
-| P25R3-TRK | Track reconciliation | `audit/fairness/PHASE2_TRACK_ASSIGNMENT_RECONCILIATION.csv` | V2 evidence |
-| P25R3-PAIR | Direct comparison matrix | `audit/fairness/PHASE2_DIRECT_COMPARISON_ELIGIBILITY_MATRIX.csv` | L0–L3 |
-| P25R3-HAND | 25R3A handoff | `docs/protocols/common/fairness/20261012T130607Z/PRE_FREEZE_DOCUMENTARY_RECOVERY_HANDOFF.md` | Next |
-| P25R3-GATE | Fairness gate | `docs/protocols/common/fairness/20261012T130607Z/FAIR_COMPARISON_AND_HOMOGENEITY_GATE.md` | Tras 25R3 |
-| P25R3-RPT | Fairness report | `audit/PHASE2_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT_REPORT.md` | Contrato completo |
-| P25R3-TRK | Track reconciliation | `audit/fairness/PHASE2_TRACK_ASSIGNMENT_RECONCILIATION.csv` | V2 evidence |
-| P25R3-PAIR | Direct comparison matrix | `audit/fairness/PHASE2_DIRECT_COMPARISON_ELIGIBILITY_MATRIX.csv` | L0–L3 |
-| P25R3-HAND | 25R3A handoff | `docs/protocols/common/fairness/20261012T130607Z/PRE_FREEZE_DOCUMENTARY_RECOVERY_HANDOFF.md` | Next |
-| P25R3-GATE | Fairness gate | `docs/protocols/common/fairness/20261012T130607Z/FAIR_COMPARISON_AND_HOMOGENEITY_GATE.md` | Tras 25R3 |
-| P25R3-RPT | Fairness report | `audit/PHASE2_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT_REPORT.md` | Contrato completo |
-| P25R3-TRK | Track reconciliation | `audit/fairness/PHASE2_TRACK_ASSIGNMENT_RECONCILIATION.csv` | V2 evidence |
-| P25R3-PAIR | Direct comparison matrix | `audit/fairness/PHASE2_DIRECT_COMPARISON_ELIGIBILITY_MATRIX.csv` | L0–L3 |
-| P25R3-HAND | 25R3A handoff | `docs/protocols/common/fairness/20261012T130607Z/PRE_FREEZE_DOCUMENTARY_RECOVERY_HANDOFF.md` | Next |
-| P25R3-GATE | Fairness gate | `docs/protocols/common/fairness/20261012T130607Z/FAIR_COMPARISON_AND_HOMOGENEITY_GATE.md` | Tras 25R3 |
-| P25R3-RPT | Fairness report | `audit/PHASE2_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT_REPORT.md` | Contrato completo |
-| P25R3-TRK | Track reconciliation | `audit/fairness/PHASE2_TRACK_ASSIGNMENT_RECONCILIATION.csv` | V2 evidence |
-| P25R3-PAIR | Direct comparison matrix | `audit/fairness/PHASE2_DIRECT_COMPARISON_ELIGIBILITY_MATRIX.csv` | L0–L3 |
-| P25R3-HAND | 25R3A handoff | `docs/protocols/common/fairness/20261012T130607Z/PRE_FREEZE_DOCUMENTARY_RECOVERY_HANDOFF.md` | Next |
-| P25R3-GATE | Fairness gate | `docs/protocols/common/fairness/20261012T130607Z/FAIR_COMPARISON_AND_HOMOGENEITY_GATE.md` | Tras 25R3 |
-| P25R3-RPT | Fairness report | `audit/PHASE2_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT_REPORT.md` | Contrato completo |
-| P25R3-TRK | Track reconciliation | `audit/fairness/PHASE2_TRACK_ASSIGNMENT_RECONCILIATION.csv` | V2 evidence |
-| P25R3-PAIR | Direct comparison matrix | `audit/fairness/PHASE2_DIRECT_COMPARISON_ELIGIBILITY_MATRIX.csv` | L0–L3 |
-| P25R3-HAND | 25R3A handoff | `docs/protocols/common/fairness/20261012T130607Z/PRE_FREEZE_DOCUMENTARY_RECOVERY_HANDOFF.md` | Next |
-| P25R3-GATE | Fairness gate | `docs/protocols/common/fairness/20261012T130607Z/FAIR_COMPARISON_AND_HOMOGENEITY_GATE.md` | Tras 25R3 |
-| P25R3-RPT | Fairness report | `audit/PHASE2_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT_REPORT.md` | Contrato completo |
-| P25R3-TRK | Track reconciliation | `audit/fairness/PHASE2_TRACK_ASSIGNMENT_RECONCILIATION.csv` | V2 evidence |
-| P25R3-PAIR | Direct comparison matrix | `audit/fairness/PHASE2_DIRECT_COMPARISON_ELIGIBILITY_MATRIX.csv` | L0–L3 |
-| P25R3-HAND | 25R3A handoff | `docs/protocols/common/fairness/20261012T130607Z/PRE_FREEZE_DOCUMENTARY_RECOVERY_HANDOFF.md` | Next |
 | P25R3-GATE | Fairness gate | `docs/protocols/common/fairness/20261012T130607Z/FAIR_COMPARISON_AND_HOMOGENEITY_GATE.md` | Tras 25R3 |
 | P25R3-RPT | Fairness report | `audit/PHASE2_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT_REPORT.md` | Contrato completo |
 | P25R3-TRK | Track reconciliation | `audit/fairness/PHASE2_TRACK_ASSIGNMENT_RECONCILIATION.csv` | V2 evidence |
@@ -224,7 +195,6 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | WF-AN | Anomalías | `audit/firesparql/CODE_ANOMALIES_AND_RISKS.md` | paths/APIs |
 | WF-RD | Readiness | `audit/firesparql/EXECUTION_READINESS.md` | not_ready |
 | WF-LOG | Log Prompt 7B | `logs/static-audit-firesparql/commands.log` | solo lectura |
-| GATE-RPT | Gate comparativo nativo | `audit/NATIVE_AUDIT_COMPARATIVE_GATE.md` | Prompt 8 — informe 21 §§ |
 | GATE-MX | Matriz gate (6 métodos) | `audit/NATIVE_AUDIT_GATE_MATRIX.csv` | dimensiones A–E |
 | GATE-Q | Cola reproducción nativa | `audit/NATIVE_REPRODUCTION_QUEUE.csv` | 1× GO_NEXT (rdfconfig legal) |
 | GATE-PF | Portafolio baselines | `audit/SCIENTIFIC_BASELINE_PORTFOLIO.csv` | diversidad metodológica |
@@ -270,11 +240,8 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | P11-REQ | Request spec | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/LOCAL_CHAT_SMOKE_REQUEST_SPEC.json` | no ejecutado |
 | P11-DEC | Decisión modelo | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/MODEL_SELECTION_DECISION.md` | slug fechado |
 | P11-HUM | Aprobación humana | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/HUMAN_LLM_SMOKE_APPROVAL.md` | sin firmar |
-| P11-GATE | Gate online Prompt 11 | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/FINAL_ONLINE_SMOKE_GATE.md` | histórico; superseded 11C |
-| P11-BUD | Presupuesto actualizado | `docs/protocols/sparql_llm/API_BUDGET_AND_SAFETY.md` | HUMAN_APPROVAL_PENDING |
 | P11-LOG | Logs Prompt 11 | `logs/preparation/sparql-llm-model-budget-gate/20260721T100618Z/` | metadata SHA |
 | P11-NOGO | NO-GO económico smoke online | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/ECONOMIC_NO_GO_DECISION.md` | Mori ZERO_USD |
-| GATE-RERUN | Re-gate interino ZERO_USD | `audit/NATIVE_AUDIT_COMPARATIVE_GATE_RERUN_ZERO_USD.md` | superseded por 11C |
 | DEC004 | ADR ZERO_COST + deferral online | `docs/decisions/004_zero_cost_policy_and_online_smoke_deferral.md` | Prompt 11C |
 | P11C-HUM | Decisión humana coste 0 | `docs/protocols/sparql_llm/model-budget-gates/20260721T100618Z/HUMAN_ZERO_COST_DECISION.md` | elijo coste 0 |
 | P11C-POL | Definición coste cero | `audit/ZERO_COST_POLICY.md` | prohibido/permitido |
@@ -358,7 +325,6 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | P15-NEXT | Phase2 protocol decision | `audit/NEXT_PHASE2_PROTOCOL_DECISION.md` | T1 Prompt16 |
 | P15-Q | Phase2 transition queue | `audit/PHASE2_TRANSITION_QUEUE.csv` | T1 selected |
 | P15-LOG | Logs Prompt 15 | `logs/phase1-final-gate/` | documental |
-| P15-PORT | Portfolio updated | `audit/SCIENTIFIC_BASELINE_PORTFOLIO.csv` | 15 |
 
 | P16-TERM | Common terminology | `docs/protocols/common/20260722T083201Z/COMMON_PROTOCOL_TERMINOLOGY.md` | 16 |
 | P16-TAX | Track taxonomy | `docs/protocols/common/20260722T083201Z/TRACK_TAXONOMY.md` | 16 |
@@ -378,7 +344,6 @@ Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt
 | P16-Q | Protocol definition queue | `audit/PHASE2_PROTOCOL_DEFINITION_QUEUE.csv` | T2 selected |
 | P16-NEXT | Next after protocol | `audit/NEXT_AFTER_COMMON_PROTOCOL_DECISION.md` | Prompt17 |
 | P16-LOG | Logs Prompt 16 | `logs/common-protocol-definition/20260722T083201Z/` | documental |
-| P15Q-HIST | Phase2 transition queue (HIST) | `audit/PHASE2_TRANSITION_QUEUE.csv` | preserved |
 
 | P17-DIR | Dataset provenance pack | `docs/protocols/common/datasets/20260722T090627Z/` | 17 |
 | P17-GATE | Provenance gate | `docs/protocols/common/datasets/20260722T090627Z/DATASET_PROVENANCE_GATE.md` | T2 |

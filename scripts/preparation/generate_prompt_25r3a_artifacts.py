@@ -749,7 +749,7 @@ Do not select deployment, training, method execution, adapters or benchmark.
 ## Publication
 
 ARTIFACT_COMMIT: `31b214e6b9b1967537c7ed278426c2c1f67c97cc`
-publication metadata commit: `SELF` (second and final Prompt 25R3A commit)
+publication metadata commit: `52b74bceb15bbf8f149e6a94d2be9e2aee5803a5`
 push: confirmed by required post-commit remote verification
 """
 write(ROOT / "PLAN_SYNC.md", plan)

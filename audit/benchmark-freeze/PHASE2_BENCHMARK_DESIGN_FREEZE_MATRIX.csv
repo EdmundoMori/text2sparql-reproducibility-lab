@@ -1,0 +1,19 @@
+dimension,frozen_value,source,hash_or_version,change_control,runtime_pending,notes
+dataset,QALD9_PLUS_EN_DBPEDIA,QALD exact manifest,8eb038a61e1bc09cbd21640aa667a1714f53cda4,NEW_FREEZE_VERSION,false,primary
+train split,408 English DBpedia items,acquisition_result.yaml,95e1644f...,NEW_FREEZE_VERSION,false,
+test split,150 English DBpedia items,acquisition_result.yaml,6d3367b1...,NEW_FREEZE_VERSION,false,all-item denominator
+test seal,SEALED,QALD acquisition gate,20260722T111153Z,NEW_FREEZE_VERSION,false,no content inspection
+graph,DBPEDIA_2016_10_QALD9_NATIVE_ENDPOINT_EQUIVALENT,graph target,2016-10,NEW_FREEZE_VERSION,true,not deployed
+graph scope,114 files; 6925795437 bytes,canonical scope lock,2dcbc4df...,NEW_FREEZE_VERSION,true,
+track taxonomy,2.0.0-25R3,25R3 fairness,2.0.0-25R3,NEW_FREEZE_VERSION,false,
+information boundary,benchmark-supplied vs internal,25R3 contract,1.0.0-25R3,NEW_FREEZE_VERSION,false,
+metrics,AP;AR;AF1;ExecutionExactAccuracy,Prompt18 registry,0.1.0-documentary,NEW_FREEZE_VERSION,true,36 vectors unexecuted
+failure accounting,failure=0 and remains denominator,Prompt18,0.1.0-documentary,NEW_FREEZE_VERSION,true,
+zero-cost,USD 0.00 external,ZERO_COST policy,LOCKED,NEW_FREEZE_VERSION,false,
+comparison levels,L0-L3,25R3,1.0.0-25R3,NEW_FREEZE_VERSION,false,
+portfolio,13 exact variant slots,portfolio freeze CSV,1.0.0-25R4,NEW_FREEZE_VERSION,true,
+comparison groups,7 frozen groups,group YAML,1.0.0-25R4,NEW_FREEZE_VERSION,true,
+schema policy,identical frozen bundle for IA_SCHEMA_COMMON,schema requirements,1.0.0-25R4,NEW_FREEZE_VERSION,true,
+oracle policy,SGPT QK diagnostic only,fairness freeze,1.0.0-25R4,NEW_FREEZE_VERSION,true,
+external validation separation,DB25 separate from QALD,separation contract,1.0.0-25R4,NEW_FREEZE_VERSION,true,
+claim policy,two independent executable methods per compatible group,25R3 fairness,1.0.0-25R4,NEW_FREEZE_VERSION,true,no global ranking

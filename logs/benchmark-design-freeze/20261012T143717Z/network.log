@@ -1,0 +1,15 @@
+2026-10-12 metadata/text-only requests
+https://text2sparql.aksw.org/2025/ -> HTTP 200 official text
+https://text2sparql.aksw.org/2025/challenge/ -> HTTP 200 official text
+https://text2sparql.aksw.org/2025/results/ -> HTTP 200 official text
+https://api.github.com/repos/AKSW/text2sparql-client-examples -> HTTP 200 metadata
+GitHub commits/tree/LICENSE APIs at c6666be31796d6b8555031198a6d54df166d4406 -> HTTP 200 metadata/text
+https://api.github.com/repos/AKSW/text2sparql-client -> HTTP 200 metadata
+GitHub latest commit API at 980e0e16f78a2a52f6ba7e193b035ebfdde17403 -> HTTP 200 metadata
+https://ceur-ws.org/Vol-4094/ -> HTTP 200 official proceedings metadata
+CEUR Vol-4094 preface -> search metadata/snippet only; PDF payload not downloaded
+metadata_bytes_transferred=tool_not_exposed
+dataset_payload_downloaded=false
+model_weights_downloaded=false
+graph_payload_downloaded=false
+external_monetary_cost_usd=0.00

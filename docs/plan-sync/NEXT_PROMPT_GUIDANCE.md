@@ -1,13 +1,14 @@
 # NEXT_PROMPT_GUIDANCE
 
-**Tras:** Prompt 25R3A (`20261012T135645Z`)
-**Gate:** `PRE_FREEZE_DOCUMENTARY_RECOVERY_COMPLETE_READY_FOR_BENCHMARK_DESIGN_FREEZE`
+**Tras:** Prompt 25R4 (`20261012T143717Z`)
+**Gate:** `COMMON_CORE_BENCHMARK_DESIGN_FROZEN_READY_FOR_DBPEDIA_RESOURCE_PROFILE_SELECTION`
 
 ## Acción siguiente
 
-`DEFINE_COMMON_CORE_BENCHMARK_FREEZE_AND_EXTERNAL_VALIDATION_PLAN`
+`HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION`
 
-**Prompt 25R4** — Common-core benchmark design/participant freeze and external-validation plan under the
-25R3 fairness tracks and 25R3A documentary closure, ZERO_COST, without method or benchmark execution.
+Status: **HUMAN_GATE_REQUIRED**.
 
-Status: **GO_NEXT_ZERO_COST**. No seleccionar aún deployment, 25B, training, adapters or benchmark.
+There is no executable Cursor prompt now. `Prompt25B` is `RESERVED_NOT_AUTHORIZED` until the human selects
+exactly one resource profile. Selection alone does not authorize configuration, decompression, Docker,
+Virtuoso, SPARQL, gold, metrics, adapters or benchmark.

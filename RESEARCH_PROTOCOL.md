@@ -424,3 +424,13 @@ and native 34B model are metadata-verified without downloads. FIRESPARQL remains
 Benchmark design freeze is ready but not yet applied; execution remains ineligible. QALD/test seal and DBpedia
 target preserved; graph NOT_DEPLOYED; G4 not satisfied; G5/G6I pending; adapters false; cost USD 0.00.
 Next: Prompt 25R4.
+
+## Prompt 25R4 — Common-core benchmark design freeze (20261012T143717Z)
+
+Benchmark design freeze `1.0.0-25R4` is complete. QALD9_PLUS_EN_DBPEDIA, the qualified DBpedia
+2016-10 target, Prompt18 metrics/failure accounting, fairness taxonomy V2, ZERO_COST, 13 portfolio slots and
+7 comparison groups are locked. RDFConfig current evidence is LE2 MIT; mKGQAgent and CoT remain legally
+contingent; CoT native is IA_Q_ONLY; FIRESPARQL remains domain-native; TeBaQA historical.
+TEXT2SPARQL25 is separate and conditional on license scope. Resources were refreshed read-only with no
+material profile change. Design freeze is not execution eligibility: graph NOT_DEPLOYED, G4 not satisfied,
+G5/G6I pending, adapters false, benchmark not eligible. Next is the human resource-profile selection.

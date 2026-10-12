@@ -1,0 +1,20 @@
+field,value,verification_status,source,source_revision,scope_note
+challenge_identity,First International TEXT2SPARQL Challenge (TEXT2SPARQL25),VERIFIED,https://text2sparql.aksw.org/2025/,live_official_page_2026-10-12,official organizer site
+year,2025,VERIFIED,official site; CEUR Vol-4094,published_2025-11-13,
+organizers,"General chairs: Edgard Marx, Sebastian Tramp, Diego Moussallem; assistant committee: Paulo Viviurka do Carmo, Marcos Paulo Silva Gôlo",VERIFIED,CEUR Vol-4094 preface,2025 proceedings,
+venue_context,co-located with Text2KG at ESWC25; proceedings CEUR-WS Vol-4094,VERIFIED,official site,live,
+official_website,https://text2sparql.aksw.org/2025/,VERIFIED,official site,live,
+official_evaluator_repository,AKSW/text2sparql-client,VERIFIED_CURRENT,official preface footnote; GitHub API,980e0e16f78a2a52f6ba7e193b035ebfdde17403,current pin is not assumed challenge-time revision
+official_examples_repository,AKSW/text2sparql-client-examples,VERIFIED_CURRENT_POST_CHALLENGE_EXAMPLES,GitHub API,c6666be31796d6b8555031198a6d54df166d4406,created 2026; not assumed challenge-time pin
+dataset_identity,DB25,VERIFIED,official challenge page,live,separate from CK25
+kg_identity,DBpedia,VERIFIED,official challenge page,live,
+graph_version,DBpedia 2015-10,VERIFIED,official challenge dump list,live,not inferred from QALD
+question_count_splits,200 DB25 question-query pairs: 100 English + 100 Spanish; public test after evaluation,VERIFIED_PUBLICATION_AND_SITE,CEUR Vol-4094 preface; official site,2025 proceedings,no payload inspected
+gold_availability,questions_db25.yml and db25_true_result_set.json listed in official AKSW examples tree,METADATA_VERIFIED_NOT_DOWNLOADED,GitHub tree API,c6666be31796d6b8555031198a6d54df166d4406,
+license,Apache-2.0 root LICENSE in current examples repo; challenge-site dataset/graph license scope not separately stated,CONDITIONAL_SCOPE,GitHub API; official site,c6666be31796d6b8555031198a6d54df166d4406,graph dump licenses not transferred
+evaluation_metrics,Precision; Recall; F1; query complexity analysis; NDCG reported in proceedings for sorted results,VERIFIED,official challenge page; CEUR Vol-4094 participant paper,2025,not pooled with QALD
+leaderboard,"overall, corporate, DBpedia English, DBpedia Spanish categories published",VERIFIED,official results page,live,
+participating_systems,12 endpoint registrations; results/papers published,VERIFIED,official site; CEUR preface,2025,
+download_public_availability,official pages list dumps; current official examples tree lists questions and true results,METADATA_VERIFIED,official site; GitHub tree API,c6666be3,no payload download
+test_access_regime,held during candidate evaluation; released publicly after evaluation,VERIFIED,official challenge page/news,2025-05-12 release notice,
+result_reproducibility,endpoint response artifacts and current examples metadata public; exact challenge environment reproduction not yet validated,PARTIAL,official results page; GitHub tree,live/c6666be3,future gate

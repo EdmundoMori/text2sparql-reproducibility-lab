@@ -1,0 +1,22 @@
+2026-10-12 read-only resource refresh
+kernel=Linux 6.6.87.2-microsoft-standard-WSL2
+cpu=AMD Ryzen 7 7840HS; logical_cpu=16
+wsl_ram_total=7.4GiB
+wsl_ram_available_at_observation=4.9GiB
+swap_total=2147483648
+swap_used=0
+linux_root_total=1007GiB
+linux_root_free_approx=902GiB
+linux_root_filesystem=ext4
+windows_c_free_approx=7.4GiB
+ulimit_open_files=1048576
+docker_client=29.1.3
+docker_daemon=NOT_RUNNING
+docker_compose=ABSENT
+wsl_status_query=FAILED_INTEROP
+host_ram_query=FAILED_INTEROP
+configuration_change=false
+swap_change=false
+docker_pull=false
+material_change=false
+profile_reassessment_required=false

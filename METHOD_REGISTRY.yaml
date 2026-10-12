@@ -1,7 +1,7 @@
-schema_version: '0.29'
-updated_at: '2026-10-12T15:56:45+02:00'
-phase: phase2_pre_freeze_documentary_recovery_complete_or_conditional
-audit_prompt: Prompt_25R3A_PRE_FREEZE_DOCUMENTARY_RECOVERY
+schema_version: '0.30'
+updated_at: '2026-10-12T16:37:17+02:00'
+phase: phase2_common_core_benchmark_design_frozen_deployment_profile_pending
+audit_prompt: Prompt_25R4_COMMON_CORE_BENCHMARK_DESIGN_FREEZE
 clones_performed: true
 evidence_closure_complete: true
 wave_a_static_audit_complete: true
@@ -1175,8 +1175,8 @@ phase2_graph_pin_status: TARGET_SELECTED_RUNTIME_PENDING
 phase2_metric_detail_status: METRIC_CONTRACT_DEFINED
 phase2_adapter_status: disabled_common_adapter_allowed_false
 phase2_benchmark_status: NOT_CURRENTLY_ELIGIBLE
-phase2_next_action: DEFINE_COMMON_CORE_BENCHMARK_FREEZE_AND_EXTERNAL_VALIDATION_PLAN
-phase2_next_prompt: Prompt_25R4
+phase2_next_action: HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION
+phase2_next_prompt: HUMAN_GATE_REQUIRED
 pe5_status: protocol_metric_adapter_and_legal_contracts_defined_pending_assets_implementation_and_benchmark
 pe5_preparatory_evidence:
 - dataset_source_provenance_documented
@@ -1329,7 +1329,7 @@ dbpedia_graph_human_form_status: APPROVED_CONSUMED
 dbpedia_graph_authorization_status: CONSUMED_AFTER_PASS
 dbpedia_graph_acquisition_status: ACQUIRED_VALIDATED_COMPRESSED_WORKDIR_ONLY
 dbpedia_graph_deployment_status: NOT_DEPLOYED
-phase2_next_prompt_status: GO_NEXT_ZERO_COST
+phase2_next_prompt_status: HUMAN_GATE_REQUIRED
 
 phase2_dbpedia_acquisition_execution_run_id: 20260722T135601Z
 phase2_dbpedia_acquisition_execution_report: audit/PHASE2_DBPEDIA_COMPRESSED_ACQUISITION_EXECUTION_REPORT.md
@@ -1364,8 +1364,8 @@ global_recovery_report: audit/PHASE2_GLOBAL_BLOCKER_RECOVERY_AND_ZERO_COST_RECON
 recovery_candidate_matrix: audit/recovery/PHASE2_METHOD_RECOVERY_CANDIDATE_MATRIX.csv
 zero_cost_eligibility_matrix: audit/recovery/PHASE2_ZERO_COST_METHOD_ELIGIBILITY_MATRIX.csv
 revised_roadmap: audit/PHASE2_REVISED_RESEARCH_ROADMAP.csv
-current_research_action: PRE_FREEZE_DOCUMENTARY_RECOVERY_WAVE
-next_research_action: DEFINE_COMMON_CORE_BENCHMARK_FREEZE_AND_EXTERNAL_VALIDATION_PLAN
+current_research_action: COMMON_CORE_BENCHMARK_DESIGN_FREEZE
+next_research_action: HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION
 deployment_profile_selection_status: DEFERRED_BY_SCIENTIFIC_REPLAN_READY_UNSIGNED
 phase2_global_blocker_recovery_gate: GLOBAL_BLOCKER_RECOVERY_AND_ZERO_COST_RECONCILIATION_COMPLETE_READY_FOR_METHOD_RECOVERY_PROTOCOL
 
@@ -1478,7 +1478,7 @@ recovery_priority_matrix: audit/recovery-protocol/PHASE2_METHOD_RECOVERY_PRIORIT
 recovery_dependency_dag: configs/common/recovery-protocol/METHOD_RECOVERY_DEPENDENCY_DAG.yaml
 future_recovery_prompt_catalog: audit/recovery-protocol/PHASE2_FUTURE_RECOVERY_PROMPT_CATALOG.csv
 fair_comparison_handoff: docs/protocols/common/recovery-protocol/20261012T125143Z/FAIR_COMPARISON_HANDOFF.md
-next_research_prompt: Prompt_25R4
+next_research_prompt: HUMAN_GATE_REQUIRED
 phase2_recovery_protocol_gate: ZERO_COST_METHOD_RECOVERY_PROTOCOL_DEFINED_READY_FOR_FAIR_COMPARISON_CONTRACT
 
 
@@ -1500,7 +1500,7 @@ information_boundary_matrix: audit/fairness/PHASE2_METHOD_INFORMATION_BOUNDARY_M
 provisional_comparison_groups: audit/fairness/PHASE2_PROVISIONAL_COMPARISON_GROUPS.csv
 fairness_risk_register: audit/fairness/PHASE2_FAIR_COMPARISON_RISK_REGISTER.csv
 fairness_preflight_contract: docs/protocols/common/fairness/20261012T130607Z/FAIR_COMPARISON_PREFLIGHT_CONTRACT.md
-benchmark_participant_freeze_status: READY_FOR_DESIGN_FREEZE_NOT_FROZEN
+benchmark_participant_freeze_status: DESIGN_FROZEN_V1
 pre_freeze_recovery_required: false
 phase2_fairness_gate: FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT_DEFINED_READY_FOR_PRE_FREEZE_DOCUMENTARY_RECOVERY
 
@@ -1543,3 +1543,246 @@ pre_freeze_method_recovery_25r3a:
     remaining_runtime_blockers: [code_license, trainer, runner, hardware, domain]
     reopen_condition: PUBLIC_CODE_LICENSE_OR_NATIVE_SURFACE_APPEARS
     qald_freeze_effect: NON_BLOCKING_FOR_QALD_FREEZE
+
+# Prompt 25R4 benchmark design freeze overlay
+benchmark_freeze_run_id: 20261012T143717Z
+benchmark_freeze_version: 1.0.0-25R4
+benchmark_freeze_manifest: configs/common/benchmark-freeze/COMMON_CORE_BENCHMARK_FREEZE_V1.yaml
+benchmark_freeze_sha256: f90c0d78ecdcbbad6387f3f31122f6412c7f021d2de57aafda05b27af34e261c
+benchmark_freeze_validation_status: PASS
+benchmark_design_status: DESIGN_FROZEN_V1
+benchmark_execution_status: NOT_CURRENTLY_ELIGIBLE
+primary_benchmark: QALD9_PLUS_EN_DBPEDIA
+primary_graph: DBPEDIA_2016_10_QALD9_NATIVE_ENDPOINT_EQUIVALENT
+track_taxonomy_version_frozen: 2.0.0-25R3
+portfolio_freeze_matrix: audit/benchmark-freeze/PHASE2_BENCHMARK_PORTFOLIO_FREEZE.csv
+comparison_group_freeze: configs/common/benchmark-freeze/COMMON_CORE_COMPARISON_GROUPS_V1.yaml
+external_validation_plan_status: EXTERNAL_VALIDATION_PLAN_CONDITIONAL_LICENSE
+resource_freshness_status: REFRESHED_NO_MATERIAL_CHANGE
+next_research_action_25r4: HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION
+benchmark_freeze_methods:
+  cot_sparql:
+    phase1_final_outcome_preserved: blocked
+    frozen_variants:
+    - variant_id: NATIVE_INTERNAL_GROUNDING
+      frozen_portfolio_role: EXECUTION_CONTINGENT
+      frozen_track_v2: IA_Q_ONLY
+      frozen_comparison_group: QALD_Q_ONLY_SYSTEM_LEVEL
+      frozen_execution_target_status: NOT_CURRENTLY_ELIGIBLE
+      reopen_condition: PUBLIC_CODE_LICENSE_APPEARS_AND_HARDWARE_RUNTIME_GATES_PASS
+    - variant_id: CONTROLLED_COMMON_FROZEN_GROUNDING
+      frozen_portfolio_role: EXECUTION_CONTINGENT
+      frozen_track_v2: IA_FIXED_EXTERNAL_GROUNDING
+      frozen_comparison_group: QALD_FIXED_EXTERNAL_GROUNDING
+      frozen_execution_target_status: NOT_CURRENTLY_ELIGIBLE
+      reopen_condition: PUBLIC_CODE_LICENSE_APPEARS_AND_INDEPENDENT_PARTNER_AND_ALL_GATES_PASS
+    frozen_portfolio_role:
+    - EXECUTION_CONTINGENT
+    - EXECUTION_CONTINGENT
+    frozen_track_v2:
+    - IA_Q_ONLY
+    - IA_FIXED_EXTERNAL_GROUNDING
+    frozen_comparison_group:
+    - QALD_FIXED_EXTERNAL_GROUNDING
+    - QALD_Q_ONLY_SYSTEM_LEVEL
+    frozen_execution_target_status:
+    - NATIVE_INTERNAL_GROUNDING:NOT_CURRENTLY_ELIGIBLE
+    - CONTROLLED_COMMON_FROZEN_GROUNDING:NOT_CURRENTLY_ELIGIBLE
+    remaining_execution_gates:
+    - G4
+    - G5
+    - G6I
+    - adapter
+    - variant_specific_legal_artifact_model_training
+    - resources
+    - F0_F14
+    - human_authorization
+  firesparql:
+    phase1_final_outcome_preserved: not_reproducible
+    frozen_variants:
+    - variant_id: DOMAIN_NATIVE
+      frozen_portfolio_role: DOMAIN_NATIVE_OUTSIDE_COMMON_CORE
+      frozen_track_v2: IA_DOMAIN_NATIVE
+      frozen_comparison_group: DOMAIN_NATIVE
+      frozen_execution_target_status: NOT_CURRENTLY_ELIGIBLE
+      reopen_condition: PUBLIC_CODE_LICENSE_AND_NATIVE_TRAINER_RUNNER_APPEAR
+    frozen_portfolio_role:
+    - DOMAIN_NATIVE_OUTSIDE_COMMON_CORE
+    frozen_track_v2:
+    - IA_DOMAIN_NATIVE
+    frozen_comparison_group:
+    - DOMAIN_NATIVE
+    frozen_execution_target_status:
+    - DOMAIN_NATIVE:NOT_CURRENTLY_ELIGIBLE
+    remaining_execution_gates:
+    - DOMAIN_NATIVE_OUTSIDE_COMMON_CORE
+  mkgqagent:
+    phase1_final_outcome_preserved: blocked
+    frozen_variants:
+    - variant_id: NATIVE_AGENTIC
+      frozen_portfolio_role: EXECUTION_CONTINGENT
+      frozen_track_v2: IA_Q_ONLY
+      frozen_comparison_group: QALD_Q_ONLY_SYSTEM_LEVEL
+      frozen_execution_target_status: NOT_CURRENTLY_ELIGIBLE
+      reopen_condition: PUBLIC_CODE_LICENSE_APPEARS_THEN_ALL_RUNTIME_GATES_PASS
+    - variant_id: CONTROLLED_LOCAL_BACKEND
+      frozen_portfolio_role: EXECUTION_CONTINGENT
+      frozen_track_v2: IA_Q_ONLY
+      frozen_comparison_group: QALD_Q_ONLY_SYSTEM_LEVEL
+      frozen_execution_target_status: NOT_CURRENTLY_ELIGIBLE
+      reopen_condition: PUBLIC_CODE_LICENSE_APPEARS_THEN_G6I_AND_ALL_RUNTIME_GATES_PASS
+    frozen_portfolio_role:
+    - EXECUTION_CONTINGENT
+    - EXECUTION_CONTINGENT
+    frozen_track_v2:
+    - IA_Q_ONLY
+    - IA_Q_ONLY
+    frozen_comparison_group:
+    - QALD_Q_ONLY_SYSTEM_LEVEL
+    frozen_execution_target_status:
+    - NATIVE_AGENTIC:NOT_CURRENTLY_ELIGIBLE
+    - CONTROLLED_LOCAL_BACKEND:NOT_CURRENTLY_ELIGIBLE
+    remaining_execution_gates:
+    - G4
+    - G5
+    - G6I
+    - adapter
+    - variant_specific_legal_artifact_model_training
+    - resources
+    - F0_F14
+    - human_authorization
+  rdfconfig_llm:
+    phase1_final_outcome_preserved: blocked
+    frozen_variants:
+    - variant_id: NATIVE_DOMAIN
+      frozen_portfolio_role: DOMAIN_NATIVE_OUTSIDE_COMMON_CORE
+      frozen_track_v2: IA_DOMAIN_NATIVE
+      frozen_comparison_group: DOMAIN_NATIVE
+      frozen_execution_target_status: NOT_CURRENTLY_ELIGIBLE
+      reopen_condition: NATIVE_DOMAIN_RUNTIME_GATES_PASS
+    - variant_id: CONTROLLED_DBPEDIA_SCHEMA_COMMON
+      frozen_portfolio_role: EXECUTION_TARGET
+      frozen_track_v2: IA_SCHEMA_COMMON
+      frozen_comparison_group: QALD_SCHEMA_COMMON_SYSTEM_LEVEL
+      frozen_execution_target_status: NOT_CURRENTLY_ELIGIBLE
+      reopen_condition: G4_G5_G6I_SCHEMA_LOCAL_BACKEND_RUNTIME_F0_F14_PASS
+    frozen_portfolio_role:
+    - DOMAIN_NATIVE_OUTSIDE_COMMON_CORE
+    - EXECUTION_TARGET
+    frozen_track_v2:
+    - IA_DOMAIN_NATIVE
+    - IA_SCHEMA_COMMON
+    frozen_comparison_group:
+    - DOMAIN_NATIVE
+    - QALD_SCHEMA_COMMON_SYSTEM_LEVEL
+    frozen_execution_target_status:
+    - NATIVE_DOMAIN:NOT_CURRENTLY_ELIGIBLE
+    - CONTROLLED_DBPEDIA_SCHEMA_COMMON:NOT_CURRENTLY_ELIGIBLE
+    remaining_execution_gates:
+    - G4
+    - G5
+    - G6I
+    - adapter
+    - variant_specific_legal_artifact_model_training
+    - resources
+    - F0_F14
+    - human_authorization
+  sgpt:
+    phase1_final_outcome_preserved: smoke_only
+    frozen_variants:
+    - variant_id: PAPER_CHECKPOINT
+      frozen_portfolio_role: REFERENCE_ONLY_BLOCKED
+      frozen_track_v2: IA_Q_ONLY
+      frozen_comparison_group: ''
+      frozen_execution_target_status: NOT_CURRENTLY_ELIGIBLE
+      reopen_condition: OFFICIAL_CHECKPOINT_APPEARS
+    - variant_id: ZERO_COST_RETRAIN_Q
+      frozen_portfolio_role: EXECUTION_TARGET
+      frozen_track_v2: IA_Q_ONLY
+      frozen_comparison_group: QALD_Q_ONLY_SYSTEM_LEVEL
+      frozen_execution_target_status: NOT_CURRENTLY_ELIGIBLE
+      reopen_condition: G4_G5_G6I_TRAINING_RUNTIME_F0_F14_HUMAN_AUTH_PASS
+    - variant_id: ZERO_COST_RETRAIN_QK
+      frozen_portfolio_role: DIAGNOSTIC_ONLY
+      frozen_track_v2: IA_ORACLE_GROUNDING
+      frozen_comparison_group: QALD_ORACLE_GROUNDING
+      frozen_execution_target_status: NOT_CURRENTLY_ELIGIBLE
+      reopen_condition: G4_G5_G6I_TRAINING_RUNTIME_F0_F14_HUMAN_AUTH_PASS
+    frozen_portfolio_role:
+    - REFERENCE_ONLY_BLOCKED
+    - EXECUTION_TARGET
+    - DIAGNOSTIC_ONLY
+    frozen_track_v2:
+    - IA_Q_ONLY
+    - IA_Q_ONLY
+    - IA_ORACLE_GROUNDING
+    frozen_comparison_group:
+    - QALD_ORACLE_GROUNDING
+    - QALD_Q_ONLY_SYSTEM_LEVEL
+    frozen_execution_target_status:
+    - PAPER_CHECKPOINT:NOT_CURRENTLY_ELIGIBLE
+    - ZERO_COST_RETRAIN_Q:NOT_CURRENTLY_ELIGIBLE
+    - ZERO_COST_RETRAIN_QK:NOT_CURRENTLY_ELIGIBLE
+    remaining_execution_gates:
+    - G4
+    - G5
+    - G6I
+    - adapter
+    - variant_specific_legal_artifact_model_training
+    - resources
+    - F0_F14
+    - human_authorization
+  sparql_llm:
+    phase1_final_outcome_preserved: smoke_only
+    frozen_variants:
+    - variant_id: NATIVE_API
+      frozen_portfolio_role: REFERENCE_ONLY_BLOCKED
+      frozen_track_v2: IA_SCHEMA_COMMON
+      frozen_comparison_group: ''
+      frozen_execution_target_status: NOT_CURRENTLY_ELIGIBLE
+      reopen_condition: ZERO_COST_POLICY_CHANGES_BY_VERSIONED_DECISION
+    - variant_id: ZERO_COST_LOCAL_BACKEND
+      frozen_portfolio_role: EXECUTION_TARGET
+      frozen_track_v2: IA_SCHEMA_COMMON
+      frozen_comparison_group: QALD_SCHEMA_COMMON_SYSTEM_LEVEL
+      frozen_execution_target_status: NOT_CURRENTLY_ELIGIBLE
+      reopen_condition: G4_G5_G6I_SCHEMA_MODEL_RUNTIME_F0_F14_PASS
+    frozen_portfolio_role:
+    - REFERENCE_ONLY_BLOCKED
+    - EXECUTION_TARGET
+    frozen_track_v2:
+    - IA_SCHEMA_COMMON
+    - IA_SCHEMA_COMMON
+    frozen_comparison_group:
+    - QALD_SCHEMA_COMMON_SYSTEM_LEVEL
+    frozen_execution_target_status:
+    - NATIVE_API:NOT_CURRENTLY_ELIGIBLE
+    - ZERO_COST_LOCAL_BACKEND:NOT_CURRENTLY_ELIGIBLE
+    remaining_execution_gates:
+    - G4
+    - G5
+    - G6I
+    - adapter
+    - variant_specific_legal_artifact_model_training
+    - resources
+    - F0_F14
+    - human_authorization
+  tebaqa:
+    phase1_final_outcome_preserved: HISTORICAL_ONLY
+    frozen_variants:
+    - variant_id: HISTORICAL
+      frozen_portfolio_role: HISTORICAL_CONTEXT_ONLY
+      frozen_track_v2: IA_HISTORICAL
+      frozen_comparison_group: HISTORICAL
+      frozen_execution_target_status: NOT_CURRENTLY_ELIGIBLE
+      reopen_condition: EXPLICIT_NEW_PORTFOLIO_DECISION
+    frozen_portfolio_role:
+    - HISTORICAL_CONTEXT_ONLY
+    frozen_track_v2:
+    - IA_HISTORICAL
+    frozen_comparison_group:
+    - HISTORICAL
+    frozen_execution_target_status:
+    - HISTORICAL:NOT_CURRENTLY_ELIGIBLE
+    remaining_execution_gates:
+    - NOT_ACTIVE_HISTORICAL

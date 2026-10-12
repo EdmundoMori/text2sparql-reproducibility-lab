@@ -1,0 +1,70 @@
+schema_version: 1.0.0-25R4
+run_id: 20261012T143717Z
+minimum_independent_executable_methods: 2
+groups:
+- group_id: QALD_SCHEMA_COMMON_SYSTEM_LEVEL
+  status: FROZEN_POTENTIAL_L2
+  comparison_level: L2_POTENTIAL
+  members:
+  - variant: sparql_llm/ZERO_COST_LOCAL_BACKEND
+    member_role: EXECUTION_TARGET
+  - variant: rdfconfig_llm/CONTROLLED_DBPEDIA_SCHEMA_COMMON
+    member_role: EXECUTION_TARGET
+  pairwise_claim_rule: both independent methods must pass every execution and F0-F14
+    gate
+  ranking_status: NOT_CURRENTLY_ALLOWED
+- group_id: QALD_Q_ONLY_SYSTEM_LEVEL
+  status: FROZEN_CONTINGENT
+  comparison_level: L2_CONTINGENT
+  members:
+  - variant: sgpt/ZERO_COST_RETRAIN_Q
+    member_role: EXECUTION_TARGET
+  - variant: mkgqagent/NATIVE_AGENTIC
+    member_role: EXECUTION_CONTINGENT
+  - variant: mkgqagent/CONTROLLED_LOCAL_BACKEND
+    member_role: CONTINGENT_ALTERNATIVE
+  - variant: cot_sparql/NATIVE_INTERNAL_GROUNDING
+    member_role: EXECUTION_CONTINGENT
+  pairwise_claim_rule: at least two independent executable methods in group after
+    all gates
+  ranking_status: NOT_CURRENTLY_ALLOWED
+- group_id: QALD_ORACLE_GROUNDING
+  status: FROZEN_DIAGNOSTIC_ONLY
+  comparison_level: L1_DESCRIPTIVE
+  members:
+  - variant: sgpt/ZERO_COST_RETRAIN_QK
+    member_role: DIAGNOSTIC_ONLY
+  pairwise_claim_rule: no end-to-end equivalence claim
+  ranking_status: 'NO'
+- group_id: QALD_FIXED_EXTERNAL_GROUNDING
+  status: FROZEN_CONTINGENT_DESCRIPTIVE
+  comparison_level: L1_DESCRIPTIVE
+  members:
+  - variant: cot_sparql/CONTROLLED_COMMON_FROZEN_GROUNDING
+    member_role: EXECUTION_CONTINGENT
+  pairwise_claim_rule: descriptive until an independent compatible partner exists
+  ranking_status: 'NO'
+- group_id: DOMAIN_NATIVE
+  status: FROZEN_OUTSIDE_COMMON_CORE
+  comparison_level: L0_DOMAIN_SPECIFIC
+  members:
+  - variant: rdfconfig_llm/NATIVE_DOMAIN
+    member_role: DOMAIN_NATIVE_OUTSIDE_COMMON_CORE
+  - variant: firesparql/DOMAIN_NATIVE
+    member_role: DOMAIN_NATIVE_OUTSIDE_COMMON_CORE
+  pairwise_claim_rule: no QALD ranking
+  ranking_status: 'NO'
+- group_id: HISTORICAL
+  status: FROZEN_HISTORICAL
+  comparison_level: HISTORICAL_CONTEXT
+  members:
+  - variant: tebaqa/HISTORICAL
+    member_role: HISTORICAL_CONTEXT_ONLY
+  pairwise_claim_rule: no active ranking
+  ranking_status: 'NO'
+- group_id: CONTROLLED_BACKBONE_FUTURE
+  status: NOT_INSTANTIATED
+  comparison_level: L3_FUTURE
+  members: []
+  pairwise_claim_rule: new freeze decision required when instantiated
+  ranking_status: 'NO'

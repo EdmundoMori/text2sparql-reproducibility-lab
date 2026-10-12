@@ -1,0 +1,418 @@
+freeze_id: COMMON_CORE_BENCHMARK_FREEZE_V1
+freeze_version: 1.0.0-25R4
+run_id: 20261012T143717Z
+created_at: '2026-10-12T14:37:17Z'
+zero_external_monetary_cost_usd: 0.0
+primary_benchmark:
+  dataset_id: QALD9_PLUS_EN_DBPEDIA
+  dataset_source_repository: Perevalov/qald_9_plus
+  dataset_source_revision: 8eb038a61e1bc09cbd21640aa667a1714f53cda4
+  dataset_license: CC-BY-4.0_LICENSE_FILE_VERIFIED
+  language: EN
+  kg: DBpedia
+  train_count: 408
+  test_count: 150
+  test_seal_status: SEALED
+  acquisition_manifest: configs/common/acquisition/qald9plus/QALD9PLUS_EN_DBPEDIA_EXACT_FILE_MANIFEST.yaml
+  acquisition_hashes:
+    train_sha256: 95e1644fbcbfaf1614adc866e86857a0eac99e4905a595b8bcf1775c6bc7d2e8
+    test_sha256: 6d3367b1231adb650f9a39ec4d8112d93a3726cc1b00c39490f5a6f23842c7d6
+    license_sha256: 7e7170e3cebf88a9f60c7b8421418323c09304da1af4d5e90f4da1dc1c8a2661
+    citation_sha256: 40c2e632613eea4599d7d6742b935b5b207351c31b4026e729e8b8121fc31887
+  denominator_rule: ALL_150_FROZEN_TEST_ITEMS_NO_METHOD_FILTERING
+graph:
+  graph_id: DBPEDIA_2016_10_QALD9_NATIVE_ENDPOINT_EQUIVALENT
+  release: 2016-10
+  provenance_status: ENDPOINT_EQUIVALENT_RECONSTRUCTION_TARGET_HIGH_CONFIDENCE_LINEAGE_INFERENCE
+  provenance_confidence: HIGH_NOT_BYTE_IDENTICAL_ENDPOINT_CLAIM
+  canonical_scope_manifest: configs/common/graph/dbpedia2016-10/DBPEDIA_2016_10_CANONICAL_SCOPE_LOCK.yaml
+  canonical_scope_content_hash: 2dcbc4df0b4af368d797a36525d607dae809317310c8c35d70066c5275c454c7
+  compressed_file_count: 114
+  compressed_bytes: 6925795437
+  acquisition_status: ACQUIRED_VALIDATED_COMPRESSED_WORKDIR_ONLY
+  deployment_status: NOT_DEPLOYED
+fairness:
+  fairness_protocol_version: 1.0.0-25R3
+  track_taxonomy_version: 2.0.0-25R3
+  information_boundary_rule: classify only benchmark-supplied evaluated-item information;
+    internal retrieval/linking remains internal
+metrics:
+  contract_version: 0.1.0-documentary
+  answer_precision: PRIMARY_SET_OF_ROWS
+  answer_recall: PRIMARY_SET_OF_ROWS
+  answer_f1: PRIMARY_SET_OF_ROWS
+  execution_exact_accuracy: PRIMARY_CANONICAL_EQUALITY
+  failure_accounting: FAILURES_SCORE_ZERO_AND_REMAIN_IN_DENOMINATOR
+  conformance_status: 36_VECTORS_DEFINED_NOT_EXECUTED
+portfolio:
+- variant: sparql_llm/NATIVE_API
+  method_id: sparql_llm
+  variant_id: NATIVE_API
+  phase1_outcome: smoke_only
+  track_v2: IA_SCHEMA_COMMON
+  adaptation_regime: METHOD_FAITHFUL
+  portfolio_role: REFERENCE_ONLY_BLOCKED
+  design_freeze_status: DESIGN_FROZEN_V1
+  zero_cost_status: BLOCKED_PAID_API_POLICY
+  legal_status: MIT_CONFIRMED
+  artifact_status: AVAILABLE
+  resource_status: PENDING
+  runtime_status: API_PATH_ZERO_COST_BLOCKED
+  graph_status: DBPEDIA_NOT_DEPLOYED
+  metric_status: DOCUMENTED_RUNTIME_PENDING
+  adapter_status: G6D_DOCUMENTED_G6I_PENDING
+  execution_eligibility: NOT_CURRENTLY_ELIGIBLE
+  reopen_condition: ZERO_COST_POLICY_CHANGES_BY_VERSIONED_DECISION
+  comparison_group: ''
+  claim_boundary: NO_PERFORMANCE_CLAIM_UNTIL_ALL_GATES_PASS
+  reason: native API depends on disallowed paid/commercial service path
+  evidence: 25R1;25R2;25R3
+- variant: sparql_llm/ZERO_COST_LOCAL_BACKEND
+  method_id: sparql_llm
+  variant_id: ZERO_COST_LOCAL_BACKEND
+  phase1_outcome: smoke_only
+  track_v2: IA_SCHEMA_COMMON
+  adaptation_regime: ZERO_COST_CONTROLLED
+  portfolio_role: EXECUTION_TARGET
+  design_freeze_status: DESIGN_FROZEN_V1
+  zero_cost_status: COMPLIANT_TARGET
+  legal_status: MIT_CONFIRMED
+  artifact_status: LOCAL_INDEX_AVAILABLE_MODEL_PENDING
+  resource_status: PENDING
+  runtime_status: LOCAL_BACKEND_PENDING
+  graph_status: DBPEDIA_NOT_DEPLOYED
+  metric_status: DOCUMENTED_RUNTIME_PENDING
+  adapter_status: G6D_DOCUMENTED_G6I_PENDING
+  execution_eligibility: NOT_CURRENTLY_ELIGIBLE
+  reopen_condition: G4_G5_G6I_SCHEMA_MODEL_RUNTIME_F0_F14_PASS
+  comparison_group: QALD_SCHEMA_COMMON_SYSTEM_LEVEL
+  claim_boundary: NO_PERFORMANCE_CLAIM_UNTIL_ALL_GATES_PASS
+  reason: first schema-common controlled execution target
+  evidence: 25R2 protocol;25R3 fairness
+- variant: sgpt/PAPER_CHECKPOINT
+  method_id: sgpt
+  variant_id: PAPER_CHECKPOINT
+  phase1_outcome: smoke_only
+  track_v2: IA_Q_ONLY
+  adaptation_regime: METHOD_FAITHFUL
+  portfolio_role: REFERENCE_ONLY_BLOCKED
+  design_freeze_status: DESIGN_FROZEN_V1
+  zero_cost_status: ZERO_COST_COMPATIBLE_BUT_ARTIFACT_ABSENT
+  legal_status: MIT_CONFIRMED
+  artifact_status: PAPER_CHECKPOINT_UNAVAILABLE
+  resource_status: PENDING
+  runtime_status: BLOCKED_CHECKPOINT
+  graph_status: DBPEDIA_NOT_DEPLOYED
+  metric_status: DOCUMENTED_RUNTIME_PENDING
+  adapter_status: G6D_DOCUMENTED_G6I_PENDING
+  execution_eligibility: NOT_CURRENTLY_ELIGIBLE
+  reopen_condition: OFFICIAL_CHECKPOINT_APPEARS
+  comparison_group: ''
+  claim_boundary: NO_PERFORMANCE_CLAIM_UNTIL_ALL_GATES_PASS
+  reason: paper checkpoint unavailable
+  evidence: SGPT checkpoint inventory
+- variant: sgpt/ZERO_COST_RETRAIN_Q
+  method_id: sgpt
+  variant_id: ZERO_COST_RETRAIN_Q
+  phase1_outcome: smoke_only
+  track_v2: IA_Q_ONLY
+  adaptation_regime: ZERO_COST_CONTROLLED
+  portfolio_role: EXECUTION_TARGET
+  design_freeze_status: DESIGN_FROZEN_V1
+  zero_cost_status: COMPLIANT_TARGET
+  legal_status: MIT_CONFIRMED
+  artifact_status: TRAINING_INPUTS_DOCUMENTED
+  resource_status: TRAINING_RESOURCES_PENDING
+  runtime_status: RETRAIN_PENDING
+  graph_status: DBPEDIA_NOT_DEPLOYED
+  metric_status: DOCUMENTED_RUNTIME_PENDING
+  adapter_status: G6D_DOCUMENTED_G6I_PENDING
+  execution_eligibility: NOT_CURRENTLY_ELIGIBLE
+  reopen_condition: G4_G5_G6I_TRAINING_RUNTIME_F0_F14_HUMAN_AUTH_PASS
+  comparison_group: QALD_Q_ONLY_SYSTEM_LEVEL
+  claim_boundary: NO_PERFORMANCE_CLAIM_UNTIL_ALL_GATES_PASS
+  reason: question-only zero-cost retrain target
+  evidence: 25R2 protocol;25R3 fairness
+- variant: sgpt/ZERO_COST_RETRAIN_QK
+  method_id: sgpt
+  variant_id: ZERO_COST_RETRAIN_QK
+  phase1_outcome: smoke_only
+  track_v2: IA_ORACLE_GROUNDING
+  adaptation_regime: ZERO_COST_CONTROLLED_ORACLE
+  portfolio_role: DIAGNOSTIC_ONLY
+  design_freeze_status: DESIGN_FROZEN_V1
+  zero_cost_status: COMPLIANT_TARGET
+  legal_status: MIT_CONFIRMED
+  artifact_status: TRAINING_INPUTS_DOCUMENTED
+  resource_status: TRAINING_RESOURCES_PENDING
+  runtime_status: RETRAIN_PENDING
+  graph_status: DBPEDIA_NOT_DEPLOYED
+  metric_status: DOCUMENTED_RUNTIME_PENDING
+  adapter_status: G6D_DOCUMENTED_G6I_PENDING
+  execution_eligibility: NOT_CURRENTLY_ELIGIBLE
+  reopen_condition: G4_G5_G6I_TRAINING_RUNTIME_F0_F14_HUMAN_AUTH_PASS
+  comparison_group: QALD_ORACLE_GROUNDING
+  claim_boundary: NO_PERFORMANCE_CLAIM_UNTIL_ALL_GATES_PASS
+  reason: evaluated-item gold grounding makes this oracle-assisted diagnostic
+  evidence: 25R3 information boundary
+- variant: mkgqagent/NATIVE_AGENTIC
+  method_id: mkgqagent
+  variant_id: NATIVE_AGENTIC
+  phase1_outcome: blocked
+  track_v2: IA_Q_ONLY
+  adaptation_regime: METHOD_FAITHFUL
+  portfolio_role: EXECUTION_CONTINGENT
+  design_freeze_status: DESIGN_FROZEN_V1
+  zero_cost_status: NATIVE_COST_AND_SERVICE_BLOCKED
+  legal_status: LE6_NO_PUBLIC_CODE_LICENSE_EVIDENCE
+  artifact_status: PARTIAL
+  resource_status: PENDING
+  runtime_status: BLOCKED_LEGAL_SERVICE_RUNTIME
+  graph_status: DBPEDIA_NOT_DEPLOYED
+  metric_status: DOCUMENTED_RUNTIME_PENDING
+  adapter_status: G6D_DOCUMENTED_G6I_PENDING
+  execution_eligibility: NOT_CURRENTLY_ELIGIBLE
+  reopen_condition: PUBLIC_CODE_LICENSE_APPEARS_THEN_ALL_RUNTIME_GATES_PASS
+  comparison_group: QALD_Q_ONLY_SYSTEM_LEVEL
+  claim_boundary: NO_PERFORMANCE_CLAIM_UNTIL_ALL_GATES_PASS
+  reason: legal documentary gate exhausted; no permission inferred
+  evidence: 25R3A mKG recovery
+- variant: mkgqagent/CONTROLLED_LOCAL_BACKEND
+  method_id: mkgqagent
+  variant_id: CONTROLLED_LOCAL_BACKEND
+  phase1_outcome: blocked
+  track_v2: IA_Q_ONLY
+  adaptation_regime: ZERO_COST_CONTROLLED
+  portfolio_role: EXECUTION_CONTINGENT
+  design_freeze_status: DESIGN_FROZEN_V1
+  zero_cost_status: CONDITIONAL_AFTER_LEGAL_REOPEN
+  legal_status: LE6_NO_PUBLIC_CODE_LICENSE_EVIDENCE
+  artifact_status: CONTROLLED_ARTIFACTS_NOT_IMPLEMENTED
+  resource_status: PENDING
+  runtime_status: BLOCKED_LEGAL_IMPLEMENTATION_RUNTIME
+  graph_status: DBPEDIA_NOT_DEPLOYED
+  metric_status: DOCUMENTED_RUNTIME_PENDING
+  adapter_status: G6D_DOCUMENTED_G6I_PENDING
+  execution_eligibility: NOT_CURRENTLY_ELIGIBLE
+  reopen_condition: PUBLIC_CODE_LICENSE_APPEARS_THEN_G6I_AND_ALL_RUNTIME_GATES_PASS
+  comparison_group: QALD_Q_ONLY_SYSTEM_LEVEL
+  claim_boundary: NO_PERFORMANCE_CLAIM_UNTIL_ALL_GATES_PASS
+  reason: controlled implementation forbidden before legal reopen
+  evidence: 25R2 controlled candidate
+- variant: rdfconfig_llm/NATIVE_DOMAIN
+  method_id: rdfconfig_llm
+  variant_id: NATIVE_DOMAIN
+  phase1_outcome: blocked
+  track_v2: IA_DOMAIN_NATIVE
+  adaptation_regime: METHOD_FAITHFUL
+  portfolio_role: DOMAIN_NATIVE_OUTSIDE_COMMON_CORE
+  design_freeze_status: DESIGN_FROZEN_V1
+  zero_cost_status: NATIVE_PAID_API_BLOCKED
+  legal_status: CONFIRMED_REPOSITORY_LEVEL_MIT_DECLARATION_AT_PIN
+  artifact_status: ZENODO_LINEAGE_METADATA_VERIFIED
+  resource_status: PENDING
+  runtime_status: RUBY_AND_API_RUNTIME_PENDING
+  graph_status: NATIVE_OR_NOT_APPLICABLE
+  metric_status: DOCUMENTED_RUNTIME_PENDING
+  adapter_status: G6D_DOCUMENTED_G6I_PENDING
+  execution_eligibility: NOT_CURRENTLY_ELIGIBLE
+  reopen_condition: NATIVE_DOMAIN_RUNTIME_GATES_PASS
+  comparison_group: DOMAIN_NATIVE
+  claim_boundary: NO_PERFORMANCE_CLAIM_UNTIL_ALL_GATES_PASS
+  reason: life-science native domain is not QALD ranking
+  evidence: 25R3A LE2 correction
+- variant: rdfconfig_llm/CONTROLLED_DBPEDIA_SCHEMA_COMMON
+  method_id: rdfconfig_llm
+  variant_id: CONTROLLED_DBPEDIA_SCHEMA_COMMON
+  phase1_outcome: blocked
+  track_v2: IA_SCHEMA_COMMON
+  adaptation_regime: ZERO_COST_CONTROLLED
+  portfolio_role: EXECUTION_TARGET
+  design_freeze_status: DESIGN_FROZEN_V1
+  zero_cost_status: COMPLIANT_TARGET
+  legal_status: CONFIRMED_REPOSITORY_LEVEL_MIT_DECLARATION_AT_PIN
+  artifact_status: CONTROLLED_DBPEDIA_SCHEMA_PENDING
+  resource_status: PENDING
+  runtime_status: RUBY_LOCAL_BACKEND_PENDING
+  graph_status: DBPEDIA_NOT_DEPLOYED
+  metric_status: DOCUMENTED_RUNTIME_PENDING
+  adapter_status: G6D_DOCUMENTED_G6I_PENDING
+  execution_eligibility: NOT_CURRENTLY_ELIGIBLE
+  reopen_condition: G4_G5_G6I_SCHEMA_LOCAL_BACKEND_RUNTIME_F0_F14_PASS
+  comparison_group: QALD_SCHEMA_COMMON_SYSTEM_LEVEL
+  claim_boundary: NO_PERFORMANCE_CLAIM_UNTIL_ALL_GATES_PASS
+  reason: independent LE2-legal schema-common target
+  evidence: 25R3A;25R3 fairness
+- variant: cot_sparql/NATIVE_INTERNAL_GROUNDING
+  method_id: cot_sparql
+  variant_id: NATIVE_INTERNAL_GROUNDING
+  phase1_outcome: blocked
+  track_v2: IA_Q_ONLY
+  adaptation_regime: METHOD_FAITHFUL
+  portfolio_role: EXECUTION_CONTINGENT
+  design_freeze_status: DESIGN_FROZEN_V1
+  zero_cost_status: ZERO_COST_HARDWARE_UNSATISFIED
+  legal_status: LE6_NO_PUBLIC_CODE_LICENSE_EVIDENCE
+  artifact_status: FOUR_CONTEXT_ARTIFACTS_METADATA_VERIFIED
+  resource_status: 34B_HARDWARE_BLOCKED
+  runtime_status: BLOCKED_LEGAL_HARDWARE_RUNTIME
+  graph_status: DBPEDIA_NOT_DEPLOYED
+  metric_status: DOCUMENTED_RUNTIME_PENDING
+  adapter_status: G6D_DOCUMENTED_G6I_PENDING
+  execution_eligibility: NOT_CURRENTLY_ELIGIBLE
+  reopen_condition: PUBLIC_CODE_LICENSE_APPEARS_AND_HARDWARE_RUNTIME_GATES_PASS
+  comparison_group: QALD_Q_ONLY_SYSTEM_LEVEL
+  claim_boundary: NO_PERFORMANCE_CLAIM_UNTIL_ALL_GATES_PASS
+  reason: internal grounding remains Q_ONLY; license and 34B resources block execution
+  evidence: 25R3A CoT recovery
+- variant: cot_sparql/CONTROLLED_COMMON_FROZEN_GROUNDING
+  method_id: cot_sparql
+  variant_id: CONTROLLED_COMMON_FROZEN_GROUNDING
+  phase1_outcome: blocked
+  track_v2: IA_FIXED_EXTERNAL_GROUNDING
+  adaptation_regime: ZERO_COST_CONTROLLED
+  portfolio_role: EXECUTION_CONTINGENT
+  design_freeze_status: DESIGN_FROZEN_V1
+  zero_cost_status: CONDITIONAL_AFTER_LEGAL_REOPEN
+  legal_status: LE6_NO_PUBLIC_CODE_LICENSE_EVIDENCE
+  artifact_status: COMMON_GROUNDER_NOT_IMPLEMENTED
+  resource_status: PENDING
+  runtime_status: BLOCKED_LEGAL_IMPLEMENTATION_RUNTIME
+  graph_status: DBPEDIA_NOT_DEPLOYED
+  metric_status: DOCUMENTED_RUNTIME_PENDING
+  adapter_status: G6D_DOCUMENTED_G6I_PENDING
+  execution_eligibility: NOT_CURRENTLY_ELIGIBLE
+  reopen_condition: PUBLIC_CODE_LICENSE_APPEARS_AND_INDEPENDENT_PARTNER_AND_ALL_GATES_PASS
+  comparison_group: QALD_FIXED_EXTERNAL_GROUNDING
+  claim_boundary: NO_PERFORMANCE_CLAIM_UNTIL_ALL_GATES_PASS
+  reason: descriptive contingent variant; not primary common-core target
+  evidence: 25R3 fairness
+- variant: firesparql/DOMAIN_NATIVE
+  method_id: firesparql
+  variant_id: DOMAIN_NATIVE
+  phase1_outcome: not_reproducible
+  track_v2: IA_DOMAIN_NATIVE
+  adaptation_regime: METHOD_FAITHFUL
+  portfolio_role: DOMAIN_NATIVE_OUTSIDE_COMMON_CORE
+  design_freeze_status: DESIGN_FROZEN_V1
+  zero_cost_status: NATIVE_SURFACE_INCOMPLETE
+  legal_status: LE6_NO_PUBLIC_CODE_LICENSE_EVIDENCE
+  artifact_status: MODEL_METADATA_ONLY_TRAINER_RUNNER_ABSENT
+  resource_status: HARDWARE_PENDING
+  runtime_status: NOT_REPRODUCIBLE_NATIVE_SURFACE
+  graph_status: NATIVE_OR_NOT_APPLICABLE
+  metric_status: DOCUMENTED_RUNTIME_PENDING
+  adapter_status: G6D_DOCUMENTED_G6I_PENDING
+  execution_eligibility: NOT_CURRENTLY_ELIGIBLE
+  reopen_condition: PUBLIC_CODE_LICENSE_AND_NATIVE_TRAINER_RUNNER_APPEAR
+  comparison_group: DOMAIN_NATIVE
+  claim_boundary: NO_PERFORMANCE_CLAIM_UNTIL_ALL_GATES_PASS
+  reason: ORKG/SciQA domain-native; no forced QALD adaptation
+  evidence: 25R3A FIRE update
+- variant: tebaqa/HISTORICAL
+  method_id: tebaqa
+  variant_id: HISTORICAL
+  phase1_outcome: HISTORICAL_ONLY
+  track_v2: IA_HISTORICAL
+  adaptation_regime: HISTORICAL
+  portfolio_role: HISTORICAL_CONTEXT_ONLY
+  design_freeze_status: DESIGN_FROZEN_V1
+  zero_cost_status: NOT_ACTIVE
+  legal_status: HISTORICAL_REFERENCE
+  artifact_status: NOT_ACTIVE
+  resource_status: NOT_ACTIVE
+  runtime_status: NOT_ACTIVE
+  graph_status: NATIVE_OR_NOT_APPLICABLE
+  metric_status: DOCUMENTED_RUNTIME_PENDING
+  adapter_status: G6D_DOCUMENTED_G6I_PENDING
+  execution_eligibility: NOT_CURRENTLY_ELIGIBLE
+  reopen_condition: EXPLICIT_NEW_PORTFOLIO_DECISION
+  comparison_group: HISTORICAL
+  claim_boundary: NO_PERFORMANCE_CLAIM_UNTIL_ALL_GATES_PASS
+  reason: context only; not active benchmark participant
+  evidence: Phase1 closure
+comparison_groups:
+- group_id: QALD_SCHEMA_COMMON_SYSTEM_LEVEL
+  status: FROZEN_POTENTIAL_L2
+  comparison_level: L2_POTENTIAL
+  members:
+  - variant: sparql_llm/ZERO_COST_LOCAL_BACKEND
+    member_role: EXECUTION_TARGET
+  - variant: rdfconfig_llm/CONTROLLED_DBPEDIA_SCHEMA_COMMON
+    member_role: EXECUTION_TARGET
+  pairwise_claim_rule: both independent methods must pass every execution and F0-F14
+    gate
+  ranking_status: NOT_CURRENTLY_ALLOWED
+- group_id: QALD_Q_ONLY_SYSTEM_LEVEL
+  status: FROZEN_CONTINGENT
+  comparison_level: L2_CONTINGENT
+  members:
+  - variant: sgpt/ZERO_COST_RETRAIN_Q
+    member_role: EXECUTION_TARGET
+  - variant: mkgqagent/NATIVE_AGENTIC
+    member_role: EXECUTION_CONTINGENT
+  - variant: mkgqagent/CONTROLLED_LOCAL_BACKEND
+    member_role: CONTINGENT_ALTERNATIVE
+  - variant: cot_sparql/NATIVE_INTERNAL_GROUNDING
+    member_role: EXECUTION_CONTINGENT
+  pairwise_claim_rule: at least two independent executable methods in group after
+    all gates
+  ranking_status: NOT_CURRENTLY_ALLOWED
+- group_id: QALD_ORACLE_GROUNDING
+  status: FROZEN_DIAGNOSTIC_ONLY
+  comparison_level: L1_DESCRIPTIVE
+  members:
+  - variant: sgpt/ZERO_COST_RETRAIN_QK
+    member_role: DIAGNOSTIC_ONLY
+  pairwise_claim_rule: no end-to-end equivalence claim
+  ranking_status: 'NO'
+- group_id: QALD_FIXED_EXTERNAL_GROUNDING
+  status: FROZEN_CONTINGENT_DESCRIPTIVE
+  comparison_level: L1_DESCRIPTIVE
+  members:
+  - variant: cot_sparql/CONTROLLED_COMMON_FROZEN_GROUNDING
+    member_role: EXECUTION_CONTINGENT
+  pairwise_claim_rule: descriptive until an independent compatible partner exists
+  ranking_status: 'NO'
+- group_id: DOMAIN_NATIVE
+  status: FROZEN_OUTSIDE_COMMON_CORE
+  comparison_level: L0_DOMAIN_SPECIFIC
+  members:
+  - variant: rdfconfig_llm/NATIVE_DOMAIN
+    member_role: DOMAIN_NATIVE_OUTSIDE_COMMON_CORE
+  - variant: firesparql/DOMAIN_NATIVE
+    member_role: DOMAIN_NATIVE_OUTSIDE_COMMON_CORE
+  pairwise_claim_rule: no QALD ranking
+  ranking_status: 'NO'
+- group_id: HISTORICAL
+  status: FROZEN_HISTORICAL
+  comparison_level: HISTORICAL_CONTEXT
+  members:
+  - variant: tebaqa/HISTORICAL
+    member_role: HISTORICAL_CONTEXT_ONLY
+  pairwise_claim_rule: no active ranking
+  ranking_status: 'NO'
+- group_id: CONTROLLED_BACKBONE_FUTURE
+  status: NOT_INSTANTIATED
+  comparison_level: L3_FUTURE
+  members: []
+  pairwise_claim_rule: new freeze decision required when instantiated
+  ranking_status: 'NO'
+zero_cost:
+  policy: ZERO_EXTERNAL_MONETARY_COST_LOCKED
+  prohibited_dependencies:
+  - paid_api
+  - paid_cloud
+  - promotional_credit
+  - commercial_trial
+  - commercial_free_tier_as_primary_mutable_dependency
+external_validation:
+  strategy_id: TEXT2SPARQL25_SEPARATE_EXTERNAL_VALIDATION
+  current_status: EXTERNAL_VALIDATION_PLAN_CONDITIONAL_LICENSE
+execution_gates:
+  G4: NOT_SATISFIED
+  G5: IMPLEMENTATION_AND_CONFORMANCE_PENDING
+  G6I: IMPLEMENTATION_APPROVAL_PENDING
+  adapter: COMMON_ADAPTER_ALLOWED_FALSE
+  F0_F14: PENDING
+claim_boundary: DESIGN_FROZEN_NOT_EXECUTABLE; NO_RESULTS; NO_CROSS_TRACK_GLOBAL_RANKING
