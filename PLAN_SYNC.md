@@ -60,6 +60,6 @@ Prompt **25R2**. No 25B / profile / deploy / train / benchmark aún.
 | Campo | Valor |
 |---|---|
 | commit inicial | `763b7953a1dea907c3250cc05896d2f985454118` |
-| ARTIFACT_COMMIT | *(post-commit)* |
+| ARTIFACT_COMMIT | `82f0d28ac0d45cb342202e77be86cfb4a650fb57` |
 | publication metadata commit | *(post-commit tip; max 2 commits)* |
 | push | pending |

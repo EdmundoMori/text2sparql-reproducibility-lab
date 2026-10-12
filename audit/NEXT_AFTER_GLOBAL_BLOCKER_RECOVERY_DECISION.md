@@ -15,6 +15,6 @@
 | **Siguiente** | **`DEFINE_ZERO_COST_METHOD_RECOVERY_PROTOCOL`** |
 | Prompt | **25R2** |
 | Deferred | human profile selection, 25B, deploy D1–D5, train, bench |
-| ARTIFACT_COMMIT | *(post-commit)* |
+| ARTIFACT_COMMIT | `82f0d28ac0d45cb342202e77be86cfb4a650fb57` |
 
 Stop if any paid service, training, SPARQL, or deployment attempted without new authorization.
