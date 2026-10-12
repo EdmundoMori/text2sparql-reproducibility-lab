@@ -1,12 +1,17 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-10-12 (Prompt 25R4)
+**Última actualización:** 2026-10-12 (Prompt 25B)
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
 
 | ID | Tema | Ruta | Cuándo leerlo |
 |---|---|---|---|
+| P25B-GATE | Profile-selection gate | `docs/protocols/common/graph/dbpedia2016-10/profile-selection/20261012T150501Z/LOCAL_WSL_HOST_ADJUSTED_PROFILE_SELECTION_GATE.md` | Human D1 handoff |
+| P25B-REC | Signed selection record | `docs/protocols/common/graph/dbpedia2016-10/profile-selection/20261012T150501Z/HUMAN_RESOURCE_PROFILE_SELECTION_RECORD.md` | Selection evidence |
+| P25B-CAP | Capacity reassessment | `docs/protocols/common/graph/dbpedia2016-10/profile-selection/20261012T150501Z/LOCAL_WSL_HOST_ADJUSTED_CAPACITY_REASSESSMENT.md` | 12/8 GiB rationale |
+| P25B-D1 | D1 authorization form | `docs/protocols/common/graph/dbpedia2016-10/profile-selection/20261012T150501Z/HUMAN_D1_RESOURCE_CONFIGURATION_AUTHORIZATION.md` | READY_UNSIGNED |
+| P25B-RPT | Selection/D1 report | `audit/PHASE2_DBPEDIA_LOCAL_WSL_HOST_ADJUSTED_SELECTION_AND_D1_PREPARATION_REPORT.md` | Full evidence |
 | P25R4-GATE | Design freeze gate | `docs/protocols/common/benchmark-freeze/20261012T143717Z/COMMON_CORE_BENCHMARK_DESIGN_FREEZE_GATE.md` | Human handoff |
 | P25R4-MAN | Immutable freeze manifest | `configs/common/benchmark-freeze/COMMON_CORE_BENCHMARK_FREEZE_V1.yaml` | Frozen specification |
 | P25R4-PORT | Portfolio freeze | `audit/benchmark-freeze/PHASE2_BENCHMARK_PORTFOLIO_FREEZE.csv` | Variant roles |

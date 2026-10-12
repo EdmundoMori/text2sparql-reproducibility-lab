@@ -1,6 +1,6 @@
 schema_version: 0.2.0-prompt25a
 run_id: 20260722T162241Z
-selection_status: PENDING_HUMAN_SELECTION
+selection_status: HUMAN_SELECTED
 profiles:
   LOCAL_WSL_CURRENT:
     ram_gib_detected: 7.35
@@ -84,3 +84,6 @@ profiles:
     blockers:
     - must_not_silently_replace_native_target
     recommendation: FALLBACK_ONLY_NOT_SELECTED_HERE
+selected_profile: LOCAL_WSL_HOST_ADJUSTED
+selection_scope: PROFILE_SELECTION_ONLY
+human_verified_host_ram_gib: 15.19

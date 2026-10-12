@@ -1,0 +1,7 @@
+host_total_gib,proposed_wsl_gib,remaining_host_gib,percent_host_assigned_wsl,meets_prior_12gib_planning_minimum,host_headroom_class,virtuoso_capacity_class,recommendation,notes
+15.19,8,7.19,52.67,false,ADEQUATE_FOR_HOST,BELOW_PRIOR_PLANNING_MINIMUM,REJECT_FOR_D1_DBPEDIA_LOAD_ENVELOPE,planning envelope; memory limit is not a guarantee of physical reservation
+15.19,10,5.19,65.83,false,CONSTRAINED,BELOW_PRIOR_PLANNING_MINIMUM,REJECT_FOR_D1_DBPEDIA_LOAD_ENVELOPE,planning envelope; memory limit is not a guarantee of physical reservation
+15.19,11,4.19,72.42,false,CONSTRAINED,BELOW_PRIOR_PLANNING_MINIMUM,REJECT_FOR_D1_DBPEDIA_LOAD_ENVELOPE,planning envelope; memory limit is not a guarantee of physical reservation
+15.19,12,3.19,79.00,true,MARGINAL_CONDITIONAL,MINIMUM_CAPACITY_CONDITIONAL_HIGH_RISK,SELECT_AS_DOCUMENTARY_D1_PROPOSAL_WITH_STOP_CONDITIONS,planning envelope; memory limit is not a guarantee of physical reservation
+15.19,13,2.19,85.58,true,INADEQUATE_HOST_HEADROOM,ABOVE_PRIOR_MINIMUM_BUT_HOST_CONSTRAINED,REJECT_HOST_STARVATION_RISK,planning envelope; memory limit is not a guarantee of physical reservation
+15.19,14,1.19,92.17,true,INADEQUATE_HOST_HEADROOM,ABOVE_PRIOR_MINIMUM_BUT_HOST_CONSTRAINED,REJECT_HOST_STARVATION_RISK,planning envelope; memory limit is not a guarantee of physical reservation

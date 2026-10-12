@@ -1,6 +1,6 @@
-schema_version: '0.30'
+schema_version: '0.31'
 updated_at: '2026-10-12T16:37:17+02:00'
-phase: phase2_common_core_benchmark_design_frozen_deployment_profile_pending
+phase: phase2_local_wsl_host_adjusted_selected_d1_authorization_pending
 audit_prompt: Prompt_25R4_COMMON_CORE_BENCHMARK_DESIGN_FREEZE
 clones_performed: true
 evidence_closure_complete: true
@@ -1175,7 +1175,7 @@ phase2_graph_pin_status: TARGET_SELECTED_RUNTIME_PENDING
 phase2_metric_detail_status: METRIC_CONTRACT_DEFINED
 phase2_adapter_status: disabled_common_adapter_allowed_false
 phase2_benchmark_status: NOT_CURRENTLY_ELIGIBLE
-phase2_next_action: HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION
+phase2_next_action: HUMAN_D1_RESOURCE_CONFIGURATION_AUTHORIZATION
 phase2_next_prompt: HUMAN_GATE_REQUIRED
 pe5_status: protocol_metric_adapter_and_legal_contracts_defined_pending_assets_implementation_and_benchmark
 pe5_preparatory_evidence:
@@ -1365,8 +1365,8 @@ recovery_candidate_matrix: audit/recovery/PHASE2_METHOD_RECOVERY_CANDIDATE_MATRI
 zero_cost_eligibility_matrix: audit/recovery/PHASE2_ZERO_COST_METHOD_ELIGIBILITY_MATRIX.csv
 revised_roadmap: audit/PHASE2_REVISED_RESEARCH_ROADMAP.csv
 current_research_action: COMMON_CORE_BENCHMARK_DESIGN_FREEZE
-next_research_action: HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION
-deployment_profile_selection_status: DEFERRED_BY_SCIENTIFIC_REPLAN_READY_UNSIGNED
+next_research_action: HUMAN_D1_RESOURCE_CONFIGURATION_AUTHORIZATION
+deployment_profile_selection_status: HUMAN_SELECTED
 phase2_global_blocker_recovery_gate: GLOBAL_BLOCKER_RECOVERY_AND_ZERO_COST_RECONCILIATION_COMPLETE_READY_FOR_METHOD_RECOVERY_PROTOCOL
 
 # Prompt 25R1 per-method recovery overlay (phase1_final_outcome unchanged)
@@ -1786,3 +1786,26 @@ benchmark_freeze_methods:
     - HISTORICAL:NOT_CURRENTLY_ELIGIBLE
     remaining_execution_gates:
     - NOT_ACTIVE_HISTORICAL
+
+# Prompt 25B deployment profile-selection overlay
+profile_selection_run_id: 20261012T150501Z
+selected_deployment_profile: LOCAL_WSL_HOST_ADJUSTED
+deployment_profile_selection_status_current: HUMAN_SELECTED
+profile_selection_authorization_scope: PROFILE_ONLY
+human_verified_host_ram_gib: 15.19
+human_host_ram_evidence_type: HUMAN_VERIFIED_WINDOWS_POWERSHELL
+proposed_wsl_memory_gib: 12
+proposed_wsl_swap_gib: 8
+resource_capacity_class: MINIMUM_CAPACITY_CONDITIONAL_HIGH_RISK
+resource_configuration_status: NOT_CONFIGURED
+d1_package_status: READY_FOR_HUMAN_AUTHORIZATION
+d1_human_authorization_status: READY_UNSIGNED
+d1_execution_prompt_status: RESERVED_NOT_AUTHORIZED
+deployment_status_current: NOT_DEPLOYED
+g4_runtime_status_current: NOT_SATISFIED
+g5_runtime_status_current: IMPLEMENTATION_AND_CONFORMANCE_PENDING
+g6d_status_current: DOCUMENTED
+g6i_status_current: PENDING
+adapters_current: false
+benchmark_execution_status_current: NOT_CURRENTLY_ELIGIBLE
+next_research_action_current: HUMAN_D1_RESOURCE_CONFIGURATION_AUTHORIZATION

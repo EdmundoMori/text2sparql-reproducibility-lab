@@ -434,3 +434,11 @@ contingent; CoT native is IA_Q_ONLY; FIRESPARQL remains domain-native; TeBaQA hi
 TEXT2SPARQL25 is separate and conditional on license scope. Resources were refreshed read-only with no
 material profile change. Design freeze is not execution eligibility: graph NOT_DEPLOYED, G4 not satisfied,
 G5/G6I pending, adapters false, benchmark not eligible. Next is the human resource-profile selection.
+
+## Prompt 25B — LOCAL_WSL_HOST_ADJUSTED selection and D1 preparation (20261012T150501Z)
+
+EDMUNDO MORI ORRILLO selected `LOCAL_WSL_HOST_ADJUSTED` for profile selection only and human-verified
+15.19 GiB host RAM. A documentary D1 proposal of 12 GiB WSL RAM and 8 GiB swap is classified
+`MINIMUM_CAPACITY_CONDITIONAL_HIGH_RISK`; it was not applied. DBpedia remains compressed/NOT_DEPLOYED;
+Docker was not started or pulled; G4 is not satisfied; G5/G6I pending; adapters false; benchmark ineligible.
+Next: `HUMAN_D1_RESOURCE_CONFIGURATION_AUTHORIZATION`. D1 execution is `RESERVED_NOT_AUTHORIZED`.

@@ -1,0 +1,4 @@
+PASS
+freeze_yaml_parse=true
+deployment_manifest_yaml_parse=true
+method_registry_yaml_parse=true

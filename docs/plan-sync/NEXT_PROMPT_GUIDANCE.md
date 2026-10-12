@@ -1,14 +1,13 @@
 # NEXT_PROMPT_GUIDANCE
 
-**Tras:** Prompt 25R4 (`20261012T143717Z`)
-**Gate:** `COMMON_CORE_BENCHMARK_DESIGN_FROZEN_READY_FOR_DBPEDIA_RESOURCE_PROFILE_SELECTION`
+**Tras:** Prompt 25B (`20261012T150501Z`)
+**Gate:** `LOCAL_WSL_HOST_ADJUSTED_PROFILE_SELECTED_D1_PACKAGE_READY_FOR_HUMAN_AUTHORIZATION`
 
 ## Acción siguiente
 
-`HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION`
+`HUMAN_D1_RESOURCE_CONFIGURATION_AUTHORIZATION`
 
 Status: **HUMAN_GATE_REQUIRED**.
 
-There is no executable Cursor prompt now. `Prompt25B` is `RESERVED_NOT_AUTHORIZED` until the human selects
-exactly one resource profile. Selection alone does not authorize configuration, decompression, Docker,
-Virtuoso, SPARQL, gold, metrics, adapters or benchmark.
+There is no executable Cursor prompt. D1 is `RESERVED_NOT_AUTHORIZED` until the five exact resource actions
+are explicitly approved. No decompression, pull, Virtuoso, graph load, SPARQL or benchmark is included.

@@ -1,29 +1,32 @@
 # PLAN_SYNC — Estado para optimización del plan de prompts
 
 **Repo:** https://github.com/EdmundoMori/text2sparql-reproducibility-lab
-**Última actualización:** 2026-10-12 (Prompt **25R4**)
-**Fase:** common-core benchmark design frozen · human deployment resource profile pending
-**SHA inicial 25R4:** `52b74bceb15bbf8f149e6a94d2be9e2aee5803a5`
-**RUN_ID:** `20261012T143717Z`
+**Última actualización:** 2026-10-12 (Prompt **25B**)
+**Fase:** LOCAL_WSL_HOST_ADJUSTED selected · D1 human authorization pending
+**SHA inicial 25B:** `f271997477c8505c1d223b91d7630d09135d3cd3`
+**RUN_ID:** `20261012T150501Z`
 
-Gate: `COMMON_CORE_BENCHMARK_DESIGN_FROZEN_READY_FOR_DBPEDIA_RESOURCE_PROFILE_SELECTION`.
-Freeze `1.0.0-25R4` SHA-256 `f90c0d78ecdcbbad6387f3f31122f6412c7f021d2de57aafda05b27af34e261c`; validator PASS. QALD9 Plus EN/DBpedia, DBpedia 2016-10
-target, metrics, fairness V2, 13 portfolio slots and 7 groups are frozen. Design freeze is not execution.
-ARTIFACT_INDEX duplicate cleanup: `PLAN_SYNC_HYGIENE_ONLY`; no scientific result changed.
+Gate: `LOCAL_WSL_HOST_ADJUSTED_PROFILE_SELECTED_D1_PACKAGE_READY_FOR_HUMAN_AUTHORIZATION`.
+Freeze `1.0.0-25R4` SHA-256 `f90c0d78ecdcbbad6387f3f31122f6412c7f021d2de57aafda05b27af34e261c` remains unchanged; validator PASS.
 
-## Prompt 25R3A reconciliation
+## Prompt 25R4 reconciliation
 
-Initial `e8aa49da8ebf733e77ca962cbb5a11ba502426ca`; artifact
-`31b214e6b9b1967537c7ed278426c2c1f67c97cc`; publication/tip
-`52b74bceb15bbf8f149e6a94d2be9e2aee5803a5`; push confirmed.
+Initial `52b74bceb15bbf8f149e6a94d2be9e2aee5803a5`; artifact
+`7e0bdb20be7e05601dc22072964ff0ea22b7a3c7`; publication/tip
+`f271997477c8505c1d223b91d7630d09135d3cd3`; push confirmed.
+
+## Prompt 25B state
+
+Human selection `LOCAL_WSL_HOST_ADJUSTED` is consumed for profile selection only. Host RAM 15.19 GiB is
+human-verified. Proposed D1: 12 GiB RAM / 8 GiB swap, `MINIMUM_CAPACITY_CONDITIONAL_HIGH_RISK`; no change
+was applied. DBpedia remains NOT_DEPLOYED and benchmark execution remains ineligible.
 
 ## Unique next action
 
-`HUMAN_DBPEDIA_DEPLOYMENT_RESOURCE_PROFILE_SELECTION` — `HUMAN_GATE_REQUIRED`.
-Prompt25B is `RESERVED_NOT_AUTHORIZED`; no executable Cursor prompt is issued.
+`HUMAN_D1_RESOURCE_CONFIGURATION_AUTHORIZATION` — `HUMAN_GATE_REQUIRED`. D1 execution prompt is `RESERVED_NOT_AUTHORIZED`.
 
 ## Publication
 
-ARTIFACT_COMMIT: `7e0bdb20be7e05601dc22072964ff0ea22b7a3c7`
-publication metadata commit: `SELF` (second and final Prompt 25R4 commit)
+ARTIFACT_COMMIT: *(post-commit)*
+publication metadata commit: *(post-commit tip; max 2 commits)*
 push: pending

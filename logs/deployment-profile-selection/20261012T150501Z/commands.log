@@ -1,0 +1,4 @@
+Prompt25B RUN_ID=20261012T150501Z
+initial_head=f271997477c8505c1d223b91d7630d09135d3cd3
+mode=DOCUMENTARY_STATIC_ZERO_COST_NO_DEPLOYMENT_NO_RESOURCE_MODIFICATION
+generator=scripts/preparation/generate_prompt_25b_artifacts.py
