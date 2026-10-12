@@ -340,7 +340,7 @@ Qualifiers:
 - GO_NEXT_ZERO_COST
 
 Next: `RUN_PRE_FREEZE_DOCUMENTARY_RECOVERY_WAVE` — Prompt `25R3A`.
-ARTIFACT_COMMIT: *(post-commit)*
+ARTIFACT_COMMIT: `1f8b19ee44182c36024973d83ce989be514c1f14`
 """
 for name, content in docs.items():
     write(DOC / name, content)
@@ -700,7 +700,7 @@ next_decision = f"""# NEXT AFTER FAIR COMPARISON CONTRACT
 | Next prompt | `Prompt_25R3A` |
 
 Exactly one next action. Deployment/profile/25B/training/recovery execution/benchmark remain deferred.
-ARTIFACT_COMMIT: *(post-commit)*
+ARTIFACT_COMMIT: `1f8b19ee44182c36024973d83ce989be514c1f14`
 """
 write(ROOT / "audit/NEXT_AFTER_FAIR_COMPARISON_CONTRACT_DECISION.md", next_decision)
 
@@ -753,7 +753,7 @@ Do not select deployment, 25B, training, method execution or benchmark.
 
 ## Publication
 
-ARTIFACT_COMMIT: *(post-commit)*
+ARTIFACT_COMMIT: `1f8b19ee44182c36024973d83ce989be514c1f14`
 publication metadata commit: *(post-commit tip; max 2 commits)*
 push: pending
 """

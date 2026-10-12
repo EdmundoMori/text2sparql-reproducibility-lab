@@ -13,4 +13,4 @@
 | Next prompt | `Prompt_25R3A` |
 
 Exactly one next action. Deployment/profile/25B/training/recovery execution/benchmark remain deferred.
-ARTIFACT_COMMIT: *(post-commit)*
+ARTIFACT_COMMIT: `1f8b19ee44182c36024973d83ce989be514c1f14`

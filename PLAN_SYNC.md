@@ -23,6 +23,6 @@ Do not select deployment, 25B, training, method execution or benchmark.
 
 ## Publication
 
-ARTIFACT_COMMIT: *(post-commit)*
+ARTIFACT_COMMIT: `1f8b19ee44182c36024973d83ce989be514c1f14`
 publication metadata commit: *(post-commit tip; max 2 commits)*
-push: pending
+push: confirmed
