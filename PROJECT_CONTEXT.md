@@ -438,3 +438,13 @@ Auditoría estática de `upstream/` y, solo bajo petición explícita, smoke tes
 - RG0–RG9 + state machine + effort parity + controlled variants defined; no execution.
 - Next: `DEFINE_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT` (Prompt_25R3).
 
+
+
+## Prompt 25R3 — Fair comparison contract (20261012T130607Z)
+
+Fairness protocol `1.0.0-25R3` and Track Taxonomy V2 are defined. Homogeneity controls benchmark-supplied
+conditions without forcing architectural sameness. mKGQAgent and native CoT-SPARQL are Q_ONLY under the
+boundary rule; RDFConfig native remains domain-native. Controlled variants remain labeled and unexecuted.
+QALD primary/test seal and DBpedia 2016-10 target are preserved; graph NOT_DEPLOYED; G4 not satisfied; G5
+runtime and G6I pending; adapters false; benchmark not eligible. Participants are not frozen. Next:
+Prompt 25R3A documentary recovery. ZERO_EXTERNAL_MONETARY_COST; no execution/training/deployment/benchmark.

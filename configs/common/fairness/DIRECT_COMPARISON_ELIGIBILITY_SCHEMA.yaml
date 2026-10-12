@@ -1,0 +1,31 @@
+schema_version: 1.0.0-25R3
+required:
+- method_a
+- variant_a
+- method_b
+- variant_b
+- dataset_equal
+- graph_equal
+- track_equal
+- gold_access_equal
+- schema_access_equal
+- grounding_equal
+- training_regime
+- model_regime
+- zero_cost_eligible
+- metric_equal
+- failure_accounting_equal
+- test_seal_equal
+- resource_reporting_available
+- comparison_level
+- direct_quality_comparison_allowed
+- latency_comparison_allowed
+- resource_efficiency_comparison_allowed
+- causal_method_claim_allowed
+- reason
+- pending_gate
+levels:
+- L0_NOT_COMPARABLE
+- L1_DESCRIPTIVE_CROSS_TRACK
+- L2_FAIR_SYSTEM_LEVEL_COMPARISON
+- L3_CONTROLLED_METHOD_COMPARISON

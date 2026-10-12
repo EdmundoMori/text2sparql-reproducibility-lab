@@ -1,0 +1,16 @@
+method,variant,external_question,external_schema,external_oracle_entities,external_oracle_relations,external_fixed_grounding,external_examples,internal_retrieval,internal_linking,internal_schema_lookup,internal_endpoint_feedback,internal_memory,internal_agent_tools,gold_dependency,candidate_track_v2,evidence
+sparql_llm,NATIVE_API,yes,yes,no,no,no,no,yes,no,yes,variant,yes,yes,no,IA_SCHEMA_COMMON,STATIC_AUDIT;native_API_reference;ZERO_COST_blocked
+sparql_llm,ZERO_COST_LOCAL_BACKEND,yes,yes,no,no,no,no,yes,no,yes,variant,yes,yes,no,IA_SCHEMA_COMMON,STATIC_AUDIT;AC_SPARQL_LLM_SCHEMA_COMMON_NATIVE
+sparql_llm,ZERO_COST_LOCAL_BACKEND_INTERNAL_FEEDBACK,yes,yes,no,no,no,no,yes,no,yes,yes,yes,yes,no,IA_SCHEMA_COMMON,AC_SPARQL_LLM_SCHEMA_COMMON_INTERNAL_FEEDBACK
+sgpt,sgpt_q,yes,no,no,no,no,no,no,no,no,no,no,no,no,IA_Q_ONLY,SGPT_ADAPTER_CONTRACTS
+sgpt,sgpt_qk,yes,no,yes,yes,no,no,no,no,no,no,no,no,yes_evaluated_item,IA_ORACLE_GROUNDING,SGPT_ADAPTER_CONTRACTS
+mkgqagent,NATIVE_AGENTIC,yes,no,no,no,no,no,yes_experience_pool,yes_falcon,no,yes,yes,yes,no_test_gold,IA_Q_ONLY,audit/mkgqagent/STATIC_AUDIT.md;MKGQAGENT_ADAPTER_CONTRACT
+mkgqagent,CONTROLLED_LOCAL_BACKEND,yes,no,no,no,no,no,yes_experience_pool,yes_preserved_or_frozen_if_admissible,no,yes_local_endpoint,yes,yes,no_test_gold,IA_Q_ONLY,25R2 controlled candidate;blocked until public license
+rdfconfig_llm,NATIVE_DOMAIN,yes,domain_native,no,no,no,no,no,no,yes_rdfconfig,no,no,ruby,no,IA_DOMAIN_NATIVE,RDFCONFIG_ADAPTER_CONTRACTS
+rdfconfig_llm,CONTROLLED_DBPEDIA_SCHEMA_COMMON,yes,yes,no,no,no,no,no,no,yes_rdfconfig,no,no,ruby,no,IA_SCHEMA_COMMON,AC_RDFCONFIG_SCHEMA_COMMON_DBPEDIA_NEGATIVE;prospective_only
+cot_sparql,NATIVE_INTERNAL_GROUNDING,yes,no,no,no,no,no_train_internal,yes_train_one_shot,yes_native_services,no,yes_http_validation,yes_train_index,yes,no_test_gold;train_gold_examples_internal,IA_Q_ONLY,GROUNDING_AND_LINKING_AUDIT;RETRIEVAL_AND_PROMPT_AUDIT
+cot_sparql,CONTROLLED_COMMON_FROZEN_GROUNDING,yes,no,no,no,yes,no_train_internal,yes_train_one_shot,benchmark_supplied_frozen,no,yes_http_validation,yes_train_index,yes,no,IA_FIXED_EXTERNAL_GROUNDING,COT_SPARQL_ADAPTER_CONTRACT;prospective_only
+firesparql,DOMAIN_NATIVE,yes,domain_native,no,no,no,train_only,yes,method_specific,domain,qlever_native,yes,yes,no_test_gold,IA_DOMAIN_NATIVE,audit/firesparql/ARCHITECTURE_AND_DATA_FLOW.md
+firesparql,DOMAIN_NATIVE_CLEANED,yes,domain_native,no,no,no,train_only,yes,method_specific,domain,qlever_native,yes,gpt4o_cleaning_paid_blocked,no_test_gold,IA_DOMAIN_NATIVE,AC_FIRESPARQL_CLEANED;ZERO_COST blocked
+firesparql,DOMAIN_NATIVE_RAG,yes,domain_native,no,no,no,train_only,yes_rag,method_specific,domain,qlever_native,yes,groq_service_blocked,no_test_gold,IA_DOMAIN_NATIVE,AC_FIRESPARQL_RAG
+tebaqa,HISTORICAL,historical,historical,no,no,no,no,historical,historical,historical,historical,historical,historical,unknown_not_active,IA_HISTORICAL,METHOD_REGISTRY;historical_only

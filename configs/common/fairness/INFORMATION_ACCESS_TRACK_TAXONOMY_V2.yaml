@@ -1,0 +1,28 @@
+schema_version: 2.0.0-25R3
+run_id: 20261012T130607Z
+boundary_rule: track_is_defined_only_by_benchmark_supplied_information
+tracks:
+  IA_Q_ONLY:
+    supplied:
+    - question
+    - language
+    - item_id
+    - endpoint_reference
+    internal_native_retrieval_allowed: true
+  IA_SCHEMA_COMMON:
+    supplied:
+    - IA_Q_ONLY
+    - frozen_common_schema_bundle
+    same_bundle_required: true
+  IA_ORACLE_GROUNDING:
+    supplied:
+    - gold_derived_grounding_for_evaluated_item
+    end_to_end_claim: false
+  IA_FIXED_EXTERNAL_GROUNDING:
+    supplied:
+    - same_frozen_grounder_output_for_group
+    native_internal_linker: false
+  IA_DOMAIN_NATIVE:
+    direct_qald_ranking: false
+  IA_HISTORICAL:
+    active_ranking: false

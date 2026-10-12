@@ -1,0 +1,8 @@
+RUN_ID=20261012T130607Z
+git fetch origin
+git branch --show-current
+git rev-parse HEAD
+git rev-parse origin/main
+git status --short
+python3 scripts/preparation/generate_prompt_25r3_artifacts.py
+Documentary generation only; zero method/model/graph/SPARQL/benchmark execution.

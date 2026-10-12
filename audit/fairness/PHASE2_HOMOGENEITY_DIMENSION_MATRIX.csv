@@ -1,0 +1,20 @@
+dimension,must_be_equal_for_L2,must_be_equal_for_L3,may_differ,must_report,reason
+dataset,yes,yes,no,yes,same task universe
+test_split,yes,yes,no,yes,paired denominator
+graph,yes,yes,no,yes,same answers/semantics
+gold,track_equal,yes,cross_track_only,yes,oracle changes task
+metric,yes,yes,no,yes,same interpretation
+evaluator,yes,yes,no,yes,same implementation
+input_track,yes,yes,cross_track_L1,yes,same supplied information
+schema,track_equal,yes,method_internal_may_differ,yes,boundary
+grounding,track_equal,yes,method_internal_may_differ,yes,boundary
+training,no,yes_for_causal,yes_L2,yes,system vs causal
+backbone,no,yes_when_claimed,yes_L2,yes,system vs controlled
+architecture,no,isolated_component_only,yes,yes,legitimate method difference
+hardware,no_quality_yes_efficiency,yes_efficiency,yes_quality,yes,quality/operations split
+timeout,yes_when_meaningful,yes,native_behavior_preserved,yes,failure bias
+seeds,policy_equal,yes,determinism_dependent,yes,replication
+external_services,reproducibility_equal,yes,method_internal,yes,drift
+cost,yes_zero,yes_zero,no,yes,locked policy
+failure_accounting,yes,yes,no,yes,denominator
+test_seal,yes,yes,no,yes,leakage prevention

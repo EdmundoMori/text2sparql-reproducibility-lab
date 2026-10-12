@@ -1,0 +1,40 @@
+schema_version: 1.0.0-25R3
+required:
+- method_id
+- variant_id
+- run_id
+- dataset_id
+- dataset_version
+- graph_id
+- graph_version
+- track_id
+- adaptation_regime
+- model_id
+- model_revision
+- model_license
+- controlled_variant
+- changed_components
+- schema_bundle
+- grounding_regime
+- training_data
+- seed
+- hardware_profile
+- runtime
+- network_dependencies
+- external_cost_usd
+- question_count
+- success_count
+- failure_count
+- timeout_count
+- primary_metrics
+- diagnostic_metrics
+- latency
+- memory
+- claim_level
+constraints:
+  external_cost_usd: 0.0
+  claim_level:
+  - L0
+  - L1
+  - L2
+  - L3

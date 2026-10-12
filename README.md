@@ -105,3 +105,13 @@ Pendiente de decisión explícita. Los métodos upstream conservan sus propias l
 **PE1:** substantially_answered · **PE2:** partial_evidence · **PE3:** not_started (`no_comparable_original_metric_run_available`) · **PE4:** substantially_answered_for_current_portfolio  
 **Fase 2:** aún **no** ejecutada — solo elegibilidad documental; siguiente Prompt 16 (definición protocolo común), sin adapters ni benchmarks.  
 **Informe:** `audit/PHASE1_FINAL_NATIVE_AUDIT_REPORT.md` · Decisión: `docs/decisions/006_phase1_native_audit_closure_and_phase2_transition.md`
+
+
+## Prompt 25R3 — Fair comparison contract (20261012T130607Z)
+
+Fairness protocol `1.0.0-25R3` and Track Taxonomy V2 are defined. Homogeneity controls benchmark-supplied
+conditions without forcing architectural sameness. mKGQAgent and native CoT-SPARQL are Q_ONLY under the
+boundary rule; RDFConfig native remains domain-native. Controlled variants remain labeled and unexecuted.
+QALD primary/test seal and DBpedia 2016-10 target are preserved; graph NOT_DEPLOYED; G4 not satisfied; G5
+runtime and G6I pending; adapters false; benchmark not eligible. Participants are not frozen. Next:
+Prompt 25R3A documentary recovery. ZERO_EXTERNAL_MONETARY_COST; no execution/training/deployment/benchmark.

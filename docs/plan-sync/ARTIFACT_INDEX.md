@@ -1,12 +1,52 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-07-22 (Prompt 23C)  
+**Última actualización:** 2026-10-12 (Prompt 25R3)
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
 
 | ID | Tema | Ruta | Cuándo leerlo |
 |---|---|---|---|
+| P25R3-GATE | Fairness gate | `docs/protocols/common/fairness/20261012T130607Z/FAIR_COMPARISON_AND_HOMOGENEITY_GATE.md` | Tras 25R3 |
+| P25R3-RPT | Fairness report | `audit/PHASE2_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT_REPORT.md` | Contrato completo |
+| P25R3-TRK | Track reconciliation | `audit/fairness/PHASE2_TRACK_ASSIGNMENT_RECONCILIATION.csv` | V2 evidence |
+| P25R3-PAIR | Direct comparison matrix | `audit/fairness/PHASE2_DIRECT_COMPARISON_ELIGIBILITY_MATRIX.csv` | L0–L3 |
+| P25R3-HAND | 25R3A handoff | `docs/protocols/common/fairness/20261012T130607Z/PRE_FREEZE_DOCUMENTARY_RECOVERY_HANDOFF.md` | Next |
+| P25R3-GATE | Fairness gate | `docs/protocols/common/fairness/20261012T130607Z/FAIR_COMPARISON_AND_HOMOGENEITY_GATE.md` | Tras 25R3 |
+| P25R3-RPT | Fairness report | `audit/PHASE2_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT_REPORT.md` | Contrato completo |
+| P25R3-TRK | Track reconciliation | `audit/fairness/PHASE2_TRACK_ASSIGNMENT_RECONCILIATION.csv` | V2 evidence |
+| P25R3-PAIR | Direct comparison matrix | `audit/fairness/PHASE2_DIRECT_COMPARISON_ELIGIBILITY_MATRIX.csv` | L0–L3 |
+| P25R3-HAND | 25R3A handoff | `docs/protocols/common/fairness/20261012T130607Z/PRE_FREEZE_DOCUMENTARY_RECOVERY_HANDOFF.md` | Next |
+| P25R3-GATE | Fairness gate | `docs/protocols/common/fairness/20261012T130607Z/FAIR_COMPARISON_AND_HOMOGENEITY_GATE.md` | Tras 25R3 |
+| P25R3-RPT | Fairness report | `audit/PHASE2_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT_REPORT.md` | Contrato completo |
+| P25R3-TRK | Track reconciliation | `audit/fairness/PHASE2_TRACK_ASSIGNMENT_RECONCILIATION.csv` | V2 evidence |
+| P25R3-PAIR | Direct comparison matrix | `audit/fairness/PHASE2_DIRECT_COMPARISON_ELIGIBILITY_MATRIX.csv` | L0–L3 |
+| P25R3-HAND | 25R3A handoff | `docs/protocols/common/fairness/20261012T130607Z/PRE_FREEZE_DOCUMENTARY_RECOVERY_HANDOFF.md` | Next |
+| P25R3-GATE | Fairness gate | `docs/protocols/common/fairness/20261012T130607Z/FAIR_COMPARISON_AND_HOMOGENEITY_GATE.md` | Tras 25R3 |
+| P25R3-RPT | Fairness report | `audit/PHASE2_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT_REPORT.md` | Contrato completo |
+| P25R3-TRK | Track reconciliation | `audit/fairness/PHASE2_TRACK_ASSIGNMENT_RECONCILIATION.csv` | V2 evidence |
+| P25R3-PAIR | Direct comparison matrix | `audit/fairness/PHASE2_DIRECT_COMPARISON_ELIGIBILITY_MATRIX.csv` | L0–L3 |
+| P25R3-HAND | 25R3A handoff | `docs/protocols/common/fairness/20261012T130607Z/PRE_FREEZE_DOCUMENTARY_RECOVERY_HANDOFF.md` | Next |
+| P25R3-GATE | Fairness gate | `docs/protocols/common/fairness/20261012T130607Z/FAIR_COMPARISON_AND_HOMOGENEITY_GATE.md` | Tras 25R3 |
+| P25R3-RPT | Fairness report | `audit/PHASE2_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT_REPORT.md` | Contrato completo |
+| P25R3-TRK | Track reconciliation | `audit/fairness/PHASE2_TRACK_ASSIGNMENT_RECONCILIATION.csv` | V2 evidence |
+| P25R3-PAIR | Direct comparison matrix | `audit/fairness/PHASE2_DIRECT_COMPARISON_ELIGIBILITY_MATRIX.csv` | L0–L3 |
+| P25R3-HAND | 25R3A handoff | `docs/protocols/common/fairness/20261012T130607Z/PRE_FREEZE_DOCUMENTARY_RECOVERY_HANDOFF.md` | Next |
+| P25R3-GATE | Fairness gate | `docs/protocols/common/fairness/20261012T130607Z/FAIR_COMPARISON_AND_HOMOGENEITY_GATE.md` | Tras 25R3 |
+| P25R3-RPT | Fairness report | `audit/PHASE2_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT_REPORT.md` | Contrato completo |
+| P25R3-TRK | Track reconciliation | `audit/fairness/PHASE2_TRACK_ASSIGNMENT_RECONCILIATION.csv` | V2 evidence |
+| P25R3-PAIR | Direct comparison matrix | `audit/fairness/PHASE2_DIRECT_COMPARISON_ELIGIBILITY_MATRIX.csv` | L0–L3 |
+| P25R3-HAND | 25R3A handoff | `docs/protocols/common/fairness/20261012T130607Z/PRE_FREEZE_DOCUMENTARY_RECOVERY_HANDOFF.md` | Next |
+| P25R3-GATE | Fairness gate | `docs/protocols/common/fairness/20261012T130607Z/FAIR_COMPARISON_AND_HOMOGENEITY_GATE.md` | Tras 25R3 |
+| P25R3-RPT | Fairness report | `audit/PHASE2_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT_REPORT.md` | Contrato completo |
+| P25R3-TRK | Track reconciliation | `audit/fairness/PHASE2_TRACK_ASSIGNMENT_RECONCILIATION.csv` | V2 evidence |
+| P25R3-PAIR | Direct comparison matrix | `audit/fairness/PHASE2_DIRECT_COMPARISON_ELIGIBILITY_MATRIX.csv` | L0–L3 |
+| P25R3-HAND | 25R3A handoff | `docs/protocols/common/fairness/20261012T130607Z/PRE_FREEZE_DOCUMENTARY_RECOVERY_HANDOFF.md` | Next |
+| P25R3-GATE | Fairness gate | `docs/protocols/common/fairness/20261012T130607Z/FAIR_COMPARISON_AND_HOMOGENEITY_GATE.md` | Tras 25R3 |
+| P25R3-RPT | Fairness report | `audit/PHASE2_FAIR_COMPARISON_AND_HOMOGENEITY_CONTRACT_REPORT.md` | Contrato completo |
+| P25R3-TRK | Track reconciliation | `audit/fairness/PHASE2_TRACK_ASSIGNMENT_RECONCILIATION.csv` | V2 evidence |
+| P25R3-PAIR | Direct comparison matrix | `audit/fairness/PHASE2_DIRECT_COMPARISON_ELIGIBILITY_MATRIX.csv` | L0–L3 |
+| P25R3-HAND | 25R3A handoff | `docs/protocols/common/fairness/20261012T130607Z/PRE_FREEZE_DOCUMENTARY_RECOVERY_HANDOFF.md` | Next |
 | P25R2-GATE | Recovery protocol gate | `docs/protocols/common/recovery-protocol/20261012T125143Z/ZERO_COST_METHOD_RECOVERY_PROTOCOL_GATE.md` | Tras 25R2 |
 | P25R2-RPT | Recovery protocol report | `audit/PHASE2_ZERO_COST_METHOD_RECOVERY_PROTOCOL_REPORT.md` | Detalle |
 | P25R2-PRI | Priority matrix | `audit/recovery-protocol/PHASE2_METHOD_RECOVERY_PRIORITY_MATRIX.csv` | Tiers A–E |
