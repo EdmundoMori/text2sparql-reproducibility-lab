@@ -25,6 +25,6 @@ New 10/2 subprofile is documentary/not applied. D1H/D1R/D1V remain pending. DBpe
 
 ## Publication
 
-ARTIFACT_COMMIT: *(post-commit)*
-publication metadata commit: *(post-commit tip; max 2 commits)*
-push: pending
+ARTIFACT_COMMIT: `1962a465759e8b6b68fecbd0ac3322949b4e7ad5`
+publication metadata commit: `SELF` (second and final Prompt 25B-R1 commit)
+push: confirmed by required post-commit remote verification

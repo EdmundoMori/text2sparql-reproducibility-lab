@@ -11,4 +11,4 @@ satisfied; G5/G6I pending; adapters false; benchmark ineligible; test SEALED.
 
 Exactly one next action: `HUMAN_D1_WINDOWS_HOST_APPLY_AUTHORIZATION`.
 Status: `HUMAN_GATE_REQUIRED`. No executable WSL shutdown prompt.
-ARTIFACT_COMMIT: *(post-commit)*
+ARTIFACT_COMMIT: `1962a465759e8b6b68fecbd0ac3322949b4e7ad5`

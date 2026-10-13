@@ -19,8 +19,8 @@ INITIAL_HEAD = "ed97ea76c092ec39821151d72d8f5fed2da9219b"
 FREEZE_SHA = "f90c0d78ecdcbbad6387f3f31122f6412c7f021d2de57aafda05b27af34e261c"
 GATE = "WINDOWS_HOST_WSL_GUEST_D1_REPLAN_COMPLETE_READY_FOR_HOST_APPLY_AUTHORIZATION"
 NEXT = "HUMAN_D1_WINDOWS_HOST_APPLY_AUTHORIZATION"
-ARTIFACT_COMMIT = "*(post-commit)*"
-PUB_COMMIT = "*(post-commit tip; max 2 commits)*"
+ARTIFACT_COMMIT = "`1962a465759e8b6b68fecbd0ac3322949b4e7ad5`"
+PUB_COMMIT = "`SELF` (second and final Prompt 25B-R1 commit)"
 
 DOC = ROOT / f"docs/protocols/common/graph/dbpedia2016-10/d1-topology/{RUN}"
 CFG = ROOT / "configs/common/graph/dbpedia2016-10/profile-selection"
@@ -676,7 +676,7 @@ New 10/2 subprofile is documentary/not applied. D1H/D1R/D1V remain pending. DBpe
 
 ARTIFACT_COMMIT: {ARTIFACT_COMMIT}
 publication metadata commit: {PUB_COMMIT}
-push: pending
+push: confirmed by required post-commit remote verification
 """,
 )
 
