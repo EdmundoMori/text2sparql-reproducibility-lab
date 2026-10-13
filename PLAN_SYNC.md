@@ -26,6 +26,6 @@ compressed and NOT_DEPLOYED.
 
 ## Publication
 
-ARTIFACT_COMMIT: *(post-commit)*
-publication metadata commit: *(post-commit tip; max 2 commits)*
-push: pending
+ARTIFACT_COMMIT: `846bb3bd079a5d806e4d8c55ca39bca626dd0454`
+publication metadata commit: `SELF` (second and final Prompt D1V commit)
+push: confirmed by required post-commit remote verification

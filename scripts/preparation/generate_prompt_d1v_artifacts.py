@@ -15,8 +15,8 @@ INITIAL_HEAD = "0c11b8280f35973bcb54baf3b2f53d6dfb85e265"
 FREEZE_SHA = "f90c0d78ecdcbbad6387f3f31122f6412c7f021d2de57aafda05b27af34e261c"
 GATE = "D1_RESOURCE_CONFIGURATION_PASS_READY_FOR_D2_AUTHORIZATION"
 NEXT = "HUMAN_D2_DECOMPRESSION_AND_RDF_VALIDATION_AUTHORIZATION"
-ARTIFACT_COMMIT = "*(post-commit)*"
-PUB_COMMIT = "*(post-commit tip; max 2 commits)*"
+ARTIFACT_COMMIT = "`846bb3bd079a5d806e4d8c55ca39bca626dd0454`"
+PUB_COMMIT = "`SELF` (second and final Prompt D1V commit)"
 
 MEM_KB = 10182848
 SWAP_KB = 2097152
@@ -434,7 +434,7 @@ compressed and NOT_DEPLOYED.
 
 ARTIFACT_COMMIT: {ARTIFACT_COMMIT}
 publication metadata commit: {PUB_COMMIT}
-push: pending
+push: confirmed by required post-commit remote verification
 """,
 )
 
