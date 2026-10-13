@@ -1,0 +1,5 @@
+PASS
+freeze_yaml=true
+subprofile_yaml=true
+deployment_manifest_yaml=true
+method_registry_yaml=true

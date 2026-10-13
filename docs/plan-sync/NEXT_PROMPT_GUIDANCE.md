@@ -1,13 +1,9 @@
 # NEXT_PROMPT_GUIDANCE
 
-**Tras:** Prompt 25B (`20261012T150501Z`)
-**Gate:** `LOCAL_WSL_HOST_ADJUSTED_PROFILE_SELECTED_D1_PACKAGE_READY_FOR_HUMAN_AUTHORIZATION`
+**Tras:** Prompt 25B-R1 (`20261013T080249Z`)
+**Gate:** `WINDOWS_HOST_WSL_GUEST_D1_REPLAN_COMPLETE_READY_FOR_HOST_APPLY_AUTHORIZATION`
 
-## Acción siguiente
+Next: `HUMAN_D1_WINDOWS_HOST_APPLY_AUTHORIZATION` — **HUMAN_GATE_REQUIRED**.
 
-`HUMAN_D1_RESOURCE_CONFIGURATION_AUTHORIZATION`
-
-Status: **HUMAN_GATE_REQUIRED**.
-
-There is no executable Cursor prompt. D1 is `RESERVED_NOT_AUTHORIZED` until the five exact resource actions
-are explicitly approved. No decompression, pull, Virtuoso, graph load, SPARQL or benchmark is included.
+No executable WSL shutdown prompt is issued. Future D1H and D1R run manually from Windows only after signed
+authorization and committed/pushed work. D1V is a separate Cursor session.

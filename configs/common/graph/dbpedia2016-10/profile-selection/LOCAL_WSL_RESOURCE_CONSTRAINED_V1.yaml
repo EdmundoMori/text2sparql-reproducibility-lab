@@ -1,0 +1,15 @@
+parent_profile: LOCAL_WSL_HOST_ADJUSTED
+execution_topology: WINDOWS_HOST_CONTROLLED_WSL2_UBUNTU_GUEST
+resource_subprofile: LOCAL_WSL_RESOURCE_CONSTRAINED_V1
+host_ram_gib: 15.19
+host_ram_evidence: HUMAN_VERIFIED_WINDOWS_POWERSHELL
+wsl_memory_max_gib: 10
+wsl_swap_gib: 2
+estimated_host_headroom_gib: 5.19
+linux_free_disk_gib: ~902
+windows_c_free_gib: ~7.4
+capacity_class: RESOURCE_CONSTRAINED_HIGH_RISK_FOR_FULL_GRAPH_LOAD
+cost_policy: ZERO_EXTERNAL_MONETARY_COST
+do_not_claim_full_load_feasible: true
+fallback_if_D4_resource_failure: EXTERNAL_ZERO_COST_RESEARCH_SERVER
+proposal_status: DOCUMENTARY_NOT_APPLIED

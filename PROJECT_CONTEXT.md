@@ -477,3 +477,11 @@ EDMUNDO MORI ORRILLO selected `LOCAL_WSL_HOST_ADJUSTED` for profile selection on
 `MINIMUM_CAPACITY_CONDITIONAL_HIGH_RISK`; it was not applied. DBpedia remains compressed/NOT_DEPLOYED;
 Docker was not started or pulled; G4 is not satisfied; G5/G6I pending; adapters false; benchmark ineligible.
 Next: `HUMAN_D1_RESOURCE_CONFIGURATION_AUTHORIZATION`. D1 execution is `RESERVED_NOT_AUTHORIZED`.
+
+## Prompt 25B-R1 — Windows-host / WSL-guest D1 replan (20261013T080249Z)
+
+Windows is the control plane; Ubuntu/WSL2 is the guest in which Cursor runs. Self-shutdown is forbidden from
+Cursor. The interrupted authorized attempt applied 12/8 but is not accepted as D1 PASS; it is superseded by
+a documentary 10 GiB/2 GiB constrained proposal. D1 is split into D1P/D1H/D1R/D1V. Only D1P is complete.
+No host write, shutdown, restart, deployment or benchmark occurred in 25B-R1. Next:
+`HUMAN_D1_WINDOWS_HOST_APPLY_AUTHORIZATION`.

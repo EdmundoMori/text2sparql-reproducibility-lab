@@ -1,12 +1,17 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-10-12 (Prompt 25B)
+**Última actualización:** 2026-10-13 (Prompt 25B-R1)
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
 
 | ID | Tema | Ruta | Cuándo leerlo |
 |---|---|---|---|
+| P25BR1-GATE | Host/guest replan gate | `docs/protocols/common/graph/dbpedia2016-10/d1-topology/20261013T080249Z/WINDOWS_HOST_WSL_GUEST_D1_REPLAN_GATE.md` | Host apply handoff |
+| P25BR1-TOPO | Execution topology | `docs/protocols/common/graph/dbpedia2016-10/d1-topology/20261013T080249Z/WINDOWS_HOST_WSL_GUEST_EXECUTION_TOPOLOGY.md` | Control-plane boundary |
+| P25BR1-PS1 | Future Windows host script | `scripts/windows/prepare_wsl_resource_constrained_profile.ps1` | Manual execution only |
+| P25BR1-AUTH | Host apply authorization V2 | `docs/protocols/common/graph/dbpedia2016-10/d1-topology/20261013T080249Z/HUMAN_D1_WINDOWS_HOST_APPLY_AUTHORIZATION_V2.md` | READY_UNSIGNED |
+| P25BR1-RPT | D1 replan report | `audit/PHASE2_WINDOWS_HOST_WSL_GUEST_D1_REPLAN_REPORT.md` | Full evidence |
 | P25B-GATE | Profile-selection gate | `docs/protocols/common/graph/dbpedia2016-10/profile-selection/20261012T150501Z/LOCAL_WSL_HOST_ADJUSTED_PROFILE_SELECTION_GATE.md` | Human D1 handoff |
 | P25B-REC | Signed selection record | `docs/protocols/common/graph/dbpedia2016-10/profile-selection/20261012T150501Z/HUMAN_RESOURCE_PROFILE_SELECTION_RECORD.md` | Selection evidence |
 | P25B-CAP | Capacity reassessment | `docs/protocols/common/graph/dbpedia2016-10/profile-selection/20261012T150501Z/LOCAL_WSL_HOST_ADJUSTED_CAPACITY_REASSESSMENT.md` | 12/8 GiB rationale |

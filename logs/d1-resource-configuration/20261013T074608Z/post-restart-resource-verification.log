@@ -1,0 +1,115 @@
+D1_POST_RESTART_READ_ONLY_VERIFICATION
+observed_at_utc=2026-10-13T07:48:24Z
+expected_memory_gib=12
+expected_swap_gib=8
+freeze_expected=f90c0d78ecdcbbad6387f3f31122f6412c7f021d2de57aafda05b27af34e261c
+freeze_observed=f90c0d78ecdcbbad6387f3f31122f6412c7f021d2de57aafda05b27af34e261c
+Linux LAPTOP-311333V7 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+               total        used        free      shared  buff/cache   available
+Mem:     12541169664   664997888 10930016256     4059136   946155520 11695030272
+Swap:     8589934592           0  8589934592
+NAME     TYPE            SIZE USED PRIO
+/dev/sdc partition 8589934592    0   -2
+Filesystem         1B-blocks        Used    Available Use% Mounted on
+/dev/sdd       1081101176832 57994735616 968114085888   6% /
+WINDOWS_HOST_RESOURCE_CHECK
+{"TotalPhysicalMemoryBytes":16309932032,"TotalPhysicalMemoryGiB":15.19,"FreePhysicalMemoryKiB":5283396,"FreePhysicalMemoryGiB":5.04,"WslConfigPath":"C:\\Users\\USUARIO\\.wslconfig","WslConfigExists":true}
+DOCKER_CLIENT_AND_DAEMON_AVAILABILITY
+Client:
+ Version:           29.1.3
+ API version:       1.52
+ Go version:        go1.24.4
+ Git commit:        29.1.3-0ubuntu3~22.04.2
+ Built:             Wed Apr 29 22:18:59 2026
+ OS/Arch:           linux/amd64
+ Context:           default
+
+Server:
+ Engine:
+  Version:          29.1.3
+  API version:      1.52 (minimum version 1.44)
+  Go version:       go1.24.4
+  Git commit:       29.1.3-0ubuntu3~22.04.2
+  Built:            Wed Apr 29 22:18:59 2026
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          2.2.1
+  GitCommit:        
+ runc:
+  Version:          1.3.3-0ubuntu1~22.04.3
+  GitCommit:        
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        
+Client:
+ Version:    29.1.3
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  trust: Manage trust on Docker images (Docker Inc.)
+    Version:  29.1.3
+    Path:     /usr/libexec/docker/cli-plugins/docker-trust
+
+Server:
+ Containers: 0
+  Running: 0
+  Paused: 0
+  Stopped: 0
+ Images: 17
+ Server Version: 29.1.3
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Using metacopy: false
+  Native Overlay Diff: true
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: systemd
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Swarm: inactive
+ Runtimes: runc io.containerd.runc.v2
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 
+ runc version: 
+ init version: 
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.6.87.2-microsoft-standard-WSL2
+ Operating System: Ubuntu 22.04.5 LTS
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 16
+ Total Memory: 11.68GiB
+ Name: LAPTOP-311333V7
+ ID: 791f9027-f316-4c13-98a6-2df16af6c0f0
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Experimental: false
+ Insecure Registries:
+  ::1/128
+  127.0.0.0/8
+ Live Restore Enabled: false
+ Firewall Backend: iptables
+
+docker: unknown command: docker compose
+
+Run 'docker --help' for more information
+
+The command 'docker-compose' could not be found in this WSL 2 distro.
+We recommend to activate the WSL integration in Docker Desktop settings.
+
+For details about using Docker Desktop with WSL 2, visit:
+
+https://docs.docker.com/go/wsl2/
+

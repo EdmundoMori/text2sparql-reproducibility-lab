@@ -12,3 +12,9 @@ swap thrashing remain possible. This is not 32 GiB recommended capacity.
 
 Rollback: restore the pre-D1 `.wslconfig` bytes (or remove the new file if none existed), perform a separately
 authorized WSL restart, and remeasure RAM/swap. The template was not applied in Prompt25B.
+
+## Prompt25B-R1 supersession
+
+Status: `SUPERSEDED_BY_TOPOLOGY_AND_WINDOWS_STORAGE_EVIDENCE`. Windows is the primary control plane;
+12 GiB leaves only 3.19 GiB theoretical host headroom; 8 GiB swap conflicts with constrained C: capacity;
+the values were planning assumptions. Revised documentary proposal: 10 GiB / 2 GiB, not applied.

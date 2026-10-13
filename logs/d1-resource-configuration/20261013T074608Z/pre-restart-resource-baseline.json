@@ -1,0 +1,23 @@
+{
+  "run_id": "20261013T074608Z",
+  "observed_before_configuration": {
+    "freeze_sha256": "f90c0d78ecdcbbad6387f3f31122f6412c7f021d2de57aafda05b27af34e261c",
+    "host_total_physical_memory_bytes": 16309932032,
+    "host_total_physical_memory_gib": 15.19,
+    "linux_available_disk_bytes": 968122671104,
+    "wsl_memory_total_bytes": 7895973888,
+    "wsl_memory_total_gib": 7.35,
+    "wsl_swap_total_bytes": 2147483648,
+    "wsl_swap_total_gib": 2.0
+  },
+  "prior_wslconfig": {
+    "exists": false,
+    "path": "C:\\Users\\USUARIO\\.wslconfig",
+    "backup_semantics": "REMOVE_NEW_FILE_TO_RESTORE_ABSENT_PRIOR_STATE"
+  },
+  "authorization": {
+    "approver": "EDMUNDO MORI ORRILLO",
+    "date": "2026-10-12",
+    "scope": "D1A_D1B_D1C_D1D_D1E_ONLY"
+  }
+}

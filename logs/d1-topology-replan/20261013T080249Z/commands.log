@@ -1,0 +1,5 @@
+RUN_ID=20261013T080249Z
+initial_head=ed97ea76c092ec39821151d72d8f5fed2da9219b
+mode=DOCUMENTARY_STATIC_ZERO_COST_NO_RESOURCE_MODIFICATION_NO_WSL_SHUTDOWN
+read_only_reconciliation=git,free,swapon,Windows_.wslconfig_read
+host_script_executed=false
