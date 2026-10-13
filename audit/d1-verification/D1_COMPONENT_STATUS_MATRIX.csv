@@ -1,0 +1,6 @@
+component,status,evidence,claim_boundary
+D1P,PASS,Prompt25B-R1 package/push,package only
+D1H,PASS,human Windows transcript and hashes,human-supplied host evidence
+D1R,PASS,human restart report + effective guest state,shutdown event not Cursor-observed
+D1V,PASS,independent read-only guest commands,resource observation only
+D1,PASS_RESOURCE_CONSTRAINED_PROFILE,D1P+D1H+D1R+D1V,full graph load feasibility not proven

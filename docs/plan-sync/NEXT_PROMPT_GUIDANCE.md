@@ -1,9 +1,8 @@
 # NEXT_PROMPT_GUIDANCE
 
-**Tras:** Prompt 25B-R1 (`20261013T080249Z`)
-**Gate:** `WINDOWS_HOST_WSL_GUEST_D1_REPLAN_COMPLETE_READY_FOR_HOST_APPLY_AUTHORIZATION`
+**Tras:** Prompt D1V (`20261013T085129Z`)
+**Gate:** `D1_RESOURCE_CONFIGURATION_PASS_READY_FOR_D2_AUTHORIZATION`
 
-Next: `HUMAN_D1_WINDOWS_HOST_APPLY_AUTHORIZATION` — **HUMAN_GATE_REQUIRED**.
+Next: `HUMAN_D2_DECOMPRESSION_AND_RDF_VALIDATION_AUTHORIZATION` — **HUMAN_GATE_REQUIRED**.
 
-No executable WSL shutdown prompt is issued. Future D1H and D1R run manually from Windows only after signed
-authorization and committed/pushed work. D1V is a separate Cursor session.
+The D2 form is `READY_UNSIGNED`. There is no executable D2 prompt; D2 is `RESERVED_NOT_AUTHORIZED`.

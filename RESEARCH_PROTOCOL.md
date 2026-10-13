@@ -450,3 +450,11 @@ Cursor. The interrupted authorized attempt applied 12/8 but is not accepted as D
 a documentary 10 GiB/2 GiB constrained proposal. D1 is split into D1P/D1H/D1R/D1V. Only D1P is complete.
 No host write, shutdown, restart, deployment or benchmark occurred in 25B-R1. Next:
 `HUMAN_D1_WINDOWS_HOST_APPLY_AUTHORIZATION`.
+
+## Prompt D1V — Post-restart resource verification (20261013T085129Z)
+
+Human D1 authorization was consumed. D1H applied 10GB/2GB manually on Windows; D1R was human-controlled;
+D1V independently observed MemTotal 10182848 kB (~9.71 GiB), swap 2097152 kB, 16 CPUs and ~902 GiB
+displayed free on ext4. D1P/D1H/D1R/D1V pass; overall `PASS_RESOURCE_CONSTRAINED_PROFILE`. Docker client is
+present and daemon inactive; no start/pull occurred. DBpedia remains compressed/NOT_DEPLOYED, G4 not
+satisfied, and full-load feasibility unproven. Next: `HUMAN_D2_DECOMPRESSION_AND_RDF_VALIDATION_AUTHORIZATION`.

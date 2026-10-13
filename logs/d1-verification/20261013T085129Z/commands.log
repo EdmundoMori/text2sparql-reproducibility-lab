@@ -1,0 +1,15 @@
+Prompt D1V exact read-only command set
+uname -a
+free -h
+cat /proc/meminfo
+swapon --show
+nproc
+df -h /
+df -T /
+cat /proc/version
+uptime
+grep -E 'MemTotal|MemAvailable|SwapTotal|SwapFree' /proc/meminfo
+command -v docker || true
+docker --version || true
+docker version || true
+docker info || true

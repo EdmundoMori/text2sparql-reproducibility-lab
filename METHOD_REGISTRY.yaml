@@ -1,6 +1,6 @@
-schema_version: '0.32'
+schema_version: '0.33'
 updated_at: '2026-10-12T16:37:17+02:00'
-phase: phase2_windows_host_wsl_guest_d1_replanned_authorization_pending
+phase: phase2_d1_resource_configuration_pass_d2_authorization_pending
 audit_prompt: Prompt_25R4_COMMON_CORE_BENCHMARK_DESIGN_FREEZE
 clones_performed: true
 evidence_closure_complete: true
@@ -1175,7 +1175,7 @@ phase2_graph_pin_status: TARGET_SELECTED_RUNTIME_PENDING
 phase2_metric_detail_status: METRIC_CONTRACT_DEFINED
 phase2_adapter_status: disabled_common_adapter_allowed_false
 phase2_benchmark_status: NOT_CURRENTLY_ELIGIBLE
-phase2_next_action: HUMAN_D1_WINDOWS_HOST_APPLY_AUTHORIZATION
+phase2_next_action: HUMAN_D2_DECOMPRESSION_AND_RDF_VALIDATION_AUTHORIZATION
 phase2_next_prompt: HUMAN_GATE_REQUIRED
 pe5_status: protocol_metric_adapter_and_legal_contracts_defined_pending_assets_implementation_and_benchmark
 pe5_preparatory_evidence:
@@ -1365,7 +1365,7 @@ recovery_candidate_matrix: audit/recovery/PHASE2_METHOD_RECOVERY_CANDIDATE_MATRI
 zero_cost_eligibility_matrix: audit/recovery/PHASE2_ZERO_COST_METHOD_ELIGIBILITY_MATRIX.csv
 revised_roadmap: audit/PHASE2_REVISED_RESEARCH_ROADMAP.csv
 current_research_action: COMMON_CORE_BENCHMARK_DESIGN_FREEZE
-next_research_action: HUMAN_D1_WINDOWS_HOST_APPLY_AUTHORIZATION
+next_research_action: HUMAN_D2_DECOMPRESSION_AND_RDF_VALIDATION_AUTHORIZATION
 deployment_profile_selection_status: HUMAN_SELECTED
 phase2_global_blocker_recovery_gate: GLOBAL_BLOCKER_RECOVERY_AND_ZERO_COST_RECONCILIATION_COMPLETE_READY_FOR_METHOD_RECOVERY_PROTOCOL
 
@@ -1827,3 +1827,22 @@ d1p_status: PASS
 d1_v2_authorization_status: READY_UNSIGNED
 resource_configuration_status_current: PRIOR_12_8_APPLIED_SUPERSEDED_PENDING_AUTHORIZED_10_2_HOST_APPLY
 next_research_action_current: HUMAN_D1_WINDOWS_HOST_APPLY_AUTHORIZATION
+
+# Prompt D1V resource verification overlay
+d1_verification_run_id: 20261013T085129Z
+d1p_status_current: PASS
+d1h_status_current: PASS
+d1r_status_current: PASS
+d1v_status_current: PASS
+d1_status_current: PASS_RESOURCE_CONSTRAINED_PROFILE
+observed_wsl_memory_kb: 10182848
+observed_wsl_memory_gib: 9.71
+observed_wsl_swap_kb: 2097152
+observed_wsl_swap_gib: 2.0
+observed_cpu_count: 16
+observed_linux_free_disk_kb: 945429020
+observed_linux_free_disk_gib: 901.63
+docker_client_status: PRESENT_29_1_3
+docker_daemon_status: INACTIVE_UNREACHABLE_NONBLOCKING_D1
+d2_authorization_status: READY_UNSIGNED
+next_research_action_current: HUMAN_D2_DECOMPRESSION_AND_RDF_VALIDATION_AUTHORIZATION

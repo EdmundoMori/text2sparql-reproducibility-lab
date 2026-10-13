@@ -1,19 +1,13 @@
 # Human D1 Windows-host apply authorization V2
 
-**RUN_ID:** `20261013T080249Z`
-**Mode:** DOCUMENTARY · STATIC · ZERO_COST · NO_RESOURCE_MODIFICATION · NO_WSL_SHUTDOWN
-**Freeze:** `COMMON_CORE_BENCHMARK_FREEZE_V1` · `1.0.0-25R4` · `f90c0d78ecdcbbad6387f3f31122f6412c7f021d2de57aafda05b27af34e261c`
+**Original status:** `READY_UNSIGNED`
+**Current status:** `SIGNED_AND_CONSUMED_D1H_D1R_D1V_ONLY`
+**Decision:** `APPROVED`
+**Approver:** `EDMUNDO MORI ORRILLO`
+**Date:** `2026-10-13`
 
+Authorized and consumed: safe Windows-host `.wslconfig` backup/hash and 10GB/2GB merge; manual Windows
+PowerShell `wsl --shutdown`; subsequent Ubuntu restart; separate read-only D1V verification.
 
-**Status:** `READY_UNSIGNED`
-
-- [ ] Authorize Windows-host `.wslconfig` safe merge: `memory=10GB`, `swap=2GB`.
-- [ ] Authorize backup and SHA-256 of an existing `.wslconfig`.
-- [ ] Authorize manual `wsl --shutdown` **from Windows PowerShell**, after WSL/Cursor work is saved/closed.
-- [ ] Authorize subsequent manual WSL restart.
-- [ ] Authorize separate read-only D1V verification.
-
-Not authorized: DBpedia decompression, RDF parsing, Docker pull/container, Virtuoso, graph load, SPARQL,
-gold, metrics, models, training, adapters or benchmark.
-
-Approver: ______ · Date: ______ · Decision: ______
+Not authorized and not performed: DBpedia decompression/RDF parsing, Docker pull/container, Virtuoso,
+graph load, SPARQL, gold, metrics, models, training, adapters or benchmark.

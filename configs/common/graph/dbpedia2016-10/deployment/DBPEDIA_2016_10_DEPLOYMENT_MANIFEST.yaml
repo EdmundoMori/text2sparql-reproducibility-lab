@@ -30,7 +30,7 @@ g4_runtime_status: NOT_SATISFIED
 assumption_tag: PLANNING_ASSUMPTION_NOT_MEASUREMENT
 human_verified_host_ram_gib: 15.19
 selection_authorization_scope: PROFILE_ONLY
-resource_configuration_status: PRIOR_12_8_APPLIED_SUPERSEDED_PENDING_AUTHORIZED_10_2_HOST_APPLY
+resource_configuration_status: CONFIGURED_AND_VERIFIED
 d1_authorization_status: READY_UNSIGNED_V2
 d1_package_status: D1P_PASS_SPLIT_PROTOCOL
 selected_resource_subprofile: LOCAL_WSL_RESOURCE_CONSTRAINED_V1
@@ -40,3 +40,13 @@ proposed_wsl_swap_gib: 2
 resource_capacity_class: RESOURCE_CONSTRAINED_HIGH_RISK_FOR_FULL_GRAPH_LOAD
 d1_orchestration_status: REPLANNED_SPLIT_HOST_GUEST
 g4: NOT_SATISFIED
+d1p_status: PASS
+d1h_status: PASS
+d1r_status: PASS
+d1v_status: PASS
+d1_status: PASS_RESOURCE_CONSTRAINED_PROFILE
+observed_guest_memory_kb: 10182848
+observed_guest_swap_kb: 2097152
+observed_cpu_count: 16
+observed_linux_free_disk_kb: 945429020
+graph_payload_status: COMPRESSED_ACQUIRED

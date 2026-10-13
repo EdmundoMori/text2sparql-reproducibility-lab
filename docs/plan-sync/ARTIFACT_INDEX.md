@@ -1,12 +1,16 @@
 # ARTIFACT_INDEX — Documentos específicos para el planificador
 
-**Última actualización:** 2026-10-13 (Prompt 25B-R1)
+**Última actualización:** 2026-10-13 (Prompt D1V)
 **Documento general:** [`../../PLAN_SYNC.md`](../../PLAN_SYNC.md)
 
 Cada fila es un artefacto que ChatGPT puede abrir para detalle. Tras cada prompt, Cursor añade o actualiza filas aquí.
 
 | ID | Tema | Ruta | Cuándo leerlo |
 |---|---|---|---|
+| D1V-GATE | D1 resource gate | `docs/protocols/common/graph/dbpedia2016-10/d1-verification/20261013T085129Z/D1_RESOURCE_CONFIGURATION_GATE.md` | D2 human handoff |
+| D1V-RPT | Post-restart verification | `docs/protocols/common/graph/dbpedia2016-10/d1-verification/20261013T085129Z/D1V_POST_RESTART_RESOURCE_VERIFICATION_REPORT.md` | Resource evidence |
+| D1V-D2 | D2 authorization form | `docs/protocols/common/graph/dbpedia2016-10/d1-verification/20261013T085129Z/HUMAN_D2_DECOMPRESSION_AND_RDF_VALIDATION_AUTHORIZATION.md` | READY_UNSIGNED |
+| D1V-MAIN | D1 closure report | `audit/PHASE2_D1_RESOURCE_CONFIGURATION_AND_POST_RESTART_VERIFICATION_REPORT.md` | Full evidence |
 | P25BR1-GATE | Host/guest replan gate | `docs/protocols/common/graph/dbpedia2016-10/d1-topology/20261013T080249Z/WINDOWS_HOST_WSL_GUEST_D1_REPLAN_GATE.md` | Host apply handoff |
 | P25BR1-TOPO | Execution topology | `docs/protocols/common/graph/dbpedia2016-10/d1-topology/20261013T080249Z/WINDOWS_HOST_WSL_GUEST_EXECUTION_TOPOLOGY.md` | Control-plane boundary |
 | P25BR1-PS1 | Future Windows host script | `scripts/windows/prepare_wsl_resource_constrained_profile.ps1` | Manual execution only |

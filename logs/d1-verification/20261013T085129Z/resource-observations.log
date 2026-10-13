@@ -1,0 +1,80 @@
+$ uname -a
+Linux LAPTOP-311333V7 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+$ free -h
+               total        used        free      shared  buff/cache   available
+Mem:           9.7Gi       1.6Gi       6.1Gi       3.0Mi       2.0Gi       7.9Gi
+Swap:          2.0Gi          0B       2.0Gi
+$ cat /proc/meminfo
+MemTotal:       10182848 kB
+MemFree:         6366848 kB
+MemAvailable:    8252484 kB
+Buffers:          405492 kB
+Cached:          1073924 kB
+SwapCached:            0 kB
+Active:           729564 kB
+Inactive:        2063000 kB
+Active(anon):       3656 kB
+Inactive(anon):  1313520 kB
+Active(file):     725908 kB
+Inactive(file):   749480 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:       2097152 kB
+SwapFree:        2097152 kB
+Dirty:               208 kB
+Writeback:             0 kB
+AnonPages:       1313320 kB
+Mapped:           370092 kB
+Shmem:              4028 kB
+KReclaimable:     614840 kB
+Slab:             742056 kB
+SReclaimable:     614840 kB
+SUnreclaim:       127216 kB
+KernelStack:        9296 kB
+PageTables:        25980 kB
+SecPageTables:         0 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7188576 kB
+Committed_AS:    3453348 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       36928 kB
+VmallocChunk:          0 kB
+Percpu:             7744 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+Unaccepted:            0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      111616 kB
+DirectMap2M:     8275968 kB
+DirectMap1G:    11534336 kB
+$ swapon --show
+NAME     TYPE      SIZE USED PRIO
+/dev/sdc partition   2G   0B   -2
+$ nproc
+16
+$ df -h /
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdd       1007G   55G  902G   6% /
+$ df -T /
+Filesystem     Type  1K-blocks     Used Available Use% Mounted on
+/dev/sdd       ext4 1055762868 56630376 945429020   6% /
+$ cat /proc/version
+Linux version 6.6.87.2-microsoft-standard-WSL2 (root@439a258ad544) (gcc (GCC) 11.2.0, GNU ld (GNU Binutils) 2.37) #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+$ uptime
+ 10:51:44 up 5 min,  0 users,  load average: 0.84, 0.44, 0.22
+$ grep -E 'MemTotal|MemAvailable|SwapTotal|SwapFree' /proc/meminfo
+MemTotal:       10182848 kB
+MemAvailable:    8244616 kB
+SwapTotal:       2097152 kB
+SwapFree:        2097152 kB
